@@ -8,164 +8,70 @@
     content="Шкала масштабов Вселенной. Соотношение размеров различных объектов (от элементарных частиц до галактик)." />
   <meta name="yandex-verification" content="3e16199ee8c2f02c" />
   <meta name="google-site-verification" content="9M7zMGneCxS-CE6wBWrS-WiSl2Mp3syPWU2UEpBGKg4" />
-  <meta property="og:image" content="img/ogimage.png" />
+  <meta property="og:title" content="Шкала масштабов Вселенной">
+  <meta property="og:description"
+    content="Соотношение размеров различных объектов — от элементарных частиц до галактик.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/">
+  <meta property="og:image" content="assets/img/ogimage.png">
   <title>Шкала масштабов Вселенной</title>
   <meta name="viewport"
     content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" type="text/css" href="css/spin.css">
-  <link rel="stylesheet" type="text/css" href="css/dialog-polyfill.css">
-  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.scss">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 
 <body>
-
-  <div class="bgEarth fullBg"></div>
-
-
-  <!-- <div style="height: 1080px" id="fullScreener">
-    <div id="frame" class="frameStyle"></div>
-  </div> -->
-
-
   <div id="frame" style="visibility: hidden;" class="frameStyle">
-    <a href="#" class="forward" id="autoForward">
-      <img src="img/backarrow.png" id="forwardImage"></img>
-    </a>
-    <a href="#" class="backward" id="autoBackward">
-      <img src="img/backarrow.png" id="backwardImage"></img>
-    </a>
-    <div id="buttons">
-      <a href=".">
-        <img src="img/lang.svg" class="lang">
-      </a>
-
-      <div id="muteToggle">
-        <a href="#" class="speaker">
-          <span></span>
-        </a>
-      </div>
-      <div class="hd" id="hqToggle">HQ</div>
+    <div id="buttons" class="buttons">
+      <button onclick="window.location.reload();" class="lang">
+        <img src="assets/img/lang.svg">
+      </button>
+      <button class="speaker">
+        <span></span>
+      </button>
     </div>
-
-    <div class="sk-chase" id="loadingSpin" style="margin-left: auto; margin-left: auto; top: 20%;">
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-    </div>
-
-
     <div class="bgEarth fullBg" id="earthBgImage"></div>
     <div class="bgSpace fullBg" id="spaceBgImage"></div>
     <div id="sotu"></div>
   </div>
-
-  <!-- <div class="wrap">
-      <input id="muteToggle" type="checkbox">
-      <span class="first"></span>
-      <span class="second"></span>
-    </div> -->
   </div>
-  <!-- <div id="frame" style="display: none;" class="frameStyle"></div> -->
+  <dialog id="modal" open>
+    <h1 class="title">Шкала масштабов Вселенной</h1>
 
-
-  <dialog class="my-modal" style="font-family: 'Roboto', sans-serif" id="modal" open>
-    <!-- <progress max="100" value="0"></progress> -->
-    <h1 id="title" style="position: absolute; top: 16px; max-width: 65%; font-size: 24px;">Шкала масштабов Вселенной
-    </h1>
-    <h1 id="hoverTitle" style="position: absolute; top: 0%; display: none;"></h1>
-
-    <div class="wrapper" id="langWrapper" style="visibility: hidden;">
-      <div class="credits">
-        <p>Created by Cary Huang</p>
-        <p>Ported to Pixi.js by Matthew Martori</p>
+    <div class="infoRow">
+      <div class="infoItem">
+        <img src="assets/img/slider.png">
+        <p>Для изменения масштаба используйте полосу прокрутки или колесико мыши</p>
       </div>
-      <button class="box a" onclick="setLang('a', 0)">English (US)</button>
-      <button class="box b" onclick="setLang('b', 3)">English (British)</button>
-      <button class="box c" onclick="setLang('c', 4)">中文 (简体)</button>
-      <button class="box d" onclick="setLang('d', 10)">中文</button>
-      <button class="box e" onclick="setLang('e', 5)">Español</button>
-      <button class="box f" onclick="setLang('f', 15)">العربية</button>
-      <button class="box g" onclick="setLang('g', 8)">Português</button>
-      <button class="box h" onclick="setLang('h', 9)">Deutsch</button>
-      <button class="box i" onclick="setLang('i', 11)">Français</button>
-      <button class="box j" onclick="setLang('j', 16)">한국어</button>
-      <button class="box k" onclick="setLang('k', 19)">Türkçe</button>
-      <button class="box l" onclick="setLang('l', 7)">Polski</button>
-      <button class="box m" onclick="setLang('m', 18)">فارسی</button>
-      <button class="box n" onclick="setLang('n', 14)">Українська</button>
-      <button class="box o" onclick="setLang('o', 13)">Româna</button>
-      <button class="box p" onclick="setLang('p', 2)">Nederlands</button>
-      <button class="box q" onclick="setLang('q', 6)">Svenska</button>
-      <button class="box r" onclick="setLang('r', 1)">עברית</button>
-      <button class="box s" onclick="setLang('s', 12)">Esperanto</button>
-      <button class="box t" onclick="setLang('t', 17)">Eesti</button>
-      <button class="box u" onclick="setLang('u', 20)">Русский</button>
+      <div class="infoItem">
+        <img src="assets/img/object.png">
+        <p>Для дополнительной информации щелкните по объекту</p>
+      </div>
     </div>
-
-    <div id="startWrapper">
+    <div class="bottomRow">
       <div class="credits">
-        <p>Created by Cary Huang</p>
-        <p>Ported to Pixi.js by Matthew Martori</p>
-        <p id="translationCredit"></p>
+        <p>Создано: Кэри Хуан, Майкл Хуан</p>
+        <p>Разработка веб: Мэтью Мартори <a href="https://github.com/matttt/scale_of_the_universe">github.com</a></p>
+        <p>Copyright ©: Кэри и Майкл Хуан <a href="https://www.htwins.net/scale2/">htwins.net</a></p>
+        <p>Перевод, разработка: Павел Фролов <a href="https://github.com/pawfrolow/scale_of_the_universe">github.com</a>
+        </p>
       </div>
-
-      <div id="startGrid">
-
-
-
-        <div class="tutBox nw">
-          <img style="height: 75px" src="img/slider.png">
-        </div>
-        <div class="tutBox sw">
-          <h2 id="moveSliderText" style="margin: 0"></h2>
-        </div>
-        <div class="tutBox ne">
-          <img style="height: 75px" src="img/object.png">
-        </div>
-        <div class="tutBox se">
-          <h2 id="clickObjectText" style="margin: 0"></h2>
-        </div>
-
-      </div>
-      <button onclick="startSOTU()" id="startBtn">
-        <!-- <svg class="bi bi-play-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
-        </svg> -->
+      <button onclick="startSOTU()" class="startBtn">
+        <svg class="bi bi-play-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="white"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" />
+        </svg>
+        Старт
       </button>
     </div>
-
-
   </dialog>
-
-
-  <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
-  <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
-  <script src="js/bundle.js"></script>
-
-
-  <script>window.sa_event = window.sa_event || function () { a = [].slice.call(arguments); sa_event.q ? sa_event.q.push(a) : sa_event.q = [a] };</script>
-  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
-
-  <div style="position: absolute; width: 728px; height: 90px; left: calc(50vw - 364px); bottom: 0px; z-index: 1000">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Scale of the Universe 2.1 -->
-    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
-      data-ad-client="ca-pub-8441223715044524" data-ad-slot="2018216847"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-
-
-
+  <script type="module" src="./ts/main.ts"></script>
 </body>
 
 </html>

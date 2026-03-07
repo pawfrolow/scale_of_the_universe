@@ -78,7 +78,6 @@ export class ScaleText {
   }
 
   setColor(scaleExp: number) {
-
     if (scaleExp > 5) {
       let opacity = map(scaleExp, 5, 7, 0.1, 1);
 
@@ -86,6 +85,5 @@ export class ScaleText {
     } else {
       this.containerSpace.alpha = 0.1;
     }
-
   }
 }

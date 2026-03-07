@@ -8,7 +8,6 @@ import {
 } from "pixi.js-legacy";
 import { Entity } from "./entity";
 import { E } from "../helpers/e";
-import { map } from "../helpers/map";
 import { getGraphics } from "../helpers/description";
 import { 
   textDatum,
