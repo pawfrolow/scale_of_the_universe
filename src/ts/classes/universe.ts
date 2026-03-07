@@ -342,10 +342,6 @@ export class Universe {
         this.rings.push(ring);
         this.container.addChild(ring.getContainer());
       }
-
-
-
-
     }
   }
 }
