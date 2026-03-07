@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 import legacy from '@vitejs/plugin-legacy'
+import { resolve } from 'path'
 
 export default defineConfig({
   root: 'src',
-  publicDir: 'assets',
+  publicDir: resolve(__dirname, 'public'),
   plugins: [
     legacy({
       targets: ['defaults', 'not IE 11']

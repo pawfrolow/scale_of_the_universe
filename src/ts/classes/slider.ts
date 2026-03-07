@@ -124,98 +124,78 @@ export class Slider {
   }
 
   handle() {
-    var graphics = new Graphics();
-    graphics.interactive = true;
-    // set a fill and a line style again and draw a rectangle
-    graphics.lineStyle(0, 0xaaaaaa, 0);
-    graphics.beginFill(0xffffff, 1);
+    const graphics = new Graphics()
+    graphics.eventMode = 'static'
+    graphics.cursor = 'pointer'
 
+    graphics.lineStyle(0, 0xaaaaaa, 0)
+    graphics.beginFill(0xffffff, 1)
 
-    const w = this.w * HANDLE_WIDTH_PERCENT;
-    this.handleW = w;
-    const h = this.h * HEIGHT_PERCENT;
+    const w = this.w * HANDLE_WIDTH_PERCENT
+    this.handleW = w
+    const h = this.h * HEIGHT_PERCENT
 
-    const x = this.w / 2 + w / 2;
-    this.currentX = x;
-    this.targetX = x;
-    const y = this.h - h - BOTTOM_MARGIN;
+    const x = this.w / 2 + w / 2
+    this.currentX = x
+    this.targetX = x
+    const y = this.h - h - BOTTOM_MARGIN
 
-    graphics.drawRoundedRect(0, 0, w, h, h / 2);
+    graphics.drawRoundedRect(0, 0, w, h, h / 2)
 
-    graphics.lineStyle(3, 0xff0000, 1);
-    graphics.endFill();
+    graphics.lineStyle(3, 0xff0000, 1)
+    graphics.endFill()
 
-    graphics.lineStyle(3, 0xff00ff, 1);
+    graphics.lineStyle(3, 0xff00ff, 1)
 
-    graphics.position = new Point(x, y);
-    graphics.cacheAsBitmap = true;
+    graphics.position = new Point(x, y)
+    graphics.cacheAsBitmap = true
 
-    // setup events
-    graphics
-      .on("mousedown", onDragStart)
-      .on("touchstart", onDragStart)
-      .on("mouseup", onDragEnd)
-      .on("mouseupoutside", onDragEnd)
-      .on("touchend", onDragEnd)
-      .on("touchendoutside", onDragEnd)
-      .on("mousemove", onDragMove)
-      .on("touchmove", onDragMove);
-
-    let here = this;
+    const here = this
 
     function onDragStart(event: any) {
-      this.startOffset = event.data.global.x - here.handleGfx.position.x
+      here.startOffset = event.global.x - here.handleGfx.position.x
+      here.dragging = true
 
-      here.interact();
-
-      this.data = event.data;
-      this.alpha = 0.75;
-      this.dragging = true;
-
-      this.fpsTarget = 200;
-
-      here.onHandleClicked();
-
-      here.dragging = true;
+      graphics.alpha = 0.75
+      here.interact()
+      here.onHandleClicked()
     }
 
     function onDragEnd() {
-      this.alpha = 1;
+      if (!here.dragging) return
 
-      this.dragging = false;
-      here.dragging = false;
+      graphics.alpha = 1
+      here.dragging = false
+      here.interact()
 
-      here.interact();
-
-      let diff = here.currentX - here.targetX;
-      let dir = diff / Math.abs(diff);
-
-      let newDiff = diff / 3;
+      const diff = here.currentX - here.targetX
+      const newDiff = diff / 3
 
       if (Math.abs(diff) > (here.w / 10)) {
         here.setTarget(here.currentX - newDiff)
       }
-
-      // set the interaction data to null
-      this.data = null;
     }
 
-    let width = this.w;
-    let that = this;
-    function onDragMove() {
-      here.interact();
+    function onGlobalDragMove(event: any) {
+      if (!here.dragging) return
 
-      if (this.dragging) {
-        var newX = this.data.getLocalPosition(this.parent).x;
+      here.interact()
 
-        that.setTarget(newX - this.startOffset);
-      }
+      const newX = event.global.x
+      here.setTarget(newX - here.startOffset)
     }
 
-    this.handleGfx = graphics;
-    this.handleAnim();
+    graphics.on('pointerdown', onDragStart)
+    graphics.on('pointerup', onDragEnd)
+    graphics.on('pointerupoutside', onDragEnd)
 
-    return graphics;
+    // глобальное движение, даже вне хэндла
+    graphics.on('globalpointermove', onGlobalDragMove)
+
+    this.handleGfx = graphics
+    this.handleAnim()
+
+    return graphics
   }
 
   setTarget(x: number) {

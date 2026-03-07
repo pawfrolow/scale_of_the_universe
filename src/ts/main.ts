@@ -14,7 +14,7 @@ declare global {
   }
 }
 
-const frozenStar = new Audio('/assets/sound/frozen_star.mp3')
+const frozenStar = new Audio('sound/frozen_star.mp3')
 frozenStar.loop = true
 frozenStar.volume = 0.5
 frozenStar.preload = 'auto'
@@ -54,7 +54,7 @@ const highJSONCount = 5
 const textureJsonPaths: string[] = []
 
 for (let i = 0; i <= highJSONCount; i++) {
-  textureJsonPaths.push(`/assets/img/textures/new_items_${i}.json`)
+  textureJsonPaths.push(`img/textures/new_items_${i}.json`)
 }
 
 const globalResolution = 1
@@ -147,7 +147,7 @@ async function bootstrap() {
   }
 
   const textData = (
-    await (await fetch('/assets/data/languages/l20.txt')).text()
+    await (await fetch('data/languages/l20.txt')).text()
   ).split('\n').map(x => x.replace(/\r?\n|\r/g, ''))
 
   slider.setPercent(map(0.1, -35, 27, 0, 1))

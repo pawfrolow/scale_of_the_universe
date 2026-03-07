@@ -160,8 +160,8 @@ export class Universe {
   }
 
   async createItems(textures: Record<string, Texture>, textData: string[]) {
-    const itemSizes = await (await fetch('/assets/data/sizes.json')).json()
-    const visualLocations = await (await fetch('/assets/data/visualLocations.json')).json()
+    const itemSizes = await (await fetch('data/sizes.json')).json()
+    const visualLocations = await (await fetch('data/visualLocations.json')).json()
 
     const meterText = textData[596]
     const meterPluralText = textData[597]
