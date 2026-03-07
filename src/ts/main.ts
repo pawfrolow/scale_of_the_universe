@@ -1,11 +1,18 @@
 import * as PIXI from 'pixi.js-legacy'
 import 'pixi.js-legacy'
+import { Assets } from 'pixi.js-legacy'
 
 import { Slider } from './classes/slider'
 import { Universe } from './classes/universe'
 import { ScaleText } from './classes/scaleText'
 
 import { map } from './helpers/map'
+
+declare global {
+  interface Window {
+    startSOTU: () => void
+  }
+}
 
 const frozenStar = new Audio('/assets/sound/frozen_star.mp3')
 frozenStar.loop = true
@@ -43,16 +50,22 @@ muteToggle?.addEventListener('click', (ev) => {
   }
 })
 
-const loader = new PIXI.Loader()
 const highJSONCount = 5
+const textureJsonPaths: string[] = []
 
 for (let i = 0; i <= highJSONCount; i++) {
-  loader.add(`main${i}`, `/assets/img/textures/new_items_${i}.json`)
+  textureJsonPaths.push(`/assets/img/textures/new_items_${i}.json`)
 }
 
 const globalResolution = 1
 
-loader.load(async (_loader, resources) => {
+async function bootstrap() {
+  const resources: Record<string, any> = {}
+
+  for (const path of textureJsonPaths) {
+    resources[path] = await Assets.load(path)
+  }
+
   let app: PIXI.Application
 
   try {
@@ -60,21 +73,21 @@ loader.load(async (_loader, resources) => {
       width: frame.offsetWidth,
       height: frame.offsetHeight,
       antialias: true,
-      transparent: true,
+      backgroundAlpha: 0,
       powerPreference: 'high-performance',
       resolution: globalResolution,
       sharedTicker: true,
       resizeTo: sotuFrame,
     })
   } catch (err) {
-    console.log(err)
+    console.log('error', err)
     app = new PIXI.Application({
       width: frame.offsetWidth,
       height: frame.offsetHeight,
       backgroundColor: 0xffffff,
+      backgroundAlpha: 0,
       antialias: true,
       forceCanvas: true,
-      transparent: true,
       resolution: globalResolution,
     })
   }
@@ -89,17 +102,18 @@ loader.load(async (_loader, resources) => {
   const scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0')
 
   const buttons = document.getElementById('buttons') as HTMLElement | null
+  const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null
+  const earthBg = document.getElementById('earthBgImage') as HTMLElement | null
 
   const allHighTextures: Record<string, PIXI.Texture> = {}
 
   for (const key of Object.keys(resources)) {
-    if (!key.includes('_image') && resources[key].textures) {
-      Object.assign(allHighTextures, resources[key].textures)
+    const resource = resources[key]
+    if (resource?.textures) {
+      Object.assign(allHighTextures, resource.textures)
     }
   }
 
-  const spaceBg = document.getElementById('spaceBgImage')
-  const earthBg = document.getElementById('earthBgImage')
   function onChange(x: number, percent: number) {
     const scaleExp = percent * 62 - 35
 
@@ -107,10 +121,15 @@ loader.load(async (_loader, resources) => {
 
     if (scaleExp > 5 && scaleExp < 7) {
       const opacity = map(scaleExp, 5, 7, 0.1, 100)
-      let opacityNorm = opacity / 100;
+      const opacityNorm = opacity / 100
 
-      spaceBg.style.opacity = `${opacityNorm}`;
-      earthBg.style.opacity = `${1 - opacityNorm}`;
+      if (spaceBg) {
+        spaceBg.style.opacity = `${opacityNorm}`
+      }
+
+      if (earthBg) {
+        earthBg.style.opacity = `${1 - opacityNorm}`
+      }
 
       if (buttons) {
         buttons.style.filter = `invert(${opacity}%)`
@@ -140,19 +159,23 @@ loader.load(async (_loader, resources) => {
     universe.displayContainer
   )
 
-  sotuFrame.appendChild(app.view)
+  sotuFrame.appendChild(app.view as HTMLCanvasElement)
 
   await universe.createItems(allHighTextures, textData)
 
   slider.setPercent(map(0, -35, 27, 0, 1))
   universe.prevZoom = 0
 
-  window['startSOTU'] = () => {
+  const startBtn = document.getElementById('startBtn') as HTMLButtonElement | null
+
+  startBtn?.addEventListener('click', () => {
     modal?.close()
     frame.style.visibility = 'visible'
 
     if (!isMuted) {
       void frozenStar.play().catch(console.error)
     }
-  }
-})
+  })
+}
+
+void bootstrap().catch(console.error)

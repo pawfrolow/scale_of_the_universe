@@ -45,8 +45,10 @@ export class Universe {
 
     this.container.sortableChildren = false
 
-    this.app.renderer.plugins.interaction.on('mousedown', (e: any) => {
-      if (!e.target) {
+    this.app.stage.eventMode = 'static'
+
+    this.app.stage.on('pointerdown', (e: any) => {
+      if (e.target === this.app.stage) {
         this.unHideItems()
       }
     })

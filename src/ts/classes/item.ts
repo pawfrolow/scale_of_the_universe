@@ -3,13 +3,13 @@ import {
   Text,
   Container,
   Texture,
-  Point, 
+  Point,
   Polygon
 } from "pixi.js-legacy";
 import { Entity } from "./entity";
 import { E } from "../helpers/e";
 import { getGraphics } from "../helpers/description";
-import { 
+import {
   textDatum,
   VisualLocation,
   SizeData,
@@ -151,7 +151,7 @@ export class Item extends Entity {
       fontFamily: "Roboto",
       fontSize: 48 * this.visualLocation.titleScale,
       fill: 0x000000,
-      align: "center",
+      align: "center" as const,
       wordWrap: this.visualLocation.titleWrap,
       wordWrapWidth: 400,
     };
@@ -209,8 +209,8 @@ export class Item extends Entity {
     }
 
     sprite.hitArea = new Polygon(points);
-    sprite.buttonMode = true; //false makes mouse cursor not change when on item
-    sprite.interactive = true;
-    sprite.on("mousedown", onButtonDown).on("touchstart", onButtonDown);
+    sprite.interactive = true
+    sprite.cursor = 'pointer'
+    sprite.on('mousedown', onButtonDown).on('touchstart', onButtonDown)
   }
 }

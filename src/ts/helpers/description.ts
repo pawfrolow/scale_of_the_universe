@@ -12,7 +12,7 @@ export function getGraphics(visualLocation, textDatum, extraText, units: string[
 
   const baseStyle = {
     fontFamily: 'Roboto',
-    align: 'left',
+    align: 'left' as const,
     fill: 0x000000,
     wordWrapWidth: w - (margin * 2),
     wordWrap: true

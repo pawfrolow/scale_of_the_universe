@@ -106,7 +106,7 @@ export class Ring extends Entity {
       fontFamily: 'Roboto',
       fontSize: 40,
       fill: 0x777777,
-      align: 'center',
+      align: 'center' as const,
       wordWrap: false,
       wordWrapWidth: 1000,
       breakWords: false,
