@@ -21,7 +21,7 @@ type TUnitsData = {
 };
 
 type TUniverseLocaleData = {
-  objects: TObjectText[];
+  objects: Record<string, TObjectText>;
   units: TUnitsData;
   ui: Record<string, unknown>;
 };
@@ -55,7 +55,7 @@ export const translationService = {
   },
 
   getUniverseLocaleData(): TUniverseLocaleData {
-    const objectsData = getResource<{ items?: TObjectText[] }>('objects');
+    const objectsData = getResource<{ items?: Record<string, TObjectText> }>('objects');
     const unitsData = getResource<{
       units?: {
         meter?: string;
@@ -70,7 +70,7 @@ export const translationService = {
     const uiData = getResource<Record<string, unknown>>('ui');
 
     return {
-      objects: objectsData.items ?? [],
+      objects: objectsData.items ?? {},
       units: {
         meter: unitsData.units?.meter ?? 'метр',
         meters: unitsData.units?.meters ?? 'метров',
