@@ -73,7 +73,7 @@ export const useUniverse = ({
         return
       }
 
-      const globalResolution = Math.min(window.devicePixelRatio || 1, 2)
+      const globalResolution = 1
 
       try {
         app = new PIXI.Application({
