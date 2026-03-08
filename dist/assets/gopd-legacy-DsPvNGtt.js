@@ -1,0 +1,1 @@
+System.register([],function(t,r){"use strict";return{execute:function(){var r,e,n,u;function c(){return e?r:(e=1,r=Object.getOwnPropertyDescriptor)}t("r",function(){if(u)return n;u=1;var t=c();if(t)try{t([],"length")}catch(r){t=null}return n=t})}}});

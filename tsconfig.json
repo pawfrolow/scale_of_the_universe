@@ -7,6 +7,7 @@
     "rootDir": "src",
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules"],

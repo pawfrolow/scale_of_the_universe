@@ -7,21 +7,16 @@ import { Universe } from './classes/universe'
 import { ScaleText } from './classes/scaleText'
 
 import { map } from './helpers/map'
+import { i18next, initI18n } from '../i18n'
+import { getTextureJsonPaths } from './helpers/getTextureJsonPaths'
+import { throttle } from './helpers/throttle'
+import { toggleFullscreen } from './helpers/fullscreen'
 
 declare global {
   interface Window {
     startSOTU: () => void
   }
 }
-
-const frozenStar = new Audio('sound/frozen_star.mp3')
-frozenStar.loop = true
-frozenStar.volume = 0.5
-frozenStar.preload = 'auto'
-
-const frame = document.getElementById('frame') as HTMLElement
-const sotuFrame = document.getElementById('sotu') as HTMLElement
-const modal = document.getElementById('modal') as HTMLDialogElement | null
 
 console.log(`
   Шкала масштабов Вселенной 2.1
@@ -34,7 +29,22 @@ console.log(`
   Сделано с ♥️
 `)
 
+const frozenStar = new Audio('sound/frozen_star.mp3')
+frozenStar.loop = true
+frozenStar.volume = 0.5
+frozenStar.preload = 'auto'
+
+const frame = document.getElementById('frame') as HTMLElement
+const sotuFrame = document.getElementById('sotu') as HTMLElement
+const modal = document.getElementById('modal') as HTMLDialogElement | null
+const buttons = document.getElementById('buttons') as HTMLElement
+const spaceBg = document.getElementById('spaceBgImage') as HTMLElement
+const earthBg = document.getElementById('earthBgImage') as HTMLElement
+const startBtn = document.getElementById('startBtn') as HTMLButtonElement
+const startBtnText = document.getElementById('startBtnText') as HTMLElement
 const muteToggle = document.querySelector('.speaker') as HTMLElement | null
+const fullscreenBtn = document.getElementById('fullscreenBtn') as HTMLButtonElement
+
 let isMuted = false
 
 muteToggle?.addEventListener('click', (ev) => {
@@ -50,16 +60,22 @@ muteToggle?.addEventListener('click', (ev) => {
   }
 })
 
-const highJSONCount = 5
-const textureJsonPaths: string[] = []
+fullscreenBtn?.addEventListener('click', () => {
+  toggleFullscreen(frame);
+});
 
-for (let i = 0; i <= highJSONCount; i++) {
-  textureJsonPaths.push(`img/textures/new_items_${i}.json`)
-}
+const textureJsonPaths: string[] = getTextureJsonPaths()
 
 const globalResolution = 1
 
 async function bootstrap() {
+  await initI18n('ru');
+
+  console.log(i18next)
+
+  startBtnText.innerHTML = i18next.t('html.modal.startLoading', { ns: 'ui' });
+  startBtn.disabled = true
+
   const resources: Record<string, any> = {}
 
   for (const path of textureJsonPaths) {
@@ -101,10 +117,6 @@ async function bootstrap() {
   const universe = new Universe(0, slider, app)
   const scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0')
 
-  const buttons = document.getElementById('buttons') as HTMLElement | null
-  const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null
-  const earthBg = document.getElementById('earthBgImage') as HTMLElement | null
-
   const allHighTextures: Record<string, PIXI.Texture> = {}
 
   for (const key of Object.keys(resources)) {
@@ -118,6 +130,10 @@ async function bootstrap() {
     const scaleExp = percent * 62 - 35
 
     scaleText.setColor(scaleExp)
+
+    if (scaleExp <= 5) {
+      buttons.style.filter = ''
+    }
 
     if (scaleExp > 5 && scaleExp < 7) {
       const opacity = map(scaleExp, 5, 7, 0.1, 100)
@@ -134,8 +150,10 @@ async function bootstrap() {
       if (buttons) {
         buttons.style.filter = `invert(${opacity}%)`
       }
-    } else if (buttons?.style.filter) {
-      buttons.style.filter = ''
+    }
+
+    if (scaleExp >= 7) {
+      buttons.style.filter = 'invert(100%)'
     }
 
     universe.update(scaleExp)
@@ -145,10 +163,6 @@ async function bootstrap() {
   function onHandleClicked() {
     universe.onHandleClicked()
   }
-
-  const textData = (
-    await (await fetch('data/languages/l20.txt')).text()
-  ).split('\n').map(x => x.replace(/\r?\n|\r/g, ''))
 
   slider.setPercent(map(0.1, -35, 27, 0, 1))
 
@@ -161,12 +175,27 @@ async function bootstrap() {
 
   sotuFrame.appendChild(app.view as HTMLCanvasElement)
 
-  await universe.createItems(allHighTextures, textData)
+  await universe.createItems(allHighTextures);
 
   slider.setPercent(map(0, -35, 27, 0, 1))
   universe.prevZoom = 0
 
-  const startBtn = document.getElementById('startBtn') as HTMLButtonElement | null
+  const handleResize = throttle(() => {
+    requestAnimationFrame(() => {
+      const w = app.renderer.width + 3;
+      const h = app.renderer.height;
+
+      const currentPercent = slider.getPercent();
+
+      slider.resize(w, h, globalResolution);
+      universe.resize();
+      scaleText.resize((w * 0.9) / globalResolution, slider.topY - 40);
+
+      slider.setPercent(currentPercent);
+    });
+  }, 100);
+
+  window.addEventListener('resize', handleResize);
 
   startBtn?.addEventListener('click', () => {
     modal?.close()
@@ -176,6 +205,9 @@ async function bootstrap() {
       void frozenStar.play().catch(console.error)
     }
   })
+
+  startBtnText.innerHTML = i18next.t('html.modal.startButton', { ns: 'ui' });
+  startBtn.disabled = false
 }
 
 void bootstrap().catch(console.error)

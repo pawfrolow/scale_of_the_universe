@@ -28,10 +28,13 @@
   <div id="frame" style="visibility: hidden;" class="frameStyle">
     <div id="buttons" class="buttons">
       <button onclick="window.location.reload();" class="lang">
-        <img src="img/lang.svg">
+        <img src="img/icons/home.svg">
       </button>
       <button class="speaker">
         <span></span>
+      </button>
+      <button class="fullscreen" id="fullscreenBtn">
+        <img src="img/icons/fullscreen.svg">
       </button>
     </div>
     <div class="bgEarth fullBg" id="earthBgImage"></div>
@@ -61,12 +64,8 @@
         </p>
       </div>
       <button class="startBtn" id="startBtn">
-        <svg class="bi bi-play-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="white"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" />
-        </svg>
-        Старт
+        <img width="25" src="img/icons/play.svg">
+        <span id="startBtnText">Старт</span>
       </button>
     </div>
   </dialog>

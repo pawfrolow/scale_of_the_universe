@@ -86,4 +86,18 @@ export class ScaleText {
       this.containerSpace.alpha = 0.1;
     }
   }
+
+  public resize(x: number, y: number) {
+    this.textGround.x = x + 27;
+    this.textGround.y = y;
+
+    this.textSpace.x = x + 27;
+    this.textSpace.y = y;
+
+    this.baseTextGround.x = x - 10;
+    this.baseTextGround.y = y;
+
+    this.baseTextSpace.x = x - 10;
+    this.baseTextSpace.y = y;
+  }
 }

@@ -173,6 +173,7 @@ dialog {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    width: 250px;
 
     padding: 10px 48px;
 
@@ -186,6 +187,11 @@ dialog {
 
     &:hover {
       opacity: 0.9;
+    }
+
+    &:disabled {
+      opacity: 0.9;
+      cursor: not-allowed;
     }
   }
 
@@ -233,7 +239,6 @@ dialog {
 
   width: 30px;
   height: 30px;
-  margin-bottom: 2px;
 
   font-family: arial, sans-serif;
   text-align: center;
@@ -242,7 +247,7 @@ dialog {
     display: block;
     width: 8px;
     height: 8px;
-    margin: 0 0 0 2px;
+    margin: 0 0 0 -18px;
     background: $color-text-dark;
 
     &:after {
@@ -302,11 +307,22 @@ dialog {
     cursor: pointer;
     background: none;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
 
   .lang {
     color: $color-text-dark;
 
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .fullscreen {
     img {
       width: 22px;
       height: 22px;

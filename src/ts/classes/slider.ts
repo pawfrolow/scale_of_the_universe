@@ -251,6 +251,7 @@ export class Slider {
       percent = 0;
     }
 
+    this.currentPercent = percent;
     this.currentX = this.scaleWidthPixels * percent + this.margin;
     this.targetX = this.scaleWidthPixels * percent + this.margin;
     this.handleGfx.position.x = this.currentX;
@@ -330,5 +331,24 @@ export class Slider {
 
       }
     });
+  }
+
+  public resize(w: number, h: number, globalRes: number) {
+    this.w = w / globalRes;
+    this.h = h / globalRes;
+
+    this.widthPixels = this.w * WIDTH_PERCENT;
+    this.handleWidthPixels = this.w * HANDLE_WIDTH_PERCENT;
+    this.scaleWidthPixels = this.widthPixels - this.handleWidthPixels;
+    this.margin = (this.w - this.widthPixels) / 2;
+
+    const currentPercent = this.currentPercent ?? 0;
+
+    this.init();
+    this.setPercent(currentPercent);
+  }
+
+  public getPercent() {
+    return this.currentPercent ?? 0;
   }
 }

@@ -15,9 +15,13 @@
   "license": "ISC",
   "dependencies": {
     "google-closure-compiler": "^20260304.0.0",
+    "i18next": "^25.8.14",
+    "i18next-browser-languagedetector": "^8.2.1",
     "numeral": "^2.0.6",
     "pixi-filters": "^5.3.0",
     "pixi.js-legacy": "^7.4.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "shifty": "^3.0.6",
     "typescript": "^5.9.3"
   },
