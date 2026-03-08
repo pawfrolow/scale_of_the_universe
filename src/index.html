@@ -1,75 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Шкала масштабов Вселенной. Соотношение размеров различных объектов (от элементарных частиц до галактик)."
+    />
+    <meta property="og:title" content="Шкала масштабов Вселенной" />
+    <meta
+      property="og:description"
+      content="Соотношение размеров различных объектов — от элементарных частиц до галактик."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/ogimage.png" />
+    <title>Шкала масштабов Вселенной</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description"
-    content="Шкала масштабов Вселенной. Соотношение размеров различных объектов (от элементарных частиц до галактик)." />
-  <meta name="yandex-verification" content="3e16199ee8c2f02c" />
-  <meta name="google-site-verification" content="9M7zMGneCxS-CE6wBWrS-WiSl2Mp3syPWU2UEpBGKg4" />
-  <meta property="og:title" content="Шкала масштабов Вселенной">
-  <meta property="og:description"
-    content="Соотношение размеров различных объектов — от элементарных частиц до галактик.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="img/ogimage.png">
-  <title>Шкала масштабов Вселенной</title>
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  </head>
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="./assets/css/styles.scss">
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-</head>
-
-<body>
-  <div id="frame" style="visibility: hidden;" class="frameStyle">
-    <div id="buttons" class="buttons">
-      <button onclick="window.location.reload();" class="lang">
-        <img src="img/icons/home.svg">
-      </button>
-      <button class="speaker">
-        <span></span>
-      </button>
-      <button class="fullscreen" id="fullscreenBtn">
-        <img src="img/icons/fullscreen.svg">
-      </button>
-    </div>
-    <div class="bgEarth fullBg" id="earthBgImage"></div>
-    <div class="bgSpace fullBg" id="spaceBgImage"></div>
-    <div id="sotu"></div>
-  </div>
-  </div>
-  <dialog id="modal" open>
-    <h1 class="title">Шкала масштабов Вселенной</h1>
-
-    <div class="infoRow">
-      <div class="infoItem">
-        <img src="img/slider.png">
-        <p>Для изменения масштаба используйте полосу прокрутки или колесико мыши</p>
-      </div>
-      <div class="infoItem">
-        <img src="img/object.png">
-        <p>Для дополнительной информации щелкните по объекту</p>
-      </div>
-    </div>
-    <div class="bottomRow">
-      <div class="credits">
-        <p>Создано: Кэри Хуан, Майкл Хуан</p>
-        <p>Разработка веб: Мэтью Мартори <a href="https://github.com/matttt/scale_of_the_universe">github.com</a></p>
-        <p>Copyright ©: Кэри и Майкл Хуан <a href="https://www.htwins.net/scale2/">htwins.net</a></p>
-        <p>Перевод, разработка: Павел Фролов <a href="https://github.com/pawfrolow/scale_of_the_universe">github.com</a>
-        </p>
-      </div>
-      <button class="startBtn" id="startBtn">
-        <img width="25" src="img/icons/play.svg">
-        <span id="startBtnText">Старт</span>
-      </button>
-    </div>
-  </dialog>
-  <script type="module" src="./ts/main.ts"></script>
-</body>
-
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./main.tsx"></script>
+  </body>
 </html>

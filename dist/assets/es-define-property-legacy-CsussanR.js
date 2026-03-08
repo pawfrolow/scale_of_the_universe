@@ -1,1 +1,0 @@
-System.register([],function(e,r){"use strict";return{execute:function(){var r,t;e("r",function(){if(t)return r;t=1;var e=Object.defineProperty||!1;if(e)try{e({},"a",{value:1})}catch(n){e=!1}return r=e})}}});

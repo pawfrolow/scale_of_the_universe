@@ -1,1 +1,0 @@
-System.register(["./@pixi-legacy-DVLbAT73.js","./pixi.js-legacy-C3QoouCr.js","./eventemitter3-legacy-ve3UabmH.js","./earcut-legacy-BoBDF8_G.js","./url-legacy-mYlVIYsl.js"],function(e,l){"use strict";return{setters:[null,null,null,null,null],execute:function(){}}});

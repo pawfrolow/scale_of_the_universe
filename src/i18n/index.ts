@@ -7,13 +7,16 @@ import ruUi from './locales/ru/ui.json';
 import enObjects from './locales/en/objects.json';
 import enUnits from './locales/en/units.json';
 import enUi from './locales/en/ui.json';
+import { initReactI18next } from 'react-i18next';
 
 export async function initI18n(defaultLanguage = 'ru') {
   if (i18next.isInitialized) {
     return i18next;
   }
 
-  await i18next.init({
+  await i18next
+  .use(initReactI18next)
+  .init({
     lng: defaultLanguage,
     fallbackLng: 'ru',
     interpolation: {

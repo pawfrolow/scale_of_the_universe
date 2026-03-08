@@ -22,12 +22,15 @@
     "pixi.js-legacy": "^7.4.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-i18next": "^16.5.6",
     "shifty": "^3.0.6",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@types/node": "^22.12.0",
     "@types/numeral": "^2.0.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-legacy": "^7.2.1",
     "sass-embedded": "^1.97.3",
     "vite": "^7.3.1"
