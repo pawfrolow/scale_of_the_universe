@@ -1,8 +1,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const inputPath = path.resolve('public/data/languages/l20.txt')
-const outputDir = path.resolve('src/i18n/locales/ru')
+const inputPath = path.resolve('public/data/languages/l18.txt')
+const outputDir = path.resolve('src/i18n/locales/fa')
 
 const raw = fs.readFileSync(inputPath, 'utf8')
 
@@ -77,6 +77,7 @@ const objectsJson = {
 
 const unitsJson = {
   units: {
+    meterShort: meter[0] === 'м' ? 'м' : 'm',
     meter,
     meters,
     centimeter,
@@ -112,6 +113,7 @@ const uiJson = {
       objectHint: uiLines[2] ?? 'Для дополнительной информации щелкните по объекту',
       startButton: 'Старт',
       startLoading: 'Загрузка...',
+      selectLanguage: "Выберите язык"
     },
     credits: {
       createdBy: 'Создано: Кэри Хуан, Майкл Хуан',
@@ -130,13 +132,13 @@ fs.writeFileSync(
   'utf8'
 )
 
-/* fs.writeFileSync(
+fs.writeFileSync(
   path.join(outputDir, 'units.json'),
   JSON.stringify(unitsJson, null, 2),
   'utf8'
 )
 
-fs.writeFileSync(
+/* fs.writeFileSync(
   path.join(outputDir, 'ui.json'),
   JSON.stringify(uiJson, null, 2),
   'utf8'

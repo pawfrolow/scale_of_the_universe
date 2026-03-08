@@ -34,5 +34,6 @@ export interface ExtraText {
   lightyear: string;
   lightyears: string;
   meter: string;
+  meterShort: string;
   meters: string;
 }

@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "宇宙的刻度",
+    "zoomHint": "使用捲軸進行放大和縮小。",
+    "objectHint": "點擊物件以了解更多資訊。",
+    "start": "開始"
+  },
+  "language": {
+    "nativeName": "中文（繁體）",
+    "englishName": "Traditional Chinese"
+  },
+  "html": {
+    "meta": {
+      "description": "宇宙的刻度。比較各種物體的大小，從基本粒子到星系。",
+      "ogTitle": "宇宙的刻度",
+      "ogDescription": "比較各種物體的大小——從基本粒子到星系。"
+    },
+    "modal": {
+      "title": "宇宙的刻度",
+      "zoomHint": "使用捲軸進行放大和縮小。",
+      "objectHint": "點擊物件以了解更多資訊。",
+      "startButton": "開始",
+      "startLoading": "載入中...",
+      "selectLanguage": "選擇語言"
+    },
+    "credits": {
+      "createdBy": "作者：Cary Huang、Michael Huang",
+      "webDev": "網頁開發：Matthew Martori",
+      "copyright": "版權所有 ©：Cary Huang、Michael Huang",
+      "translationAndDev": "翻譯、開發：Pavel Frolov"
+    }
+  }
+}

@@ -11,6 +11,7 @@ type TSimpleUnitForms = {
 };
 
 type TUnitsData = {
+  meterShort: string;
   meter: string;
   meters: string;
   centimeter: string;
@@ -58,6 +59,7 @@ export const translationService = {
     const objectsData = getResource<{ items?: Record<string, TObjectText> }>('objects');
     const unitsData = getResource<{
       units?: {
+        meterShort?: string,
         meter?: string;
         meters?: string;
         centimeter?: string;
@@ -72,6 +74,7 @@ export const translationService = {
     return {
       objects: objectsData.items ?? {},
       units: {
+        meterShort: unitsData.units?.meterShort ?? 'м',
         meter: unitsData.units?.meter ?? 'метр',
         meters: unitsData.units?.meters ?? 'метров',
         centimeter: unitsData.units?.centimeter ?? 'сантиметр',

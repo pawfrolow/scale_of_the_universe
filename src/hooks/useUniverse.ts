@@ -167,6 +167,7 @@ export const useUniverse = ({
         universe.displayContainer
       )
 
+      containerRef.current.innerHTML = '';
       containerRef.current.appendChild(app.view as HTMLCanvasElement)
 
       await universe.createItems(allHighTextures)

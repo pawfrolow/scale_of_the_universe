@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "Universumi ulatus",
+    "zoomHint": "Kasuta kerimisriba suurendamiseks ja vähendamiseks.",
+    "objectHint": "Vajuta objektidele, et rohkem teada saada.",
+    "start": "Alusta"
+  },
+  "language": {
+    "nativeName": "Eesti",
+    "englishName": "Estonian"
+  },
+  "html": {
+    "meta": {
+      "description": "Universumi ulatus. Erinevate objektide suuruste võrdlus alates elementaarosakestest kuni galaktikateni.",
+      "ogTitle": "Universumi ulatus",
+      "ogDescription": "Erinevate objektide suuruste võrdlus — alates elementaarosakestest kuni galaktikateni."
+    },
+    "modal": {
+      "title": "Universumi ulatus",
+      "zoomHint": "Kasuta kerimisriba suurendamiseks ja vähendamiseks.",
+      "objectHint": "Vajuta objektidele, et rohkem teada saada.",
+      "startButton": "Alusta",
+      "startLoading": "Laadimine...",
+      "selectLanguage": "Vali keel"
+    },
+    "credits": {
+      "createdBy": "Loonud: Cary Huang, Michael Huang",
+      "webDev": "Veebiarendus: Matthew Martori",
+      "copyright": "Copyright ©: Cary Huang, Michael Huang",
+      "translationAndDev": "Tõlge, arendus: Pavel Frolov"
+    }
+  }
+}

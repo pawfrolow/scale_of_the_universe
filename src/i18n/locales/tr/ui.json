@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "Evrenin Ölçeği 2",
+    "zoomHint": "Yakınlaşmak ve uzaklaşmak için kaydırma çubuğunu kullanın.",
+    "objectHint": "Daha fazla bilgi edinmek için nesnelere tıklayın.",
+    "start": "Başlat"
+  },
+  "language": {
+    "nativeName": "Türkçe",
+    "englishName": "Turkish"
+  },
+  "html": {
+    "meta": {
+      "description": "Evrenin Ölçeği. Temel parçacıklardan galaksilere kadar çeşitli nesnelerin boyutlarının karşılaştırması.",
+      "ogTitle": "Evrenin Ölçeği",
+      "ogDescription": "Çeşitli nesnelerin boyutlarının karşılaştırması — temel parçacıklardan galaksilere kadar."
+    },
+    "modal": {
+      "title": "Evrenin Ölçeği 2",
+      "zoomHint": "Yakınlaşmak ve uzaklaşmak için kaydırma çubuğunu kullanın.",
+      "objectHint": "Daha fazla bilgi edinmek için nesnelere tıklayın.",
+      "startButton": "Başlat",
+      "startLoading": "Yükleniyor...",
+      "selectLanguage": "Dil seçin"
+    },
+    "credits": {
+      "createdBy": "Oluşturanlar: Cary Huang, Michael Huang",
+      "webDev": "Web geliştirme: Matthew Martori",
+      "copyright": "Copyright ©: Cary Huang, Michael Huang",
+      "translationAndDev": "Çeviri, geliştirme: Pavel Frolov"
+    }
+  }
+}

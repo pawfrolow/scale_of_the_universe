@@ -1,61 +1,136 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { initI18n } from '../i18n'
-import { createFrozenStarAudio } from '../services/audio.service'
-import { Controls, LoadingOverlay, StartModal, UniverseCanvas } from '../components'
-import { useTranslation } from 'react-i18next'
+import {
+  getStoredLanguage,
+  initI18n,
+  LANGUAGE_OPTIONS,
+  setStoredLanguage,
+  TLanguage,
+} from '../i18n';
+import { createFrozenStarAudio } from '../services/audio.service';
+import {
+  Controls,
+  LanguageModal,
+  LoadingOverlay,
+  StartModal,
+  UniverseCanvas,
+} from '../components';
 
 export const App = () => {
   const [isStarted, setIsStarted] = useState(false)
+  const [hasEnteredApp, setHasEnteredApp] = useState(false)
   const [isMuted, setIsMuted] = useState(false)
   const [isI18nReady, setIsI18nReady] = useState(false)
   const [isAssetsLoading, setIsAssetsLoading] = useState(false)
   const [isAssetsReady, setIsAssetsReady] = useState(false)
   const [assetsProgress, setAssetsProgress] = useState(0)
+  const [isLanguageModalOpen, setIsLanguageModalOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState<TLanguage>(getStoredLanguage());
+  const [universeKey, setUniverseKey] = useState(0);
 
-  const { t } = useTranslation()
-  const audio = useMemo(() => createFrozenStarAudio(), [])
+  const { t, i18n } = useTranslation();
+  const audio = useMemo(() => createFrozenStarAudio(), []);
 
-  const isLoading = !isI18nReady || isAssetsLoading
-
-  useEffect(() => {
-    void initI18n('ru').then(() => {
-      setIsI18nReady(true)
-    })
-  }, [])
+  const isLoading = !isI18nReady || isAssetsLoading;
 
   useEffect(() => {
-    audio.muted = isMuted
+    initI18n(currentLanguage).then(() => {
+      setIsI18nReady(true);
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!isAssetsReady) {
+      return;
+    }
+
+    audio.muted = isMuted;
 
     if (isMuted) {
-      audio.pause()
+      audio.pause();
     } else if (isStarted) {
-      void audio.play().catch(console.error)
+      audio.play().catch(console.error);
     }
-  }, [audio, isMuted, isStarted])
+  }, [audio, isMuted, isStarted, isAssetsReady]);
+
+  useEffect(() => {
+    if (!isI18nReady) {
+      return
+    }
+
+    const title = t('html.meta.ogTitle', { ns: 'ui' })
+    const description = t('html.meta.description', { ns: 'ui' })
+    const ogTitle = t('html.meta.ogTitle', { ns: 'ui' })
+    const ogDescription = t('html.meta.ogDescription', { ns: 'ui' })
+
+    document.title = title
+
+    document.documentElement.lang = currentLanguage;
+    document.documentElement.dir = ['he', 'ar', 'fa'].includes(currentLanguage) ? 'rtl' : 'ltr';
+
+    const setMetaContent = (selector: string, content: string) => {
+      const element = document.querySelector(selector)
+
+      if (element) {
+        element.setAttribute('content', content)
+      }
+    }
+
+    setMetaContent('meta[name="description"]', description)
+    setMetaContent('meta[property="og:title"]', ogTitle)
+    setMetaContent('meta[property="og:description"]', ogDescription)
+  }, [currentLanguage, isI18nReady, t])
 
   const handleStart = async () => {
+    setHasEnteredApp(true)
     setIsStarted(true)
-  }
+  };
 
   const handleToggleMute = () => {
-    setIsMuted(prev => !prev)
-  }
+    setIsMuted(prev => !prev);
+  };
 
   const handleAssetsLoading = () => {
-    setIsAssetsLoading(true)
-    setAssetsProgress(0)
-  }
+    setIsAssetsLoading(true);
+    setAssetsProgress(0);
+  };
 
   const handleAssetsReady = () => {
-    setIsAssetsLoading(false)
-    setIsAssetsReady(true)
-    setAssetsProgress(100)
-  }
+    setIsAssetsLoading(false);
+    setIsAssetsReady(true);
+    setAssetsProgress(100);
+  };
 
   const handleAssetsProgress = (progress: number) => {
-    setAssetsProgress(progress)
-  }
+    setAssetsProgress(progress);
+  };
+
+  const handleOpenLanguageModal = () => {
+    setIsLanguageModalOpen(true);
+  };
+
+  const handleCloseLanguageModal = () => {
+    setIsLanguageModalOpen(false);
+  };
+
+  const handleLanguageSelect = async (language: TLanguage) => {
+    if (language === currentLanguage) {
+      setIsLanguageModalOpen(false);
+      return;
+    }
+
+    setCurrentLanguage(language);
+    setStoredLanguage(language);
+    setIsLanguageModalOpen(false);
+
+    await i18n.changeLanguage(language);
+
+    setIsAssetsReady(false);
+    setIsAssetsLoading(false);
+    setAssetsProgress(0);
+    setUniverseKey(prev => prev + 1);
+  };
 
   return (
     <>
@@ -67,12 +142,21 @@ export const App = () => {
             : t('html.modal.startButton', { ns: 'ui' })
         }
         isLoading={isLoading}
-        isOpen={!isAssetsReady}
+        isOpen={!hasEnteredApp}
         onStart={handleStart}
+        onOpenLanguageModal={handleOpenLanguageModal}
+      />
+
+      <LanguageModal
+        isOpen={isLanguageModalOpen}
+        currentLanguage={currentLanguage}
+        languages={LANGUAGE_OPTIONS}
+        onSelect={handleLanguageSelect}
+        onClose={handleCloseLanguageModal}
       />
 
       <LoadingOverlay
-        isVisible={isStarted && isAssetsLoading}
+        isVisible={hasEnteredApp && isAssetsLoading}
         progress={assetsProgress}
         title={t('html.modal.startLoading', { ns: 'ui' })}
       />
@@ -80,17 +164,19 @@ export const App = () => {
       <div
         id="frame"
         className="frameStyle"
-        style={{ visibility: isStarted && isAssetsReady ? 'visible' : 'hidden' }}
+        style={{ visibility: hasEnteredApp && isAssetsReady ? 'visible' : 'hidden' }}
       >
         <Controls
           isMuted={isMuted}
           onToggleMute={handleToggleMute}
+          onOpenLanguageModal={handleOpenLanguageModal}
         />
 
         <div className="bgEarth fullBg" id="earthBgImage" />
         <div className="bgSpace fullBg" id="spaceBgImage" />
 
         <UniverseCanvas
+          key={universeKey}
           isStarted={isStarted}
           onAssetsLoading={handleAssetsLoading}
           onAssetsReady={handleAssetsReady}
@@ -98,5 +184,5 @@ export const App = () => {
         />
       </div>
     </>
-  )
-}
+  );
+};

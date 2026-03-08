@@ -51,7 +51,7 @@ export const loadItemTextures = async (
   const total = textureIds.length
   let loadedCount = 0
 
-  const chunks = chunkArray(textureIds, 10)
+  const chunks = chunkArray(textureIds, 20)
 
   for (const batch of chunks) {
     const loadedBatch = await Promise.all(

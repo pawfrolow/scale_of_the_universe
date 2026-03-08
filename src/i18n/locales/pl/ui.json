@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "Rozmiar Wszechświata",
+    "zoomHint": "Użyj paska przewijania, aby przybliżać i oddalać.",
+    "objectHint": "Klikaj obiekty, aby dowiedzieć się więcej.",
+    "start": "Rozpocznij"
+  },
+  "language": {
+    "nativeName": "Polski",
+    "englishName": "Polish"
+  },
+  "html": {
+    "meta": {
+      "description": "Rozmiar Wszechświata. Porównanie rozmiarów różnych obiektów, od cząstek elementarnych po galaktyki.",
+      "ogTitle": "Rozmiar Wszechświata",
+      "ogDescription": "Porównanie rozmiarów różnych obiektów — od cząstek elementarnych po galaktyki."
+    },
+    "modal": {
+      "title": "Rozmiar Wszechświata",
+      "zoomHint": "Użyj paska przewijania, aby przybliżać i oddalać.",
+      "objectHint": "Klikaj obiekty, aby dowiedzieć się więcej.",
+      "startButton": "Rozpocznij",
+      "startLoading": "Ładowanie...",
+      "selectLanguage": "Wybierz język"
+    },
+    "credits": {
+      "createdBy": "Stworzone przez: Cary Huang, Michael Huang",
+      "webDev": "Tworzenie wersji internetowej: Matthew Martori",
+      "copyright": "Copyright ©: Cary i Michael Huang",
+      "translationAndDev": "Tłumaczenie, rozwój: Pavel Frolov"
+    }
+  }
+}

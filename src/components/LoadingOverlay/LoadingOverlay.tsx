@@ -1,4 +1,5 @@
 import React from 'react'
+import { Overlay } from '../Overlay/Overlay'
 
 interface ILoadingOverlayProps {
   isVisible: boolean
@@ -11,26 +12,20 @@ export const LoadingOverlay = ({
   progress,
   title = 'Загрузка текстур...',
 }: ILoadingOverlayProps) => {
-  if (!isVisible) {
-    return null
-  }
-
   return (
-    <>
-      <div className="loadingOverlay">
-        <div className="loadingCard">
-          <div className="loadingTitle">{title}</div>
+    <Overlay isOpen={isVisible}>
+      <div className="loadingCard">
+        <div className="loadingTitle">{title}</div>
 
-          <div className="loadingBar">
-            <div
-              className="loadingBarFill"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-
-          <div className="loadingPercent">{progress}%</div>
+        <div className="loadingBar">
+          <div
+            className="loadingBarFill"
+            style={{ width: `${progress}%` }}
+          />
         </div>
+
+        <div className="loadingPercent">{progress}%</div>
       </div>
-    </>
+    </Overlay>
   )
 }

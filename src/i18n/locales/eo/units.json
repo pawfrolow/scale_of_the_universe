@@ -1,0 +1,30 @@
+{
+  "units": {
+    "meterShort": "m",
+    "meter": "metro",
+    "meters": "metroj",
+    "centimeter": "centimetro",
+    "centimeters": "centimetroj",
+    "lightyear": "lum-jaro",
+    "lightyears": "lum-jaroj"
+  },
+  "scalePrefixes": [
+    "jokto",
+    "zepto",
+    "ato",
+    "femto",
+    "piko",
+    "nano",
+    "mikro",
+    "mili",
+    "",
+    "kilo",
+    "mega",
+    "giga",
+    "tera",
+    "peta",
+    "eksa",
+    "zeta",
+    "jota"
+  ]
+}

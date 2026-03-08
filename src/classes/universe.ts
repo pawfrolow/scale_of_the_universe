@@ -19,6 +19,7 @@ type TObjectTranslation = {
 };
 
 type TUniverseUnits = {
+  meterShort: string;
   meter: string;
   meters: string;
   centimeter: string;
@@ -211,7 +212,7 @@ export class Universe {
       const prefixPart = prefix ? `${prefix}` : '';
 
       textDatum.title = `1 ${prefixPart}${units.meter}`;
-      textDatum.description = `${getScaleText(sizeData.exponent)} м`;
+      textDatum.description = `${getScaleText(sizeData.exponent)} ${units.meterShort}`;
 
       return textDatum;
     }
@@ -267,6 +268,7 @@ export class Universe {
       lightyears: units.lightyears,
       meter: units.meter,
       meters: units.meters,
+      meterShort: units.meterShort
     };
 
     const onClick = (item: Item) => {
