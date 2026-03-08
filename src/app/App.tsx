@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react'
 
-import { initI18n, i18next } from '../i18n'
+import { initI18n } from '../i18n'
 import { createFrozenStarAudio } from '../services/audio.service'
-import { Controls, StartModal, UniverseCanvas } from '../components'
+import { Controls, LoadingOverlay, StartModal, UniverseCanvas } from '../components'
 import { useTranslation } from 'react-i18next'
 
 export const App = () => {
@@ -11,8 +11,9 @@ export const App = () => {
   const [isI18nReady, setIsI18nReady] = useState(false)
   const [isAssetsLoading, setIsAssetsLoading] = useState(false)
   const [isAssetsReady, setIsAssetsReady] = useState(false)
-  const { t } = useTranslation();
+  const [assetsProgress, setAssetsProgress] = useState(0)
 
+  const { t } = useTranslation()
   const audio = useMemo(() => createFrozenStarAudio(), [])
 
   const isLoading = !isI18nReady || isAssetsLoading
@@ -43,26 +44,43 @@ export const App = () => {
 
   const handleAssetsLoading = () => {
     setIsAssetsLoading(true)
+    setAssetsProgress(0)
   }
 
   const handleAssetsReady = () => {
     setIsAssetsLoading(false)
     setIsAssetsReady(true)
+    setAssetsProgress(100)
+  }
+
+  const handleAssetsProgress = (progress: number) => {
+    setAssetsProgress(progress)
   }
 
   return (
     <>
       <StartModal
         title={t('html.modal.title', { ns: 'ui' })}
-        startText={isLoading ? t('html.modal.startLoading', { ns: 'ui' }) : t('html.modal.startButton', { ns: 'ui' })}
+        startText={
+          isLoading
+            ? t('html.modal.startLoading', { ns: 'ui' })
+            : t('html.modal.startButton', { ns: 'ui' })
+        }
         isLoading={isLoading}
-        onStart={handleStart}
         isOpen={!isAssetsReady}
+        onStart={handleStart}
       />
+
+      <LoadingOverlay
+        isVisible={isStarted && isAssetsLoading}
+        progress={assetsProgress}
+        title={t('html.modal.startLoading', { ns: 'ui' })}
+      />
+
       <div
         id="frame"
         className="frameStyle"
-        style={{ visibility: (isStarted && isAssetsReady) ? 'visible' : 'hidden' }}
+        style={{ visibility: isStarted && isAssetsReady ? 'visible' : 'hidden' }}
       >
         <Controls
           isMuted={isMuted}
@@ -76,6 +94,7 @@ export const App = () => {
           isStarted={isStarted}
           onAssetsLoading={handleAssetsLoading}
           onAssetsReady={handleAssetsReady}
+          onAssetsProgress={handleAssetsProgress}
         />
       </div>
     </>

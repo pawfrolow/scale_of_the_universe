@@ -5,12 +5,14 @@ interface IUniverseCanvasProps {
   isStarted: boolean
   onAssetsLoading: () => void
   onAssetsReady: () => void
+  onAssetsProgress?: (progress: number) => void
 }
 
 export const UniverseCanvas = ({
   isStarted,
   onAssetsLoading,
   onAssetsReady,
+  onAssetsProgress,
 }: IUniverseCanvasProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null)
 
@@ -19,6 +21,7 @@ export const UniverseCanvas = ({
     isStarted,
     onAssetsLoading,
     onAssetsReady,
+    onAssetsProgress,
   })
 
   return <div id="sotu" ref={containerRef} />

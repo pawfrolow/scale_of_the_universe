@@ -13,7 +13,6 @@ import {
 } from '../interfaces';
 import { calculateScale } from "../helpers/calculateScale";
 
-
 function supFromDig(dig: string) {
   const num = Number(dig);
   return "⁰¹²³⁴⁵⁶⁷⁸⁹".charAt(num);
@@ -52,16 +51,24 @@ export class Ring extends Entity {
 
     this.meterPlural = metersText;
 
-    const dX =
-      window.innerWidth / 2 - textureLow.trim.x + textureLow.trim.width / 2;
-    const dY =
-      window.innerHeight / 2 -
-      textureLow.trim.y +
-      textureLow.trim.height / 2;
+    const trim = textureLow.trim ?? {
+      x: 0,
+      y: 0,
+      width: textureLow.width,
+      height: textureLow.height,
+    }
 
-    var c = Math.sqrt(dX * dX + dY * dY);
+    const orig = textureLow.orig ?? {
+      width: textureLow.width,
+      height: textureLow.height,
+    }
 
-    this.centerVec = new Point(dX / c, dY / c);
+    const dX = orig.width / 2 - trim.x - trim.width / 2
+    const dY = orig.height / 2 - trim.y - trim.height / 2
+
+    const c = Math.sqrt(dX * dX + dY * dY) || 1
+
+    this.centerVec = new Point(dX / c, dY / c)
 
     const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio)// E(this.scaleExp) * this.coeff * this.realRatio;
     this.container.scale = new Point(scale, scale);
