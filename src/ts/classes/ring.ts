@@ -6,24 +6,16 @@ import {
 } from "pixi.js-legacy";
 import { Entity } from "./entity";
 import { E } from "../helpers/e";
-import { map } from "../helpers/map";
-import { 
+import {
   VisualLocation,
   SizeData,
   textDatum
 } from '../interfaces';
 
 
-function supFromDig (dig: string) {
+function supFromDig(dig: string) {
   const num = Number(dig);
   return "⁰¹²³⁴⁵⁶⁷⁸⁹".charAt(num);
-}
-
-function numToSup (num: number) {
-  const str = num.toString();
-
-  return str.replace(/[0123456789]/g, supFromDig)
-            .replace(/-/g, '⁻');
 }
 
 export class Ring extends Entity {
@@ -79,7 +71,7 @@ export class Ring extends Entity {
   setZoom(globalZoomExp: number, deltaZoom: number) {
     const scaleExp = this.scaleExp - globalZoomExp;
     if (!this.culled) {
-      
+
       const scale = E(scaleExp) * this.coeff * this.realRatio;
       this.cull(scale, this.sizeData);
 
@@ -109,77 +101,82 @@ export class Ring extends Entity {
       }
     }
   }
-
   createText() {
-    let baseStyle = {
+    const baseStyle = {
       fontFamily: 'Roboto',
       fontSize: 40,
       fill: 0x777777,
-      align: "center",
+      align: 'center' as const,
       wordWrap: false,
       wordWrapWidth: 1000,
-      breakWords: false
+      breakWords: false,
     }
-    //make method
-    let textStyle = {
+
+    const textStyle = {
       ...baseStyle,
-      fontSize: 60
-    };
-    let expTextStyle = {
+      fontSize: 60,
+    }
+
+    const expBaseStyle = {
       ...baseStyle,
-      fontSize: 40
-    };
-    let descriptionStyle = {
-      ...baseStyle
-    };
-    const scale = E(this.scaleExp) * this.coeff * this.realRatio;
+      fontSize: 40,
+    }
+
+    const expSupStyle = {
+      ...baseStyle,
+      fontSize: 24,
+    }
+
+    const descriptionStyle = {
+      ...baseStyle,
+    }
+
+    const scale = E(this.scaleExp) * this.coeff * this.realRatio
 
     if (scale > E(5)) {
-      textStyle.fill = 0xdddddd;
-      expTextStyle.fill = 0xdddddd;
-      descriptionStyle.fill = 0xdddddd;
+      textStyle.fill = 0xdddddd
+      expBaseStyle.fill = 0xdddddd
+      expSupStyle.fill = 0xdddddd
+      descriptionStyle.fill = 0xdddddd
     }
-    
-    //literally done. users will run a couple regexes. 
-    // const titleNoNewLine = this.textDatum.title.replace(/(\r\n|\n|\r)/gm, '');
 
-    // const expText = this.sizeData.exponent;
-    // const expTextFmtd = numToSup(expText);
+    this.text = new Text(this.textDatum.title, textStyle)
+    this.text.anchor.set(0.5, 0)
+    this.text.cacheAsBitmap = false
+    this.text.position.x = 0
+    this.text.position.y = -300
 
-    const exponentText = new Text(`10^${this.sizeData.exponent} ${this.meterPlural}`, expTextStyle);
+    const expTextContainer = new Container()
 
-    
-    const expTextContainer = new Container();
+    const baseText = new Text('10', expBaseStyle)
+    baseText.anchor.set(0, 0)
 
-    this.text = new Text(this.textDatum.title, textStyle);
-    this.text.anchor.set(0.5, 0);
-    this.text.cacheAsBitmap = false;
-    
-    exponentText.position.x = 0;
-    exponentText.position.y = -225;
-    // exponentText.anchor.set(0.5, 0);
-    
-      
-    expTextContainer.addChild(exponentText)
-    // expTextContainer.addChild(exponentText, expText, unitText)
-    expTextContainer.position.x -= expTextContainer.width /2
+    const superscriptText = new Text(String(this.sizeData.exponent), expSupStyle)
+    superscriptText.anchor.set(0, 0)
+    superscriptText.position.x = baseText.width + 2
+    superscriptText.position.y = -2
 
-    this.text.position.x = 0;
-    this.text.position.y = -300;
+    const unitText = new Text(` ${this.meterPlural}`, expBaseStyle)
+    unitText.anchor.set(0, 0)
+    unitText.position.x = baseText.width + superscriptText.width + 6
+    unitText.position.y = 0
+
+    expTextContainer.addChild(baseText, superscriptText, unitText)
+    expTextContainer.position.x = -expTextContainer.width / 2
+    expTextContainer.position.y = -225
 
     this.descriptionText = new Text(
       this.textDatum.description,
       descriptionStyle
-    );
-    this.descriptionText.anchor.set(0.5, 0);
-    this.descriptionText.cacheAsBitmap = false;
+    )
+    this.descriptionText.anchor.set(0.5, 0)
+    this.descriptionText.cacheAsBitmap = false
+    this.descriptionText.position.x = 0
+    this.descriptionText.position.y = 175
 
-    this.descriptionText.position.x = 0;
-    this.descriptionText.position.y = 175;
+    this.textContainer = new Container()
+    this.textContainer.addChild(this.text, this.descriptionText, expTextContainer)
 
-    this.textContainer = new Container();
-    this.textContainer.addChild(this.text, this.descriptionText, expTextContainer);
-
-    this.container.addChild(this.textContainer);
+    this.container.addChild(this.textContainer)
   }
 }

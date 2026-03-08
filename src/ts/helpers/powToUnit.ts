@@ -1,5 +1,5 @@
 import { E } from './e'
-import * as numeral from 'numeral';
+import numeral from 'numeral';
 import { ExtraText, SizeData } from '../interfaces';
 
 export function powToUnit(sizeData: SizeData, units: string[], extra: ExtraText) {

@@ -1,13 +1,14 @@
 {
-  "include": [
-    "src/**/*"
-  ],
   "compilerOptions": {
-      "noImplicitAny": false,
-      "target": "es2015",
-      "sourceMap": true,
-      "baseUrl": ".",
-      "rootDir": "src",
-      "moduleResolution": "node"
-  }
+    "noImplicitAny": false,
+    "target": "es2015",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "rootDir": "src",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"]
 }

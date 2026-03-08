@@ -12,7 +12,7 @@ export function getGraphics(visualLocation, textDatum, extraText, units: string[
 
   const baseStyle = {
     fontFamily: 'Roboto',
-    align: 'left',
+    align: 'left' as const,
     fill: 0x000000,
     wordWrapWidth: w - (margin * 2),
     wordWrap: true
@@ -99,7 +99,6 @@ export function getGraphics(visualLocation, textDatum, extraText, units: string[
   graphics.endFill();
   // set a fill and a line style again and draw a rectangle
   graphics.lineStyle(2, 0xaaaaaa, 1);
-  // graphics.beginFill(0x999999, 1);
   graphics.beginFill(0xFFFFFF, 1);
 
 
@@ -113,8 +112,6 @@ export function getGraphics(visualLocation, textDatum, extraText, units: string[
   graphics.drawRoundedRect(x, y, widthToUse, totalTextHeight, 15);
   graphics.endFill();
   graphics.alpha = .9;
-
-
 
   descriptionContainer.x -= w / 2;
   descriptionContainer.y -= h / 2;

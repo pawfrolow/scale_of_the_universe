@@ -1,0 +1,315 @@
+$color-black: #000;
+$color-white: #fff;
+$color-text-dark: #333;
+$color-text-light: #e9f1f7;
+
+$color-primary: #5c7aff;
+
+$color-earth-1: rgba(229, 229, 229, 1);
+$color-earth-2: rgba(217, 217, 217, 1);
+
+$color-space-1: rgba(11, 13, 35, 1);
+$color-space-2: rgba(15, 18, 52, 1);
+
+$color-transparent-gray: rgba(168, 168, 168, 0);
+$color-transparent-gray-hover: rgba(168, 168, 168, 0.2);
+$dialog-backdrop-bg: rgba(0, 0, 0, 0.1);
+
+$shadow-soft:
+  0 0 20px rgba(0, 0, 0, 0.1),
+  0 0 5px rgba(0, 0, 0, 0.25);
+
+$shadow-dialog:
+  0 0 40px rgba(0, 0, 0, 0.1),
+  0 0 10px rgba(0, 0, 0, 0.25);
+$radius-pill: 40px;
+
+$font-size-base: 16px;
+$font-size-lg: 24px;
+$font-size-sm: 0.8rem;
+
+$z-bg: -2;
+$z-controls: 5;
+
+$transition-fast: all 0.2s ease-out;
+$transition-hd: background 0.75s;
+
+$dialog-width: 650px;
+$dialog-min-height: 500px;
+$dialog-mobile-zoom: 50%;
+$dialog-mobile-breakpoint: 668px;
+
+$start-button-width: 250px;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+dialog {
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: $dialog-width;
+  min-height: $dialog-min-height;
+  height: auto;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  margin: auto;
+  padding: 2rem;
+
+  border: none;
+  border-radius: 16px;
+
+  background-color: var(--bg, $color-white);
+  color: var(--text-color, $color-black);
+  box-shadow: $shadow-dialog;
+
+  &:not([open]) {
+    display: none;
+  }
+
+  &[open] {
+    animation: appear 0.15s cubic-bezier(0, 1.8, 1, 1.8);
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  + .backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: $dialog-backdrop-bg;
+  }
+}
+
+@media screen and (max-width: $dialog-mobile-breakpoint) {
+  dialog {
+    zoom: $dialog-mobile-zoom;
+  }
+}
+
+.frameStyle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-earth-1;
+}
+
+.bgEarth {
+  background: $color-earth-1;
+  background: radial-gradient(circle, $color-earth-1 0%, $color-earth-2 50%, $color-earth-1 100%);
+}
+
+.bgSpace {
+  background: $color-space-1;
+  background: linear-gradient(0deg, $color-space-1 0%, $color-space-2 50%, $color-space-1 100%);
+  opacity: 0;
+}
+
+.fullBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-bg;
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#sotu {
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  font-size: 32px;
+  margin: 0;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .startBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 48px;
+
+    font-size: $font-size-lg;
+    color: $color-text-light;
+    background-color: $color-primary;
+    border-radius: $radius-pill;
+    box-shadow: $shadow-soft;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .credits {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+  }
+}
+
+.infoRow {
+  padding-top: 16px;
+  display: flex;
+
+  .infoItem {
+    background-color: $color-transparent-gray;
+    color: $color-black;
+    font-size: $font-size-base;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    flex: 1;
+    gap: 16px;
+
+    img {
+      width: fit-content;
+      height: 90px;
+    }
+
+    p {
+      margin: 0;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+}
+
+.speaker {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  width: 30px;
+  height: 30px;
+  margin-bottom: 2px;
+
+  font-family: arial, sans-serif;
+  text-align: center;
+
+  span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 0 0 0 2px;
+    background: $color-text-dark;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -13px;
+
+      width: 0;
+      height: 0;
+
+      border-style: solid;
+      border-width: 10px 14px 10px 15px;
+      border-color: transparent $color-text-dark transparent transparent;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 18px;
+
+      width: 5px;
+      height: 5px;
+
+      transform: rotate(45deg);
+      border-style: double;
+      border-width: 7px 7px 0 0;
+      border-radius: 0 50px 0 0;
+      border-color: $color-text-dark;
+      transition: $transition-fast;
+    }
+  }
+
+  &:hover span:before {
+    transform: scale(0.8) translate(-3px, 0) rotate(42deg);
+  }
+
+  &.mute span:before {
+    transform: scale(0.5) translate(-15px, 0) rotate(36deg);
+    opacity: 0;
+  }
+}
+
+.buttons {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: $z-controls;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  button {
+    padding: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .lang {
+    color: $color-text-dark;
+
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
