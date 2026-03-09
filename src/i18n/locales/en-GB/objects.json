@@ -1,5 +1,285 @@
 {
   "items": {
+    "030": {
+      "title": "LCD Pixel",
+      "description": "Although the size of pixels differs greatly, 300 micrometres is about the average.  Pixels contain three subpixels that are red, green, and blue.  Pixels are pretty cool, but voxels are even better.  They are three-dimensional pixels."
+    },
+    "031": {
+      "title": "Palm Jebel Ali",
+      "description": "Palm Jebel Ali is the largest man-made island (not including islands like Flevopolder, where a region of the Netherlands was drained so there could be more land).  Palm Jebel Ali is not complete.  It is part of thePalm Islands and is planned to house 250,000 people!"
+    },
+    "032": {
+      "title": "Neutrino",
+      "description": "Neutrinos passes through ordinary matter like you and me all the time!  In fact, they're doing it right now!  Neutrinos have no charge, so they are only affected by gravity and the weak force.  However, they are so small that they are barely affected."
+    },
+    "033": {
+      "title": "High-Energy Neutrino",
+      "description": "Neutrinos of higher energy are larger.  For more about neutrinos, go to neutrino, which shows the average size.  It's a whopping 15,000 times smaller!"
+    },
+    "034": {
+      "title": "Matchstick",
+      "description": "The matchstick is a very useful little tool.  When struck against something, it can light on fire.  This makes it very dangerous!  That's why it's good to never play with matches.  Got that?"
+    },
+    "035": {
+      "title": "Chicken Egg",
+      "description": "The chicken egg is where baby chicks usually hatch.  Many humans love to eat chicken eggs.  Besides appearance, there is no difference between white chicken eggs and brown chicken eggs."
+    },
+    "036": {
+      "title": "Quail Egg",
+      "description": "Many people think that quail eggs are better than chicken eggs.  The quail egg is smaller and more rare than the chicken egg, but that doesn't stop some people from loving them!"
+    },
+    "037": {
+      "title": "Square Inch",
+      "description": "If you aren't accustomed to the metric system, here's a square inch.  Unfortunately for you, almost everything else is in the metric system.  Also, 2.5 centimetres is the length of one side, not the area.  (That would be in cm^2.)"
+    },
+    "038": {
+      "title": "Coffee Bean",
+      "description": "The coffee bean is about one centimetre across - and it's actually a fruit that resembles a bean.  It's brown and has stripes, and sometimes, when you stare at it, you just  forget that its diameter is 10^-29 of the known universe."
+    },
+    "039": {
+      "title": "Common Earthworm",
+      "description": "Don't you just love wriggly, slimy earthworms?  Despite the urban legends, most species of earthworms will die if you cut them in half.  Sometimes, the head will survive and grow a new tail."
+    },
+    "040": {
+      "title": "Rigel",
+      "description": "Rigel is a blazing blue star, and  the brightest star in the constellation of Orion. It lies near the equator, so it is visible from almost anywhere on Earth.  Also, don't call it \"wriggle\", because it's pronounced like \"rye-jel\"."
+    },
+    "041": {
+      "title": "United States of America",
+      "description": "Here is the U. S. A.  Although it may seem to be larger than Pluto, Pluto has a back face, which means Pluto has more surface area!"
+    },
+    "042": {
+      "title": "Earth",
+      "description": "The Earth is our only home.  While living on it, we may consider it huge, but it is still important to take care of it.  When it is gone, there will be nowhere else left to go."
+    },
+    "043": {
+      "title": "Deneb",
+      "description": "Deneb is the brightest star in the constellation of Cygnus. Deneb is 1,500 light-years away, which makes it the most distant of the 25 brightest stars.  If you lived on Mars, Deneb would appear above the North Pole - not Polaris."
+    },
+    "044": {
+      "title": "V V Cephei A",
+      "description": "For a while V V Cephei A was the largest known star.  Now that title belongs to VY Canis Majoris.  That's because new stars are being discovered all the time!"
+    },
+    "045": {
+      "title": "R Doradus",
+      "description": "R Doradus is relatively large and is only 200 light-years from Earth, so its apparent size is the second largest in the sky!  It is 0.05 arcseconds across.  The Sun is the largest, at 1,920 arcseconds - 40,000 times larger."
+    },
+    "046": {
+      "title": "Aldebaran",
+      "description": "Aldebaran is not to be confused with Alderaan, which is a planet in Star Wars. Alderaan is very similar to Earth in size, day length, and water cover.  However, Aldebaran is 5,000 times larger in diameter, rotates every 643 Earth days, and has no water."
+    },
+    "047": {
+      "title": "Pollux",
+      "description": "In Greek mythology, Pollux's twin is Castor.  They are also stars in the constellation Gemini, meaning \"twins\".  However, in reality, Pollux in a single star, while Castor is three binary stars, for a total of six stars.  Castor is a set of sextuplets!"
+    },
+    "048": {
+      "title": "Arcturus",
+      "description": "Arcturus is the third brightest star in the night sky, after Sirius and Canopus.  It's the brightest star in the constellation of Boötes.  Find it by following the handle of the Big Dipper."
+    },
+    "049": {
+      "title": "The Sun",
+      "description": "Also known as Sol, the Sun is what gives Earth the energy that makes it able to have life.  The Sun is over 100 times larger in diameter than  Earth!  20,000 times more solar energy hits the Earth than the human race uses."
+    },
+    "050": {
+      "title": "Alpha Centauri A",
+      "description": "Alpha Centauri A is the largest star of the Alpha Centauri star system (composed of three stars), which is the closest star system to us.  It is also the fourth brightest star in the night sky."
+    },
+    "051": {
+      "title": "Alpha Centauri B",
+      "description": "Alpha Centauri B is the second largest star in the Alpha Centauri star system.  Its diameter is approximately one million kilometres, so it is slightly smaller than the Sun.  Alpha Centuari A & B are so close they appear as a single star to us Earthlings."
+    },
+    "052": {
+      "title": "Proxima Centauri",
+      "description": "Proxima Centauri is known as being the closest star  to Earth other than the Sun.  Its name comes from the word \"proximity\".  Proxima Centauri is a small red star.  Unfortunately, it is so dim, you need a telescope to see it."
+    },
+    "053": {
+      "title": "Sirius A",
+      "description": "Sirius is the brightest star in the night sky.  It is almost twice as bright as Canopus, the second brightest star.  However, Sirius is not a large star.  It only appears bright because it is close to us, at only eight light-years away."
+    },
+    "054": {
+      "title": "Sirius B",
+      "description": "Sirius B is a white dwarf.  It's barely bigger than the Earth!  It's usually pretty hard to see because it is hidden by Sirius A's blinding light.  Sirius B is known as \"The Pup\"."
+    },
+    "055": {
+      "title": "Vega",
+      "description": "Vega is found in the Lyra constellation.  It is also part of the Summer Triangle, composed of Vega, Altair, and Deneb.  Vega spins so quickly it bulges.  However, we see it pole-on, so it looks circular."
+    },
+    "056": {
+      "title": "Regulus",
+      "description": "Regulus spins so quickly it bulges, just like Altair and Vega.  If Regulus were to spin 16% faster, it would rip apart!  Regulus is also the brightest star in the constellation Leo.  There's also Regulus B & C."
+    },
+    "057": {
+      "title": "Spica",
+      "description": "Spica is the fifteenth brightest star in the night sky and lies in the constellation Virgo.  It's actually a binary star system.  The two stars are very close, and they orbit every four days."
+    },
+    "058": {
+      "title": "Alnitak",
+      "description": "Alnitak illuminates the Flame Nebula.  Alnitak is also the easternmost star of the three stars that form Orion's belt.  The other two are Alnilam and Mintaka, and all three appear very bright from planet Earth."
+    },
+    "059": {
+      "title": "Gacrux",
+      "description": "'Gacrux can be found in the constellation Crux.  Crux, which means \"cross\" in Latin, is known as the Southern Cross.  Gacrux is a binary star.  The largest of the two is a red giant.',"
+    },
+    "060": {
+      "title": "Uranus",
+      "description": "'A lot of people like to think \"Uranus\" sounds like \"your anus\".  There are many other, and better, pronunciations.  Uranus can also be pronouced like \"Yer-uh-niss\" or \"Seh-venth-pla-net\".',"
+    },
+    "061": {
+      "title": "Neptune",
+      "description": "Currently, Neptune is the farthest planet in the Solar System from the Sun.  It takes 164.8 Earth years for it to orbit the Sun.  You'll never see Neptune complete a single orbit in your whole life, unless life expectancies increase."
+    },
+    "062": {
+      "title": "Wolf 359",
+      "description": "Wolf 359 is a small red dwarf, dwarfed by normal stars.  It is the sixth closest star to Earth, after the Sun, Proxima Centauri, Alpha Centauri A & B and Barnard's star.  Still, its magnitude is a dim +13.5."
+    },
+    "063": {
+      "title": "Gliese 229A",
+      "description": "Gliese 229A is a red dwarf star.  It is a bit smaller than the Sun.  The red dwarf star is also written as GJ 229 or GI 229.  It is part of a binary star system, the second star being Gliese 229B."
+    },
+    "064": {
+      "title": "Gliese 229B",
+      "description": "Gliese 229B is a brown dwarf star.  It orbits a larger dwarf star, which is Gliese 229A.  Gliese 229B would be classified as a planet, but it is much denser than Jupiter, making its mass too large to be considered a planet."
+    },
+    "065": {
+      "title": "Jupiter",
+      "description": "Jupiter is the largest planet in the solar system.  However, it is not the largest known planet.  That's TrES-4.  Jupiter is a gas giant, so it's just a ball of gas.  You can't land anywhere on it.  Also, Jupiter has 64 moons, including the four Gallilean moons."
+    },
+    "066": {
+      "title": "Saturn",
+      "description": "Saturn has the widest, most visible rings of the Solar System.  Galileo, who was the first person to see these rings, first thought they were \"ears\".  Can you imagine a Saturn without rings?  It would be just a yellow ball."
+    },
+    "067": {
+      "title": "TrES-4",
+      "description": "TrES-4 is the largest planet discovered.  No telescope can actually see TrES-4, but there are ways to prove its existence indirectly.  TrES-4's gravity causes the star it orbits to wobble slightly.  Also, whenever TrES-4 goes in front of the star, the shine of the star dims a little."
+    },
+    "068": {
+      "title": "Venus",
+      "description": "There was a time when Venus and Earth were thought to be sister planets.  That isn't true at all!  Venus's surface temperature is always above 450° C, because its atmosphere, which is mostly carbon dioxide, traps the Sun's heat!"
+    },
+    "069": {
+      "title": "Mars",
+      "description": "Mars is known as the Red Planet.  It is red because it is rusty.  Many people believe water and life once existed on Mars.  However, even if that is true, the life wouldn't be like the little green men."
+    },
+    "070": {
+      "title": "Mercury",
+      "description": "Mercury is the closest planet to the Sun.  It has no atmosphere.  During the day, temperatures reach 400° C, but at night, the temperatures fall to -180° C. One Mercurian year is 88 Earth days."
+    },
+    "071": {
+      "title": "Ganymede",
+      "description": "Ganymede is the largest moon in the Solar System.  It orbits Jupiter and was discovered by Galileo, which makes it a Galilean moon.  Also, Ganymede is not to be confused with Ganymed, which is an asteroid whose name doesn't have the final \"e\"!"
+    },
+    "072": {
+      "title": "Callisto",
+      "description": "Callisto is the most distant of the Gallilean moons.  It orbits outside all the other Gallilean moons and gets hit with the most meteors.  All these impacts create many, many craters."
+    },
+    "073": {
+      "title": "Io",
+      "description": "Io has a lot of volcanoes - the most in the Solar System!  Io's geysers emit frozen sulfur dioxide up to 500 kilometers into space!  The landscape of Io is constantly changing.  In one year, it will look very different!"
+    },
+    "074": {
+      "title": "Europa",
+      "description": "Europa is the puniest of the Galilean moons.  It is covered with ice.  There are mysterious streaks that cover the moon's surface.  Some people believe water might exist beneath the layer of ice, possibly even holding life."
+    },
+    "075": {
+      "title": "Titan",
+      "description": "Titan is Saturn's only large moon.  It has a very thick atmosphere, which is made up of mostly nitrogen.  Earth's atmosphere is also mostly nitrogen.  Titan has seas of liquid methane. (It's around -180° C.)  There's even a continent called \"Xanadu\"."
+    },
+    "076": {
+      "title": "The Moon",
+      "description": "The Moon, also known as \"Luna\", is the brightest object in the night sky.  It orbits Earth every 27 days, 7 hours and 43 minutes.  I like to imagine seeing several moons scattered across the night sky. That would be amazing!"
+    },
+    "077": {
+      "title": "Triton",
+      "description": "Triton is Neptune's largest moon.  It is also the coldest object in the Solar System, at -240° C.  Triton is also a very windy place, with winds going at almost the speed of sound!"
+    },
+    "078": {
+      "title": "Pluto",
+      "description": "Pluto is no longer a planet.  Why do people feel sympathy for it?  It has no feelings.  Even if it did, why would it care about what people way over on Earth thought?  On another note, Pluto's official name is now \"134340 Pluto\", because it's a dwarf planet."
+    },
+    "079": {
+      "title": "Charon",
+      "description": "Charon is Pluto's only large moon.  They are very close in size.  They are so close, some people consider Pluto and Charon to be a double planet.  Did you know the same side of Charon always faces Pluto, and the same side of Pluto always faces Charon?"
+    },
+    "080": {
+      "title": "Eris",
+      "description": "Eris is the largest dwarf planet.  It is even bigger than Pluto, which is also a dwarf planet.  Eris is also very far from the Sun.  Eris has a moon, and that's Dysnomia.  Where's Dysnomia?  It's directly beneath the period at the end of this last sentence."
+    },
+    "081": {
+      "title": "Dysnomia",
+      "description": "Dysnomia is Eris's only moon and was discovered on September 10, 2005, which was a Saturday.  Also, did you know that \"Dysnomia\" also refers to a  learning disability that is similar to dyslexia?"
+    },
+    "082": {
+      "title": "Sedna",
+      "description": "Sedna has a very elliptical orbit.   It is so far away it takes 10,000 Earth years to complete one orbit.  You probably realized that \"Sedna\" backwards is \"Andes\", the world's longest mountain range. (It's in South America.)  Both may seem other-worldly!"
+    },
+    "083": {
+      "title": "Quaoar",
+      "description": "Quaoar is very dense because its core is very big.  Quaoar may have been much larger long ago. It might have been hit by an object the size of Pluto, which would have stripped away the outer layers."
+    },
+    "084": {
+      "title": "Ceres",
+      "description": "Ceres is not a very good place for humans to live.  Ceres is also the largest asteroid, and began the debate over the definition of \"planet\".  For a time, Ceres was considered a planet, but then it wasn't."
+    },
+    "085": {
+      "title": "Polaris",
+      "description": "Polaris is known as the North Star.  It is very near the north pole, so if you want to know which way is north, just try to find Polaris.  Locate the two stars on the far side of the Big Dipper, and go upward."
+    },
+    "086": {
+      "title": "Antares",
+      "description": "Antares is a red supergiant very near the ecliptic, so it gets occulted by the Moon quite often.  Also, Antares weighs septillions of tons and is losing weight through solar wind, but this method is slow. The fast way is to explode, which it'll do later."
+    },
+    "087": {
+      "title": "Altair",
+      "description": "Altair is one of the three stars in the Summer Triangle.  The Summer Triangle is an acute triangle, which means that all the angles are less than 90°!  The other two are Vega and Deneb.  Like many other stars, Altair spins very quickly, bulging at the center!"
+    },
+    "088": {
+      "title": "La Superba",
+      "description": "La Superba is one of the reddest stars in the night sky.  It is so red because of all the carbon-13 it creates when fusing helium.   (Normal carbon is carbon-12.)  La Superba is only 2500° C, making it one of the coldest stars."
+    },
+    "089": {
+      "title": "Pistol Star",
+      "description": "The Pistol Star is one of the most luminous stars known.  In twenty seconds, it radiates as much energy as the Sun does in a year. Interstellar dust prevents us from seeing it. It's called the Pistol Star not because of its luminosity, but because it's in the Pistol Nebula."
+    },
+    "090": {
+      "title": "S Doradus",
+      "description": "S Doradus is a hypergiant, as well as one of the brightest stars in the Large Magellanic Cloud.  For more about the Large Magellanic Cloud, zoom out 8.5 orders of magnitude."
+    },
+    "091": {
+      "title": "Enif",
+      "description": "Enif is an orange supergiant.  Its name means \"nose\" in Arabic, because in the constellation Pegasus, it is in the position of the muzzle.  Concidentally, the word \"Enif\" backwards is \"Fine\"."
+    },
+    "092": {
+      "title": "Mu Cephei",
+      "description": "Mu Cephei is very red.  It is sometimes referred to as \"Herschel's Garnet Star\" because it is garnet red.  Another alternative name is Erakis, if you don't like the first two names."
+    },
+    "093": {
+      "title": "KY Cygni",
+      "description": "KY Cygni is 300,000 times more luminous than the Sun, and the Sun is pretty luminous, isn't it?  The Sun is so luminous you aren't supposed to look at it!  However, it's okay to look at KY Cyngi because it is 300 million times farther away."
+    },
+    "094": {
+      "title": "V354 Cephei",
+      "description": "V354 Cephei is red supergiant, and it's huge.  If placed in the Solar System, it would extend past the orbit of Jupiter.  354, in addition to being in this star's name, is also the year Augustine of Hippo was born."
+    },
+    "095": {
+      "title": "WOH G64",
+      "description": "I know... you're thinking, \"WOH... that's a big star!\"  Well, I guess you're right, because currently it's the second largest known star.  WOH G64 is found in the Large Magellanic Cloud.  There is a cloud surrounding the star that extends half of a light-year."
+    },
+    "096": {
+      "title": "VY Canis Majoris",
+      "description": "VY Canis Majoris is the largest known star.  It is so large that if it were placed in the Solar System, it would extend beyond the orbit of Saturn!  It would take a plane 1,200 years to circle it once."
+    },
+    "097": {
+      "title": "Betelgeuse",
+      "description": "Betelgeuse's age is in the millions of years.  Betelgeuse is so old, it is expected to explode in the next ten thousand years.  Smaller stars live for trillions of years.  Betelgeuse is so big it aged fast."
+    },
+    "098": {
+      "title": "Albireo",
+      "description": "Albireo is made up of three stars total.  Here we are just showing the largest one.  Two of the stars are close, and form a yellow dot.  The third is blue and further away.  The blue star and yellow stars are so far apart it takes them 100,000 years to complete one orbit."
+    },
+    "099": {
+      "title": "Kapteyn's Star",
+      "description": "Kapteyn's Star is only thirteen light-years away.  Even so, its magnitude is +9, so you need binoculars to see it.  Around 10,000 years ago, Kapteyn's Star was only seven light-years away!"
+    },
     "100": {
       "title": "Luyten's Star",
       "description": "Luyten's Star is a red dwarf star  12 light-years away from us.  It is so close to Procyon that Procyon would appear 10 times brighter to Luyten's Star than Sirius appears to us."
@@ -912,289 +1192,13 @@
       "title": "The Great Barrier Reef",
       "description": "The Great Barrier Reef, which is off the northeastern coast of Australia, is the biggest single structure made by living organisms!  It is home to several thousand species of coral, mollusks, whales, turtles, dolphins, birds, and much more!"
     },
-    "030": {
-      "title": "LCD Pixel",
-      "description": "Although the size of pixels differs greatly, 300 micrometres is about the average.  Pixels contain three subpixels that are red, green, and blue.  Pixels are pretty cool, but voxels are even better.  They are three-dimensional pixels."
-    },
-    "031": {
-      "title": "Palm Jebel Ali",
-      "description": "Palm Jebel Ali is the largest man-made island (not including islands like Flevopolder, where a region of the Netherlands was drained so there could be more land).  Palm Jebel Ali is not complete.  It is part of thePalm Islands and is planned to house 250,000 people!"
-    },
-    "032": {
-      "title": "Neutrino",
-      "description": "Neutrinos passes through ordinary matter like you and me all the time!  In fact, they're doing it right now!  Neutrinos have no charge, so they are only affected by gravity and the weak force.  However, they are so small that they are barely affected."
-    },
-    "033": {
-      "title": "High-Energy Neutrino",
-      "description": "Neutrinos of higher energy are larger.  For more about neutrinos, go to neutrino, which shows the average size.  It's a whopping 15,000 times smaller!"
-    },
-    "034": {
-      "title": "Matchstick",
-      "description": "The matchstick is a very useful little tool.  When struck against something, it can light on fire.  This makes it very dangerous!  That's why it's good to never play with matches.  Got that?"
-    },
-    "035": {
-      "title": "Chicken Egg",
-      "description": "The chicken egg is where baby chicks usually hatch.  Many humans love to eat chicken eggs.  Besides appearance, there is no difference between white chicken eggs and brown chicken eggs."
-    },
-    "036": {
-      "title": "Quail Egg",
-      "description": "Many people think that quail eggs are better than chicken eggs.  The quail egg is smaller and more rare than the chicken egg, but that doesn't stop some people from loving them!"
-    },
-    "037": {
-      "title": "Square Inch",
-      "description": "If you aren't accustomed to the metric system, here's a square inch.  Unfortunately for you, almost everything else is in the metric system.  Also, 2.5 centimetres is the length of one side, not the area.  (That would be in cm^2.)"
-    },
-    "038": {
-      "title": "Coffee Bean",
-      "description": "The coffee bean is about one centimetre across - and it's actually a fruit that resembles a bean.  It's brown and has stripes, and sometimes, when you stare at it, you just  forget that its diameter is 10^-29 of the known universe."
-    },
-    "039": {
-      "title": "Common Earthworm",
-      "description": "Don't you just love wriggly, slimy earthworms?  Despite the urban legends, most species of earthworms will die if you cut them in half.  Sometimes, the head will survive and grow a new tail."
-    },
-    "040": {
-      "title": "Rigel",
-      "description": "Rigel is a blazing blue star, and  the brightest star in the constellation of Orion. It lies near the equator, so it is visible from almost anywhere on Earth.  Also, don't call it \"wriggle\", because it's pronounced like \"rye-jel\"."
-    },
-    "041": {
-      "title": "United States of America",
-      "description": "Here is the U. S. A.  Although it may seem to be larger than Pluto, Pluto has a back face, which means Pluto has more surface area!"
-    },
-    "042": {
-      "title": "Earth",
-      "description": "The Earth is our only home.  While living on it, we may consider it huge, but it is still important to take care of it.  When it is gone, there will be nowhere else left to go."
-    },
-    "043": {
-      "title": "Deneb",
-      "description": "Deneb is the brightest star in the constellation of Cygnus. Deneb is 1,500 light-years away, which makes it the most distant of the 25 brightest stars.  If you lived on Mars, Deneb would appear above the North Pole - not Polaris."
-    },
-    "044": {
-      "title": "V V Cephei A",
-      "description": "For a while V V Cephei A was the largest known star.  Now that title belongs to VY Canis Majoris.  That's because new stars are being discovered all the time!"
-    },
-    "045": {
-      "title": "R Doradus",
-      "description": "R Doradus is relatively large and is only 200 light-years from Earth, so its apparent size is the second largest in the sky!  It is 0.05 arcseconds across.  The Sun is the largest, at 1,920 arcseconds - 40,000 times larger."
-    },
-    "046": {
-      "title": "Aldebaran",
-      "description": "Aldebaran is not to be confused with Alderaan, which is a planet in Star Wars. Alderaan is very similar to Earth in size, day length, and water cover.  However, Aldebaran is 5,000 times larger in diameter, rotates every 643 Earth days, and has no water."
-    },
-    "047": {
-      "title": "Pollux",
-      "description": "In Greek mythology, Pollux's twin is Castor.  They are also stars in the constellation Gemini, meaning \"twins\".  However, in reality, Pollux in a single star, while Castor is three binary stars, for a total of six stars.  Castor is a set of sextuplets!"
-    },
-    "048": {
-      "title": "Arcturus",
-      "description": "Arcturus is the third brightest star in the night sky, after Sirius and Canopus.  It's the brightest star in the constellation of Boötes.  Find it by following the handle of the Big Dipper."
-    },
-    "049": {
-      "title": "The Sun",
-      "description": "Also known as Sol, the Sun is what gives Earth the energy that makes it able to have life.  The Sun is over 100 times larger in diameter than  Earth!  20,000 times more solar energy hits the Earth than the human race uses."
-    },
-    "050": {
-      "title": "Alpha Centauri A",
-      "description": "Alpha Centauri A is the largest star of the Alpha Centauri star system (composed of three stars), which is the closest star system to us.  It is also the fourth brightest star in the night sky."
-    },
-    "051": {
-      "title": "Alpha Centauri B",
-      "description": "Alpha Centauri B is the second largest star in the Alpha Centauri star system.  Its diameter is approximately one million kilometres, so it is slightly smaller than the Sun.  Alpha Centuari A & B are so close they appear as a single star to us Earthlings."
-    },
-    "052": {
-      "title": "Proxima Centauri",
-      "description": "Proxima Centauri is known as being the closest star  to Earth other than the Sun.  Its name comes from the word \"proximity\".  Proxima Centauri is a small red star.  Unfortunately, it is so dim, you need a telescope to see it."
-    },
-    "053": {
-      "title": "Sirius A",
-      "description": "Sirius is the brightest star in the night sky.  It is almost twice as bright as Canopus, the second brightest star.  However, Sirius is not a large star.  It only appears bright because it is close to us, at only eight light-years away."
-    },
-    "054": {
-      "title": "Sirius B",
-      "description": "Sirius B is a white dwarf.  It's barely bigger than the Earth!  It's usually pretty hard to see because it is hidden by Sirius A's blinding light.  Sirius B is known as \"The Pup\"."
-    },
-    "055": {
-      "title": "Vega",
-      "description": "Vega is found in the Lyra constellation.  It is also part of the Summer Triangle, composed of Vega, Altair, and Deneb.  Vega spins so quickly it bulges.  However, we see it pole-on, so it looks circular."
-    },
-    "056": {
-      "title": "Regulus",
-      "description": "Regulus spins so quickly it bulges, just like Altair and Vega.  If Regulus were to spin 16% faster, it would rip apart!  Regulus is also the brightest star in the constellation Leo.  There's also Regulus B & C."
-    },
-    "057": {
-      "title": "Spica",
-      "description": "Spica is the fifteenth brightest star in the night sky and lies in the constellation Virgo.  It's actually a binary star system.  The two stars are very close, and they orbit every four days."
-    },
-    "058": {
-      "title": "Alnitak",
-      "description": "Alnitak illuminates the Flame Nebula.  Alnitak is also the easternmost star of the three stars that form Orion's belt.  The other two are Alnilam and Mintaka, and all three appear very bright from planet Earth."
-    },
-    "059": {
-      "title": "Gacrux",
-      "description": "'Gacrux can be found in the constellation Crux.  Crux, which means \"cross\" in Latin, is known as the Southern Cross.  Gacrux is a binary star.  The largest of the two is a red giant.',"
-    },
-    "060": {
-      "title": "Uranus",
-      "description": "'A lot of people like to think \"Uranus\" sounds like \"your anus\".  There are many other, and better, pronunciations.  Uranus can also be pronouced like \"Yer-uh-niss\" or \"Seh-venth-pla-net\".',"
-    },
-    "061": {
-      "title": "Neptune",
-      "description": "Currently, Neptune is the farthest planet in the Solar System from the Sun.  It takes 164.8 Earth years for it to orbit the Sun.  You'll never see Neptune complete a single orbit in your whole life, unless life expectancies increase."
-    },
-    "062": {
-      "title": "Wolf 359",
-      "description": "Wolf 359 is a small red dwarf, dwarfed by normal stars.  It is the sixth closest star to Earth, after the Sun, Proxima Centauri, Alpha Centauri A & B and Barnard's star.  Still, its magnitude is a dim +13.5."
-    },
-    "063": {
-      "title": "Gliese 229A",
-      "description": "Gliese 229A is a red dwarf star.  It is a bit smaller than the Sun.  The red dwarf star is also written as GJ 229 or GI 229.  It is part of a binary star system, the second star being Gliese 229B."
-    },
-    "064": {
-      "title": "Gliese 229B",
-      "description": "Gliese 229B is a brown dwarf star.  It orbits a larger dwarf star, which is Gliese 229A.  Gliese 229B would be classified as a planet, but it is much denser than Jupiter, making its mass too large to be considered a planet."
-    },
-    "065": {
-      "title": "Jupiter",
-      "description": "Jupiter is the largest planet in the solar system.  However, it is not the largest known planet.  That's TrES-4.  Jupiter is a gas giant, so it's just a ball of gas.  You can't land anywhere on it.  Also, Jupiter has 64 moons, including the four Gallilean moons."
-    },
-    "066": {
-      "title": "Saturn",
-      "description": "Saturn has the widest, most visible rings of the Solar System.  Galileo, who was the first person to see these rings, first thought they were \"ears\".  Can you imagine a Saturn without rings?  It would be just a yellow ball."
-    },
-    "067": {
-      "title": "TrES-4",
-      "description": "TrES-4 is the largest planet discovered.  No telescope can actually see TrES-4, but there are ways to prove its existence indirectly.  TrES-4's gravity causes the star it orbits to wobble slightly.  Also, whenever TrES-4 goes in front of the star, the shine of the star dims a little."
-    },
-    "068": {
-      "title": "Venus",
-      "description": "There was a time when Venus and Earth were thought to be sister planets.  That isn't true at all!  Venus's surface temperature is always above 450° C, because its atmosphere, which is mostly carbon dioxide, traps the Sun's heat!"
-    },
-    "069": {
-      "title": "Mars",
-      "description": "Mars is known as the Red Planet.  It is red because it is rusty.  Many people believe water and life once existed on Mars.  However, even if that is true, the life wouldn't be like the little green men."
-    },
-    "070": {
-      "title": "Mercury",
-      "description": "Mercury is the closest planet to the Sun.  It has no atmosphere.  During the day, temperatures reach 400° C, but at night, the temperatures fall to -180° C. One Mercurian year is 88 Earth days."
-    },
-    "071": {
-      "title": "Ganymede",
-      "description": "Ganymede is the largest moon in the Solar System.  It orbits Jupiter and was discovered by Galileo, which makes it a Galilean moon.  Also, Ganymede is not to be confused with Ganymed, which is an asteroid whose name doesn't have the final \"e\"!"
-    },
-    "072": {
-      "title": "Callisto",
-      "description": "Callisto is the most distant of the Gallilean moons.  It orbits outside all the other Gallilean moons and gets hit with the most meteors.  All these impacts create many, many craters."
-    },
-    "073": {
-      "title": "Io",
-      "description": "Io has a lot of volcanoes - the most in the Solar System!  Io's geysers emit frozen sulfur dioxide up to 500 kilometers into space!  The landscape of Io is constantly changing.  In one year, it will look very different!"
-    },
-    "074": {
-      "title": "Europa",
-      "description": "Europa is the puniest of the Galilean moons.  It is covered with ice.  There are mysterious streaks that cover the moon's surface.  Some people believe water might exist beneath the layer of ice, possibly even holding life."
-    },
-    "075": {
-      "title": "Titan",
-      "description": "Titan is Saturn's only large moon.  It has a very thick atmosphere, which is made up of mostly nitrogen.  Earth's atmosphere is also mostly nitrogen.  Titan has seas of liquid methane. (It's around -180° C.)  There's even a continent called \"Xanadu\"."
-    },
-    "076": {
-      "title": "The Moon",
-      "description": "The Moon, also known as \"Luna\", is the brightest object in the night sky.  It orbits Earth every 27 days, 7 hours and 43 minutes.  I like to imagine seeing several moons scattered across the night sky. That would be amazing!"
-    },
-    "077": {
-      "title": "Triton",
-      "description": "Triton is Neptune's largest moon.  It is also the coldest object in the Solar System, at -240° C.  Triton is also a very windy place, with winds going at almost the speed of sound!"
-    },
-    "078": {
-      "title": "Pluto",
-      "description": "Pluto is no longer a planet.  Why do people feel sympathy for it?  It has no feelings.  Even if it did, why would it care about what people way over on Earth thought?  On another note, Pluto's official name is now \"134340 Pluto\", because it's a dwarf planet."
-    },
-    "079": {
-      "title": "Charon",
-      "description": "Charon is Pluto's only large moon.  They are very close in size.  They are so close, some people consider Pluto and Charon to be a double planet.  Did you know the same side of Charon always faces Pluto, and the same side of Pluto always faces Charon?"
-    },
-    "080": {
-      "title": "Eris",
-      "description": "Eris is the largest dwarf planet.  It is even bigger than Pluto, which is also a dwarf planet.  Eris is also very far from the Sun.  Eris has a moon, and that's Dysnomia.  Where's Dysnomia?  It's directly beneath the period at the end of this last sentence."
-    },
-    "081": {
-      "title": "Dysnomia",
-      "description": "Dysnomia is Eris's only moon and was discovered on September 10, 2005, which was a Saturday.  Also, did you know that \"Dysnomia\" also refers to a  learning disability that is similar to dyslexia?"
-    },
-    "082": {
-      "title": "Sedna",
-      "description": "Sedna has a very elliptical orbit.   It is so far away it takes 10,000 Earth years to complete one orbit.  You probably realized that \"Sedna\" backwards is \"Andes\", the world's longest mountain range. (It's in South America.)  Both may seem other-worldly!"
-    },
-    "083": {
-      "title": "Quaoar",
-      "description": "Quaoar is very dense because its core is very big.  Quaoar may have been much larger long ago. It might have been hit by an object the size of Pluto, which would have stripped away the outer layers."
-    },
-    "084": {
-      "title": "Ceres",
-      "description": "Ceres is not a very good place for humans to live.  Ceres is also the largest asteroid, and began the debate over the definition of \"planet\".  For a time, Ceres was considered a planet, but then it wasn't."
-    },
-    "085": {
-      "title": "Polaris",
-      "description": "Polaris is known as the North Star.  It is very near the north pole, so if you want to know which way is north, just try to find Polaris.  Locate the two stars on the far side of the Big Dipper, and go upward."
-    },
-    "086": {
-      "title": "Antares",
-      "description": "Antares is a red supergiant very near the ecliptic, so it gets occulted by the Moon quite often.  Also, Antares weighs septillions of tons and is losing weight through solar wind, but this method is slow. The fast way is to explode, which it'll do later."
-    },
-    "087": {
-      "title": "Altair",
-      "description": "Altair is one of the three stars in the Summer Triangle.  The Summer Triangle is an acute triangle, which means that all the angles are less than 90°!  The other two are Vega and Deneb.  Like many other stars, Altair spins very quickly, bulging at the center!"
-    },
-    "088": {
-      "title": "La Superba",
-      "description": "La Superba is one of the reddest stars in the night sky.  It is so red because of all the carbon-13 it creates when fusing helium.   (Normal carbon is carbon-12.)  La Superba is only 2500° C, making it one of the coldest stars."
-    },
-    "089": {
-      "title": "Pistol Star",
-      "description": "The Pistol Star is one of the most luminous stars known.  In twenty seconds, it radiates as much energy as the Sun does in a year. Interstellar dust prevents us from seeing it. It's called the Pistol Star not because of its luminosity, but because it's in the Pistol Nebula."
-    },
-    "090": {
-      "title": "S Doradus",
-      "description": "S Doradus is a hypergiant, as well as one of the brightest stars in the Large Magellanic Cloud.  For more about the Large Magellanic Cloud, zoom out 8.5 orders of magnitude."
-    },
-    "091": {
-      "title": "Enif",
-      "description": "Enif is an orange supergiant.  Its name means \"nose\" in Arabic, because in the constellation Pegasus, it is in the position of the muzzle.  Concidentally, the word \"Enif\" backwards is \"Fine\"."
-    },
-    "092": {
-      "title": "Mu Cephei",
-      "description": "Mu Cephei is very red.  It is sometimes referred to as \"Herschel's Garnet Star\" because it is garnet red.  Another alternative name is Erakis, if you don't like the first two names."
-    },
-    "093": {
-      "title": "KY Cygni",
-      "description": "KY Cygni is 300,000 times more luminous than the Sun, and the Sun is pretty luminous, isn't it?  The Sun is so luminous you aren't supposed to look at it!  However, it's okay to look at KY Cyngi because it is 300 million times farther away."
-    },
-    "094": {
-      "title": "V354 Cephei",
-      "description": "V354 Cephei is red supergiant, and it's huge.  If placed in the Solar System, it would extend past the orbit of Jupiter.  354, in addition to being in this star's name, is also the year Augustine of Hippo was born."
-    },
-    "095": {
-      "title": "WOH G64",
-      "description": "I know... you're thinking, \"WOH... that's a big star!\"  Well, I guess you're right, because currently it's the second largest known star.  WOH G64 is found in the Large Magellanic Cloud.  There is a cloud surrounding the star that extends half of a light-year."
-    },
-    "096": {
-      "title": "VY Canis Majoris",
-      "description": "VY Canis Majoris is the largest known star.  It is so large that if it were placed in the Solar System, it would extend beyond the orbit of Saturn!  It would take a plane 1,200 years to circle it once."
-    },
-    "097": {
-      "title": "Betelgeuse",
-      "description": "Betelgeuse's age is in the millions of years.  Betelgeuse is so old, it is expected to explode in the next ten thousand years.  Smaller stars live for trillions of years.  Betelgeuse is so big it aged fast."
-    },
-    "098": {
-      "title": "Albireo",
-      "description": "Albireo is made up of three stars total.  Here we are just showing the largest one.  Two of the stars are close, and form a yellow dot.  The third is blue and further away.  The blue star and yellow stars are so far apart it takes them 100,000 years to complete one orbit."
-    },
-    "099": {
-      "title": "Kapteyn's Star",
-      "description": "Kapteyn's Star is only thirteen light-years away.  Even so, its magnitude is +9, so you need binoculars to see it.  Around 10,000 years ago, Kapteyn's Star was only seven light-years away!"
-    },
     "328": {
       "title": "SARS-CoV-2",
       "description": "SARS-CoV-2 is the coronavirus that caused the COVID-19 pandemic, changing people’s lives in 2020–2022. Despite its microscopic size (80–120 nanometres), this virus had an enormous impact on medicine, science, the economy, and everyday life around the world."
+    },
+    "329": {
+      "title": "Lake Baikal",
+      "description": "Lake Baikal is the deepest lake on Earth and the largest reservoir of liquid freshwater among lakes. Its age is estimated at about 25–30 million years, making it one of the oldest lakes on the planet. More than 1,000 animal species live there that are found nowhere else in the world, making up about 60% of its fauna."
     }
   }
 }

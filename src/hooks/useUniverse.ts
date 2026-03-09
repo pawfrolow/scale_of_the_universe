@@ -135,8 +135,18 @@ export const useUniverse = ({
 
         scaleText.setColor(scaleExp)
 
-        if (scaleExp <= 5 && buttons) {
-          buttons.style.filter = ''
+        if (scaleExp <= 5) {
+          if (spaceBg) {
+            spaceBg.style.opacity = '0'
+          }
+
+          if (earthBg) {
+            earthBg.style.opacity = '1'
+          }
+
+          if (buttons) {
+            buttons.style.filter = ''
+          }
         }
 
         if (scaleExp > 5 && scaleExp < 7) {
@@ -239,6 +249,22 @@ export const useUniverse = ({
           baseTexture: false,
         })
         appRef.current = null
+      }
+
+      const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null
+      const earthBg = document.getElementById('earthBgImage') as HTMLElement | null
+      const buttons = document.querySelector('.buttons') as HTMLElement | null
+
+      if (spaceBg) {
+        spaceBg.style.opacity = '0'
+      }
+
+      if (earthBg) {
+        earthBg.style.opacity = '1'
+      }
+
+      if (buttons) {
+        buttons.style.filter = ''
       }
 
       initializedRef.current = false

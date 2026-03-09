@@ -1,5 +1,285 @@
 {
   "items": {
+    "030": {
+      "title": "LCD pixel",
+      "description": "Hoewel de grootte van pixels sterk verschilt, is 300 micrometer ongeveer het gemiddelde. Pixels bevatten drie subpixels: rode, groene en blauwe. Pixels zijn wel cool, maar voxels zijn beter. Het zijn drie-dimensionale pixels."
+    },
+    "031": {
+      "title": "Palm Jebel Ali",
+      "description": "Palm Jebel Ali is een kunstmatige eiland voor de kust van Dubai. Bijna zo groot als de binnenstad van Amsterdam. De buitenste ring is vergelijkbaar met de A10, de snelweg rond Amsterdam. Palm Jebel Ali is nog niet af. Het is onderdeel van de Palm-eilanden waar straks in totaal 250.000 mensen wonen!"
+    },
+    "032": {
+      "title": "Neutrino",
+      "description": "Neutrino's verplaatsen zich elk moment door materialen! Neutrino's zijn kleiner dan een atoom. Het zijn elementaire deeltjes, ze zijn niet meer te splitsen in kleinere deeltjes. Ze hebben geen lading en worden daarom alleen beïnvloed door de zwaartekracht en zwakke onderlinge interactie. Ze zijn echter zo klein dat ze nauwelijks worden beïnvloed."
+    },
+    "033": {
+      "title": "High-Energy Neutrino",
+      "description": "Grotere neutrino's met meer energie. Voor meer informatie over neutrino's, ga naar neutrino, waaruit blijkt de gemiddelde grootte. Het is een maar liefst 15.000 keer kleiner!"
+    },
+    "034": {
+      "title": "Lucifer",
+      "description": "De lucifer is handig om vuur te maken. Dit maakt het ook gevaarlijk gereedschap! Geen speelgoed, pas op met vuur."
+    },
+    "035": {
+      "title": "Scharrelei",
+      "description": "Uit een kippenei komt normaal een kuiken. Veel mensen lusten wel een eitje. Er zijn eieren in soorten: scharreleieren, vrije-uitloop eieren of biologische eieren. Ze geven informatie over het maximale aantal kippen per vierkante meter, het gedrag dat kippen kunnen vertonen en of een kip buiten komt."
+    },
+    "036": {
+      "title": "Kwartelei",
+      "description": "Veel mensen denken dat kwarteleitjes lekkerder zijn dan kippeneieren. Het kwarteleitje is kleiner en zeldzamer dan het kippenei."
+    },
+    "037": {
+      "title": "Square Inch",
+      "description": "De Inch of Engelse duim wordt in veel Engelstalige landen gebruikt. In Nederland gebruiken we het metrieke stelsel (..., meters, centimeters, millimeters, ...). Afmetingen van beeldschermen en fietsbanden worden aangegeven in inches. Hier zie je een vierkante inch van 2,5 x 2,5 centimeter."
+    },
+    "038": {
+      "title": "Koffieboon",
+      "description": "De koffieboon is ongeveer een centimeter in doorsnede, het is eigenlijk een vrucht die lijkt op een boon. Het is bruin en heeft strepen, en soms, als je ernaar zit te staren vergeet je dat de diameter 10 ^ -29 is van het nu bekende universum."
+    },
+    "039": {
+      "title": "Gewone regenworm",
+      "description": "Regenwormen worden maximaal 30 centimeter groot en woelen de grond om. Vier kilo uitwerpselen per vierkante meter is normaal en zorgt voor een luchtige voedingsbodem. De meeste soorten regenwormen sterven als je ze doormidden snijd, ondanks sterke verhalen. Een enkele keer zal de kop overleven en groeit een nieuwe staart aan."
+    },
+    "040": {
+      "title": "Rigel",
+      "description": "Rigel is een felblauwe ster en de helderste ster in het sterrenbeeld Orion. De ster is 70x zo groot als de diameter van onze zon en is zichtbaar vanaf vrijwel elke plek op aarde."
+    },
+    "041": {
+      "title": "Verenigde Staten van Amerika",
+      "description": "Hier de Verenigde Staten. Ook al lijkt de VS groter dan Pluto, Pluto heeft een achterkant, wat betekent dat Pluto een groter oppervlak heeft!"
+    },
+    "042": {
+      "title": "Aarde",
+      "description": "Op de aarde is leven omdat de omstandigheden daarvoor geschikt waren. Miljoenen jaren heeft het leven ook invloed gehad op de aarde. Een bijzondere plek om goed voor te zorgen. De aarde is onze enige thuis."
+    },
+    "043": {
+      "title": "Deneb",
+      "description": "Deneb is de helderste ster in het sterrenbeeld Cygnus. Deneb staat 1.500 lichtjaar bij ons vandaan, waardoor ze van de 25 helderste sterren de meest afgelegen is. Als je op Mars zou wonen, dan zou Deneb verschijnen boven de Noordpool. In plaats van Polaris"
+    },
+    "044": {
+      "title": "V V Cephei A",
+      "description": "Een tijd lang was VV Cephei A de grootst gekende ster. Nu behoort die titel behoort tot VY Canis Majoris. Dat komt omdat regelmatig nieuwe sterren worden ontdekt!"
+    },
+    "045": {
+      "title": "R Doradus",
+      "description": "R Doradus is relatief groot en ligt op slechts 200 lichtjaar van de aarde, zodat het doet voorkomen dat het de op een na grootste ster aan de hemel is. Het is 0.05 boogseconden in doorsnede. Onze zon is de grootste, op 1,920 boogseconden - 40.000 keer zo groot"
+    },
+    "046": {
+      "title": "Aldebaran",
+      "description": "Aldebaran is niet te verwarren met Alderaan, wat een planeet is in Star Wars. Alderaan is zeer vergelijkbaar met de aarde in grootte, daglengte, en   wateroppervlak. Echter Aldebaran is 5.000 keer zo groot in diameter, draait in 643 aardse dagen om zijn as, en er is geen water."
+    },
+    "047": {
+      "title": "Pollux",
+      "description": "In de Griekse mythologie zijn Pollux en Castor een tweeling. Het zijn ook sterren in het sterrenbeeld Gemini, ander woord voor \"tweeling\". Maar in werkelijkheid is Pollux een enkele ster. Castor bestaat uit drie dubbelsterren, totaal zes sterren, een zesling dus!"
+    },
+    "048": {
+      "title": "Arcturus",
+      "description": "Arcturus is de derde helderste ster aan de nachtelijke hemel, na Sirius en Canopus. Het is de helderste ster in het sterrenbeeld Ossenhoeder. Vind haar door het volgen van het handvat van de Grote Beer."
+    },
+    "049": {
+      "title": "De zon",
+      "description": "De Zon maakt leven op aarde mogelijk door de energie die ze levert. De zon is meer dan 100 keer groter in diameter dan de aarde! 20.000 keer meer zonne-energie raakt de aarde dan waar mensen per jaar gebruik van maken."
+    },
+    "050": {
+      "title": "Alpha Centauri A",
+      "description": "Alpha Centauri A is de grootste ster van de ster Alpha Centauri systeem (samengesteld uit drie sterren). Het is het dichtstbijzijnde zonnestel en de vierde helderste ster aan de nachtelijke hemel."
+    },
+    "051": {
+      "title": "Alpha Centauri B",
+      "description": "Alpha Centauri B is de tweede grootste ster in de ster in het Alpha Centauri zonnestelsel. Met een diameter van ongeveer een miljoen kilometer is deze ster iets kleiner dan de zon. Alpha Centuari A en B zijn zo dichtbij dat het voor aardbewoners lijkt alsof het één ster is."
+    },
+    "052": {
+      "title": "Proxima Centauri",
+      "description": "Proxima Centauri staat bekend als de dichtstbijzijnde ster, de zon niet meegerekend. De naam komt van het woord \"nabijheid\". Proxima Centauri is een kleine rode ster. Helaas zo zwak dat u een telescoop nodig heeft om haar te zien."
+    },
+    "053": {
+      "title": "Sirius A",
+      "description": "Sirius is de helderste ster aan de nachtelijke hemel. Bijna twee keer zo helder als Canopus, de tweede helderste ster. Sirius is echter geen grote ster maar staat dichtbij ons, op slechts acht lichtjaar van de aarde."
+    },
+    "054": {
+      "title": "Sirius B",
+      "description": "Sirius B is een witte dwerg, een ster aan het einde van haar levenscyclus. Nauwelijks groter dan de aarde! En meestal vrij moeilijk te zien door verblindend licht van Sirius A. Sirius B staat bekend als \"The Pup\"."
+    },
+    "055": {
+      "title": "Vega",
+      "description": "Vega is te vinden in het sterrenbeeld Lier. Het is ook onderdeel van de Zomerdriehoek (onofficieel sterrenbeeld), bestaande uit Vega, Altair en Deneb. Vega draait zo snel dat ze uitstulpt. Maar we kijken tegen de pool, dus ze lijkt rond."
+    },
+    "056": {
+      "title": "Regulus",
+      "description": "Regulus draait zo snel dat ze uitstulpt, net zoals Altair en Vega. Als Regulus 16% sneller zou draaien, zou het uit elkaar scheuren! Regulus is de helderste ster in het sterrenbeeld Leeuw. Er is ook een Regulus B en C."
+    },
+    "057": {
+      "title": "Spica",
+      "description": "Spica is de vijftiende helderste ster aan de nachtelijke hemel en ligt in het sterrenbeeld Maagd. Het is eigenlijk een dubbel zonnestelsel. De twee sterren staan zeer dicht op elkaar, en draaien in vier dagen een rondje om elkaar."
+    },
+    "058": {
+      "title": "Alnitak",
+      "description": "Alnitak is de meest oostelijke ster van de drie sterren die de Orion-riem vormen. De andere twee zijn Alnilam en Mintaka. Alle drie zeer helder te zien vanaf planeet aarde."
+    },
+    "059": {
+      "title": "Gacrux",
+      "description": "Gacrux is te vinden in het sterrenbeeld Zuiderkruis. Gacrux is een dubbelster. De grootste van de twee is een rode reus. Een rode reus is een ster die aan het einde van haar levensdagen is gekomen."
+    },
+    "060": {
+      "title": "Uranus",
+      "description": "Deze ijsreus kun je met het blote oog net niet zien. Ook met een verrekijker is het goed zoeken. In 1650 werd Uranus ontdekt door een Engelse astronoom en eerst aangezien voor een zwakke ster. Zo'n honderd jaar later zag William Herschel dat het een planeet was en de officiële ontdekking kwam op zijn naam te staan."
+    },
+    "061": {
+      "title": "Neptunus",
+      "description": "Op dit moment is Neptunus de verste planeet in ons zonnestelsel. Ze draait in 164,8 aardse jaren in een baan om de zon. Neptunus zie je dus nooit van je leven een heel rondje om de aarde maken, tenzij mensen nog wat ouder worden."
+    },
+    "062": {
+      "title": "Wolf 359",
+      "description": "Wolf 359 is een kleine rode dwerg, overschaduwd door de normale sterren. Het is de zesde meest nabije ster bij de aarde, na de zon, Proxima Centauri, Alpha Centauri A & B en Barnard's ster. De helderheid van sterren wordt uitgedrukt in magnitude (mag). Wolf 359 heeft een helderheid van +13.5 mag."
+    },
+    "063": {
+      "title": "Gliese 229 A",
+      "description": "Gliese 229 A is een rode dwergster. Ze is een beetje kleiner dan de zon. De rode dwergster wordt ook geschreven als GJ 229 of GI 229. Het maakt deel uit van een dubbel zonnestelsel, samen met de tweede ster Gliese 229b."
+    },
+    "064": {
+      "title": "Gliese 229b",
+      "description": "Gliese 229b is een bruine dwergster. Ze draait om een grotere dwergster genaamd Gliese 229A. Gliese 229b zou worden geclassificeerd als een planeet, maar het is veel dichter dan Jupiter, waardoor de massa te groot is om te worden beschouwd als een planeet."
+    },
+    "065": {
+      "title": "Jupiter",
+      "description": "Jupiter is de grootste planeet in het zonnestelsel. Maar het is niet de grootste bekende planeet. Dat is TrES-4. Jupiter is een gasreus, dus het is gewoon een bal van gas waar je niet op kunt landen. Jupiter heeft 64 manen, waaronder de vier manen van Galilei die in 1610 werden ontdekt door Galileo Galilei."
+    },
+    "066": {
+      "title": "Saturnus",
+      "description": "Saturnus heeft ringen. Galileo was de eerste die ze zag en hield het op \"oren\". De ringen bevatten ijs en meteorietstofdeeltjes, zijn maar 20 meter dik maar strekken zich uit tot wel 200x de diameter van de planeet zelf."
+    },
+    "067": {
+      "title": "TRES-4",
+      "description": "TRES-4, de grootst bekende planeet nu bekend, staat 1400 lichtjaar van ons vandaan. Met een telescoop is TRES-4 niet te zien. Als TRES-4 voor een ster langs draait dan dimt het de helderheid van de ster en beetje. Zo weten we dat de planeet bestaat."
+    },
+    "068": {
+      "title": "Venus",
+      "description": "Vroeger werd er gedacht dat Venus en de Aarde sterk op elkaar lijken, maar dat is niet zo. Het oppervlak van Venus altijd warmer dan 450°C. De atmosfeer bevat vooral koolstofdioxide die veel warmte van de zon vasthoudt."
+    },
+    "069": {
+      "title": "Mars",
+      "description": "Mars staat bekend als de Rode Planeet. Rood, want het zand is rijk aan ijzer-oxide (roest). Naast het in de poolkappen opgeslagen water bevindt zich een grote hoeveelheid water in de Marsbodem in bevroren toestand."
+    },
+    "070": {
+      "title": "Mercurius",
+      "description": "Mercurius is de planeet het dichtst bij de zon. Het heeft geen atmosfeer. Overdag worden temperaturen bereikt van 400°C, maar 's nachts, de daalt de temperatuur soms tot wel -180°C. Een jaar op Mercurius is 88 aardse dagen."
+    },
+    "071": {
+      "title": "Ganymedes",
+      "description": "Ganymedes is de grootste maan in het zonnestelsel. Het draait om Jupiter en werd ontdekt door Galileo."
+    },
+    "072": {
+      "title": "Callisto",
+      "description": "Callisto is de meest afgelegen manen van Galileo. Het draait aan de buitenkant en wordt het meest geraakt door meteoren. Deze meteoren veroorzaken vele kraters."
+    },
+    "073": {
+      "title": "Io",
+      "description": "Io heeft veel vulkanen. Het landschap van Io is voortdurend in beweging. In een jaar tijd ziet er heel anders uit!"
+    },
+    "074": {
+      "title": "Europa",
+      "description": "Europa is bedekt met ijs. Er zijn mysterieuze strepen die het maanoppervlak bedekken. Sommige mensen geloven dat er water zou kunnen bestaan onder de laag ijs, mogelijk zelfs water dat leven bevat."
+    },
+    "075": {
+      "title": "Titan",
+      "description": "Titan is de enige grote maan van Saturnus. Het heeft een zeer dikke atmosfeer, die voornamelijk bestaat uit stikstof. Titan heeft zeeën van vloeibaar methaan. (de temperatuur ligt rond -180°C) Er is zelfs een continent genaamd \"Xanadu\"."
+    },
+    "076": {
+      "title": "De Maan",
+      "description": "De Maan, ook bekend als \"Luna\", is het helderste object aan de nachtelijke hemel. Het draait elke 27 dagen, 7 uur en 43 minuten om de aarde. Stel je voor dat je een aantal manen zou zien verspreid over de nachtelijke hemel. Dat zou geweldig zijn!"
+    },
+    "077": {
+      "title": "Triton",
+      "description": "Triton is de grootste maan van Neptunus. Het is ook het koudste object in het zonnestelsel, op -240°C. Triton is in het zwaartekrachtveld van Neptunus terecht gekomen en zal binnen 100 miljoen jaar op Neptunus te pletter slaan."
+    },
+    "078": {
+      "title": "Pluto",
+      "description": "Pluto is een dwergplaneet. De officiële naam van Pluto is sinds 2006 \"134340 Pluto\"."
+    },
+    "079": {
+      "title": "Charon",
+      "description": "Charon is de enige grote maan van Pluto. Pluto is slechts 8x groter dan Charon. en ze staan dichtbij elkaar zodat sommige mensen Pluto en Charon beschouwen als een dubbelplaneet. Vanaf Pluto kijk je altijd tegen dezelfde kant van Charon aan en vanaf Charon altijd tegen dezelfde kant van Pluto."
+    },
+    "080": {
+      "title": "Eris",
+      "description": "Eris is de grootste dwergplaneet. Het is zelfs groter dan Pluto, ook een dwergplaneet. Eris staat ook zeer ver van de zon. Eris heeft een maan, en dat is Dysnomia."
+    },
+    "081": {
+      "title": "Dysnomia",
+      "description": "Dysnomia is enige maan van Eris en werd ontdekt op 10 september 2005. Wist je dat \"Dysnomia\" verwijst naar een leerstoornis die vergelijkbaar is met dyslexie?"
+    },
+    "082": {
+      "title": "Sedna",
+      "description": "Sedna heeft een zeer elliptische baan en staat zo ver weg dat het 10.000 aardse jaren duurt voor één omloop. Als je Sedna van rechts naar links leest staat er \"Andes\", 's werelds langste bergketen in Zuid-Amerika.) Beide misschien wel een andere wereld!"
+    },
+    "083": {
+      "title": "Quaoar",
+      "description": "Quaoar is zeer dicht, want de kern is erg groot. Quaoar kan lang geleden veel groter zijn geweest. Mogelijk geraakt door een object ter grootte van Pluto, die het zou hebben ontdaan van de buitenste lagen."
+    },
+    "084": {
+      "title": "Ceres",
+      "description": "Ceres is niet een erg goede plek voor mensen om te leven. Ceres is de grootste asteroïde, en met Ceres begon de discussie over de definitie van planeet. Ceres werd een poosje beschouwd als een planeet, maar dat was het niet."
+    },
+    "085": {
+      "title": "Polaris",
+      "description": "De Poolster (Polaris) staat in de buurt van de noordpool. Als je wilt weten waar het noorden is, dan kun je proberen Polaris te vinden. Zoek de twee sterren aan de rechterkant van het Steelpannetje (de Grote Beer). Trek een denkbeeldige lijn in het verlengde van deze sterren naar boven tot je bij een heldere ster komt; de poolster."
+    },
+    "086": {
+      "title": "Antares",
+      "description": "Antares is een rode superreus"
+    },
+    "087": {
+      "title": "Altair",
+      "description": "Altair is een van de drie sterren in de zomerdriehoek. De zomerdriehoek is een scherpe driehoek; alle hoeken zijn minder dan 90 graden. De andere twee zijn Vega en Deneb. Net als vele andere sterren draait Altair zeer snel, uitpuilend in het centrum!"
+    },
+    "088": {
+      "title": "La Superba",
+      "description": "La Superba is een van de roodste sterren aan de nachtelijke hemel, nog maar net te zien met het blote oog. Het is zo rood als gevolg van alle koolstof-13 die het creëert bij het fuseren van helium. (Normaal koolstof is koolstof-12.) La Superba is slechts 2500°C, waardoor het een van de koudste sterren is."
+    },
+    "089": {
+      "title": "Pistoolster",
+      "description": "De pistoolster is een van de bekende meest lichtgevende sterren. In twintig seconden straalt het zoveel energie uit als de zon in een heel jaar. Tussen de aarde en de pistooster hangt een wolk van interstellair stof waardoor deze vanaf de aarde niet te zien is. De ster werd in de jaren '90 ontdekt door ruimtetelescoop Hubble."
+    },
+    "090": {
+      "title": "S Doradus",
+      "description": "S Doradus is een hyperreus en een van de helderste sterren in de Grote Magelhaense Wolk. Een hyperreus zendt meer dan 100.000 keer zoveel licht uit per tijdseenheid dan onze zon. Ze bestaan niet lang, naar schatting maar zo'n 10.000 jaar, en zijn daarom vrij zeldzaam."
+    },
+    "091": {
+      "title": "Enif",
+      "description": "Enif is een oranje superreus. De naam betekent \"neus\" in het Arabisch, en in het sterrenbeeld Pegasus bevindt Enif zich op de positie van de snuit."
+    },
+    "092": {
+      "title": "Mu Cephei",
+      "description": "Mu Cephei is een rode hyperreus. Ook wel granaatster genoemd omdat de kleur op granaat rood van edelsteen granaat lijkt."
+    },
+    "093": {
+      "title": "KY Cygni",
+      "description": "KY Cygni is, 300.000 keer helderder dan onze zon, en ook een hyperreus. Toch kun je hier rustig recht in kijken omdat KY Cyngi 300 miljoen keer verder weg staat dan onze zon."
+    },
+    "094": {
+      "title": "V354 Cephei",
+      "description": "V354 Cephei is een enorme rode superreus. Als deze superreus zich op de plek van onze zon zou bevinden dan zou de buitenkant voorbij de baan van Jupiter komen."
+    },
+    "095": {
+      "title": "WOH G64",
+      "description": "'WOH ... dat is een grote ster!' Nou, dat is geen gekke reactie want dit is op dit moment de op een paar na de grootste ster. WOH G64 is te vinden in de Grote Magelhaense Wolk. Er is ook een kleine Magelhaense Wolk, beide zijn satellietstelsels van onze melkweg."
+    },
+    "096": {
+      "title": "VY Canis Majoris",
+      "description": "VY Canis Majoris is de grootste bekende ster. Zo groot dat, indien het geplaatst zou zijn in ons zonnestelsel, het verder zou reiken dan de baan van Saturnus! Het zou een vliegtuig 1.200 jaar kosten om er een keer omheen te vliegen."
+    },
+    "097": {
+      "title": "Betelgeuze",
+      "description": "Betelgeuze is na Rigel de helderste ster in het sterrenbeeld Orion. Betelgeuze is oud (miljoenen jaren) en aan het eind van zijn leven en wordt verwacht ergens in de komende tienduizend jaar te exploderen. Daarna wordt het een supernova. Kleinere sterren leven miljarden jaren. Betelgeuze is groot en verouderd sneller."
+    },
+    "098": {
+      "title": "Albireo",
+      "description": "Albireo bestaat uit drie sterren in totaal. Hier zie je de grootste. Samen met een andere ster vormen ze samen een gele stip. De derde is blauw en ligt verder weg. De blauwe ster en de gele sterren liggen zo ver uit elkaar dat het 100.000 jaar duurt om een keer in een baan om elkaar heen te draaien."
+    },
+    "099": {
+      "title": "Ster van Kapteyn",
+      "description": "De ster van Kapteyn staat op slechts 12,8 lichtjaar afstand. Toch heb je een verrekijker je een verrekijker nodig om het te zien. Jacobus Cornelis Kapteyn was een Nederlandse astronoom die de ster in 1897 ontdekte in Zuid-Afrika. Kapteyn werd geboren als zoon van een schoolmeester en ging op zijn 17e wis- en Natuurkunde studeren in Utrecht."
+    },
     "100": {
       "title": "Ster van Luyten",
       "description": "Ster van Luyten is een rode dwerg op 12 lichtjaar van ons vandaan. Jacob Willem Luyten was een Nederlands-Amerikaans astronoom. Hij werd in Semerang in Indonesië geboren waar zijn vader leraar Frans was. In 1910 werd de jonge Luyten gefascineerd door de komeet van Halley. Hij studeerde astronomie aan de Universiteit van Amsterdam."
@@ -912,289 +1192,13 @@
       "title": "Groot Barrièrerif",
       "description": "Het Groot Barrièrerif is het grootste koraalrif ter wereld dat bestaat uit meer dan 2,900 individuele riffen en 900 eilanden die zich uitstrekken over 2600 kilometer over een gebied van ongeveer 334.400 vierkante kilometer."
     },
-    "030": {
-      "title": "LCD pixel",
-      "description": "Hoewel de grootte van pixels sterk verschilt, is 300 micrometer ongeveer het gemiddelde. Pixels bevatten drie subpixels: rode, groene en blauwe. Pixels zijn wel cool, maar voxels zijn beter. Het zijn drie-dimensionale pixels."
-    },
-    "031": {
-      "title": "Palm Jebel Ali",
-      "description": "Palm Jebel Ali is een kunstmatige eiland voor de kust van Dubai. Bijna zo groot als de binnenstad van Amsterdam. De buitenste ring is vergelijkbaar met de A10, de snelweg rond Amsterdam. Palm Jebel Ali is nog niet af. Het is onderdeel van de Palm-eilanden waar straks in totaal 250.000 mensen wonen!"
-    },
-    "032": {
-      "title": "Neutrino",
-      "description": "Neutrino's verplaatsen zich elk moment door materialen! Neutrino's zijn kleiner dan een atoom. Het zijn elementaire deeltjes, ze zijn niet meer te splitsen in kleinere deeltjes. Ze hebben geen lading en worden daarom alleen beïnvloed door de zwaartekracht en zwakke onderlinge interactie. Ze zijn echter zo klein dat ze nauwelijks worden beïnvloed."
-    },
-    "033": {
-      "title": "High-Energy Neutrino",
-      "description": "Grotere neutrino's met meer energie. Voor meer informatie over neutrino's, ga naar neutrino, waaruit blijkt de gemiddelde grootte. Het is een maar liefst 15.000 keer kleiner!"
-    },
-    "034": {
-      "title": "Lucifer",
-      "description": "De lucifer is handig om vuur te maken. Dit maakt het ook gevaarlijk gereedschap! Geen speelgoed, pas op met vuur."
-    },
-    "035": {
-      "title": "Scharrelei",
-      "description": "Uit een kippenei komt normaal een kuiken. Veel mensen lusten wel een eitje. Er zijn eieren in soorten: scharreleieren, vrije-uitloop eieren of biologische eieren. Ze geven informatie over het maximale aantal kippen per vierkante meter, het gedrag dat kippen kunnen vertonen en of een kip buiten komt."
-    },
-    "036": {
-      "title": "Kwartelei",
-      "description": "Veel mensen denken dat kwarteleitjes lekkerder zijn dan kippeneieren. Het kwarteleitje is kleiner en zeldzamer dan het kippenei."
-    },
-    "037": {
-      "title": "Square Inch",
-      "description": "De Inch of Engelse duim wordt in veel Engelstalige landen gebruikt. In Nederland gebruiken we het metrieke stelsel (..., meters, centimeters, millimeters, ...). Afmetingen van beeldschermen en fietsbanden worden aangegeven in inches. Hier zie je een vierkante inch van 2,5 x 2,5 centimeter."
-    },
-    "038": {
-      "title": "Koffieboon",
-      "description": "De koffieboon is ongeveer een centimeter in doorsnede, het is eigenlijk een vrucht die lijkt op een boon. Het is bruin en heeft strepen, en soms, als je ernaar zit te staren vergeet je dat de diameter 10 ^ -29 is van het nu bekende universum."
-    },
-    "039": {
-      "title": "Gewone regenworm",
-      "description": "Regenwormen worden maximaal 30 centimeter groot en woelen de grond om. Vier kilo uitwerpselen per vierkante meter is normaal en zorgt voor een luchtige voedingsbodem. De meeste soorten regenwormen sterven als je ze doormidden snijd, ondanks sterke verhalen. Een enkele keer zal de kop overleven en groeit een nieuwe staart aan."
-    },
-    "040": {
-      "title": "Rigel",
-      "description": "Rigel is een felblauwe ster en de helderste ster in het sterrenbeeld Orion. De ster is 70x zo groot als de diameter van onze zon en is zichtbaar vanaf vrijwel elke plek op aarde."
-    },
-    "041": {
-      "title": "Verenigde Staten van Amerika",
-      "description": "Hier de Verenigde Staten. Ook al lijkt de VS groter dan Pluto, Pluto heeft een achterkant, wat betekent dat Pluto een groter oppervlak heeft!"
-    },
-    "042": {
-      "title": "Aarde",
-      "description": "Op de aarde is leven omdat de omstandigheden daarvoor geschikt waren. Miljoenen jaren heeft het leven ook invloed gehad op de aarde. Een bijzondere plek om goed voor te zorgen. De aarde is onze enige thuis."
-    },
-    "043": {
-      "title": "Deneb",
-      "description": "Deneb is de helderste ster in het sterrenbeeld Cygnus. Deneb staat 1.500 lichtjaar bij ons vandaan, waardoor ze van de 25 helderste sterren de meest afgelegen is. Als je op Mars zou wonen, dan zou Deneb verschijnen boven de Noordpool. In plaats van Polaris"
-    },
-    "044": {
-      "title": "V V Cephei A",
-      "description": "Een tijd lang was VV Cephei A de grootst gekende ster. Nu behoort die titel behoort tot VY Canis Majoris. Dat komt omdat regelmatig nieuwe sterren worden ontdekt!"
-    },
-    "045": {
-      "title": "R Doradus",
-      "description": "R Doradus is relatief groot en ligt op slechts 200 lichtjaar van de aarde, zodat het doet voorkomen dat het de op een na grootste ster aan de hemel is. Het is 0.05 boogseconden in doorsnede. Onze zon is de grootste, op 1,920 boogseconden - 40.000 keer zo groot"
-    },
-    "046": {
-      "title": "Aldebaran",
-      "description": "Aldebaran is niet te verwarren met Alderaan, wat een planeet is in Star Wars. Alderaan is zeer vergelijkbaar met de aarde in grootte, daglengte, en   wateroppervlak. Echter Aldebaran is 5.000 keer zo groot in diameter, draait in 643 aardse dagen om zijn as, en er is geen water."
-    },
-    "047": {
-      "title": "Pollux",
-      "description": "In de Griekse mythologie zijn Pollux en Castor een tweeling. Het zijn ook sterren in het sterrenbeeld Gemini, ander woord voor \"tweeling\". Maar in werkelijkheid is Pollux een enkele ster. Castor bestaat uit drie dubbelsterren, totaal zes sterren, een zesling dus!"
-    },
-    "048": {
-      "title": "Arcturus",
-      "description": "Arcturus is de derde helderste ster aan de nachtelijke hemel, na Sirius en Canopus. Het is de helderste ster in het sterrenbeeld Ossenhoeder. Vind haar door het volgen van het handvat van de Grote Beer."
-    },
-    "049": {
-      "title": "De zon",
-      "description": "De Zon maakt leven op aarde mogelijk door de energie die ze levert. De zon is meer dan 100 keer groter in diameter dan de aarde! 20.000 keer meer zonne-energie raakt de aarde dan waar mensen per jaar gebruik van maken."
-    },
-    "050": {
-      "title": "Alpha Centauri A",
-      "description": "Alpha Centauri A is de grootste ster van de ster Alpha Centauri systeem (samengesteld uit drie sterren). Het is het dichtstbijzijnde zonnestel en de vierde helderste ster aan de nachtelijke hemel."
-    },
-    "051": {
-      "title": "Alpha Centauri B",
-      "description": "Alpha Centauri B is de tweede grootste ster in de ster in het Alpha Centauri zonnestelsel. Met een diameter van ongeveer een miljoen kilometer is deze ster iets kleiner dan de zon. Alpha Centuari A en B zijn zo dichtbij dat het voor aardbewoners lijkt alsof het één ster is."
-    },
-    "052": {
-      "title": "Proxima Centauri",
-      "description": "Proxima Centauri staat bekend als de dichtstbijzijnde ster, de zon niet meegerekend. De naam komt van het woord \"nabijheid\". Proxima Centauri is een kleine rode ster. Helaas zo zwak dat u een telescoop nodig heeft om haar te zien."
-    },
-    "053": {
-      "title": "Sirius A",
-      "description": "Sirius is de helderste ster aan de nachtelijke hemel. Bijna twee keer zo helder als Canopus, de tweede helderste ster. Sirius is echter geen grote ster maar staat dichtbij ons, op slechts acht lichtjaar van de aarde."
-    },
-    "054": {
-      "title": "Sirius B",
-      "description": "Sirius B is een witte dwerg, een ster aan het einde van haar levenscyclus. Nauwelijks groter dan de aarde! En meestal vrij moeilijk te zien door verblindend licht van Sirius A. Sirius B staat bekend als \"The Pup\"."
-    },
-    "055": {
-      "title": "Vega",
-      "description": "Vega is te vinden in het sterrenbeeld Lier. Het is ook onderdeel van de Zomerdriehoek (onofficieel sterrenbeeld), bestaande uit Vega, Altair en Deneb. Vega draait zo snel dat ze uitstulpt. Maar we kijken tegen de pool, dus ze lijkt rond."
-    },
-    "056": {
-      "title": "Regulus",
-      "description": "Regulus draait zo snel dat ze uitstulpt, net zoals Altair en Vega. Als Regulus 16% sneller zou draaien, zou het uit elkaar scheuren! Regulus is de helderste ster in het sterrenbeeld Leeuw. Er is ook een Regulus B en C."
-    },
-    "057": {
-      "title": "Spica",
-      "description": "Spica is de vijftiende helderste ster aan de nachtelijke hemel en ligt in het sterrenbeeld Maagd. Het is eigenlijk een dubbel zonnestelsel. De twee sterren staan zeer dicht op elkaar, en draaien in vier dagen een rondje om elkaar."
-    },
-    "058": {
-      "title": "Alnitak",
-      "description": "Alnitak is de meest oostelijke ster van de drie sterren die de Orion-riem vormen. De andere twee zijn Alnilam en Mintaka. Alle drie zeer helder te zien vanaf planeet aarde."
-    },
-    "059": {
-      "title": "Gacrux",
-      "description": "Gacrux is te vinden in het sterrenbeeld Zuiderkruis. Gacrux is een dubbelster. De grootste van de twee is een rode reus. Een rode reus is een ster die aan het einde van haar levensdagen is gekomen."
-    },
-    "060": {
-      "title": "Uranus",
-      "description": "Deze ijsreus kun je met het blote oog net niet zien. Ook met een verrekijker is het goed zoeken. In 1650 werd Uranus ontdekt door een Engelse astronoom en eerst aangezien voor een zwakke ster. Zo'n honderd jaar later zag William Herschel dat het een planeet was en de officiële ontdekking kwam op zijn naam te staan."
-    },
-    "061": {
-      "title": "Neptunus",
-      "description": "Op dit moment is Neptunus de verste planeet in ons zonnestelsel. Ze draait in 164,8 aardse jaren in een baan om de zon. Neptunus zie je dus nooit van je leven een heel rondje om de aarde maken, tenzij mensen nog wat ouder worden."
-    },
-    "062": {
-      "title": "Wolf 359",
-      "description": "Wolf 359 is een kleine rode dwerg, overschaduwd door de normale sterren. Het is de zesde meest nabije ster bij de aarde, na de zon, Proxima Centauri, Alpha Centauri A & B en Barnard's ster. De helderheid van sterren wordt uitgedrukt in magnitude (mag). Wolf 359 heeft een helderheid van +13.5 mag."
-    },
-    "063": {
-      "title": "Gliese 229 A",
-      "description": "Gliese 229 A is een rode dwergster. Ze is een beetje kleiner dan de zon. De rode dwergster wordt ook geschreven als GJ 229 of GI 229. Het maakt deel uit van een dubbel zonnestelsel, samen met de tweede ster Gliese 229b."
-    },
-    "064": {
-      "title": "Gliese 229b",
-      "description": "Gliese 229b is een bruine dwergster. Ze draait om een grotere dwergster genaamd Gliese 229A. Gliese 229b zou worden geclassificeerd als een planeet, maar het is veel dichter dan Jupiter, waardoor de massa te groot is om te worden beschouwd als een planeet."
-    },
-    "065": {
-      "title": "Jupiter",
-      "description": "Jupiter is de grootste planeet in het zonnestelsel. Maar het is niet de grootste bekende planeet. Dat is TrES-4. Jupiter is een gasreus, dus het is gewoon een bal van gas waar je niet op kunt landen. Jupiter heeft 64 manen, waaronder de vier manen van Galilei die in 1610 werden ontdekt door Galileo Galilei."
-    },
-    "066": {
-      "title": "Saturnus",
-      "description": "Saturnus heeft ringen. Galileo was de eerste die ze zag en hield het op \"oren\". De ringen bevatten ijs en meteorietstofdeeltjes, zijn maar 20 meter dik maar strekken zich uit tot wel 200x de diameter van de planeet zelf."
-    },
-    "067": {
-      "title": "TRES-4",
-      "description": "TRES-4, de grootst bekende planeet nu bekend, staat 1400 lichtjaar van ons vandaan. Met een telescoop is TRES-4 niet te zien. Als TRES-4 voor een ster langs draait dan dimt het de helderheid van de ster en beetje. Zo weten we dat de planeet bestaat."
-    },
-    "068": {
-      "title": "Venus",
-      "description": "Vroeger werd er gedacht dat Venus en de Aarde sterk op elkaar lijken, maar dat is niet zo. Het oppervlak van Venus altijd warmer dan 450°C. De atmosfeer bevat vooral koolstofdioxide die veel warmte van de zon vasthoudt."
-    },
-    "069": {
-      "title": "Mars",
-      "description": "Mars staat bekend als de Rode Planeet. Rood, want het zand is rijk aan ijzer-oxide (roest). Naast het in de poolkappen opgeslagen water bevindt zich een grote hoeveelheid water in de Marsbodem in bevroren toestand."
-    },
-    "070": {
-      "title": "Mercurius",
-      "description": "Mercurius is de planeet het dichtst bij de zon. Het heeft geen atmosfeer. Overdag worden temperaturen bereikt van 400°C, maar 's nachts, de daalt de temperatuur soms tot wel -180°C. Een jaar op Mercurius is 88 aardse dagen."
-    },
-    "071": {
-      "title": "Ganymedes",
-      "description": "Ganymedes is de grootste maan in het zonnestelsel. Het draait om Jupiter en werd ontdekt door Galileo."
-    },
-    "072": {
-      "title": "Callisto",
-      "description": "Callisto is de meest afgelegen manen van Galileo. Het draait aan de buitenkant en wordt het meest geraakt door meteoren. Deze meteoren veroorzaken vele kraters."
-    },
-    "073": {
-      "title": "Io",
-      "description": "Io heeft veel vulkanen. Het landschap van Io is voortdurend in beweging. In een jaar tijd ziet er heel anders uit!"
-    },
-    "074": {
-      "title": "Europa",
-      "description": "Europa is bedekt met ijs. Er zijn mysterieuze strepen die het maanoppervlak bedekken. Sommige mensen geloven dat er water zou kunnen bestaan onder de laag ijs, mogelijk zelfs water dat leven bevat."
-    },
-    "075": {
-      "title": "Titan",
-      "description": "Titan is de enige grote maan van Saturnus. Het heeft een zeer dikke atmosfeer, die voornamelijk bestaat uit stikstof. Titan heeft zeeën van vloeibaar methaan. (de temperatuur ligt rond -180°C) Er is zelfs een continent genaamd \"Xanadu\"."
-    },
-    "076": {
-      "title": "De Maan",
-      "description": "De Maan, ook bekend als \"Luna\", is het helderste object aan de nachtelijke hemel. Het draait elke 27 dagen, 7 uur en 43 minuten om de aarde. Stel je voor dat je een aantal manen zou zien verspreid over de nachtelijke hemel. Dat zou geweldig zijn!"
-    },
-    "077": {
-      "title": "Triton",
-      "description": "Triton is de grootste maan van Neptunus. Het is ook het koudste object in het zonnestelsel, op -240°C. Triton is in het zwaartekrachtveld van Neptunus terecht gekomen en zal binnen 100 miljoen jaar op Neptunus te pletter slaan."
-    },
-    "078": {
-      "title": "Pluto",
-      "description": "Pluto is een dwergplaneet. De officiële naam van Pluto is sinds 2006 \"134340 Pluto\"."
-    },
-    "079": {
-      "title": "Charon",
-      "description": "Charon is de enige grote maan van Pluto. Pluto is slechts 8x groter dan Charon. en ze staan dichtbij elkaar zodat sommige mensen Pluto en Charon beschouwen als een dubbelplaneet. Vanaf Pluto kijk je altijd tegen dezelfde kant van Charon aan en vanaf Charon altijd tegen dezelfde kant van Pluto."
-    },
-    "080": {
-      "title": "Eris",
-      "description": "Eris is de grootste dwergplaneet. Het is zelfs groter dan Pluto, ook een dwergplaneet. Eris staat ook zeer ver van de zon. Eris heeft een maan, en dat is Dysnomia."
-    },
-    "081": {
-      "title": "Dysnomia",
-      "description": "Dysnomia is enige maan van Eris en werd ontdekt op 10 september 2005. Wist je dat \"Dysnomia\" verwijst naar een leerstoornis die vergelijkbaar is met dyslexie?"
-    },
-    "082": {
-      "title": "Sedna",
-      "description": "Sedna heeft een zeer elliptische baan en staat zo ver weg dat het 10.000 aardse jaren duurt voor één omloop. Als je Sedna van rechts naar links leest staat er \"Andes\", 's werelds langste bergketen in Zuid-Amerika.) Beide misschien wel een andere wereld!"
-    },
-    "083": {
-      "title": "Quaoar",
-      "description": "Quaoar is zeer dicht, want de kern is erg groot. Quaoar kan lang geleden veel groter zijn geweest. Mogelijk geraakt door een object ter grootte van Pluto, die het zou hebben ontdaan van de buitenste lagen."
-    },
-    "084": {
-      "title": "Ceres",
-      "description": "Ceres is niet een erg goede plek voor mensen om te leven. Ceres is de grootste asteroïde, en met Ceres begon de discussie over de definitie van planeet. Ceres werd een poosje beschouwd als een planeet, maar dat was het niet."
-    },
-    "085": {
-      "title": "Polaris",
-      "description": "De Poolster (Polaris) staat in de buurt van de noordpool. Als je wilt weten waar het noorden is, dan kun je proberen Polaris te vinden. Zoek de twee sterren aan de rechterkant van het Steelpannetje (de Grote Beer). Trek een denkbeeldige lijn in het verlengde van deze sterren naar boven tot je bij een heldere ster komt; de poolster."
-    },
-    "086": {
-      "title": "Antares",
-      "description": "Antares is een rode superreus"
-    },
-    "087": {
-      "title": "Altair",
-      "description": "Altair is een van de drie sterren in de zomerdriehoek. De zomerdriehoek is een scherpe driehoek; alle hoeken zijn minder dan 90 graden. De andere twee zijn Vega en Deneb. Net als vele andere sterren draait Altair zeer snel, uitpuilend in het centrum!"
-    },
-    "088": {
-      "title": "La Superba",
-      "description": "La Superba is een van de roodste sterren aan de nachtelijke hemel, nog maar net te zien met het blote oog. Het is zo rood als gevolg van alle koolstof-13 die het creëert bij het fuseren van helium. (Normaal koolstof is koolstof-12.) La Superba is slechts 2500°C, waardoor het een van de koudste sterren is."
-    },
-    "089": {
-      "title": "Pistoolster",
-      "description": "De pistoolster is een van de bekende meest lichtgevende sterren. In twintig seconden straalt het zoveel energie uit als de zon in een heel jaar. Tussen de aarde en de pistooster hangt een wolk van interstellair stof waardoor deze vanaf de aarde niet te zien is. De ster werd in de jaren '90 ontdekt door ruimtetelescoop Hubble."
-    },
-    "090": {
-      "title": "S Doradus",
-      "description": "S Doradus is een hyperreus en een van de helderste sterren in de Grote Magelhaense Wolk. Een hyperreus zendt meer dan 100.000 keer zoveel licht uit per tijdseenheid dan onze zon. Ze bestaan niet lang, naar schatting maar zo'n 10.000 jaar, en zijn daarom vrij zeldzaam."
-    },
-    "091": {
-      "title": "Enif",
-      "description": "Enif is een oranje superreus. De naam betekent \"neus\" in het Arabisch, en in het sterrenbeeld Pegasus bevindt Enif zich op de positie van de snuit."
-    },
-    "092": {
-      "title": "Mu Cephei",
-      "description": "Mu Cephei is een rode hyperreus. Ook wel granaatster genoemd omdat de kleur op granaat rood van edelsteen granaat lijkt."
-    },
-    "093": {
-      "title": "KY Cygni",
-      "description": "KY Cygni is, 300.000 keer helderder dan onze zon, en ook een hyperreus. Toch kun je hier rustig recht in kijken omdat KY Cyngi 300 miljoen keer verder weg staat dan onze zon."
-    },
-    "094": {
-      "title": "V354 Cephei",
-      "description": "V354 Cephei is een enorme rode superreus. Als deze superreus zich op de plek van onze zon zou bevinden dan zou de buitenkant voorbij de baan van Jupiter komen."
-    },
-    "095": {
-      "title": "WOH G64",
-      "description": "'WOH ... dat is een grote ster!' Nou, dat is geen gekke reactie want dit is op dit moment de op een paar na de grootste ster. WOH G64 is te vinden in de Grote Magelhaense Wolk. Er is ook een kleine Magelhaense Wolk, beide zijn satellietstelsels van onze melkweg."
-    },
-    "096": {
-      "title": "VY Canis Majoris",
-      "description": "VY Canis Majoris is de grootste bekende ster. Zo groot dat, indien het geplaatst zou zijn in ons zonnestelsel, het verder zou reiken dan de baan van Saturnus! Het zou een vliegtuig 1.200 jaar kosten om er een keer omheen te vliegen."
-    },
-    "097": {
-      "title": "Betelgeuze",
-      "description": "Betelgeuze is na Rigel de helderste ster in het sterrenbeeld Orion. Betelgeuze is oud (miljoenen jaren) en aan het eind van zijn leven en wordt verwacht ergens in de komende tienduizend jaar te exploderen. Daarna wordt het een supernova. Kleinere sterren leven miljarden jaren. Betelgeuze is groot en verouderd sneller."
-    },
-    "098": {
-      "title": "Albireo",
-      "description": "Albireo bestaat uit drie sterren in totaal. Hier zie je de grootste. Samen met een andere ster vormen ze samen een gele stip. De derde is blauw en ligt verder weg. De blauwe ster en de gele sterren liggen zo ver uit elkaar dat het 100.000 jaar duurt om een keer in een baan om elkaar heen te draaien."
-    },
-    "099": {
-      "title": "Ster van Kapteyn",
-      "description": "De ster van Kapteyn staat op slechts 12,8 lichtjaar afstand. Toch heb je een verrekijker je een verrekijker nodig om het te zien. Jacobus Cornelis Kapteyn was een Nederlandse astronoom die de ster in 1897 ontdekte in Zuid-Afrika. Kapteyn werd geboren als zoon van een schoolmeester en ging op zijn 17e wis- en Natuurkunde studeren in Utrecht."
-    },
     "328": {
       "title": "SARS-CoV-2",
       "description": "SARS-CoV-2 is het coronavirus dat de COVID-19-pandemie veroorzaakte en het leven van mensen in 2020–2022 veranderde. Ondanks zijn microscopische grootte (80–120 nanometer) had dit virus een enorme invloed op de geneeskunde, de wetenschap, de economie en het dagelijks leven over de hele wereld."
+    },
+    "329": {
+      "title": "Baikalmeer",
+      "description": "Het Baikalmeer is het diepste meer op aarde en het grootste reservoir van vloeibaar zoet water onder de meren. De leeftijd wordt geschat op ongeveer 25–30 miljoen jaar, wat het tot een van de oudste meren ter wereld maakt. Er leven meer dan 1.000 diersoorten die nergens anders ter wereld voorkomen, goed voor ongeveer 60% van de fauna."
     }
   }
 }
