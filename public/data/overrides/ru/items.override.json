@@ -1,0 +1,97 @@
+{
+  "remove": [
+    "041",
+    "107",
+    "269",
+    "276"
+  ],
+  "replace": {
+    "288": {
+      "frame": {
+        "x": 1166,
+        "y": 1141,
+        "w": 228,
+        "h": 228
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 254,
+        "y": 188,
+        "w": 228,
+        "h": 228
+      },
+      "sourceSize": {
+        "w": 2160,
+        "h": 1215
+      },
+      "size": {
+        "objectID": 288,
+        "exponent": -2,
+        "coeff": 1.55,
+        "cullFac": 1,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "objectID": 288,
+        "boundX": -1110.3,
+        "boundY": -559.05,
+        "boundW": 319.8,
+        "boundH": 366.9,
+        "titleX": -951.9,
+        "titleY": -253.2,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": -487.7,
+        "descriptionY": -373.8,
+        "zoomOffset": 0.05
+      }
+    }
+  },
+  "add": {
+    "330": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 250,
+        "h": 180
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 250,
+        "h": 180
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 180
+      },
+      "size": {
+        "objectID": 330,
+        "exponent": 2,
+        "coeff": 5,
+        "cullFac": 1,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "objectID": 330,
+        "boundX": -120,
+        "boundY": -90,
+        "boundW": 250,
+        "boundH": 180,
+        "titleX": 0,
+        "titleY": 0,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 70,
+        "descriptionY": -100
+      }
+    }
+  },
+  "textures": {
+    "288": true,
+    "330": true
+  }
+}

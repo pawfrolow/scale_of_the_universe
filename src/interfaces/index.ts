@@ -66,3 +66,14 @@ export interface ExtraText {
   meterShort: string
   meters: string
 }
+
+export type TItemsOverride = {
+  remove?: string[]
+  replace?: Record<string, TFrameMeta>
+  add?: Record<string, TFrameMeta>
+  textures?: Record<string, boolean>
+}
+
+export type TResolvedItemsManifest = TItemsManifest
+
+export type TTextureSourceMap = Record<string, string>

@@ -6,10 +6,15 @@ import { Universe } from '../classes/universe'
 import { ScaleText } from '../classes/scaleText'
 import { map } from '../helpers/map'
 import { throttle } from '../helpers/throttle'
-import { getTextureIds } from '../helpers/getTextureIds'
+import { getTextureIdsFromManifest } from '../helpers/getTextureIdsFromManifest'
 import { loadItemTextures } from '../helpers/loadItemTextures'
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config'
 import { TItemsManifest } from '../interfaces'
+import { loadLocaleOverride } from '../helpers/loadLocaleOverride'
+import { resolveItemsManifest } from '../helpers/resolveItemsManifest'
+import { resolveTextureSources } from '../helpers/resolveTextureSources'
+import { useTranslation } from 'react-i18next'
+import { validateItemsOverride } from '../helpers/validateItemsOverride'
 
 PIXI.settings.ROUND_PIXELS = true
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR
@@ -31,6 +36,7 @@ export const useUniverse = ({
 }: IUseUniverseParams) => {
   const appRef = useRef<PIXI.Application | null>(null)
   const initializedRef = useRef(false)
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     if (!isStarted) {
@@ -61,13 +67,20 @@ export const useUniverse = ({
       onAssetsLoading()
       onAssetsProgress?.(0)
 
-      const textureIds = getTextureIds()
+      const locale = i18n.language
 
-      const manifest = await (await fetch('data/items.json')).json() as TItemsManifest
+      const baseManifest = await (await fetch('data/items.json')).json() as TItemsManifest
+      const override = await loadLocaleOverride(locale)
+      const resolvedManifest = resolveItemsManifest(baseManifest, override)
+      const textureIds = getTextureIdsFromManifest(resolvedManifest)
+      const textureSourceMap = resolveTextureSources(resolvedManifest, locale, override)
+
+      validateItemsOverride(baseManifest, override)
 
       const allHighTextures = await loadItemTextures(
         textureIds,
-        manifest,
+        resolvedManifest,
+        textureSourceMap,
         (loaded, total) => {
           onAssetsProgress?.(Math.round((loaded / total) * 100))
         }
@@ -190,7 +203,7 @@ export const useUniverse = ({
       containerRef.current.innerHTML = '';
       containerRef.current.appendChild(app.view as HTMLCanvasElement)
 
-      await universe.createItems(allHighTextures, manifest)
+      await universe.createItems(allHighTextures, resolvedManifest)
 
       if (isDestroyed || !app || !slider || !containerRef.current) {
         return

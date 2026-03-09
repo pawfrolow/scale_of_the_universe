@@ -54,6 +54,7 @@ const almostEqual = (a: number, b: number, eps = 1) => Math.abs(a - b) <= eps
 export const loadItemTextures = async (
   textureIds: string[],
   manifest: TItemsManifest,
+  textureSourceMap: Record<string, string>,
   onProgress?: (loaded: number, total: number) => void
 ): Promise<Record<string, PIXI.Texture>> => {
   const frames = getManifestFrames(manifest)
@@ -76,7 +77,8 @@ export const loadItemTextures = async (
             return null
           }
 
-          const loaded = await Assets.load(`img/textures/items/${id}.png`)
+          const src = textureSourceMap[id] ?? `img/textures/items/${id}.png`
+          const loaded = await Assets.load(src)
           const sourceTexture = loaded as PIXI.Texture
           const baseTexture = sourceTexture.baseTexture
 

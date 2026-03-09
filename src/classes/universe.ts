@@ -302,7 +302,9 @@ export class Universe {
       const sizeData: SizeData = frameEntry.size
       const visualLocation: VisualLocation = frameEntry.visualLocation
 
-      if (idx >= 29) {
+      const numericId = Number(textureId)
+
+      if (numericId >= 30) {
         const objectTranslation = objectTranslations[textureId]
 
         if (!objectTranslation) {
