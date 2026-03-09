@@ -8,6 +8,7 @@ import { map } from '../helpers/map'
 import { throttle } from '../helpers/throttle'
 import { getTextureIds } from '../helpers/getTextureIds'
 import { loadItemTextures } from '../helpers/loadItemTextures'
+import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config'
 
 PIXI.settings.ROUND_PIXELS = true
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR
@@ -63,7 +64,7 @@ export const useUniverse = ({
 
       const allHighTextures = await loadItemTextures(
         textureIds,
-        'img/textures/items.json',
+        'data/items.json',
         (loaded, total) => {
           onAssetsProgress?.(Math.round((loaded / total) * 100))
         }
@@ -121,7 +122,13 @@ export const useUniverse = ({
           return
         }
 
-        const scaleExp = percent * 62 - 35
+        const extraRightBoost = 0.2
+        const boost = Math.pow(percent, 4) * extraRightBoost
+
+        const scaleExp =
+          MIN_SCALE_EXP +
+          percent * (MAX_SCALE_EXP - MIN_SCALE_EXP) +
+          boost
 
         scaleText.setColor(scaleExp)
 

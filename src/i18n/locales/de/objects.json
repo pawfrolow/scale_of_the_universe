@@ -1191,6 +1191,10 @@
     "099": {
       "title": "Kapteyns Stern",
       "description": "Kapteyns Stern ist nur dreizehn Lichtjahre entfernt. Dennoch ist seine Größenklasse +9 mag, man braucht also ein Fernglas, um ihn zu sehen. Vor etwa 10.000 Jahren war Kapteyns Stern nur sieben Lichtjahre entfernt!"
+    },
+    "328": {
+      "title": "SARS-CoV-2",
+      "description": "SARS-CoV-2 ist das Coronavirus, das die COVID-19-Pandemie auslöste und das Leben der Menschen in den Jahren 2020–2022 veränderte. Trotz seiner mikroskopischen Größe (80–120 Nanometer) hatte dieses Virus enorme Auswirkungen auf Medizin, Wissenschaft, Wirtschaft und den Alltag auf der ganzen Welt."
     }
   }
 }

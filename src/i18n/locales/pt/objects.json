@@ -1191,6 +1191,10 @@
     "099": {
       "title": "Estrela de Kapteyn",
       "description": "A Estrela de Kapteyn está a apenas treze anos-luz de distância. Mesmo assim, sua magnitude é de +9, então você vai precisar de binóculos para visualizá-la. Há dez mil anos atrás, esta estrela estava a apenas sete anos-luz de distância!"
+    },
+    "328": {
+      "title": "SARS-CoV-2",
+      "description": "O SARS-CoV-2 é o coronavírus que causou a pandemia de COVID-19, mudando a vida das pessoas entre 2020 e 2022. Apesar do seu tamanho microscópico (80–120 nanómetros), este vírus teve um enorme impacto na medicina, na ciência, na economia e na vida quotidiana em todo o mundo."
     }
   }
 }

@@ -12,6 +12,7 @@ import { map } from '../helpers/map';
 import { getScaleText } from '../helpers/getScaleText';
 
 import { translationService } from '../services/translation.service';
+import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config';
 
 type TObjectTranslation = {
   title: string;
@@ -180,7 +181,7 @@ export class Universe {
     const zoomOffset = item.visualLocation.zoomOffset || 0;
     const absoluteZoom = item.scaleExp + Math.log10(item.coeff * item.realRatio);
 
-    const percent = map(absoluteZoom + zoomOffset, -35, 27, 0, 1);
+    const percent = map(absoluteZoom + zoomOffset, MIN_SCALE_EXP, MAX_SCALE_EXP, 0, 1);
 
     this.hideAllItemsBut(item);
 

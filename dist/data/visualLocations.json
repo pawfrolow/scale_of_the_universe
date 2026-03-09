@@ -4381,5 +4381,19 @@
     "titleWrap": true,
     "descriptionX": -258.6,
     "descriptionY": 140.25
+  },
+  {
+    "objectID": 328,
+    "boundX": 20,
+    "boundY": 110,
+    "boundW": 380,
+    "boundH": 380,
+    "titleX": 220,
+    "titleY": 470,
+    "titleScale": 1,
+    "titleWrap": true,
+    "descriptionX": 660,
+    "descriptionY": 240,
+    "zoomOffset": 0.1
   }
 ]
