@@ -1,3 +1,6 @@
 export { Controls } from './Controls/Controls'
 export { UniverseCanvas } from './UniverseCanvas/UniverseCanvas'
 export { StartModal } from './StartModal/StartModal'
+export { LoadingOverlay } from './LoadingOverlay/LoadingOverlay'
+export { LanguageModal } from './LanguageModal/LanguageModal'
+export { Overlay } from './Overlay/Overlay'

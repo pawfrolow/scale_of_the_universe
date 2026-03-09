@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "우주의 규모",
+    "zoomHint": "스크롤바를 사용해 확대하고 축소할 수 있습니다.",
+    "objectHint": "물체를 클릭하면 더 많은 정보를 볼 수 있습니다.",
+    "start": "시작"
+  },
+  "language": {
+    "nativeName": "한국어",
+    "englishName": "Korean"
+  },
+  "html": {
+    "meta": {
+      "description": "우주의 규모. 기본 입자부터 은하까지, 다양한 물체의 크기를 비교합니다.",
+      "ogTitle": "우주의 규모",
+      "ogDescription": "기본 입자부터 은하까지, 다양한 물체의 크기를 비교합니다."
+    },
+    "modal": {
+      "title": "우주의 규모",
+      "zoomHint": "스크롤바를 사용해 확대하고 축소할 수 있습니다.",
+      "objectHint": "물체를 클릭하면 더 많은 정보를 볼 수 있습니다.",
+      "startButton": "시작",
+      "startLoading": "로딩 중...",
+      "selectLanguage": "언어 선택"
+    },
+    "credits": {
+      "createdBy": "제작: Cary Huang, Michael Huang",
+      "webDev": "웹 개발: Matthew Martori",
+      "copyright": "Copyright ©: Cary Huang, Michael Huang",
+      "translationAndDev": "번역, 개발: Pavel Frolov"
+    }
+  }
+}

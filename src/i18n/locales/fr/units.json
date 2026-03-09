@@ -1,0 +1,30 @@
+{
+  "units": {
+    "meterShort": "m",
+    "meter": "mètre",
+    "meters": "mètres",
+    "centimeter": "centimètre",
+    "centimeters": "centimètres",
+    "lightyear": "année-lumière",
+    "lightyears": "années-lumière"
+  },
+  "scalePrefixes": [
+    "yocto",
+    "zepto",
+    "atto",
+    "femto",
+    "pico",
+    "nano",
+    "micro",
+    "milli",
+    "",
+    "kilo",
+    "méga",
+    "giga",
+    "téra",
+    "péta",
+    "exa",
+    "zetta",
+    "yotta"
+  ]
+}

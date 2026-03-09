@@ -11,6 +11,7 @@ type TSimpleUnitForms = {
 };
 
 type TUnitsData = {
+  meterShort: string;
   meter: string;
   meters: string;
   centimeter: string;
@@ -21,7 +22,7 @@ type TUnitsData = {
 };
 
 type TUniverseLocaleData = {
-  objects: TObjectText[];
+  objects: Record<string, TObjectText>;
   units: TUnitsData;
   ui: Record<string, unknown>;
 };
@@ -55,9 +56,10 @@ export const translationService = {
   },
 
   getUniverseLocaleData(): TUniverseLocaleData {
-    const objectsData = getResource<{ items?: TObjectText[] }>('objects');
+    const objectsData = getResource<{ items?: Record<string, TObjectText> }>('objects');
     const unitsData = getResource<{
       units?: {
+        meterShort?: string,
         meter?: string;
         meters?: string;
         centimeter?: string;
@@ -70,8 +72,9 @@ export const translationService = {
     const uiData = getResource<Record<string, unknown>>('ui');
 
     return {
-      objects: objectsData.items ?? [],
+      objects: objectsData.items ?? {},
       units: {
+        meterShort: unitsData.units?.meterShort ?? 'м',
         meter: unitsData.units?.meter ?? 'метр',
         meters: unitsData.units?.meters ?? 'метров',
         centimeter: unitsData.units?.centimeter ?? 'сантиметр',

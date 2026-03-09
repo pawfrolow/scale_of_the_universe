@@ -1,24 +1,29 @@
-import React from 'react'
+import React from 'react';
 
-import { toggleFullscreen } from '../../helpers/fullscreen'
+import { toggleFullscreen } from '../../helpers/fullscreen';
 
 interface IControlsProps {
-  isMuted: boolean
-  onToggleMute: () => void
+  isMuted: boolean;
+  onToggleMute: () => void;
+  onOpenLanguageModal: () => void;
 }
 
-export const Controls = ({ isMuted, onToggleMute }: IControlsProps) => {
+export const Controls = ({
+  isMuted,
+  onToggleMute,
+  onOpenLanguageModal,
+}: IControlsProps) => {
   const handleHomeClick = () => {
-    window.location.reload()
-  }
+    window.location.reload();
+  };
 
   const handleFullscreenClick = () => {
-    const frame = document.getElementById('frame')
+    const frame = document.getElementById('frame');
 
     if (frame) {
-      toggleFullscreen(frame)
+      toggleFullscreen(frame);
     }
-  }
+  };
 
   return (
     <div className="buttons">
@@ -27,16 +32,22 @@ export const Controls = ({ isMuted, onToggleMute }: IControlsProps) => {
       </button>
 
       <button
-        className={`speaker ${isMuted ? 'mute' : ''}`}
+        onClick={onOpenLanguageModal}
+        type="button"
+        aria-label="Select language"
+      >
+        <img src="img/icons/language.svg" alt="Language" />
+      </button>
+
+      <button
         onClick={onToggleMute}
         type="button"
         aria-label={isMuted ? 'Unmute' : 'Mute'}
       >
-        <span />
+        {isMuted ? <img src="img/icons/speaker_muted.svg" alt="Mute" /> : <img src="img/icons/speaker_active.svg" alt="Unmute" />}
       </button>
 
       <button
-        className="fullscreen"
         onClick={handleFullscreenClick}
         type="button"
         aria-label="Fullscreen"
@@ -44,5 +55,5 @@ export const Controls = ({ isMuted, onToggleMute }: IControlsProps) => {
         <img src="img/icons/fullscreen.svg" alt="Fullscreen" />
       </button>
     </div>
-  )
-}
+  );
+};

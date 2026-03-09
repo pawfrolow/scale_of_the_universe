@@ -7,6 +7,7 @@ interface IStartModalProps {
   isLoading: boolean
   isOpen: boolean
   onStart: () => void
+  onOpenLanguageModal: () => void
 }
 
 export const StartModal = ({
@@ -15,12 +16,25 @@ export const StartModal = ({
   isLoading,
   isOpen,
   onStart,
+  onOpenLanguageModal,
 }: IStartModalProps) => {
   const { t } = useTranslation()
+
   return (
     <>
       <dialog open={isOpen}>
-        <h1 className="title">{title}</h1>
+        <div className="modalHeader">
+          <h1 className="title">{title}</h1>
+
+          <button
+            type="button"
+            className="modalLangButton"
+            onClick={onOpenLanguageModal}
+            aria-label="Select language"
+          >
+            <img src="img/icons/language.svg" alt="Language" />
+          </button>
+        </div>
 
         <div className="infoRow">
           <div className="infoItem">
@@ -62,7 +76,7 @@ export const StartModal = ({
           </button>
         </div>
       </dialog>
-      <div className='backdrop' />
+      <div className="backdrop" />
     </>
   )
 }

@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "La Skalo de la Universo",
+    "zoomHint": "Uzu la rulumbreton por zomi kaj malzomi.",
+    "objectHint": "Klaku sur objektojn por lerni pli.",
+    "start": "Komenci"
+  },
+  "language": {
+    "nativeName": "Esperanto",
+    "englishName": "Esperanto"
+  },
+  "html": {
+    "meta": {
+      "description": "La Skalo de la Universo. Komparo de la grandecoj de diversaj objektoj, de elementaj partikloj ĝis galaksioj.",
+      "ogTitle": "La Skalo de la Universo",
+      "ogDescription": "Komparo de la grandecoj de diversaj objektoj — de elementaj partikloj ĝis galaksioj."
+    },
+    "modal": {
+      "title": "La Skalo de la Universo",
+      "zoomHint": "Uzu la rulumbreton por zomi kaj malzomi.",
+      "objectHint": "Klaku sur objektojn por lerni pli.",
+      "startButton": "Komenci",
+      "startLoading": "Ŝargado...",
+      "selectLanguage": "Elektu lingvon"
+    },
+    "credits": {
+      "createdBy": "Kreita de: Cary Huang, Michael Huang",
+      "webDev": "Reta evoluigo: Matthew Martori",
+      "copyright": "Copyright ©: Cary kaj Michael Huang",
+      "translationAndDev": "Traduko, evoluigo: Pavel Frolov"
+    }
+  }
+}

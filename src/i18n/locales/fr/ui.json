@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "L'échelle de l'Univers",
+    "zoomHint": "Utilisez la barre de défilement pour zoomer et dézoomer.",
+    "objectHint": "Cliquez sur les objets pour en savoir plus.",
+    "start": "Commencer"
+  },
+  "language": {
+    "nativeName": "Français",
+    "englishName": "French"
+  },
+  "html": {
+    "meta": {
+      "description": "L'échelle de l'Univers. Une comparaison des tailles de différents objets, des particules élémentaires aux galaxies.",
+      "ogTitle": "L'échelle de l'Univers",
+      "ogDescription": "Une comparaison des tailles de différents objets — des particules élémentaires aux galaxies."
+    },
+    "modal": {
+      "title": "L'échelle de l'Univers",
+      "zoomHint": "Utilisez la barre de défilement pour zoomer et dézoomer.",
+      "objectHint": "Cliquez sur les objets pour en savoir plus.",
+      "startButton": "Commencer",
+      "startLoading": "Chargement...",
+      "selectLanguage": "Choisissez une langue"
+    },
+    "credits": {
+      "createdBy": "Créé par : Cary Huang, Michael Huang",
+      "webDev": "Développement web : Matthew Martori",
+      "copyright": "Copyright © : Cary et Michael Huang",
+      "translationAndDev": "Traduction, développement : Pavel Frolov"
+    }
+  }
+}

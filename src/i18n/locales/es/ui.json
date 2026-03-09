@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "La Escala del Universo 2",
+    "zoomHint": "Usa la barra de desplazamiento para acercar y alejar.",
+    "objectHint": "Haz clic en los objetos para aprender más.",
+    "start": "Comenzar"
+  },
+  "language": {
+    "nativeName": "Español",
+    "englishName": "Spanish"
+  },
+  "html": {
+    "meta": {
+      "description": "La Escala del Universo. Una comparación de los tamaños de diversos objetos, desde partículas elementales hasta galaxias.",
+      "ogTitle": "La Escala del Universo",
+      "ogDescription": "Una comparación de los tamaños de diversos objetos, desde partículas elementales hasta galaxias."
+    },
+    "modal": {
+      "title": "La Escala del Universo 2",
+      "zoomHint": "Usa la barra de desplazamiento para acercar y alejar.",
+      "objectHint": "Haz clic en los objetos para aprender más.",
+      "startButton": "Comenzar",
+      "startLoading": "Cargando...",
+      "selectLanguage": "Selecciona un idioma"
+    },
+    "credits": {
+      "createdBy": "Creado por: Cary Huang, Michael Huang",
+      "webDev": "Desarrollo web: Matthew Martori",
+      "copyright": "Copyright ©: Cary y Michael Huang",
+      "translationAndDev": "Traducción y desarrollo: Pavel Frolov"
+    }
+  }
+}

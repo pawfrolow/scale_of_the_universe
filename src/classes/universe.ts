@@ -19,6 +19,7 @@ type TObjectTranslation = {
 };
 
 type TUniverseUnits = {
+  meterShort: string;
   meter: string;
   meters: string;
   centimeter: string;
@@ -211,7 +212,7 @@ export class Universe {
       const prefixPart = prefix ? `${prefix}` : '';
 
       textDatum.title = `1 ${prefixPart}${units.meter}`;
-      textDatum.description = `${getScaleText(sizeData.exponent)} м`;
+      textDatum.description = `${getScaleText(sizeData.exponent)} ${units.meterShort}`;
 
       return textDatum;
     }
@@ -257,7 +258,7 @@ export class Universe {
     const visualLocations = await (await fetch('data/visualLocations.json')).json();
 
     const localeData = translationService.getUniverseLocaleData();
-    const objectTranslations: TObjectTranslation[] = localeData.objects;
+    const objectTranslations: Record<string, TObjectTranslation> = localeData.objects;
     const units: TUniverseUnits = localeData.units;
 
     const extraText = {
@@ -267,6 +268,7 @@ export class Universe {
       lightyears: units.lightyears,
       meter: units.meter,
       meters: units.meters,
+      meterShort: units.meterShort
     };
 
     const onClick = (item: Item) => {
@@ -279,16 +281,16 @@ export class Universe {
       const sizeData = itemSizes[idx];
       const visualLocation = visualLocations[idx];
 
-      const padded = pad(idx + 1, 3);
-      const texture = textures[padded];
+      const textureId = pad(idx + 1, 3)
+      const texture = textures[textureId]
 
       if (!texture) {
-        console.warn(`Texture not found for item index=${idx}, key=${padded}`);
+        console.warn(`Texture not found for item index=${idx}, key=${textureId}`);
         continue;
       }
 
       if (idx >= 29) {
-        const objectTranslation = objectTranslations[idx - 29];
+        const objectTranslation = objectTranslations[textureId];
 
         if (!objectTranslation) {
           console.warn(

@@ -1,22 +1,23 @@
 import { RefObject, useEffect, useRef } from 'react'
 import * as PIXI from 'pixi.js-legacy'
-import { Assets } from 'pixi.js-legacy'
 
 import { Slider } from '../classes/slider'
 import { Universe } from '../classes/universe'
 import { ScaleText } from '../classes/scaleText'
 import { map } from '../helpers/map'
 import { throttle } from '../helpers/throttle'
-import { getTextureJsonPaths } from '../helpers/getTextureJsonPaths'
+import { getTextureIds } from '../helpers/getTextureIds'
+import { loadItemTextures } from '../helpers/loadItemTextures'
 
-// PIXI.settings.ROUND_PIXELS = true
-PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
+PIXI.settings.ROUND_PIXELS = true
+PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR
 
 interface IUseUniverseParams {
   containerRef: RefObject<HTMLDivElement | null>
   isStarted: boolean
   onAssetsLoading: () => void
   onAssetsReady: () => void
+  onAssetsProgress?: (progress: number) => void
 }
 
 export const useUniverse = ({
@@ -24,6 +25,7 @@ export const useUniverse = ({
   isStarted,
   onAssetsLoading,
   onAssetsReady,
+  onAssetsProgress,
 }: IUseUniverseParams) => {
   const appRef = useRef<PIXI.Application | null>(null)
   const initializedRef = useRef(false)
@@ -55,17 +57,17 @@ export const useUniverse = ({
       }
 
       onAssetsLoading()
+      onAssetsProgress?.(0)
 
-      const textureJsonPaths = getTextureJsonPaths()
-      const resources: Record<string, any> = {}
+      const textureIds = getTextureIds()
 
-      for (const path of textureJsonPaths) {
-        if (isDestroyed) {
-          return
+      const allHighTextures = await loadItemTextures(
+        textureIds,
+        'img/textures/items.json',
+        (loaded, total) => {
+          onAssetsProgress?.(Math.round((loaded / total) * 100))
         }
-
-        resources[path] = await Assets.load(path)
-      }
+      )
 
       if (isDestroyed || !containerRef.current) {
         return
@@ -158,16 +160,6 @@ export const useUniverse = ({
       universe = new Universe(0, slider, app)
       scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0')
 
-      const allHighTextures: Record<string, PIXI.Texture> = {}
-
-      for (const key of Object.keys(resources)) {
-        const resource = resources[key]
-
-        if (resource?.textures) {
-          Object.assign(allHighTextures, resource.textures)
-        }
-      }
-
       app.stage.addChild(
         universe.container,
         slider.container,
@@ -175,6 +167,7 @@ export const useUniverse = ({
         universe.displayContainer
       )
 
+      containerRef.current.innerHTML = '';
       containerRef.current.appendChild(app.view as HTMLCanvasElement)
 
       await universe.createItems(allHighTextures)
@@ -210,6 +203,7 @@ export const useUniverse = ({
       window.addEventListener('resize', resizeHandler)
 
       if (!isDestroyed) {
+        onAssetsProgress?.(100)
         onAssetsReady()
       }
     }
