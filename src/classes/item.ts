@@ -11,7 +11,7 @@ import { Entity } from "./entity";
 import { E } from "../helpers/e";
 import { getGraphics } from "../helpers/description";
 import {
-  textDatum,
+  TextDatum,
   VisualLocation,
   SizeData,
   ExtraText
@@ -28,7 +28,7 @@ export class Item extends Entity {
   public visualLocation: VisualLocation;
   public video: Sprite;
   public videoSrc: any;
-  private textDatum: textDatum;
+  private textDatum: TextDatum;
   public text: Text;
   private onClick: Function;
   private description: Container;
@@ -41,7 +41,7 @@ export class Item extends Entity {
     sizeData: SizeData,
     textureLow: Texture,
     visualLocation: VisualLocation,
-    textDatum: textDatum,
+    textDatum: TextDatum,
     extraText: ExtraText,
     units: Array<string>,
     onClick: Function
@@ -176,7 +176,7 @@ export class Item extends Entity {
       wordWrapWidth: 400,
     };
 
-    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio)// E(this.scaleExp) * this.coeff * this.realRatio;
+    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio)
 
     if (scale > E(5)) {
       textStyle.fill = 0xdddddd;

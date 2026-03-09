@@ -13,6 +13,7 @@ import { getScaleText } from '../helpers/getScaleText';
 
 import { translationService } from '../services/translation.service';
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config';
+import { ExtraText, SizeData, TextDatum, TItemsManifest, VisualLocation } from '../interfaces';
 
 type TObjectTranslation = {
   title: string;
@@ -198,10 +199,10 @@ export class Universe {
 
   private buildRingText(
     idx: number,
-    sizeData: any,
+    sizeData: SizeData,
     units: TUniverseUnits
-  ) {
-    const textDatum = {
+  ): TextDatum {
+    const textDatum: TextDatum = {
       title: '',
       description: '',
       metersPlural: units.meters,
@@ -254,61 +255,72 @@ export class Universe {
     return textDatum;
   }
 
-  async createItems(textures: Record<string, Texture>) {
-    const itemSizes = await (await fetch('data/sizes.json')).json();
-    const visualLocations = await (await fetch('data/visualLocations.json')).json();
+  async createItems(textures: Record<string, Texture>, manifest: TItemsManifest) {
+    const frames = manifest.frames ?? {}
 
-    const localeData = translationService.getUniverseLocaleData();
-    const objectTranslations: Record<string, TObjectTranslation> = localeData.objects;
-    const units: TUniverseUnits = localeData.units;
+    const localeData = translationService.getUniverseLocaleData()
+    const objectTranslations: Record<string, TObjectTranslation> = localeData.objects
+    const units: TUniverseUnits = localeData.units
 
-    const extraText = {
+    const extraText: ExtraText = {
       centimeter: units.centimeter,
       centimeters: units.centimeters,
       lightyear: units.lightyear,
       lightyears: units.lightyears,
       meter: units.meter,
       meters: units.meters,
-      meterShort: units.meterShort
-    };
+      meterShort: units.meterShort,
+    }
 
     const onClick = (item: Item) => {
-      this.itemClicked(item);
-    };
+      this.itemClicked(item)
+    }
 
-    this.itemCount = itemSizes.length;
+    const frameKeys = Object.keys(frames).sort((a, b) => Number(a) - Number(b))
+    this.itemCount = frameKeys.length
 
-    for (let idx = 0; idx < itemSizes.length; idx++) {
-      const sizeData = itemSizes[idx];
-      const visualLocation = visualLocations[idx];
-
-      const textureId = pad(idx + 1, 3)
+    for (let idx = 0; idx < frameKeys.length; idx++) {
+      const textureId = frameKeys[idx]
+      const frameEntry = frames[textureId]
       const texture = textures[textureId]
 
       if (!texture) {
-        console.warn(`Texture not found for item index=${idx}, key=${textureId}`);
-        continue;
+        console.warn(`Texture not found for key=${textureId}`)
+        continue
       }
 
+      if (!frameEntry?.size) {
+        console.warn(`Size data not found for key=${textureId}`)
+        continue
+      }
+
+      if (!frameEntry?.visualLocation) {
+        console.warn(`Visual location not found for key=${textureId}`)
+        continue
+      }
+
+      const sizeData: SizeData = frameEntry.size
+      const visualLocation: VisualLocation = frameEntry.visualLocation
+
       if (idx >= 29) {
-        const objectTranslation = objectTranslations[textureId];
+        const objectTranslation = objectTranslations[textureId]
 
         if (!objectTranslation) {
           console.warn(
-            `Translation not found for item index=${idx}, objectIndex=${idx - 29}, objectID=${sizeData.objectID}`
-          );
-          continue;
+            `Translation not found for item index=${idx}, textureId=${textureId}, objectID=${sizeData.objectID}`
+          )
+          continue
         }
 
-        const textDatum = {
+        const textDatum: TextDatum = {
           title: objectTranslation.title,
           description: objectTranslation.description,
           metersPlural: units.meters,
           meterSingular: units.meter,
-        };
+        }
 
-        texture.baseTexture.mipmap = PIXI.MIPMAP_MODES.ON;
-        texture.baseTexture.scaleMode = PIXI.SCALE_MODES.LINEAR;
+        texture.baseTexture.mipmap = PIXI.MIPMAP_MODES.ON
+        texture.baseTexture.scaleMode = PIXI.SCALE_MODES.LINEAR
 
         const item = new Item(
           sizeData,
@@ -318,12 +330,12 @@ export class Universe {
           extraText,
           units.scalePrefixes,
           onClick
-        );
+        )
 
-        this.items.push(item);
-        this.container.addChild(item.getContainer());
+        this.items.push(item)
+        this.container.addChild(item.getContainer())
       } else {
-        const textDatum = this.buildRingText(idx, sizeData, units);
+        const textDatum = this.buildRingText(idx, sizeData, units)
 
         const ring = new Ring(
           idx,
@@ -332,10 +344,10 @@ export class Universe {
           visualLocation,
           textDatum,
           units.meters
-        );
+        )
 
-        this.rings.push(ring);
-        this.container.addChild(ring.getContainer());
+        this.rings.push(ring)
+        this.container.addChild(ring.getContainer())
       }
     }
   }

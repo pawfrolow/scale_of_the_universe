@@ -102,7 +102,7 @@ export const LANGUAGE_OPTIONS = [
   { code: 'zh-Hant', label: '中文(繁體)' },
   { code: 'fr', label: 'Français' },
   { code: 'eo', label: 'Esperanto' },
-  { code: 'ro', label: 'Romenian' },
+  { code: 'ro', label: 'Romanian' },
   { code: 'ua', label: 'Українська' },
   { code: 'ar', label: 'العربية' },
   { code: 'ko', label: '한국어' },

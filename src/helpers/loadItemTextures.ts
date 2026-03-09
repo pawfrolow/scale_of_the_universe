@@ -1,33 +1,6 @@
 import * as PIXI from 'pixi.js-legacy'
 import { Assets } from 'pixi.js-legacy'
-
-type TFrameMeta = {
-  frame?: {
-    x: number
-    y: number
-    w: number
-    h: number
-  }
-  rotated?: boolean
-  trimmed?: boolean
-  spriteSourceSize: {
-    x: number
-    y: number
-    w: number
-    h: number
-  }
-  sourceSize: {
-    w: number
-    h: number
-  }
-}
-
-type TTextureManifest = {
-  frames?: Record<string, TFrameMeta>
-  meta?: {
-    scale?: string | number
-  }
-} & Record<string, any>
+import { TFrameMeta, TItemsManifest } from '../interfaces'
 
 const chunkArray = <T,>(items: T[], chunkSize: number): T[][] => {
   const chunks: T[][] = []
@@ -39,7 +12,7 @@ const chunkArray = <T,>(items: T[], chunkSize: number): T[][] => {
   return chunks
 }
 
-const getManifestFrames = (manifest: TTextureManifest): Record<string, TFrameMeta> => {
+const getManifestFrames = (manifest: TItemsManifest): Record<string, TFrameMeta> => {
   if (manifest.frames && typeof manifest.frames === 'object') {
     return manifest.frames
   }
@@ -80,10 +53,9 @@ const almostEqual = (a: number, b: number, eps = 1) => Math.abs(a - b) <= eps
 
 export const loadItemTextures = async (
   textureIds: string[],
-  manifestPath = 'data/items.json',
+  manifest: TItemsManifest,
   onProgress?: (loaded: number, total: number) => void
 ): Promise<Record<string, PIXI.Texture>> => {
-  const manifest = (await (await fetch(manifestPath)).json()) as TTextureManifest
   const frames = getManifestFrames(manifest)
   const result: Record<string, PIXI.Texture> = {}
 

@@ -9,6 +9,7 @@ import { throttle } from '../helpers/throttle'
 import { getTextureIds } from '../helpers/getTextureIds'
 import { loadItemTextures } from '../helpers/loadItemTextures'
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config'
+import { TItemsManifest } from '../interfaces'
 
 PIXI.settings.ROUND_PIXELS = true
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR
@@ -62,9 +63,11 @@ export const useUniverse = ({
 
       const textureIds = getTextureIds()
 
+      const manifest = await (await fetch('data/items.json')).json() as TItemsManifest
+
       const allHighTextures = await loadItemTextures(
         textureIds,
-        'data/items.json',
+        manifest,
         (loaded, total) => {
           onAssetsProgress?.(Math.round((loaded / total) * 100))
         }
@@ -177,7 +180,7 @@ export const useUniverse = ({
       containerRef.current.innerHTML = '';
       containerRef.current.appendChild(app.view as HTMLCanvasElement)
 
-      await universe.createItems(allHighTextures)
+      await universe.createItems(allHighTextures, manifest)
 
       if (isDestroyed || !app || !slider || !containerRef.current) {
         return
