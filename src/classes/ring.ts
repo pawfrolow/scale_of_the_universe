@@ -11,6 +11,7 @@ import {
   SizeData,
   textDatum
 } from '../interfaces';
+import { calculateScale } from "../helpers/calculateScale";
 
 
 function supFromDig(dig: string) {
@@ -62,7 +63,7 @@ export class Ring extends Entity {
 
     this.centerVec = new Point(dX / c, dY / c);
 
-    const scale = E(this.scaleExp) * this.coeff * this.realRatio;
+    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio)// E(this.scaleExp) * this.coeff * this.realRatio;
     this.container.scale = new Point(scale, scale);
 
     this.createText();
@@ -71,8 +72,7 @@ export class Ring extends Entity {
   setZoom(globalZoomExp: number, deltaZoom: number) {
     const scaleExp = this.scaleExp - globalZoomExp;
     if (!this.culled) {
-
-      const scale = E(scaleExp) * this.coeff * this.realRatio;
+      const scale = calculateScale(scaleExp, this.coeff, this.realRatio)// Math.round(rawScale * 500) / 500;
       this.cull(scale, this.sizeData);
 
       if (scale > 0.05 && scale < 0.1) {
@@ -96,7 +96,7 @@ export class Ring extends Entity {
       if (scaleExp > 2 || scaleExp < -4) {
         this.cull(E(-4), this.sizeData);
       } else {
-        const scale = E(scaleExp) * this.coeff * this.realRatio;
+        const scale = calculateScale(scaleExp, this.coeff, this.realRatio)// Math.round(rawScale * 500) / 500;
         this.cull(scale, this.sizeData);
       }
     }
@@ -131,7 +131,7 @@ export class Ring extends Entity {
       ...baseStyle,
     }
 
-    const scale = E(this.scaleExp) * this.coeff * this.realRatio
+    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio)// Math.round(rawScale * 500) / 500;
 
     if (scale > E(5)) {
       textStyle.fill = 0xdddddd

@@ -4,7 +4,8 @@ import {
   Container,
   Texture,
   Point,
-  Polygon
+  Polygon,
+  DisplayObject
 } from "pixi.js-legacy";
 import { Entity } from "./entity";
 import { E } from "../helpers/e";
@@ -15,8 +16,7 @@ import {
   SizeData,
   ExtraText
 } from "../interfaces";
-
-declare const sa_event: any;
+import { calculateScale } from "../helpers/calculateScale";
 
 export class Item extends Entity {
   public descriptionGraphics: Container;
@@ -68,7 +68,7 @@ export class Item extends Entity {
 
     this.onClick = onClick;
 
-    const scale = E(this.scaleExp) * this.coeff * this.realRatio;
+    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio)//  E(this.scaleExp) * this.coeff * this.realRatio;
     this.container.scale = new Point(scale, scale);
 
     this.createClickableRegion();
@@ -78,7 +78,9 @@ export class Item extends Entity {
   }
 
   showDescription() {
-    this.text.visible = false;
+    if (this.description) {
+      return;
+    }
 
     const descriptionGfx = getGraphics(
       this.visualLocation,
@@ -93,17 +95,25 @@ export class Item extends Entity {
       descriptionGfx.scale = new Point(s, s);
     }
 
-    descriptionGfx.zIndex = 2;
+    descriptionGfx.zIndex = 1;
+    this.text.zIndex = 2;
+    this.spriteLow.zIndex = 0;
+    if (this.sprite) {
+      this.sprite.zIndex = 1;
+    }
 
     this.container.addChild(descriptionGfx);
 
     this.description = descriptionGfx;
+
+    this.container.sortChildren();
   }
 
   hideDescription() {
-    this.text.visible = true;
     if (this.description) {
       this.container.removeChild(this.description);
+      this.description.destroy?.({ children: true });
+      this.description = undefined;
     }
   }
 
@@ -112,7 +122,7 @@ export class Item extends Entity {
 
 
     if (!this.culled) {
-      const scale = E(scaleExp) * this.coeff * this.realRatio;
+      const scale = calculateScale(scaleExp, this.coeff, this.realRatio)// Math.round(rawScale * 500) / 500;
 
       if (scale > 0.05 && scale < 0.1) {
         this.text.alpha = 0.5;
@@ -136,7 +146,7 @@ export class Item extends Entity {
       if (scaleExp > 2 || scaleExp < -4) {
         this.cull(E(-8), this.sizeData);
       } else {
-        const scale = E(scaleExp) * this.coeff * this.realRatio;
+        const scale = calculateScale(scaleExp, this.coeff, this.realRatio)// Math.round(rawScale * 500) / 500;
         this.cull(scale, this.sizeData);
       }
     }
@@ -156,7 +166,7 @@ export class Item extends Entity {
       wordWrapWidth: 400,
     };
 
-    const scale = E(this.scaleExp) * this.coeff * this.realRatio;
+    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio)// E(this.scaleExp) * this.coeff * this.realRatio;
 
     if (scale > E(5)) {
       textStyle.fill = 0xdddddd;
@@ -171,17 +181,11 @@ export class Item extends Entity {
 
     this.text.cacheAsBitmap = false;
     this.container.addChild(this.text);
+    this.setInteractiveEvents(this.text);
   }
 
   createClickableRegion() {
     this.setSpriteEvents(this.spriteLow);
-
-    const here = this;
-    function onButtonDown() {
-      here.onClick(here);
-
-      sa_event("item_" + here.sizeData.objectID.toString());
-    }
   }
 
   public setHighSpriteEvents() {
@@ -201,16 +205,27 @@ export class Item extends Entity {
       new Point(bX1, bY2),
     ];
 
-    const here = this;
-    function onButtonDown() {
-      here.onClick(here);
+    sprite.hitArea = new Polygon(points);
+    this.setInteractiveEvents(sprite);
+  }
 
-      // sa_event("item_" + here.sizeData.objectID.toString());
+  setInteractiveEvents(target: DisplayObject) {
+    const here = this;
+
+    function onButtonDown(event: any) {
+      event?.stopPropagation?.();
+
+      here.onClick(here);
     }
 
-    sprite.hitArea = new Polygon(points);
-    sprite.interactive = true
-    sprite.cursor = 'pointer'
-    sprite.on('mousedown', onButtonDown).on('touchstart', onButtonDown)
+    // для pixi legacy / mixed API
+    target.eventMode = 'static';
+    target.interactive = true;
+    target.cursor = 'pointer';
+    // @ts-ignore
+    target.buttonMode = true;
+
+    target
+      .on('pointerdown', onButtonDown);
   }
 }

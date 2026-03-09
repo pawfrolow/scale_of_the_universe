@@ -59,17 +59,17 @@ export class ScaleText {
 
     this.container.addChild(this.containerGround, this.containerSpace);
 
-    this.textGround.x = x + 27;
-    this.textGround.y = y;
+    this.textGround.x = Math.round(x + 27);
+    this.textGround.y = Math.round(y);
 
-    this.textSpace.x = x + 27;
-    this.textSpace.y = y;
+    this.textSpace.x = Math.round(x + 27);
+    this.textSpace.y = Math.round(y);
 
-    this.baseTextGround.x = x - 10;
-    this.baseTextGround.y = y;
+    this.baseTextGround.x = Math.round(x - 10);
+    this.baseTextGround.y = Math.round(y);
 
-    this.baseTextSpace.x = x - 10;
-    this.baseTextSpace.y = y;
+    this.baseTextSpace.x = Math.round(x - 10);
+    this.baseTextSpace.y = Math.round(y);
   }
 
   setText(str: string) {
@@ -85,5 +85,19 @@ export class ScaleText {
     } else {
       this.containerSpace.alpha = 0.1;
     }
+  }
+
+  public resize(x: number, y: number) {
+    this.textGround.x = Math.round(x + 27);
+    this.textGround.y = Math.round(y);
+
+    this.textSpace.x = Math.round(x + 27);
+    this.textSpace.y = Math.round(y);
+
+    this.baseTextGround.x = Math.round(x - 10);
+    this.baseTextGround.y = Math.round(y);
+
+    this.baseTextSpace.x = Math.round(x - 10);
+    this.baseTextSpace.y = Math.round(y);
   }
 }
