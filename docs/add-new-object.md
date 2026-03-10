@@ -76,10 +76,6 @@ const MAX_COMMON_TEXTURES = 329
   },
   "visualLocation": {
     "objectID": 329,
-    "boundX": 20,
-    "boundY": 110,
-    "boundW": 380,
-    "boundH": 380,
     "titleX": 220,
     "titleY": 470,
     "titleScale": 1,
@@ -126,10 +122,6 @@ const MAX_COMMON_TEXTURES = 329
 ```json
 "visualLocation": {
   "objectID": 329,
-  "boundX": 20,
-  "boundY": 110,
-  "boundW": 380,
-  "boundH": 380,
   "titleX": 220,
   "titleY": 470,
   "titleScale": 1,
@@ -142,7 +134,6 @@ const MAX_COMMON_TEXTURES = 329
 
 Смысл:
 
-* `boundX`, `boundY`, `boundW`, `boundH` — область клика
 * `titleX`, `titleY` — позиция заголовка под объектом
 * `titleScale` — масштаб текста заголовка
 * `titleWrap` — перенос строки у заголовка
@@ -272,21 +263,6 @@ ID должен совпадать с ключом в `frames`.
 
 ---
 
-## 12. Если кликается мимо
-
-Править нужно `visualLocation`:
-
-```json
-"boundX"
-"boundY"
-"boundW"
-"boundH"
-```
-
-Область клика задаётся вручную и не вычисляется автоматически по границам текстуры.
-
----
-
 ## 13. Если заголовок или описание стоят не там
 
 Править нужно:
@@ -347,7 +323,6 @@ ID должен совпадать с ключом в `frames`.
 4. Подкрутить:
 
    * `spriteSourceSize.x/y`
-   * `boundX/Y/W/H`
    * `titleX/Y`
    * `descriptionX/Y`
    * `zoomOffset`
@@ -403,10 +378,6 @@ ID должен совпадать с ключом в `frames`.
   },
   "visualLocation": {
     "objectID": NNN,
-    "boundX": 0,
-    "boundY": 0,
-    "boundW": 100,
-    "boundH": 100,
     "titleX": 0,
     "titleY": 120,
     "titleScale": 1,

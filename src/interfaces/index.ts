@@ -7,10 +7,6 @@ export interface TextDatum {
 
 export interface VisualLocation {
   objectID?: number
-  boundX: number
-  boundY: number
-  boundW: number
-  boundH: number
   titleX: number
   titleY: number
   titleScale: number

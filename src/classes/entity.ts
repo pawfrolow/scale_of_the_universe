@@ -49,18 +49,6 @@ export class Entity {
     this.container.addChild(this.spriteLow);
   }
 
-  createHighTexture(objID: Number, texture: Texture) {
-    const sprite = new Sprite(texture);
-    sprite.anchor.set(0.5, 0.5);
-    this.sprite = sprite;
-    this.sprite.visible = true;
-    this.sprite.zIndex = 1;
-    this.container.addChild(this.sprite);
-
-    this.setItemQuality(true)
-    this.setQuality(1)
-  }
-
   getContainer() {
     return this.container;
   }
@@ -77,13 +65,6 @@ export class Entity {
       }
 
       this.spriteLow.visible = qualityIndex === 0;
-  }
-
-  clearHighTexture() {
-    // if(this.sprite) this.sprite.destroy();
-    // this.sprite = null
-    this.setItemQuality(false);
-    this.setQuality(0)
   }
 
   public setItemQuality(isHigh: boolean): void {

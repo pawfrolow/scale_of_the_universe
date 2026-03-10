@@ -34,10 +34,6 @@
       },
       "visualLocation": {
         "objectID": 288,
-        "boundX": -1110.3,
-        "boundY": -559.05,
-        "boundW": 319.8,
-        "boundH": 366.9,
         "titleX": -951.9,
         "titleY": -253.2,
         "titleScale": 1,
@@ -49,7 +45,7 @@
     }
   },
   "add": {
-    "330": {
+    "331": {
       "frame": {
         "x": 0,
         "y": 0,
@@ -77,10 +73,6 @@
       },
       "visualLocation": {
         "objectID": 330,
-        "boundX": -120,
-        "boundY": -90,
-        "boundW": 250,
-        "boundH": 180,
         "titleX": 0,
         "titleY": 0,
         "titleScale": 1,
@@ -92,6 +84,6 @@
   },
   "textures": {
     "288": true,
-    "330": true
+    "331": true
   }
 }

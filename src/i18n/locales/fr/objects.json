@@ -1199,6 +1199,10 @@
     "329": {
       "title": "Lac Baïkal",
       "description": "Le lac Baïkal est le lac le plus profond de la Terre et le plus grand réservoir d’eau douce liquide parmi les lacs. Son âge est estimé à environ 25 à 30 millions d’années, ce qui en fait l’un des plus anciens lacs de la planète. Plus de 1 000 espèces animales y vivent sans exister ailleurs dans le monde, représentant environ 60 % de sa faune."
+    },
+    "330": {
+      "title": "Tardigrade",
+      "description": "Les tardigrades sont de minuscules créatures à huit pattes, devenues célèbres pour leur incroyable capacité de survie. Malgré leur taille, ils peuvent supporter la dessiccation, le froid extrême, la chaleur, la haute pression et même les conditions de l’espace ouvert, en entrant dans un état de quasi-arrêt complet de la vie."
     }
   }
 }

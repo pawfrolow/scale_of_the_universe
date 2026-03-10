@@ -5,7 +5,8 @@ import {
   Texture,
   Point,
   Polygon,
-  DisplayObject
+  DisplayObject,
+  Rectangle
 } from "pixi.js-legacy";
 import { Entity } from "./entity";
 import { E } from "../helpers/e";
@@ -203,19 +204,37 @@ export class Item extends Entity {
   }
 
   setSpriteEvents(sprite: Sprite) {
-    const bX1 = this.visualLocation.boundX;
-    const bY1 = this.visualLocation.boundY;
-    const bX2 = bX1 + this.visualLocation.boundW;
-    const bY2 = bY1 + this.visualLocation.boundH;
+    const texture = sprite.texture;
 
-    const points = [
-      new Point(bX1, bY1),
-      new Point(bX2, bY1),
-      new Point(bX2, bY2),
-      new Point(bX1, bY2),
-    ];
+    const trim = texture.trim ?? {
+      x: 0,
+      y: 0,
+      width: texture.width,
+      height: texture.height,
+    };
 
-    sprite.hitArea = new Polygon(points);
+    const orig = texture.orig ?? {
+      width: texture.width,
+      height: texture.height,
+    };
+
+    // координаты trimmed-области относительно центра исходной картинки
+    const x = trim.x - orig.width / 2;
+    const y = trim.y - orig.height / 2;
+    const w = trim.width;
+    const h = trim.height;
+
+    // дополнительно чуть ужимаем область
+    const insetX = w * 0;
+    const insetY = h * 0;
+
+    sprite.hitArea = new Rectangle(
+      x + insetX,
+      y + insetY,
+      w - insetX * 2,
+      h - insetY * 2
+    );
+
     this.setInteractiveEvents(sprite);
   }
 
