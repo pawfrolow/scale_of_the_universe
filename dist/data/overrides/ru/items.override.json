@@ -42,10 +42,83 @@
         "descriptionY": -373.8,
         "zoomOffset": 0.05
       }
+    },
+    "037": {
+      "frame": {
+        "x": 1816,
+        "y": 236,
+        "w": 231,
+        "h": 230
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 884,
+        "y": 69,
+        "w": 231,
+        "h": 230
+      },
+      "sourceSize": {
+        "w": 2160,
+        "h": 1215
+      },
+      "size": {
+        "objectID": 37,
+        "exponent": -2,
+        "coeff": 1,
+        "cullFac": 1,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "objectID": 37,
+        "titleX": -103.5,
+        "titleY": -400.1,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": -533.7,
+        "descriptionY": -462.45,
+        "zoomOffset": 0
+      }
+    },
+    "215": {
+      "frame": {
+        "x": 463,
+        "y": 1960,
+        "w": 230,
+        "h": 85
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1405,
+        "y": 554,
+        "w": 230,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 2160,
+        "h": 1215
+      },
+      "size": {
+        "objectID": 215,
+        "exponent": -1,
+        "coeff": 2,
+        "cullFac": 1,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "objectID": 215,
+        "titleX": 578.6,
+        "titleY": 70,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 152.75,
+        "descriptionY": 11.4
+      }
     }
   },
   "add": {
-    "331": {
+    "bd8bf9d2-0d1c-4238-9079-77327904bdaa": {
       "frame": {
         "x": 0,
         "y": 0,
@@ -84,6 +157,7 @@
   },
   "textures": {
     "288": true,
-    "331": true
+    "331": true,
+    "bd8bf9d2-0d1c-4238-9079-77327904bdaa": true
   }
 }

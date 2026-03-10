@@ -9971,16 +9971,16 @@
       "frame": {
         "x": 961,
         "y": 1313,
-        "w": 229,
-        "h": 116
+        "w": 250,
+        "h": 174
       },
       "rotated": true,
       "trimmed": true,
       "spriteSourceSize": {
         "x": 960,
-        "y": 293,
-        "w": 229,
-        "h": 116
+        "y": 243,
+        "w": 250,
+        "h": 174
       },
       "sourceSize": {
         "w": 2160,
@@ -9989,13 +9989,13 @@
       "size": {
         "objectID": 275,
         "exponent": 2,
-        "coeff": 1.097,
+        "coeff": 1.05,
         "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
         "objectID": 275,
-        "titleX": -13.5,
+        "titleX": 0,
         "titleY": -267.6,
         "titleScale": 1,
         "titleWrap": true,
