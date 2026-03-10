@@ -81,9 +81,15 @@ src/
 
 ## Adding a new object
 
-Instructions for adding a new object to the scale are available here:
+Instructions for adding a common new object to the scale are available here:
 
 [docs/add-new-object.md](docs/add-new-object.md)
+
+## Override objects for some locales
+
+Instructions for remove / replace / adding a new object to the scale for some locales are available here:
+
+[docs/override-objects.md](docs/override-objects.md)
 
 ## Scripts
 
