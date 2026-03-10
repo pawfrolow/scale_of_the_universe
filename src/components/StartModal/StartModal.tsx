@@ -22,7 +22,7 @@ export const StartModal = ({
 
   return (
     <>
-      <dialog open={isOpen}>
+      <dialog className="startModal" open={isOpen}>
         <div className="modalHeader">
           <h1 className="title">{title}</h1>
 
@@ -53,15 +53,36 @@ export const StartModal = ({
             <p>{t('html.credits.createdBy', { ns: 'ui' })}</p>
             <p>
               {t('html.credits.webDev', { ns: 'ui' })}{' '}
-              <a href="https://github.com/matttt/scale_of_the_universe">github.com</a>
+              <a
+                className="creditsLink"
+                href="https://github.com/matttt/scale_of_the_universe"
+                target="_blank"
+                rel="noreferrer"
+              >
+                github.com
+              </a>
             </p>
             <p>
               {t('html.credits.copyright', { ns: 'ui' })}{' '}
-              <a href="https://www.htwins.net/scale2/">htwins.net</a>
+              <a
+                className="creditsLink"
+                href="https://www.htwins.net/scale2/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                htwins.net
+              </a>
             </p>
             <p>
               {t('html.credits.translationAndDev', { ns: 'ui' })}{' '}
-              <a href="https://github.com/pawfrolow/scale_of_the_universe">github.com</a>
+              <a
+                className="creditsLink"
+                href="https://github.com/pawfrolow/scale_of_the_universe"
+                target="_blank"
+                rel="noreferrer"
+              >
+                github.com
+              </a>
             </p>
           </div>
 
@@ -71,11 +92,12 @@ export const StartModal = ({
             onClick={onStart}
             disabled={isLoading}
           >
-            <img width="25" src="img/icons/play.svg" alt="Play" />
+            <img className="startBtnIcon" width="25" src="img/icons/play.svg" alt="Play" />
             <span>{startText}</span>
           </button>
         </div>
       </dialog>
+
       <div className="backdrop" />
     </>
   )

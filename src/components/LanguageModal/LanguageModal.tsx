@@ -28,7 +28,12 @@ export const LanguageModal = ({
 
   return (
     <Overlay isOpen={isOpen} onBackdropClick={onClose}>
-      <div className="languageDialog">
+      <div
+        className="languageDialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label={t('html.modal.selectLanguage', { ns: 'ui' })}
+      >
         <div className="languageDialogHeader">
           <h2>{t('html.modal.selectLanguage', { ns: 'ui' })}</h2>
 
@@ -50,8 +55,8 @@ export const LanguageModal = ({
               className={`languageOption ${currentLanguage === language.code ? 'active' : ''}`}
               onClick={() => onSelect(language.code)}
             >
-              <span>{language.label}</span>
-              {currentLanguage === language.code && <span>✓</span>}
+              <span className="languageOptionLabel">{language.label}</span>
+              {currentLanguage === language.code && <span className="languageOptionCheck">✓</span>}
             </button>
           ))}
         </div>

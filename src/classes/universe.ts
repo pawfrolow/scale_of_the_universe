@@ -71,9 +71,6 @@ export class Universe {
     this.app.stage.eventMode = 'static';
     this.app.stage.hitArea = this.app.screen;
 
-    this.app.stage.eventMode = 'static';
-    this.app.stage.hitArea = this.app.screen;
-
     this.app.stage.on('pointerdown', (e: any) => {
       if (!this.selectedItem) {
         return;
@@ -360,6 +357,8 @@ export class Universe {
 
     this.displayContainer.x = this.app.screen.width / 2;
     this.displayContainer.y = this.app.screen.height / 2;
+
+    this.app.stage.hitArea = this.app.screen;
   }
 
   private isDescendantOf(target: any, parent: any): boolean {

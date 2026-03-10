@@ -24,5 +24,5 @@ export const UniverseCanvas = ({
     onAssetsProgress,
   })
 
-  return <div id="sotu" ref={containerRef} />
+  return <div className="universeCanvas" id="sotu" ref={containerRef} />
 }

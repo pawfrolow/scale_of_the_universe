@@ -15,6 +15,7 @@ import { resolveItemsManifest } from '../helpers/resolveItemsManifest'
 import { resolveTextureSources } from '../helpers/resolveTextureSources'
 import { useTranslation } from 'react-i18next'
 import { validateItemsOverride } from '../helpers/validateItemsOverride'
+import { NumeralJSLocale } from 'numeral'
 
 PIXI.settings.ROUND_PIXELS = true
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR
@@ -38,6 +39,10 @@ export const useUniverse = ({
   const initializedRef = useRef(false)
   const { i18n } = useTranslation();
 
+  let resizeHandler: (() => void) | null = null
+  let orientationHandler: (() => void) | null = null
+  let visualViewportHandler: (() => void) | null = null
+
   useEffect(() => {
     if (!isStarted) {
       return
@@ -51,7 +56,6 @@ export const useUniverse = ({
 
     let app: PIXI.Application | null = null
     let slider: Slider | null = null
-    let resizeHandler: (() => void) | null = null
     let isDestroyed = false
 
     const bootstrap = async () => {
@@ -123,8 +127,8 @@ export const useUniverse = ({
 
       appRef.current = app
 
-      const w = app.renderer.width + 3
-      const h = app.renderer.height
+      const w = app.screen.width
+      const h = app.screen.height
 
       let universe!: Universe
       let scaleText!: ScaleText
@@ -212,28 +216,55 @@ export const useUniverse = ({
       slider.setPercent(map(0, -35, 27, 0, 1))
       universe.prevZoom = 0
 
-      resizeHandler = throttle(() => {
-        if (!app || !slider || isDestroyed) {
+      const performResize = () => {
+        if (!app || !slider || isDestroyed || !containerRef.current) {
           return
         }
 
         requestAnimationFrame(() => {
-          if (!app || !slider || isDestroyed) {
+          if (!app || !slider || isDestroyed || !containerRef.current) {
             return
           }
 
-          const width = app.renderer.width + 3
-          const height = app.renderer.height
+          const frame = document.getElementById('frame') as HTMLElement | null
+
+          if (!frame) {
+            return
+          }
+
+          const rect = containerRef.current.getBoundingClientRect()
+          const width = Math.round(rect.width || frame.clientWidth || window.innerWidth)
+          const height = Math.round(rect.height || frame.clientHeight || window.innerHeight)
+
+          app.renderer.resize(width, height)
+
           const currentPercent = slider.getPercent()
 
-          slider.resize(width, height, globalResolution)
+          slider.resize(app.screen.width, app.screen.height, globalResolution)
           universe.resize()
-          scaleText.resize((width * 0.9) / globalResolution, slider.topY - 40)
+          scaleText.resize((app.screen.width * 0.9) / globalResolution, slider.topY - 40)
           slider.setPercent(currentPercent)
         })
+      }
+
+      resizeHandler = throttle(performResize, 100)
+
+      orientationHandler = () => {
+        // iOS иногда обновляет viewport не мгновенно после rotation
+        setTimeout(performResize, 50)
+        setTimeout(performResize, 250)
+      }
+
+      visualViewportHandler = throttle(() => {
+        performResize()
       }, 100)
 
       window.addEventListener('resize', resizeHandler)
+      window.addEventListener('orientationchange', orientationHandler)
+
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', visualViewportHandler)
+      }
 
       if (!isDestroyed) {
         onAssetsProgress?.(100)
@@ -248,6 +279,14 @@ export const useUniverse = ({
 
       if (resizeHandler) {
         window.removeEventListener('resize', resizeHandler)
+      }
+
+      if (orientationHandler) {
+        window.removeEventListener('orientationchange', orientationHandler)
+      }
+
+      if (visualViewportHandler && window.visualViewport) {
+        window.visualViewport.removeEventListener('resize', visualViewportHandler)
       }
 
       if (slider) {

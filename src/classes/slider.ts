@@ -6,14 +6,16 @@ import {
   Ticker
 } from "pixi.js-legacy";
 import { Tweenable } from 'shifty';
+import { getCssPxVar } from "../helpers/getCssPxVar";
 
 const WIDTH_PERCENT = 0.9;
 const HEIGHT_PERCENT = 0.05;
-const BOTTOM_MARGIN = 24;
+const BASE_BOTTOM_MARGIN = 24;
 const HANDLE_WIDTH_PERCENT = 0.04;
 const SCROLL_SPEED = -1.5;
 let MAX_SCROLL_SPEED = 3;
 let EASING_CONSTANT = 0.005;
+const MIN_HANDLE_WIDTH_PX = 40;
 
 export class Slider {
   private app: Application;
@@ -104,7 +106,7 @@ export class Slider {
     const h = this.h * HEIGHT_PERCENT;
 
     const x = this.margin;
-    const y = this.h - h - BOTTOM_MARGIN;
+    const y = this.h - h - this.getBottomMargin();
 
     this.topY = y;
 
@@ -122,14 +124,14 @@ export class Slider {
     graphics.lineStyle(0, 0xaaaaaa, 0);
     graphics.beginFill(0xffffff, 1);
 
-    const w = this.w * HANDLE_WIDTH_PERCENT;
+    const w = this.getHandleWidth();
     this.handleW = w;
     const h = this.h * HEIGHT_PERCENT;
 
     const x = this.w / 2 + w / 2;
     this.currentX = x;
     this.targetX = x;
-    const y = this.h - h - BOTTOM_MARGIN;
+    const y = this.h - h - this.getBottomMargin();
 
     graphics.drawRoundedRect(0, 0, w, h, h / 2);
     graphics.endFill();
@@ -310,7 +312,7 @@ export class Slider {
     this.h = h / globalRes;
 
     this.widthPixels = this.w * WIDTH_PERCENT;
-    this.handleWidthPixels = this.w * HANDLE_WIDTH_PERCENT;
+    this.handleWidthPixels = this.getHandleWidth();
     this.scaleWidthPixels = this.widthPixels - this.handleWidthPixels;
     this.margin = (this.w - this.widthPixels) / 2;
 
@@ -341,7 +343,7 @@ export class Slider {
   }
   private getBounds() {
     const widthPixels = this.w * WIDTH_PERCENT;
-    const handleWidthPixels = this.w * HANDLE_WIDTH_PERCENT;
+    const handleWidthPixels = this.getHandleWidth();
     const scaleWidthPixels = widthPixels - handleWidthPixels;
     const margin = (this.w - widthPixels) / 2;
 
@@ -356,5 +358,13 @@ export class Slider {
       scaleWidthPixels,
       margin,
     };
+  }
+
+  private getBottomMargin() {
+    return BASE_BOTTOM_MARGIN + getCssPxVar('--safe-area-bottom');
+  }
+
+  private getHandleWidth() {
+    return Math.max(this.w * HANDLE_WIDTH_PERCENT, MIN_HANDLE_WIDTH_PX);
   }
 }
