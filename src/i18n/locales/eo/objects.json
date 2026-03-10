@@ -1,5 +1,285 @@
 {
   "items": {
+    "030": {
+      "title": "LCD-bildero",
+      "description": "Kvankam la grando de bilderoj diferencas ege, 300 mikrometroj cirkau estas la mezkvanto. Bilderoj enhavas tri subbilderojn, kiuj estas ruga, verda kaj blua. Bilderoj estas sufice mojosa, sed volumeneroj estas ec pli bona. Ili estas tridimensiaj bilderoj."
+    },
+    "031": {
+      "title": "Palmo Jebel Ali",
+      "description": "Palmo Jebel Ali estas la plej granda hom-farita insulo (ne regardante insulojn kiel Flevopolder, kie regiono de Nederlando estis drenita pro akiri plian teron). Palmo Jebel Ali ankorau ne estas finigita. Gi estas ero de la Palm-insuloj kaj estu dononta logejon al 250,000 personoj!"
+    },
+    "032": {
+      "title": "Neutrino",
+      "description": "La neutrinoj pasas ciam tra la ordinara materio kiel vi kaj mi! Fakte, ili faras tion nun! La neutrinoj ne havas sargon, do, ili nur estas afektitaj de graveco kaj de malforta forto. Tamen, ili estas tiel malgrandetaj, ke apenau estas afektitaj."
+    },
+    "033": {
+      "title": "Altenergia Neutrino",
+      "description": "La altenergiaj neutrinoj estas pli grandaj. Por pli pri neutrinoj, iru je neutrino, kiu montras la ordinaran grandecon. Proksimume 15,000-oble pli malgranda!"
+    },
+    "034": {
+      "title": "Alumeto",
+      "description": "La alumeto estas tre utila malgranda ilo. Kiam oni frapas gin kontrau io ajn, gi povas prilumi flamon. Ci tio faras gin tre dangera! Tia estas la kialo, car oni neniam devas ludi kun alumetoj. Komprenite?"
+    },
+    "035": {
+      "title": "Kokinovo",
+      "description": "La kokinovo estas kie kokidoj kutime elkovigas. Multaj homoj placas mangi kokinovojn. Krom la koloro, ne eblas trovi diferencon inter blankaj kaj brunaj kokinovoj."
+    },
+    "036": {
+      "title": "Koturnovo",
+      "description": "Multaj personoj kredas, ke la koturnovoj estas pli bonaj ol kokinovoj. La koturnovo  estas plej malgranda kaj pli stranga ol la kokinovo, sed tio ne sindetenas al iuj ami ilin!"
+    },
+    "037": {
+      "title": "Kvadrata Colo",
+      "description": "Se vi ne estas alkutimita je la metra mezursistemo, jen kvadrata colo. Bedaurinde por vi, preskau cio alie estas en la metra sistemo. Ankau 2.5 centimetroj estas la longeco de unu flanko, ne la areo. (Kiu devas esti en cm^2.)"
+    },
+    "038": {
+      "title": "Kafograjno",
+      "description": "La kafograjno proksimume mezuras unu centimetron longe – kaj estas frukto simila al fazeolo. gi estas bruna kaj havas striojn, kelkfoje, kiam vi fiksrigardas gin, vi certe forgesas tion: gia diametro estas 10^-29oble de la konata universo."
+    },
+    "039": {
+      "title": "Ordinara Lumbriko",
+      "description": "Cu ne placas al vi la krablmovaj kaj sveltaj lumbrikoj? Malgrau la modernaj fabeloj, multaj specoj de lumbrikoj povas morti se oni trancas ilin mezkorpe. Kelkfoje la kapo supervivas kaj disvolvas novan voston."
+    },
+    "040": {
+      "title": "Rigelo",
+      "description": "Rigelo estas flamanta blua stelo, kaj la plej brila en la konstelacio Oriono. Gi estas proksime al la ekvatoro, pro tio gi estas videbla de preskau ie ajn sur la Tero."
+    },
+    "041": {
+      "title": "Usono",
+      "description": "Ci tie en Usono. Kvankam gi povus sajne esti pli granda ol Plutono, Plutono havas malantauan vizagon, kion signifas Plutono havas pli surfacan areon!"
+    },
+    "042": {
+      "title": "Tero",
+      "description": "La Tero estas nia nura hejmo. Dum ni logas sur gi, ni devas altgrade konsideri tion, car ankorau estas plej grave zorgi gin. Kiam gi malaperu, estos nenio alie por iri ni."
+    },
+    "043": {
+      "title": "Denebo",
+      "description": "Denebo estas la plej brila stelo de la konstelacio Cigno. Denebo estas 1,500 da lum-jaroj for, pro tio gi estas la plej malproksima el la 25 plej brilantaj steloj. Se vi logus en Marso, Denebo estus super la Norda Poluso, ne la Polusa stelo."
+    },
+    "044": {
+      "title": "V V Cefea A",
+      "description": "Dum kelka tempo V V Cefea A estis la plej granda konata stelo. Tamen, nuntempe estas VY Granda Hundo. La kialo: novaj steloj estas sinsekve malkovritaj!"
+    },
+    "045": {
+      "title": "R Dorado",
+      "description": "R Dorado estas relative granda kaj trovigas nur je 200 lum-jaroj for de la Tero, tiel gia sajna grandeco estas la dua plej granda en la cielo! gi estas 0.05 arksekundoj large. La Suno estas la plej larga, ce 1,920 arksekondoj -40,000 oble pli larga."
+    },
+    "046": {
+      "title": "Aldebarano",
+      "description": "Oni ne debas konfuzi Aldebaranon kun Alderaano, kiu estas planedo en la filmo Star Wars (Stelmilitoj). Alderaano sajnas esti tre simile al la Tero lau grandeco, taglongeco kaj akvokovrilo. Tamen, Aldebarano estas 5,000-foje pli granda en diametro, turnigas ciu 643 Tertagoj, kaj tute ne havas akvon."
+    },
+    "047": {
+      "title": "Polukso",
+      "description": "En la Greka mitologio, la gemelo de Polukso estas Kastoro. Ili ankau estas steloj en la konstelacio Gemeloj, Tamen, verdire, Polukso estas ununura stelo, dum Kastoro estas tri binaraj steloj, entute, do, ses steloj. Kastoro estas aro da sesnaskitoj!"
+    },
+    "048": {
+      "title": "Arkturo",
+      "description": "Arkturo estas la tria plej brila stelo en la nokta cielo, post Siriuso kaj Kanopo. Gi estas la plej brila stelo en la konstelacio Bovisto. Trovu gin lau la direkto montranta de la Magranda Ursino."
+    },
+    "049": {
+      "title": "La Suno",
+      "description": "Ankau konata kiel Sol (latine), la Suno estas tio, kio donas al la Tero la energion, per kiu gi eblas havi vivon. La diametro de la Suno estas preskau 100-oble pli granda ol tiu de la Tero! 20,000-oble pli da la sunenergio necesa de homaro frapas la Teron."
+    },
+    "050": {
+      "title": "Alfa Centauro A",
+      "description": "Alfa Centauro A estas la plej granda stelo de la Alfa Centaura stelsistemo (kiu konsistas el tri apartaj steloj), gi estas la plej proksima stelsistemo al ni. Ankau gi estas la kvara plej brila stelo en la nokta cielo."
+    },
+    "051": {
+      "title": "Alfa Centauro B",
+      "description": "Alfa Centauro B estas la dua plej granda stelo de la stela sistemo Alfa Centauro. Sia diametro estas proksimume unu miliono da kilometroj, tiel gi estas iomete pli malgranda ol la Suno. Alfa Centuro A kaj B estas tre proksimaj, pro tio ili aspektas kiel ununura stelo al ni Teranoj."
+    },
+    "052": {
+      "title": "Proksima Centauro",
+      "description": "Proksima Centauro estas konata kiel la plej proksima stelo al Tero krom la Suno. Sia nomo venas el la vorto \"proksimeco\". Proksima Centauro estas malgranda ruga stelo. Bedaurinde, gi estas tre malhela, vi bezonas teleskopon por vidi gin."
+    },
+    "053": {
+      "title": "Siriuso A",
+      "description": "Siriuso A estas la plej brila stelo en la nokta cielo. gi estas preskau dufoje plej brila ol Kanopo, la dua plej brila stelo. Tamen, Siriuso ne estas granda stelo. Gi nur sajnas esti brila car estas apud ni, ce nur ok lum-jaroj for."
+    },
+    "054": {
+      "title": "Siriuso B",
+      "description": "Siriuso B estas blanka nana stelo. gi estas apenau pli granda ol la Tero! Kutime estas tre malfacile vidi gin, car estas kasita de la Siriusa A helega lumo. Siriuso B estas konata kiel \"La Hundido\"."
+    },
+    "055": {
+      "title": "Vego",
+      "description": "Vego trovigas en la konstelacio Liro. Kaj apartenas al la Somera Triangulo, farita el Vego, Altairo, kaj Denebo. Vego sinturnadas tiel rapide ke gi sveligas. Tamen, ni vidas gin polusen, pro tio gi sajnas ronda."
+    },
+    "056": {
+      "title": "Reguluso",
+      "description": "Reguluso turnadas tiel rapide, ke gi sveligas, same kiel Altairo kaj Vego. Se  Reguluso povus turnadi 16% plej rapide, gi sirigus dise! Reguluso ankau estas la plej brila stelo en la konstelacio Leono. Estas ankau Reguluso B kaj C."
+    },
+    "057": {
+      "title": "Spiko",
+      "description": "Spiko estas la dekkvina plej brila stelo en la nokta cielo kaj trovigas en la konstelacio Virgo. gi estas nuntempe binara stelsistemo. La du steloj estas tre proksimaj, kaj ili cirkauiras ciu kvar tagoj."
+    },
+    "058": {
+      "title": "Alnitako",
+      "description": "Alnitako lumigas la Fluorezkan Nebulozon. Alnitako ankau estas la plej orienta stelo el la tri steloj kiuj formas la Orionan zonon. La aliaj du estas Alnilamo kaj Miltako, ciuj tri ja aperas tre brilaj super la planedo Tero."
+    },
+    "059": {
+      "title": "Gakruco",
+      "description": "Gakruco troveblas en la konstelacio Kruco. Kruco estas \"crux\" en la Latina, gi estas konata kiel la Suda Kruco. Gakruco estas binara stelo. La plej granda el tiuj du estas ruga giganto."
+    },
+    "060": {
+      "title": "Urano",
+      "description": "Multaj angloparolantoj emas pensi, ke  \"Uranus\" sonas kiel \"your anus\". Tamen, en tia lingvo estas multaj aliaj, kaj pli bonaj, prononcoj. Urano ankau povas esti prononcata en la algla kiel \"Yer-uh-niss\" au \"Seh-venth-pla-net\" t. e. \"La-sepa-planedo\". En Esperanto pli bone ni ne sercu fisignifon, tamen gi estas!"
+    },
+    "061": {
+      "title": "Neptuno",
+      "description": "Nuntempe Neptuno estas la plej malproksima planedo de la Sunsistemo el la Suno. gi necesas 164.8 Terjaroj por cirkauiri la sunon. Certe vi neniam vidos al Neptuno kompletigi almenau unu orbiton dum via tuta vivo, krom se homa vivo plilargigas."
+    },
+    "062": {
+      "title": "Lupo 359",
+      "description": "Lupo 359 estas malgranda ruga nanstelo, gi nanigis el normala stelo. Estas la sesa plej proksima stelo al la Tero, post Suno, Proksima Centauro, Alfa Centauro A kaj B, kaj la Barnarda stelo. Tamen, sia brileco estas malhela +13.5."
+    },
+    "063": {
+      "title": "Gliese 229A",
+      "description": "Gliese 229A estas ruga nanstelo. Gi estas iomete malpli granda ol la Suno. La ruga nanstelo ankau estas konata kiel GJ 229 au GI 229. Gi estas parto de binara stelsistemo, la dua stelo estas Gliese 229B."
+    },
+    "064": {
+      "title": "Gliese 229B",
+      "description": "Gliese 229B estas bruna nanstelo. Cirkauiras pli grandan nanstelon, kiu estas Gliese 229A. Gliese 229B povus esti klasifikita kiel planedo, tamen gi estas multe pli densa ol Jupitero, kion faras sian amason tro granda por esti konsiderata kiel planedo."
+    },
+    "065": {
+      "title": "Jupitero",
+      "description": "Jupitero estas la plej granda planedo de la Sunsistemo. Tamen, ne estas la plej granda planedo konata. Tiu estas TReS-4. Jupitero estas gigantgasa, do, gi estas nur gaspilko. Vi tute ne povas surterigi en gi. Ankau, Jupitero havas 64 lunojn, inkluzive la kvar  Galilejaj satelitoj."
+    },
+    "066": {
+      "title": "Saturno",
+      "description": "Saturno havas la plej larga, plej videblaj ringoj de la Sunsistemo. Galilejo estis la unua persono kiu vidis ci tiujn ringojn, unue kredis, ke ili estis \"oreloj\". cu vi povas imagi al Saturno sen ringoj? Gi ja nur sajnus esti flava pilko."
+    },
+    "067": {
+      "title": "TReS-4",
+      "description": "TReS-4 estas la plej granda planedo iam malkovrita. Trovigas je 1,400 lum-jaroj for. Neniu teleskopo atingas nuntempe al TReS-4. Al ni eblas scii pri gia ekzisto, car TReS-4 iras antau la stelo kiun gi cirkauiras, tiel, la helo de la stelo malheligas gin iomete."
+    },
+    "068": {
+      "title": "Venuso",
+      "description": "Iam oni kredis, ke Venuso kaj Tero estis frataj planedoj. Tio ja estas tute nevere! La temperatura surfaco de Venuso ciam estas super 450° C, car gia atmosfero, kiu estas plejparte karbon-dioksido, kaptas la Sunan varmon!"
+    },
+    "069": {
+      "title": "Marso",
+      "description": "Marso estas konata kiel la Ruga Planedo. gi rugas pro rusto. Multaj personoj kredas, ke akvo kaj vivo iam estis sur Marso. Tamen, ec se tio estus vero, la vivo ne estus kiel  malgrandaj verdaj viroj."
+    },
+    "070": {
+      "title": "Merkuro",
+      "description": "Merkuro estas la plej proksima planedo al la Suno. Gi ne havas atmosferon. Dum tago, temperaturoj atingas 400° C, sed nokte, la temperaturoj falas gis -180° C. Unu Merkura jaro havas 88 Terajn tagojn."
+    },
+    "071": {
+      "title": "Ganimedo",
+      "description": "Ganimedo estas la plej granda luno en la Sunsistemo. Gi cirkauiras Jupiteron kaj estis malkovrita de Galilejo, pro tio gi estas Galilejana satelito. Ankau, Ganimedo ne devas esti konfuzita kun (1036)-Ganimedo, kiu estas asteroido, kies nomo similas al tiu de la Jupitera satelito! Ec en kelkaj lingvoj gi ne havas vokalan finajon!"
+    },
+    "072": {
+      "title": "Kalistoo",
+      "description": "Kalistoo estas la plej fora el la Galilejanaj satelitoj. Gi orbitas ekster ciuj aliaj Galilejanaj satelitoj kaj estas trafita de multaj meteoroj. Ciuj tiaj impaktoj kreas grandan kvanton da krateroj."
+    },
+    "073": {
+      "title": "Ioo",
+      "description": "Ioo havas multajn vulkanojn – la plimulto de la Sunsistemo! Ioaj gejseroj jetas glacian sulfurdioksidon gis 500 kilometroj for en la kosmon! La pejzago de Ioo sangas sinsekve. En unu jaro, gi povas aspekti tute malsame!"
+    },
+    "074": {
+      "title": "Europo",
+      "description": "Europo estas la plej eta el la Galilejanaj satelitoj. Estas kovrita de glacio. Havas strangajn striojn, kiuj kovras la lunan surfacon. Iuj kredas, akvo povus ekzisti sub la glacitavolo, eble ec enhavante vivon."
+    },
+    "075": {
+      "title": "Titano",
+      "description": "Titano estas la nura Saturna granda satelito. Gi havas treegan dikan atmosferon, kiu  konsistigas plejparte el nitrogeno. La Tera atmosfero ankau estas plejparte el nitrogeno. Titano havas marojn de likva metano. (cirkau je -180° C.) Estas ec kontinento nomita \"Xanadu\" (pr. Sanadu, Sandu, mongole)."
+    },
+    "076": {
+      "title": "La Luno",
+      "description": "La Luno, ankau nomata (latine) \"Luna\", estas la plej brila objekto en la nokta cielo. Gi cirkauas la Teron ciu 27 tagoj, 7 horoj kaj 43 minutoj. Al mi placas imagi, ke mi vidas kelkajn lunojn disigitajn trans la nokta cielo. Tiu ja estus mirige!"
+    },
+    "077": {
+      "title": "Tritono",
+      "description": "Tritono estas la plej granda Neptuna satelito. gi estas ankau la objekto plej malvarma en la Sunsistemo, havas -240° C. Tritono ankau estas tre ventoza loko, kun ventoj trairante je sonrapideco!"
+    },
+    "078": {
+      "title": "Plutono",
+      "description": "Plutono jam ne estas planedo. Kial homoj havas sentojn pri gi? Gi ne havas sentojn. Ec se gi havus, kiel gi povus prizorgi kion homoj pensas en la Tero? Pri alia aspekto, Nun la oficiala nomo de Plutono estas \"134340 Plutono\", car oni konsideras gin nanoplanedon."
+    },
+    "079": {
+      "title": "Karono",
+      "description": "Karono estas la ununura granda luno de Plutono. Ili estas tre similaj en grandeco. Kaj estas tre proksimaj, iuj konsideras Plutonon kaj Karonon kiel duobla planedo. Cu vi scias? La sama flanko de Karono ciame alfrontas Plutonon, kaj la sama flanko de Plutono ciame alfrontas Karonon"
+    },
+    "080": {
+      "title": "Eriso",
+      "description": "Eriso estas la plej granda nano planedo. Estas plej granda ol Plutono, kiu ankau estas nano planedo. Eriso ankau estas tre for de la Suno. Eriso havas lunon, kiu estas Disnomio. Kie estas Disnomio? Estas rekte sub la alineo je la fino de la nuna fina propozicio."
+    },
+    "081": {
+      "title": "Disnomio",
+      "description": "Disnomio estas la nura luno de Eriso kiu estis malkovrita je la 10a de septembro 2005, sabate. Cu vi scias, ke \"Disnomio\" ankau temas pri lernmalsano, kiu estas simile al  disleksio?"
+    },
+    "082": {
+      "title": "Sedno",
+      "description": "Sedno havas tre elipsan orbiton. Estas treege for, gi necesas 10,000 Terajn jarojn por  kompletigi unu orbiton."
+    },
+    "083": {
+      "title": "Kvavaro",
+      "description": "Kvavaro estas tre densa car gia kerno estas tre granda. Kvavaro eble iam estis multe pli longa ol larga. Eble gi estis frapita de objekto tiel granda, kiel Plutono; kiu povus detiri la eksterajn tavolojn."
+    },
+    "084": {
+      "title": "Cereso",
+      "description": "Cereso ne estas sufice bona loko por ke homo logu tie. Cereso ankau estas la plej granda asteroido, kaj gi komencis la debaton pri la difino \"planedo\". Dum iom da tempo, Cereso estis konsiderata planedo, tamen gi jam ne estas."
+    },
+    "085": {
+      "title": "Polusa Stelo",
+      "description": "La Polusa Stelo estas konata kiel la Norda Stelo. Estas tre apud la norda poluso, tiel, se vi volas scii kien estas nordo, nur provu trovi la Polusan Stelon. Lokalizu la du steloj sur la malproksima flanko de la Malgranda Ursino, kaj iru supren"
+    },
+    "086": {
+      "title": "Antareso",
+      "description": "Antareso estas ruga supergianta stelo, tre apud la ekliptiko, tiel, gi ofte estas kasita de Luno. Ankau, Antareso pezas kvarilionoj da tunoj kaj perdas pezon pro sia suna (stela) vento, sed ci tiu metodo estas malrapida. La rapida vojo estas eksplodo, kiun gi faros poste."
+    },
+    "087": {
+      "title": "Altairo",
+      "description": "Altairo estas unu el la tri steloj en la Somera Triangulo. La Somera Triangulo estas akuta triangulo, kion signifas, ciuj anguloj estas malpli ol 90°! La aliaj du estas Vego kaj Denebo. Kiel multaj aliaj steloj, Altairo rotacias tre rapide, sinsvelante ce la mezo!"
+    },
+    "088": {
+      "title": "La Superba",
+      "description": "La Superba (el la itala la superbia, de la sep mortpekoj: Orgojlo au Fiero) estas unu el la plej rugaj steloj en la nokta cielo. Gi estas tre ruga pro la granda kvanto da karbono-13 kiun gi kreas kiam fuzias heliumon. (Normala karbono estas karbono-12.) La Superbo estas nur 2500° C, pro kio gi estas unu el la plej malvarmaj steloj."
+    },
+    "089": {
+      "title": "Pistol-Stelo",
+      "description": "La Pistol-Stelo estas unu el la plej lumaj steloj gis nun konataj. En dudek sekundoj, gi radiadas tiel multe da energio kiel la Suno en unu jaro. La Interstela polvo malhelpas al ni vidi gin. Estas nomata Pistol-Stelo, ne pro gia lumeco, sed pro tio, ke gi estas en la Pistol-Nebulozo."
+    },
+    "090": {
+      "title": "S Dorado",
+      "description": "S Dorado estas hipergiganta, kaj ankau unu el la plej brilaj steloj en la Granda Magelana Nubo. Pli  pri la Granda Magelana Nubo, zomi for 8.5 ordoj de grandeco."
+    },
+    "091": {
+      "title": "Enifo",
+      "description": "Enifo estas oranga supergiganta, Sia nomo signifas \"nazo\" Arablingve, car en la konstelacio Pegazo, estas en la pozicio de la buso."
+    },
+    "092": {
+      "title": "Mu Cefea",
+      "description": "Mu Cefea estas tre ruga. Gi estas foje nomita kiel \"Herschel-a Grenata Stelo\" car estas grenate ruga. Alia alternativa nomo estas Erakizo, se al vi ne placas la unuaj du nomoj."
+    },
+    "093": {
+      "title": "KY Cigna",
+      "description": "KY Cygna estas 300,000-oble pli luma ol la Suno, kaj la Suno estas ege luma, cu ne? La Suno estas tiel luma, ke vi ne devas rigardi gin! Tamen, estas akcepteble rigardi KY Cyngan car estas 300-milionoble pli fore."
+    },
+    "094": {
+      "title": "V354 Cefea",
+      "description": "V354 Cefea estas ruga supergiganta, kaj estas tre grandega. Se estus lokita en la Sunsistemo, gi etendigus preter la orbito de Jupitero. La numero 354 en ci tiu stela nomo temas pri la jaro kiam Augusteno el Hippo naskigis."
+    },
+    "095": {
+      "title": "WOH G64",
+      "description": "Mi scias... vi pensas, \"WOH... (Ho, ve) gi estas granda stelo!\" Bone, sajne vi pravas, car aktuale estas la dua plej granda konata stelo. WOH G64 troveblas en la Granda Magelana Nubo. Kie estas nubo cirkauigante la stelon, kiu etendigas je la duono de lum-jaro."
+    },
+    "096": {
+      "title": "VY Grand-Hunda",
+      "description": "VY Grand-Hunda estas la plej granda konata stelo. Gi estas tiel granda, ke se gi estus lokigita en la Sunsistemo, estendigus preter la orbito de Saturno! Gi necesus 1,200 jarojn por orbiti gin."
+    },
+    "097": {
+      "title": "Betelgezo",
+      "description": "La Betelgeza ago estas kalkulebla je kelkmilionoj da jaroj. Betelgezo estas tiel malnova, ke oni atendas gi eksplodu en la sekvontaj dek mil jaroj. Pli malgrandaj steloj vivas dum duilionoj da jaroj. Betelgezo estas tiel granda, ke gi maljunigas rapide."
+    },
+    "098": {
+      "title": "Albireo",
+      "description": "Albireo konsistigas entute el tri steloj. Jen, ni guste montras la plej grandan. Du el la steloj estas proksimaj unu la alian, kaj aperas kiel flava punkto. La tria estas blua kaj pli fore. La blua kaj la flavaj steloj estas tre malproksimaj do, ili necesas 100,000 jarojn por kompletigi unu orbiton."
+    },
+    "099": {
+      "title": "Kapteyn-a Stelo",
+      "description": "La Kapteyn-a Stelo estas nur dek tri lum-jaroj for. Tamen, sia grandeco estas +9, tiel vi bezonas binoklon por vid gin. Proksimume antau 10,000 jaroj, la Kapteyn-a Stelo estis je nur sep lum-jaroj for!"
+    },
     "100": {
       "title": "Luyten-a Stelo",
       "description": "La Luyten-a Stelo estas ruga nana stelo je 12 lum-jaroj for de ni. Gi estas tiel proksima al Prociono, ke ci tiu povus esti 10-foje pli hela kompare al la Luyten-a Stelo, ol Siriuso, sajnas al ni."
@@ -701,8 +981,8 @@
       "description": "Ci tiu ajo pezas 15,000 kilogramojn! Tio estas multe! Gi ankau alterigis sur la Luno. Sia alterigo inspiris la arkajejan ludon \"Lunan Alterigilon\", kiu ne estas facila. Kiam mi ludas, min ciam restas sen brulajon!"
     },
     "275": {
-      "title": "Futbala Kampo",
-      "description": "La kampoj de la Usona piedpilko estas 120 jardoj (109.7 m) longa, se inkluzivas la ekstremajn areojn. Ciuokaze, futbalkampoj estas ofte uzitaj por mezuri grandajn objektojn. Ekzemple, \"La Titanic estis tri futbalkampoj longe!\" Futbalkampoj ankau estas uzitaj por ludi futbalon."
+      "title": "Futbalkampo",
+      "description": "La de FIFA rekomendataj dimensioj de futbalkampo por internaciaj matĉoj estas 105 metroj longa kaj 68 metroj larĝa. La moderna futbalo aperis en Anglio en 1863, kiam oni akceptis la regulojn de la ludo. Nun en Anglio estas registritaj pli ol 40 mil futbalkluboj — pli ol en iu ajn alia lando de la mondo."
     },
     "276": {
       "title": "Gateway-a Arko",
@@ -912,285 +1192,17 @@
       "title": "Granda barilrifo",
       "description": "La Granda barilrifo estas la plej granda korala rifo de la mondo.  La rifo ciujare pligrandigas kaj kreskas elinterne kaj ekstere, car polipoj, kreantaj gin, sencese multigas kreante novajn unuopulojn."
     },
-    "030": {
-      "title": "LCD-bildero",
-      "description": "Kvankam la grando de bilderoj diferencas ege, 300 mikrometroj cirkau estas la mezkvanto. Bilderoj enhavas tri subbilderojn, kiuj estas ruga, verda kaj blua. Bilderoj estas sufice mojosa, sed volumeneroj estas ec pli bona. Ili estas tridimensiaj bilderoj."
-    },
-    "031": {
-      "title": "Palmo Jebel Ali",
-      "description": "Palmo Jebel Ali estas la plej granda hom-farita insulo (ne regardante insulojn kiel Flevopolder, kie regiono de Nederlando estis drenita pro akiri plian teron). Palmo Jebel Ali ankorau ne estas finigita. Gi estas ero de la Palm-insuloj kaj estu dononta logejon al 250,000 personoj!"
-    },
-    "032": {
-      "title": "Neutrino",
-      "description": "La neutrinoj pasas ciam tra la ordinara materio kiel vi kaj mi! Fakte, ili faras tion nun! La neutrinoj ne havas sargon, do, ili nur estas afektitaj de graveco kaj de malforta forto. Tamen, ili estas tiel malgrandetaj, ke apenau estas afektitaj."
-    },
-    "033": {
-      "title": "Altenergia Neutrino",
-      "description": "La altenergiaj neutrinoj estas pli grandaj. Por pli pri neutrinoj, iru je neutrino, kiu montras la ordinaran grandecon. Proksimume 15,000-oble pli malgranda!"
-    },
-    "034": {
-      "title": "Alumeto",
-      "description": "La alumeto estas tre utila malgranda ilo. Kiam oni frapas gin kontrau io ajn, gi povas prilumi flamon. Ci tio faras gin tre dangera! Tia estas la kialo, car oni neniam devas ludi kun alumetoj. Komprenite?"
-    },
-    "035": {
-      "title": "Kokinovo",
-      "description": "La kokinovo estas kie kokidoj kutime elkovigas. Multaj homoj placas mangi kokinovojn. Krom la koloro, ne eblas trovi diferencon inter blankaj kaj brunaj kokinovoj."
-    },
-    "036": {
-      "title": "Koturnovo",
-      "description": "Multaj personoj kredas, ke la koturnovoj estas pli bonaj ol kokinovoj. La koturnovo  estas plej malgranda kaj pli stranga ol la kokinovo, sed tio ne sindetenas al iuj ami ilin!"
-    },
-    "037": {
-      "title": "Kvadrata Colo",
-      "description": "Se vi ne estas alkutimita je la metra mezursistemo, jen kvadrata colo. Bedaurinde por vi, preskau cio alie estas en la metra sistemo. Ankau 2.5 centimetroj estas la longeco de unu flanko, ne la areo. (Kiu devas esti en cm^2.)"
-    },
-    "038": {
-      "title": "Kafograjno",
-      "description": "La kafograjno proksimume mezuras unu centimetron longe – kaj estas frukto simila al fazeolo. gi estas bruna kaj havas striojn, kelkfoje, kiam vi fiksrigardas gin, vi certe forgesas tion: gia diametro estas 10^-29oble de la konata universo."
-    },
-    "039": {
-      "title": "Ordinara Lumbriko",
-      "description": "Cu ne placas al vi la krablmovaj kaj sveltaj lumbrikoj? Malgrau la modernaj fabeloj, multaj specoj de lumbrikoj povas morti se oni trancas ilin mezkorpe. Kelkfoje la kapo supervivas kaj disvolvas novan voston."
-    },
-    "040": {
-      "title": "Rigelo",
-      "description": "Rigelo estas flamanta blua stelo, kaj la plej brila en la konstelacio Oriono. Gi estas proksime al la ekvatoro, pro tio gi estas videbla de preskau ie ajn sur la Tero."
-    },
-    "041": {
-      "title": "Usono",
-      "description": "Ci tie en Usono. Kvankam gi povus sajne esti pli granda ol Plutono, Plutono havas malantauan vizagon, kion signifas Plutono havas pli surfacan areon!"
-    },
-    "042": {
-      "title": "Tero",
-      "description": "La Tero estas nia nura hejmo. Dum ni logas sur gi, ni devas altgrade konsideri tion, car ankorau estas plej grave zorgi gin. Kiam gi malaperu, estos nenio alie por iri ni."
-    },
-    "043": {
-      "title": "Denebo",
-      "description": "Denebo estas la plej brila stelo de la konstelacio Cigno. Denebo estas 1,500 da lum-jaroj for, pro tio gi estas la plej malproksima el la 25 plej brilantaj steloj. Se vi logus en Marso, Denebo estus super la Norda Poluso, ne la Polusa stelo."
-    },
-    "044": {
-      "title": "V V Cefea A",
-      "description": "Dum kelka tempo V V Cefea A estis la plej granda konata stelo. Tamen, nuntempe estas VY Granda Hundo. La kialo: novaj steloj estas sinsekve malkovritaj!"
-    },
-    "045": {
-      "title": "R Dorado",
-      "description": "R Dorado estas relative granda kaj trovigas nur je 200 lum-jaroj for de la Tero, tiel gia sajna grandeco estas la dua plej granda en la cielo! gi estas 0.05 arksekundoj large. La Suno estas la plej larga, ce 1,920 arksekondoj -40,000 oble pli larga."
-    },
-    "046": {
-      "title": "Aldebarano",
-      "description": "Oni ne debas konfuzi Aldebaranon kun Alderaano, kiu estas planedo en la filmo Star Wars (Stelmilitoj). Alderaano sajnas esti tre simile al la Tero lau grandeco, taglongeco kaj akvokovrilo. Tamen, Aldebarano estas 5,000-foje pli granda en diametro, turnigas ciu 643 Tertagoj, kaj tute ne havas akvon."
-    },
-    "047": {
-      "title": "Polukso",
-      "description": "En la Greka mitologio, la gemelo de Polukso estas Kastoro. Ili ankau estas steloj en la konstelacio Gemeloj, Tamen, verdire, Polukso estas ununura stelo, dum Kastoro estas tri binaraj steloj, entute, do, ses steloj. Kastoro estas aro da sesnaskitoj!"
-    },
-    "048": {
-      "title": "Arkturo",
-      "description": "Arkturo estas la tria plej brila stelo en la nokta cielo, post Siriuso kaj Kanopo. Gi estas la plej brila stelo en la konstelacio Bovisto. Trovu gin lau la direkto montranta de la Magranda Ursino."
-    },
-    "049": {
-      "title": "La Suno",
-      "description": "Ankau konata kiel Sol (latine), la Suno estas tio, kio donas al la Tero la energion, per kiu gi eblas havi vivon. La diametro de la Suno estas preskau 100-oble pli granda ol tiu de la Tero! 20,000-oble pli da la sunenergio necesa de homaro frapas la Teron."
-    },
-    "050": {
-      "title": "Alfa Centauro A",
-      "description": "Alfa Centauro A estas la plej granda stelo de la Alfa Centaura stelsistemo (kiu konsistas el tri apartaj steloj), gi estas la plej proksima stelsistemo al ni. Ankau gi estas la kvara plej brila stelo en la nokta cielo."
-    },
-    "051": {
-      "title": "Alfa Centauro B",
-      "description": "Alfa Centauro B estas la dua plej granda stelo de la stela sistemo Alfa Centauro. Sia diametro estas proksimume unu miliono da kilometroj, tiel gi estas iomete pli malgranda ol la Suno. Alfa Centuro A kaj B estas tre proksimaj, pro tio ili aspektas kiel ununura stelo al ni Teranoj."
-    },
-    "052": {
-      "title": "Proksima Centauro",
-      "description": "Proksima Centauro estas konata kiel la plej proksima stelo al Tero krom la Suno. Sia nomo venas el la vorto \"proksimeco\". Proksima Centauro estas malgranda ruga stelo. Bedaurinde, gi estas tre malhela, vi bezonas teleskopon por vidi gin."
-    },
-    "053": {
-      "title": "Siriuso A",
-      "description": "Siriuso A estas la plej brila stelo en la nokta cielo. gi estas preskau dufoje plej brila ol Kanopo, la dua plej brila stelo. Tamen, Siriuso ne estas granda stelo. Gi nur sajnas esti brila car estas apud ni, ce nur ok lum-jaroj for."
-    },
-    "054": {
-      "title": "Siriuso B",
-      "description": "Siriuso B estas blanka nana stelo. gi estas apenau pli granda ol la Tero! Kutime estas tre malfacile vidi gin, car estas kasita de la Siriusa A helega lumo. Siriuso B estas konata kiel \"La Hundido\"."
-    },
-    "055": {
-      "title": "Vego",
-      "description": "Vego trovigas en la konstelacio Liro. Kaj apartenas al la Somera Triangulo, farita el Vego, Altairo, kaj Denebo. Vego sinturnadas tiel rapide ke gi sveligas. Tamen, ni vidas gin polusen, pro tio gi sajnas ronda."
-    },
-    "056": {
-      "title": "Reguluso",
-      "description": "Reguluso turnadas tiel rapide, ke gi sveligas, same kiel Altairo kaj Vego. Se  Reguluso povus turnadi 16% plej rapide, gi sirigus dise! Reguluso ankau estas la plej brila stelo en la konstelacio Leono. Estas ankau Reguluso B kaj C."
-    },
-    "057": {
-      "title": "Spiko",
-      "description": "Spiko estas la dekkvina plej brila stelo en la nokta cielo kaj trovigas en la konstelacio Virgo. gi estas nuntempe binara stelsistemo. La du steloj estas tre proksimaj, kaj ili cirkauiras ciu kvar tagoj."
-    },
-    "058": {
-      "title": "Alnitako",
-      "description": "Alnitako lumigas la Fluorezkan Nebulozon. Alnitako ankau estas la plej orienta stelo el la tri steloj kiuj formas la Orionan zonon. La aliaj du estas Alnilamo kaj Miltako, ciuj tri ja aperas tre brilaj super la planedo Tero."
-    },
-    "059": {
-      "title": "Gakruco",
-      "description": "Gakruco troveblas en la konstelacio Kruco. Kruco estas \"crux\" en la Latina, gi estas konata kiel la Suda Kruco. Gakruco estas binara stelo. La plej granda el tiuj du estas ruga giganto."
-    },
-    "060": {
-      "title": "Urano",
-      "description": "Multaj angloparolantoj emas pensi, ke  \"Uranus\" sonas kiel \"your anus\". Tamen, en tia lingvo estas multaj aliaj, kaj pli bonaj, prononcoj. Urano ankau povas esti prononcata en la algla kiel \"Yer-uh-niss\" au \"Seh-venth-pla-net\" t. e. \"La-sepa-planedo\". En Esperanto pli bone ni ne sercu fisignifon, tamen gi estas!"
-    },
-    "061": {
-      "title": "Neptuno",
-      "description": "Nuntempe Neptuno estas la plej malproksima planedo de la Sunsistemo el la Suno. gi necesas 164.8 Terjaroj por cirkauiri la sunon. Certe vi neniam vidos al Neptuno kompletigi almenau unu orbiton dum via tuta vivo, krom se homa vivo plilargigas."
-    },
-    "062": {
-      "title": "Lupo 359",
-      "description": "Lupo 359 estas malgranda ruga nanstelo, gi nanigis el normala stelo. Estas la sesa plej proksima stelo al la Tero, post Suno, Proksima Centauro, Alfa Centauro A kaj B, kaj la Barnarda stelo. Tamen, sia brileco estas malhela +13.5."
-    },
-    "063": {
-      "title": "Gliese 229A",
-      "description": "Gliese 229A estas ruga nanstelo. Gi estas iomete malpli granda ol la Suno. La ruga nanstelo ankau estas konata kiel GJ 229 au GI 229. Gi estas parto de binara stelsistemo, la dua stelo estas Gliese 229B."
-    },
-    "064": {
-      "title": "Gliese 229B",
-      "description": "Gliese 229B estas bruna nanstelo. Cirkauiras pli grandan nanstelon, kiu estas Gliese 229A. Gliese 229B povus esti klasifikita kiel planedo, tamen gi estas multe pli densa ol Jupitero, kion faras sian amason tro granda por esti konsiderata kiel planedo."
-    },
-    "065": {
-      "title": "Jupitero",
-      "description": "Jupitero estas la plej granda planedo de la Sunsistemo. Tamen, ne estas la plej granda planedo konata. Tiu estas TReS-4. Jupitero estas gigantgasa, do, gi estas nur gaspilko. Vi tute ne povas surterigi en gi. Ankau, Jupitero havas 64 lunojn, inkluzive la kvar  Galilejaj satelitoj."
-    },
-    "066": {
-      "title": "Saturno",
-      "description": "Saturno havas la plej larga, plej videblaj ringoj de la Sunsistemo. Galilejo estis la unua persono kiu vidis ci tiujn ringojn, unue kredis, ke ili estis \"oreloj\". cu vi povas imagi al Saturno sen ringoj? Gi ja nur sajnus esti flava pilko."
-    },
-    "067": {
-      "title": "TReS-4",
-      "description": "TReS-4 estas la plej granda planedo iam malkovrita. Trovigas je 1,400 lum-jaroj for. Neniu teleskopo atingas nuntempe al TReS-4. Al ni eblas scii pri gia ekzisto, car TReS-4 iras antau la stelo kiun gi cirkauiras, tiel, la helo de la stelo malheligas gin iomete."
-    },
-    "068": {
-      "title": "Venuso",
-      "description": "Iam oni kredis, ke Venuso kaj Tero estis frataj planedoj. Tio ja estas tute nevere! La temperatura surfaco de Venuso ciam estas super 450° C, car gia atmosfero, kiu estas plejparte karbon-dioksido, kaptas la Sunan varmon!"
-    },
-    "069": {
-      "title": "Marso",
-      "description": "Marso estas konata kiel la Ruga Planedo. gi rugas pro rusto. Multaj personoj kredas, ke akvo kaj vivo iam estis sur Marso. Tamen, ec se tio estus vero, la vivo ne estus kiel  malgrandaj verdaj viroj."
-    },
-    "070": {
-      "title": "Merkuro",
-      "description": "Merkuro estas la plej proksima planedo al la Suno. Gi ne havas atmosferon. Dum tago, temperaturoj atingas 400° C, sed nokte, la temperaturoj falas gis -180° C. Unu Merkura jaro havas 88 Terajn tagojn."
-    },
-    "071": {
-      "title": "Ganimedo",
-      "description": "Ganimedo estas la plej granda luno en la Sunsistemo. Gi cirkauiras Jupiteron kaj estis malkovrita de Galilejo, pro tio gi estas Galilejana satelito. Ankau, Ganimedo ne devas esti konfuzita kun (1036)-Ganimedo, kiu estas asteroido, kies nomo similas al tiu de la Jupitera satelito! Ec en kelkaj lingvoj gi ne havas vokalan finajon!"
-    },
-    "072": {
-      "title": "Kalistoo",
-      "description": "Kalistoo estas la plej fora el la Galilejanaj satelitoj. Gi orbitas ekster ciuj aliaj Galilejanaj satelitoj kaj estas trafita de multaj meteoroj. Ciuj tiaj impaktoj kreas grandan kvanton da krateroj."
-    },
-    "073": {
-      "title": "Ioo",
-      "description": "Ioo havas multajn vulkanojn – la plimulto de la Sunsistemo! Ioaj gejseroj jetas glacian sulfurdioksidon gis 500 kilometroj for en la kosmon! La pejzago de Ioo sangas sinsekve. En unu jaro, gi povas aspekti tute malsame!"
-    },
-    "074": {
-      "title": "Europo",
-      "description": "Europo estas la plej eta el la Galilejanaj satelitoj. Estas kovrita de glacio. Havas strangajn striojn, kiuj kovras la lunan surfacon. Iuj kredas, akvo povus ekzisti sub la glacitavolo, eble ec enhavante vivon."
-    },
-    "075": {
-      "title": "Titano",
-      "description": "Titano estas la nura Saturna granda satelito. Gi havas treegan dikan atmosferon, kiu  konsistigas plejparte el nitrogeno. La Tera atmosfero ankau estas plejparte el nitrogeno. Titano havas marojn de likva metano. (cirkau je -180° C.) Estas ec kontinento nomita \"Xanadu\" (pr. Sanadu, Sandu, mongole)."
-    },
-    "076": {
-      "title": "La Luno",
-      "description": "La Luno, ankau nomata (latine) \"Luna\", estas la plej brila objekto en la nokta cielo. Gi cirkauas la Teron ciu 27 tagoj, 7 horoj kaj 43 minutoj. Al mi placas imagi, ke mi vidas kelkajn lunojn disigitajn trans la nokta cielo. Tiu ja estus mirige!"
-    },
-    "077": {
-      "title": "Tritono",
-      "description": "Tritono estas la plej granda Neptuna satelito. gi estas ankau la objekto plej malvarma en la Sunsistemo, havas -240° C. Tritono ankau estas tre ventoza loko, kun ventoj trairante je sonrapideco!"
-    },
-    "078": {
-      "title": "Plutono",
-      "description": "Plutono jam ne estas planedo. Kial homoj havas sentojn pri gi? Gi ne havas sentojn. Ec se gi havus, kiel gi povus prizorgi kion homoj pensas en la Tero? Pri alia aspekto, Nun la oficiala nomo de Plutono estas \"134340 Plutono\", car oni konsideras gin nanoplanedon."
-    },
-    "079": {
-      "title": "Karono",
-      "description": "Karono estas la ununura granda luno de Plutono. Ili estas tre similaj en grandeco. Kaj estas tre proksimaj, iuj konsideras Plutonon kaj Karonon kiel duobla planedo. Cu vi scias? La sama flanko de Karono ciame alfrontas Plutonon, kaj la sama flanko de Plutono ciame alfrontas Karonon"
-    },
-    "080": {
-      "title": "Eriso",
-      "description": "Eriso estas la plej granda nano planedo. Estas plej granda ol Plutono, kiu ankau estas nano planedo. Eriso ankau estas tre for de la Suno. Eriso havas lunon, kiu estas Disnomio. Kie estas Disnomio? Estas rekte sub la alineo je la fino de la nuna fina propozicio."
-    },
-    "081": {
-      "title": "Disnomio",
-      "description": "Disnomio estas la nura luno de Eriso kiu estis malkovrita je la 10a de septembro 2005, sabate. Cu vi scias, ke \"Disnomio\" ankau temas pri lernmalsano, kiu estas simile al  disleksio?"
-    },
-    "082": {
-      "title": "Sedno",
-      "description": "Sedno havas tre elipsan orbiton. Estas treege for, gi necesas 10,000 Terajn jarojn por  kompletigi unu orbiton."
-    },
-    "083": {
-      "title": "Kvavaro",
-      "description": "Kvavaro estas tre densa car gia kerno estas tre granda. Kvavaro eble iam estis multe pli longa ol larga. Eble gi estis frapita de objekto tiel granda, kiel Plutono; kiu povus detiri la eksterajn tavolojn."
-    },
-    "084": {
-      "title": "Cereso",
-      "description": "Cereso ne estas sufice bona loko por ke homo logu tie. Cereso ankau estas la plej granda asteroido, kaj gi komencis la debaton pri la difino \"planedo\". Dum iom da tempo, Cereso estis konsiderata planedo, tamen gi jam ne estas."
-    },
-    "085": {
-      "title": "Polusa Stelo",
-      "description": "La Polusa Stelo estas konata kiel la Norda Stelo. Estas tre apud la norda poluso, tiel, se vi volas scii kien estas nordo, nur provu trovi la Polusan Stelon. Lokalizu la du steloj sur la malproksima flanko de la Malgranda Ursino, kaj iru supren"
-    },
-    "086": {
-      "title": "Antareso",
-      "description": "Antareso estas ruga supergianta stelo, tre apud la ekliptiko, tiel, gi ofte estas kasita de Luno. Ankau, Antareso pezas kvarilionoj da tunoj kaj perdas pezon pro sia suna (stela) vento, sed ci tiu metodo estas malrapida. La rapida vojo estas eksplodo, kiun gi faros poste."
-    },
-    "087": {
-      "title": "Altairo",
-      "description": "Altairo estas unu el la tri steloj en la Somera Triangulo. La Somera Triangulo estas akuta triangulo, kion signifas, ciuj anguloj estas malpli ol 90°! La aliaj du estas Vego kaj Denebo. Kiel multaj aliaj steloj, Altairo rotacias tre rapide, sinsvelante ce la mezo!"
-    },
-    "088": {
-      "title": "La Superba",
-      "description": "La Superba (el la itala la superbia, de la sep mortpekoj: Orgojlo au Fiero) estas unu el la plej rugaj steloj en la nokta cielo. Gi estas tre ruga pro la granda kvanto da karbono-13 kiun gi kreas kiam fuzias heliumon. (Normala karbono estas karbono-12.) La Superbo estas nur 2500° C, pro kio gi estas unu el la plej malvarmaj steloj."
-    },
-    "089": {
-      "title": "Pistol-Stelo",
-      "description": "La Pistol-Stelo estas unu el la plej lumaj steloj gis nun konataj. En dudek sekundoj, gi radiadas tiel multe da energio kiel la Suno en unu jaro. La Interstela polvo malhelpas al ni vidi gin. Estas nomata Pistol-Stelo, ne pro gia lumeco, sed pro tio, ke gi estas en la Pistol-Nebulozo."
-    },
-    "090": {
-      "title": "S Dorado",
-      "description": "S Dorado estas hipergiganta, kaj ankau unu el la plej brilaj steloj en la Granda Magelana Nubo. Pli  pri la Granda Magelana Nubo, zomi for 8.5 ordoj de grandeco."
-    },
-    "091": {
-      "title": "Enifo",
-      "description": "Enifo estas oranga supergiganta, Sia nomo signifas \"nazo\" Arablingve, car en la konstelacio Pegazo, estas en la pozicio de la buso."
-    },
-    "092": {
-      "title": "Mu Cefea",
-      "description": "Mu Cefea estas tre ruga. Gi estas foje nomita kiel \"Herschel-a Grenata Stelo\" car estas grenate ruga. Alia alternativa nomo estas Erakizo, se al vi ne placas la unuaj du nomoj."
-    },
-    "093": {
-      "title": "KY Cigna",
-      "description": "KY Cygna estas 300,000-oble pli luma ol la Suno, kaj la Suno estas ege luma, cu ne? La Suno estas tiel luma, ke vi ne devas rigardi gin! Tamen, estas akcepteble rigardi KY Cyngan car estas 300-milionoble pli fore."
-    },
-    "094": {
-      "title": "V354 Cefea",
-      "description": "V354 Cefea estas ruga supergiganta, kaj estas tre grandega. Se estus lokita en la Sunsistemo, gi etendigus preter la orbito de Jupitero. La numero 354 en ci tiu stela nomo temas pri la jaro kiam Augusteno el Hippo naskigis."
-    },
-    "095": {
-      "title": "WOH G64",
-      "description": "Mi scias... vi pensas, \"WOH... (Ho, ve) gi estas granda stelo!\" Bone, sajne vi pravas, car aktuale estas la dua plej granda konata stelo. WOH G64 troveblas en la Granda Magelana Nubo. Kie estas nubo cirkauigante la stelon, kiu etendigas je la duono de lum-jaro."
-    },
-    "096": {
-      "title": "VY Grand-Hunda",
-      "description": "VY Grand-Hunda estas la plej granda konata stelo. Gi estas tiel granda, ke se gi estus lokigita en la Sunsistemo, estendigus preter la orbito de Saturno! Gi necesus 1,200 jarojn por orbiti gin."
-    },
-    "097": {
-      "title": "Betelgezo",
-      "description": "La Betelgeza ago estas kalkulebla je kelkmilionoj da jaroj. Betelgezo estas tiel malnova, ke oni atendas gi eksplodu en la sekvontaj dek mil jaroj. Pli malgrandaj steloj vivas dum duilionoj da jaroj. Betelgezo estas tiel granda, ke gi maljunigas rapide."
-    },
-    "098": {
-      "title": "Albireo",
-      "description": "Albireo konsistigas entute el tri steloj. Jen, ni guste montras la plej grandan. Du el la steloj estas proksimaj unu la alian, kaj aperas kiel flava punkto. La tria estas blua kaj pli fore. La blua kaj la flavaj steloj estas tre malproksimaj do, ili necesas 100,000 jarojn por kompletigi unu orbiton."
-    },
-    "099": {
-      "title": "Kapteyn-a Stelo",
-      "description": "La Kapteyn-a Stelo estas nur dek tri lum-jaroj for. Tamen, sia grandeco estas +9, tiel vi bezonas binoklon por vid gin. Proksimume antau 10,000 jaroj, la Kapteyn-a Stelo estis je nur sep lum-jaroj for!"
+    "328": {
+      "title": "SARS-CoV-2",
+      "description": "SARS-CoV-2 estas la koronaviruso, kiu kaŭzis la pandemion de COVID-19 kaj ŝanĝis la vivon de homoj en 2020–2022. Malgraŭ sia mikroskopa grandeco (80–120 nanometroj), ĉi tiu viruso havis grandegan influon sur medicino, scienco, ekonomio kaj ĉiutaga vivo tra la tuta mondo."
+    },
+    "329": {
+      "title": "Bajkalo",
+      "description": "Bajkalo estas la plej profunda lago sur la Tero kaj la plej granda rezervujo de likva dolĉa akvo inter lagoj. Ĝia aĝo estas taksata je ĉirkaŭ 25–30 milionoj da jaroj, kio faras ĝin unu el la plej malnovaj lagoj sur la planedo. En ĝi vivas pli ol 1 000 bestospecioj, kiuj ne troviĝas aliloke en la mondo, kaj ili konsistigas ĉirkaŭ 60% de ĝia faŭno."
+    },
+    "330": {
+      "title": "Tardigrado",
+      "description": "Tardigradoj estas etegaj okkruraj estaĵoj, famiĝintaj pro sia nekredebla vivkapablo. Malgraŭ sia eta grandeco, ili kapablas travivi sekiĝon, ekstreman malvarmon, varmegon, altan premon kaj eĉ la kondiĉojn de la malferma kosmo, enirante staton de preskaŭ plena ĉeso de la vivo."
     }
   }
 }

@@ -3,6 +3,7 @@ import legacy from '@vitejs/plugin-legacy'
 import { resolve } from 'path'
 
 export default defineConfig({
+  base: './',
   root: 'src',
   publicDir: resolve(__dirname, 'public'),
   plugins: [

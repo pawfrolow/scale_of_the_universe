@@ -1,0 +1,128 @@
+{
+  "ru": {
+    "275": {
+      "title": "Футбольное поле",
+      "description": "Рекомендуемые FIFA размеры футбольного поля для международных матчей составляют 105 метров в длину и 68 метров в ширину. Современный футбол возник в Англии в 1863 году, когда были приняты правила игры в футбол. Сейчас в Англии зарегистрировано более 40 тыс. футбольных клубов — больше, чем в любой другой стране мира."
+    }
+  },
+  "en": {
+    "275": {
+      "title": "Football Pitch",
+      "description": "The FIFA-recommended dimensions of a football pitch for international matches are 105 metres in length and 68 metres in width. Modern football originated in England in 1863, when the rules of the game were established. Today, more than 40,000 football clubs are registered in England — more than in any other country in the world."
+    }
+  },
+  "en-GB": {
+    "275": {
+      "title": "Football Pitch",
+      "description": "The FIFA-recommended dimensions of a football pitch for international matches are 105 metres in length and 68 metres in width. Modern football originated in England in 1863, when the rules of the game were established. Today, more than 40,000 football clubs are registered in England — more than in any other country in the world."
+    }
+  },
+  "he": {
+    "275": {
+      "title": "מגרש כדורגל",
+      "description": "המידות המומלצות של פיפ\"א למגרש כדורגל במשחקים בינלאומיים הן 105 מטרים לאורך ו-68 מטרים לרוחב. הכדורגל המודרני נולד באנגליה בשנת 1863, כאשר נקבעו חוקי המשחק. כיום רשומים באנגליה יותר מ-40 אלף מועדוני כדורגל — יותר מבכל מדינה אחרת בעולם."
+    }
+  },
+  "nl": {
+    "275": {
+      "title": "Voetbalveld",
+      "description": "De door de FIFA aanbevolen afmetingen van een voetbalveld voor internationale wedstrijden zijn 105 meter lang en 68 meter breed. Het moderne voetbal ontstond in Engeland in 1863, toen de spelregels werden vastgelegd. Tegenwoordig zijn er in Engeland meer dan 40.000 voetbalclubs geregistreerd — meer dan in enig ander land ter wereld."
+    }
+  },
+  "zh-CH": {
+    "275": {
+      "title": "足球场",
+      "description": "FIFA 推荐的国际比赛足球场尺寸为长 105 米、宽 68 米。现代足球起源于英格兰，1863 年足球比赛规则正式确立。如今，英格兰注册的足球俱乐部超过 4 万家，比世界上任何其他国家都要多。"
+    }
+  },
+  "es": {
+    "275": {
+      "title": "Campo de fútbol",
+      "description": "Las dimensiones recomendadas por la FIFA para un campo de fútbol en partidos internacionales son 105 metros de largo y 68 metros de ancho. El fútbol moderno surgió en Inglaterra en 1863, cuando se adoptaron las reglas del juego. Actualmente, en Inglaterra hay más de 40 mil clubes de fútbol registrados, más que en cualquier otro país del mundo."
+    }
+  },
+  "sv": {
+    "275": {
+      "title": "Fotbollsplan",
+      "description": "FIFAs rekommenderade mått för en fotbollsplan vid internationella matcher är 105 meter lång och 68 meter bred. Den moderna fotbollen uppstod i England år 1863, när spelets regler fastställdes. I dag finns det mer än 40 000 registrerade fotbollsklubbar i England — fler än i något annat land i världen."
+    }
+  },
+  "pl": {
+    "275": {
+      "title": "Boisko piłkarskie",
+      "description": "Zalecane przez FIFA wymiary boiska piłkarskiego do meczów międzynarodowych wynoszą 105 metrów długości i 68 metrów szerokości. Współczesna piłka nożna narodziła się w Anglii w 1863 roku, gdy przyjęto zasady gry. Obecnie w Anglii zarejestrowanych jest ponad 40 tysięcy klubów piłkarskich — więcej niż w jakimkolwiek innym kraju na świecie."
+    }
+  },
+  "pt": {
+    "275": {
+      "title": "Campo de futebol",
+      "description": "As dimensões recomendadas pela FIFA para um campo de futebol em partidas internacionais são 105 metros de comprimento e 68 metros de largura. O futebol moderno surgiu na Inglaterra em 1863, quando as regras do jogo foram adotadas. Hoje, há mais de 40 mil clubes de futebol registrados na Inglaterra — mais do que em qualquer outro país do mundo."
+    }
+  },
+  "de": {
+    "275": {
+      "title": "Fußballfeld",
+      "description": "Die von der FIFA empfohlenen Maße eines Fußballfeldes für internationale Spiele betragen 105 Meter in der Länge und 68 Meter in der Breite. Der moderne Fußball entstand 1863 in England, als die Spielregeln festgelegt wurden. Heute sind in England mehr als 40.000 Fußballvereine registriert — mehr als in jedem anderen Land der Welt."
+    }
+  },
+  "zh-Hant": {
+    "275": {
+      "title": "足球場",
+      "description": "FIFA 建議國際比賽使用的足球場尺寸為長 105 公尺、寬 68 公尺。現代足球起源於英格蘭，1863 年正式制定了足球比賽規則。如今，英格蘭註冊的足球俱樂部超過 4 萬家，比世界上任何其他國家都更多。"
+    }
+  },
+  "fr": {
+    "275": {
+      "title": "Terrain de football",
+      "description": "Les dimensions recommandées par la FIFA pour un terrain de football lors des matchs internationaux sont de 105 mètres de long sur 68 mètres de large. Le football moderne est né en Angleterre en 1863, lorsque les règles du jeu ont été adoptées. Aujourd’hui, plus de 40 000 clubs de football sont enregistrés en Angleterre — plus que dans n’importe quel autre pays du monde."
+    }
+  },
+  "eo": {
+    "275": {
+      "title": "Futbalkampo",
+      "description": "La de FIFA rekomendataj dimensioj de futbalkampo por internaciaj matĉoj estas 105 metroj longa kaj 68 metroj larĝa. La moderna futbalo aperis en Anglio en 1863, kiam oni akceptis la regulojn de la ludo. Nun en Anglio estas registritaj pli ol 40 mil futbalkluboj — pli ol en iu ajn alia lando de la mondo."
+    }
+  },
+  "ro": {
+    "275": {
+      "title": "Teren de fotbal",
+      "description": "Dimensiunile recomandate de FIFA pentru un teren de fotbal destinat meciurilor internaționale sunt de 105 metri lungime și 68 metri lățime. Fotbalul modern a apărut în Anglia în 1863, când au fost adoptate regulile jocului. Astăzi, în Anglia sunt înregistrate peste 40 de mii de cluburi de fotbal — mai multe decât în orice altă țară din lume."
+    }
+  },
+  "ua": {
+    "275": {
+      "title": "Футбольне поле",
+      "description": "Рекомендовані FIFA розміри футбольного поля для міжнародних матчів становлять 105 метрів у довжину і 68 метрів у ширину. Сучасний футбол виник в Англії у 1863 році, коли були ухвалені правила гри у футбол. Зараз в Англії зареєстровано понад 40 тис. футбольних клубів — більше, ніж у будь-якій іншій країні світу."
+    }
+  },
+  "ar": {
+    "275": {
+      "title": "ملعب كرة القدم",
+      "description": "الأبعاد التي توصي بها الفيفا لملعب كرة القدم في المباريات الدولية هي 105 أمتار طولًا و68 مترًا عرضًا. نشأت كرة القدم الحديثة في إنجلترا عام 1863، عندما تم اعتماد قواعد اللعبة. ويوجد اليوم في إنجلترا أكثر من 40 ألف نادٍ لكرة القدم مسجل — أكثر من أي دولة أخرى في العالم."
+    }
+  },
+  "ko": {
+    "275": {
+      "title": "축구장",
+      "description": "국제 경기를 위한 FIFA 권장 축구장 크기는 길이 105미터, 너비 68미터입니다. 현대 축구는 1863년 잉글랜드에서 경기 규칙이 제정되면서 시작되었습니다. 오늘날 잉글랜드에는 4만 개가 넘는 축구 클럽이 등록되어 있으며, 이는 세계 어느 나라보다도 많은 수입니다."
+    }
+  },
+  "et": {
+    "275": {
+      "title": "Jalgpalliväljak",
+      "description": "FIFA soovitatud jalgpalliväljaku mõõtmed rahvusvahelisteks mängudeks on 105 meetrit pikk ja 68 meetrit lai. Kaasaegne jalgpall sai alguse Inglismaal 1863. aastal, kui kehtestati mängureeglid. Praegu on Inglismaal registreeritud üle 40 tuhande jalgpalliklubi — rohkem kui üheski teises maailma riigis."
+    }
+  },
+  "fa": {
+    "275": {
+      "title": "زمین فوتبال",
+      "description": "ابعاد پیشنهادی فیفا برای زمین فوتبال در مسابقات بین‌المللی ۱۰۵ متر طول و ۶۸ متر عرض است. فوتبال مدرن در سال ۱۸۶۳ در انگلستان شکل گرفت، زمانی که قوانین این بازی پذیرفته شد. امروزه در انگلستان بیش از ۴۰ هزار باشگاه فوتبال ثبت شده است — بیشتر از هر کشور دیگری در جهان."
+    }
+  },
+  "tr": {
+    "275": {
+      "title": "Futbol sahası",
+      "description": "FIFA’nın uluslararası maçlar için önerdiği futbol sahası ölçüleri 105 metre uzunluk ve 68 metre genişliktir. Modern futbol, oyunun kurallarının kabul edildiği 1863 yılında İngiltere’de ortaya çıktı. Günümüzde İngiltere’de 40 binden fazla futbol kulübü kayıtlıdır — bu sayı dünyadaki diğer tüm ülkelerden daha fazladır."
+    }
+  }
+}

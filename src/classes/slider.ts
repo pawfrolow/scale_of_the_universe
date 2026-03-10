@@ -187,10 +187,8 @@ export class Slider {
   }
 
   setTarget(x: number) {
-    if (x < 0) {
-      x = 0;
-    }
-    this.targetX = x;
+    const { minX, maxX } = this.getBounds();
+    this.targetX = Math.max(minX, Math.min(maxX, x));
   }
 
   setTargetPercent(percent: number) {
@@ -236,13 +234,13 @@ export class Slider {
     if (this.destroyed) return;
     if (!this.handleGfx || this.handleGfx.destroyed) return;
 
-    if (percent < 0) {
-      percent = 0;
-    }
+    percent = Math.max(0, Math.min(1, percent));
+
+    const { minX, maxX } = this.getBounds();
 
     this.currentPercent = percent;
-    this.currentX = this.scaleWidthPixels * percent + this.margin;
-    this.targetX = this.scaleWidthPixels * percent + this.margin;
+    this.currentX = minX + (maxX - minX) * percent;
+    this.targetX = this.currentX;
     this.handleGfx.position.x = this.currentX;
 
     this.onChange(0, percent);
@@ -250,10 +248,7 @@ export class Slider {
 
   moveTarget(x: number) {
     if (this.destroyed) return;
-
-    if (this.targetX + x > 0) {
-      this.targetX += x;
-    }
+    this.setTarget(this.targetX + x);
   }
 
   handleAnim() {
@@ -266,47 +261,39 @@ export class Slider {
       if (!this.handleGfx || this.handleGfx.destroyed) return;
       if (this.tweenable.isPlaying) return;
 
+      const { minX, maxX } = this.getBounds();
+
       let dX = (this.targetX - this.currentX) * deltaTime;
-      const widthPixels = this.w * WIDTH_PERCENT;
-      const handleWidthPixels = this.w * HANDLE_WIDTH_PERCENT;
-      const scaleWidthPixels = widthPixels - handleWidthPixels;
-
-      const margin = (this.w - widthPixels) / 2;
-      const leftBound = margin + handleWidthPixels / 2;
-      const rightBound = margin + widthPixels - handleWidthPixels / 2 + 3;
-
       let dXScaled = dX * EASING_CONSTANT;
+
       const dir = dXScaled === 0 ? 0 : dXScaled / Math.abs(dXScaled);
 
       if (Math.abs(dXScaled) > MAX_SCROLL_SPEED) {
         dXScaled = MAX_SCROLL_SPEED * dir;
       }
 
-      const newX = this.currentX + dXScaled;
-      const adjX = newX + handleWidthPixels / 2;
-
-      const insideLeft = leftBound < adjX;
-      const insideRight = adjX < rightBound;
-
-      const changed = Math.abs(dXScaled) > 0.005;
-      let newPosition = this.currentX;
-
-      if (insideLeft && insideRight && changed) {
-        newPosition = newX;
-        this.currentX = newX;
+      if (Math.abs(this.targetX - this.currentX) <= 0.01) {
+        this.currentX = this.targetX;
+        this.handleGfx.position.x = this.currentX;
+        this.currentPercent = Math.max(0, Math.min(1, (this.currentX - minX) / (maxX - minX)));
+        this.animStopped();
+        return;
       }
 
-      if (adjX > rightBound + 5) {
-        newPosition = rightBound - 1 - handleWidthPixels / 2;
-        this.currentX = rightBound - 1 - handleWidthPixels / 2;
+      let newPosition = this.currentX + dXScaled;
+      newPosition = Math.max(minX, Math.min(maxX, newPosition));
+
+      if (newPosition === minX || newPosition === maxX) {
+        this.targetX = newPosition;
       }
 
+      this.currentX = newPosition;
       this.handleGfx.position.x = newPosition;
 
-      const percent = (newPosition - margin) / scaleWidthPixels;
+      const percent = Math.max(0, Math.min(1, (newPosition - minX) / (maxX - minX)));
       this.currentPercent = percent;
 
-      if (changed) {
+      if (Math.abs(dXScaled) > 0.005) {
         this.onChange(newPosition, percent);
       } else {
         this.animStopped();
@@ -351,5 +338,23 @@ export class Slider {
 
     this.container.removeChildren();
     this.container.destroy({ children: true });
+  }
+  private getBounds() {
+    const widthPixels = this.w * WIDTH_PERCENT;
+    const handleWidthPixels = this.w * HANDLE_WIDTH_PERCENT;
+    const scaleWidthPixels = widthPixels - handleWidthPixels;
+    const margin = (this.w - widthPixels) / 2;
+
+    const minX = margin;
+    const maxX = margin + widthPixels - handleWidthPixels;
+
+    return {
+      minX,
+      maxX,
+      widthPixels,
+      handleWidthPixels,
+      scaleWidthPixels,
+      margin,
+    };
   }
 }

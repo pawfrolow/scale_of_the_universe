@@ -6,8 +6,15 @@ import { Universe } from '../classes/universe'
 import { ScaleText } from '../classes/scaleText'
 import { map } from '../helpers/map'
 import { throttle } from '../helpers/throttle'
-import { getTextureIds } from '../helpers/getTextureIds'
+import { getTextureIdsFromManifest } from '../helpers/getTextureIdsFromManifest'
 import { loadItemTextures } from '../helpers/loadItemTextures'
+import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config'
+import { TItemsManifest } from '../interfaces'
+import { loadLocaleOverride } from '../helpers/loadLocaleOverride'
+import { resolveItemsManifest } from '../helpers/resolveItemsManifest'
+import { resolveTextureSources } from '../helpers/resolveTextureSources'
+import { useTranslation } from 'react-i18next'
+import { validateItemsOverride } from '../helpers/validateItemsOverride'
 
 PIXI.settings.ROUND_PIXELS = true
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR
@@ -29,6 +36,7 @@ export const useUniverse = ({
 }: IUseUniverseParams) => {
   const appRef = useRef<PIXI.Application | null>(null)
   const initializedRef = useRef(false)
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     if (!isStarted) {
@@ -59,11 +67,20 @@ export const useUniverse = ({
       onAssetsLoading()
       onAssetsProgress?.(0)
 
-      const textureIds = getTextureIds()
+      const locale = i18n.language
+
+      const baseManifest = await (await fetch('data/items.json')).json() as TItemsManifest
+      const override = await loadLocaleOverride(locale)
+      const resolvedManifest = resolveItemsManifest(baseManifest, override)
+      const textureIds = getTextureIdsFromManifest(resolvedManifest)
+      const textureSourceMap = resolveTextureSources(resolvedManifest, locale, override)
+
+      validateItemsOverride(baseManifest, override)
 
       const allHighTextures = await loadItemTextures(
         textureIds,
-        'img/textures/items.json',
+        resolvedManifest,
+        textureSourceMap,
         (loaded, total) => {
           onAssetsProgress?.(Math.round((loaded / total) * 100))
         }
@@ -121,12 +138,28 @@ export const useUniverse = ({
           return
         }
 
-        const scaleExp = percent * 62 - 35
+        const extraRightBoost = 0.2
+        const boost = Math.pow(percent, 4) * extraRightBoost
+
+        const scaleExp =
+          MIN_SCALE_EXP +
+          percent * (MAX_SCALE_EXP - MIN_SCALE_EXP) +
+          boost
 
         scaleText.setColor(scaleExp)
 
-        if (scaleExp <= 5 && buttons) {
-          buttons.style.filter = ''
+        if (scaleExp <= 5) {
+          if (spaceBg) {
+            spaceBg.style.opacity = '0'
+          }
+
+          if (earthBg) {
+            earthBg.style.opacity = '1'
+          }
+
+          if (buttons) {
+            buttons.style.filter = ''
+          }
         }
 
         if (scaleExp > 5 && scaleExp < 7) {
@@ -170,7 +203,7 @@ export const useUniverse = ({
       containerRef.current.innerHTML = '';
       containerRef.current.appendChild(app.view as HTMLCanvasElement)
 
-      await universe.createItems(allHighTextures)
+      await universe.createItems(allHighTextures, resolvedManifest)
 
       if (isDestroyed || !app || !slider || !containerRef.current) {
         return
@@ -229,6 +262,22 @@ export const useUniverse = ({
           baseTexture: false,
         })
         appRef.current = null
+      }
+
+      const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null
+      const earthBg = document.getElementById('earthBgImage') as HTMLElement | null
+      const buttons = document.querySelector('.buttons') as HTMLElement | null
+
+      if (spaceBg) {
+        spaceBg.style.opacity = '0'
+      }
+
+      if (earthBg) {
+        earthBg.style.opacity = '1'
+      }
+
+      if (buttons) {
+        buttons.style.filter = ''
       }
 
       initializedRef.current = false

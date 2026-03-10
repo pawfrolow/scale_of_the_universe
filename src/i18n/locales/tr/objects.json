@@ -1,5 +1,285 @@
 {
   "items": {
+    "030": {
+      "title": "LCD Pikseli",
+      "description": "Piksellerin boyutlarý birbirinden farklý olsa da, ortalama 300 mikro-metre kadardýr. Her bir piksel, kýrmýzý, yeþil ve mavi renkli üç alt pikselden oluþur. Pikseller oldukça güzeldir, ama vokseller daha iyidir. Onlar üç boyutlu piksellerdir."
+    },
+    "031": {
+      "title": "Palm Jebel Ali",
+      "description": "Palm Jebel Ali en büyük insan-yapýmý adadýr (Holldanda’da suyu alýnarak daha fazla toprak kazanýlan Flevopolder gibi adalar dýþýnda). Palm Jebel Ali henüz tamamlanmadý. Palm Adalarý’nýn bir parçasý olan burada 250,000 kiþinin yaþamasý planlanýyor!"
+    },
+    "032": {
+      "title": "Nötrino",
+      "description": "Nötrinolar siz ve benim gibi normal maddenin içinden sürekli geçerler! Aslýnda, bunu þimdi de yapýyorlar. Nötrinolar yüksüzdür, bu nedenle sadece kütleçekimi ve zayýf kuvvetten etkilenirler. Bununla birlikte, oldukça küçük olduklarýndan, bu etkileþim oldukça zayýftýr."
+    },
+    "033": {
+      "title": "Yüksek-Enerjili Nötrino",
+      "description": "Yüksek enerjili nötrinolar daha fazladýr. Daha fazla bilgi için, nötrinoya gidin, ki o ortalama boyutunu göstermektedir. Bundan 15,000 kat daha küçüktür!"
+    },
+    "034": {
+      "title": "Kibrit çöpü",
+      "description": "Kibrit çöpü küçük, kullanýþlý bir alettir. Bir þeye sürtüldüðünde alev alabilir. Bu onu çok tehlikeli yapmaktadýr! Bu yüzden onunla oynamak hiç iyi fikir deðildir. Anlaþtýk mý?"
+    },
+    "035": {
+      "title": "Tavuk Yumurtasý",
+      "description": "Tavuk yumurtasý genellikle civcivlerin doðduðu yerdir. Pek çok kiþi tavuk yumurtasý yemekten hoþlanýr. Görünüþleri dýþýnda, kahverengi tavuk yumurtasý ile beyaz tavuk yumurtasý arasýnda bir fark yoktur."
+    },
+    "036": {
+      "title": "Býldýrcýn Yumurtasý",
+      "description": "Pek çok kiþi býldýrcýn yumurtasýnýn tavuk yumurtasýndan daha iyi olduðunu düþünür. Býldýrcýn yumurtasý tavuk yumurtasýndan daha küçüktür ve daha az bulunur, fakat bu insanlarýn onu sevmesini engellemez!"
+    },
+    "037": {
+      "title": "Ýnç Kare",
+      "description": "Metrik sisteme alýþýk deðilseniz, iþte size inç kare. Ne yazýk ki, diðer her þey metrik sistemde yer alýr. Ayrýca, 2.5 santimetre bir kenar uzunluðudur, alan deðildir. (Yoksa cm2 olmalýydý.)"
+    },
+    "038": {
+      "title": "Kahve Çekirdeði",
+      "description": "Kahve çekirdeði yaklaþýk bir santimetre büyüklüktedir – aslýnda o çekirdeði andýran bir meyvedir. Kahverengi ve çizgilidir, ve bazen gözünüzü ona diktiðinizde, çapýnýn bilinen evrenin 10-29’da biri olduðunu unutursunuz."
+    },
+    "039": {
+      "title": "Yaygýn Toprak Solucaný",
+      "description": "Kýpýr kýpýr, çamurlu toprak solucanlarýný sevmiyorsunuz deðil mi? Þehir efsanelerine raðmen, çoðu solucaný ikiye böldüðünüzde ölecektir. Bazen, baþ tarafý hayatta kalýr ve yeni bir kuyruk oluþur."
+    },
+    "040": {
+      "title": "Rigel",
+      "description": "Rigel parlak mavi bir yýldýzdýr ve Avcý takýmyýldýzýnýn en parlak yýldýzýdýr. Ekvator civarýnda bulunur, böylece Dünya üzerinde neredeyse her yerden görülür. Ayrýca onu “wriggle” olarak deðil, “rye-jel” þeklinde söylemelisiniz."
+    },
+    "041": {
+      "title": "Amerika Birleþik Devletleri",
+      "description": "Ýþte A.B.D. Pluto’dan büyük gibi görünse de, Pluto’nun arka yüzü de vardýr, yani Pluto daha geniþ bir yüze alanýna sahiptir!"
+    },
+    "042": {
+      "title": "Dünya",
+      "description": "Dünya bizim biricik evimiz. Üzerinde yaþarken, büyük olduðunu düþünebiliriz, ancak yine de ona iyi bakmalýyýz. O yok olduðunda, gidecek baþka yerimiz kalmayacak."
+    },
+    "043": {
+      "title": "Deneb",
+      "description": "Deneb Kuðu takýmyýldýzýndaki en parlak yýldýzdýr. 1,500 ýþýk-yýlý uzaklýktadýr, bu da onu en parlak 25 yýldýz arasýndaki en uzak yýldýz yapmaktadýr. Eðer Mars’ta yaþýyor olsaydýnýz, Kuzey Kutbu üzerindeki yýldýz Deneb olacaktý – Polaris deðil."
+    },
+    "044": {
+      "title": "V V Cephei A",
+      "description": "Kýsa bir süre V V Cephei A en büyük yýldýz olarak biliniyordu. Ancak þimdi bu unvan VY Canis Majoris’e ait. Çünkü sürekli yeni yýldýzlar keþfediliyor!"
+    },
+    "045": {
+      "title": "R Doradus",
+      "description": "R Doradus görece büyük ve Dünya’dan sadece 200 ýþýk-yýlý uzaklýkta, bu nedenle görünür büyüklüðüyle gökyüzündeki ikinci en büyük yýldýzdýr! 0.05 yay-saniyesi geniþliðindedir. En geniþ Güneþ’tir, 1,920 yay saniyesi ile – 40,000 kat daha geniþtir."
+    },
+    "046": {
+      "title": "Aldebaran",
+      "description": "Aldebaran, Yýldýz Savaþlarý’ndaki Alderaan ile karýþtýrýlmamalýdýr. Alderaan boyutu, gün uzunluðu ve su örtüsüyle Dünya’ya çok benzemektedir.\t Bununla birlikte, Aldebaran çap olarak 5,000 kat daha büyüktür, 643 günde bir etrafýnda döner ve hiç suya sahip deðildir."
+    },
+    "047": {
+      "title": "Pollux",
+      "description": "Yunan mitolojisine Pollux’un ikizi Castor’dur. Ayrýca ikisi de Gemini, “ikizler” anlamýna gelen takýmyýldýzýnda bulunuyor. Bununla birlikte, gerçekte, Pollux tek yýldýz olup, Castor toplamda altý yýldýzýn olduðu üç adet çift yýldýz içerisindedir. Castor altý yýldýzlýk bir settir!"
+    },
+    "048": {
+      "title": "Arcturus",
+      "description": "Arcturus, Sirius ve Canopus’tan sonra geceleyin gökyüzündeki en parlak üçüncü yýldýzdýr. Çoban takýmyýldýzýndaki en parlak yýldýzdýr. Yanýndaki Büyük Kepçe’yi kullanarak onu bulun."
+    },
+    "049": {
+      "title": "Güneþ",
+      "description": "Güneþ, Yeryüzü’nde yaþamýn var olabilmesi için gerekli enerjiyi saðlar. Güneþ’in çapý Dünya’dan 100 kat daha büyüktür! Ýnsanlýðýn kullandýðý enerjinin 20,000 katý güneþten yere ulaþmaktadýr."
+    },
+    "050": {
+      "title": "Alpha Centauri A",
+      "description": "Alpha Centauri A, bize en yakýn yýldýz sistemi olan (üç yýldýzdan oluþan) Alpha Centauri yýldýz sisteminin en büyük yýldýzýdýr. Ayrýca geceleyin gökyüzündeki en parlak dördüncü yýldýzdýr."
+    },
+    "051": {
+      "title": "Alpha Centauri B",
+      "description": "Alpha Centauri B Alpha Centauri yýldýz sistemindeki en büyük ikinci yýldýzdýr. Çapý yaklaþýk bir milyon kilometredir, dolayýsýyla güneþten biraz daha küçüktür. Alpha Centauri A & B birbirlerine çok yakýn olduklarý için biz dünyalýlara tek bir yýldýz gibi görünürler."
+    },
+    "052": {
+      "title": "Proxima Centauri",
+      "description": "Proxima Centauri, Dünya’ya Güneþ’ten sonra en yakýn yýldýz olarak bilinir. Ýsmi “yakýnlýk”tan gelmektedir. Proxima Centauri küçük kýrmýzý bir yýldýzdýr. Ne yazýk ki, çok sönük bir yýldýzdýr ve onu görebilmek için bir teleskopa ihtiyacýnýz vardýr"
+    },
+    "053": {
+      "title": "Sirius A",
+      "description": "Sirius geceleyin gökyüzündeki en parlak yýldýzdýr. En parlak ikinci yýldýz olan Canopus’tan iki kat daha parlaktýr. Bununla birlikte, Sirius büyük bir yýldýz deðildir. Parlak görünmesinin nedeni yakýn olmasýdýr, sadece elli ýþýk-yýlý uzaklýktadýr."
+    },
+    "054": {
+      "title": "Sirius B",
+      "description": "Sirius B bir beyaz cücedir. Dünya’dan biraz büyüktür. Sirius A’nýn parlaklýðý nedeniyle görülmesi oldukça zordur. Sirius B “yavru köpek” olarak bilinir."
+    },
+    "055": {
+      "title": "Vega",
+      "description": "Vega, Çalgý takýmyýldýzýnda yer alýr. Ayrýca Vega, Deneb ve Altair’den oluþan Yaz Üçgeni’nin bir parçasýdýr. Vega merkezi etrafýnda çok hýzlý döner. Yine de, onu üst tarafýndan gördüðümüz için, dairesel görünmektedir."
+    },
+    "056": {
+      "title": "Regulus",
+      "description": "Regulus’ta Altair ve Vega gibi kendi çevresinde oldukça hýzlý dönmektedir. Eðer % 16 oranýnda daha hýzlý dönseydi, parçalanýrdý! Regulus ayný zamanda Aslan takýmyýldýzýndaki en parlak yýldýzdýr. Ayrýca Regulus B ve C yýldýzlarý da vardýr."
+    },
+    "057": {
+      "title": "Spica",
+      "description": "Spica geceleyin gökyüzündeki en parlak on beþinci yýldýzdýr ve Baþak takýmyýldýzýnda bulunur. Gerçekte bir çift yýldýz sistemidir. Ýki yýldýz birbirlerine çok yakýndýr ve yörüngelerini dört günde tamamlarlar."
+    },
+    "058": {
+      "title": "Alnitak",
+      "description": "Alnitak Alev Bulutsusu’nu aydýnlatmaktadýr. Alnitak, Avcý’nýn kemerini oluþturan üç yýldýzdan en doðuda olanýdýr. Diðer ikisi Alnilam ve Mintaka’dýr, ve üçü de Dünya’dan çok parlak görünürler."
+    },
+    "059": {
+      "title": "Gacrux",
+      "description": "Gacrux Güneyhaçý takýmyýldýzýnda bulunur. Crux, Latince’de “haç” anlamýnda olup, Güneyhaçý olarak bilinir. Gacrux bir çift yýldýzdýr. Büyük olan yýldýz bir kýrmýzý devdir."
+    },
+    "060": {
+      "title": "Uranüs",
+      "description": "Çoðu insan “Uranüs”ün “your anus – anüsün” kelimesine benzediðini düþünür. Bunlarýn dýþýnda daha iyi telaffuzlar da vardýr. Uranüs ayný zamanda “Yer-uh-niss” ya da “yedinci gezegen” olarak söylenebilir."
+    },
+    "061": {
+      "title": "Neptün",
+      "description": "Þu anda Neptün, Güneþ Sistemi’nde Güneþ’ten en uzakta bulunan gezegendir. Güneþ’in etrafýndaki bir turu 164.6 Dünya yýlý sürmektedir. Yaþam beklentileri artmadýkça, tüm hayatýnýz boyunca Neptün’ün bir turunu tamamlamasýný hiçbir þekilde göremezsiniz."
+    },
+    "062": {
+      "title": "Wolf 359",
+      "description": "Wolf 359 normal yýldýzlar tarafýndan gölgede býrakýlan, küçük bir kýrmýzý cücedir. Güneþ, Proxima Centauri, Alpha Centauri A & B, ve Bernard yýldýzýndan sonra Dünya’ya en yakýn altýncý yýldýzdýr. Parlaklýðý düþük olup +13.5 kadirdir."
+    },
+    "063": {
+      "title": "Gliese 229A",
+      "description": "Gliese 229A bir kýrmýzý cüce yýldýzdýr. Güneþ’ten biraz daha küçüktür. Kýrmýzý cüce yýldýz ayný zamanda GJ 229 ya da GI 229 olarak da yazýlýr. Bir çift yýldýz sisteminde bulunur, ikinci yýldýz Gliese 229B’dir."
+    },
+    "064": {
+      "title": "Gliese 229B",
+      "description": "Gliese 229B bir kahverengi cüce yýldýzdýr. Daha büyük bir cüce yýldýz Gliese 229A’nýn etrafýnda dolanýr. Gliese 229B bir gezegen olarak sýnýflandýrýlabilir, fakat Jüpiter’den çok daha yoðundur, bu nedenle gezegen olarak düþünülmesi gerekenden çok daha fazla kütleye sahiptir."
+    },
+    "065": {
+      "title": "Jüpiter",
+      "description": "Jüpiter güneþ sistemindeki en büyük gezegendir. Bununla birlikte, bilinen en büyük gezegen deðildir. O unvan þimdilik TrES-4’e ait. Jüpiter bir gaz devidir, bu nedenle sadece bir gaz topudur. Üzerinde hiçbir yere ayak basamazsýnýz. Ayrýca, Jüpiter’in dört Galileo uydusunu da içeren 64 tane uydusu vardýr."
+    },
+    "066": {
+      "title": "Satürn",
+      "description": "Satürn, Güneþ Sistemi’ndeki en geniþ, görünür halkalara sahiptir. Halkalarý ilk gören insan olan Galileo, onlarý “kulaklara” benzetmiþti. Satürn’ü halkalarý olmadan hayal edebilir misiniz? Sadece yeþil bir top olurdu."
+    },
+    "067": {
+      "title": "TrES-4",
+      "description": "TrES-4 keþfedilen en büyük gezegendir. Aslýnda hiçbir teleskop TrES-4’ü göremez, fakat varlýðýný dolaylý olarak kanýtlamak için çeþitli yöntemler vardýr. TrES-4’ün kütleçekimi yýldýzýnýn yörüngesini hafifçe etkiler. Ayrýca, ne zaman TrES-4 yýldýzýnýn önünden geçse, parlaklýðýnda hafif bir düþüþ olur."
+    },
+    "068": {
+      "title": "Venüs",
+      "description": "Venüs ve Dünya’nýn kardeþ gezegenler olduðu düþünülen zamanlar vardý. Aslýnda bu doðru deðil! Venüs’ün yüzey sýcaklýðý, çoðunlukla karbon dioksitten oluþan ve Güneþ’in ýsýsýný muhafaza eden atmosferinden dolayý sürekli 450°’nin üzerindedir."
+    },
+    "069": {
+      "title": "Mars",
+      "description": "Mars Kýzýl Gezegen olarak bilinir. Kýrmýzý çünkü paslý. Pekçok insan Mars’ta önceden su ve yaþam olduðuna inanýyor. Bununla birlikte, bu doðru olsa bile, yaþam küçük yeþil adamlar þeklinde olmayacaktý."
+    },
+    "070": {
+      "title": "Merkür",
+      "description": "Merkür, Güneþ’e en yakýn yýldýzdýr. Atmosferi yoktur. Gündüz sýcaklýðý 400° santigrata çýkmakta, gece ise -180° santigrata düþmektedir. Bir Merkür yýlý, 88 Dünya günüdür."
+    },
+    "071": {
+      "title": "Ganymede",
+      "description": "Ganymede Güneþ Sistemi’ndeki en büyük uydudur. Jüpiter’in etrafýnda dolanmaktadýr ve Galileo tarafýndan keþfedilmiþtir, bu nedenle bir Galileo ayýdýr. Ayrýca, Ganymede, sonu “e” ile bitmeyen Ganymed adlý asteroidle karýþtýrýlmamalýdýr!"
+    },
+    "072": {
+      "title": "Callisto",
+      "description": "Callisto Galileo uydularýndan en uzak olanýdýr. Tüm Galileo uydularýnýn dýþýndadýr ve çoðu meteorla çarpýþmaktadýr. Tüm bu çarpýþmalar oldukça fazla krater meydana getirmiþtir."
+    },
+    "073": {
+      "title": "Io",
+      "description": "Güneþ Sistemi’nde en fazla volkan Io’da bulunur! Io’nun gayzerleri donmuþ sülfür dioksitleri 500 kilometre kadar yukarýya uzaya salmaktadýr! Io’nun yüzeyi sürekli deðiþmektedir. Bir yýl içerisinde, oldukça farklý bir hale gelmektedir!"
+    },
+    "074": {
+      "title": "Europa",
+      "description": "Europa Galileo aylarýndan en küçük olanýdýr. Yüzeyi buzla kaplýdýr. Uydunun yüzeyi gizemli çizgilerle kaplýdýr. Bazý insanlar yüzeyin altýnda sývý suyun bulunduðuna, hatta yaþamý barýndýrdýðýna inanmaktadýr."
+    },
+    "075": {
+      "title": "Titan",
+      "description": "Titan, Satürn’ün tek büyük uydusudur. Çoðunlukla azottan oluþan oldukça kalýn bir atmosfere sahiptir. Dünya’nýn atmosferi de çoðunlukla azottan oluþmaktadýr. Titan sývý metandan oluþan denizlere sahiptir. (Sýcaklýklarý -180° santigrat civarýndadýr.) Hatta “Xanadu” adlý bir kýtaya sahiptir."
+    },
+    "076": {
+      "title": "Ay",
+      "description": "Ay, ayný zamanda “Luna\\ olarak bilinir, geceleyin gökyüzündeki en parlak nesnedir. Dünya’nýn çevresindeki turunu 27 gün, 7 saat ve 43 dakikada tamamlar. Gökyüzünde birden fazla ay görmeyi çok isterdim. Bu harika olurdu!"
+    },
+    "077": {
+      "title": "Triton",
+      "description": "Triton Neptün’ün en büyük uydusudur. -240° sýcaklýðý ile Güneþ Sistemi’ndeki en soðuk nesnedir. Triton ayrýca neredeyse ses hýzýnda ilerleyen rüzgarlarýyla, oldukça rüzgarlý bir yerdir!"
+    },
+    "078": {
+      "title": "Pluto",
+      "description": "Pluto artýk gezegen deðil. Ýnsanlar ona neden sempati duyuyor? Onun duygularý yok. Olsaydý bile, Dünya’daki insanlarýn düþünceleri onun için neden önemli olsun? Baþka bir not, Pluto’nun þimdi resmi adý “134340 Pluto\\ çünkü o bir cüce gezegen."
+    },
+    "079": {
+      "title": "Charon",
+      "description": "Charon Pluto’nun tek büyük uydusudur. Boyut olarak birbirlerine yakýndýrlar. Birbirlerine oldukça yakýn olduklarýndan, bazýlarý onlarý çift gezegen olarak düþünür. Charon’un Pluto’ya, Pluto’nun da Charon’a sürekli ayný yüzlerini gösterdiðini biliyor muydunuz?"
+    },
+    "080": {
+      "title": "Eris",
+      "description": "Eris en büyük cüce gezegendir. Cüce gezegen olan Pluto’dan bile büyüktür. Eris ayný zamanda Güneþ’ten çok uzaktadýr. Eris bir uyduya sahiptir ve adý Dysnomia’dýr. Dysnomia nerededir? Bu son cümlenin hemen altýnda yer alýyor."
+    },
+    "081": {
+      "title": "Dysnomia",
+      "description": "Dysnomia Eris’in tek uydusudur ve 10 Eylül, 2005 Cumartesi günü keþfedilmiþtir. Ayrýca, “Dysnomia” nýn bir özel hukuk maddesi olduðunu biliyor muydunuz?"
+    },
+    "082": {
+      "title": "Sedna",
+      "description": "Sedna oldukça eliptik bir yörüngeye sahiptir. Çok uzaktýr ve yörüngesini tamamlamasý 10,000 Dünya yýlý sürmektedir. Büyük olasýlýkla farkýna varmýþsýnýzdýr “Sedna”nýn tersten okunuþu “Andes\\ dünyanýn en uzun sýra daðlarý. (Güney Amerika’da). Ýkisi de baþka dünyalar gibi görünüyor!"
+    },
+    "083": {
+      "title": "Quaoar",
+      "description": "Quaoar çok yoðun çünkü çekirdeði çok büyük. Quaoar önceden daha büyük olmalý. Pluto büyüklüðünde bir nesne ile çarpýþarak dýþ katmanlarýný kaybetmiþ olmalý."
+    },
+    "084": {
+      "title": "Ceres",
+      "description": "Ceres insanlarý yaþayabileceði bir yer deðil. Ceres ayný zamanda en büyük asteroid olup, “gezegen” tanýmýnýn tartýþýlmasýna neden olmuþtur. Kýsa bir süre, bir gezegen olduðu düþünülmüþtür, ama sonra olmadýðý anlaþýlmýþtýr."
+    },
+    "085": {
+      "title": "Polaris",
+      "description": "Polaris Kutup Yýldýzý olarak bilinir. Kuzey kutbu doðrultusuna çok yakýndýr, eðer hangi yönün kuzey olduðunu merak ediyorsanýz, sadece Polaris’i bulmaya çalýþýn. Büyük Kepçenin ucundaki iki yýldýzý bulun ve yukarýya gidin."
+    },
+    "086": {
+      "title": "Antares",
+      "description": "Antares ekliptik yakýnlarýnda bulunan bir kýrmýzý devdir, bu nedenle sýk sýk Ay tarafýndan örtülür. Antares ayrýca trilyonlarca ton yýldýz maddesini yýldýz rüzgarlarýyla kaybetmektedir, fakat bu yöntem yavaþ gerçekleþmektedir. Hýzlý olaný patlamaktýr ki, bu daha sonra gerçekleþecek."
+    },
+    "087": {
+      "title": "Altair",
+      "description": "Altair, Yaz Üçgeni’ndeki üç yýldýzdan biridir. Yaz Üçgeni dar açýlý bir üçgendir, yani tüm açýlarý 90°’den küçüktür. Diðer iki yýldýz Vega ve Deneb’tir. Diðer çoðu yýldýz gibi, Altair’de merkezi etrafýnda oldukça hýzlý bir þekilde dönmektedir!"
+    },
+    "088": {
+      "title": "La Superba",
+      "description": "La Superba geceleyin gökyüzündeki en kýrmýzý yýldýzlardan biridir. Oldukça kýrmýzýdýr çünkü helyum füzyonuyla karbon-13 atomu üretmektedir. (Normal karbon karbon-12’dir.) La Superba sadece 2500° santigrattýr, yani en soðuk yýldýzlardan biridir."
+    },
+    "089": {
+      "title": "Pistol Yýldýzý",
+      "description": "Pistol yýldýzý bilinen en parlak yýldýzlardan biridir. 20 saniyede Güneþ’in bir yýlda harcadýðý kadar enerji salmaktadýr. Yýldýzlararasý bulutlar bunu görmemizi engellemektedir. Ona parlaklýðýndan dolayý Pistol yýldýzý demiyoruz, Pistol Bulutsusu’nda yer aldýðý için."
+    },
+    "090": {
+      "title": "S Doradus",
+      "description": "S Doradus bir aþýrý devdir, ayný zamanda Büyük Macellan Bulutu’ndaki en parlak yýldýzlardan biridir. Büyük Macellan Bulutu hakkýnda ayrýntýlý bilgi için on üzeri 8.5 mertebesine kadar uzaklaþýn."
+    },
+    "091": {
+      "title": "Enif",
+      "description": "Enif bir turuncu süperdevdir. Ýsmi Arapça “burun” anlamýndadýr, çünkü Kanatlýat takýmyýldýzýndaki konumu buna benzemektedir. Rastlantýsal bir þekilde “Enif” “Fine-güzel” kelimesinin tersidir."
+    },
+    "092": {
+      "title": "Mu Cephei",
+      "description": "Mu Cephei oldukça kýrmýzýdýr. Bazen “Hershel’in Garnet Yýldýzý” olarak adlandýrýlýr, çünkü lâl kýrmýzý rengindedir. Baþka bir ismi ise Erakis’tir, eðer ilk iki ismini beðenmediyseniz."
+    },
+    "093": {
+      "title": "KY Cygni",
+      "description": "KY Cygni Güneþ’ten 300,000 kat daha parlaktýr, ve Güneþ’te oldukça parlaktýr, öyle deðil mi? Güneþ o kadar parlak ki, ona bakamýyoruz bile! Bununla birlikte, KY Cygni’ye bakabiliriz çünkü 300 milyon kat daha uzakta bulunuyor."
+    },
+    "094": {
+      "title": "V354 Cephei",
+      "description": "V354 Cephei bir kýrmýzý süperdevdir, ve kocamandýr. Onu Güneþ Sistemi’ne yerleþtirseydik, Jüpiter’in yörüngesine kadar ulaþýrdý. Yýldýzýn ismine eklenen 354, ayný zamanda Hippo’lu Augustine’in doðum yýlýdýr."
+    },
+    "095": {
+      "title": "WOH G64",
+      "description": "Biliyorum ... “WOH... bu büyük bir yýldýz!” diye düþünüyorsunuz. Evet, sanýrým haklýsýnýz, çünkü þu anda bilinen en büyük ikinci yýldýzdýr. WOH G64 Büyük Macellan Bulutu’nda bulunuyor. Bulutun çevresinde yaklaþýk bir ýþýk-yýlýnýn yarýsýna kadar uzanan bir bulut bulunuyor."
+    },
+    "096": {
+      "title": "VY Canis Majoris",
+      "description": "VJ Canis Majoris bilinen en büyük yýldýzdýr. Oldukça büyük olduðundan eðer Güneþ Sistemi’ne yerleþtirilseydi, Satürn’ün yörüngesinin dýþýna kadar uzanýrdý. Bir uçaðýn çevresini bir kez turlamasý 1,200 yýl sürebilir."
+    },
+    "097": {
+      "title": "Betelgeuse",
+      "description": "Betelgeuse’un yaþý milyonlarca yýldýr. Betelgeuse çok yaþlýdýr, bu nedenle gelecek on binlerce yýl içerisinde patlamasý beklenmektedir. Daha küçük yýldýzlar trilyonlarca yýl yaþayabilir. Betelgeuse çabuk yaþlanan çok büyük bir yýldýzdýr."
+    },
+    "098": {
+      "title": "Albireo",
+      "description": "Albireo toplamda üç yýldýzdan meydana geliyor. Burada sadece en büyük olaný görüyorsunuz. Diðer iki yýldýz birbirlerine yakýndýr ve sarý bir nokta gibi görünürler. Üçüncü mavi renktir ve uzaktýr. Mavi ve sarý yýldýzlar birbirlerinden uzakta bulunuyorlar, yörünge turlarýný 100,000 yýlda tamamlýyorlar."
+    },
+    "099": {
+      "title": "Kapteyn Yýldýzý",
+      "description": "Kapteyn Yýldýzý sadece onüç ýþýk-yýlý uzaklýktadýr. Buna raðmen, parlaklýðý +9 kadirdir, bu yüzden onu görmek için bir dürbün gerekir. Yaklaþýk 10,000 yýl önce Kapteyn Yýldýzý sadece yedi ýþýk-yýlý uzaklýktaydý!"
+    },
     "100": {
       "title": "Luyten Yýldýzý",
       "description": "Luyten Yýldýzý bizden 12 ýþýk-yýlý uzaklýkta bulunan bir kýrmýzý cüce yýldýzdýr. Procyon’a çok yakýndýr, bu nedenle Procyon, Lutyen Yýldýzý’na Sirius’un bize göründüðünden 10 kat daha parlak görünür."
@@ -701,8 +981,8 @@
       "description": "Bu þeyin aðýrlýðý 15,000 kilogramdýr! Oldukça fazla! Ayný zamanda Ay’a iniþ yaptý. Ýniþi “Lunar Lander\\ adlý macera oyununa ilham kaynaðý olmuþtur ki, kolay bir oyun deðildir. Ne zaman oynasam, benzinim bitiyor!"
     },
     "275": {
-      "title": "Futbol Sahasý",
-      "description": "Amerikan futbol sahalarý 120 yarda (109.7 m) uzunluðundadýr, eðer sondaki bölgeler de sayýlýrsa. Her neyse, futbol sahalarý genellikle büyük þeyleri ölçmek için örnek verilir. Örneðin, “Titanik üç futbol sahasý uzunluðundaydý!” Futbol sahalarý ayrýca futbol oynamak için de kullanýlýr."
+      "title": "Futbol sahası",
+      "description": "FIFA’nın uluslararası maçlar için önerdiği futbol sahası ölçüleri 105 metre uzunluk ve 68 metre genişliktir. Modern futbol, oyunun kurallarının kabul edildiği 1863 yılında İngiltere’de ortaya çıktı. Günümüzde İngiltere’de 40 binden fazla futbol kulübü kayıtlıdır — bu sayı dünyadaki diğer tüm ülkelerden daha fazladır."
     },
     "276": {
       "title": "Gateway Kemeri",
@@ -912,285 +1192,17 @@
       "title": "Büyük Set Kayalýðý",
       "description": "Avustralya’nýn kuzeydoðu kýyýsýndan baþlayan Büyük Set Kayalýðý canlý organizmalar tarafýndan yapýlan en büyük tek parça yapýdýr! Binlerce mercan, yumuþakça, balina, kaplumbaða, yunus, kuþ ve daha fazla türe ev sahipliði yapmaktadýr!"
     },
-    "030": {
-      "title": "LCD Pikseli",
-      "description": "Piksellerin boyutlarý birbirinden farklý olsa da, ortalama 300 mikro-metre kadardýr. Her bir piksel, kýrmýzý, yeþil ve mavi renkli üç alt pikselden oluþur. Pikseller oldukça güzeldir, ama vokseller daha iyidir. Onlar üç boyutlu piksellerdir."
-    },
-    "031": {
-      "title": "Palm Jebel Ali",
-      "description": "Palm Jebel Ali en büyük insan-yapýmý adadýr (Holldanda’da suyu alýnarak daha fazla toprak kazanýlan Flevopolder gibi adalar dýþýnda). Palm Jebel Ali henüz tamamlanmadý. Palm Adalarý’nýn bir parçasý olan burada 250,000 kiþinin yaþamasý planlanýyor!"
-    },
-    "032": {
-      "title": "Nötrino",
-      "description": "Nötrinolar siz ve benim gibi normal maddenin içinden sürekli geçerler! Aslýnda, bunu þimdi de yapýyorlar. Nötrinolar yüksüzdür, bu nedenle sadece kütleçekimi ve zayýf kuvvetten etkilenirler. Bununla birlikte, oldukça küçük olduklarýndan, bu etkileþim oldukça zayýftýr."
-    },
-    "033": {
-      "title": "Yüksek-Enerjili Nötrino",
-      "description": "Yüksek enerjili nötrinolar daha fazladýr. Daha fazla bilgi için, nötrinoya gidin, ki o ortalama boyutunu göstermektedir. Bundan 15,000 kat daha küçüktür!"
-    },
-    "034": {
-      "title": "Kibrit çöpü",
-      "description": "Kibrit çöpü küçük, kullanýþlý bir alettir. Bir þeye sürtüldüðünde alev alabilir. Bu onu çok tehlikeli yapmaktadýr! Bu yüzden onunla oynamak hiç iyi fikir deðildir. Anlaþtýk mý?"
-    },
-    "035": {
-      "title": "Tavuk Yumurtasý",
-      "description": "Tavuk yumurtasý genellikle civcivlerin doðduðu yerdir. Pek çok kiþi tavuk yumurtasý yemekten hoþlanýr. Görünüþleri dýþýnda, kahverengi tavuk yumurtasý ile beyaz tavuk yumurtasý arasýnda bir fark yoktur."
-    },
-    "036": {
-      "title": "Býldýrcýn Yumurtasý",
-      "description": "Pek çok kiþi býldýrcýn yumurtasýnýn tavuk yumurtasýndan daha iyi olduðunu düþünür. Býldýrcýn yumurtasý tavuk yumurtasýndan daha küçüktür ve daha az bulunur, fakat bu insanlarýn onu sevmesini engellemez!"
-    },
-    "037": {
-      "title": "Ýnç Kare",
-      "description": "Metrik sisteme alýþýk deðilseniz, iþte size inç kare. Ne yazýk ki, diðer her þey metrik sistemde yer alýr. Ayrýca, 2.5 santimetre bir kenar uzunluðudur, alan deðildir. (Yoksa cm2 olmalýydý.)"
-    },
-    "038": {
-      "title": "Kahve Çekirdeði",
-      "description": "Kahve çekirdeði yaklaþýk bir santimetre büyüklüktedir – aslýnda o çekirdeði andýran bir meyvedir. Kahverengi ve çizgilidir, ve bazen gözünüzü ona diktiðinizde, çapýnýn bilinen evrenin 10-29’da biri olduðunu unutursunuz."
-    },
-    "039": {
-      "title": "Yaygýn Toprak Solucaný",
-      "description": "Kýpýr kýpýr, çamurlu toprak solucanlarýný sevmiyorsunuz deðil mi? Þehir efsanelerine raðmen, çoðu solucaný ikiye böldüðünüzde ölecektir. Bazen, baþ tarafý hayatta kalýr ve yeni bir kuyruk oluþur."
-    },
-    "040": {
-      "title": "Rigel",
-      "description": "Rigel parlak mavi bir yýldýzdýr ve Avcý takýmyýldýzýnýn en parlak yýldýzýdýr. Ekvator civarýnda bulunur, böylece Dünya üzerinde neredeyse her yerden görülür. Ayrýca onu “wriggle” olarak deðil, “rye-jel” þeklinde söylemelisiniz."
-    },
-    "041": {
-      "title": "Amerika Birleþik Devletleri",
-      "description": "Ýþte A.B.D. Pluto’dan büyük gibi görünse de, Pluto’nun arka yüzü de vardýr, yani Pluto daha geniþ bir yüze alanýna sahiptir!"
-    },
-    "042": {
-      "title": "Dünya",
-      "description": "Dünya bizim biricik evimiz. Üzerinde yaþarken, büyük olduðunu düþünebiliriz, ancak yine de ona iyi bakmalýyýz. O yok olduðunda, gidecek baþka yerimiz kalmayacak."
-    },
-    "043": {
-      "title": "Deneb",
-      "description": "Deneb Kuðu takýmyýldýzýndaki en parlak yýldýzdýr. 1,500 ýþýk-yýlý uzaklýktadýr, bu da onu en parlak 25 yýldýz arasýndaki en uzak yýldýz yapmaktadýr. Eðer Mars’ta yaþýyor olsaydýnýz, Kuzey Kutbu üzerindeki yýldýz Deneb olacaktý – Polaris deðil."
-    },
-    "044": {
-      "title": "V V Cephei A",
-      "description": "Kýsa bir süre V V Cephei A en büyük yýldýz olarak biliniyordu. Ancak þimdi bu unvan VY Canis Majoris’e ait. Çünkü sürekli yeni yýldýzlar keþfediliyor!"
-    },
-    "045": {
-      "title": "R Doradus",
-      "description": "R Doradus görece büyük ve Dünya’dan sadece 200 ýþýk-yýlý uzaklýkta, bu nedenle görünür büyüklüðüyle gökyüzündeki ikinci en büyük yýldýzdýr! 0.05 yay-saniyesi geniþliðindedir. En geniþ Güneþ’tir, 1,920 yay saniyesi ile – 40,000 kat daha geniþtir."
-    },
-    "046": {
-      "title": "Aldebaran",
-      "description": "Aldebaran, Yýldýz Savaþlarý’ndaki Alderaan ile karýþtýrýlmamalýdýr. Alderaan boyutu, gün uzunluðu ve su örtüsüyle Dünya’ya çok benzemektedir.\t Bununla birlikte, Aldebaran çap olarak 5,000 kat daha büyüktür, 643 günde bir etrafýnda döner ve hiç suya sahip deðildir."
-    },
-    "047": {
-      "title": "Pollux",
-      "description": "Yunan mitolojisine Pollux’un ikizi Castor’dur. Ayrýca ikisi de Gemini, “ikizler” anlamýna gelen takýmyýldýzýnda bulunuyor. Bununla birlikte, gerçekte, Pollux tek yýldýz olup, Castor toplamda altý yýldýzýn olduðu üç adet çift yýldýz içerisindedir. Castor altý yýldýzlýk bir settir!"
-    },
-    "048": {
-      "title": "Arcturus",
-      "description": "Arcturus, Sirius ve Canopus’tan sonra geceleyin gökyüzündeki en parlak üçüncü yýldýzdýr. Çoban takýmyýldýzýndaki en parlak yýldýzdýr. Yanýndaki Büyük Kepçe’yi kullanarak onu bulun."
-    },
-    "049": {
-      "title": "Güneþ",
-      "description": "Güneþ, Yeryüzü’nde yaþamýn var olabilmesi için gerekli enerjiyi saðlar. Güneþ’in çapý Dünya’dan 100 kat daha büyüktür! Ýnsanlýðýn kullandýðý enerjinin 20,000 katý güneþten yere ulaþmaktadýr."
-    },
-    "050": {
-      "title": "Alpha Centauri A",
-      "description": "Alpha Centauri A, bize en yakýn yýldýz sistemi olan (üç yýldýzdan oluþan) Alpha Centauri yýldýz sisteminin en büyük yýldýzýdýr. Ayrýca geceleyin gökyüzündeki en parlak dördüncü yýldýzdýr."
-    },
-    "051": {
-      "title": "Alpha Centauri B",
-      "description": "Alpha Centauri B Alpha Centauri yýldýz sistemindeki en büyük ikinci yýldýzdýr. Çapý yaklaþýk bir milyon kilometredir, dolayýsýyla güneþten biraz daha küçüktür. Alpha Centauri A & B birbirlerine çok yakýn olduklarý için biz dünyalýlara tek bir yýldýz gibi görünürler."
-    },
-    "052": {
-      "title": "Proxima Centauri",
-      "description": "Proxima Centauri, Dünya’ya Güneþ’ten sonra en yakýn yýldýz olarak bilinir. Ýsmi “yakýnlýk”tan gelmektedir. Proxima Centauri küçük kýrmýzý bir yýldýzdýr. Ne yazýk ki, çok sönük bir yýldýzdýr ve onu görebilmek için bir teleskopa ihtiyacýnýz vardýr"
-    },
-    "053": {
-      "title": "Sirius A",
-      "description": "Sirius geceleyin gökyüzündeki en parlak yýldýzdýr. En parlak ikinci yýldýz olan Canopus’tan iki kat daha parlaktýr. Bununla birlikte, Sirius büyük bir yýldýz deðildir. Parlak görünmesinin nedeni yakýn olmasýdýr, sadece elli ýþýk-yýlý uzaklýktadýr."
-    },
-    "054": {
-      "title": "Sirius B",
-      "description": "Sirius B bir beyaz cücedir. Dünya’dan biraz büyüktür. Sirius A’nýn parlaklýðý nedeniyle görülmesi oldukça zordur. Sirius B “yavru köpek” olarak bilinir."
-    },
-    "055": {
-      "title": "Vega",
-      "description": "Vega, Çalgý takýmyýldýzýnda yer alýr. Ayrýca Vega, Deneb ve Altair’den oluþan Yaz Üçgeni’nin bir parçasýdýr. Vega merkezi etrafýnda çok hýzlý döner. Yine de, onu üst tarafýndan gördüðümüz için, dairesel görünmektedir."
-    },
-    "056": {
-      "title": "Regulus",
-      "description": "Regulus’ta Altair ve Vega gibi kendi çevresinde oldukça hýzlý dönmektedir. Eðer % 16 oranýnda daha hýzlý dönseydi, parçalanýrdý! Regulus ayný zamanda Aslan takýmyýldýzýndaki en parlak yýldýzdýr. Ayrýca Regulus B ve C yýldýzlarý da vardýr."
-    },
-    "057": {
-      "title": "Spica",
-      "description": "Spica geceleyin gökyüzündeki en parlak on beþinci yýldýzdýr ve Baþak takýmyýldýzýnda bulunur. Gerçekte bir çift yýldýz sistemidir. Ýki yýldýz birbirlerine çok yakýndýr ve yörüngelerini dört günde tamamlarlar."
-    },
-    "058": {
-      "title": "Alnitak",
-      "description": "Alnitak Alev Bulutsusu’nu aydýnlatmaktadýr. Alnitak, Avcý’nýn kemerini oluþturan üç yýldýzdan en doðuda olanýdýr. Diðer ikisi Alnilam ve Mintaka’dýr, ve üçü de Dünya’dan çok parlak görünürler."
-    },
-    "059": {
-      "title": "Gacrux",
-      "description": "Gacrux Güneyhaçý takýmyýldýzýnda bulunur. Crux, Latince’de “haç” anlamýnda olup, Güneyhaçý olarak bilinir. Gacrux bir çift yýldýzdýr. Büyük olan yýldýz bir kýrmýzý devdir."
-    },
-    "060": {
-      "title": "Uranüs",
-      "description": "Çoðu insan “Uranüs”ün “your anus – anüsün” kelimesine benzediðini düþünür. Bunlarýn dýþýnda daha iyi telaffuzlar da vardýr. Uranüs ayný zamanda “Yer-uh-niss” ya da “yedinci gezegen” olarak söylenebilir."
-    },
-    "061": {
-      "title": "Neptün",
-      "description": "Þu anda Neptün, Güneþ Sistemi’nde Güneþ’ten en uzakta bulunan gezegendir. Güneþ’in etrafýndaki bir turu 164.6 Dünya yýlý sürmektedir. Yaþam beklentileri artmadýkça, tüm hayatýnýz boyunca Neptün’ün bir turunu tamamlamasýný hiçbir þekilde göremezsiniz."
-    },
-    "062": {
-      "title": "Wolf 359",
-      "description": "Wolf 359 normal yýldýzlar tarafýndan gölgede býrakýlan, küçük bir kýrmýzý cücedir. Güneþ, Proxima Centauri, Alpha Centauri A & B, ve Bernard yýldýzýndan sonra Dünya’ya en yakýn altýncý yýldýzdýr. Parlaklýðý düþük olup +13.5 kadirdir."
-    },
-    "063": {
-      "title": "Gliese 229A",
-      "description": "Gliese 229A bir kýrmýzý cüce yýldýzdýr. Güneþ’ten biraz daha küçüktür. Kýrmýzý cüce yýldýz ayný zamanda GJ 229 ya da GI 229 olarak da yazýlýr. Bir çift yýldýz sisteminde bulunur, ikinci yýldýz Gliese 229B’dir."
-    },
-    "064": {
-      "title": "Gliese 229B",
-      "description": "Gliese 229B bir kahverengi cüce yýldýzdýr. Daha büyük bir cüce yýldýz Gliese 229A’nýn etrafýnda dolanýr. Gliese 229B bir gezegen olarak sýnýflandýrýlabilir, fakat Jüpiter’den çok daha yoðundur, bu nedenle gezegen olarak düþünülmesi gerekenden çok daha fazla kütleye sahiptir."
-    },
-    "065": {
-      "title": "Jüpiter",
-      "description": "Jüpiter güneþ sistemindeki en büyük gezegendir. Bununla birlikte, bilinen en büyük gezegen deðildir. O unvan þimdilik TrES-4’e ait. Jüpiter bir gaz devidir, bu nedenle sadece bir gaz topudur. Üzerinde hiçbir yere ayak basamazsýnýz. Ayrýca, Jüpiter’in dört Galileo uydusunu da içeren 64 tane uydusu vardýr."
-    },
-    "066": {
-      "title": "Satürn",
-      "description": "Satürn, Güneþ Sistemi’ndeki en geniþ, görünür halkalara sahiptir. Halkalarý ilk gören insan olan Galileo, onlarý “kulaklara” benzetmiþti. Satürn’ü halkalarý olmadan hayal edebilir misiniz? Sadece yeþil bir top olurdu."
-    },
-    "067": {
-      "title": "TrES-4",
-      "description": "TrES-4 keþfedilen en büyük gezegendir. Aslýnda hiçbir teleskop TrES-4’ü göremez, fakat varlýðýný dolaylý olarak kanýtlamak için çeþitli yöntemler vardýr. TrES-4’ün kütleçekimi yýldýzýnýn yörüngesini hafifçe etkiler. Ayrýca, ne zaman TrES-4 yýldýzýnýn önünden geçse, parlaklýðýnda hafif bir düþüþ olur."
-    },
-    "068": {
-      "title": "Venüs",
-      "description": "Venüs ve Dünya’nýn kardeþ gezegenler olduðu düþünülen zamanlar vardý. Aslýnda bu doðru deðil! Venüs’ün yüzey sýcaklýðý, çoðunlukla karbon dioksitten oluþan ve Güneþ’in ýsýsýný muhafaza eden atmosferinden dolayý sürekli 450°’nin üzerindedir."
-    },
-    "069": {
-      "title": "Mars",
-      "description": "Mars Kýzýl Gezegen olarak bilinir. Kýrmýzý çünkü paslý. Pekçok insan Mars’ta önceden su ve yaþam olduðuna inanýyor. Bununla birlikte, bu doðru olsa bile, yaþam küçük yeþil adamlar þeklinde olmayacaktý."
-    },
-    "070": {
-      "title": "Merkür",
-      "description": "Merkür, Güneþ’e en yakýn yýldýzdýr. Atmosferi yoktur. Gündüz sýcaklýðý 400° santigrata çýkmakta, gece ise -180° santigrata düþmektedir. Bir Merkür yýlý, 88 Dünya günüdür."
-    },
-    "071": {
-      "title": "Ganymede",
-      "description": "Ganymede Güneþ Sistemi’ndeki en büyük uydudur. Jüpiter’in etrafýnda dolanmaktadýr ve Galileo tarafýndan keþfedilmiþtir, bu nedenle bir Galileo ayýdýr. Ayrýca, Ganymede, sonu “e” ile bitmeyen Ganymed adlý asteroidle karýþtýrýlmamalýdýr!"
-    },
-    "072": {
-      "title": "Callisto",
-      "description": "Callisto Galileo uydularýndan en uzak olanýdýr. Tüm Galileo uydularýnýn dýþýndadýr ve çoðu meteorla çarpýþmaktadýr. Tüm bu çarpýþmalar oldukça fazla krater meydana getirmiþtir."
-    },
-    "073": {
-      "title": "Io",
-      "description": "Güneþ Sistemi’nde en fazla volkan Io’da bulunur! Io’nun gayzerleri donmuþ sülfür dioksitleri 500 kilometre kadar yukarýya uzaya salmaktadýr! Io’nun yüzeyi sürekli deðiþmektedir. Bir yýl içerisinde, oldukça farklý bir hale gelmektedir!"
-    },
-    "074": {
-      "title": "Europa",
-      "description": "Europa Galileo aylarýndan en küçük olanýdýr. Yüzeyi buzla kaplýdýr. Uydunun yüzeyi gizemli çizgilerle kaplýdýr. Bazý insanlar yüzeyin altýnda sývý suyun bulunduðuna, hatta yaþamý barýndýrdýðýna inanmaktadýr."
-    },
-    "075": {
-      "title": "Titan",
-      "description": "Titan, Satürn’ün tek büyük uydusudur. Çoðunlukla azottan oluþan oldukça kalýn bir atmosfere sahiptir. Dünya’nýn atmosferi de çoðunlukla azottan oluþmaktadýr. Titan sývý metandan oluþan denizlere sahiptir. (Sýcaklýklarý -180° santigrat civarýndadýr.) Hatta “Xanadu” adlý bir kýtaya sahiptir."
-    },
-    "076": {
-      "title": "Ay",
-      "description": "Ay, ayný zamanda “Luna\\ olarak bilinir, geceleyin gökyüzündeki en parlak nesnedir. Dünya’nýn çevresindeki turunu 27 gün, 7 saat ve 43 dakikada tamamlar. Gökyüzünde birden fazla ay görmeyi çok isterdim. Bu harika olurdu!"
-    },
-    "077": {
-      "title": "Triton",
-      "description": "Triton Neptün’ün en büyük uydusudur. -240° sýcaklýðý ile Güneþ Sistemi’ndeki en soðuk nesnedir. Triton ayrýca neredeyse ses hýzýnda ilerleyen rüzgarlarýyla, oldukça rüzgarlý bir yerdir!"
-    },
-    "078": {
-      "title": "Pluto",
-      "description": "Pluto artýk gezegen deðil. Ýnsanlar ona neden sempati duyuyor? Onun duygularý yok. Olsaydý bile, Dünya’daki insanlarýn düþünceleri onun için neden önemli olsun? Baþka bir not, Pluto’nun þimdi resmi adý “134340 Pluto\\ çünkü o bir cüce gezegen."
-    },
-    "079": {
-      "title": "Charon",
-      "description": "Charon Pluto’nun tek büyük uydusudur. Boyut olarak birbirlerine yakýndýrlar. Birbirlerine oldukça yakýn olduklarýndan, bazýlarý onlarý çift gezegen olarak düþünür. Charon’un Pluto’ya, Pluto’nun da Charon’a sürekli ayný yüzlerini gösterdiðini biliyor muydunuz?"
-    },
-    "080": {
-      "title": "Eris",
-      "description": "Eris en büyük cüce gezegendir. Cüce gezegen olan Pluto’dan bile büyüktür. Eris ayný zamanda Güneþ’ten çok uzaktadýr. Eris bir uyduya sahiptir ve adý Dysnomia’dýr. Dysnomia nerededir? Bu son cümlenin hemen altýnda yer alýyor."
-    },
-    "081": {
-      "title": "Dysnomia",
-      "description": "Dysnomia Eris’in tek uydusudur ve 10 Eylül, 2005 Cumartesi günü keþfedilmiþtir. Ayrýca, “Dysnomia” nýn bir özel hukuk maddesi olduðunu biliyor muydunuz?"
-    },
-    "082": {
-      "title": "Sedna",
-      "description": "Sedna oldukça eliptik bir yörüngeye sahiptir. Çok uzaktýr ve yörüngesini tamamlamasý 10,000 Dünya yýlý sürmektedir. Büyük olasýlýkla farkýna varmýþsýnýzdýr “Sedna”nýn tersten okunuþu “Andes\\ dünyanýn en uzun sýra daðlarý. (Güney Amerika’da). Ýkisi de baþka dünyalar gibi görünüyor!"
-    },
-    "083": {
-      "title": "Quaoar",
-      "description": "Quaoar çok yoðun çünkü çekirdeði çok büyük. Quaoar önceden daha büyük olmalý. Pluto büyüklüðünde bir nesne ile çarpýþarak dýþ katmanlarýný kaybetmiþ olmalý."
-    },
-    "084": {
-      "title": "Ceres",
-      "description": "Ceres insanlarý yaþayabileceði bir yer deðil. Ceres ayný zamanda en büyük asteroid olup, “gezegen” tanýmýnýn tartýþýlmasýna neden olmuþtur. Kýsa bir süre, bir gezegen olduðu düþünülmüþtür, ama sonra olmadýðý anlaþýlmýþtýr."
-    },
-    "085": {
-      "title": "Polaris",
-      "description": "Polaris Kutup Yýldýzý olarak bilinir. Kuzey kutbu doðrultusuna çok yakýndýr, eðer hangi yönün kuzey olduðunu merak ediyorsanýz, sadece Polaris’i bulmaya çalýþýn. Büyük Kepçenin ucundaki iki yýldýzý bulun ve yukarýya gidin."
-    },
-    "086": {
-      "title": "Antares",
-      "description": "Antares ekliptik yakýnlarýnda bulunan bir kýrmýzý devdir, bu nedenle sýk sýk Ay tarafýndan örtülür. Antares ayrýca trilyonlarca ton yýldýz maddesini yýldýz rüzgarlarýyla kaybetmektedir, fakat bu yöntem yavaþ gerçekleþmektedir. Hýzlý olaný patlamaktýr ki, bu daha sonra gerçekleþecek."
-    },
-    "087": {
-      "title": "Altair",
-      "description": "Altair, Yaz Üçgeni’ndeki üç yýldýzdan biridir. Yaz Üçgeni dar açýlý bir üçgendir, yani tüm açýlarý 90°’den küçüktür. Diðer iki yýldýz Vega ve Deneb’tir. Diðer çoðu yýldýz gibi, Altair’de merkezi etrafýnda oldukça hýzlý bir þekilde dönmektedir!"
-    },
-    "088": {
-      "title": "La Superba",
-      "description": "La Superba geceleyin gökyüzündeki en kýrmýzý yýldýzlardan biridir. Oldukça kýrmýzýdýr çünkü helyum füzyonuyla karbon-13 atomu üretmektedir. (Normal karbon karbon-12’dir.) La Superba sadece 2500° santigrattýr, yani en soðuk yýldýzlardan biridir."
-    },
-    "089": {
-      "title": "Pistol Yýldýzý",
-      "description": "Pistol yýldýzý bilinen en parlak yýldýzlardan biridir. 20 saniyede Güneþ’in bir yýlda harcadýðý kadar enerji salmaktadýr. Yýldýzlararasý bulutlar bunu görmemizi engellemektedir. Ona parlaklýðýndan dolayý Pistol yýldýzý demiyoruz, Pistol Bulutsusu’nda yer aldýðý için."
-    },
-    "090": {
-      "title": "S Doradus",
-      "description": "S Doradus bir aþýrý devdir, ayný zamanda Büyük Macellan Bulutu’ndaki en parlak yýldýzlardan biridir. Büyük Macellan Bulutu hakkýnda ayrýntýlý bilgi için on üzeri 8.5 mertebesine kadar uzaklaþýn."
-    },
-    "091": {
-      "title": "Enif",
-      "description": "Enif bir turuncu süperdevdir. Ýsmi Arapça “burun” anlamýndadýr, çünkü Kanatlýat takýmyýldýzýndaki konumu buna benzemektedir. Rastlantýsal bir þekilde “Enif” “Fine-güzel” kelimesinin tersidir."
-    },
-    "092": {
-      "title": "Mu Cephei",
-      "description": "Mu Cephei oldukça kýrmýzýdýr. Bazen “Hershel’in Garnet Yýldýzý” olarak adlandýrýlýr, çünkü lâl kýrmýzý rengindedir. Baþka bir ismi ise Erakis’tir, eðer ilk iki ismini beðenmediyseniz."
-    },
-    "093": {
-      "title": "KY Cygni",
-      "description": "KY Cygni Güneþ’ten 300,000 kat daha parlaktýr, ve Güneþ’te oldukça parlaktýr, öyle deðil mi? Güneþ o kadar parlak ki, ona bakamýyoruz bile! Bununla birlikte, KY Cygni’ye bakabiliriz çünkü 300 milyon kat daha uzakta bulunuyor."
-    },
-    "094": {
-      "title": "V354 Cephei",
-      "description": "V354 Cephei bir kýrmýzý süperdevdir, ve kocamandýr. Onu Güneþ Sistemi’ne yerleþtirseydik, Jüpiter’in yörüngesine kadar ulaþýrdý. Yýldýzýn ismine eklenen 354, ayný zamanda Hippo’lu Augustine’in doðum yýlýdýr."
-    },
-    "095": {
-      "title": "WOH G64",
-      "description": "Biliyorum ... “WOH... bu büyük bir yýldýz!” diye düþünüyorsunuz. Evet, sanýrým haklýsýnýz, çünkü þu anda bilinen en büyük ikinci yýldýzdýr. WOH G64 Büyük Macellan Bulutu’nda bulunuyor. Bulutun çevresinde yaklaþýk bir ýþýk-yýlýnýn yarýsýna kadar uzanan bir bulut bulunuyor."
-    },
-    "096": {
-      "title": "VY Canis Majoris",
-      "description": "VJ Canis Majoris bilinen en büyük yýldýzdýr. Oldukça büyük olduðundan eðer Güneþ Sistemi’ne yerleþtirilseydi, Satürn’ün yörüngesinin dýþýna kadar uzanýrdý. Bir uçaðýn çevresini bir kez turlamasý 1,200 yýl sürebilir."
-    },
-    "097": {
-      "title": "Betelgeuse",
-      "description": "Betelgeuse’un yaþý milyonlarca yýldýr. Betelgeuse çok yaþlýdýr, bu nedenle gelecek on binlerce yýl içerisinde patlamasý beklenmektedir. Daha küçük yýldýzlar trilyonlarca yýl yaþayabilir. Betelgeuse çabuk yaþlanan çok büyük bir yýldýzdýr."
-    },
-    "098": {
-      "title": "Albireo",
-      "description": "Albireo toplamda üç yýldýzdan meydana geliyor. Burada sadece en büyük olaný görüyorsunuz. Diðer iki yýldýz birbirlerine yakýndýr ve sarý bir nokta gibi görünürler. Üçüncü mavi renktir ve uzaktýr. Mavi ve sarý yýldýzlar birbirlerinden uzakta bulunuyorlar, yörünge turlarýný 100,000 yýlda tamamlýyorlar."
-    },
-    "099": {
-      "title": "Kapteyn Yýldýzý",
-      "description": "Kapteyn Yýldýzý sadece onüç ýþýk-yýlý uzaklýktadýr. Buna raðmen, parlaklýðý +9 kadirdir, bu yüzden onu görmek için bir dürbün gerekir. Yaklaþýk 10,000 yýl önce Kapteyn Yýldýzý sadece yedi ýþýk-yýlý uzaklýktaydý!"
+    "328": {
+      "title": "SARS-CoV-2",
+      "description": "SARS-CoV-2, 2020–2022 yıllarında insanların yaşamını değiştiren COVID-19 pandemisine yol açan koronavirüstür. Mikroskobik boyutlarına rağmen (80–120 nanometre), bu virüs tıp, bilim, ekonomi ve dünya genelindeki günlük yaşam üzerinde çok büyük bir etki yarattı."
+    },
+    "329": {
+      "title": "Baykal Gölü",
+      "description": "Baykal Gölü, Dünya’daki en derin göl ve göller arasında en büyük sıvı tatlı su rezervuarıdır. Yaşının yaklaşık 25–30 milyon yıl olduğu tahmin edilir; bu da onu gezegenin en eski göllerinden biri yapar. Burada, dünyanın başka hiçbir yerinde bulunmayan 1.000’den fazla hayvan türü yaşar ve bunlar gölün faunasının yaklaşık %60’ını oluşturur."
+    },
+    "330": {
+      "title": "Tardigrad",
+      "description": "Tardigradlar, inanılmaz dayanıklılıklarıyla ün kazanan küçücük sekiz bacaklı canlılardır. Boyutlarına rağmen kuraklığa, aşırı soğuğa, ısıya, yüksek basınca ve hatta açık uzay koşullarına, yaşamın neredeyse tamamen durduğu bir duruma girerek dayanabilirler."
     }
   }
 }

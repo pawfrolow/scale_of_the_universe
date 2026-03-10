@@ -9,7 +9,7 @@ import { E } from "../helpers/e";
 import {
   VisualLocation,
   SizeData,
-  textDatum
+  TextDatum
 } from '../interfaces';
 import { calculateScale } from "../helpers/calculateScale";
 
@@ -22,7 +22,7 @@ export class Ring extends Entity {
   private coeff: number = 1;
   private realRatio: number = 1;
   private visualLocation: VisualLocation;
-  private textDatum: textDatum;
+  private textDatum: TextDatum;
   private text: Text;
   private descriptionText: Text;
   private onClick: Function;
@@ -37,7 +37,7 @@ export class Ring extends Entity {
     sizeData: SizeData,
     textureLow: Texture,
     visualLocation: VisualLocation,
-    textDatum: textDatum,
+    textDatum: TextDatum,
     metersText: string
   ) {
     super(sizeData.exponent, sizeData.objectID, textureLow);

@@ -1,5 +1,285 @@
 {
   "items": {
+    "030": {
+      "title": "Pixel de LCD",
+      "description": "Apesar de variar muito, o tamanho médio de um pixel é de 300 micrômetros. Um pixel contém três subpixels de cores vermelha, verde e azul. Pixels são legais, mas voxels são ainda mais legais. Eles são pixels tridimensionais."
+    },
+    "031": {
+      "title": "Palm Jebel Ali",
+      "description": "Palm Jebel Ali é a maior ilha feita pelo homem (sem incluir ilhas como Flevopolder, onde uma região da Holanda foi drenada para que houvesse mais espaço). Palm Jebel Ali ainda não está completa. Ela faz parte das Palm Islands (Ilhas Palmeira), cujo planejamento é de abrigar 250.000 pessoas!"
+    },
+    "032": {
+      "title": "Neutrino",
+      "description": "Neutrinos atravessam matéria comum como eu e você o tempo todo! Na verdade, eles estão fazendo isto agora mesmo! Neutrinos não apresentam carga, sendo assim eles só podem ser afetados pela gravidade ou pela força nuclear fraca. Porém, eles são tão pequenos que sua trajetória quase não é afetada."
+    },
+    "033": {
+      "title": "Neutrino de alta energia",
+      "description": "Neutrinos de alta energia são maiores. Para saber mais sobre neutrinos, vá para neutrino, que mostra o tamanho médio dessas partículas. Chegam a ser 15.000 vezes menores!"
+    },
+    "034": {
+      "title": "Palito de fósforo",
+      "description": "O palito de fósforo é uma ferramenta muito útil. Quando riscado em alguma coisa, ele pode pegar fogo. Isto o torna muito perigoso! Por isso nunca é bom brincar com fósforos. Entendeu?"
+    },
+    "035": {
+      "title": "Ovo de galinha",
+      "description": "Do ovo da galinha normalmente saem pintinhos. Muitas pessoas gostam de comer ovos. Apesar da aparência, não existem diferenças entre ovos de galinha brancos e marrons."
+    },
+    "036": {
+      "title": "Ovo de codorna",
+      "description": "Muitas pessoas acham ovos de codorna mais saborosos que ovos de galinha. O ovo de codorna é menor e mais raro de achar que o ovo de galinha, mas mesmo assim algumas pessoas adoram!"
+    },
+    "037": {
+      "title": "Polegada quadrada",
+      "description": "A polegada é uma medida de comprimento utilizada nos Estados Unidos e em alguns países de língua inglesa. Uma polegada equivale a 2,54 centímetros. Uma Polegada quadrada é a área de um quadrado com uma polegada de lado.\","
+    },
+    "038": {
+      "title": "Grão de café",
+      "description": "Este grão de café tem aproximadamente um centímetro de comprimento. Ele é marrom e tem uma listra no meio, e às vezes, quando você olha para ele, você acaba se esquecendo que o seu diâmetro é 10^-29 do diâmetro do universo conhecido."
+    },
+    "039": {
+      "title": "Minhoca comum",
+      "description": "Você ama essas minhocas pegajosas e grudentas, não ama? Contrário às lendas urbanas, a maior parte das minhocas irá morrer se você cortá-las ao meio. Às vezes, a cabeça sobrevive e desenvolve uma nova cauda."
+    },
+    "040": {
+      "title": "Rigel",
+      "description": "Rigel é uma estrela azul escaldante, a mais brilhante da constelação de Órion. No céu, ela pode ser vista próxima da linha do Equador, por isso é possível vê-la de quase qualquer lugar na Terra."
+    },
+    "041": {
+      "title": "Estados Unidos da América",
+      "description": "Os Estados Unidos ficam na América do Norte, é o quarto maior país do mundo, sendo 12% maior que o Brasil em extensão territorial. Apesar de parecer aqui maior que Plutão, este possui uma face oculta atrás, o que significa que Plutão possui maior área de superfície!"
+    },
+    "042": {
+      "title": "Terra",
+      "description": "A Terra é nossa única casa. Enquanto nós vivemos nela, podemos considerá-la gigante, mas ainda assim é importante cuidar dela. Quando ela for destruída, não terá mais nenhum outro lugar para nós irmos."
+    },
+    "043": {
+      "title": "Deneb",
+      "description": "Deneb é a mais brilhante das estrelas da constelação de Cisne. Deneb está a 1.500 anos-luz daqui, o que a torna a mais distante das nossas 25 estrelas mais brilhantes. Se você vivesse em Marte, Deneb apareceria acima do Pólo Norte - e não Polaris."
+    },
+    "044": {
+      "title": "VV Cephei A",
+      "description": "Por algum tempo VV Cephei A era considerada a maior das estrelas conhecidas. Agora este título pertence a VY Canis Majoris. O motivo é que novas estrelas são descobertas a todo instante!"
+    },
+    "045": {
+      "title": "R Doradus",
+      "description": "R Doradus é relativamente grande e está a apenas 200 anos-luz da Terra, logo seu tamanho aparente é o segundo maior do nosso céu! Ela mede 0,05 arco-segundos. O Sol é a maior, com 1.920 arco-segundos  - 40.000 vezes maior."
+    },
+    "046": {
+      "title": "Aldebaran",
+      "description": "Aldebaran não deve ser confundida com Alderaan, um dos planetas do filme Guerra nas Estrelas. Alderaan é bastante similar à Terra no que diz respeito a tamanho, duração do dia e disponibilidade de água. Porém, Aldebaran é 5.000 vezes maior em diâmetro, conclui uma rotação a cada 643 dias terrestes e não possui água."
+    },
+    "047": {
+      "title": "Pollux",
+      "description": "Na mitologia grega, Pollux é o irmão gêmeo de Castor. Ambos são nomes de estrelas na constelação de Gêmeos. Porém, na verdade, enquanto Pollux é uma única estrela, Castor é composto de três estrelas binárias, dando um total de seis estrelas. Castor é um conjunto de sêxtuplos!"
+    },
+    "048": {
+      "title": "Arcturus",
+      "description": "Arcturus é a terceira mais brilhante estrela no céu noturno, depois de Sirius e Canopus. Também é a mais brilhante estrela da constelação de Boötes. Você pode localizá-la seguindo a alça do Grande Carro."
+    },
+    "049": {
+      "title": "O Sol",
+      "description": "O Sol é uma estrela que está bem perto de nós (em termos astronômicos). A energia do Sol alimenta as plantas e algas na Terra, que por sua vez servem de alimento para os animais e todos os outros organismos. Ou seja: toda a energia necessária para a vida na Terra vem do Sol. O Sol possui um diâmetro aproximadamente 100 vezes maior que o da Terra! A energia solar que atinge nosso planeta é 20.000 vezes maior que a utilizada pela raça humana."
+    },
+    "050": {
+      "title": "Alpha Centauri A",
+      "description": "Alpha Centauri A é a maior estrela da constelação de Centauro (composta de três estrelas), que é a constelação mais próxima de nós. Esta estrela também é a quarta mais brilhante do nosso céu à noite."
+    },
+    "051": {
+      "title": "Alpha Centauri B",
+      "description": "Alpha Centauri B é a segunda maior estrela da constelação de Centauro. Seu diâmetro é de aproximadamente um milhão de quilômetros, sendo um pouco menor que o Sol. As Alpha Centauri A e B estão tão próximas uma da outra que elas aparecem como se fosse uma única estrela para nós terráqueos."
+    },
+    "052": {
+      "title": "Proxima Centauri",
+      "description": "Proxima Centauri é conhecida por ser a estrela mais próxima da Terra com exceção do Sol. Seu nome é auto-explicativo. Proxima Centauri é uma diminuta estrela vermelha. Infelizmente, seu brilho é tão fraco que você precisa de um telescópio para visualizá-la."
+    },
+    "053": {
+      "title": "Sirius A",
+      "description": "Sirius é a estrela mais brilhante no céu à noite. É quase duas vezes mais brilhante que Canopus, a segunda mais brilhante. Porém, Sirius não é uma estrela grande. Ela só ostenta todo esse brilho devido a sua curta distância de nós, de apenas oito anos-luz."
+    },
+    "054": {
+      "title": "Sirius B",
+      "description": "Sirius B é uma anã branca. Ela é, por muito pouco, maior que a Terra! Visualizá-la é muito difícil porque ela está escondida pela luz ofuscante de Sirius A. Sirius B é conhecida como \"O Cachorrinho\"."
+    },
+    "055": {
+      "title": "Vega",
+      "description": "Vega é encontrada na constelação de Lira. Ela também faz parte do Triângulo de Verão, composta de Vega, Altair e Deneb. Vega possui uma rotação tão rápida que é capaz de fazer uma protuberância. Porém, nós a visualizamos a partir de seu pólo, então ela aparenta ser circular."
+    },
+    "056": {
+      "title": "Regulus",
+      "description": "Regulus gira tão rapidamente que faz protuberâncias, assim como Altair e Vega. Se Regulus girasse com uma velocidade 16% maior, ela iria se dilacerar! Regulus também é a estrela mais brilhante da constelação de Leão. Também existem Regulus B e C."
+    },
+    "057": {
+      "title": "Spica",
+      "description": "Spica é a décima quinta estrela mais brilhante no céu à noite e está na constelação de Virgem. Na verdade, ela é uma estrela binária. As duas estrelas estão bem próximas uma da outra, e elas se orbitam a cada quatro dias."
+    },
+    "058": {
+      "title": "Alnitak",
+      "description": "Alnitak ilumina a Nebulosa da Chama. Alnitak também é a estrela mais a Leste das três que formam o Cinturão de Órion. As outras duas são Alnilam e Mintaka, e todas elas são muito bem visíveis do planeta Terra."
+    },
+    "059": {
+      "title": "Gacrux",
+      "description": "'Gacrux, também conhecida como Gamma Crucis ou Rubídea, pode ser encontrada na constelação Cruzeiro do Sul. Gacrux é uma estrela binária. A maior das duas é uma gigante vermelha.',"
+    },
+    "060": {
+      "title": "Urano",
+      "description": "'Muitas pessoas gostam de falar o nome \"Urano\" como \"Ur-ânus\". Por isso, prefiro chamá-la de outros nomes, como \"Estrela Rei do Céu\" ou \"Sétimo Planeta\".',"
+    },
+    "061": {
+      "title": "Netuno",
+      "description": "Atualmente, Netuno é o planeta mais distante do Sol no Sistema Solar. Ele leva 164,8 anos terrestres para orbitar o Sol. Você nunca verá Netuno completar uma única órbita em toda a sua vida, a não ser que consigamos aumentar a expectativa de vida."
+    },
+    "062": {
+      "title": "Wolf 359",
+      "description": "Wolf 359 é uma pequena anã vermelha, diminuta perto de estrelas normais. É a sexta estrela mais próxima da Terra, atrás apenas do Sol, Proxima Centauri, Alpha Centauri A e B e a Estrela de Barnard. Ainda assim, sua magnitude é de meros +13,5."
+    },
+    "063": {
+      "title": "Gliese 229A",
+      "description": "Gliese 229A é uma estrela anã vermelha. Ela é um pouco menor que o Sol. Esta estrela também pode ser escrita como GJ 229 ou GI 229. Faz parte de um sistema binário, com a segunda estrela sendo Gliese 229B."
+    },
+    "064": {
+      "title": "Gliese 229B",
+      "description": "Gliese 229B é uma estrela anã marrom. Ela orbita uma outra estrela anã maior, Gliese 229A. Foi cogitado classificá-la como um planeta, mas ela é muito mais densa que Júpiter, tornando sua massa muito grande para considerarem-a um planeta."
+    },
+    "065": {
+      "title": "Júpiter",
+      "description": "Júpiter é o maior planeta do Sistema Solar. Porém, ele não é o maior planeta conhecido; este seria TReS-4. Júpiter é um gigante gasoso, sendo assim ele não passa de uma imensa bola de gás. Você não pode aterrissar em nenhum lugar dela. Júpiter também tem 64 luas, incluindo as quatro luas de Galileu."
+    },
+    "066": {
+      "title": "Saturno",
+      "description": "Saturno possui os anéis mais largos e visíveis do Sistema Solar. Galileu, o primeiro a visualizar estes anéis, pensou primeiramente que eles eram \"orelhas\". Dá para imaginar Saturno sem seus anéis? Ele seria só uma bola amarela."
+    },
+    "067": {
+      "title": "TReS-4",
+      "description": "TReS-4 é o maior planeta descoberto até agora. Está a 1.400 anos-luz de distância. Nenhum telescópio pode vê-lo, na verdade. Só sabemos de sua existência porque TReS-4 está na frente da estrela a qual ele orbita, escurecendo um pouco o brilho dela."
+    },
+    "068": {
+      "title": "Vênus",
+      "description": "Havia um tempo em que se pensava que Vênus e a Terra eram planetas irmãos. Isto não é necessariamente verdade! A superfície de Vênus está sempre acima de 450°C, porque sua atmosfera, que é composta em maior parte de dióxido de carbono, captura o calor irradiado pelo Sol!\","
+    },
+    "069": {
+      "title": "Marte",
+      "description": "Marte é conhecido como Planeta Vermelho, devido à alta quantidade de óxido de ferro em seu solo. Muitos acreditam que já existiu água e vida em Marte. Mesmo que isso seja verdade, porém, estes seres não seriam iguais a homenzinhos verdes."
+    },
+    "070": {
+      "title": "Mercúrio",
+      "description": "Mercúrio é o planeta mais próximo do Sol. Durante o dia, as temperaturas podem alcançar 400°C, mas à noite, as temperaturas podem cair para -180°C. Um ano mercuriano equivale a 88 dias terrestres."
+    },
+    "071": {
+      "title": "Ganímedes",
+      "description": "Ganímedes é a maior lua do Sistema Solar. Ela orbita Júpiter e foi descoberta por Galileu, por isso é considerada uma lua galileana. Cuidado para não confundir com Ganymed, que é um asteroide cujo nome não possui o \"es\" no final da palavra!"
+    },
+    "072": {
+      "title": "Calisto",
+      "description": "Calisto é a mais distante das luas galileanas. Sua órbita é a mais externa de todas as luas galileanas, o que explica o fato do planeta ser o mais atingido por meteoros. Todos esses impactos criaram muitas, muitas crateras."
+    },
+    "073": {
+      "title": "Io",
+      "description": "Io é lotada de vulcões - os mais numerosos no Sistema Solar! Os gêiseres de Io emitem dióxido de enxofre congelado a mais de 500 km de altura! A paisagem de Io se altera constantemente. Em um ano, ela terá uma aparência bem diferente!"
+    },
+    "074": {
+      "title": "Europa",
+      "description": "Europa é a mais débil das luas galileanas. Ela está coberta de gelo. Existem faixas misteriosas que cobrem sua superfície. Algumas pessoas acreditam que possa existir água debaixo da camada de gelo, possivelmente existindo até mesmo vida."
+    },
+    "075": {
+      "title": "Titã",
+      "description": "Titã é a única lua grande de Saturno. Ela possui uma atmosfera muito grossa, boa parte composta de nitrogênio. A atmosfera da Terra também possui, em sua maioria, nitrogênio. Titã possui mares de metano líquido (temperatura aproximada de 180°C) Existe até mesmo um continente denominado Xanadu."
+    },
+    "076": {
+      "title": "A Lua",
+      "description": "A Lua, também conhecida como \"Luna\", é o objeto mais brilhante do nosso céu à noite. As marés acontecem devido ao movimento da Lua e do Sol. Ela orbita a Terra a cada 27 dias, 7 horas e 43 minutos. Gosto de imaginar como seria ver várias luas dispersas em nosso céu. Seria demais!"
+    },
+    "077": {
+      "title": "Tritão",
+      "description": "Tritão é a maior das luas de Netuno. Também é o objeto mais gelado de todo o Sistema Solar, com uma temperatura de -240°C. Além disso, Tritão é um lugar muito ventoso, com ventos alcançando quase a velocidade do som!"
+    },
+    "078": {
+      "title": "Plutão",
+      "description": "Plutão não é mais um planeta. Por que as pessoas sentem simpatia por ele? Ele não tem sentimentos. Mesmo se tivesse, o que iria importar a ele o que um bando de terráqueos pensam dele? É importante lembrar também que o nome oficial de Plutão é, a partir de agora, \"134340 Plutão\", pois ele é um planeta anão."
+    },
+    "079": {
+      "title": "Caronte",
+      "description": "Caronte é a única lua grande de Plutão. Seus tamanhos são bem próximos. São tão próximos, que algumas pessoas consideram Plutão e Caronte um planeta duplo. Você sabia que o mesmo lado de Caronte sempre está virado para Plutão, e o mesmo lado de de Plutão está sempre virado para Caronte? O nome deste fenômeno é \"acoplamento de maré\", e é o mesmo fenômeno que faz com que sempre vejamos a mesma face da Lua."
+    },
+    "080": {
+      "title": "Éris",
+      "description": "Éris é o maior dos planetas anões. É maior até mesmo que plutão, que também é um planeta anão. Éris também está bem longe do Sol. Éris possui uma lua chamada Disnomia."
+    },
+    "081": {
+      "title": "Disnomia",
+      "description": "Disnomia é a única lua de Éris e ela foi descoberta no dia 10 de setembro de 2005, num sábado. Você sabia que \"Disnomia\" se refere a uma dificuldade de aprendizado semelhante à dislexia?"
+    },
+    "082": {
+      "title": "Sedna",
+      "description": "Sedna possui uma órbita notavelmente elíptica. Ela está tão distante da Terra que leva 10.000 anos terrestres para completar uma órbita. Você deve ter percebido que \"Sedna\", de trás para frente é \"Andes\", a maior cordilheira de montanhas do mundo. (localizada na América do Sul) Ambas parecem ser de outro mundo!"
+    },
+    "083": {
+      "title": "Quaoar",
+      "description": "Quaoar é muito densa devido ao seu enorme núcleo. Quaoar provavelmente era muito maior no passado. Ela provavelmente foi atingida por um objeto do tamanho de Plutão, o que teria arrancado as outras camadas mais externas."
+    },
+    "084": {
+      "title": "Ceres",
+      "description": "Ceres não é um lugar muito bom para seres humanos viverem. Ceres também é o maior dos asteroides (sem acento), iniciando o debate sobre a definição de um planeta. Por muito tempo, pensava-se que Ceres era um planeta, mas concluiu-se que não."
+    },
+    "085": {
+      "title": "Polaris",
+      "description": "Polaris também é conhecida como Estrela do Norte. Ela está bem próxima do Pólo Norte, então se você quer saber para onde fica o norte, basta achar Polaris. Infelizmente isto não funciona se você estiver no hemisfério Sul."
+    },
+    "086": {
+      "title": "Antares",
+      "description": "Antares é uma supergigante vermelha muito próxima da eclíptica, sendo assim ela é ocultada pela Lua com frequência. Antares também pesa septilhões de toneladas e está perdendo massa através dos ventos solares, mas este método é lento. O método mais rápido é explodindo, que ela fará em seguida."
+    },
+    "087": {
+      "title": "Altair",
+      "description": "Altair é uma das três estrelas do Triângulo de Verão. O Triângulo de Verão é um triângulo agudo, o que significa que todos os ângulos são menores que 90°! As outras duas estrelas são Vega e Deneb. Como muitas outras estrelas, Altair gira muito rápido, inchando em seu centro!"
+    },
+    "088": {
+      "title": "La Soberba",
+      "description": "La Soberba é uma das estrelas mais vermelhas do nosso céu. Ela é vermelha devido a todo o carbono-13 que ela gera ao fundir hélio. (O isótopo mais comum do carbono é o carbono-12) La Soberba tem uma temperatura de apenas 2500°C, tornando-a uma das estrelas mais frias conhecidas."
+    },
+    "089": {
+      "title": "Estrela da Pistola",
+      "description": "A Estrela da Pistola é uma das estrelas mais luminosas conhecidas. Em vinte segundos, ela irradia a mesma quantidade de energia que o Sol irradia em um ano. Nuvens de poeira interestelar não nos permitem vê-la. Ela se chama Estrela da Pistola não por causa de sua luminosidade, mas por que ela está contida na Nebulosa de Pistola."
+    },
+    "090": {
+      "title": "S Doradus",
+      "description": "S Doradus é uma hipergigante, além de ser uma das estrelas mais brilhantes da Grande Nuvem de Magalhães. Para mais informações sobre a Grande Nuvem de Magalhães, diminua o zoom em 8,5 ordens de magnitude."
+    },
+    "091": {
+      "title": "Enif",
+      "description": "Enif é uma supergigante laranja. Seu nome significa \"nariz\" em árabe, devido à constelação de Pégaso; esta estrela fica na posição do \"focinho\". Coincidentemente,  a palavra \"Enif\" de trás para frente é \"Fine\", que em inglês significa \"bom\"."
+    },
+    "092": {
+      "title": "Mu Cephei",
+      "description": "Mu Cephei é muito vermelha. Às vezes referem-se a ela como \"Herschel's Garnet Star\" devido à sua cor rubra. Outro nome alternativo é Erakis, se você não gostar dos dois primeiros nomes."
+    },
+    "093": {
+      "title": "KY Cygni",
+      "description": "KY Cygni é 300.000 vezes mais luminosa que o Sol, e o Sol é bem luminoso, não é mesmo? O Sol é tão luminoso que você não pode olhar diretamente para ele! Porém, não tem problema em olhar para a KY Cygni, pois ela está 300 milhões de vezes mais distante."
+    },
+    "094": {
+      "title": "V354 Cephei",
+      "description": "V354 Cephei é uma supergigante vermelha, e como ela é gigante. Se esta estrela fosse colocada no Sistema Solar, ela iria se estender para além da órbita de Júpiter. O número 354, além de estar no nome desta estrela, é também o ano em que Santo Agostinho de Hipona nasceu."
+    },
+    "095": {
+      "title": "WOH G64",
+      "description": "Já sei... você deve estar pensando, \"WOH... que estrela enorme!\" Você está certo, porque esta é a segunda maior estrela conhecida pelo homem. WOH G64 é encontrada na Grande Nuvem de Magalhães. Existe uma nuvem circundante à estrela de meio ano-luz de comprimento."
+    },
+    "096": {
+      "title": "VY Canis Majoris",
+      "description": "VY Canis Majoris é a maior de todas as estrelas conhecidas. Ela é tão grande que se fosse colocada no Sistema Solar, seu diâmetro ultrapassaria a órbita de Saturno! Levaria 1.200 anos para um avião dar uma volta completa nele."
+    },
+    "097": {
+      "title": "Betelgeuse",
+      "description": "A idade de Betelgeuse está na casa dos milhões de anos. Betelgeuse é tão velha, que estima-se que ela vá explodir nos próximos dez mil anos. Estrelas menores podem viver por trilhões de anos. Betelgeuse, porém, é tão grande que acabou envelhecendo mais rápido."
+    },
+    "098": {
+      "title": "Albireo",
+      "description": "Albireo é composta de três estrelas no total. Aqui nós estamos mostrando apenas a maior delas. Duas delas estão muito próximas, formando um ponto amarelo. A terceira é azul e mais afastada. A estrela azul e as amarelas estão tão afastadas uma das outras que levaria 100.000 anos para completar uma órbita."
+    },
+    "099": {
+      "title": "Estrela de Kapteyn",
+      "description": "A Estrela de Kapteyn está a apenas treze anos-luz de distância. Mesmo assim, sua magnitude é de +9, então você vai precisar de binóculos para visualizá-la. Há dez mil anos atrás, esta estrela estava a apenas sete anos-luz de distância!"
+    },
     "100": {
       "title": "Estrela de Luyten",
       "description": "A Estrela de Luyten é uma anã vermelha localizada a apenas doze anos-luz daqui. Ela está tão perto de Procyon que esta possui um briho 10 vezes maior se comparado ao brilho de Sirius em relação à Terra."
@@ -701,8 +981,8 @@
       "description": "Essa coisa pesa 15.000 kg! Isto é muito! Ele também pousou na Lua. Sua aterrissagem inspirou o jogo de arcade \"Lunar Lander\", que não é fácil. Quando eu jogo, eu sempre fico sem combustível!"
     },
     "275": {
-      "title": "Campo de Futebol Americano",
-      "description": "Campos de futebol americano possuem 120 jardas (109,7 m) de comprimento, se as ‘end zones’ são incluídas. De qualquer forma, campos de futebol são muitas vezes utilizados para medir objetos grandes. Por exemplo, \"O Titanic mede três campos de futebol!\". Campos de futebol também são utilizados para jogar futebol."
+      "title": "Campo de futebol",
+      "description": "As dimensões recomendadas pela FIFA para um campo de futebol em partidas internacionais são 105 metros de comprimento e 68 metros de largura. O futebol moderno surgiu na Inglaterra em 1863, quando as regras do jogo foram adotadas. Hoje, há mais de 40 mil clubes de futebol registrados na Inglaterra — mais do que em qualquer outro país do mundo."
     },
     "276": {
       "title": "Gateway Arch",
@@ -912,285 +1192,17 @@
       "title": "Grande Barreira de Coral",
       "description": "A Grande Barreira de Coral é uma imensa faixa de corais, composta por cerca de 2900 recifes, 600 ilhas continentais e 300 atóis de coral, situada entre as praias do nordeste da Austrália e Papua-Nova Guiné."
     },
-    "030": {
-      "title": "Pixel de LCD",
-      "description": "Apesar de variar muito, o tamanho médio de um pixel é de 300 micrômetros. Um pixel contém três subpixels de cores vermelha, verde e azul. Pixels são legais, mas voxels são ainda mais legais. Eles são pixels tridimensionais."
-    },
-    "031": {
-      "title": "Palm Jebel Ali",
-      "description": "Palm Jebel Ali é a maior ilha feita pelo homem (sem incluir ilhas como Flevopolder, onde uma região da Holanda foi drenada para que houvesse mais espaço). Palm Jebel Ali ainda não está completa. Ela faz parte das Palm Islands (Ilhas Palmeira), cujo planejamento é de abrigar 250.000 pessoas!"
-    },
-    "032": {
-      "title": "Neutrino",
-      "description": "Neutrinos atravessam matéria comum como eu e você o tempo todo! Na verdade, eles estão fazendo isto agora mesmo! Neutrinos não apresentam carga, sendo assim eles só podem ser afetados pela gravidade ou pela força nuclear fraca. Porém, eles são tão pequenos que sua trajetória quase não é afetada."
-    },
-    "033": {
-      "title": "Neutrino de alta energia",
-      "description": "Neutrinos de alta energia são maiores. Para saber mais sobre neutrinos, vá para neutrino, que mostra o tamanho médio dessas partículas. Chegam a ser 15.000 vezes menores!"
-    },
-    "034": {
-      "title": "Palito de fósforo",
-      "description": "O palito de fósforo é uma ferramenta muito útil. Quando riscado em alguma coisa, ele pode pegar fogo. Isto o torna muito perigoso! Por isso nunca é bom brincar com fósforos. Entendeu?"
-    },
-    "035": {
-      "title": "Ovo de galinha",
-      "description": "Do ovo da galinha normalmente saem pintinhos. Muitas pessoas gostam de comer ovos. Apesar da aparência, não existem diferenças entre ovos de galinha brancos e marrons."
-    },
-    "036": {
-      "title": "Ovo de codorna",
-      "description": "Muitas pessoas acham ovos de codorna mais saborosos que ovos de galinha. O ovo de codorna é menor e mais raro de achar que o ovo de galinha, mas mesmo assim algumas pessoas adoram!"
-    },
-    "037": {
-      "title": "Polegada quadrada",
-      "description": "A polegada é uma medida de comprimento utilizada nos Estados Unidos e em alguns países de língua inglesa. Uma polegada equivale a 2,54 centímetros. Uma Polegada quadrada é a área de um quadrado com uma polegada de lado.\","
-    },
-    "038": {
-      "title": "Grão de café",
-      "description": "Este grão de café tem aproximadamente um centímetro de comprimento. Ele é marrom e tem uma listra no meio, e às vezes, quando você olha para ele, você acaba se esquecendo que o seu diâmetro é 10^-29 do diâmetro do universo conhecido."
-    },
-    "039": {
-      "title": "Minhoca comum",
-      "description": "Você ama essas minhocas pegajosas e grudentas, não ama? Contrário às lendas urbanas, a maior parte das minhocas irá morrer se você cortá-las ao meio. Às vezes, a cabeça sobrevive e desenvolve uma nova cauda."
-    },
-    "040": {
-      "title": "Rigel",
-      "description": "Rigel é uma estrela azul escaldante, a mais brilhante da constelação de Órion. No céu, ela pode ser vista próxima da linha do Equador, por isso é possível vê-la de quase qualquer lugar na Terra."
-    },
-    "041": {
-      "title": "Estados Unidos da América",
-      "description": "Os Estados Unidos ficam na América do Norte, é o quarto maior país do mundo, sendo 12% maior que o Brasil em extensão territorial. Apesar de parecer aqui maior que Plutão, este possui uma face oculta atrás, o que significa que Plutão possui maior área de superfície!"
-    },
-    "042": {
-      "title": "Terra",
-      "description": "A Terra é nossa única casa. Enquanto nós vivemos nela, podemos considerá-la gigante, mas ainda assim é importante cuidar dela. Quando ela for destruída, não terá mais nenhum outro lugar para nós irmos."
-    },
-    "043": {
-      "title": "Deneb",
-      "description": "Deneb é a mais brilhante das estrelas da constelação de Cisne. Deneb está a 1.500 anos-luz daqui, o que a torna a mais distante das nossas 25 estrelas mais brilhantes. Se você vivesse em Marte, Deneb apareceria acima do Pólo Norte - e não Polaris."
-    },
-    "044": {
-      "title": "VV Cephei A",
-      "description": "Por algum tempo VV Cephei A era considerada a maior das estrelas conhecidas. Agora este título pertence a VY Canis Majoris. O motivo é que novas estrelas são descobertas a todo instante!"
-    },
-    "045": {
-      "title": "R Doradus",
-      "description": "R Doradus é relativamente grande e está a apenas 200 anos-luz da Terra, logo seu tamanho aparente é o segundo maior do nosso céu! Ela mede 0,05 arco-segundos. O Sol é a maior, com 1.920 arco-segundos  - 40.000 vezes maior."
-    },
-    "046": {
-      "title": "Aldebaran",
-      "description": "Aldebaran não deve ser confundida com Alderaan, um dos planetas do filme Guerra nas Estrelas. Alderaan é bastante similar à Terra no que diz respeito a tamanho, duração do dia e disponibilidade de água. Porém, Aldebaran é 5.000 vezes maior em diâmetro, conclui uma rotação a cada 643 dias terrestes e não possui água."
-    },
-    "047": {
-      "title": "Pollux",
-      "description": "Na mitologia grega, Pollux é o irmão gêmeo de Castor. Ambos são nomes de estrelas na constelação de Gêmeos. Porém, na verdade, enquanto Pollux é uma única estrela, Castor é composto de três estrelas binárias, dando um total de seis estrelas. Castor é um conjunto de sêxtuplos!"
-    },
-    "048": {
-      "title": "Arcturus",
-      "description": "Arcturus é a terceira mais brilhante estrela no céu noturno, depois de Sirius e Canopus. Também é a mais brilhante estrela da constelação de Boötes. Você pode localizá-la seguindo a alça do Grande Carro."
-    },
-    "049": {
-      "title": "O Sol",
-      "description": "O Sol é uma estrela que está bem perto de nós (em termos astronômicos). A energia do Sol alimenta as plantas e algas na Terra, que por sua vez servem de alimento para os animais e todos os outros organismos. Ou seja: toda a energia necessária para a vida na Terra vem do Sol. O Sol possui um diâmetro aproximadamente 100 vezes maior que o da Terra! A energia solar que atinge nosso planeta é 20.000 vezes maior que a utilizada pela raça humana."
-    },
-    "050": {
-      "title": "Alpha Centauri A",
-      "description": "Alpha Centauri A é a maior estrela da constelação de Centauro (composta de três estrelas), que é a constelação mais próxima de nós. Esta estrela também é a quarta mais brilhante do nosso céu à noite."
-    },
-    "051": {
-      "title": "Alpha Centauri B",
-      "description": "Alpha Centauri B é a segunda maior estrela da constelação de Centauro. Seu diâmetro é de aproximadamente um milhão de quilômetros, sendo um pouco menor que o Sol. As Alpha Centauri A e B estão tão próximas uma da outra que elas aparecem como se fosse uma única estrela para nós terráqueos."
-    },
-    "052": {
-      "title": "Proxima Centauri",
-      "description": "Proxima Centauri é conhecida por ser a estrela mais próxima da Terra com exceção do Sol. Seu nome é auto-explicativo. Proxima Centauri é uma diminuta estrela vermelha. Infelizmente, seu brilho é tão fraco que você precisa de um telescópio para visualizá-la."
-    },
-    "053": {
-      "title": "Sirius A",
-      "description": "Sirius é a estrela mais brilhante no céu à noite. É quase duas vezes mais brilhante que Canopus, a segunda mais brilhante. Porém, Sirius não é uma estrela grande. Ela só ostenta todo esse brilho devido a sua curta distância de nós, de apenas oito anos-luz."
-    },
-    "054": {
-      "title": "Sirius B",
-      "description": "Sirius B é uma anã branca. Ela é, por muito pouco, maior que a Terra! Visualizá-la é muito difícil porque ela está escondida pela luz ofuscante de Sirius A. Sirius B é conhecida como \"O Cachorrinho\"."
-    },
-    "055": {
-      "title": "Vega",
-      "description": "Vega é encontrada na constelação de Lira. Ela também faz parte do Triângulo de Verão, composta de Vega, Altair e Deneb. Vega possui uma rotação tão rápida que é capaz de fazer uma protuberância. Porém, nós a visualizamos a partir de seu pólo, então ela aparenta ser circular."
-    },
-    "056": {
-      "title": "Regulus",
-      "description": "Regulus gira tão rapidamente que faz protuberâncias, assim como Altair e Vega. Se Regulus girasse com uma velocidade 16% maior, ela iria se dilacerar! Regulus também é a estrela mais brilhante da constelação de Leão. Também existem Regulus B e C."
-    },
-    "057": {
-      "title": "Spica",
-      "description": "Spica é a décima quinta estrela mais brilhante no céu à noite e está na constelação de Virgem. Na verdade, ela é uma estrela binária. As duas estrelas estão bem próximas uma da outra, e elas se orbitam a cada quatro dias."
-    },
-    "058": {
-      "title": "Alnitak",
-      "description": "Alnitak ilumina a Nebulosa da Chama. Alnitak também é a estrela mais a Leste das três que formam o Cinturão de Órion. As outras duas são Alnilam e Mintaka, e todas elas são muito bem visíveis do planeta Terra."
-    },
-    "059": {
-      "title": "Gacrux",
-      "description": "'Gacrux, também conhecida como Gamma Crucis ou Rubídea, pode ser encontrada na constelação Cruzeiro do Sul. Gacrux é uma estrela binária. A maior das duas é uma gigante vermelha.',"
-    },
-    "060": {
-      "title": "Urano",
-      "description": "'Muitas pessoas gostam de falar o nome \"Urano\" como \"Ur-ânus\". Por isso, prefiro chamá-la de outros nomes, como \"Estrela Rei do Céu\" ou \"Sétimo Planeta\".',"
-    },
-    "061": {
-      "title": "Netuno",
-      "description": "Atualmente, Netuno é o planeta mais distante do Sol no Sistema Solar. Ele leva 164,8 anos terrestres para orbitar o Sol. Você nunca verá Netuno completar uma única órbita em toda a sua vida, a não ser que consigamos aumentar a expectativa de vida."
-    },
-    "062": {
-      "title": "Wolf 359",
-      "description": "Wolf 359 é uma pequena anã vermelha, diminuta perto de estrelas normais. É a sexta estrela mais próxima da Terra, atrás apenas do Sol, Proxima Centauri, Alpha Centauri A e B e a Estrela de Barnard. Ainda assim, sua magnitude é de meros +13,5."
-    },
-    "063": {
-      "title": "Gliese 229A",
-      "description": "Gliese 229A é uma estrela anã vermelha. Ela é um pouco menor que o Sol. Esta estrela também pode ser escrita como GJ 229 ou GI 229. Faz parte de um sistema binário, com a segunda estrela sendo Gliese 229B."
-    },
-    "064": {
-      "title": "Gliese 229B",
-      "description": "Gliese 229B é uma estrela anã marrom. Ela orbita uma outra estrela anã maior, Gliese 229A. Foi cogitado classificá-la como um planeta, mas ela é muito mais densa que Júpiter, tornando sua massa muito grande para considerarem-a um planeta."
-    },
-    "065": {
-      "title": "Júpiter",
-      "description": "Júpiter é o maior planeta do Sistema Solar. Porém, ele não é o maior planeta conhecido; este seria TReS-4. Júpiter é um gigante gasoso, sendo assim ele não passa de uma imensa bola de gás. Você não pode aterrissar em nenhum lugar dela. Júpiter também tem 64 luas, incluindo as quatro luas de Galileu."
-    },
-    "066": {
-      "title": "Saturno",
-      "description": "Saturno possui os anéis mais largos e visíveis do Sistema Solar. Galileu, o primeiro a visualizar estes anéis, pensou primeiramente que eles eram \"orelhas\". Dá para imaginar Saturno sem seus anéis? Ele seria só uma bola amarela."
-    },
-    "067": {
-      "title": "TReS-4",
-      "description": "TReS-4 é o maior planeta descoberto até agora. Está a 1.400 anos-luz de distância. Nenhum telescópio pode vê-lo, na verdade. Só sabemos de sua existência porque TReS-4 está na frente da estrela a qual ele orbita, escurecendo um pouco o brilho dela."
-    },
-    "068": {
-      "title": "Vênus",
-      "description": "Havia um tempo em que se pensava que Vênus e a Terra eram planetas irmãos. Isto não é necessariamente verdade! A superfície de Vênus está sempre acima de 450°C, porque sua atmosfera, que é composta em maior parte de dióxido de carbono, captura o calor irradiado pelo Sol!\","
-    },
-    "069": {
-      "title": "Marte",
-      "description": "Marte é conhecido como Planeta Vermelho, devido à alta quantidade de óxido de ferro em seu solo. Muitos acreditam que já existiu água e vida em Marte. Mesmo que isso seja verdade, porém, estes seres não seriam iguais a homenzinhos verdes."
-    },
-    "070": {
-      "title": "Mercúrio",
-      "description": "Mercúrio é o planeta mais próximo do Sol. Durante o dia, as temperaturas podem alcançar 400°C, mas à noite, as temperaturas podem cair para -180°C. Um ano mercuriano equivale a 88 dias terrestres."
-    },
-    "071": {
-      "title": "Ganímedes",
-      "description": "Ganímedes é a maior lua do Sistema Solar. Ela orbita Júpiter e foi descoberta por Galileu, por isso é considerada uma lua galileana. Cuidado para não confundir com Ganymed, que é um asteroide cujo nome não possui o \"es\" no final da palavra!"
-    },
-    "072": {
-      "title": "Calisto",
-      "description": "Calisto é a mais distante das luas galileanas. Sua órbita é a mais externa de todas as luas galileanas, o que explica o fato do planeta ser o mais atingido por meteoros. Todos esses impactos criaram muitas, muitas crateras."
-    },
-    "073": {
-      "title": "Io",
-      "description": "Io é lotada de vulcões - os mais numerosos no Sistema Solar! Os gêiseres de Io emitem dióxido de enxofre congelado a mais de 500 km de altura! A paisagem de Io se altera constantemente. Em um ano, ela terá uma aparência bem diferente!"
-    },
-    "074": {
-      "title": "Europa",
-      "description": "Europa é a mais débil das luas galileanas. Ela está coberta de gelo. Existem faixas misteriosas que cobrem sua superfície. Algumas pessoas acreditam que possa existir água debaixo da camada de gelo, possivelmente existindo até mesmo vida."
-    },
-    "075": {
-      "title": "Titã",
-      "description": "Titã é a única lua grande de Saturno. Ela possui uma atmosfera muito grossa, boa parte composta de nitrogênio. A atmosfera da Terra também possui, em sua maioria, nitrogênio. Titã possui mares de metano líquido (temperatura aproximada de 180°C) Existe até mesmo um continente denominado Xanadu."
-    },
-    "076": {
-      "title": "A Lua",
-      "description": "A Lua, também conhecida como \"Luna\", é o objeto mais brilhante do nosso céu à noite. As marés acontecem devido ao movimento da Lua e do Sol. Ela orbita a Terra a cada 27 dias, 7 horas e 43 minutos. Gosto de imaginar como seria ver várias luas dispersas em nosso céu. Seria demais!"
-    },
-    "077": {
-      "title": "Tritão",
-      "description": "Tritão é a maior das luas de Netuno. Também é o objeto mais gelado de todo o Sistema Solar, com uma temperatura de -240°C. Além disso, Tritão é um lugar muito ventoso, com ventos alcançando quase a velocidade do som!"
-    },
-    "078": {
-      "title": "Plutão",
-      "description": "Plutão não é mais um planeta. Por que as pessoas sentem simpatia por ele? Ele não tem sentimentos. Mesmo se tivesse, o que iria importar a ele o que um bando de terráqueos pensam dele? É importante lembrar também que o nome oficial de Plutão é, a partir de agora, \"134340 Plutão\", pois ele é um planeta anão."
-    },
-    "079": {
-      "title": "Caronte",
-      "description": "Caronte é a única lua grande de Plutão. Seus tamanhos são bem próximos. São tão próximos, que algumas pessoas consideram Plutão e Caronte um planeta duplo. Você sabia que o mesmo lado de Caronte sempre está virado para Plutão, e o mesmo lado de de Plutão está sempre virado para Caronte? O nome deste fenômeno é \"acoplamento de maré\", e é o mesmo fenômeno que faz com que sempre vejamos a mesma face da Lua."
-    },
-    "080": {
-      "title": "Éris",
-      "description": "Éris é o maior dos planetas anões. É maior até mesmo que plutão, que também é um planeta anão. Éris também está bem longe do Sol. Éris possui uma lua chamada Disnomia."
-    },
-    "081": {
-      "title": "Disnomia",
-      "description": "Disnomia é a única lua de Éris e ela foi descoberta no dia 10 de setembro de 2005, num sábado. Você sabia que \"Disnomia\" se refere a uma dificuldade de aprendizado semelhante à dislexia?"
-    },
-    "082": {
-      "title": "Sedna",
-      "description": "Sedna possui uma órbita notavelmente elíptica. Ela está tão distante da Terra que leva 10.000 anos terrestres para completar uma órbita. Você deve ter percebido que \"Sedna\", de trás para frente é \"Andes\", a maior cordilheira de montanhas do mundo. (localizada na América do Sul) Ambas parecem ser de outro mundo!"
-    },
-    "083": {
-      "title": "Quaoar",
-      "description": "Quaoar é muito densa devido ao seu enorme núcleo. Quaoar provavelmente era muito maior no passado. Ela provavelmente foi atingida por um objeto do tamanho de Plutão, o que teria arrancado as outras camadas mais externas."
-    },
-    "084": {
-      "title": "Ceres",
-      "description": "Ceres não é um lugar muito bom para seres humanos viverem. Ceres também é o maior dos asteroides (sem acento), iniciando o debate sobre a definição de um planeta. Por muito tempo, pensava-se que Ceres era um planeta, mas concluiu-se que não."
-    },
-    "085": {
-      "title": "Polaris",
-      "description": "Polaris também é conhecida como Estrela do Norte. Ela está bem próxima do Pólo Norte, então se você quer saber para onde fica o norte, basta achar Polaris. Infelizmente isto não funciona se você estiver no hemisfério Sul."
-    },
-    "086": {
-      "title": "Antares",
-      "description": "Antares é uma supergigante vermelha muito próxima da eclíptica, sendo assim ela é ocultada pela Lua com frequência. Antares também pesa septilhões de toneladas e está perdendo massa através dos ventos solares, mas este método é lento. O método mais rápido é explodindo, que ela fará em seguida."
-    },
-    "087": {
-      "title": "Altair",
-      "description": "Altair é uma das três estrelas do Triângulo de Verão. O Triângulo de Verão é um triângulo agudo, o que significa que todos os ângulos são menores que 90°! As outras duas estrelas são Vega e Deneb. Como muitas outras estrelas, Altair gira muito rápido, inchando em seu centro!"
-    },
-    "088": {
-      "title": "La Soberba",
-      "description": "La Soberba é uma das estrelas mais vermelhas do nosso céu. Ela é vermelha devido a todo o carbono-13 que ela gera ao fundir hélio. (O isótopo mais comum do carbono é o carbono-12) La Soberba tem uma temperatura de apenas 2500°C, tornando-a uma das estrelas mais frias conhecidas."
-    },
-    "089": {
-      "title": "Estrela da Pistola",
-      "description": "A Estrela da Pistola é uma das estrelas mais luminosas conhecidas. Em vinte segundos, ela irradia a mesma quantidade de energia que o Sol irradia em um ano. Nuvens de poeira interestelar não nos permitem vê-la. Ela se chama Estrela da Pistola não por causa de sua luminosidade, mas por que ela está contida na Nebulosa de Pistola."
-    },
-    "090": {
-      "title": "S Doradus",
-      "description": "S Doradus é uma hipergigante, além de ser uma das estrelas mais brilhantes da Grande Nuvem de Magalhães. Para mais informações sobre a Grande Nuvem de Magalhães, diminua o zoom em 8,5 ordens de magnitude."
-    },
-    "091": {
-      "title": "Enif",
-      "description": "Enif é uma supergigante laranja. Seu nome significa \"nariz\" em árabe, devido à constelação de Pégaso; esta estrela fica na posição do \"focinho\". Coincidentemente,  a palavra \"Enif\" de trás para frente é \"Fine\", que em inglês significa \"bom\"."
-    },
-    "092": {
-      "title": "Mu Cephei",
-      "description": "Mu Cephei é muito vermelha. Às vezes referem-se a ela como \"Herschel's Garnet Star\" devido à sua cor rubra. Outro nome alternativo é Erakis, se você não gostar dos dois primeiros nomes."
-    },
-    "093": {
-      "title": "KY Cygni",
-      "description": "KY Cygni é 300.000 vezes mais luminosa que o Sol, e o Sol é bem luminoso, não é mesmo? O Sol é tão luminoso que você não pode olhar diretamente para ele! Porém, não tem problema em olhar para a KY Cygni, pois ela está 300 milhões de vezes mais distante."
-    },
-    "094": {
-      "title": "V354 Cephei",
-      "description": "V354 Cephei é uma supergigante vermelha, e como ela é gigante. Se esta estrela fosse colocada no Sistema Solar, ela iria se estender para além da órbita de Júpiter. O número 354, além de estar no nome desta estrela, é também o ano em que Santo Agostinho de Hipona nasceu."
-    },
-    "095": {
-      "title": "WOH G64",
-      "description": "Já sei... você deve estar pensando, \"WOH... que estrela enorme!\" Você está certo, porque esta é a segunda maior estrela conhecida pelo homem. WOH G64 é encontrada na Grande Nuvem de Magalhães. Existe uma nuvem circundante à estrela de meio ano-luz de comprimento."
-    },
-    "096": {
-      "title": "VY Canis Majoris",
-      "description": "VY Canis Majoris é a maior de todas as estrelas conhecidas. Ela é tão grande que se fosse colocada no Sistema Solar, seu diâmetro ultrapassaria a órbita de Saturno! Levaria 1.200 anos para um avião dar uma volta completa nele."
-    },
-    "097": {
-      "title": "Betelgeuse",
-      "description": "A idade de Betelgeuse está na casa dos milhões de anos. Betelgeuse é tão velha, que estima-se que ela vá explodir nos próximos dez mil anos. Estrelas menores podem viver por trilhões de anos. Betelgeuse, porém, é tão grande que acabou envelhecendo mais rápido."
-    },
-    "098": {
-      "title": "Albireo",
-      "description": "Albireo é composta de três estrelas no total. Aqui nós estamos mostrando apenas a maior delas. Duas delas estão muito próximas, formando um ponto amarelo. A terceira é azul e mais afastada. A estrela azul e as amarelas estão tão afastadas uma das outras que levaria 100.000 anos para completar uma órbita."
-    },
-    "099": {
-      "title": "Estrela de Kapteyn",
-      "description": "A Estrela de Kapteyn está a apenas treze anos-luz de distância. Mesmo assim, sua magnitude é de +9, então você vai precisar de binóculos para visualizá-la. Há dez mil anos atrás, esta estrela estava a apenas sete anos-luz de distância!"
+    "328": {
+      "title": "SARS-CoV-2",
+      "description": "O SARS-CoV-2 é o coronavírus que causou a pandemia de COVID-19, mudando a vida das pessoas entre 2020 e 2022. Apesar do seu tamanho microscópico (80–120 nanómetros), este vírus teve um enorme impacto na medicina, na ciência, na economia e na vida quotidiana em todo o mundo."
+    },
+    "329": {
+      "title": "Lago Baikal",
+      "description": "O lago Baikal é o lago mais profundo da Terra e o maior reservatório de água doce líquida entre os lagos. Sua idade é estimada em cerca de 25–30 milhões de anos, o que faz dele um dos lagos mais antigos do planeta. Nele vivem mais de 1.000 espécies de animais que não existem em nenhum outro lugar do mundo, compondo cerca de 60% de sua fauna."
+    },
+    "330": {
+      "title": "Tardígrado",
+      "description": "Os tardígrados são minúsculas criaturas de oito patas que se tornaram famosas por sua incrível resistência. Apesar do tamanho, conseguem sobreviver à dessecação, ao frio extremo, ao calor, à alta pressão e até às condições do espaço sideral, entrando em um estado de quase completa suspensão da vida."
     }
   }
 }

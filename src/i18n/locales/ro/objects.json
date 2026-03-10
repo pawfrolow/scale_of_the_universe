@@ -1,5 +1,285 @@
 {
   "items": {
+    "030": {
+      "title": "Pixel LCD",
+      "description": "Desi dimensiunea unui pixel nu este fixa, 300 de micrometri este media. Pixelii contin trei subpixeli; fiecare fiind rosu, verde si albastru. Pixelii sunt interesanti, voxelii însa sunt pixeli tridimensionali!"
+    },
+    "031": {
+      "title": "Palm Jebel Ali",
+      "description": "Palm Jebel Ali este cel mai mare insula creata de om (neincluzând insule precum Flevopolder, o regiune a Olandei care a fost drenata astfel încît sa poata avea mai mult teren). Palm Jebel Ali nu este completa. Este o parte a Insulelor Palm, si în final va gazdui 250.000 de persoane"
+    },
+    "032": {
+      "title": "Neutrinii",
+      "description": "Neutrinii strabat tot timpul materia obisnuita din care suntem alcatuiti toti. De fapt ei trec prin noi chiar acum! Neutrinii nu au încarcatura electrica, astfel încît sunt influentati doar de gravitatie si de forta slaba. Cu toate acestea, ei sunt atît de mici încît influenta este minima."
+    },
+    "033": {
+      "title": "Neutrinii de înalta energie",
+      "description": "Neutrinii de înalta energie sunt mai mari. Pentru a afla mai multe despre neutrini, du-te la neutrini, unde poti vedea dimensiunea lor aproximativa. Sunt de 15.000 de ori mai mici!"
+    },
+    "034": {
+      "title": "Un bat de chibrit",
+      "description": "Batul de chibrit este mic dar util. Cînd e frecat de o suprafata, se aprinde pe loc. Acest lucru îl face foarte periculos! De aceea este bine sa nu te joci cu chibriturile. Ai priceput?"
+    },
+    "035": {
+      "title": "Oul de gaina",
+      "description": "În ouale de gaina clocesc de obicei puii de gaina. Oamenilor le place sa manînce oua de gaina. În pofida aspectului, în realitate nu exista nici o diferenta între ouale albe si ouale maro"
+    },
+    "036": {
+      "title": "Oul de Prepelita",
+      "description": "Multi oameni cred ca ouale de prepelita  sunt mai bune decît ouale de gaina. Oul de prepelita este mai mic si mai putin popular decît oul de gaina"
+    },
+    "037": {
+      "title": "Un Inch patrat",
+      "description": "Daca nu esti obisnuit cu sistemul metric, aici e un inch patrat. Sistemul metric e însa mult mai popular. Apropo, un inch are 2,5 centimetri, iar suprafata este calculata în cm patrati."
+    },
+    "038": {
+      "title": "Bobul de cafea",
+      "description": "Bobul de cafea are o lungime de aproximativ un centimetru - e de fapt un fruct care seamana cu o fasole. Este maro si are dungi, si uneori, cînd te uiti la el, uiti ca diametrul sau este de 10 la puterea -29 din întreg universul cunoscut"
+    },
+    "039": {
+      "title": "Râma",
+      "description": "Îti plac râmele scîrboase? În ciuda ceea ce se crede, marea majoritate a speciilor de râme vor muri daca le tai în jumatate. Uneori însa, capul supravietuieste si îi va creste o noua coada"
+    },
+    "040": {
+      "title": "Rigel",
+      "description": "Rigel este o stea albastra aprins, cea mai stralucitoare stea din constelatia Orion. Se afla înspre ecuator, astfel încît este vizibila de aproape peste tot de pe Pamînt."
+    },
+    "041": {
+      "title": "Statele Unite ale Americii",
+      "description": "Aici sunt Statele Unite ale Americii. Desi pot parea mai mari decît Pluto, Pluto nu este plat, si de aceea Pluto are o suprafata mai mare!"
+    },
+    "042": {
+      "title": "Pamîntul",
+      "description": "Pamîntul este casa noastra si e de neînlocuit. Îl putem considera gigantic, dar cîta vreme locuim aici e important sa avem grija de el. Odata distrus, nu avem nicaieri altundeva sa mergem."
+    },
+    "043": {
+      "title": "Deneb",
+      "description": "Deneb este cea mai stralucitoare stea din constelatia Cygnus. Deneb se afla la 1.500 de ani-lumina distanta, cea mai îndepartata dintre 25 cele mai stralucitoare stele. Daca ati trait pe Marte, Deneb ar aparea deasupra Polului Nord - nu Polaris."
+    },
+    "044": {
+      "title": "V V Cephei A",
+      "description": "Pentru un timp V V Cephei A fost cea mai mare stea cunoscuta, detronata de V Y Canis Majoris. Asta se întîmpla pentru ca stele noi sunt descoperite tot timpul!"
+    },
+    "045": {
+      "title": "R Doradus",
+      "description": "R Doradus este o stea destul de mare, la doar 200 de ani-lumina de Pamînt, dimensiunea ei aparenta o fac cel mai mare obiect vizibil de pe cer dupa soare! Aceasta este de 0,05 arcseconds; Soarele la 1.920 arcseconds e de 40.000 de ori mai mare"
+    },
+    "046": {
+      "title": "Aldebaran",
+      "description": "Aldebaran nu trebuie sa fie confundata cu Alderaan, care este o planeta in Razboiul Stelelor.  Alderaan e asemanatoare în dimensiuni cu Pamîntul, durata zilei, si acoperirea cu apa. Aldebaran în schimb este de 5.000 de ori mai mare în diametru, se roteste la fiecare 643 de zile terestre, si nu are apa"
+    },
+    "047": {
+      "title": "Pollux",
+      "description": "În mitologia greaca, fratele geaman al lui Pollux este Castor. Ei sunt în acelasi timp stele în constelatia Gemini, însemnînd \"gemeni\". Cu toate acestea, în realitate, Pollux este o singura stea, în timp ce Castor este trei stele binare, în total deci sase stele. Castor sunt deci sextpleti!"
+    },
+    "048": {
+      "title": "Arcturus",
+      "description": "Arcturus este - dupa Sirius si Canopus - a treia cea mai stralucitoare stea de pe cerul noptii. Este cea mai stralucitoare stea din constelatia Boötes. Îl poti gasi urmînd Carul Mare"
+    },
+    "049": {
+      "title": "Soarele",
+      "description": "Soarele, sau Sol, este steaua care da Pamîntului energia necesara vietii. Soarele este în diametru de peste 100 de ori mai mare decît Pamîntul! Soarele trimite pe an de 20.000 de ori mai multa energie solara Pamîntului decît are nevoie omenirea"
+    },
+    "050": {
+      "title": "Alpha Centauri A",
+      "description": "Alpha Centauri A este cea mai mare stea din sistemul stelar Alpha Centauri (compus din trei stele), sistemul fiind si cel mai apropiat de noi. De asemenea, este si a patra cea mai stralucitoare stea de pe cerul noptii"
+    },
+    "051": {
+      "title": "Alpha Centauri B",
+      "description": "Alpha Centauri B este dupa marime a doua stea din sistemul de stele Alpha Centauri. Diametrul sau este de aproximativ un milion de kilometri, deci putin mai mica decît Soarele. Alpha Centuari A si B sunt atît de aproape una de alta încît par a fi o singura stea."
+    },
+    "052": {
+      "title": "Proxima Centauri",
+      "description": "Proxima Centauri este cea mai apropiata stea de Pamînt dupa Soare. Numele sau provine de la cuvântul \"proximitate\" (apropiere). Proxima Centauri este o stea rosie mica, din pacate ai nevoie de un telescop pentru a o vedea"
+    },
+    "053": {
+      "title": "Sirius A",
+      "description": "Sirius este cea mai stralucitoare stea de pe cerul de noapte. Este aproape de doua ori mai stralucitoare decît Canopus. Cu toate acestea, Sirius nu este o stea mare! Este doar pare mare din cauza apropierii de noi, la doar opt ani-lumina"
+    },
+    "054": {
+      "title": "Sirius B",
+      "description": "Sirius B este o pitica alba. E cu putin mai mare decît Pamîntul! Este, de obicei, destul de greu de vazut, din cauza luminii orbitoare a lui Sirius A. Sirius B este cunoscut sub numele de Catelusul"
+    },
+    "055": {
+      "title": "Vega",
+      "description": "Vega se afla în constelatia Lyra. Ea compune - alaturi de  Altair si Deneb - Triunghiul de Vara. Vega se învîrte atît de repede încît este bombata! Cu toate acestea, noi o vedem de la poli, asa ca pentru noi pare circulara"
+    },
+    "056": {
+      "title": "Regulus",
+      "description": "Regulus se învîrte atât de repede încît este bombat, la fel ca Altair si Vega. Daca Regulus s-ar roti doar 16% mai repede, ar exploda! Regulus este, de asemenea, cea mai stralucitoare stea din constelatia Leului. Exista, de asemenea, Regulus B si C"
+    },
+    "057": {
+      "title": "Spica",
+      "description": "Spica este dupa stralucire a cinsprezecea stea de pe cerul noptii si se afla în constelatia Fecioara. Este de fapt un sistem stelar binar. Cele doua stele sunt foarte apropiate, orbiteaza la fiecare patru zile"
+    },
+    "058": {
+      "title": "Alnitak",
+      "description": "Alnitak lumineaza nebuloasa Flacara. Alnitak este, de asemenea, cea mai estica stea dintre cele trei stele care formeaza centura lui Orion. Celelalte doua sunt Alnilam si Miltaka, si toate trei sunt foarte luminoase"
+    },
+    "059": {
+      "title": "Gacrux",
+      "description": "Gacrux se afla în constelatia Crux (\"cruce\" în latina), este cunoscut si sub numele de Crucea de Sud . Gacrux este o stea binara;  cea mai mare dintre cele doua este o giganta rosie."
+    },
+    "060": {
+      "title": "Uranus",
+      "description": "În limba engleza \"Uranus\" suna ca \"anus-ul tau\". Exista multe alte pronuntii: \"yer-uh-NISS\" sau \"SEH-venth-pla-net\" (a saptea planeta)"
+    },
+    "061": {
+      "title": "Neptun",
+      "description": "În prezent, Neptun este cea mai îndepartata planeta din Sistemul Solar. Neptun are nevoie de 164,8 ani pamîntesti pentru a orbita Soarele. În întreaga ta viata, Neptun nu va finaliza o orbita completa, asta cîta vreme speranta de viata nu creste drastic"
+    },
+    "062": {
+      "title": "Wolf 359",
+      "description": "Wolf 359 este o pitica mica rosie, eclipsata de alte stele. Este a sasea cea mai apropiata stea de Pamînt, dupa Soare, Proxima Centauri, Alpha Centauri, A & B si steaua lui Barnard. Cu toate acestea, marirea sa este doar +13.5"
+    },
+    "063": {
+      "title": "Gliese 229A",
+      "description": "Gliese 229A este o pitica rosie; cu putin mai mica decît Soarele. Un alt nume ar fi GJ 229 sau GI 229. Este parte a unui sistem binar de stele, stele, a doua stea fiind Gliese 229B"
+    },
+    "064": {
+      "title": "Gliese 229B",
+      "description": "Gliese 229B este o pitica maro. Aceasta orbiteaza o pitica mai mare, Gliese 229A. Gliese 229B ar fi clasificata ca o planeta, dar este mult mai densa decît Jupiter, deci masa ei prea mare o transforma dintr-o planeta într-o stea."
+    },
+    "065": {
+      "title": "Jupiter",
+      "description": "Jupiter este cea mai mare planeta din sistemul nostru solar. Cu toate acestea, nu este cea mai mare planeta cunoscuta! Asta ar fi TReS-4. Jupiter este un gigant gazos, deci e doar o minge de gaz, nu puteti ateriza niciunde pe el. De asemenea, Jupiter are 64 de sateliti, inclusiv cele patru sateliti ai lui Galilei"
+    },
+    "066": {
+      "title": "Saturn",
+      "description": "Saturn are cel mai largi si vizibile inele din Sistemului Solar. Galileo, prima persoana care a vazut aceste inele, a crezut initial ca sînt \"urechi\". Va puteti imagina o planeta Saturn fara inele? Ar fi doar o minge galbena"
+    },
+    "067": {
+      "title": "TReS-4",
+      "description": "TRES-4 este cea mai mare planeta descoperita vreodata. Este la 1400 de ani-lumina de noi. Nici un telescop din lume nu poate vedea de fapt TReS-4. Noi stim doar ca exista, deoarece la tranzitul lui TReS-4 prin fata stele pe care o orbiteaza, stralucirea ei se diminueaza un pic"
+    },
+    "068": {
+      "title": "Venus",
+      "description": "Mai demult se credea ca Venus si Pamîntul sînt planete surori. Asta e însa departe de adevar! Temperatura suprafetei pe Venus este de peste 450 ° C, cauzata de efectul de sera - atmosfera sa,în mare parte dioxid de carbon, pastreaza caldura Soarelui!"
+    },
+    "069": {
+      "title": "Marte",
+      "description": "Marte, sau Planeta Rosie are aceasta culoare, deoarece este în mare parte ruginita. Cercetatorii cred ca apa si viata au existat demult pe Marte. Cu toate acestea, chiar daca ar fi adevarat, formele de viata nu ar fi niste omuleti verzi!"
+    },
+    "070": {
+      "title": "Mercur",
+      "description": "Mercur este planeta cea mai apropiata de Soare. Ea nu are atmosfera. În timpul zilei, temperatura ajunge la 400 ° C, dar pe timp de noapte, temperaturile scad pîna la -180 ° C. Un an pe Mercur are 88 de zile terestre"
+    },
+    "071": {
+      "title": "Ganymede",
+      "description": "Ganymede este cel mai mare satelit din Sistemul Solar. Acesta orbiteaza în jurul lui Jupiter si a fost descoperit de catre Galileo. Ganymede nu trebuie sa fie confundat cu Ganymed, care este un asteroid a carui nume nu are în final \"e\""
+    },
+    "072": {
+      "title": "Callisto",
+      "description": "Callisto este cel mai îndepartat satelit al lui Galilei. Orbitînd în afara celorlalti sateliti ai lui Galilei este lovit de cei mai multi meteoriti; cauzînd multe cratere"
+    },
+    "073": {
+      "title": "Io",
+      "description": "Io are o multime de vulcani; cei mai multi din întregul Sistemul Solar! Gheizere-le de pe Io arunca dioxid de sulf înghetat pîna la 500 de kilometri în spatiu! Peisajul lui Io este în continua schimbare. Într-un an, va fi complet schimbat"
+    },
+    "074": {
+      "title": "Europa",
+      "description": "Europa este cel mai mic dintre satelitii lui Galilei. Este acoperita de gheata. Niste crapaturi misterioase acopera suprafata lui Europa. Unii cred ca ar putea exista apa lichida sub stratul de gheata, posibil chiar viata!"
+    },
+    "075": {
+      "title": "Titan",
+      "description": "Titan este cel mai mare satelit al lui Saturn. Are o atmosfera foarte densa, alcatuita în cea mai mare parte din azot, similar Pamîntului. Titan are mari de metan lichid; în jur de -180 ° C. Exista chiar un continent numit \"Xanadu\""
+    },
+    "076": {
+      "title": "Luna",
+      "description": "Luna este cel mai stralucitor obiect de pe cerul al noptii. Luna orbiteaza Pamîntul la fiecare 27 zile, 7 ore si 43 minute. N-ar fi uimitor sa vedem mai multe luni împrastiate pe cerul noptii?"
+    },
+    "077": {
+      "title": "Triton",
+      "description": "Triton este cel mai mare satelit al lui Neptun. La -240 ° C este, de asemenea si cel mai rece obiect din Sistemul Solar. Triton este extrem de vîntos, unele vînturi sînt aproape de viteza sunetului"
+    },
+    "078": {
+      "title": "Pluto",
+      "description": "Pluto nu mai e planeta. De ce oamenilor le pasa atît de asta? Pluto nu are sentimente! Chiar daca ar avea, de ce i-ar pasa de ce cred oamenii de pe Pamînt? Pe de alta parte, numele oficial al lui Pluto este acum \"134340 Pluto\", pentru ca este o planeta pitica"
+    },
+    "079": {
+      "title": "Charon",
+      "description": "Charon este singurul satelit mare al lui Pluto; fiind foarte apropiati în marime. Ele sunt atât de aproape, încat unii oameni considera ca Pluto si Charon sunt o planeta dubla. Stiati ca Charon si Pluto îsi arata mereu aceeasi fata?"
+    },
+    "080": {
+      "title": "Eris",
+      "description": "Eris este cea mai mare planeta pitica. E chiar mai mare decît Pluto, care e, de asemenea, o planeta pitica. Eris este foarte departat de Soare. Eris are chiar si un satelit, numit Dysnomia. Unde e Dysnomia? Este direct sub punctul de la sfîrsitul acestei propozitii!"
+    },
+    "081": {
+      "title": "Dysnomia",
+      "description": "Dysnomia este singurul satelit al lui Eris si a fost descoperit pe 10 septembrie 2005, într-o zi de sâmbata. Stiai ca dysnomia este un handicap de învatare, similar cu dislexiei?"
+    },
+    "082": {
+      "title": "Sedna",
+      "description": "Sedna are o orbita deosebit de eliptica. Este atît de departe încît are nevoie de 10.000 de ani pamîntesti pentru a completa o orbita. Stiai ca \"Sedna\" spus invers este \"Andes\" (Anzi), cel mai lung lant muntos din lume (în America de Sud.)? Amîndoua par dintr-o alta lume!"
+    },
+    "083": {
+      "title": "Quaoar",
+      "description": "Quaoar este foarte densa, deoarece miezul ei este masiv. Se poate ca Quaoar sa fi fost mult mai mare cu mult timp în urma, apoi sa fi fost lovita de un obiect de marimea lui Pluto, care a deposedat-o de mai multe învelisuri"
+    },
+    "084": {
+      "title": "Ceres",
+      "description": "Ceres nu e prea primitor pentru oameni. Ceres este de asemenea si cel mai mare asteroid, si a declansat dezbaterea \"ce este o planeta?\". Pentru un timp, Ceres a fost considerat planeta"
+    },
+    "085": {
+      "title": "Polaris",
+      "description": "Polaris, sau Steaua Nordului, este foarte aproape de Polul Nord, asa ca daca vrei sa stii încotro este nordul, încearca sa gasesti Polaris. Gaseste întîi cele doua stele de la baza Carului Mare, si du-te în sus de 5 ori."
+    },
+    "086": {
+      "title": "Antares",
+      "description": "Antares este un supergigant rosu foarte aproape de ecliptica, astfel încît este deseori ascuns de Luna. De asemenea, Antares cîntareste un septillion de tone si pierde încet greutate prin vânt stelar. O metoda mai rapida ar fi sa explodeze, asta o va face însa mai tîrziu!"
+    },
+    "087": {
+      "title": ".Altair",
+      "description": "Altair este una dintre cele trei stele ale Triunghiului de Vara. Triunghiul de Vara este un triunghi ascutitunghic, însemnînd ca toate unghiurile sunt mai mici de 90 °! Celelalte doua sunt Vega si Deneb. Ca multe alte stele, Altair se învîrte foarte repede, si e bombat la centru!"
+    },
+    "088": {
+      "title": "La Superba",
+      "description": "La Superba este una dintre cele mai rosii stele de pe cerul noptii. Este atât de rosie din cauza carbonului 13 pe care-l creaza atunci cînd fuzioneaza heliu. (Carbonul obisnuit este carbon-12). La Superba are doar 2500 ° C, unul dintre cele mai reci stele cunoscute"
+    },
+    "089": {
+      "title": "Pistol Star",
+      "description": "Steaua Pistol este printre cele mai luminoase stele cunoscute. În douazeci de secunde, acesta emite energie la fel de mult cît Soarele într-un an. Praful interstelar ne împiedica însa sa vedem asta. Se numeste Steaua Pistol nu din cauza luminozitatii sale, ci pentru ca se afla în nebuloasa Pistol"
+    },
+    "090": {
+      "title": "S Doradus",
+      "description": "S Doradus este un hipergigant, precum si una dintre cele mai stralucitoare stele din Norul lui Magelan. Pentru a afla mai multe despre norul lui Magelan, da zoom out de 8,5 de ori!"
+    },
+    "091": {
+      "title": "Enif",
+      "description": "Enif este un supergigant portocaliu. Numele sau înseamna \"nas\", în araba, pentru ca în constelatia Pegasus, ar fi în pozitia botului. Accidental, în engleza, cuvântul \"Enif\" spus invers îneamna \"bine\""
+    },
+    "092": {
+      "title": "Mu Cephei",
+      "description": "Mu Cephei este extrem de rosie. I se spune uneori \"steaua granat a lui Herschel\", pentru ca este de un rosu granat. Un nume alternativ ar fi Erakis, daca nu îti plac primele doua nume"
+    },
+    "093": {
+      "title": "KY Cygni",
+      "description": "KY Cygni este de 300.000 de ori mai luminoasa decît Soarele, Soarele fiind si el destul de luminos, nu? Soarele este atît de luminos încît n-ar trebui sa te uiti direct la el! Totusi putem sa ne uitam la KY Cyngi, deoarece e de 300 de milioane de ori mai departe decît soarele."
+    },
+    "094": {
+      "title": "V354 Cephei",
+      "description": "V354 Cephei este o supergiganta rosie, si este imensa. Daca ar fi în locul Soarelui, s-ar întinde dincolo de orbita lui Jupiter! 354 este si anul de nastere al lui Augustin de Hippo"
+    },
+    "095": {
+      "title": "WOH G64",
+      "description": "cred ca stiu ... te gandesti, \"WOH ... trebuie sa fie o stea mare!\" Ei bine, ai dreptate, pentru ca în prezent este a doua cea mai mare stea cunoscuta. WOH G64 se afla în Norul lui Magelan. În jurul stelei se afla un nor de o jumatate de an-lumina!"
+    },
+    "096": {
+      "title": "VY Canis Majoris",
+      "description": "VY Canis Majoris este cea mai mare stea cunoscuta. Este atît de mare ca daca ar înlocui Soarele, s-ar întinde dincolo de orbita lui Saturn! Unui avion i-ar lua 1.200 de ani sa-l înconjoare o singura data"
+    },
+    "097": {
+      "title": "Betelguese",
+      "description": "Betelguese are o vechime de milioane de ani. E atît de veche, încît se asteapta sa explodeze în urmatorii zece mii de ani. Stele mai mici traiesc mii de miliarde de ani; Betelguese fiind însa atît de mare a îmbatrînit rapid"
+    },
+    "098": {
+      "title": "Albireo",
+      "description": "Albireo este format în total din trei stele; aici e cea mai mare. Doua stele sunt apropiate si formeaza un punct galben. A treia este albastra si e ceva mai departe. Stelele sunt atît de departate încît le ia 100.000 de ani sa finalizeze o orbita"
+    },
+    "099": {
+      "title": "Steaua lui Kapteyn",
+      "description": "Steaua lui Kapteyn e la doar treisprezece ani-lumina distanta. Chiar si asa, marirea ei e +9, asa ca fara binoclu nu se vede. Acum aproximativ 10.000 de ani, Steaua lui Kapteyn a fost la doar sapte ani-lumina distanta!"
+    },
     "100": {
       "title": "Steaua lui Luyten",
       "description": "Star lui Luyten este o pitica rosie la 12 de ani-lumina distanta. Este atat de aproape de Procyon încît Procyon este de 10 ori mai stralucitoare pentru Steaua Luyten decît pare Sirius la noi."
@@ -701,8 +981,8 @@
       "description": "Modulul cîntareste 15.000 de kilograme! De asemenea, a aterizat pe Luna. Aterizarea sa a inspirat un joc numit \" Lunar Lander \", care nu-i deloc usor. De cîte ori îl joc, ramîn fara combustibil!"
     },
     "275": {
-      "title": "Teren de fotbal american",
-      "description": "Un teren de fotbal american are 120 de yarzi (109.7 metri), daca si extremitatile sunt incluse. Terenurile de fotbal sunt adesea folosite pentru masurarea obiectelor de mari dimensiuni; de exemplu,\" Titanicul este lung cît trei terenuri de fotbal. \"Terenurile de fotbal sunt deasemenea folosite si pentru fotbal."
+      "title": "Teren de fotbal",
+      "description": "Dimensiunile recomandate de FIFA pentru un teren de fotbal destinat meciurilor internaționale sunt de 105 metri lungime și 68 metri lățime. Fotbalul modern a apărut în Anglia în 1863, când au fost adoptate regulile jocului. Astăzi, în Anglia sunt înregistrate peste 40 de mii de cluburi de fotbal — mai multe decât în orice altă țară din lume."
     },
     "276": {
       "title": "Arcul Gateway",
@@ -912,285 +1192,17 @@
       "title": "Marea Bariera de Corali",
       "description": "Marea Bariera de Corali este cel mai mare sistem de recif coraligen din lume cuprinzând aproximativ 3000 de recifuri ?i 300 de insule ce se întind de-a lungul a 2600 kilometri ?i acopera o suprafa?a de 344,400 km."
     },
-    "030": {
-      "title": "Pixel LCD",
-      "description": "Desi dimensiunea unui pixel nu este fixa, 300 de micrometri este media. Pixelii contin trei subpixeli; fiecare fiind rosu, verde si albastru. Pixelii sunt interesanti, voxelii însa sunt pixeli tridimensionali!"
-    },
-    "031": {
-      "title": "Palm Jebel Ali",
-      "description": "Palm Jebel Ali este cel mai mare insula creata de om (neincluzând insule precum Flevopolder, o regiune a Olandei care a fost drenata astfel încît sa poata avea mai mult teren). Palm Jebel Ali nu este completa. Este o parte a Insulelor Palm, si în final va gazdui 250.000 de persoane"
-    },
-    "032": {
-      "title": "Neutrinii",
-      "description": "Neutrinii strabat tot timpul materia obisnuita din care suntem alcatuiti toti. De fapt ei trec prin noi chiar acum! Neutrinii nu au încarcatura electrica, astfel încît sunt influentati doar de gravitatie si de forta slaba. Cu toate acestea, ei sunt atît de mici încît influenta este minima."
-    },
-    "033": {
-      "title": "Neutrinii de înalta energie",
-      "description": "Neutrinii de înalta energie sunt mai mari. Pentru a afla mai multe despre neutrini, du-te la neutrini, unde poti vedea dimensiunea lor aproximativa. Sunt de 15.000 de ori mai mici!"
-    },
-    "034": {
-      "title": "Un bat de chibrit",
-      "description": "Batul de chibrit este mic dar util. Cînd e frecat de o suprafata, se aprinde pe loc. Acest lucru îl face foarte periculos! De aceea este bine sa nu te joci cu chibriturile. Ai priceput?"
-    },
-    "035": {
-      "title": "Oul de gaina",
-      "description": "În ouale de gaina clocesc de obicei puii de gaina. Oamenilor le place sa manînce oua de gaina. În pofida aspectului, în realitate nu exista nici o diferenta între ouale albe si ouale maro"
-    },
-    "036": {
-      "title": "Oul de Prepelita",
-      "description": "Multi oameni cred ca ouale de prepelita  sunt mai bune decît ouale de gaina. Oul de prepelita este mai mic si mai putin popular decît oul de gaina"
-    },
-    "037": {
-      "title": "Un Inch patrat",
-      "description": "Daca nu esti obisnuit cu sistemul metric, aici e un inch patrat. Sistemul metric e însa mult mai popular. Apropo, un inch are 2,5 centimetri, iar suprafata este calculata în cm patrati."
-    },
-    "038": {
-      "title": "Bobul de cafea",
-      "description": "Bobul de cafea are o lungime de aproximativ un centimetru - e de fapt un fruct care seamana cu o fasole. Este maro si are dungi, si uneori, cînd te uiti la el, uiti ca diametrul sau este de 10 la puterea -29 din întreg universul cunoscut"
-    },
-    "039": {
-      "title": "Râma",
-      "description": "Îti plac râmele scîrboase? În ciuda ceea ce se crede, marea majoritate a speciilor de râme vor muri daca le tai în jumatate. Uneori însa, capul supravietuieste si îi va creste o noua coada"
-    },
-    "040": {
-      "title": "Rigel",
-      "description": "Rigel este o stea albastra aprins, cea mai stralucitoare stea din constelatia Orion. Se afla înspre ecuator, astfel încît este vizibila de aproape peste tot de pe Pamînt."
-    },
-    "041": {
-      "title": "Statele Unite ale Americii",
-      "description": "Aici sunt Statele Unite ale Americii. Desi pot parea mai mari decît Pluto, Pluto nu este plat, si de aceea Pluto are o suprafata mai mare!"
-    },
-    "042": {
-      "title": "Pamîntul",
-      "description": "Pamîntul este casa noastra si e de neînlocuit. Îl putem considera gigantic, dar cîta vreme locuim aici e important sa avem grija de el. Odata distrus, nu avem nicaieri altundeva sa mergem."
-    },
-    "043": {
-      "title": "Deneb",
-      "description": "Deneb este cea mai stralucitoare stea din constelatia Cygnus. Deneb se afla la 1.500 de ani-lumina distanta, cea mai îndepartata dintre 25 cele mai stralucitoare stele. Daca ati trait pe Marte, Deneb ar aparea deasupra Polului Nord - nu Polaris."
-    },
-    "044": {
-      "title": "V V Cephei A",
-      "description": "Pentru un timp V V Cephei A fost cea mai mare stea cunoscuta, detronata de V Y Canis Majoris. Asta se întîmpla pentru ca stele noi sunt descoperite tot timpul!"
-    },
-    "045": {
-      "title": "R Doradus",
-      "description": "R Doradus este o stea destul de mare, la doar 200 de ani-lumina de Pamînt, dimensiunea ei aparenta o fac cel mai mare obiect vizibil de pe cer dupa soare! Aceasta este de 0,05 arcseconds; Soarele la 1.920 arcseconds e de 40.000 de ori mai mare"
-    },
-    "046": {
-      "title": "Aldebaran",
-      "description": "Aldebaran nu trebuie sa fie confundata cu Alderaan, care este o planeta in Razboiul Stelelor.  Alderaan e asemanatoare în dimensiuni cu Pamîntul, durata zilei, si acoperirea cu apa. Aldebaran în schimb este de 5.000 de ori mai mare în diametru, se roteste la fiecare 643 de zile terestre, si nu are apa"
-    },
-    "047": {
-      "title": "Pollux",
-      "description": "În mitologia greaca, fratele geaman al lui Pollux este Castor. Ei sunt în acelasi timp stele în constelatia Gemini, însemnînd \"gemeni\". Cu toate acestea, în realitate, Pollux este o singura stea, în timp ce Castor este trei stele binare, în total deci sase stele. Castor sunt deci sextpleti!"
-    },
-    "048": {
-      "title": "Arcturus",
-      "description": "Arcturus este - dupa Sirius si Canopus - a treia cea mai stralucitoare stea de pe cerul noptii. Este cea mai stralucitoare stea din constelatia Boötes. Îl poti gasi urmînd Carul Mare"
-    },
-    "049": {
-      "title": "Soarele",
-      "description": "Soarele, sau Sol, este steaua care da Pamîntului energia necesara vietii. Soarele este în diametru de peste 100 de ori mai mare decît Pamîntul! Soarele trimite pe an de 20.000 de ori mai multa energie solara Pamîntului decît are nevoie omenirea"
-    },
-    "050": {
-      "title": "Alpha Centauri A",
-      "description": "Alpha Centauri A este cea mai mare stea din sistemul stelar Alpha Centauri (compus din trei stele), sistemul fiind si cel mai apropiat de noi. De asemenea, este si a patra cea mai stralucitoare stea de pe cerul noptii"
-    },
-    "051": {
-      "title": "Alpha Centauri B",
-      "description": "Alpha Centauri B este dupa marime a doua stea din sistemul de stele Alpha Centauri. Diametrul sau este de aproximativ un milion de kilometri, deci putin mai mica decît Soarele. Alpha Centuari A si B sunt atît de aproape una de alta încît par a fi o singura stea."
-    },
-    "052": {
-      "title": "Proxima Centauri",
-      "description": "Proxima Centauri este cea mai apropiata stea de Pamînt dupa Soare. Numele sau provine de la cuvântul \"proximitate\" (apropiere). Proxima Centauri este o stea rosie mica, din pacate ai nevoie de un telescop pentru a o vedea"
-    },
-    "053": {
-      "title": "Sirius A",
-      "description": "Sirius este cea mai stralucitoare stea de pe cerul de noapte. Este aproape de doua ori mai stralucitoare decît Canopus. Cu toate acestea, Sirius nu este o stea mare! Este doar pare mare din cauza apropierii de noi, la doar opt ani-lumina"
-    },
-    "054": {
-      "title": "Sirius B",
-      "description": "Sirius B este o pitica alba. E cu putin mai mare decît Pamîntul! Este, de obicei, destul de greu de vazut, din cauza luminii orbitoare a lui Sirius A. Sirius B este cunoscut sub numele de Catelusul"
-    },
-    "055": {
-      "title": "Vega",
-      "description": "Vega se afla în constelatia Lyra. Ea compune - alaturi de  Altair si Deneb - Triunghiul de Vara. Vega se învîrte atît de repede încît este bombata! Cu toate acestea, noi o vedem de la poli, asa ca pentru noi pare circulara"
-    },
-    "056": {
-      "title": "Regulus",
-      "description": "Regulus se învîrte atât de repede încît este bombat, la fel ca Altair si Vega. Daca Regulus s-ar roti doar 16% mai repede, ar exploda! Regulus este, de asemenea, cea mai stralucitoare stea din constelatia Leului. Exista, de asemenea, Regulus B si C"
-    },
-    "057": {
-      "title": "Spica",
-      "description": "Spica este dupa stralucire a cinsprezecea stea de pe cerul noptii si se afla în constelatia Fecioara. Este de fapt un sistem stelar binar. Cele doua stele sunt foarte apropiate, orbiteaza la fiecare patru zile"
-    },
-    "058": {
-      "title": "Alnitak",
-      "description": "Alnitak lumineaza nebuloasa Flacara. Alnitak este, de asemenea, cea mai estica stea dintre cele trei stele care formeaza centura lui Orion. Celelalte doua sunt Alnilam si Miltaka, si toate trei sunt foarte luminoase"
-    },
-    "059": {
-      "title": "Gacrux",
-      "description": "Gacrux se afla în constelatia Crux (\"cruce\" în latina), este cunoscut si sub numele de Crucea de Sud . Gacrux este o stea binara;  cea mai mare dintre cele doua este o giganta rosie."
-    },
-    "060": {
-      "title": "Uranus",
-      "description": "În limba engleza \"Uranus\" suna ca \"anus-ul tau\". Exista multe alte pronuntii: \"yer-uh-NISS\" sau \"SEH-venth-pla-net\" (a saptea planeta)"
-    },
-    "061": {
-      "title": "Neptun",
-      "description": "În prezent, Neptun este cea mai îndepartata planeta din Sistemul Solar. Neptun are nevoie de 164,8 ani pamîntesti pentru a orbita Soarele. În întreaga ta viata, Neptun nu va finaliza o orbita completa, asta cîta vreme speranta de viata nu creste drastic"
-    },
-    "062": {
-      "title": "Wolf 359",
-      "description": "Wolf 359 este o pitica mica rosie, eclipsata de alte stele. Este a sasea cea mai apropiata stea de Pamînt, dupa Soare, Proxima Centauri, Alpha Centauri, A & B si steaua lui Barnard. Cu toate acestea, marirea sa este doar +13.5"
-    },
-    "063": {
-      "title": "Gliese 229A",
-      "description": "Gliese 229A este o pitica rosie; cu putin mai mica decît Soarele. Un alt nume ar fi GJ 229 sau GI 229. Este parte a unui sistem binar de stele, stele, a doua stea fiind Gliese 229B"
-    },
-    "064": {
-      "title": "Gliese 229B",
-      "description": "Gliese 229B este o pitica maro. Aceasta orbiteaza o pitica mai mare, Gliese 229A. Gliese 229B ar fi clasificata ca o planeta, dar este mult mai densa decît Jupiter, deci masa ei prea mare o transforma dintr-o planeta într-o stea."
-    },
-    "065": {
-      "title": "Jupiter",
-      "description": "Jupiter este cea mai mare planeta din sistemul nostru solar. Cu toate acestea, nu este cea mai mare planeta cunoscuta! Asta ar fi TReS-4. Jupiter este un gigant gazos, deci e doar o minge de gaz, nu puteti ateriza niciunde pe el. De asemenea, Jupiter are 64 de sateliti, inclusiv cele patru sateliti ai lui Galilei"
-    },
-    "066": {
-      "title": "Saturn",
-      "description": "Saturn are cel mai largi si vizibile inele din Sistemului Solar. Galileo, prima persoana care a vazut aceste inele, a crezut initial ca sînt \"urechi\". Va puteti imagina o planeta Saturn fara inele? Ar fi doar o minge galbena"
-    },
-    "067": {
-      "title": "TReS-4",
-      "description": "TRES-4 este cea mai mare planeta descoperita vreodata. Este la 1400 de ani-lumina de noi. Nici un telescop din lume nu poate vedea de fapt TReS-4. Noi stim doar ca exista, deoarece la tranzitul lui TReS-4 prin fata stele pe care o orbiteaza, stralucirea ei se diminueaza un pic"
-    },
-    "068": {
-      "title": "Venus",
-      "description": "Mai demult se credea ca Venus si Pamîntul sînt planete surori. Asta e însa departe de adevar! Temperatura suprafetei pe Venus este de peste 450 ° C, cauzata de efectul de sera - atmosfera sa,în mare parte dioxid de carbon, pastreaza caldura Soarelui!"
-    },
-    "069": {
-      "title": "Marte",
-      "description": "Marte, sau Planeta Rosie are aceasta culoare, deoarece este în mare parte ruginita. Cercetatorii cred ca apa si viata au existat demult pe Marte. Cu toate acestea, chiar daca ar fi adevarat, formele de viata nu ar fi niste omuleti verzi!"
-    },
-    "070": {
-      "title": "Mercur",
-      "description": "Mercur este planeta cea mai apropiata de Soare. Ea nu are atmosfera. În timpul zilei, temperatura ajunge la 400 ° C, dar pe timp de noapte, temperaturile scad pîna la -180 ° C. Un an pe Mercur are 88 de zile terestre"
-    },
-    "071": {
-      "title": "Ganymede",
-      "description": "Ganymede este cel mai mare satelit din Sistemul Solar. Acesta orbiteaza în jurul lui Jupiter si a fost descoperit de catre Galileo. Ganymede nu trebuie sa fie confundat cu Ganymed, care este un asteroid a carui nume nu are în final \"e\""
-    },
-    "072": {
-      "title": "Callisto",
-      "description": "Callisto este cel mai îndepartat satelit al lui Galilei. Orbitînd în afara celorlalti sateliti ai lui Galilei este lovit de cei mai multi meteoriti; cauzînd multe cratere"
-    },
-    "073": {
-      "title": "Io",
-      "description": "Io are o multime de vulcani; cei mai multi din întregul Sistemul Solar! Gheizere-le de pe Io arunca dioxid de sulf înghetat pîna la 500 de kilometri în spatiu! Peisajul lui Io este în continua schimbare. Într-un an, va fi complet schimbat"
-    },
-    "074": {
-      "title": "Europa",
-      "description": "Europa este cel mai mic dintre satelitii lui Galilei. Este acoperita de gheata. Niste crapaturi misterioase acopera suprafata lui Europa. Unii cred ca ar putea exista apa lichida sub stratul de gheata, posibil chiar viata!"
-    },
-    "075": {
-      "title": "Titan",
-      "description": "Titan este cel mai mare satelit al lui Saturn. Are o atmosfera foarte densa, alcatuita în cea mai mare parte din azot, similar Pamîntului. Titan are mari de metan lichid; în jur de -180 ° C. Exista chiar un continent numit \"Xanadu\""
-    },
-    "076": {
-      "title": "Luna",
-      "description": "Luna este cel mai stralucitor obiect de pe cerul al noptii. Luna orbiteaza Pamîntul la fiecare 27 zile, 7 ore si 43 minute. N-ar fi uimitor sa vedem mai multe luni împrastiate pe cerul noptii?"
-    },
-    "077": {
-      "title": "Triton",
-      "description": "Triton este cel mai mare satelit al lui Neptun. La -240 ° C este, de asemenea si cel mai rece obiect din Sistemul Solar. Triton este extrem de vîntos, unele vînturi sînt aproape de viteza sunetului"
-    },
-    "078": {
-      "title": "Pluto",
-      "description": "Pluto nu mai e planeta. De ce oamenilor le pasa atît de asta? Pluto nu are sentimente! Chiar daca ar avea, de ce i-ar pasa de ce cred oamenii de pe Pamînt? Pe de alta parte, numele oficial al lui Pluto este acum \"134340 Pluto\", pentru ca este o planeta pitica"
-    },
-    "079": {
-      "title": "Charon",
-      "description": "Charon este singurul satelit mare al lui Pluto; fiind foarte apropiati în marime. Ele sunt atât de aproape, încat unii oameni considera ca Pluto si Charon sunt o planeta dubla. Stiati ca Charon si Pluto îsi arata mereu aceeasi fata?"
-    },
-    "080": {
-      "title": "Eris",
-      "description": "Eris este cea mai mare planeta pitica. E chiar mai mare decît Pluto, care e, de asemenea, o planeta pitica. Eris este foarte departat de Soare. Eris are chiar si un satelit, numit Dysnomia. Unde e Dysnomia? Este direct sub punctul de la sfîrsitul acestei propozitii!"
-    },
-    "081": {
-      "title": "Dysnomia",
-      "description": "Dysnomia este singurul satelit al lui Eris si a fost descoperit pe 10 septembrie 2005, într-o zi de sâmbata. Stiai ca dysnomia este un handicap de învatare, similar cu dislexiei?"
-    },
-    "082": {
-      "title": "Sedna",
-      "description": "Sedna are o orbita deosebit de eliptica. Este atît de departe încît are nevoie de 10.000 de ani pamîntesti pentru a completa o orbita. Stiai ca \"Sedna\" spus invers este \"Andes\" (Anzi), cel mai lung lant muntos din lume (în America de Sud.)? Amîndoua par dintr-o alta lume!"
-    },
-    "083": {
-      "title": "Quaoar",
-      "description": "Quaoar este foarte densa, deoarece miezul ei este masiv. Se poate ca Quaoar sa fi fost mult mai mare cu mult timp în urma, apoi sa fi fost lovita de un obiect de marimea lui Pluto, care a deposedat-o de mai multe învelisuri"
-    },
-    "084": {
-      "title": "Ceres",
-      "description": "Ceres nu e prea primitor pentru oameni. Ceres este de asemenea si cel mai mare asteroid, si a declansat dezbaterea \"ce este o planeta?\". Pentru un timp, Ceres a fost considerat planeta"
-    },
-    "085": {
-      "title": "Polaris",
-      "description": "Polaris, sau Steaua Nordului, este foarte aproape de Polul Nord, asa ca daca vrei sa stii încotro este nordul, încearca sa gasesti Polaris. Gaseste întîi cele doua stele de la baza Carului Mare, si du-te în sus de 5 ori."
-    },
-    "086": {
-      "title": "Antares",
-      "description": "Antares este un supergigant rosu foarte aproape de ecliptica, astfel încît este deseori ascuns de Luna. De asemenea, Antares cîntareste un septillion de tone si pierde încet greutate prin vânt stelar. O metoda mai rapida ar fi sa explodeze, asta o va face însa mai tîrziu!"
-    },
-    "087": {
-      "title": ".Altair",
-      "description": "Altair este una dintre cele trei stele ale Triunghiului de Vara. Triunghiul de Vara este un triunghi ascutitunghic, însemnînd ca toate unghiurile sunt mai mici de 90 °! Celelalte doua sunt Vega si Deneb. Ca multe alte stele, Altair se învîrte foarte repede, si e bombat la centru!"
-    },
-    "088": {
-      "title": "La Superba",
-      "description": "La Superba este una dintre cele mai rosii stele de pe cerul noptii. Este atât de rosie din cauza carbonului 13 pe care-l creaza atunci cînd fuzioneaza heliu. (Carbonul obisnuit este carbon-12). La Superba are doar 2500 ° C, unul dintre cele mai reci stele cunoscute"
-    },
-    "089": {
-      "title": "Pistol Star",
-      "description": "Steaua Pistol este printre cele mai luminoase stele cunoscute. În douazeci de secunde, acesta emite energie la fel de mult cît Soarele într-un an. Praful interstelar ne împiedica însa sa vedem asta. Se numeste Steaua Pistol nu din cauza luminozitatii sale, ci pentru ca se afla în nebuloasa Pistol"
-    },
-    "090": {
-      "title": "S Doradus",
-      "description": "S Doradus este un hipergigant, precum si una dintre cele mai stralucitoare stele din Norul lui Magelan. Pentru a afla mai multe despre norul lui Magelan, da zoom out de 8,5 de ori!"
-    },
-    "091": {
-      "title": "Enif",
-      "description": "Enif este un supergigant portocaliu. Numele sau înseamna \"nas\", în araba, pentru ca în constelatia Pegasus, ar fi în pozitia botului. Accidental, în engleza, cuvântul \"Enif\" spus invers îneamna \"bine\""
-    },
-    "092": {
-      "title": "Mu Cephei",
-      "description": "Mu Cephei este extrem de rosie. I se spune uneori \"steaua granat a lui Herschel\", pentru ca este de un rosu granat. Un nume alternativ ar fi Erakis, daca nu îti plac primele doua nume"
-    },
-    "093": {
-      "title": "KY Cygni",
-      "description": "KY Cygni este de 300.000 de ori mai luminoasa decît Soarele, Soarele fiind si el destul de luminos, nu? Soarele este atît de luminos încît n-ar trebui sa te uiti direct la el! Totusi putem sa ne uitam la KY Cyngi, deoarece e de 300 de milioane de ori mai departe decît soarele."
-    },
-    "094": {
-      "title": "V354 Cephei",
-      "description": "V354 Cephei este o supergiganta rosie, si este imensa. Daca ar fi în locul Soarelui, s-ar întinde dincolo de orbita lui Jupiter! 354 este si anul de nastere al lui Augustin de Hippo"
-    },
-    "095": {
-      "title": "WOH G64",
-      "description": "cred ca stiu ... te gandesti, \"WOH ... trebuie sa fie o stea mare!\" Ei bine, ai dreptate, pentru ca în prezent este a doua cea mai mare stea cunoscuta. WOH G64 se afla în Norul lui Magelan. În jurul stelei se afla un nor de o jumatate de an-lumina!"
-    },
-    "096": {
-      "title": "VY Canis Majoris",
-      "description": "VY Canis Majoris este cea mai mare stea cunoscuta. Este atît de mare ca daca ar înlocui Soarele, s-ar întinde dincolo de orbita lui Saturn! Unui avion i-ar lua 1.200 de ani sa-l înconjoare o singura data"
-    },
-    "097": {
-      "title": "Betelguese",
-      "description": "Betelguese are o vechime de milioane de ani. E atît de veche, încît se asteapta sa explodeze în urmatorii zece mii de ani. Stele mai mici traiesc mii de miliarde de ani; Betelguese fiind însa atît de mare a îmbatrînit rapid"
-    },
-    "098": {
-      "title": "Albireo",
-      "description": "Albireo este format în total din trei stele; aici e cea mai mare. Doua stele sunt apropiate si formeaza un punct galben. A treia este albastra si e ceva mai departe. Stelele sunt atît de departate încît le ia 100.000 de ani sa finalizeze o orbita"
-    },
-    "099": {
-      "title": "Steaua lui Kapteyn",
-      "description": "Steaua lui Kapteyn e la doar treisprezece ani-lumina distanta. Chiar si asa, marirea ei e +9, asa ca fara binoclu nu se vede. Acum aproximativ 10.000 de ani, Steaua lui Kapteyn a fost la doar sapte ani-lumina distanta!"
+    "328": {
+      "title": "SARS-CoV-2",
+      "description": "SARS-CoV-2 este coronavirusul care a provocat pandemia de COVID-19, schimbând viața oamenilor în perioada 2020–2022. În ciuda dimensiunilor sale microscopice (80–120 nanometri), acest virus a avut un impact uriaș asupra medicinei, științei, economiei și vieții de zi cu zi din întreaga lume."
+    },
+    "329": {
+      "title": "Lacul Baikal",
+      "description": "Lacul Baikal este cel mai adânc lac de pe Pământ și cel mai mare rezervor de apă dulce lichidă dintre lacuri. Vârsta sa este estimată la aproximativ 25–30 de milioane de ani, ceea ce îl face unul dintre cele mai vechi lacuri de pe planetă. Aici trăiesc peste 1.000 de specii de animale care nu se găsesc nicăieri altundeva în lume și care alcătuiesc aproximativ 60% din fauna sa."
+    },
+    "330": {
+      "title": "Tardigradă",
+      "description": "Tardigradele sunt creaturi minuscule cu opt picioare, devenite celebre pentru rezistența lor incredibilă. În ciuda dimensiunilor lor, ele pot supraviețui deshidratării, frigului extrem, căldurii, presiunii ridicate și chiar condițiilor din spațiul cosmic, intrând într-o stare de aproape completă suspendare a vieții."
     }
   }
 }

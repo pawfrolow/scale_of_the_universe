@@ -1,5 +1,285 @@
 {
   "items": {
+    "030": {
+      "title": "LCD Pixel",
+      "description": "Även om storleken av pixlar skiljer sig mycket är 300 mikrometer genomsnittsstorleken. En pixel innehåller tre subpixlar som är röda, gröna och blåa. Pixlar är ganska coola men voxlar är ännu häftigare. De är tredimensionella pixlar."
+    },
+    "031": {
+      "title": "Palm Jebel Ali",
+      "description": "Palm Jebel Ali är den största ö som människan tillverkat (då räknar vi inte med öar som Flevopolder, där en del av Nederländerna dränerades så det blev mer mark). Palm Jebel Ali är inte komplett. Det är en del av palmöarna och planeras för att inhysa 250 000 människor!"
+    },
+    "032": {
+      "title": "Neutrino",
+      "description": "Neutriner passerar genom vanlig materia som du och jag hela tiden! De gör det just nu! Neutriner har ingen laddning så de påverkas endast av gravitation och den svaga kärnkraften. De är dock så små att de knappt påverkas av dessa krafter."
+    },
+    "033": {
+      "title": "Högenergineutriner",
+      "description": "Neutriner med hög energi verkar vara större. För mer information om neutriner gå till dess bild som visar den genomsnittliga storleken. Den är 15000 gånger mindre!"
+    },
+    "034": {
+      "title": "Tändsticka",
+      "description": "Tändstickan är ett mycket användbart litet verktyg. Genom att dra den mot plånet på på en tändsticksask kan du tända eld på stickan. Var försiktig! Leka aldrig med tändstickor! OK?"
+    },
+    "035": {
+      "title": "Hönsägg",
+      "description": "Från hönsägget brukar det kläckas kycklingar. Många människor älskar att äta ägg. Förutom utseendet är det ingen skillnad mellan vita ägg och bruna ägg."
+    },
+    "036": {
+      "title": "Vaktelägg",
+      "description": "Många människor tycker att vaktelägg är godare än hönsägg. Vaktelägg är mindre och mer sällsynta än hönsägg men det hindrar inte vissa människor från att älska dem!"
+    },
+    "037": {
+      "title": "Kvadrattum",
+      "description": "Om du inte är van att det metriska systemet är här en kvadrattum. För oss svenskar är det tur att nästan allt annat här är baserat på metersystemet. Längden på sidorna i en kvadrattum är ca 2,5 cm."
+    },
+    "038": {
+      "title": "Kaffeböna",
+      "description": "En kaffeböna är ca en centimeter på längden. Det är faktiskt en frukt som liknar en böna. Den är brun och har ränder. Tänka sig att dess diameter är 10^-29 gånger mindre än det observerbara universum."
+    },
+    "039": {
+      "title": "Daggmask",
+      "description": "Älskar du bara inte slingrande slemmiga daggmaskar? Trots myten så dör de flesta arter av daggmaskar om du delar den. Ibland kan huvudet överleva och då växer en ny svans ut."
+    },
+    "040": {
+      "title": "Rigel",
+      "description": "Rigel är den starkaste lysande stjärnan i stjärnbilden Orion . Eftersom den ligger nära ekvatorn kan den ses från nästan överallt på Jorden."
+    },
+    "041": {
+      "title": "USA",
+      "description": "Även om USAs yta verkar vara större än Plutos så glöm inte att Pluto har en baksida också"
+    },
+    "042": {
+      "title": "Jorden",
+      "description": "Jorden är vårt enda hem. Du tycker kanske att den verkar stor men det är viktigt att ta hand om den. När den väl är borta finns det ingen annanstans att åka till"
+    },
+    "043": {
+      "title": "Deneb",
+      "description": "Deneb är den ljusaste stjärnan i stjärnbilden Cygnus. Deneb är 1500 ljusår bort vilket gör den till den mest avlägsna av de 25 ljusstarkaste stjärnorna. Om du bodde på Mars skulle Deneb visas ovanför Nordpolen inte Polaris."
+    },
+    "044": {
+      "title": "V V Cephei A",
+      "description": "För ett tag var VV Cephei A den största kända stjärnan. Nu tillhör denna titel VY Canis Majoris. Det beror på att nya stjärnor upptäcks hela tiden!"
+    },
+    "045": {
+      "title": "R Doradus",
+      "description": "R Doradus är relativt stor och den är bara 178 ljusår från jorden så dess synbara storlek är den näst största på himlen av alla stjärnor! Den har en diameter på 0,06 bågsekunder. Solen är störst på 1 920 bågsekunder - 40 000 gånger större."
+    },
+    "046": {
+      "title": "Aldebaran",
+      "description": "Aldebaran ska inte förväxlas med Alderaan som är en fiktiv planet i Star Wars. Alderaan är mycket lik jorden när det gäller storlek, längd på dygnet och landmassa. Emellertid är Aldebaran 5000 gånger större i diameter och roterar vart 643 jorddygn och har inget vatten."
+    },
+    "047": {
+      "title": "Pollux",
+      "description": "I den grekiska mytologin är Pollux och Castor tvillingar. De är också stjärnor i stjärnbilden Gemini som betyder \"tvillingar\". Pollux är bara en enda stjärna medan Castor består av tre dubbelstjärnor vilket ger totalt sex stjärnor. Castor är alltså sexlingar!"
+    },
+    "048": {
+      "title": "Arcturus",
+      "description": "Arcturus är den tredje ljusstarkaste stjärnan på natthimlen efter Sirius och Canopus. Det är den ljusaste stjärnan i stjärnbilden Boötes. Hitta den genom att följa handtaget i Karlavagnen."
+    },
+    "049": {
+      "title": "Solen",
+      "description": "Solen ger jorden den energi som gör att den kan ha liv. Solens diameter är över 100 gånger större än jordens! 20 000 gånger mer solenergi träffar jorden än den vi människor använder."
+    },
+    "050": {
+      "title": "Alpha Centauri A",
+      "description": "Alpha Centauri A är den största stjärnan i stjärnsystemet Alpha Centauri (som består av tre stjärnor). Det är också det närmsta stjärnsystemet. Stjärnan är också den fjärde ljusstarkaste på natthimlen."
+    },
+    "051": {
+      "title": "Alpha Centauri B",
+      "description": "Alpha Centauri B är den näst största stjärnan i stjärnsystemet Alpha Centauri. Dess diameter är cirka en miljon kilometer, så den är något mindre än solen. Alpha Centuari A och B är så nära varandra de verkar vara som en enda stjärna för oss på jorden."
+    },
+    "052": {
+      "title": "Proxima Centauri",
+      "description": "Proxima Centauri är känd som den näst närmaste stjärnan till Jorden. Solen  som är en stjärna är närmast. Dess namn betyder \"närmast\". Proxima Centauri är en liten röd stjärna. Tyvärr så lyser den så svagt att du behöver ett teleskop för att se den."
+    },
+    "053": {
+      "title": "Sirius A",
+      "description": "Sirius är den ljusstarkaste stjärnan på natthimlen. Det är nästan dubbelt så ljus som Canopus den näst ljusstarkaste stjärnan. Sirius inte dock inte en stor stjärna. Den verkar bara vara ljusstark eftersom den ligger endast åtta ljusår bort."
+    },
+    "054": {
+      "title": "Sirius B",
+      "description": "Sirius B är en vit dvärg. Den är knappt större än jorden! Den är oftast ganska svår att se eftersom den döljs av Sirius A:s bländande ljus. Sirius B är känd som \"Valpen\"."
+    },
+    "055": {
+      "title": "Vega",
+      "description": "Vega finns i stjärnbilden Lyran. Den är också en del av sommartriangeln som består av Vega, Altair och Deneb. Vega snurrar så snabbt att den buktar. Vega pekar sin ena pol mot oss så den ser rund ut sedd från jorden."
+    },
+    "056": {
+      "title": "Regulus A",
+      "description": "Regulus A snurrar så snabbt att den buktar precis som Altair och Vega. Om Regulus A skulle snurra 16% snabbare skulle det slitas sönder! Regulus A är den ljusstarkaste stjärnan i stjärnbilden Lejonet. Förutom Regulus A har stjärnsytemet två andra stjärnor: Regulus B och C."
+    },
+    "057": {
+      "title": "Spica",
+      "description": "Spica är den femtonde ljusstarkaste stjärnan på natthimlen och ligger i stjärnbilden Jungfrun. Den är ett binärt stjärnsystem. De två stjärnorna är väldigt nära, och de kretsar runt varandra på fyra dygn."
+    },
+    "058": {
+      "title": "Alnitak",
+      "description": "Alnitak belyser Flamnebulosan. Alnitak är också den östligaste stjärnan av de tre stjärnor som utgör Orions bälte. De andra två är Alnilam och Mintaka och alla tre ser ljusstarka ut från planeten Jorden."
+    },
+    "059": {
+      "title": "Gacrux",
+      "description": "'Gacrux kan hittas i stjärnbilden Crux. Crux som betyder \"kors\" på latin är känd som södra korset. Gacrux är en binär stjärna. Den största av de två stjärnorna är en röd jätte.',"
+    },
+    "060": {
+      "title": "Uranus",
+      "description": "På svenska uttalas Uranus precis så roligt som många tycker. Precis som det finns metan på Uranus så finns det också metangas i det som ibland kommer ur anus."
+    },
+    "061": {
+      "title": "Neptunus",
+      "description": "Neptunus är den yttersta planeten i solsystemet. Det tar 164,8 jordår för den att kretsa ett varv runt solen. Du kommer aldrig se Neptunus slutföra en varv i ditt liv om inte den förväntade livslängden ökar."
+    },
+    "062": {
+      "title": "Wolf 359",
+      "description": "Wolf 359 är en liten röd dvärgstjärna mycket mindre än normala stjärnor. Den är den sjätte närmaste stjärnan till jorden efter solen, Proxima Centauri, Alpha Centauri A & B och Barnards stjärna. Ändå är den alldeles för svag att ses med ögat eller kikare."
+    },
+    "063": {
+      "title": "Gliese 229A",
+      "description": "Gliese 229A är en röd dvärgstjärna. Det är lite mindre än solen. Den kallas också GJ 229 eller GI 229. Det är en del av ett binärt stjärnsystem, den andra stjärnan är."
+    },
+    "064": {
+      "title": "Gliese 229B",
+      "description": "Gliese 229b är en brun dvärgstjärna. Det kretsar kring en större dvärgstjärna: Gliese 229A. Gliese 229B skulle normalt sätt klassificeras som en planet men den är mycket tätare än Jupiter vilket gör att dess massa är för stor för att vara en planet."
+    },
+    "065": {
+      "title": "Jupiter",
+      "description": "Jupiter är den största planeten i solsystemet. Emellertid är det inte den största kända planeten. Exoplaneten TReS-4 är störst. Jupiter är en gasjätte, en boll av gas helt enkelt. Du kan inte landa någonstans på den. Dessutom har Jupiter i skrivande stund 64 månar där de fyra galileiska månarna ingår."
+    },
+    "066": {
+      "title": "Saturnus",
+      "description": "Saturnus har de bredaste och mest synliga ringarna i solsystemet. Galileo, som var den första personen att se dessa ringar, trodde först att de var \"öron\". Kan du tänka dig en Saturnus utan ringar? Det skulle bara vara en gul boll."
+    },
+    "067": {
+      "title": "TReS-4",
+      "description": "TRES-4 är den största planeten som någonsin upptäckts. Den är 1400 ljusår bort. Inget teleskop kan faktiskt se planeten. Man vet att den existerar eftersom TRES-4 rör sig framför stjärnan den kretsar runt så ljuset från stjärnan minskar lite."
+    },
+    "068": {
+      "title": "Venus",
+      "description": "Det fanns en tid när Venus och Jorden ansågs vara systerplaneter. Det är inte sant alls! Venus yttemperatur är alltid över 450 °C eftersom dess atmosfär, som består av koldioxid, fångar solens värme!"
+    },
+    "069": {
+      "title": "Mars",
+      "description": "Mars kallas den röda planeten. Det är röd eftersom den är rostig. Många människor tror vatten och liv en gång funnits på Mars. Men även om det är sant skulle livet inte bestå av små gröna män."
+    },
+    "070": {
+      "title": "Merkurius",
+      "description": "Merkurius är den närmaste planeten till solen. Den har ingen atmosfär. Under dagen når temperaturen 400 °C men på natten faller temperaturen till -180 °C. En år på Merkurius är 88 jorddygn."
+    },
+    "071": {
+      "title": "Ganymedes",
+      "description": "Ganymedes är den största månen i solsystemet. Det är den tredje galileiska månen räknat från Jupiter. Förväxla ej Ganymedes med asteroiden Ganymed."
+    },
+    "072": {
+      "title": "Callisto",
+      "description": "Callisto är den mest avlägsna de galileiska månarna. Den kretsar kring Jupiter. Den blir träffad av med flest meteorer. Alla dessa träffar gör att Callisto är full med kratrar."
+    },
+    "073": {
+      "title": "Io",
+      "description": "Io har flest vulkaner i solsystemet! Den innersta av de galileiska månarna. Ios gejsrar sprutar ut fryst svaveldioxid upp till 500 kilometer ut i rymden! Ytan på Io förändras ständigt. Efter ett år av utbrott ser Ios yta väldigt annorlunda ut!"
+    },
+    "074": {
+      "title": "Europa",
+      "description": "Europa är den minsta de galileiska månarna. Det är täckt med is. Det finns ränder som täcker månens yta som man tror är sprickor i isen. En del tror att vatten kan finnas under lagret av is och kanske kan det finns liv under isen."
+    },
+    "075": {
+      "title": "Titan",
+      "description": "Titan är Saturnus enda stora måne. Den har en mycket tjock atmosfär som består av huvudsakligen kväve precis som på jorden. Titan har hav av flytande metan. (Det är ca -180 °C.) Det finns även en kontinent som kallas \"Xanadu\"."
+    },
+    "076": {
+      "title": "Månen",
+      "description": "Månen (på latin \"Luna\") är det ljusstarkaste objektet på natthimlen. Den kretsar kring jorden på 27 dygn, 7 timmar och 43 minuter. När månen står nära horisonten verkar den vara större än när den den är högt uppe på himlen. Detta är dock en illusion."
+    },
+    "077": {
+      "title": "Triton",
+      "description": "Triton är Neptunus största måne. Det är också den kallaste objekt i solsystemet, med -240 °C. Triton är också en mycket blåsig plats med vindar som nästan når ljudets hastighet!"
+    },
+    "078": {
+      "title": "Pluto",
+      "description": "Pluto är inte längre en planet. Det är en dvärgplanet tillsammans med Ceres, Haumea, Makemake och Eris. Förutom Charon så har man upptäckt några minimånar, Nix och Hydra, som kretsar kring Pluto"
+    },
+    "079": {
+      "title": "Charon",
+      "description": "Charon är Plutos enda stora måne. De har nästan samma storlek. En del människor anser Pluto och Charon är en dubbeldvärgplanet. Visste du samma sida av Charon alltid är vänds mot Pluto och samma sida av Pluto alltid är vänd mot Charon?"
+    },
+    "080": {
+      "title": "Eris",
+      "description": "Eris är den största dvärgplaneten. Den är alltså även större än Pluto, som också är en dvärgplanet. Eris går i en bana mycket långt från solen. Eris har en måne som heter Dysnomia."
+    },
+    "081": {
+      "title": "Dysnomia",
+      "description": "Dysnomia är Eris enda måne och upptäcktes 2005."
+    },
+    "082": {
+      "title": "Sedna",
+      "description": "Sedna har en mycket elliptisk bana. Det är så långt bort det tar 10 000 år att slutföra en omloppsbana."
+    },
+    "083": {
+      "title": "Quaoar",
+      "description": "Quaoar är mycket tät eftersom dess kärna är mycket stor. Quaoar kan ha varit mycket större för länge sedan. Den kan ha blivit träffad av ett objekt i Plutos storlek som då slagit de yttre lagren av Quaoar."
+    },
+    "084": {
+      "title": "Ceres",
+      "description": "Ceres är den största asteroiden och ingår i gruppen dvärgplaneter."
+    },
+    "085": {
+      "title": "Polaris",
+      "description": "Polaris är känd som polstjärnan. Den står nästan rakt ovanför nordpolen. Om du vill veta var norr är så leta efter polstjärnan. Leta reda på de två stjärnorna på bortre sidan av Karlavagnen och gå uppåt."
+    },
+    "086": {
+      "title": "Antares",
+      "description": "Antares är en röd superjätte mycket nära ekliptikan så den blir avskärmad av månen ganska ofta. Antares väger lika mycket som 15 solar."
+    },
+    "087": {
+      "title": "Altair",
+      "description": "Altair är en av de tre stjärnorna i sommartriangeln. De andra två är Vega och Deneb. Precis som många andra stjärnor, snurrar Altair mycket snabbt och buktar då ut"
+    },
+    "088": {
+      "title": "La Superba",
+      "description": "La Superba är en av de rödaste stjärnorna på natthimlen. Den är röd på grund av allt kol-13 den skapar då den fusionerar helium. (Normalt kol är kol-12.) La Superba är bara 2500 °C varm vilket gör den till en av de kallaste stjärnorna."
+    },
+    "089": {
+      "title": "Pistolstjärnan",
+      "description": "Pistolstjärnan är en av de mest ljusstarkaste stjärnorna i hela Vintergatan. Under tjugo sekunder utstrålar den lika mycket energi som solen gör på ett år. Interstellärt damm hindrar oss från att se den. Namnet kommer från att nebulosan som stjärnan ligger i såg ut som en pistol på de första lågupplösta bilderna på 80-talet."
+    },
+    "090": {
+      "title": "S Doradus",
+      "description": "S Doradus är en hyperjätte och en av de ljusaste stjärnorna i stora Magellanska molnet. För mer information om stora Magellanska molnet, zooma ut 8,5 tiopotenser."
+    },
+    "091": {
+      "title": "Enif",
+      "description": "Enif är en orangefärgad superjätte. Dess namn betyder \"näsa\" på arabiska eftersom den i stjärnbilden Pegasus ligger vid nospartiet."
+    },
+    "092": {
+      "title": "Mu Cephei",
+      "description": "Mu Cephei är mycket röd. Det kallas ibland för Granatstjärnan eftersom det är granatröd. Den kallas också Erakis om du inte gillar de två första namnen."
+    },
+    "093": {
+      "title": "KY Cygni",
+      "description": "KY Cygni är 300 000 gånger mer lysande än solen och solen är ganska lysande, eller hur? Solen är så lysande att du inte ska titta direkt på den! Men det är okej att titta på KY Cyngi eftersom den är 300 miljoner gånger längre bort."
+    },
+    "094": {
+      "title": "V354 Cephei",
+      "description": "V354 Cephei är röd superjätte och den är enorm. Om den placeras i solsystemet skulle den sträcka sig förbi Jupiters bana."
+    },
+    "095": {
+      "title": "WOH G64",
+      "description": "WOH G64 finns i stora Magellanska molnet. Runt stjärnan finns ett moln som sträcker ett halvt ljusår ut."
+    },
+    "096": {
+      "title": "VY Canis Majoris",
+      "description": "VY Canis Majoris är den största kända stjärnan. Den är så stort att om den placerades i solsystemet skulle den sträcka sig utanför Saturnus bana! Det skulle ta ett plan 1200 år att åka runt den en gång."
+    },
+    "097": {
+      "title": "Betelguese",
+      "description": "Betelguese ålder är troligen bara tio miljoner år. Betelguese är så ung för den är så stor och åldras snabbt. Den förväntas att explodera i en supernova någon gång från nu till om en miljon år."
+    },
+    "098": {
+      "title": "Albireo",
+      "description": "Albireo består av tre stjärnor. Här visar vi bara den största. Två av stjärnorna är gula och ligger nära varandra. Den tredje är blå och längre bort. Den blå stjärnan och de två gula stjärnorna är så långt ifrån varandra att omloppsbanan är 100 000 år."
+    },
+    "099": {
+      "title": "Kapteyns stjärna",
+      "description": "Kapteyns Stjärna är bara tretton ljusår bort. Men eftersom den är en röd dvärg och diametern är bara 30% av solens så du behöver kikare för att se den. För 10 000 år sedan var Kapteyns stjärna bara sju ljusår bort!"
+    },
     "100": {
       "title": "Luytens stjärna",
       "description": "Luytens stjärna är en röd dvärgstjärna 12 ljusår bort. Den är så nära Procyon att Procyon är 10 gånger ljusare än Sirius är på vår natthimmel."
@@ -701,8 +981,8 @@
       "description": "Denna sak väger 15 ton! Man använde den för att landa på månen 1969-1972."
     },
     "275": {
-      "title": "Football Field",
-      "description": "Amerikanska fotbollsplaner är 120 meter vilket är ungefär samma som för vanliga fotbollsplaner. Hur som helst så brukar man jämföra fotbollsplaner med andra stora objekt. Tex \"Titanic var tre fotbollsplaner lång\" Fotbollsplaner används också för att spela fotboll."
+      "title": "Fotbollsplan",
+      "description": "FIFAs rekommenderade mått för en fotbollsplan vid internationella matcher är 105 meter lång och 68 meter bred. Den moderna fotbollen uppstod i England år 1863, när spelets regler fastställdes. I dag finns det mer än 40 000 registrerade fotbollsklubbar i England — fler än i något annat land i världen."
     },
     "276": {
       "title": "Gateway Arch",
@@ -912,285 +1192,17 @@
       "title": "Stora barriärrevet",
       "description": "Stora barriärrevet är världens största system av korallrev. Det består av över 2 900 individuella rev, och 900 öar. Stora barriärrevet sträcker sig cirka 2 600 kilometer och täcker en yta på cirka 344,400 kvadratkilometer."
     },
-    "030": {
-      "title": "LCD Pixel",
-      "description": "Även om storleken av pixlar skiljer sig mycket är 300 mikrometer genomsnittsstorleken. En pixel innehåller tre subpixlar som är röda, gröna och blåa. Pixlar är ganska coola men voxlar är ännu häftigare. De är tredimensionella pixlar."
-    },
-    "031": {
-      "title": "Palm Jebel Ali",
-      "description": "Palm Jebel Ali är den största ö som människan tillverkat (då räknar vi inte med öar som Flevopolder, där en del av Nederländerna dränerades så det blev mer mark). Palm Jebel Ali är inte komplett. Det är en del av palmöarna och planeras för att inhysa 250 000 människor!"
-    },
-    "032": {
-      "title": "Neutrino",
-      "description": "Neutriner passerar genom vanlig materia som du och jag hela tiden! De gör det just nu! Neutriner har ingen laddning så de påverkas endast av gravitation och den svaga kärnkraften. De är dock så små att de knappt påverkas av dessa krafter."
-    },
-    "033": {
-      "title": "Högenergineutriner",
-      "description": "Neutriner med hög energi verkar vara större. För mer information om neutriner gå till dess bild som visar den genomsnittliga storleken. Den är 15000 gånger mindre!"
-    },
-    "034": {
-      "title": "Tändsticka",
-      "description": "Tändstickan är ett mycket användbart litet verktyg. Genom att dra den mot plånet på på en tändsticksask kan du tända eld på stickan. Var försiktig! Leka aldrig med tändstickor! OK?"
-    },
-    "035": {
-      "title": "Hönsägg",
-      "description": "Från hönsägget brukar det kläckas kycklingar. Många människor älskar att äta ägg. Förutom utseendet är det ingen skillnad mellan vita ägg och bruna ägg."
-    },
-    "036": {
-      "title": "Vaktelägg",
-      "description": "Många människor tycker att vaktelägg är godare än hönsägg. Vaktelägg är mindre och mer sällsynta än hönsägg men det hindrar inte vissa människor från att älska dem!"
-    },
-    "037": {
-      "title": "Kvadrattum",
-      "description": "Om du inte är van att det metriska systemet är här en kvadrattum. För oss svenskar är det tur att nästan allt annat här är baserat på metersystemet. Längden på sidorna i en kvadrattum är ca 2,5 cm."
-    },
-    "038": {
-      "title": "Kaffeböna",
-      "description": "En kaffeböna är ca en centimeter på längden. Det är faktiskt en frukt som liknar en böna. Den är brun och har ränder. Tänka sig att dess diameter är 10^-29 gånger mindre än det observerbara universum."
-    },
-    "039": {
-      "title": "Daggmask",
-      "description": "Älskar du bara inte slingrande slemmiga daggmaskar? Trots myten så dör de flesta arter av daggmaskar om du delar den. Ibland kan huvudet överleva och då växer en ny svans ut."
-    },
-    "040": {
-      "title": "Rigel",
-      "description": "Rigel är den starkaste lysande stjärnan i stjärnbilden Orion . Eftersom den ligger nära ekvatorn kan den ses från nästan överallt på Jorden."
-    },
-    "041": {
-      "title": "USA",
-      "description": "Även om USAs yta verkar vara större än Plutos så glöm inte att Pluto har en baksida också"
-    },
-    "042": {
-      "title": "Jorden",
-      "description": "Jorden är vårt enda hem. Du tycker kanske att den verkar stor men det är viktigt att ta hand om den. När den väl är borta finns det ingen annanstans att åka till"
-    },
-    "043": {
-      "title": "Deneb",
-      "description": "Deneb är den ljusaste stjärnan i stjärnbilden Cygnus. Deneb är 1500 ljusår bort vilket gör den till den mest avlägsna av de 25 ljusstarkaste stjärnorna. Om du bodde på Mars skulle Deneb visas ovanför Nordpolen inte Polaris."
-    },
-    "044": {
-      "title": "V V Cephei A",
-      "description": "För ett tag var VV Cephei A den största kända stjärnan. Nu tillhör denna titel VY Canis Majoris. Det beror på att nya stjärnor upptäcks hela tiden!"
-    },
-    "045": {
-      "title": "R Doradus",
-      "description": "R Doradus är relativt stor och den är bara 178 ljusår från jorden så dess synbara storlek är den näst största på himlen av alla stjärnor! Den har en diameter på 0,06 bågsekunder. Solen är störst på 1 920 bågsekunder - 40 000 gånger större."
-    },
-    "046": {
-      "title": "Aldebaran",
-      "description": "Aldebaran ska inte förväxlas med Alderaan som är en fiktiv planet i Star Wars. Alderaan är mycket lik jorden när det gäller storlek, längd på dygnet och landmassa. Emellertid är Aldebaran 5000 gånger större i diameter och roterar vart 643 jorddygn och har inget vatten."
-    },
-    "047": {
-      "title": "Pollux",
-      "description": "I den grekiska mytologin är Pollux och Castor tvillingar. De är också stjärnor i stjärnbilden Gemini som betyder \"tvillingar\". Pollux är bara en enda stjärna medan Castor består av tre dubbelstjärnor vilket ger totalt sex stjärnor. Castor är alltså sexlingar!"
-    },
-    "048": {
-      "title": "Arcturus",
-      "description": "Arcturus är den tredje ljusstarkaste stjärnan på natthimlen efter Sirius och Canopus. Det är den ljusaste stjärnan i stjärnbilden Boötes. Hitta den genom att följa handtaget i Karlavagnen."
-    },
-    "049": {
-      "title": "Solen",
-      "description": "Solen ger jorden den energi som gör att den kan ha liv. Solens diameter är över 100 gånger större än jordens! 20 000 gånger mer solenergi träffar jorden än den vi människor använder."
-    },
-    "050": {
-      "title": "Alpha Centauri A",
-      "description": "Alpha Centauri A är den största stjärnan i stjärnsystemet Alpha Centauri (som består av tre stjärnor). Det är också det närmsta stjärnsystemet. Stjärnan är också den fjärde ljusstarkaste på natthimlen."
-    },
-    "051": {
-      "title": "Alpha Centauri B",
-      "description": "Alpha Centauri B är den näst största stjärnan i stjärnsystemet Alpha Centauri. Dess diameter är cirka en miljon kilometer, så den är något mindre än solen. Alpha Centuari A och B är så nära varandra de verkar vara som en enda stjärna för oss på jorden."
-    },
-    "052": {
-      "title": "Proxima Centauri",
-      "description": "Proxima Centauri är känd som den näst närmaste stjärnan till Jorden. Solen  som är en stjärna är närmast. Dess namn betyder \"närmast\". Proxima Centauri är en liten röd stjärna. Tyvärr så lyser den så svagt att du behöver ett teleskop för att se den."
-    },
-    "053": {
-      "title": "Sirius A",
-      "description": "Sirius är den ljusstarkaste stjärnan på natthimlen. Det är nästan dubbelt så ljus som Canopus den näst ljusstarkaste stjärnan. Sirius inte dock inte en stor stjärna. Den verkar bara vara ljusstark eftersom den ligger endast åtta ljusår bort."
-    },
-    "054": {
-      "title": "Sirius B",
-      "description": "Sirius B är en vit dvärg. Den är knappt större än jorden! Den är oftast ganska svår att se eftersom den döljs av Sirius A:s bländande ljus. Sirius B är känd som \"Valpen\"."
-    },
-    "055": {
-      "title": "Vega",
-      "description": "Vega finns i stjärnbilden Lyran. Den är också en del av sommartriangeln som består av Vega, Altair och Deneb. Vega snurrar så snabbt att den buktar. Vega pekar sin ena pol mot oss så den ser rund ut sedd från jorden."
-    },
-    "056": {
-      "title": "Regulus A",
-      "description": "Regulus A snurrar så snabbt att den buktar precis som Altair och Vega. Om Regulus A skulle snurra 16% snabbare skulle det slitas sönder! Regulus A är den ljusstarkaste stjärnan i stjärnbilden Lejonet. Förutom Regulus A har stjärnsytemet två andra stjärnor: Regulus B och C."
-    },
-    "057": {
-      "title": "Spica",
-      "description": "Spica är den femtonde ljusstarkaste stjärnan på natthimlen och ligger i stjärnbilden Jungfrun. Den är ett binärt stjärnsystem. De två stjärnorna är väldigt nära, och de kretsar runt varandra på fyra dygn."
-    },
-    "058": {
-      "title": "Alnitak",
-      "description": "Alnitak belyser Flamnebulosan. Alnitak är också den östligaste stjärnan av de tre stjärnor som utgör Orions bälte. De andra två är Alnilam och Mintaka och alla tre ser ljusstarka ut från planeten Jorden."
-    },
-    "059": {
-      "title": "Gacrux",
-      "description": "'Gacrux kan hittas i stjärnbilden Crux. Crux som betyder \"kors\" på latin är känd som södra korset. Gacrux är en binär stjärna. Den största av de två stjärnorna är en röd jätte.',"
-    },
-    "060": {
-      "title": "Uranus",
-      "description": "På svenska uttalas Uranus precis så roligt som många tycker. Precis som det finns metan på Uranus så finns det också metangas i det som ibland kommer ur anus."
-    },
-    "061": {
-      "title": "Neptunus",
-      "description": "Neptunus är den yttersta planeten i solsystemet. Det tar 164,8 jordår för den att kretsa ett varv runt solen. Du kommer aldrig se Neptunus slutföra en varv i ditt liv om inte den förväntade livslängden ökar."
-    },
-    "062": {
-      "title": "Wolf 359",
-      "description": "Wolf 359 är en liten röd dvärgstjärna mycket mindre än normala stjärnor. Den är den sjätte närmaste stjärnan till jorden efter solen, Proxima Centauri, Alpha Centauri A & B och Barnards stjärna. Ändå är den alldeles för svag att ses med ögat eller kikare."
-    },
-    "063": {
-      "title": "Gliese 229A",
-      "description": "Gliese 229A är en röd dvärgstjärna. Det är lite mindre än solen. Den kallas också GJ 229 eller GI 229. Det är en del av ett binärt stjärnsystem, den andra stjärnan är."
-    },
-    "064": {
-      "title": "Gliese 229B",
-      "description": "Gliese 229b är en brun dvärgstjärna. Det kretsar kring en större dvärgstjärna: Gliese 229A. Gliese 229B skulle normalt sätt klassificeras som en planet men den är mycket tätare än Jupiter vilket gör att dess massa är för stor för att vara en planet."
-    },
-    "065": {
-      "title": "Jupiter",
-      "description": "Jupiter är den största planeten i solsystemet. Emellertid är det inte den största kända planeten. Exoplaneten TReS-4 är störst. Jupiter är en gasjätte, en boll av gas helt enkelt. Du kan inte landa någonstans på den. Dessutom har Jupiter i skrivande stund 64 månar där de fyra galileiska månarna ingår."
-    },
-    "066": {
-      "title": "Saturnus",
-      "description": "Saturnus har de bredaste och mest synliga ringarna i solsystemet. Galileo, som var den första personen att se dessa ringar, trodde först att de var \"öron\". Kan du tänka dig en Saturnus utan ringar? Det skulle bara vara en gul boll."
-    },
-    "067": {
-      "title": "TReS-4",
-      "description": "TRES-4 är den största planeten som någonsin upptäckts. Den är 1400 ljusår bort. Inget teleskop kan faktiskt se planeten. Man vet att den existerar eftersom TRES-4 rör sig framför stjärnan den kretsar runt så ljuset från stjärnan minskar lite."
-    },
-    "068": {
-      "title": "Venus",
-      "description": "Det fanns en tid när Venus och Jorden ansågs vara systerplaneter. Det är inte sant alls! Venus yttemperatur är alltid över 450 °C eftersom dess atmosfär, som består av koldioxid, fångar solens värme!"
-    },
-    "069": {
-      "title": "Mars",
-      "description": "Mars kallas den röda planeten. Det är röd eftersom den är rostig. Många människor tror vatten och liv en gång funnits på Mars. Men även om det är sant skulle livet inte bestå av små gröna män."
-    },
-    "070": {
-      "title": "Merkurius",
-      "description": "Merkurius är den närmaste planeten till solen. Den har ingen atmosfär. Under dagen når temperaturen 400 °C men på natten faller temperaturen till -180 °C. En år på Merkurius är 88 jorddygn."
-    },
-    "071": {
-      "title": "Ganymedes",
-      "description": "Ganymedes är den största månen i solsystemet. Det är den tredje galileiska månen räknat från Jupiter. Förväxla ej Ganymedes med asteroiden Ganymed."
-    },
-    "072": {
-      "title": "Callisto",
-      "description": "Callisto är den mest avlägsna de galileiska månarna. Den kretsar kring Jupiter. Den blir träffad av med flest meteorer. Alla dessa träffar gör att Callisto är full med kratrar."
-    },
-    "073": {
-      "title": "Io",
-      "description": "Io har flest vulkaner i solsystemet! Den innersta av de galileiska månarna. Ios gejsrar sprutar ut fryst svaveldioxid upp till 500 kilometer ut i rymden! Ytan på Io förändras ständigt. Efter ett år av utbrott ser Ios yta väldigt annorlunda ut!"
-    },
-    "074": {
-      "title": "Europa",
-      "description": "Europa är den minsta de galileiska månarna. Det är täckt med is. Det finns ränder som täcker månens yta som man tror är sprickor i isen. En del tror att vatten kan finnas under lagret av is och kanske kan det finns liv under isen."
-    },
-    "075": {
-      "title": "Titan",
-      "description": "Titan är Saturnus enda stora måne. Den har en mycket tjock atmosfär som består av huvudsakligen kväve precis som på jorden. Titan har hav av flytande metan. (Det är ca -180 °C.) Det finns även en kontinent som kallas \"Xanadu\"."
-    },
-    "076": {
-      "title": "Månen",
-      "description": "Månen (på latin \"Luna\") är det ljusstarkaste objektet på natthimlen. Den kretsar kring jorden på 27 dygn, 7 timmar och 43 minuter. När månen står nära horisonten verkar den vara större än när den den är högt uppe på himlen. Detta är dock en illusion."
-    },
-    "077": {
-      "title": "Triton",
-      "description": "Triton är Neptunus största måne. Det är också den kallaste objekt i solsystemet, med -240 °C. Triton är också en mycket blåsig plats med vindar som nästan når ljudets hastighet!"
-    },
-    "078": {
-      "title": "Pluto",
-      "description": "Pluto är inte längre en planet. Det är en dvärgplanet tillsammans med Ceres, Haumea, Makemake och Eris. Förutom Charon så har man upptäckt några minimånar, Nix och Hydra, som kretsar kring Pluto"
-    },
-    "079": {
-      "title": "Charon",
-      "description": "Charon är Plutos enda stora måne. De har nästan samma storlek. En del människor anser Pluto och Charon är en dubbeldvärgplanet. Visste du samma sida av Charon alltid är vänds mot Pluto och samma sida av Pluto alltid är vänd mot Charon?"
-    },
-    "080": {
-      "title": "Eris",
-      "description": "Eris är den största dvärgplaneten. Den är alltså även större än Pluto, som också är en dvärgplanet. Eris går i en bana mycket långt från solen. Eris har en måne som heter Dysnomia."
-    },
-    "081": {
-      "title": "Dysnomia",
-      "description": "Dysnomia är Eris enda måne och upptäcktes 2005."
-    },
-    "082": {
-      "title": "Sedna",
-      "description": "Sedna har en mycket elliptisk bana. Det är så långt bort det tar 10 000 år att slutföra en omloppsbana."
-    },
-    "083": {
-      "title": "Quaoar",
-      "description": "Quaoar är mycket tät eftersom dess kärna är mycket stor. Quaoar kan ha varit mycket större för länge sedan. Den kan ha blivit träffad av ett objekt i Plutos storlek som då slagit de yttre lagren av Quaoar."
-    },
-    "084": {
-      "title": "Ceres",
-      "description": "Ceres är den största asteroiden och ingår i gruppen dvärgplaneter."
-    },
-    "085": {
-      "title": "Polaris",
-      "description": "Polaris är känd som polstjärnan. Den står nästan rakt ovanför nordpolen. Om du vill veta var norr är så leta efter polstjärnan. Leta reda på de två stjärnorna på bortre sidan av Karlavagnen och gå uppåt."
-    },
-    "086": {
-      "title": "Antares",
-      "description": "Antares är en röd superjätte mycket nära ekliptikan så den blir avskärmad av månen ganska ofta. Antares väger lika mycket som 15 solar."
-    },
-    "087": {
-      "title": "Altair",
-      "description": "Altair är en av de tre stjärnorna i sommartriangeln. De andra två är Vega och Deneb. Precis som många andra stjärnor, snurrar Altair mycket snabbt och buktar då ut"
-    },
-    "088": {
-      "title": "La Superba",
-      "description": "La Superba är en av de rödaste stjärnorna på natthimlen. Den är röd på grund av allt kol-13 den skapar då den fusionerar helium. (Normalt kol är kol-12.) La Superba är bara 2500 °C varm vilket gör den till en av de kallaste stjärnorna."
-    },
-    "089": {
-      "title": "Pistolstjärnan",
-      "description": "Pistolstjärnan är en av de mest ljusstarkaste stjärnorna i hela Vintergatan. Under tjugo sekunder utstrålar den lika mycket energi som solen gör på ett år. Interstellärt damm hindrar oss från att se den. Namnet kommer från att nebulosan som stjärnan ligger i såg ut som en pistol på de första lågupplösta bilderna på 80-talet."
-    },
-    "090": {
-      "title": "S Doradus",
-      "description": "S Doradus är en hyperjätte och en av de ljusaste stjärnorna i stora Magellanska molnet. För mer information om stora Magellanska molnet, zooma ut 8,5 tiopotenser."
-    },
-    "091": {
-      "title": "Enif",
-      "description": "Enif är en orangefärgad superjätte. Dess namn betyder \"näsa\" på arabiska eftersom den i stjärnbilden Pegasus ligger vid nospartiet."
-    },
-    "092": {
-      "title": "Mu Cephei",
-      "description": "Mu Cephei är mycket röd. Det kallas ibland för Granatstjärnan eftersom det är granatröd. Den kallas också Erakis om du inte gillar de två första namnen."
-    },
-    "093": {
-      "title": "KY Cygni",
-      "description": "KY Cygni är 300 000 gånger mer lysande än solen och solen är ganska lysande, eller hur? Solen är så lysande att du inte ska titta direkt på den! Men det är okej att titta på KY Cyngi eftersom den är 300 miljoner gånger längre bort."
-    },
-    "094": {
-      "title": "V354 Cephei",
-      "description": "V354 Cephei är röd superjätte och den är enorm. Om den placeras i solsystemet skulle den sträcka sig förbi Jupiters bana."
-    },
-    "095": {
-      "title": "WOH G64",
-      "description": "WOH G64 finns i stora Magellanska molnet. Runt stjärnan finns ett moln som sträcker ett halvt ljusår ut."
-    },
-    "096": {
-      "title": "VY Canis Majoris",
-      "description": "VY Canis Majoris är den största kända stjärnan. Den är så stort att om den placerades i solsystemet skulle den sträcka sig utanför Saturnus bana! Det skulle ta ett plan 1200 år att åka runt den en gång."
-    },
-    "097": {
-      "title": "Betelguese",
-      "description": "Betelguese ålder är troligen bara tio miljoner år. Betelguese är så ung för den är så stor och åldras snabbt. Den förväntas att explodera i en supernova någon gång från nu till om en miljon år."
-    },
-    "098": {
-      "title": "Albireo",
-      "description": "Albireo består av tre stjärnor. Här visar vi bara den största. Två av stjärnorna är gula och ligger nära varandra. Den tredje är blå och längre bort. Den blå stjärnan och de två gula stjärnorna är så långt ifrån varandra att omloppsbanan är 100 000 år."
-    },
-    "099": {
-      "title": "Kapteyns stjärna",
-      "description": "Kapteyns Stjärna är bara tretton ljusår bort. Men eftersom den är en röd dvärg och diametern är bara 30% av solens så du behöver kikare för att se den. För 10 000 år sedan var Kapteyns stjärna bara sju ljusår bort!"
+    "328": {
+      "title": "SARS-CoV-2",
+      "description": "SARS-CoV-2 är coronaviruset som orsakade covid-19-pandemin och förändrade människors liv under 2020–2022. Trots sin mikroskopiska storlek (80–120 nanometer) hade detta virus en enorm påverkan på medicin, vetenskap, ekonomi och vardagsliv över hela världen."
+    },
+    "329": {
+      "title": "Bajkalsjön",
+      "description": "Bajkalsjön är den djupaste sjön på jorden och den största reservoaren av flytande sötvatten bland världens sjöar. Dess ålder uppskattas till cirka 25–30 miljoner år, vilket gör den till en av planetens äldsta sjöar. Där lever mer än 1 000 djurarter som inte finns någon annanstans i världen och som utgör omkring 60 % av dess fauna."
+    },
+    "330": {
+      "title": "Trögkrypare",
+      "description": "Trögkrypare är pyttesmå åttabenta varelser som blivit kända för sin otroliga överlevnadsförmåga. Trots sin storlek kan de klara uttorkning, extrem kyla, värme, högt tryck och till och med förhållandena i den öppna rymden genom att gå in i ett tillstånd där livet nästan helt stannar av."
     }
   }
 }

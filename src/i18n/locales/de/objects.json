@@ -1,5 +1,285 @@
 {
   "items": {
+    "030": {
+      "title": "LCD-Pixel",
+      "description": "Obwohl sich die Größe der Pixel je nach Verwendung stark voneinander unterscheidet, liegt der Durchschnitt um die 300 Mikrometer. Ein Pixel beinhaltet drei verschiedene Unterpixel, das sind rot, grün und blau. Wenn du denkst, dass Pixel schon cool sind, dann solltest du einmal Voxel sehen! Das sind dreidimensionale Pixel."
+    },
+    "031": {
+      "title": "Palm Jebel Ali",
+      "description": "Palm Jebel Ali ist die größte menschengemachte Insel (ausgenommen Inseln wie Flevopolder, eine Region der Niederlande, die durch Trockenlegung entstanden ist). Palm Jebel Ali ist noch nicht fertiggestellt. Es ist Teil der Palm Islands und soll einmal 250.000 Personen beherbergen!"
+    },
+    "032": {
+      "title": "Neutrino",
+      "description": "Neutrinos fliegen die ganze Zeit durch normale Materie wie dich und mich hindurch! Tatsächlich in genau diesem Moment! Neutrinos haben keine Ladung, daher spüren sie nur die Gravitation und die Schwache Kernkraft. Allerdings sind sie so winzig, dass sie auch davon kaum beeinflusst werden."
+    },
+    "033": {
+      "title": "Hochenergie-Neutrino",
+      "description": "Neutrinos höherer Energie sind größer. Für mehr Informationen über Neutrinos zoome zum Neutrino, das die durchschnittliche Größe zeigt. Es ist enorme 15.000-mal kleiner!"
+    },
+    "034": {
+      "title": "Streichholz",
+      "description": "Ein Streichholz ist ein sehr nützliches kleines Werkzeug. Streicht man es über eine raue Oberfläche, so kann es sich entzünden. Diese Eigenschaft macht es sehr gefährlich! Darum ist es keine gute Idee, mit Streichhölzern zu spielen. Kapiert?"
+    },
+    "035": {
+      "title": "Hühnerei",
+      "description": "Hühnerküken schlüpfen normalerweise aus Hühnereiern. Viele Menschen mögen es Hühnereier zu essen. Von der Erscheinung abgesehen gibt es keinen Unterschied zwischen weißen und braunen Hühnereiern."
+    },
+    "036": {
+      "title": "Wachteleier",
+      "description": "Viele Leute glauben, dass Wachteleier besser als Hühnereier sind. Das Wachtelei ist kleiner und seltener, aber das hindert die Leute nicht daran, sie zu mögen!"
+    },
+    "037": {
+      "title": "Quadratzoll",
+      "description": "Früher – und heute noch in anderen Teilen der Welt – nutzten nicht alle Leute das metrische System. Hier ist zum Beispiel ein Quadratzoll. 2,54 cm ist die Länge einer Seite, nicht die Fläche. (Die wäre in cm².)"
+    },
+    "038": {
+      "title": "Kaffeebohne",
+      "description": "Die Kaffeebohne ist etwa einen Zentimeter groß – und sie ist eigentlich eine Frucht, die wie eine Bohne aussieht. Sie ist braun und hat Streifen, und manchmal, wenn du sie anstarrst, vergisst du, dass ihr Durchmesser ein 10^29stel des bekannten Universums ist."
+    },
+    "039": {
+      "title": "Regenwurm",
+      "description": "Liebst du nicht auch sich windende schleimige Regenwürmer? Trotz des Gerüchtes sterben die meisten Regenwurmarten, wenn man sie halbiert. Manchmal überlebt der Kopf und bildet einen neuen Schwanz aus."
+    },
+    "040": {
+      "title": "Rigel",
+      "description": "Rigel ist ein grell-blauer Stern und der hellste des Sternbildes Orion. Er liegt nahe dem Äquator, daher ist er von fast überall auf der Erde sichtbar. Sprich ihn nicht „Riggel“ aus, sondern „Rihgel“."
+    },
+    "041": {
+      "title": "Vereinigte Staaten von Amerika",
+      "description": "Das sind die USA. Obwohl sie größer als Pluto aussehen, hat Pluto eine Rückseite, was bedeutet, dass Pluto mehr Oberfläche hat!"
+    },
+    "042": {
+      "title": "Erde",
+      "description": "Die Erde ist unser einziges Zuhause. Solange wir darauf leben, mag sie uns riesig erscheinen, aber es ist dennoch wichtig, sich um sie zu kümmern. Wenn sie weg ist, können wir nirgendwo sonst hin."
+    },
+    "043": {
+      "title": "Deneb",
+      "description": "Deneb ist der hellste Stern des Sternbilds Schwan. Deneb ist 1.500 Lichtjahre entfernt und damit der am weitesten entfernte der 25 hellsten Sterne. Wenn Du auf dem Mars leben würdest, würde Deneb über dem Nordpol erscheinen – nicht der Nordpolarstern."
+    },
+    "044": {
+      "title": "V V Cephei A",
+      "description": "Eine Zeitlang war V V Cephei A der größte bekannte Stern. Jetzt gehört dieser Titel VY Canis Majoris. Das liegt daran, dass ständig neue Sterne entdeckt werden!"
+    },
+    "045": {
+      "title": "R Doradus",
+      "description": "R Doradus ist relativ groß und nur 200 Lichtjahre von der Erde entfernt, daher ist sein scheinbarer Durchmesser der zweitgrößte am Himmel! Er beträgt 0,05 Bogensekunden. Die Sonne hat den größten scheinbaren Durchmesser, 1.920 Bogensekunden – 40.000-mal größer."
+    },
+    "046": {
+      "title": "Aldebaran",
+      "description": "Aldebaran darf nicht mit Alderaan verwechselt werden, der ein Planet bei Star Wars ist. Alderaan ist der Erde in Größe, Taglänge und Wasserbedeckung recht ähnlich. Aldebaran hingegen hat einen 5.000-mal größeren Durchmesser, rotiert alle 643 Erdtage einmal und man kann auf ihm kein Wasser finden."
+    },
+    "047": {
+      "title": "Pollux",
+      "description": "In der griechischen Mythologie ist Pollux der Bruder von Castor. Beide finden sich im Sternbild der Zwillinge (Gemini) wieder. Pollux ist nur ein einziger Stern, wohingegen Castor aus drei Doppelsternsystemen, also aus insgesamt sechs Sternen besteht. Erst im Fernrohr kann man Castor in drei Sterne trennen. Castor ist ein Satz Sechslinge!"
+    },
+    "048": {
+      "title": "Arcturus",
+      "description": "Arcturus (oder auch Arktur) ist nach Sirius und Canopus der dritthellste Stern am Nachthimmel. Er ist der hellste Stern im Sternbild des Bärenhüters. Man kann ihn finden, indem man der Deichsel des großen Wagens folgt."
+    },
+    "049": {
+      "title": "Die Sonne",
+      "description": "Auch bekannt als Sol; die Sonne gibt der Erde ihre Energie und ermöglicht ihr, Leben zu tragen. Die Sonne ist über 100-mal größer im Durchmesser als die Erde! 20.000-mal mehr solare Energie trifft die Erde, als die Menschheit verbraucht."
+    },
+    "050": {
+      "title": "Alpha Centauri A",
+      "description": "Alpha Centauri A ist der größte Stern im Alpha-Centauri-Sternsystem (das aus drei Sternen zusammengesetzt ist), das uns am nächsten stehende Sternsystem. Er ist außerdem der vierthellste Stern am Nachthimmel."
+    },
+    "051": {
+      "title": "Alpha Centauri B",
+      "description": "Alpha Centauri B ist der zweitgrößte Stern im Alpha-Centauri-Sternsystem. Sein Durchmesser beträgt etwa eine Million Kilometer, womit er etwas kleiner als die Sonne ist. Alpha Centauri A & B stehen so nah beieinander, dass sie uns Erdlingen als ein einzelner Stern erscheinen."
+    },
+    "052": {
+      "title": "Proxima Centauri",
+      "description": "Proxima Centauri ist dafür bekannt, der der Erde am nächsten stehende Stern nach der Sonne zu sein. Sein Name kommt vom Wort Proximität (Nähe). Proxima Centauri ist ein kleiner roter Stern. Leider ist er so dunkel, dass man ein Teleskop benötigt, um ihn sehen zu können."
+    },
+    "053": {
+      "title": "Sirius A",
+      "description": "Sirius ist der hellste Stern am Nachthimmel. Er ist fast doppelt so hell wie Canopus, der zweithellste Stern. Dennoch ist Sirius kein großer Stern. Er erscheint nur hell, weil er uns sehr nahe steht, er ist nur acht Lichtjahre entfernt."
+    },
+    "054": {
+      "title": "Sirius B",
+      "description": "Sirius B ist ein weißer Zwerg. Er ist kaum größer als die Erde! Er ist gewöhnlich schwer zu sehen, weil er durch Sirius A überstrahlt wird. Sirius B wird auch „Pup“ (Jungtier) genannt."
+    },
+    "055": {
+      "title": "Wega",
+      "description": "Wega findet sich im Sternbild Leier (Lyra). Sie ist auch Teil des Sommerdreiecks, das sich aus Wega, Altair und Deneb zusammensetzt. Wega dreht sich so schnell, dass sie sich abplattet. Wir schauen jedoch auf ihren Pol, so dass sie uns kreisförmig erscheint."
+    },
+    "056": {
+      "title": "Regulus",
+      "description": "Regulus dreht sich so schnell, dass er sich abplattet, genau wie Altair und Wega. Würde Regulus nur 16% schneller rotieren, würde es ihn zerreißen! Regulus ist außerdem der hellste Stern des Sternbilds Löwe (Leo). Es gibt auch noch Regulus B & C."
+    },
+    "057": {
+      "title": "Spica",
+      "description": "Spica ist der fünfzehnthellste Stern am Nachthimmel und liegt im Sternbild Jungfrau (Virgo). Eigentlich ist er ein Doppelsternsystem. Die beiden Sterne sind sich sehr nah und umkreisen sich in nur vier Tagen."
+    },
+    "058": {
+      "title": "Alnitak",
+      "description": "Alnitak leuchtet neben dem Flammennebel. Alnitak ist der östlichste Stern vom Gürtel des Orion. Die anderen beiden sind Alnilam und Mintaka, und alle drei erscheinen sehr hell vom Planeten Erde aus."
+    },
+    "059": {
+      "title": "Gacrux",
+      "description": "Gacrux kann im Sternbild Kreuz des Südens (Crux) gefunden werden. Gacrux ist ein Doppelstern. Der größere der beiden ist ein Roter Riese."
+    },
+    "060": {
+      "title": "Uranus",
+      "description": "Viele Leute glauben, die englische Aussprache von Uranus gleiche „your anus“, also „dein Anus“. Es gibt aber viele andere, und bessere, Aussprachen. Uranus kann im Englischen auch als „Jerahnus“ oder „Seventh Planet“ (siebter Planet) ausgesprochen werden."
+    },
+    "061": {
+      "title": "Neptun",
+      "description": "Neptun ist derzeit der am weitesten von der Sonne entfernte Planet unseres Sternsystems. Er braucht 164,8 Erdenjahre, um einmal die Sonne zu umrunden. Man kann keinen kompletten Umlauf in einem Menschenleben beobachten, es sei denn, die Lebenserwartung steigt."
+    },
+    "062": {
+      "title": "Wolf 359",
+      "description": "Wolf 359 ist ein kleiner Roter Zwerg, deutlich kleiner als normale Sterne. Er ist der sechstnächste Stern von der Erde aus, nach der Sonne, Proxima Centauri, Alpha Centauri A & B und Barnards Pfeilstern. Dennoch beträgt seine Größenordnung nur dunkle +13,5 mag."
+    },
+    "063": {
+      "title": "Gliese 229A",
+      "description": "Gliese 229A ist ein Roter Zwerg. Er ist ein wenig kleiner als die Sonne. Dieser Rote Zwerg wird auch GJ 229 oder GI 229 geschrieben. Er ist Teil eines Doppelsternsystems, dessen zweiter Stern Gliese 229B heißt."
+    },
+    "064": {
+      "title": "Gliese 229B",
+      "description": "Gliese 229B ist ein Brauner Zwerg. Er umkreist einen größeren Zwergstern, Gliese 229A. Gliese 229B würde als Planet klassifiziert werden, aber er ist viel dichter als Jupiter, wodurch seine Masse zu groß ist, um noch als Planet zu gelten."
+    },
+    "065": {
+      "title": "Jupiter",
+      "description": "Jupiter ist der größte Planet unseres Sonnensystems. Dennoch ist er nicht der größte bekannte Planet. Das ist nämlich TReS-4. Jupiter ist ein Gasriese, also ein riesiger, aus Gas bestehender Ball. Es ist unmöglich, auf ihm zu landen. Jupiter besitzt auch 64 Monde, unter ihnen sind auch die vier Galileischen Monde."
+    },
+    "066": {
+      "title": "Saturn",
+      "description": "Saturn hat die breitesten und am besten sichtbaren Ringe im Sonnensystem. Galileo, der diese als erster Mensch erblickte, hielt diese Ringe zuerst für Ohren. Kannst du dir Saturn ohne Ringe vorstellen? Er wäre dann nur eine gelbe Kugel."
+    },
+    "067": {
+      "title": "TReS-4",
+      "description": "TReS-4 ist der größte Planet, der je entdeckt wurde. Er ist 1.400 Lichtjahre entfernt. Kein Teleskop kann ihn direkt sehen. Wir wissen nur, dass er existiert, weil er vor seinem Stern vorbeizieht und dabei das Licht des Sterns etwas abdunkelt."
+    },
+    "068": {
+      "title": "Venus",
+      "description": "Es gab eine Zeit, in der man dachte, dass Venus und Erde Schwesterplaneten waren. Das stimmt natürlich nicht! Die Temperatur der Venus beträgt mehr als 450 °C. Der Grund dafür ist, dass ihre Atmosphäre überwiegend aus Kohlendioxid besteht, und somit wird die Hitze der Sonne quasi gefangen gehalten."
+    },
+    "069": {
+      "title": "Mars",
+      "description": "Mars ist bekannt als der Rote Planet. Er ist rot, weil er rostet. Viele Leute glauben, dass es einmal Wasser und Leben auf diesem Planeten gegeben haben soll. Auch wenn das stimmen sollte, es waren definitiv keine grünen Männchen."
+    },
+    "070": {
+      "title": "Merkur",
+      "description": "Merkur ist der Planet, der der Sonne am nächsten ist. Er besitzt keine Atmosphäre. Während des Tages kann die Temperatur auf bis zu 400 °C ansteigen, während der Nacht kann sie auf -180 °C fallen. Ein Jahr auf dem Merkur beträgt 88 Erdtage."
+    },
+    "071": {
+      "title": "Ganymed",
+      "description": "Ganymed ist der größte Mond unseres Sonnensystems. Er umkreist den Jupiter und wurde von Galileo entdeckt. Somit wurde er einer der vier Galileischen Monde. Ganymed sollte nicht mit dem Asteroiden 1036 Ganymed verwechselt werden, der exakt den gleichen Namen trägt. Im Englischen wird Ganymed (der Mond) mit einem e am Ende geschrieben."
+    },
+    "072": {
+      "title": "Kallisto",
+      "description": "Kallisto ist der am weitesten entfernte der Galileischen Monde. Er unkreist den Jupiter außerhalb der Bahnen der anderen Galileischen Monde und wird deshalb am meisten von Meteoriten getroffen. Alle diese Einschläge verursachen viele Krater."
+    },
+    "073": {
+      "title": "Io",
+      "description": "Io besitzt eine Menge Vulkane – die meisten im Sonnensystem! Ios Geysire spucken gefrorenes Schwefeldioxid bis zu 500 Kilometer in das All hinaus. Die Landschaft von Io verändert sich ständig. In einem Jahr wird sie komplett anders aussehen als heute."
+    },
+    "074": {
+      "title": "Europa",
+      "description": "Europa ist der kleinste der Galileischen Monde. Er ist komplett mit Eis bedeckt. Es gibt mysteriöse Schlieren, die die Oberfläche dieses Mondes durchziehen. Einige Leute glauben, dass möglicherweise flüssiges Wasser unterhalb des Eises existiert, eventuell sogar Leben."
+    },
+    "075": {
+      "title": "Titan",
+      "description": "Titan ist der einzige große Mond des Saturn. Er hat eine dichte Atmosphäre, die hauptsächlich aus Stickstoff besteht. Die Atmosphäre der Erde besteht ebenfalls hauptsächlich aus Stickstoff. Titan hat Meere aus flüssigem Methan. (Bei etwa -180 °C.) Es gibt sogar einen Kontinent, der „Xanadu“ genannt wird."
+    },
+    "076": {
+      "title": "Der Mond",
+      "description": "Der Mond, auch als „Luna“ bekannt, ist das hellste Objekt am Nachthimmel. Er umrundet die Erde alle 27 Tage, 7 Stunden und 43 Minuten. Ich stelle mir vor, wie es wohl aussehen würde, wenn mehrere Monde den Nachthimmel durchkreuzen würden … sicherlich fantastisch!"
+    },
+    "077": {
+      "title": "Triton",
+      "description": "Triton ist der größte Mond des Neptun. Er ist mit -240 °C auch das kälteste Objekt im Sonnensystem. Triton ist zudem ein sehr windiger Ort mit Windgeschwindigkeiten nahe der Schallgeschwindigkeit!"
+    },
+    "078": {
+      "title": "Pluto",
+      "description": "Pluto ist kein Planet mehr. Warum haben die Leute Mitleid mit ihm? Er hat keine Gefühle. Selbst wenn er welche hätte, warum sollte es ihm kümmern, was die Leute auf der fernen Erde denken? Nebenbei, Plutos offizieller Name jetzt „134340 Pluto“, weil er als Zwergplanet gilt."
+    },
+    "079": {
+      "title": "Charon",
+      "description": "Charon ist Plutos einziger großer Mond. Ihr Größenunterschied ist so gering, dass manche Leute Pluto und Charon gar als Doppelplanet betrachten. Wusstest du, dass Pluto und Charon einander immer dieselbe Seite zuwenden?"
+    },
+    "080": {
+      "title": "Eris",
+      "description": "Eris ist der größte Zwergplanet und ist sogar größer als Pluto, der ebenfalls ein Zwergplanet ist. Eris ist sehr weit von der Sonne entfernt. Eris hat einen Mond, der Dysnomia heißt. Wo ist Dysnomia? Direkt unter dem Punkt am Ende dieses letzten Satzes."
+    },
+    "081": {
+      "title": "Dysnomia",
+      "description": "Dysnomia ist der einzige Mond von Eris und wurde am 10. September 2005 entdeckt, einem Samstag. Wusstest du, dass Dysnomia auch der Name einer Lernschwäche ist (Wortfindungsstörung), die der Dyslexie (Schreib-/Leseschwäche) ähnelt?"
+    },
+    "082": {
+      "title": "Sedna",
+      "description": "Sedna hat eine elliptische Umlaufbahn. Sie ist so weit entfernt, dass sie 10.000 Erdjahre braucht, um einen Umlauf zu vollenden. Dir ist vielleicht aufgefallen, dass „Sedna“ rückwärts „Andes“ (die Anden) heißt? Das ist das längste Gebirge der Welt. (Es ist in Südamerika.) Beides wirkt vielleicht etwas fremdweltlich!"
+    },
+    "083": {
+      "title": "Quaoar",
+      "description": "Quaoar ist sehr dicht, weil sein Kern sehr groß ist. Quaoar ist früher möglicherweise einmal sehr viel größer gewesen. Er wurde vielleicht von einem Objekt der Größe Plutos getroffen, wodurch seine äußeren Schichten weggerissen worden sein könnten."
+    },
+    "084": {
+      "title": "Ceres",
+      "description": "Ceres ist für Menschen kein guter Ort zum Leben. Ceres ist der größte Asteroid, und an ihm hat sich die Diskussion über die Definition vom Begriff „Planet“ entzündet. Eine Zeit lang wurde Ceres als Planet betrachtet, heute wird er jedoch nicht als Planet gewertet."
+    },
+    "085": {
+      "title": "Nordpolarstern",
+      "description": "Der Nordpolarstern wird auch Polaris genannt. Er ist dem Nordpol sehr nahe. Wenn du wissen willst, wo Norden ist, finde einfach den Nordpolarstern. Verlängere einfach die beiden hinteren Sterne des großen Wagens (gegenüber der Deichsel) um das fünffache nach oben."
+    },
+    "086": {
+      "title": "Antares",
+      "description": "Antares ist ein Roter Überriese, der fast auf der Ekliptikebene liegt, daher wird er sehr oft vom Mond verdunkelt. Antares wiegt Quadrilliarden Tonnen und verliert Gewicht durch seinen Sonnenwind, doch diese Methode ist langsam. Die schnellere Methode, Masse zu verlieren, ist durch Explosion, was Antares später tun wird."
+    },
+    "087": {
+      "title": "Altair",
+      "description": "Altair ist einer der drei Sterne des Sommerdreiecks. Das Sommerdreieck ist ein spitzes Dreieck, das heißt, dass alle seine Winkel kleiner als 90° sind! Die anderen beiden Sterne im Dreieck sind Wega und Deneb. Wie viele Sterne, rotiert Altair sehr schnell und beult sich dadurch in der Mitte aus!"
+    },
+    "088": {
+      "title": "La Superba",
+      "description": "La Superba ist einer der rötlichsten Sterne des Nachthimmels.  Der Stern ist so rot aufgrund des vielen Kohlenstoff-13, den er beim Heliumverschmelzen erzeugt. (Normal ist Kohlenstoff-12.) La Superba ist nur 2500 °C heiß und damit einer der kältesten Sterne."
+    },
+    "089": {
+      "title": "Pistolenstern",
+      "description": "Der Pistolenstern ist einer der leuchtkräftigsten bekannten Sterne. In zwanzig Sekunden strahlt er so viel Energie ab wie die Sonne in einem ganzen Jahr. Interstellarer Staub verdunkelt ihn für uns. Er heißt nicht wegen seiner Leuchtkraft Pistolenstern, sondern wegen des Pistolennebels."
+    },
+    "090": {
+      "title": "S Doradus",
+      "description": "S Doradus ist sowohl ein Hyperriese als auch einer der hellsten Sterne in der Großen Magellanschen Wolke. Um mehr über die Große Magellansche Wolke zu erfahren, zoome um 8,5 Größenordnungen heraus."
+    },
+    "091": {
+      "title": "Enif",
+      "description": "Enif ist ein oranger Überriese. Enif ist arabisch und bedeutet Nase. Das passt super, da er im Sternbild Pegasus die Schnauze darstellt. Zufällig ist „Enif“ rückwärts „fine“ (fein)."
+    },
+    "092": {
+      "title": "Mu Cephei",
+      "description": "Mu Cephei ist sehr rot. Er wird manchmal „Herschels Granatstern“ genannt wegen seiner granatroten Farbe. Ein weiterer Name ist Erakis, falls dir die beiden ersten Namen nicht gefallen."
+    },
+    "093": {
+      "title": "KY Cygni",
+      "description": "KY Cygni hat die 30.000-fache Leuchtkraft der Sonne, und die Sonne ist schon ziemlich hell, nicht wahr? Die Sonne leuchtet so hell, dass du sie nicht direkt anschauen solltest! KY Cygni kannst du allerdings bedenkenlos anschauen, denn er ist 300 Millionen mal so weit weg."
+    },
+    "094": {
+      "title": "V354 Cephei",
+      "description": "V354 Cephei ist ein Roter Überriese, und er ist gigantisch. In der Mitte des Sonnensystems platziert würde er über die Bahn des Jupiter hinausreichen. Neben dem Namen des Sterns ist 354 auch noch das Jahr, in dem Augustinus von Hippo geboren wurde."
+    },
+    "095": {
+      "title": "WOH G64",
+      "description": "Ich weiß … du denkst: „WOH … das ist ein großer Stern!“ Nun, ich glaube du hast recht, denn derzeit ist er der zweitgrößte bekannte Stern. WOH G64 befindet sich in der Großen Magellanschen Wolke. Um ihn herum ist eine Wolke, die sich über ein halbes Lichtjahr erstreckt."
+    },
+    "096": {
+      "title": "VY Canis Majoris",
+      "description": "VY Canis Majoris ist der größte bekannte Stern. Würde man ihn in die Mitte des Sonnensystems stellen, würde er bis über die Saturnbahn reichen! Ein Flugzeug bräuchte 1.200 Jahre, um ihn einmal zu umrunden."
+    },
+    "097": {
+      "title": "Beteigeuze",
+      "description": "Beteigeuze (auch Betelgeuze, Beteigeuse u. a.) ist nur einige Millionen Jahre alt. Beteigeuze ist in seinem Lebenszyklus so weit fortgeschritten, dass man annimmt, dass er bereits in den nächsten zehntausend Jahren explodieren wird. Kleinere Sterne leben Milliarden Jahre. Beteigeuze ist so groß, dass er schneller alterte."
+    },
+    "098": {
+      "title": "Albireo",
+      "description": "Albireo besteht insgesamt aus drei Sternen. Wir zeigen hier nur den größten. Zwei der Sterne stehen sehr nahe beieinander und bilden einen gelben Punkt. Der dritte ist blau und weiter entfernt. Die Distanz zwischen dem blauen Stern und den gelben Sternen ist so groß, dass sie 100.000 Jahre für einen kompletten Umlauf benötigen."
+    },
+    "099": {
+      "title": "Kapteyns Stern",
+      "description": "Kapteyns Stern ist nur dreizehn Lichtjahre entfernt. Dennoch ist seine Größenklasse +9 mag, man braucht also ein Fernglas, um ihn zu sehen. Vor etwa 10.000 Jahren war Kapteyns Stern nur sieben Lichtjahre entfernt!"
+    },
     "100": {
       "title": "Luytens Stern",
       "description": "Luytens Stern ist ein Roter Zwerg in zwölf Lichtjahren Entfernung. Er steht Procyon so nahe, dass Procyon – von Luytens Stern aus betrachtet – zehn mal so hell erscheinen würde wie Sirius uns erscheint. Ich weiß außerdem nicht, wie man den Namen ausspricht. „Luiten“ oder „Loiten“ oder „Luuten“? Ich weiß es einfach nicht! Hilfe bitte!"
@@ -702,7 +982,7 @@
     },
     "275": {
       "title": "Fußballfeld",
-      "description": "Fußballfelder sind im Schnitt 110 Meter lang. Überhaupt werden Fußballfelder zur Messung von großen Objekten benutzt. Die Titanic ist beispielsweise drei Fußballfelder lang. Fußballfelder werden auch zum Fußballspielen benutzt. Da unser Zeichner ein Amerikaner ist, sehen wir hier ein Feld für American Football. Jedoch besitzen beide Felder ähnliche Größen!"
+      "description": "Die von der FIFA empfohlenen Maße eines Fußballfeldes für internationale Spiele betragen 105 Meter in der Länge und 68 Meter in der Breite. Der moderne Fußball entstand 1863 in England, als die Spielregeln festgelegt wurden. Heute sind in England mehr als 40.000 Fußballvereine registriert — mehr als in jedem anderen Land der Welt."
     },
     "276": {
       "title": "Gateway Arch",
@@ -912,285 +1192,17 @@
       "title": "Great Barrier Reef",
       "description": "Das Great Barrier Reef vor der Küste Australiens ist das größte Korallenriff der Erde.  Das Great Barrier Reef liegt nordöstlich von Australien an der Ostküste des Bundesstaates Queensland im Südpazifik und erstreckt sich von der Torres-Straße vor Papua-Neuguinea bis zur Lady-Elliot-Insel, die etwa 75 Kilometer nordöstlich von Bundaberg liegt."
     },
-    "030": {
-      "title": "LCD-Pixel",
-      "description": "Obwohl sich die Größe der Pixel je nach Verwendung stark voneinander unterscheidet, liegt der Durchschnitt um die 300 Mikrometer. Ein Pixel beinhaltet drei verschiedene Unterpixel, das sind rot, grün und blau. Wenn du denkst, dass Pixel schon cool sind, dann solltest du einmal Voxel sehen! Das sind dreidimensionale Pixel."
-    },
-    "031": {
-      "title": "Palm Jebel Ali",
-      "description": "Palm Jebel Ali ist die größte menschengemachte Insel (ausgenommen Inseln wie Flevopolder, eine Region der Niederlande, die durch Trockenlegung entstanden ist). Palm Jebel Ali ist noch nicht fertiggestellt. Es ist Teil der Palm Islands und soll einmal 250.000 Personen beherbergen!"
-    },
-    "032": {
-      "title": "Neutrino",
-      "description": "Neutrinos fliegen die ganze Zeit durch normale Materie wie dich und mich hindurch! Tatsächlich in genau diesem Moment! Neutrinos haben keine Ladung, daher spüren sie nur die Gravitation und die Schwache Kernkraft. Allerdings sind sie so winzig, dass sie auch davon kaum beeinflusst werden."
-    },
-    "033": {
-      "title": "Hochenergie-Neutrino",
-      "description": "Neutrinos höherer Energie sind größer. Für mehr Informationen über Neutrinos zoome zum Neutrino, das die durchschnittliche Größe zeigt. Es ist enorme 15.000-mal kleiner!"
-    },
-    "034": {
-      "title": "Streichholz",
-      "description": "Ein Streichholz ist ein sehr nützliches kleines Werkzeug. Streicht man es über eine raue Oberfläche, so kann es sich entzünden. Diese Eigenschaft macht es sehr gefährlich! Darum ist es keine gute Idee, mit Streichhölzern zu spielen. Kapiert?"
-    },
-    "035": {
-      "title": "Hühnerei",
-      "description": "Hühnerküken schlüpfen normalerweise aus Hühnereiern. Viele Menschen mögen es Hühnereier zu essen. Von der Erscheinung abgesehen gibt es keinen Unterschied zwischen weißen und braunen Hühnereiern."
-    },
-    "036": {
-      "title": "Wachteleier",
-      "description": "Viele Leute glauben, dass Wachteleier besser als Hühnereier sind. Das Wachtelei ist kleiner und seltener, aber das hindert die Leute nicht daran, sie zu mögen!"
-    },
-    "037": {
-      "title": "Quadratzoll",
-      "description": "Früher – und heute noch in anderen Teilen der Welt – nutzten nicht alle Leute das metrische System. Hier ist zum Beispiel ein Quadratzoll. 2,54 cm ist die Länge einer Seite, nicht die Fläche. (Die wäre in cm².)"
-    },
-    "038": {
-      "title": "Kaffeebohne",
-      "description": "Die Kaffeebohne ist etwa einen Zentimeter groß – und sie ist eigentlich eine Frucht, die wie eine Bohne aussieht. Sie ist braun und hat Streifen, und manchmal, wenn du sie anstarrst, vergisst du, dass ihr Durchmesser ein 10^29stel des bekannten Universums ist."
-    },
-    "039": {
-      "title": "Regenwurm",
-      "description": "Liebst du nicht auch sich windende schleimige Regenwürmer? Trotz des Gerüchtes sterben die meisten Regenwurmarten, wenn man sie halbiert. Manchmal überlebt der Kopf und bildet einen neuen Schwanz aus."
-    },
-    "040": {
-      "title": "Rigel",
-      "description": "Rigel ist ein grell-blauer Stern und der hellste des Sternbildes Orion. Er liegt nahe dem Äquator, daher ist er von fast überall auf der Erde sichtbar. Sprich ihn nicht „Riggel“ aus, sondern „Rihgel“."
-    },
-    "041": {
-      "title": "Vereinigte Staaten von Amerika",
-      "description": "Das sind die USA. Obwohl sie größer als Pluto aussehen, hat Pluto eine Rückseite, was bedeutet, dass Pluto mehr Oberfläche hat!"
-    },
-    "042": {
-      "title": "Erde",
-      "description": "Die Erde ist unser einziges Zuhause. Solange wir darauf leben, mag sie uns riesig erscheinen, aber es ist dennoch wichtig, sich um sie zu kümmern. Wenn sie weg ist, können wir nirgendwo sonst hin."
-    },
-    "043": {
-      "title": "Deneb",
-      "description": "Deneb ist der hellste Stern des Sternbilds Schwan. Deneb ist 1.500 Lichtjahre entfernt und damit der am weitesten entfernte der 25 hellsten Sterne. Wenn Du auf dem Mars leben würdest, würde Deneb über dem Nordpol erscheinen – nicht der Nordpolarstern."
-    },
-    "044": {
-      "title": "V V Cephei A",
-      "description": "Eine Zeitlang war V V Cephei A der größte bekannte Stern. Jetzt gehört dieser Titel VY Canis Majoris. Das liegt daran, dass ständig neue Sterne entdeckt werden!"
-    },
-    "045": {
-      "title": "R Doradus",
-      "description": "R Doradus ist relativ groß und nur 200 Lichtjahre von der Erde entfernt, daher ist sein scheinbarer Durchmesser der zweitgrößte am Himmel! Er beträgt 0,05 Bogensekunden. Die Sonne hat den größten scheinbaren Durchmesser, 1.920 Bogensekunden – 40.000-mal größer."
-    },
-    "046": {
-      "title": "Aldebaran",
-      "description": "Aldebaran darf nicht mit Alderaan verwechselt werden, der ein Planet bei Star Wars ist. Alderaan ist der Erde in Größe, Taglänge und Wasserbedeckung recht ähnlich. Aldebaran hingegen hat einen 5.000-mal größeren Durchmesser, rotiert alle 643 Erdtage einmal und man kann auf ihm kein Wasser finden."
-    },
-    "047": {
-      "title": "Pollux",
-      "description": "In der griechischen Mythologie ist Pollux der Bruder von Castor. Beide finden sich im Sternbild der Zwillinge (Gemini) wieder. Pollux ist nur ein einziger Stern, wohingegen Castor aus drei Doppelsternsystemen, also aus insgesamt sechs Sternen besteht. Erst im Fernrohr kann man Castor in drei Sterne trennen. Castor ist ein Satz Sechslinge!"
-    },
-    "048": {
-      "title": "Arcturus",
-      "description": "Arcturus (oder auch Arktur) ist nach Sirius und Canopus der dritthellste Stern am Nachthimmel. Er ist der hellste Stern im Sternbild des Bärenhüters. Man kann ihn finden, indem man der Deichsel des großen Wagens folgt."
-    },
-    "049": {
-      "title": "Die Sonne",
-      "description": "Auch bekannt als Sol; die Sonne gibt der Erde ihre Energie und ermöglicht ihr, Leben zu tragen. Die Sonne ist über 100-mal größer im Durchmesser als die Erde! 20.000-mal mehr solare Energie trifft die Erde, als die Menschheit verbraucht."
-    },
-    "050": {
-      "title": "Alpha Centauri A",
-      "description": "Alpha Centauri A ist der größte Stern im Alpha-Centauri-Sternsystem (das aus drei Sternen zusammengesetzt ist), das uns am nächsten stehende Sternsystem. Er ist außerdem der vierthellste Stern am Nachthimmel."
-    },
-    "051": {
-      "title": "Alpha Centauri B",
-      "description": "Alpha Centauri B ist der zweitgrößte Stern im Alpha-Centauri-Sternsystem. Sein Durchmesser beträgt etwa eine Million Kilometer, womit er etwas kleiner als die Sonne ist. Alpha Centauri A & B stehen so nah beieinander, dass sie uns Erdlingen als ein einzelner Stern erscheinen."
-    },
-    "052": {
-      "title": "Proxima Centauri",
-      "description": "Proxima Centauri ist dafür bekannt, der der Erde am nächsten stehende Stern nach der Sonne zu sein. Sein Name kommt vom Wort Proximität (Nähe). Proxima Centauri ist ein kleiner roter Stern. Leider ist er so dunkel, dass man ein Teleskop benötigt, um ihn sehen zu können."
-    },
-    "053": {
-      "title": "Sirius A",
-      "description": "Sirius ist der hellste Stern am Nachthimmel. Er ist fast doppelt so hell wie Canopus, der zweithellste Stern. Dennoch ist Sirius kein großer Stern. Er erscheint nur hell, weil er uns sehr nahe steht, er ist nur acht Lichtjahre entfernt."
-    },
-    "054": {
-      "title": "Sirius B",
-      "description": "Sirius B ist ein weißer Zwerg. Er ist kaum größer als die Erde! Er ist gewöhnlich schwer zu sehen, weil er durch Sirius A überstrahlt wird. Sirius B wird auch „Pup“ (Jungtier) genannt."
-    },
-    "055": {
-      "title": "Wega",
-      "description": "Wega findet sich im Sternbild Leier (Lyra). Sie ist auch Teil des Sommerdreiecks, das sich aus Wega, Altair und Deneb zusammensetzt. Wega dreht sich so schnell, dass sie sich abplattet. Wir schauen jedoch auf ihren Pol, so dass sie uns kreisförmig erscheint."
-    },
-    "056": {
-      "title": "Regulus",
-      "description": "Regulus dreht sich so schnell, dass er sich abplattet, genau wie Altair und Wega. Würde Regulus nur 16% schneller rotieren, würde es ihn zerreißen! Regulus ist außerdem der hellste Stern des Sternbilds Löwe (Leo). Es gibt auch noch Regulus B & C."
-    },
-    "057": {
-      "title": "Spica",
-      "description": "Spica ist der fünfzehnthellste Stern am Nachthimmel und liegt im Sternbild Jungfrau (Virgo). Eigentlich ist er ein Doppelsternsystem. Die beiden Sterne sind sich sehr nah und umkreisen sich in nur vier Tagen."
-    },
-    "058": {
-      "title": "Alnitak",
-      "description": "Alnitak leuchtet neben dem Flammennebel. Alnitak ist der östlichste Stern vom Gürtel des Orion. Die anderen beiden sind Alnilam und Mintaka, und alle drei erscheinen sehr hell vom Planeten Erde aus."
-    },
-    "059": {
-      "title": "Gacrux",
-      "description": "Gacrux kann im Sternbild Kreuz des Südens (Crux) gefunden werden. Gacrux ist ein Doppelstern. Der größere der beiden ist ein Roter Riese."
-    },
-    "060": {
-      "title": "Uranus",
-      "description": "Viele Leute glauben, die englische Aussprache von Uranus gleiche „your anus“, also „dein Anus“. Es gibt aber viele andere, und bessere, Aussprachen. Uranus kann im Englischen auch als „Jerahnus“ oder „Seventh Planet“ (siebter Planet) ausgesprochen werden."
-    },
-    "061": {
-      "title": "Neptun",
-      "description": "Neptun ist derzeit der am weitesten von der Sonne entfernte Planet unseres Sternsystems. Er braucht 164,8 Erdenjahre, um einmal die Sonne zu umrunden. Man kann keinen kompletten Umlauf in einem Menschenleben beobachten, es sei denn, die Lebenserwartung steigt."
-    },
-    "062": {
-      "title": "Wolf 359",
-      "description": "Wolf 359 ist ein kleiner Roter Zwerg, deutlich kleiner als normale Sterne. Er ist der sechstnächste Stern von der Erde aus, nach der Sonne, Proxima Centauri, Alpha Centauri A & B und Barnards Pfeilstern. Dennoch beträgt seine Größenordnung nur dunkle +13,5 mag."
-    },
-    "063": {
-      "title": "Gliese 229A",
-      "description": "Gliese 229A ist ein Roter Zwerg. Er ist ein wenig kleiner als die Sonne. Dieser Rote Zwerg wird auch GJ 229 oder GI 229 geschrieben. Er ist Teil eines Doppelsternsystems, dessen zweiter Stern Gliese 229B heißt."
-    },
-    "064": {
-      "title": "Gliese 229B",
-      "description": "Gliese 229B ist ein Brauner Zwerg. Er umkreist einen größeren Zwergstern, Gliese 229A. Gliese 229B würde als Planet klassifiziert werden, aber er ist viel dichter als Jupiter, wodurch seine Masse zu groß ist, um noch als Planet zu gelten."
-    },
-    "065": {
-      "title": "Jupiter",
-      "description": "Jupiter ist der größte Planet unseres Sonnensystems. Dennoch ist er nicht der größte bekannte Planet. Das ist nämlich TReS-4. Jupiter ist ein Gasriese, also ein riesiger, aus Gas bestehender Ball. Es ist unmöglich, auf ihm zu landen. Jupiter besitzt auch 64 Monde, unter ihnen sind auch die vier Galileischen Monde."
-    },
-    "066": {
-      "title": "Saturn",
-      "description": "Saturn hat die breitesten und am besten sichtbaren Ringe im Sonnensystem. Galileo, der diese als erster Mensch erblickte, hielt diese Ringe zuerst für Ohren. Kannst du dir Saturn ohne Ringe vorstellen? Er wäre dann nur eine gelbe Kugel."
-    },
-    "067": {
-      "title": "TReS-4",
-      "description": "TReS-4 ist der größte Planet, der je entdeckt wurde. Er ist 1.400 Lichtjahre entfernt. Kein Teleskop kann ihn direkt sehen. Wir wissen nur, dass er existiert, weil er vor seinem Stern vorbeizieht und dabei das Licht des Sterns etwas abdunkelt."
-    },
-    "068": {
-      "title": "Venus",
-      "description": "Es gab eine Zeit, in der man dachte, dass Venus und Erde Schwesterplaneten waren. Das stimmt natürlich nicht! Die Temperatur der Venus beträgt mehr als 450 °C. Der Grund dafür ist, dass ihre Atmosphäre überwiegend aus Kohlendioxid besteht, und somit wird die Hitze der Sonne quasi gefangen gehalten."
-    },
-    "069": {
-      "title": "Mars",
-      "description": "Mars ist bekannt als der Rote Planet. Er ist rot, weil er rostet. Viele Leute glauben, dass es einmal Wasser und Leben auf diesem Planeten gegeben haben soll. Auch wenn das stimmen sollte, es waren definitiv keine grünen Männchen."
-    },
-    "070": {
-      "title": "Merkur",
-      "description": "Merkur ist der Planet, der der Sonne am nächsten ist. Er besitzt keine Atmosphäre. Während des Tages kann die Temperatur auf bis zu 400 °C ansteigen, während der Nacht kann sie auf -180 °C fallen. Ein Jahr auf dem Merkur beträgt 88 Erdtage."
-    },
-    "071": {
-      "title": "Ganymed",
-      "description": "Ganymed ist der größte Mond unseres Sonnensystems. Er umkreist den Jupiter und wurde von Galileo entdeckt. Somit wurde er einer der vier Galileischen Monde. Ganymed sollte nicht mit dem Asteroiden 1036 Ganymed verwechselt werden, der exakt den gleichen Namen trägt. Im Englischen wird Ganymed (der Mond) mit einem e am Ende geschrieben."
-    },
-    "072": {
-      "title": "Kallisto",
-      "description": "Kallisto ist der am weitesten entfernte der Galileischen Monde. Er unkreist den Jupiter außerhalb der Bahnen der anderen Galileischen Monde und wird deshalb am meisten von Meteoriten getroffen. Alle diese Einschläge verursachen viele Krater."
-    },
-    "073": {
-      "title": "Io",
-      "description": "Io besitzt eine Menge Vulkane – die meisten im Sonnensystem! Ios Geysire spucken gefrorenes Schwefeldioxid bis zu 500 Kilometer in das All hinaus. Die Landschaft von Io verändert sich ständig. In einem Jahr wird sie komplett anders aussehen als heute."
-    },
-    "074": {
-      "title": "Europa",
-      "description": "Europa ist der kleinste der Galileischen Monde. Er ist komplett mit Eis bedeckt. Es gibt mysteriöse Schlieren, die die Oberfläche dieses Mondes durchziehen. Einige Leute glauben, dass möglicherweise flüssiges Wasser unterhalb des Eises existiert, eventuell sogar Leben."
-    },
-    "075": {
-      "title": "Titan",
-      "description": "Titan ist der einzige große Mond des Saturn. Er hat eine dichte Atmosphäre, die hauptsächlich aus Stickstoff besteht. Die Atmosphäre der Erde besteht ebenfalls hauptsächlich aus Stickstoff. Titan hat Meere aus flüssigem Methan. (Bei etwa -180 °C.) Es gibt sogar einen Kontinent, der „Xanadu“ genannt wird."
-    },
-    "076": {
-      "title": "Der Mond",
-      "description": "Der Mond, auch als „Luna“ bekannt, ist das hellste Objekt am Nachthimmel. Er umrundet die Erde alle 27 Tage, 7 Stunden und 43 Minuten. Ich stelle mir vor, wie es wohl aussehen würde, wenn mehrere Monde den Nachthimmel durchkreuzen würden … sicherlich fantastisch!"
-    },
-    "077": {
-      "title": "Triton",
-      "description": "Triton ist der größte Mond des Neptun. Er ist mit -240 °C auch das kälteste Objekt im Sonnensystem. Triton ist zudem ein sehr windiger Ort mit Windgeschwindigkeiten nahe der Schallgeschwindigkeit!"
-    },
-    "078": {
-      "title": "Pluto",
-      "description": "Pluto ist kein Planet mehr. Warum haben die Leute Mitleid mit ihm? Er hat keine Gefühle. Selbst wenn er welche hätte, warum sollte es ihm kümmern, was die Leute auf der fernen Erde denken? Nebenbei, Plutos offizieller Name jetzt „134340 Pluto“, weil er als Zwergplanet gilt."
-    },
-    "079": {
-      "title": "Charon",
-      "description": "Charon ist Plutos einziger großer Mond. Ihr Größenunterschied ist so gering, dass manche Leute Pluto und Charon gar als Doppelplanet betrachten. Wusstest du, dass Pluto und Charon einander immer dieselbe Seite zuwenden?"
-    },
-    "080": {
-      "title": "Eris",
-      "description": "Eris ist der größte Zwergplanet und ist sogar größer als Pluto, der ebenfalls ein Zwergplanet ist. Eris ist sehr weit von der Sonne entfernt. Eris hat einen Mond, der Dysnomia heißt. Wo ist Dysnomia? Direkt unter dem Punkt am Ende dieses letzten Satzes."
-    },
-    "081": {
-      "title": "Dysnomia",
-      "description": "Dysnomia ist der einzige Mond von Eris und wurde am 10. September 2005 entdeckt, einem Samstag. Wusstest du, dass Dysnomia auch der Name einer Lernschwäche ist (Wortfindungsstörung), die der Dyslexie (Schreib-/Leseschwäche) ähnelt?"
-    },
-    "082": {
-      "title": "Sedna",
-      "description": "Sedna hat eine elliptische Umlaufbahn. Sie ist so weit entfernt, dass sie 10.000 Erdjahre braucht, um einen Umlauf zu vollenden. Dir ist vielleicht aufgefallen, dass „Sedna“ rückwärts „Andes“ (die Anden) heißt? Das ist das längste Gebirge der Welt. (Es ist in Südamerika.) Beides wirkt vielleicht etwas fremdweltlich!"
-    },
-    "083": {
-      "title": "Quaoar",
-      "description": "Quaoar ist sehr dicht, weil sein Kern sehr groß ist. Quaoar ist früher möglicherweise einmal sehr viel größer gewesen. Er wurde vielleicht von einem Objekt der Größe Plutos getroffen, wodurch seine äußeren Schichten weggerissen worden sein könnten."
-    },
-    "084": {
-      "title": "Ceres",
-      "description": "Ceres ist für Menschen kein guter Ort zum Leben. Ceres ist der größte Asteroid, und an ihm hat sich die Diskussion über die Definition vom Begriff „Planet“ entzündet. Eine Zeit lang wurde Ceres als Planet betrachtet, heute wird er jedoch nicht als Planet gewertet."
-    },
-    "085": {
-      "title": "Nordpolarstern",
-      "description": "Der Nordpolarstern wird auch Polaris genannt. Er ist dem Nordpol sehr nahe. Wenn du wissen willst, wo Norden ist, finde einfach den Nordpolarstern. Verlängere einfach die beiden hinteren Sterne des großen Wagens (gegenüber der Deichsel) um das fünffache nach oben."
-    },
-    "086": {
-      "title": "Antares",
-      "description": "Antares ist ein Roter Überriese, der fast auf der Ekliptikebene liegt, daher wird er sehr oft vom Mond verdunkelt. Antares wiegt Quadrilliarden Tonnen und verliert Gewicht durch seinen Sonnenwind, doch diese Methode ist langsam. Die schnellere Methode, Masse zu verlieren, ist durch Explosion, was Antares später tun wird."
-    },
-    "087": {
-      "title": "Altair",
-      "description": "Altair ist einer der drei Sterne des Sommerdreiecks. Das Sommerdreieck ist ein spitzes Dreieck, das heißt, dass alle seine Winkel kleiner als 90° sind! Die anderen beiden Sterne im Dreieck sind Wega und Deneb. Wie viele Sterne, rotiert Altair sehr schnell und beult sich dadurch in der Mitte aus!"
-    },
-    "088": {
-      "title": "La Superba",
-      "description": "La Superba ist einer der rötlichsten Sterne des Nachthimmels.  Der Stern ist so rot aufgrund des vielen Kohlenstoff-13, den er beim Heliumverschmelzen erzeugt. (Normal ist Kohlenstoff-12.) La Superba ist nur 2500 °C heiß und damit einer der kältesten Sterne."
-    },
-    "089": {
-      "title": "Pistolenstern",
-      "description": "Der Pistolenstern ist einer der leuchtkräftigsten bekannten Sterne. In zwanzig Sekunden strahlt er so viel Energie ab wie die Sonne in einem ganzen Jahr. Interstellarer Staub verdunkelt ihn für uns. Er heißt nicht wegen seiner Leuchtkraft Pistolenstern, sondern wegen des Pistolennebels."
-    },
-    "090": {
-      "title": "S Doradus",
-      "description": "S Doradus ist sowohl ein Hyperriese als auch einer der hellsten Sterne in der Großen Magellanschen Wolke. Um mehr über die Große Magellansche Wolke zu erfahren, zoome um 8,5 Größenordnungen heraus."
-    },
-    "091": {
-      "title": "Enif",
-      "description": "Enif ist ein oranger Überriese. Enif ist arabisch und bedeutet Nase. Das passt super, da er im Sternbild Pegasus die Schnauze darstellt. Zufällig ist „Enif“ rückwärts „fine“ (fein)."
-    },
-    "092": {
-      "title": "Mu Cephei",
-      "description": "Mu Cephei ist sehr rot. Er wird manchmal „Herschels Granatstern“ genannt wegen seiner granatroten Farbe. Ein weiterer Name ist Erakis, falls dir die beiden ersten Namen nicht gefallen."
-    },
-    "093": {
-      "title": "KY Cygni",
-      "description": "KY Cygni hat die 30.000-fache Leuchtkraft der Sonne, und die Sonne ist schon ziemlich hell, nicht wahr? Die Sonne leuchtet so hell, dass du sie nicht direkt anschauen solltest! KY Cygni kannst du allerdings bedenkenlos anschauen, denn er ist 300 Millionen mal so weit weg."
-    },
-    "094": {
-      "title": "V354 Cephei",
-      "description": "V354 Cephei ist ein Roter Überriese, und er ist gigantisch. In der Mitte des Sonnensystems platziert würde er über die Bahn des Jupiter hinausreichen. Neben dem Namen des Sterns ist 354 auch noch das Jahr, in dem Augustinus von Hippo geboren wurde."
-    },
-    "095": {
-      "title": "WOH G64",
-      "description": "Ich weiß … du denkst: „WOH … das ist ein großer Stern!“ Nun, ich glaube du hast recht, denn derzeit ist er der zweitgrößte bekannte Stern. WOH G64 befindet sich in der Großen Magellanschen Wolke. Um ihn herum ist eine Wolke, die sich über ein halbes Lichtjahr erstreckt."
-    },
-    "096": {
-      "title": "VY Canis Majoris",
-      "description": "VY Canis Majoris ist der größte bekannte Stern. Würde man ihn in die Mitte des Sonnensystems stellen, würde er bis über die Saturnbahn reichen! Ein Flugzeug bräuchte 1.200 Jahre, um ihn einmal zu umrunden."
-    },
-    "097": {
-      "title": "Beteigeuze",
-      "description": "Beteigeuze (auch Betelgeuze, Beteigeuse u. a.) ist nur einige Millionen Jahre alt. Beteigeuze ist in seinem Lebenszyklus so weit fortgeschritten, dass man annimmt, dass er bereits in den nächsten zehntausend Jahren explodieren wird. Kleinere Sterne leben Milliarden Jahre. Beteigeuze ist so groß, dass er schneller alterte."
-    },
-    "098": {
-      "title": "Albireo",
-      "description": "Albireo besteht insgesamt aus drei Sternen. Wir zeigen hier nur den größten. Zwei der Sterne stehen sehr nahe beieinander und bilden einen gelben Punkt. Der dritte ist blau und weiter entfernt. Die Distanz zwischen dem blauen Stern und den gelben Sternen ist so groß, dass sie 100.000 Jahre für einen kompletten Umlauf benötigen."
-    },
-    "099": {
-      "title": "Kapteyns Stern",
-      "description": "Kapteyns Stern ist nur dreizehn Lichtjahre entfernt. Dennoch ist seine Größenklasse +9 mag, man braucht also ein Fernglas, um ihn zu sehen. Vor etwa 10.000 Jahren war Kapteyns Stern nur sieben Lichtjahre entfernt!"
+    "328": {
+      "title": "SARS-CoV-2",
+      "description": "SARS-CoV-2 ist das Coronavirus, das die COVID-19-Pandemie auslöste und das Leben der Menschen in den Jahren 2020–2022 veränderte. Trotz seiner mikroskopischen Größe (80–120 Nanometer) hatte dieses Virus enorme Auswirkungen auf Medizin, Wissenschaft, Wirtschaft und den Alltag auf der ganzen Welt."
+    },
+    "329": {
+      "title": "Baikalsee",
+      "description": "Der Baikalsee ist der tiefste See der Erde und das größte Reservoir flüssigen Süßwassers unter den Seen. Sein Alter wird auf etwa 25–30 Millionen Jahre geschätzt, was ihn zu einem der ältesten Seen des Planeten macht. In ihm leben mehr als 1.000 Tierarten, die sonst nirgendwo auf der Welt vorkommen und etwa 60 % seiner Fauna ausmachen."
+    },
+    "330": {
+      "title": "Bärtierchen",
+      "description": "Bärtierchen sind winzige achtbeinige Lebewesen, die für ihre unglaubliche Widerstandsfähigkeit berühmt geworden sind. Trotz ihrer Größe können sie Austrocknung, extreme Kälte, Hitze, hohen Druck und sogar die Bedingungen des offenen Weltraums überstehen, indem sie in einen Zustand nahezu vollständigen Stillstands des Lebens verfallen."
     }
   }
 }

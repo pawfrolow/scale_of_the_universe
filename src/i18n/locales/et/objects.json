@@ -1,5 +1,285 @@
 {
   "items": {
+    "030": {
+      "title": "LCD piksel",
+      "description": "Kuigi pikslite suurus varieerub väga palju võib nende keskmiseks võtta umbkaudu 300 mikromeetrit. Iga piksel sisaldab kolme alampikslit, need on punane, roheline ja sinine. Pikslite kõrval on veel ka vokslid mis on veel muljetavaldavamad. Need on kolmedimensioonilised pikslid."
+    },
+    "031": {
+      "title": "Palm Jebel Ali",
+      "description": "Palm Jebel Ali on maailma kõige suurem inimeste poolt tehislikult tehtud saar (mitte arvestades saari nagu Flevopolder, kus ehitati suur tamm, et maad juurde võita). Palm Jebel Ali ehitus pandi seisma 2008 aastal finantskriisi tõttu. Plaanide kohaselt pidi saar saama koduks 250 000 inimesele!"
+    },
+    "032": {
+      "title": "Neutriino",
+      "description": "Neutriinod läbivad tavalisesest ainest koosnevaid esemeid, ka sind ja mind, pidevalt! Nad teevad seda ka praegusel hetkel! Neutriinodel ei ole laengut ja sellepärast mõjutab nende trajektori ainult gravitatsiooniline ja nõrk vastastikmõju. Kuna nad on väga-väga väiksed, siis isegi need jõud mõjutavad neid väga vähe."
+    },
+    "033": {
+      "title": "Kõrge energiaga neutriino",
+      "description": "Suurema energiaga neutriinod on suured. Võrreldes keskmise neutriinoga on nad 15 000 korda suuremad."
+    },
+    "034": {
+      "title": "Tuletikk",
+      "description": "Tuletikk on väga kasulik pisike tööriist. Kui lüüa vastu midagi, siis tikk võib hakata põlema. See omadus teeb nad kasulikuks ja ka ohtlikuks samal ajal! Tikud ei ole mänguasjad! Said aru?"
+    },
+    "035": {
+      "title": "Kanamuna",
+      "description": "Kanamuna tuntakse kõige rohkem hommikueinena. Samas õigetel tingimustel võib kanamunast ka tibu kooruda. Valgel ja pruunil kanamunal pole peale väljanägemise muud erinevust."
+    },
+    "036": {
+      "title": "Põldvuti muna",
+      "description": "Paljud inimesed arvavad, et põldvuti muna on parem kui kanamuna. Põldvuti muna on väiksem ja haruldasem."
+    },
+    "037": {
+      "title": "Ruut-toll",
+      "description": "Oled harjunud meetri süsteemiga? Siin on sulle ruut-toll. Ruut-tolli üks külg,, loe veel kord \"üks külg\", on ligilähedane täiskasvanud inimese pöidla laiusega, mis on 2,5 sentimeetrit."
+    },
+    "038": {
+      "title": "Kohviuba",
+      "description": "Kohviuba on tegelikult vili, mis meenutab uba. Selle pikkus on umbes üks sentimeeter."
+    },
+    "039": {
+      "title": "Vihmauss",
+      "description": "Räägitakse, et vihmaussi pooleks lõikamisel hakkavad mõlemad osad oma elu elama. Tõsi on, et mõnedel vihmaussiliikidel kasvab pea juurde uus saba, aga suurema osa ajast nad lihtsalt surevad."
+    },
+    "040": {
+      "title": "Rigel",
+      "description": "Rigel on põlev sinine täht. See on kõige eredam täht Orioni tähtkujus. Täht asub ekvaatori lähedal, st Rigelit on võimalik näha peaaegu igast vaatluspunktist Maal."
+    },
+    "041": {
+      "title": "Ameerika Ühendriigid",
+      "description": "See on USA. See võib tunduda suurem kui Pluuto, mille pindala on kera tagakülje tõttu suurem."
+    },
+    "042": {
+      "title": "Maa",
+      "description": "Maa on meie ainuke kodu. Vaatamata sellele, et see võib meile tunduda väga suurena, peame oma elukeskkonna eest hoolitsema. Selle hävimisel, ei ole meil kuhugi enam minna."
+    },
+    "043": {
+      "title": "Deeneb",
+      "description": "Deeneb on Luige tähtkuju heledaim täht. See on 1500 valgusaasta kaugusel ja seega kaugeim 25 heledaimast tähest. Marsilt vaadates säraks põhjapooluse kohal Deeneb, mitte Põhjanael."
+    },
+    "044": {
+      "title": "VV Cephei A",
+      "description": "Mõnda aega peeti VV Cephei A-d suurimaks teadaolevaks täheks. Nüüd kuulub see tiitel VY Canis Majorisele. Uusi tähti avastatakse pidevalt ja seepärast võib tiitli omanik vahetuda."
+    },
+    "045": {
+      "title": "R Doradus",
+      "description": "R Doradus on suhteliselt suur ja kõigest 200 valgusaasta kaugusel Maast, seetõttu näiva suuruse on järgi see taevas teisel kohal. Selle läbimõõt on 0,05 kaaresekundit. Päike on suurim oma 1920 kaaresekundiga st. 40 000 korda suurem."
+    },
+    "046": {
+      "title": "Aldebaran",
+      "description": "Aldebarani ei tohi segi ajad Alderaaniga, Star Warsi fiktiivse planeediga. Alderaan on väga sarnane Maale oma suuruse, päevapikkuse ja veega kaetuse tõttu. See-eest Aldebaran on 5000 korda suurema läbimõõduga täht, teeb ühe pöörde 643 Maa päevaga ja sellel ei leidu vett."
+    },
+    "047": {
+      "title": "Polluks",
+      "description": "Kreeka mütoloogias oli Polydeukese (ladina Pollux) kaksikvend Kastor. Need on ka kaks tähte Kaksikute tähtkujus. Tegelikkuses on Polluks tõepoolest täht, aga Kastor koosneb kuuest tähest kolmes paaris tähesüsteemis. Kastor on kuuik."
+    },
+    "048": {
+      "title": "Arktuurus",
+      "description": "Arktuurus on tähistaevaa heleduselt kolmas täht Siiriuse ja Canopuse järel. See on Karjase tähtkuju heledaim täht. Sa leiad selle järgides Suure Vankri aisa."
+    },
+    "049": {
+      "title": "Päike",
+      "description": "Tänu Päikese energiale saab elu Maal eksisteerida. Päikese läbimõõt on 100 korda suurem kui Maa oma ja see annab Maale 20 000 korda rohkem energiat kui inimkond praegu kasutada suudab."
+    },
+    "050": {
+      "title": "Alpha Centauri A",
+      "description": "Alpha Centauri A on Alpha Centauri tähesüsteemi, mis koosneb kolmest tähest, suurim täht. See on meile lähim tähesüsteem. Alpha Centauri A on ka tähistaevaa heleduselt neljas täht."
+    },
+    "051": {
+      "title": "Alpha Centauri B",
+      "description": "Alpha Centauri B on Alpha Centauri tähesüsteemi suuruselt teine täht. Selle läbimõõt on hinnanguliselt üks miljon kilomeetrit ja seega natuke väiksem kui Päike. Alpha Centauri A ja B on nii lähestikku, et paistavad meile ühe tähena."
+    },
+    "052": {
+      "title": "Proxima Centauri",
+      "description": "Proxima Centauri on Päikese järel teine lähim täht Maale. Selle nimetus tuleneb ladina keelest,kus proxima tähendab lähimat või kõrval olevat. Proxima Centauri on punane kääbustäht. See on niivõrd tuhm, et palja silmaga ei ole võimalik seda vaadelda."
+    },
+    "053": {
+      "title": "Siirius A",
+      "description": "Siirius on tähistaeva heledaim täht. See on peaaegu kaks korda heledam kui Canopus, heleduselt teine täht. Siirius ei ole suur täht. See ainult näib hele kuna asub meie lähedal, ainult kaheksa valgusaasta kaugusel."
+    },
+    "054": {
+      "title": "Siirius B",
+      "description": "Siirius B on valge kääbus. See on natuke suurem kui Maa! Tavaliselt on seda üpris raske märgata kuna jääb Siirius A pimestava valguse varju. Siirius B-d tuntakse ka kui Kutsikas."
+    },
+    "055": {
+      "title": "Veega",
+      "description": "Veega asub Lüüra tähtkujus. See on samuti osa Lõunakolmnurgast, mis koosneb Veegast, Altairist ja Deenebist. Veega on kumerdunud oma kiire pöörlemise tõttu, aga me näeme seda kerakujulisena, sest selle poolus on suunatud meie poole."
+    },
+    "056": {
+      "title": "Regulus",
+      "description": "Regulus on oma kiire pöörlemise tõttu kumerdunud täpselt nagu Altair ja Veega. Kui Regulus pöörleks 16% kiiremini, siis see puruneks. Regulus on ka Lõvi tähtkuju heledaim täht. Regulusele lisaks on veel Regulus B ja C."
+    },
+    "057": {
+      "title": "Spiika",
+      "description": "Spiika on tähistaeva heleduselt viieteistkümnes täht ja asub Neitsi tähtkujus. See on tegelikult kaksik tähesüsteem. Kaks tähte asuvad väga lähestikku ja teevad ühe tiiru nelja päevaga."
+    },
+    "058": {
+      "title": "Alnitak",
+      "description": "Alnitak valgustab Tuleleegi udukogu. Alnitak on Orioni vöö kolmest tähest kõige idapoolsem. Teised kaks on Alnilam ja Miltaka. Kõik kolm paistavad planeet Maalt väga heledad."
+    },
+    "059": {
+      "title": "Gacrux",
+      "description": "Gacruxi leiab Lõunaristi tähtkujust. Crux tähendab ladina keeles risti. Gacrux on kaksiktäht. Kahest tähest suurim on punane hiid."
+    },
+    "060": {
+      "title": "Uraan",
+      "description": "Uraan ome meie päikesesüsteemi seitsmes planeet. Uraan sai oma nime taevajumal Uranuse järgi. Uraan on päikesesüsteemi kõige külmem planeet."
+    },
+    "061": {
+      "title": "Neptuun",
+      "description": "Praegu on Neptuun Päikesesüsteemi kaugeim planeet Päikesest. See teeb ühe tiiru ümber päikese 164,8 Maa aastaga. Tõenäoliselt ei näe sa oma eluea jooksul üht täisringi, kui eluiga ei pikene just märgatavalt."
+    },
+    "062": {
+      "title": "Wolf 359",
+      "description": "Wolf 359 on väike punane kääbus, kääbus võrreldes tavaliste tähtedega. See on kuues Maale lähim täht Päikese, Proxima Centauri, Alpha Centauri A ja B ning Barnardi järel. Siiski on tegemist väga tuhmi tähega, tähesuurus +13,5."
+    },
+    "063": {
+      "title": "Gliese 229A",
+      "description": "Gliese 229A on punane kääbustäht. See on natuke väiksem kui Päike. Seda punast kääbust nimetatakse ka GJ 229 või GI 229. See on osa kaksiktähesüsteemist, mille teine täht on Gliese 229B."
+    },
+    "064": {
+      "title": "Gliese 229B",
+      "description": "Gliese 229B on pruun kääbustäht. See tiirleb suurema kääbustähe Gliese 229A ümber. Gliese 229B oleks liigitatud planeetide hulka, kuid selle tihedus on palju suurem kui Jupiteril ja liiga suure massi tõttu ei saa lugeda seda planeediks."
+    },
+    "065": {
+      "title": "Jupiter",
+      "description": "Jupiter on Päikesesüsteemi suurim planeet, kuid see ei ole suurim teadaolev planeet, milleks on TrES-4. Jupiter on suur gaasikera ehk gaasist hiidplaneet ja seetõttu puudub sel tahke pind. Jupiteril on ka 64 kuud kaasaarvatud neli Galileo kuud."
+    },
+    "066": {
+      "title": "Saturn",
+      "description": "Saturnil on Päikesesüsteemi kõige suuremad rõngad. Galileo, kes esimesena neid rõngaid nägi, pidas neid kõrvadeks. Suudad sa ettekujutada Saturni ilma rõngasteta? See oleks ainult üks kollane kera."
+    },
+    "067": {
+      "title": "TrES-4",
+      "description": "TrES-4 on suurim avastatud planeet. See on 1400 valgusaasta kaugusel. Seda ei ole võimalik näha ühegi teleskoobiga. Me oleme TrES-4 olemasolust teadlikud ainult seetõttu, et see tiirleb ümber tähe põhjustades tähe heleduse muutumist."
+    },
+    "068": {
+      "title": "Veenus",
+      "description": "Kunagi arvati, et Veenus ja Maa on planeetidest õed, kuid see ei vasta tõele. Veenuse pinna temperatuur on alati üle 450 °C, sest selle atmosfäär, mis koosneb põhiliselt süsinikdioksiidist, kogub Päikese soojust."
+    },
+    "069": {
+      "title": "Marss",
+      "description": "Marssi tuntakse punase planeedina. See on punane tänu roostele. Paljud usuvad, et kunagi eksisteeris Marsil vesi ja elu. Isegi, kui see on tõsi, siis ei meenutaks Marsi elanikud väikseid rohelisi mehikesi."
+    },
+    "070": {
+      "title": "Merkuur",
+      "description": "Merkuur on lähim planeet Päikesele. Sellel puudub atmosfäär. Päeval ulatub temperatuur 400 °C, aga öösel langeb -180 °C. Üks Merkuuri aasta kestab 88 Maa päeva."
+    },
+    "071": {
+      "title": "Ganymedes",
+      "description": "Ganymedes on Päikesesüsteemi suurim kuu. See tiirleb ümber Jupiteri ja avastati Galileo poolt. Seepärast nimetatakse seda Galileo kuuks. Ganymedes't ei tohi segamini ajada Ganymed'iga, asteroidiga, mille nime lõpus puudub es."
+    },
+    "072": {
+      "title": "Kallisto",
+      "description": "Kallisto on kõige kaugem Galileo kuu. See tiirleb kaugemal, kui kõik teised Galileo kuud ja seetõttu saab kõige rohkem meteooridega pihta. Kõik need kokkupõrked on tekitanud väga-väga palju kraatreid."
+    },
+    "073": {
+      "title": "Io",
+      "description": "Io-l on väga palju vulkaane - kõige rohkem Päikesesüsteemis. Io geisrid purskavad külmunud vääveldioksiidi jugasid 500 kilomeetri kaugusele kosmosesse. Io maastik muutub pidevalt. Ühe aastaga võib see muutuda tundmatuseni."
+    },
+    "074": {
+      "title": "Europa",
+      "description": "Europa on Galileo kuudest väikseim. See on kaetud jääga ja salapäraste joontega. Osa inimesi arvab, et jää all võib eksisteerida vett ja võib olla isegi elu."
+    },
+    "075": {
+      "title": "Titan",
+      "description": "Titan on Saturni suurim kuu. Sellel on väga tihe atmosfäär, mis koosneb põhiliselt lämmastikust. Ka Maa atmosfäär koosneb põhiliselt lämmastikust. Titanil on vedela metaani mered. Selle temperatuur on -180 °C. Seal on isegi kontinent nimega Xanadu."
+    },
+    "076": {
+      "title": "Kuu",
+      "description": "Kuu on tähistaeva säravaim objekt. See teeb tiiru ümber Maa 27 päeva, 7 tunni ja 43 minutiga. Mulle meeldib ettekujutada, milline oleks tähistaevas paljude kuudega. See oleks lummav!"
+    },
+    "077": {
+      "title": "Triton",
+      "description": "Triton on Neptuuni suurim kuu. See on ka Päikesesüsteemi külmim objekt oma -240°C. Triton on väga tuuline, sest tuulte kiirus läheneb helikiirusele."
+    },
+    "078": {
+      "title": "Pluuto",
+      "description": "Pluutot ei loeta enam planeediks. Miks tunnevad inimesed sellele kaasa? Sel ei ole tundeid. Isegi kui oleks, siis ei hooliks see inimeste arvamusest Maal. Teisest küljest, Pluuto ametlik nimi on nüüd 134340 Pluuto ja nimetatakse kääbuplaneediks."
+    },
+    "079": {
+      "title": "Charon",
+      "description": "Charon on Pluuto ainuke suur kuu. Need on suuruselt peaaegu võrdsed. Need on nii lähestikku, et inimesed arvavad, et tegemist kaksikplaneediga. Kas teadsid, et Charon on alati Pluuto poole ühe küljega ja Pluuto Charoni poole samuti?"
+    },
+    "080": {
+      "title": "Eris",
+      "description": "Eris on suurim kääbusplaneet. See on isegi suurem kui Pluuto, mis on samuti kääbusplaneet. Ka Eris asub Päikesest väga kaugel. Erisel on kuu nimega Dysnomia. Kus on Dysnomia? See on siin all."
+    },
+    "081": {
+      "title": "Dysnomia",
+      "description": "Dysnomia on Erise ainuke kuu ja avastati laupäeval 10. septembril 2005. Kas teadsid, et düsnoomia on õpiraskus nagu düsleksia?"
+    },
+    "082": {
+      "title": "Sedna",
+      "description": "Sednal on väga elliptiline orbiit. See asub nii kaugel, et ühe täisringi tegemine võtab aega 10 000 Maa aastat."
+    },
+    "083": {
+      "title": "Quaoar",
+      "description": "Quaoar on väga tihe. Selle tiheduse põhjustajaks peetakse suurt tuuma. Arvatakse, et Quaoar oli kunagi palju suurem, aga teda tabas Pluuto suurune objekt, mis lennutas välimised kihid kosmosesse."
+    },
+    "084": {
+      "title": "Ceres",
+      "description": "Ceres ei ole väga hea koht, kus elada. Ceres on suurim asteroid, mis põhjustas arutelu planeedi definitsiooni üle. Mõnda aega peeti Cerest isegi planeediks, kuid see lõpetati üsna ruttu."
+    },
+    "085": {
+      "title": "Põhjanael",
+      "description": "Põhjanaela traditsiooniline ladinakeelne nimi on Stella Polaris ehk Polaris. See asub peaaegu põhjapooluse kohal ja seepärast saab selle järgi leida põhjasuuna. Põhjanaela enda leidmiseks vaata Suure Vankri tagumistest ratastest ülespoole."
+    },
+    "086": {
+      "title": "Antares",
+      "description": "Antares on ekliptika lähedal olev punane ülihiid, mida Kuu tihti varjutab. Anterese mass on mitu septiljon tonni, aga kaotab päikesetuulega aegalselt oma massi. Kiirem moodus oleks plahvatamine, aga see juhtub hiljem."
+    },
+    "087": {
+      "title": "Altair",
+      "description": "Altair on Lõunakolmnurga kolmest tähest üks. Lõunakolmnurk on teravnurkne, sest kõik selle nurgad on alla 90°! Teised kaks tähte on Veega ja Deeneb. Altair pöörleb väga suure kiirusega, nagu paljud teised tähed, ning seetõttu on see keskelt lapikum kui Maa."
+    },
+    "088": {
+      "title": "La Superba",
+      "description": "La Superba on öise taeva punaseim täht. See on nii punane tänu süsinik-13-le, mis tekib heeliumi sünteesireaktsioonis. Tavaline süsinik on massiarvuga 12. La Superba temperatuur 2500 °C teeb sellest ühe külmematest tähtedest."
+    },
+    "089": {
+      "title": "Püstol täht",
+      "description": "Püstol täht on teadaolevatest tähtedest üks säravamaid. Kahekümne sekundiga kiirgab see sama palju energiat kui Päike ühe aastaga. Tähtedevaheline tolm takistab meil seda nägemast. Täht sai nime oma asukoha järgi Püstoli udukogus, mitte oma sära tõttu."
+    },
+    "090": {
+      "title": "S Doradus",
+      "description": "S Doradus on hüperhiid ja üks Suure Magalhãesi pilve heledamaid tähti. Suure Magalhãesi pilve kohta saad rohkem teada, kui suumid 8,5 suurusjärku välja."
+    },
+    "091": {
+      "title": "Enif",
+      "description": "Enif on oranž ülihiid. Enif tähendan araabia keeles nina ja tuleneb sellest, et täht asub Pegasuse tähtkuju vastavas piirkonnas."
+    },
+    "092": {
+      "title": "µ Cephei",
+      "description": "µ Cephei on väga punane. Seda nimetatakse mõnikord Herscheli granaattäheks selle granaatpunase värvuse tõttu. Kui sulle eelnevad kaks nime ei meeldi, siis veel üks alternatiiv on Erakis."
+    },
+    "093": {
+      "title": "KY Cygni",
+      "description": "KY Cygni on 300 000 korda säravam kui Päike ja Päike on üpris särav või mis? Päike on nii ere, et seda ei tohiks otse vaadata! KY Cygnit võid aga otse vaadata, sest see asub 300 miljonit korda kaugemal."
+    },
+    "094": {
+      "title": "V354 Cephei",
+      "description": "V354 Cephei on tohutu punane ülihiid. Kui see paigutada Päikese asemele, siis ulatuks see kaugemale kui Jupiteri orbiit."
+    },
+    "095": {
+      "title": "WOH G64",
+      "description": "Ma tean... te mõtlete: \"Voh..vot see on suur täht!\" Teil on tõenäoliselt õigus, sest tegemist on praeguseks teise suurima teadaoleva tähega. WOH G64 asub Suure Magalheasi pilves. Pilv ümbritseb seda poole valgusaasta suurust tähte."
+    },
+    "096": {
+      "title": "VY Canis Majoris",
+      "description": "VY Canis Majoris on suurim teadaolev täht. See on nii suur, et kui paigutada Päikese asemele, siis ulatuks see kaugemal kui Saturni orbiit! Lennukil võtaks aega 1200 aastat, et teha üks tiir ümber selle."
+    },
+    "097": {
+      "title": "Betelguese",
+      "description": "Betelguese on mitu miljonit aastat vana. See on nii vana, et arvatakase plahvatavat lähema kümnetuhande aasta jooksul. Väiksemad tähed eksisteerivad miljardeid aastaid, aga Betelguese on nii suur, et vananes ruttu."
+    },
+    "098": {
+      "title": "Albireo",
+      "description": "Albireo koosneb kolmest tähest, aga siin näitame ainult suurimat. Kaks kolmest asuvad nii lähestikku, et moodustavad kollase täpi. Kolmas on sinine ja kaugemal. Sinise tähe ja kollaste vaheline vahemaa on nii suur, et neil võtab 100 000 aastat ühe täisringi tegemine."
+    },
+    "099": {
+      "title": "Kapteyni täht",
+      "description": "Kapteyni täht on ainult kolmeteistkümne valgusaasta kaugusel. Sellegi poolest on selle suhteline tähesuurus +9 ja seda näeb ainult binokliga. 10 000 tagasi oli Kapteyni täht ainult seitsme valgusaasta kaugusel."
+    },
     "100": {
       "title": "Luyteni täht",
       "description": "Luyteni täht on meist 12 valgusaasta kaugusel olev punane kääbus. See on Prooküonile nii lähedal, et Prooküon paistaks 10 korda heledam Luyteni tähele kui Siirius paistab meile."
@@ -701,8 +981,8 @@
       "description": "Esimene selline moodul maandus kuule juba 1969. aasta juulikuus."
     },
     "275": {
-      "title": "Ameerika jalgpalli väljak",
-      "description": "Väljaku pikkuseks on 109.7 meetrit. Ameerika jalgpalli ja tavalise jalgpalliväljakut kasutatakse tihti suurte asjade mõõtmiseks. Näiteks Titaanik oli kolm Ameerika jalgpalli väljakut pikk."
+      "title": "Jalgpalliväljak",
+      "description": "FIFA soovitatud jalgpalliväljaku mõõtmed rahvusvahelisteks mängudeks on 105 meetrit pikk ja 68 meetrit lai. Kaasaegne jalgpall sai alguse Inglismaal 1863. aastal, kui kehtestati mängureeglid. Praegu on Inglismaal registreeritud üle 40 tuhande jalgpalliklubi — rohkem kui üheski teises maailma riigis."
     },
     "276": {
       "title": "Gateway Arch",
@@ -912,285 +1192,17 @@
       "title": "Suur Vallrahu",
       "description": "Suur Vallrahu."
     },
-    "030": {
-      "title": "LCD piksel",
-      "description": "Kuigi pikslite suurus varieerub väga palju võib nende keskmiseks võtta umbkaudu 300 mikromeetrit. Iga piksel sisaldab kolme alampikslit, need on punane, roheline ja sinine. Pikslite kõrval on veel ka vokslid mis on veel muljetavaldavamad. Need on kolmedimensioonilised pikslid."
-    },
-    "031": {
-      "title": "Palm Jebel Ali",
-      "description": "Palm Jebel Ali on maailma kõige suurem inimeste poolt tehislikult tehtud saar (mitte arvestades saari nagu Flevopolder, kus ehitati suur tamm, et maad juurde võita). Palm Jebel Ali ehitus pandi seisma 2008 aastal finantskriisi tõttu. Plaanide kohaselt pidi saar saama koduks 250 000 inimesele!"
-    },
-    "032": {
-      "title": "Neutriino",
-      "description": "Neutriinod läbivad tavalisesest ainest koosnevaid esemeid, ka sind ja mind, pidevalt! Nad teevad seda ka praegusel hetkel! Neutriinodel ei ole laengut ja sellepärast mõjutab nende trajektori ainult gravitatsiooniline ja nõrk vastastikmõju. Kuna nad on väga-väga väiksed, siis isegi need jõud mõjutavad neid väga vähe."
-    },
-    "033": {
-      "title": "Kõrge energiaga neutriino",
-      "description": "Suurema energiaga neutriinod on suured. Võrreldes keskmise neutriinoga on nad 15 000 korda suuremad."
-    },
-    "034": {
-      "title": "Tuletikk",
-      "description": "Tuletikk on väga kasulik pisike tööriist. Kui lüüa vastu midagi, siis tikk võib hakata põlema. See omadus teeb nad kasulikuks ja ka ohtlikuks samal ajal! Tikud ei ole mänguasjad! Said aru?"
-    },
-    "035": {
-      "title": "Kanamuna",
-      "description": "Kanamuna tuntakse kõige rohkem hommikueinena. Samas õigetel tingimustel võib kanamunast ka tibu kooruda. Valgel ja pruunil kanamunal pole peale väljanägemise muud erinevust."
-    },
-    "036": {
-      "title": "Põldvuti muna",
-      "description": "Paljud inimesed arvavad, et põldvuti muna on parem kui kanamuna. Põldvuti muna on väiksem ja haruldasem."
-    },
-    "037": {
-      "title": "Ruut-toll",
-      "description": "Oled harjunud meetri süsteemiga? Siin on sulle ruut-toll. Ruut-tolli üks külg,, loe veel kord \"üks külg\", on ligilähedane täiskasvanud inimese pöidla laiusega, mis on 2,5 sentimeetrit."
-    },
-    "038": {
-      "title": "Kohviuba",
-      "description": "Kohviuba on tegelikult vili, mis meenutab uba. Selle pikkus on umbes üks sentimeeter."
-    },
-    "039": {
-      "title": "Vihmauss",
-      "description": "Räägitakse, et vihmaussi pooleks lõikamisel hakkavad mõlemad osad oma elu elama. Tõsi on, et mõnedel vihmaussiliikidel kasvab pea juurde uus saba, aga suurema osa ajast nad lihtsalt surevad."
-    },
-    "040": {
-      "title": "Rigel",
-      "description": "Rigel on põlev sinine täht. See on kõige eredam täht Orioni tähtkujus. Täht asub ekvaatori lähedal, st Rigelit on võimalik näha peaaegu igast vaatluspunktist Maal."
-    },
-    "041": {
-      "title": "Ameerika Ühendriigid",
-      "description": "See on USA. See võib tunduda suurem kui Pluuto, mille pindala on kera tagakülje tõttu suurem."
-    },
-    "042": {
-      "title": "Maa",
-      "description": "Maa on meie ainuke kodu. Vaatamata sellele, et see võib meile tunduda väga suurena, peame oma elukeskkonna eest hoolitsema. Selle hävimisel, ei ole meil kuhugi enam minna."
-    },
-    "043": {
-      "title": "Deeneb",
-      "description": "Deeneb on Luige tähtkuju heledaim täht. See on 1500 valgusaasta kaugusel ja seega kaugeim 25 heledaimast tähest. Marsilt vaadates säraks põhjapooluse kohal Deeneb, mitte Põhjanael."
-    },
-    "044": {
-      "title": "VV Cephei A",
-      "description": "Mõnda aega peeti VV Cephei A-d suurimaks teadaolevaks täheks. Nüüd kuulub see tiitel VY Canis Majorisele. Uusi tähti avastatakse pidevalt ja seepärast võib tiitli omanik vahetuda."
-    },
-    "045": {
-      "title": "R Doradus",
-      "description": "R Doradus on suhteliselt suur ja kõigest 200 valgusaasta kaugusel Maast, seetõttu näiva suuruse on järgi see taevas teisel kohal. Selle läbimõõt on 0,05 kaaresekundit. Päike on suurim oma 1920 kaaresekundiga st. 40 000 korda suurem."
-    },
-    "046": {
-      "title": "Aldebaran",
-      "description": "Aldebarani ei tohi segi ajad Alderaaniga, Star Warsi fiktiivse planeediga. Alderaan on väga sarnane Maale oma suuruse, päevapikkuse ja veega kaetuse tõttu. See-eest Aldebaran on 5000 korda suurema läbimõõduga täht, teeb ühe pöörde 643 Maa päevaga ja sellel ei leidu vett."
-    },
-    "047": {
-      "title": "Polluks",
-      "description": "Kreeka mütoloogias oli Polydeukese (ladina Pollux) kaksikvend Kastor. Need on ka kaks tähte Kaksikute tähtkujus. Tegelikkuses on Polluks tõepoolest täht, aga Kastor koosneb kuuest tähest kolmes paaris tähesüsteemis. Kastor on kuuik."
-    },
-    "048": {
-      "title": "Arktuurus",
-      "description": "Arktuurus on tähistaevaa heleduselt kolmas täht Siiriuse ja Canopuse järel. See on Karjase tähtkuju heledaim täht. Sa leiad selle järgides Suure Vankri aisa."
-    },
-    "049": {
-      "title": "Päike",
-      "description": "Tänu Päikese energiale saab elu Maal eksisteerida. Päikese läbimõõt on 100 korda suurem kui Maa oma ja see annab Maale 20 000 korda rohkem energiat kui inimkond praegu kasutada suudab."
-    },
-    "050": {
-      "title": "Alpha Centauri A",
-      "description": "Alpha Centauri A on Alpha Centauri tähesüsteemi, mis koosneb kolmest tähest, suurim täht. See on meile lähim tähesüsteem. Alpha Centauri A on ka tähistaevaa heleduselt neljas täht."
-    },
-    "051": {
-      "title": "Alpha Centauri B",
-      "description": "Alpha Centauri B on Alpha Centauri tähesüsteemi suuruselt teine täht. Selle läbimõõt on hinnanguliselt üks miljon kilomeetrit ja seega natuke väiksem kui Päike. Alpha Centauri A ja B on nii lähestikku, et paistavad meile ühe tähena."
-    },
-    "052": {
-      "title": "Proxima Centauri",
-      "description": "Proxima Centauri on Päikese järel teine lähim täht Maale. Selle nimetus tuleneb ladina keelest,kus proxima tähendab lähimat või kõrval olevat. Proxima Centauri on punane kääbustäht. See on niivõrd tuhm, et palja silmaga ei ole võimalik seda vaadelda."
-    },
-    "053": {
-      "title": "Siirius A",
-      "description": "Siirius on tähistaeva heledaim täht. See on peaaegu kaks korda heledam kui Canopus, heleduselt teine täht. Siirius ei ole suur täht. See ainult näib hele kuna asub meie lähedal, ainult kaheksa valgusaasta kaugusel."
-    },
-    "054": {
-      "title": "Siirius B",
-      "description": "Siirius B on valge kääbus. See on natuke suurem kui Maa! Tavaliselt on seda üpris raske märgata kuna jääb Siirius A pimestava valguse varju. Siirius B-d tuntakse ka kui Kutsikas."
-    },
-    "055": {
-      "title": "Veega",
-      "description": "Veega asub Lüüra tähtkujus. See on samuti osa Lõunakolmnurgast, mis koosneb Veegast, Altairist ja Deenebist. Veega on kumerdunud oma kiire pöörlemise tõttu, aga me näeme seda kerakujulisena, sest selle poolus on suunatud meie poole."
-    },
-    "056": {
-      "title": "Regulus",
-      "description": "Regulus on oma kiire pöörlemise tõttu kumerdunud täpselt nagu Altair ja Veega. Kui Regulus pöörleks 16% kiiremini, siis see puruneks. Regulus on ka Lõvi tähtkuju heledaim täht. Regulusele lisaks on veel Regulus B ja C."
-    },
-    "057": {
-      "title": "Spiika",
-      "description": "Spiika on tähistaeva heleduselt viieteistkümnes täht ja asub Neitsi tähtkujus. See on tegelikult kaksik tähesüsteem. Kaks tähte asuvad väga lähestikku ja teevad ühe tiiru nelja päevaga."
-    },
-    "058": {
-      "title": "Alnitak",
-      "description": "Alnitak valgustab Tuleleegi udukogu. Alnitak on Orioni vöö kolmest tähest kõige idapoolsem. Teised kaks on Alnilam ja Miltaka. Kõik kolm paistavad planeet Maalt väga heledad."
-    },
-    "059": {
-      "title": "Gacrux",
-      "description": "Gacruxi leiab Lõunaristi tähtkujust. Crux tähendab ladina keeles risti. Gacrux on kaksiktäht. Kahest tähest suurim on punane hiid."
-    },
-    "060": {
-      "title": "Uraan",
-      "description": "Uraan ome meie päikesesüsteemi seitsmes planeet. Uraan sai oma nime taevajumal Uranuse järgi. Uraan on päikesesüsteemi kõige külmem planeet."
-    },
-    "061": {
-      "title": "Neptuun",
-      "description": "Praegu on Neptuun Päikesesüsteemi kaugeim planeet Päikesest. See teeb ühe tiiru ümber päikese 164,8 Maa aastaga. Tõenäoliselt ei näe sa oma eluea jooksul üht täisringi, kui eluiga ei pikene just märgatavalt."
-    },
-    "062": {
-      "title": "Wolf 359",
-      "description": "Wolf 359 on väike punane kääbus, kääbus võrreldes tavaliste tähtedega. See on kuues Maale lähim täht Päikese, Proxima Centauri, Alpha Centauri A ja B ning Barnardi järel. Siiski on tegemist väga tuhmi tähega, tähesuurus +13,5."
-    },
-    "063": {
-      "title": "Gliese 229A",
-      "description": "Gliese 229A on punane kääbustäht. See on natuke väiksem kui Päike. Seda punast kääbust nimetatakse ka GJ 229 või GI 229. See on osa kaksiktähesüsteemist, mille teine täht on Gliese 229B."
-    },
-    "064": {
-      "title": "Gliese 229B",
-      "description": "Gliese 229B on pruun kääbustäht. See tiirleb suurema kääbustähe Gliese 229A ümber. Gliese 229B oleks liigitatud planeetide hulka, kuid selle tihedus on palju suurem kui Jupiteril ja liiga suure massi tõttu ei saa lugeda seda planeediks."
-    },
-    "065": {
-      "title": "Jupiter",
-      "description": "Jupiter on Päikesesüsteemi suurim planeet, kuid see ei ole suurim teadaolev planeet, milleks on TrES-4. Jupiter on suur gaasikera ehk gaasist hiidplaneet ja seetõttu puudub sel tahke pind. Jupiteril on ka 64 kuud kaasaarvatud neli Galileo kuud."
-    },
-    "066": {
-      "title": "Saturn",
-      "description": "Saturnil on Päikesesüsteemi kõige suuremad rõngad. Galileo, kes esimesena neid rõngaid nägi, pidas neid kõrvadeks. Suudad sa ettekujutada Saturni ilma rõngasteta? See oleks ainult üks kollane kera."
-    },
-    "067": {
-      "title": "TrES-4",
-      "description": "TrES-4 on suurim avastatud planeet. See on 1400 valgusaasta kaugusel. Seda ei ole võimalik näha ühegi teleskoobiga. Me oleme TrES-4 olemasolust teadlikud ainult seetõttu, et see tiirleb ümber tähe põhjustades tähe heleduse muutumist."
-    },
-    "068": {
-      "title": "Veenus",
-      "description": "Kunagi arvati, et Veenus ja Maa on planeetidest õed, kuid see ei vasta tõele. Veenuse pinna temperatuur on alati üle 450 °C, sest selle atmosfäär, mis koosneb põhiliselt süsinikdioksiidist, kogub Päikese soojust."
-    },
-    "069": {
-      "title": "Marss",
-      "description": "Marssi tuntakse punase planeedina. See on punane tänu roostele. Paljud usuvad, et kunagi eksisteeris Marsil vesi ja elu. Isegi, kui see on tõsi, siis ei meenutaks Marsi elanikud väikseid rohelisi mehikesi."
-    },
-    "070": {
-      "title": "Merkuur",
-      "description": "Merkuur on lähim planeet Päikesele. Sellel puudub atmosfäär. Päeval ulatub temperatuur 400 °C, aga öösel langeb -180 °C. Üks Merkuuri aasta kestab 88 Maa päeva."
-    },
-    "071": {
-      "title": "Ganymedes",
-      "description": "Ganymedes on Päikesesüsteemi suurim kuu. See tiirleb ümber Jupiteri ja avastati Galileo poolt. Seepärast nimetatakse seda Galileo kuuks. Ganymedes't ei tohi segamini ajada Ganymed'iga, asteroidiga, mille nime lõpus puudub es."
-    },
-    "072": {
-      "title": "Kallisto",
-      "description": "Kallisto on kõige kaugem Galileo kuu. See tiirleb kaugemal, kui kõik teised Galileo kuud ja seetõttu saab kõige rohkem meteooridega pihta. Kõik need kokkupõrked on tekitanud väga-väga palju kraatreid."
-    },
-    "073": {
-      "title": "Io",
-      "description": "Io-l on väga palju vulkaane - kõige rohkem Päikesesüsteemis. Io geisrid purskavad külmunud vääveldioksiidi jugasid 500 kilomeetri kaugusele kosmosesse. Io maastik muutub pidevalt. Ühe aastaga võib see muutuda tundmatuseni."
-    },
-    "074": {
-      "title": "Europa",
-      "description": "Europa on Galileo kuudest väikseim. See on kaetud jääga ja salapäraste joontega. Osa inimesi arvab, et jää all võib eksisteerida vett ja võib olla isegi elu."
-    },
-    "075": {
-      "title": "Titan",
-      "description": "Titan on Saturni suurim kuu. Sellel on väga tihe atmosfäär, mis koosneb põhiliselt lämmastikust. Ka Maa atmosfäär koosneb põhiliselt lämmastikust. Titanil on vedela metaani mered. Selle temperatuur on -180 °C. Seal on isegi kontinent nimega Xanadu."
-    },
-    "076": {
-      "title": "Kuu",
-      "description": "Kuu on tähistaeva säravaim objekt. See teeb tiiru ümber Maa 27 päeva, 7 tunni ja 43 minutiga. Mulle meeldib ettekujutada, milline oleks tähistaevas paljude kuudega. See oleks lummav!"
-    },
-    "077": {
-      "title": "Triton",
-      "description": "Triton on Neptuuni suurim kuu. See on ka Päikesesüsteemi külmim objekt oma -240°C. Triton on väga tuuline, sest tuulte kiirus läheneb helikiirusele."
-    },
-    "078": {
-      "title": "Pluuto",
-      "description": "Pluutot ei loeta enam planeediks. Miks tunnevad inimesed sellele kaasa? Sel ei ole tundeid. Isegi kui oleks, siis ei hooliks see inimeste arvamusest Maal. Teisest küljest, Pluuto ametlik nimi on nüüd 134340 Pluuto ja nimetatakse kääbuplaneediks."
-    },
-    "079": {
-      "title": "Charon",
-      "description": "Charon on Pluuto ainuke suur kuu. Need on suuruselt peaaegu võrdsed. Need on nii lähestikku, et inimesed arvavad, et tegemist kaksikplaneediga. Kas teadsid, et Charon on alati Pluuto poole ühe küljega ja Pluuto Charoni poole samuti?"
-    },
-    "080": {
-      "title": "Eris",
-      "description": "Eris on suurim kääbusplaneet. See on isegi suurem kui Pluuto, mis on samuti kääbusplaneet. Ka Eris asub Päikesest väga kaugel. Erisel on kuu nimega Dysnomia. Kus on Dysnomia? See on siin all."
-    },
-    "081": {
-      "title": "Dysnomia",
-      "description": "Dysnomia on Erise ainuke kuu ja avastati laupäeval 10. septembril 2005. Kas teadsid, et düsnoomia on õpiraskus nagu düsleksia?"
-    },
-    "082": {
-      "title": "Sedna",
-      "description": "Sednal on väga elliptiline orbiit. See asub nii kaugel, et ühe täisringi tegemine võtab aega 10 000 Maa aastat."
-    },
-    "083": {
-      "title": "Quaoar",
-      "description": "Quaoar on väga tihe. Selle tiheduse põhjustajaks peetakse suurt tuuma. Arvatakse, et Quaoar oli kunagi palju suurem, aga teda tabas Pluuto suurune objekt, mis lennutas välimised kihid kosmosesse."
-    },
-    "084": {
-      "title": "Ceres",
-      "description": "Ceres ei ole väga hea koht, kus elada. Ceres on suurim asteroid, mis põhjustas arutelu planeedi definitsiooni üle. Mõnda aega peeti Cerest isegi planeediks, kuid see lõpetati üsna ruttu."
-    },
-    "085": {
-      "title": "Põhjanael",
-      "description": "Põhjanaela traditsiooniline ladinakeelne nimi on Stella Polaris ehk Polaris. See asub peaaegu põhjapooluse kohal ja seepärast saab selle järgi leida põhjasuuna. Põhjanaela enda leidmiseks vaata Suure Vankri tagumistest ratastest ülespoole."
-    },
-    "086": {
-      "title": "Antares",
-      "description": "Antares on ekliptika lähedal olev punane ülihiid, mida Kuu tihti varjutab. Anterese mass on mitu septiljon tonni, aga kaotab päikesetuulega aegalselt oma massi. Kiirem moodus oleks plahvatamine, aga see juhtub hiljem."
-    },
-    "087": {
-      "title": "Altair",
-      "description": "Altair on Lõunakolmnurga kolmest tähest üks. Lõunakolmnurk on teravnurkne, sest kõik selle nurgad on alla 90°! Teised kaks tähte on Veega ja Deeneb. Altair pöörleb väga suure kiirusega, nagu paljud teised tähed, ning seetõttu on see keskelt lapikum kui Maa."
-    },
-    "088": {
-      "title": "La Superba",
-      "description": "La Superba on öise taeva punaseim täht. See on nii punane tänu süsinik-13-le, mis tekib heeliumi sünteesireaktsioonis. Tavaline süsinik on massiarvuga 12. La Superba temperatuur 2500 °C teeb sellest ühe külmematest tähtedest."
-    },
-    "089": {
-      "title": "Püstol täht",
-      "description": "Püstol täht on teadaolevatest tähtedest üks säravamaid. Kahekümne sekundiga kiirgab see sama palju energiat kui Päike ühe aastaga. Tähtedevaheline tolm takistab meil seda nägemast. Täht sai nime oma asukoha järgi Püstoli udukogus, mitte oma sära tõttu."
-    },
-    "090": {
-      "title": "S Doradus",
-      "description": "S Doradus on hüperhiid ja üks Suure Magalhãesi pilve heledamaid tähti. Suure Magalhãesi pilve kohta saad rohkem teada, kui suumid 8,5 suurusjärku välja."
-    },
-    "091": {
-      "title": "Enif",
-      "description": "Enif on oranž ülihiid. Enif tähendan araabia keeles nina ja tuleneb sellest, et täht asub Pegasuse tähtkuju vastavas piirkonnas."
-    },
-    "092": {
-      "title": "µ Cephei",
-      "description": "µ Cephei on väga punane. Seda nimetatakse mõnikord Herscheli granaattäheks selle granaatpunase värvuse tõttu. Kui sulle eelnevad kaks nime ei meeldi, siis veel üks alternatiiv on Erakis."
-    },
-    "093": {
-      "title": "KY Cygni",
-      "description": "KY Cygni on 300 000 korda säravam kui Päike ja Päike on üpris särav või mis? Päike on nii ere, et seda ei tohiks otse vaadata! KY Cygnit võid aga otse vaadata, sest see asub 300 miljonit korda kaugemal."
-    },
-    "094": {
-      "title": "V354 Cephei",
-      "description": "V354 Cephei on tohutu punane ülihiid. Kui see paigutada Päikese asemele, siis ulatuks see kaugemale kui Jupiteri orbiit."
-    },
-    "095": {
-      "title": "WOH G64",
-      "description": "Ma tean... te mõtlete: \"Voh..vot see on suur täht!\" Teil on tõenäoliselt õigus, sest tegemist on praeguseks teise suurima teadaoleva tähega. WOH G64 asub Suure Magalheasi pilves. Pilv ümbritseb seda poole valgusaasta suurust tähte."
-    },
-    "096": {
-      "title": "VY Canis Majoris",
-      "description": "VY Canis Majoris on suurim teadaolev täht. See on nii suur, et kui paigutada Päikese asemele, siis ulatuks see kaugemal kui Saturni orbiit! Lennukil võtaks aega 1200 aastat, et teha üks tiir ümber selle."
-    },
-    "097": {
-      "title": "Betelguese",
-      "description": "Betelguese on mitu miljonit aastat vana. See on nii vana, et arvatakase plahvatavat lähema kümnetuhande aasta jooksul. Väiksemad tähed eksisteerivad miljardeid aastaid, aga Betelguese on nii suur, et vananes ruttu."
-    },
-    "098": {
-      "title": "Albireo",
-      "description": "Albireo koosneb kolmest tähest, aga siin näitame ainult suurimat. Kaks kolmest asuvad nii lähestikku, et moodustavad kollase täpi. Kolmas on sinine ja kaugemal. Sinise tähe ja kollaste vaheline vahemaa on nii suur, et neil võtab 100 000 aastat ühe täisringi tegemine."
-    },
-    "099": {
-      "title": "Kapteyni täht",
-      "description": "Kapteyni täht on ainult kolmeteistkümne valgusaasta kaugusel. Sellegi poolest on selle suhteline tähesuurus +9 ja seda näeb ainult binokliga. 10 000 tagasi oli Kapteyni täht ainult seitsme valgusaasta kaugusel."
+    "328": {
+      "title": "SARS-CoV-2",
+      "description": "SARS-CoV-2 on koroonaviirus, mis põhjustas COVID-19 pandeemia ja muutis inimeste elu aastatel 2020–2022. Hoolimata oma mikroskoopilisest suurusest (80–120 nanomeetrit) avaldas see viirus tohutut mõju meditsiinile, teadusele, majandusele ja igapäevaelule kogu maailmas."
+    },
+    "329": {
+      "title": "Baikali järv",
+      "description": "Baikali järv on Maa sügavaim järv ja suurim vedela magevee reservuaar järvede seas. Selle vanuseks hinnatakse umbes 25–30 miljonit aastat, mis teeb sellest ühe planeedi vanima järve. Seal elab üle 1000 loomaliigi, keda ei leidu kusagil mujal maailmas, ning need moodustavad umbes 60% selle faunast."
+    },
+    "330": {
+      "title": "Loim",
+      "description": "Loimad on tillukesed kaheksajalgsed olendid, kes on saanud kuulsaks oma uskumatu vastupidavuse poolest. Vaatamata oma väiksusele suudavad nad üle elada kuivamise, äärmise külma, kuumuse, kõrge rõhu ja isegi avakosmose tingimused, langedes seisundisse, kus elu peaaegu täielikult peatub."
     }
   }
 }
