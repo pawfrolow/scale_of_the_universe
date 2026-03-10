@@ -47,6 +47,13 @@ export class Slider {
   private wheelHandler: (e: Event) => void;
   private destroyed = false;
 
+  private pinchActive = false;
+  private lastPinchDistance: number | null = null;
+  private pinchSensitivity = 0.35;
+  private touchStartHandler?: (e: TouchEvent) => void;
+  private touchMoveHandler?: (e: TouchEvent) => void;
+  private touchEndHandler?: () => void;
+
   constructor(
     app: Application,
     w: number,
@@ -79,6 +86,59 @@ export class Slider {
       this.interact();
       this.moveTarget(delta * SCROLL_SPEED);
     };
+
+    this.touchStartHandler = (event: TouchEvent) => {
+      if (this.destroyed) return;
+
+      event.stopPropagation();
+
+      if (event.touches.length === 2) {
+        const distance = this.getTouchesDistance(event.touches);
+
+        this.pinchActive = true;
+        this.lastPinchDistance = distance;
+        this.interact();
+
+        event.preventDefault();
+      }
+    };
+
+    this.touchMoveHandler = (event: TouchEvent) => {
+      if (this.destroyed) return;
+      if (!this.pinchActive) return;
+      if (event.touches.length !== 2) return;
+
+      event.stopPropagation();
+
+      const distance = this.getTouchesDistance(event.touches);
+
+      if (distance === null || this.lastPinchDistance === null) {
+        return;
+      }
+
+      const distanceDelta = distance - this.lastPinchDistance;
+
+      this.lastPinchDistance = distance;
+
+      this.interact();
+      this.moveTarget(-distanceDelta * this.pinchSensitivity);
+
+      event.preventDefault();
+    };
+
+    this.touchEndHandler = () => {
+      if (this.destroyed) return;
+
+      if (this.pinchActive) {
+        this.pinchActive = false;
+        this.lastPinchDistance = null;
+      }
+    };
+
+    document.addEventListener('touchstart', this.touchStartHandler, { passive: false });
+    document.addEventListener('touchmove', this.touchMoveHandler, { passive: false });
+    document.addEventListener('touchend', this.touchEndHandler, false);
+    document.addEventListener('touchcancel', this.touchEndHandler, false);
 
     document.addEventListener('mousewheel', this.wheelHandler, false);
   }
@@ -340,6 +400,19 @@ export class Slider {
 
     this.container.removeChildren();
     this.container.destroy({ children: true });
+
+    if (this.touchStartHandler) {
+      document.removeEventListener('touchstart', this.touchStartHandler as EventListener);
+    }
+
+    if (this.touchMoveHandler) {
+      document.removeEventListener('touchmove', this.touchMoveHandler as EventListener);
+    }
+
+    if (this.touchEndHandler) {
+      document.removeEventListener('touchend', this.touchEndHandler as EventListener);
+      document.removeEventListener('touchcancel', this.touchEndHandler as EventListener);
+    }
   }
   private getBounds() {
     const widthPixels = this.w * WIDTH_PERCENT;
@@ -366,5 +439,19 @@ export class Slider {
 
   private getHandleWidth() {
     return Math.max(this.w * HANDLE_WIDTH_PERCENT, MIN_HANDLE_WIDTH_PX);
+  }
+
+  private getTouchesDistance(touches: TouchList): number | null {
+    if (touches.length < 2) {
+      return null;
+    }
+
+    const first = touches[0];
+    const second = touches[1];
+
+    const dx = second.clientX - first.clientX;
+    const dy = second.clientY - first.clientY;
+
+    return Math.sqrt(dx * dx + dy * dy);
   }
 }

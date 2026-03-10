@@ -241,7 +241,7 @@ export class Item extends Entity {
   setInteractiveEvents(target: DisplayObject) {
     const here = this;
 
-    function onButtonDown(event: any) {
+    function onPointerTap(event: any) {
       event?.stopPropagation?.();
 
       here.onClick(here);
@@ -255,6 +255,6 @@ export class Item extends Entity {
     target.buttonMode = true;
 
     target
-      .on('pointerdown', onButtonDown);
+      .on('pointertap', onPointerTap);
   }
 }
