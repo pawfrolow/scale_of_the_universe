@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react'
 
+import styles from './styles.module.scss'
+
 interface IOverlayProps {
   isOpen: boolean
   className?: string
@@ -20,14 +22,14 @@ export const Overlay = ({
   }
 
   return (
-    <div className={`overlay ${className}`.trim()}>
+    <div className={`${styles.overlay} ${className}`.trim()}>
       <div
-        className="overlayBackdrop"
+        className={styles.overlayBackdrop}
         onClick={onBackdropClick}
         aria-hidden="true"
       />
 
-      <div className={`overlayContent ${contentClassName}`.trim()}>
+      <div className={`${styles.overlayContent} ${contentClassName}`.trim()}>
         {children}
       </div>
     </div>

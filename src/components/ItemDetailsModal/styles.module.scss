@@ -1,0 +1,178 @@
+@use "../../assets/css/variables.scss" as *;
+
+.itemDetailsDialog {
+  width: min(720px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px - var(--safe-area-top) - var(--safe-area-bottom));
+  overflow: auto;
+
+  padding: 20px;
+  border: none;
+  border-radius: 16px;
+  background: $color-white;
+  color: $color-text-dark;
+  box-shadow: $shadow-dialog;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+
+  .itemDetailsHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .itemDetailsTitle {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .itemDetailsClose {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: $color-text-dark;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: $color-transparent-gray-hover;
+    }
+  }
+
+  .itemDetailsBody {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .itemDetailsImageWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    padding: 16px;
+    border-radius: 14px;
+    background: rgba($color-text-dark, 0.04);
+  }
+
+  .itemDetailsImage {
+    display: block;
+    max-width: 100%;
+    max-height: 260px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .itemDetailsSubtitle {
+    font-size: 20px;
+    line-height: 1.35;
+    color: rgba($color-text-dark, 0.8);
+    word-break: break-word;
+  }
+
+  .itemDetailsDescription {
+    font-size: 18px;
+    line-height: 1.6;
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
+}
+
+:global(.dark) {
+  .itemDetailsDialog {
+    background: $color-space-1;
+    background: linear-gradient(0deg, $color-space-1 0%, $color-space-2 50%, $color-space-1 100%);
+    
+    .itemDetailsTitle {
+      color: $color-white;
+    }
+
+    .itemDetailsClose {
+      color: $color-white;
+    }
+
+    .itemDetailsImageWrap {
+      background: rgba($color-white, 0.04);
+    }
+
+    .itemDetailsSubtitle {
+      color: rgba($color-white, 0.8);
+    }
+
+    .itemDetailsDescription {
+      color: rgba($color-white, 0.8);
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .itemDetailsDialog {
+    width: calc(100vw - 16px);
+    max-width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px - var(--safe-area-top) - var(--safe-area-bottom));
+    padding: 16px;
+    border-radius: 14px;
+
+    .itemDetailsTitle {
+      font-size: 22px;
+    }
+
+    .itemDetailsClose {
+      width: 36px;
+      height: 36px;
+      font-size: 28px;
+    }
+
+    .itemDetailsImageWrap {
+      min-height: 140px;
+      padding: 12px;
+    }
+
+    .itemDetailsImage {
+      max-height: 200px;
+    }
+
+    .itemDetailsSubtitle {
+      font-size: 17px;
+    }
+
+    .itemDetailsDescription {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .itemDetailsDialog {
+    width: calc(100vw - 12px);
+    max-width: calc(100vw - 12px);
+    padding: 14px;
+
+    .itemDetailsTitle {
+      font-size: 20px;
+    }
+
+    .itemDetailsSubtitle {
+      font-size: 16px;
+    }
+
+    .itemDetailsDescription {
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "../../assets/css/variables.scss" as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .overlayBackdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba($color-white, 0.45);
+    backdrop-filter: blur(6px);
+  }
+
+  .overlayContent {
+    position: relative;
+    z-index: 1;
+    border-radius: 16px;
+  }
+}
+
+:global(.dark) {
+  .overlay {
+    .overlayBackdrop {
+      background: rgba($color-space-1, 0.45);
+    }
+
+    .overlayContent {
+      border: 1px solid rgba($color-primary, 0.5);
+    }
+  }
+}

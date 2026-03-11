@@ -63,7 +63,7 @@ export const useUniverse = ({
 
     const bootstrap = async () => {
       const frame = document.getElementById('frame') as HTMLElement | null
-      const buttons = document.querySelector('.buttons') as HTMLElement | null
+      const buttons = document.getElementById('buttons') as HTMLElement | null
       const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null
       const earthBg = document.getElementById('earthBgImage') as HTMLElement | null
 
@@ -133,8 +133,8 @@ export const useUniverse = ({
       const w = app.screen.width
       const h = app.screen.height
 
-      let universe!: Universe
-      let scaleText!: ScaleText
+      let universe: Universe
+      let scaleText: ScaleText
 
       const onHandleClicked = () => {
         universe.onHandleClicked()
@@ -167,6 +167,8 @@ export const useUniverse = ({
           if (buttons) {
             buttons.style.filter = ''
           }
+
+          document.body.classList.remove('dark')
         }
 
         if (scaleExp > 5 && scaleExp < 7) {
@@ -184,10 +186,18 @@ export const useUniverse = ({
           if (buttons) {
             buttons.style.filter = `invert(${opacity}%)`
           }
+
+          if(opacity > 50) {
+            document.body.classList.add('dark')
+          } else {
+            document.body.classList.remove('dark')
+          }
         }
 
         if (scaleExp >= 7 && buttons) {
           buttons.style.filter = 'invert(100%)'
+
+          document.body.classList.add('dark')
         }
 
         universe.update(scaleExp)
@@ -208,9 +218,9 @@ export const useUniverse = ({
 
       app.stage.addChild(
         universe.container,
+        universe.displayContainer,
         slider.container,
-        scaleText.container,
-        universe.displayContainer
+        scaleText.container
       )
 
       containerRef.current.innerHTML = '';
@@ -314,7 +324,7 @@ export const useUniverse = ({
 
       const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null
       const earthBg = document.getElementById('earthBgImage') as HTMLElement | null
-      const buttons = document.querySelector('.buttons') as HTMLElement | null
+      const buttons = document.getElementById('buttons') as HTMLElement | null
 
       if (spaceBg) {
         spaceBg.style.opacity = '0'

@@ -2,6 +2,8 @@ import React, { useRef } from 'react'
 import { ItemModalData } from '../../interfaces'
 import { useUniverse } from '../../hooks/useUniverse'
 
+import styles from './styles.module.scss'
+
 interface IUniverseCanvasProps {
   isStarted: boolean
   onAssetsLoading: () => void
@@ -31,5 +33,5 @@ export const UniverseCanvas = ({
     onItemModalClose,
   })
 
-  return <div className="universeCanvas" id="sotu" ref={containerRef} />
+  return <div className={styles.universeCanvas} id="sotu" ref={containerRef} />
 }

@@ -19,6 +19,8 @@ import {
 } from '../components';
 import { ItemModalData } from '../interfaces';
 
+import styles from './styles.module.scss'
+
 export const App = () => {
   const [isStarted, setIsStarted] = useState(false)
   const [hasEnteredApp, setHasEnteredApp] = useState(false)
@@ -176,7 +178,7 @@ export const App = () => {
 
       <div
         id="frame"
-        className="frameStyle"
+        className={styles.frameStyle}
         style={{ visibility: hasEnteredApp && isAssetsReady ? 'visible' : 'hidden' }}
       >
         <Controls
@@ -185,8 +187,8 @@ export const App = () => {
           onOpenLanguageModal={handleOpenLanguageModal}
         />
 
-        <div className="bgEarth fullBg" id="earthBgImage" />
-        <div className="bgSpace fullBg" id="spaceBgImage" />
+        <div className={`${styles.bgEarth} ${styles.fullBg}`} id="earthBgImage" />
+        <div className={`${styles.bgSpace} ${styles.fullBg}`} id="spaceBgImage" />
 
         <UniverseCanvas
           key={universeKey}

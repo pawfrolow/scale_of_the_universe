@@ -1,6 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
+import styles from './styles.module.scss'
+
 interface IStartModalProps {
   title: string
   startText: string
@@ -22,13 +24,13 @@ export const StartModal = ({
 
   return (
     <>
-      <dialog className="startModal" open={isOpen}>
-        <div className="modalHeader">
-          <h1 className="title">{title}</h1>
+      <dialog className={styles.startModal} open={isOpen}>
+        <div className={styles.modalHeader}>
+          <h1 className={styles.title}>{title}</h1>
 
           <button
             type="button"
-            className="modalLangButton"
+            className={styles.modalLangButton}
             onClick={onOpenLanguageModal}
             aria-label="Select language"
           >
@@ -36,25 +38,25 @@ export const StartModal = ({
           </button>
         </div>
 
-        <div className="infoRow">
-          <div className="infoItem">
+        <div className={styles.infoRow}>
+          <div className={styles.infoItem}>
             <img src="img/slider.png" alt="Slider" />
             <p>{t('html.modal.zoomHint', { ns: 'ui' })}</p>
           </div>
 
-          <div className="infoItem">
+          <div className={styles.infoItem}>
             <img src="img/object.png" alt="Object" />
             <p>{t('html.modal.objectHint', { ns: 'ui' })}</p>
           </div>
         </div>
 
-        <div className="bottomRow">
-          <div className="credits">
+        <div className={styles.bottomRow}>
+          <div className={styles.credits}>
             <p>{t('html.credits.createdBy', { ns: 'ui' })}</p>
             <p>
               {t('html.credits.webDev', { ns: 'ui' })}{' '}
               <a
-                className="creditsLink"
+                className={styles.creditsLink}
                 href="https://github.com/matttt/scale_of_the_universe"
                 target="_blank"
                 rel="noreferrer"
@@ -65,7 +67,7 @@ export const StartModal = ({
             <p>
               {t('html.credits.copyright', { ns: 'ui' })}{' '}
               <a
-                className="creditsLink"
+                className={styles.creditsLink}
                 href="https://www.htwins.net/scale2/"
                 target="_blank"
                 rel="noreferrer"
@@ -76,7 +78,7 @@ export const StartModal = ({
             <p>
               {t('html.credits.translationAndDev', { ns: 'ui' })}{' '}
               <a
-                className="creditsLink"
+                className={styles.creditsLink}
                 href="https://github.com/pawfrolow/scale_of_the_universe"
                 target="_blank"
                 rel="noreferrer"
@@ -87,18 +89,18 @@ export const StartModal = ({
           </div>
 
           <button
-            className="startBtn"
+            className={styles.startBtn}
             type="button"
             onClick={onStart}
             disabled={isLoading}
           >
-            <img className="startBtnIcon" width="25" src="img/icons/play.svg" alt="Play" />
+            <img className={styles.startBtnIcon} width="25" src="img/icons/play.svg" alt="Play" />
             <span>{startText}</span>
           </button>
         </div>
       </dialog>
 
-      <div className="backdrop" />
+      <div className={styles.backdrop} />
     </>
   )
 }

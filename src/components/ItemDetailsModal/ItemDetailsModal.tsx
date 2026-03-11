@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Overlay } from '../Overlay/Overlay'
+
+import styles from './styles.module.scss'
 
 interface IItemDetailsModalProps {
   isOpen: boolean
@@ -21,17 +23,17 @@ export const ItemDetailsModal = ({
   return (
     <Overlay isOpen={isOpen} onBackdropClick={onClose}>
       <div
-        className="itemDetailsDialog"
+        className={styles.itemDetailsDialog}
         role="dialog"
         aria-modal="true"
         aria-label={title}
       >
-        <div className="itemDetailsHeader">
-          <h2 className="itemDetailsTitle">{title}</h2>
+        <div className={styles.itemDetailsHeader}>
+          <h2 className={styles.itemDetailsTitle}>{title}</h2>
 
           <button
             type="button"
-            className="itemDetailsClose"
+            className={styles.itemDetailsClose}
             onClick={onClose}
             aria-label="Close item details"
           >
@@ -39,18 +41,18 @@ export const ItemDetailsModal = ({
           </button>
         </div>
 
-        <div className="itemDetailsBody">
-          <div className="itemDetailsImageWrap">
+        <div className={styles.itemDetailsBody}>
+          <div className={styles.itemDetailsImageWrap}>
             <img
-              className="itemDetailsImage"
+              className={styles.itemDetailsImage}
               src={imageSrc}
               alt={title}
             />
           </div>
 
-          <div className="itemDetailsSubtitle">{subtitle}</div>
+          <div className={styles.itemDetailsSubtitle}>{subtitle}</div>
 
-          <div className="itemDetailsDescription">
+          <div className={styles.itemDetailsDescription}>
             {description}
           </div>
         </div>

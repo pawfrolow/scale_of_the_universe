@@ -1,0 +1,37 @@
+@use "../../assets/css/variables.scss" as *;
+
+.buttons {
+  position: absolute;
+  top: calc(12px + var(--safe-area-top));
+  right: calc(16px + var(--safe-area-right));
+  z-index: $z-controls;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  button {
+    padding: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    transition: $transition-fast;
+    color: $color-text-dark;
+
+    &:hover {
+      background: $color-transparent-gray-hover;
+    }
+
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

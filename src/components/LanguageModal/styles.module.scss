@@ -1,0 +1,202 @@
+@use "../../assets/css/variables.scss" as *;
+
+.languageDialog {
+  width: min(540px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px - var(--safe-area-top) - var(--safe-area-bottom));
+  overflow: auto;
+
+  padding: 20px;
+  border: none;
+  border-radius: 16px;
+  background: $color-white;
+  color: $color-text-dark;
+  box-shadow: $shadow-dialog;
+
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+
+  .languageDialogHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    h2 {
+      margin: 0;
+      color: $color-text-dark;
+      font-size: 24px;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+
+    .languageDialogClose {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: none;
+      border-radius: 10px;
+      background: transparent;
+      color: $color-text-dark;
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background: $color-transparent-gray-hover;
+      }
+    }
+  }
+
+  .languageList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+
+    .languageOption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+
+      border: 1px solid rgba($color-text-dark, 0.12);
+      border-radius: 10px;
+      background: rgba($color-text-dark, 0.04);
+      color: $color-text-dark;
+      cursor: pointer;
+      transition: $transition-fast;
+      box-sizing: border-box;
+      text-align: left;
+
+      &:hover {
+        background: $color-transparent-gray-hover;
+      }
+
+      &.active {
+        border-color: rgba($color-primary, 0.45);
+        background: rgba($color-primary, 0.1);
+        color: $color-text-dark;
+      }
+
+      .languageOptionLabel {
+        min-width: 0;
+        flex: 1;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      .languageOptionCheck {
+        flex-shrink: 0;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+:global(.dark) {
+  .languageDialog {
+    background: $color-space-1;
+    background: linear-gradient(0deg, $color-space-1 0%, $color-space-2 50%, $color-space-1 100%);
+
+    .languageDialogHeader {
+      h2 {
+        color: $color-white;
+      }
+
+      .languageDialogClose {
+        color: $color-white;
+      }
+    }
+
+    .languageList {
+      .languageOption {
+        border: 1px solid rgba($color-white, 0.5);
+        background: rgba($color-white, 0.04);
+        color: rgba($color-white, 0.7);
+
+        &.active {
+          border-color: rgba($color-primary, 0.45);
+          background: rgba($color-primary, 0.4);
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .languageDialog {
+    width: min(560px, calc(100vw - 20px));
+    max-width: calc(100vw - 20px);
+
+    .languageList {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .languageDialog {
+    width: calc(100vw - 16px);
+    max-width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px - var(--safe-area-top) - var(--safe-area-bottom));
+    padding: 16px;
+    border-radius: 14px;
+
+    .languageDialogHeader {
+      margin-bottom: 14px;
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .languageDialogClose {
+        width: 36px;
+        height: 36px;
+        font-size: 30px;
+      }
+    }
+
+    .languageList {
+      grid-template-columns: 1fr;
+      gap: 8px;
+
+      .languageOption {
+        min-height: 46px;
+        padding: 12px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .languageDialog {
+    width: calc(100vw - 12px);
+    max-width: calc(100vw - 12px);
+    padding: 14px;
+
+    .languageDialogHeader {
+      h2 {
+        font-size: 18px;
+      }
+    }
+
+    .languageList {
+      .languageOption {
+        padding: 10px 12px;
+        font-size: 15px;
+      }
+    }
+  }
+}

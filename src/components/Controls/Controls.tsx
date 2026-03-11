@@ -2,6 +2,8 @@ import React from 'react';
 
 import { toggleFullscreen } from '../../helpers/fullscreen';
 
+import styles from './styles.module.scss'
+
 interface IControlsProps {
   isMuted: boolean;
   onToggleMute: () => void;
@@ -26,8 +28,8 @@ export const Controls = ({
   };
 
   return (
-    <div className="buttons">
-      <button onClick={handleHomeClick} className="lang" type="button">
+    <div id='buttons' className={styles.buttons}>
+      <button onClick={handleHomeClick} className={styles.lang} type="button">
         <img src="img/icons/home.svg" alt="Home" />
       </button>
 

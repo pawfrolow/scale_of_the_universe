@@ -21,6 +21,40 @@ import { calculateScale } from "../helpers/calculateScale";
 import { powToUnit } from "../helpers/powToUnit";
 import { ItemModalData } from "../interfaces";
 
+type THoleShape = {
+  type: 'circle'
+  x: number
+  y: number
+  radius: number
+}
+
+type TSpecialHitAreaConfig = {
+  holes: THoleShape[]
+}
+
+const SPECIAL_HIT_AREAS: Partial<Record<number, TSpecialHitAreaConfig>> = {
+  162: {
+    holes: [
+      {
+        type: 'circle',
+        x: 0,
+        y: 0,
+        radius: 190,
+      },
+    ],
+  },
+  163: {
+    holes: [
+      {
+        type: 'circle',
+        x: 0,
+        y: 0,
+        radius: 150,
+      },
+    ],
+  }
+}
+
 export class Item extends Entity {
   public descriptionGraphics: Container;
 
@@ -211,41 +245,52 @@ export class Item extends Entity {
   }
 
   setSpriteEvents(sprite: Sprite) {
-    const texture = sprite.texture;
+    const texture = sprite.texture
 
     const trim = texture.trim ?? {
       x: 0,
       y: 0,
       width: texture.width,
       height: texture.height,
-    };
+    }
 
     const orig = texture.orig ?? {
       width: texture.width,
       height: texture.height,
-    };
-
-    // координаты trimmed-области относительно центра исходной картинки
-    const x = trim.x - orig.width / 2;
-    const y = trim.y - orig.height / 2;
-    const w = trim.width;
-    const h = trim.height;
-
-    // дополнительно чуть ужимаем область
-    const insetX = w * 0;
-    const insetY = h * 0;
-
-    sprite.hitArea = new Rectangle(
-      x + insetX,
-      y + insetY,
-      w - insetX * 2,
-      h - insetY * 2
-    );
-
-    if (this.objectID !== 162) {
-      this.setInteractiveEvents(sprite);
     }
 
+    const x = trim.x - orig.width / 2
+    const y = trim.y - orig.height / 2
+    const w = trim.width
+    const h = trim.height
+
+    const specialHitArea = this.getSpecialHitAreaConfig()
+
+    if (specialHitArea) {
+      sprite.hitArea = {
+        contains: (px: number, py: number) => {
+          const insideRect =
+            px >= x &&
+            px <= x + w &&
+            py >= y &&
+            py <= y + h
+
+          if (!insideRect) {
+            return false
+          }
+
+          const insideAnyHole = specialHitArea.holes.some((hole) =>
+            this.isPointInsideHole(px, py, hole)
+          )
+
+          return !insideAnyHole
+        },
+      }
+    } else {
+      sprite.hitArea = new Rectangle(x, y, w, h)
+    }
+
+    this.setInteractiveEvents(sprite)
   }
 
   setInteractiveEvents(target: DisplayObject) {
@@ -275,5 +320,39 @@ export class Item extends Entity {
       subtitle: this.subtitle,
       description: this.textDatum.description,
     };
+  }
+
+  setInteractiveEnabled(enabled: boolean) {
+    const apply = (target?: DisplayObject) => {
+      if (!target) {
+        return;
+      }
+
+      target.eventMode = enabled ? 'static' : 'none';
+      // @ts-ignore
+      target.interactive = enabled;
+      target.cursor = enabled ? 'pointer' : 'default';
+      // @ts-ignore
+      target.buttonMode = enabled;
+    };
+
+    apply(this.spriteLow);
+    apply(this.sprite);
+    apply(this.text);
+  }
+
+  private getSpecialHitAreaConfig(): TSpecialHitAreaConfig | null {
+    return SPECIAL_HIT_AREAS[this.sizeData.objectID] ?? null
+  }
+
+  private isPointInsideHole(px: number, py: number, hole: THoleShape): boolean {
+    if (hole.type === 'circle') {
+      const dx = px - hole.x
+      const dy = py - hole.y
+
+      return dx * dx + dy * dy <= hole.radius * hole.radius
+    }
+
+    return false
   }
 }

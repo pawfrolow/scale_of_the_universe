@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next'
 import { TLanguage } from '../../i18n'
 import { Overlay } from '../Overlay/Overlay'
 
+import styles from './styles.module.scss'
+
 interface ILanguageOption {
   code: TLanguage
   label: string
@@ -29,17 +31,17 @@ export const LanguageModal = ({
   return (
     <Overlay isOpen={isOpen} onBackdropClick={onClose}>
       <div
-        className="languageDialog"
+        className={styles.languageDialog}
         role="dialog"
         aria-modal="true"
         aria-label={t('html.modal.selectLanguage', { ns: 'ui' })}
       >
-        <div className="languageDialogHeader">
+        <div className={styles.languageDialogHeader}>
           <h2>{t('html.modal.selectLanguage', { ns: 'ui' })}</h2>
 
           <button
             type="button"
-            className="languageDialogClose"
+            className={styles.languageDialogClose}
             onClick={onClose}
             aria-label="Close language modal"
           >
@@ -47,16 +49,16 @@ export const LanguageModal = ({
           </button>
         </div>
 
-        <div className="languageList">
+        <div className={styles.languageList}>
           {languages.map((language) => (
             <button
               key={language.code}
               type="button"
-              className={`languageOption ${currentLanguage === language.code ? 'active' : ''}`}
+              className={`${styles.languageOption} ${currentLanguage === language.code ? styles.active : ''}`}
               onClick={() => onSelect(language.code)}
             >
-              <span className="languageOptionLabel">{language.label}</span>
-              {currentLanguage === language.code && <span className="languageOptionCheck">✓</span>}
+              <span className={styles.languageOptionLabel}>{language.label}</span>
+              {currentLanguage === language.code && <span className={styles.languageOptionCheck}>✓</span>}
             </button>
           ))}
         </div>

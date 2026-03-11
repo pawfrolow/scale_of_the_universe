@@ -65,6 +65,9 @@ export class Universe {
     this.onItemModalOpen = onItemModalOpen;
     this.onItemModalClose = onItemModalClose;
 
+    this.displayContainer.eventMode = 'none';
+    this.displayContainer.interactiveChildren = true;
+
     setTimeout(() => {
       for (const entity of [...this.items, ...this.rings]) {
         entity.cachePeriod = false;
@@ -129,6 +132,7 @@ export class Universe {
     for (const item of this.items) {
       item.hideDescription();
       item.text.renderable = true;
+      item.setInteractiveEnabled(true);
     }
 
     this.container.filters = null;
@@ -182,6 +186,8 @@ export class Universe {
 
       this.selectedItem = item;
 
+      item.setInteractiveEnabled(false);
+
       this.container.filters = blurBackground
         ? [new KawaseBlurFilter(1, 3, true)]
         : null;
@@ -191,6 +197,7 @@ export class Universe {
       for (const otherItem of this.items.filter((x) => x !== item)) {
         otherItem.hideDescription();
         otherItem.text.renderable = true;
+        otherItem.setInteractiveEnabled(true);
       }
     } else {
       if (showDescription) {
