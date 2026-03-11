@@ -18,6 +18,8 @@ import {
   ExtraText
 } from "../interfaces";
 import { calculateScale } from "../helpers/calculateScale";
+import { powToUnit } from "../helpers/powToUnit";
+import { ItemModalData } from "../interfaces";
 
 export class Item extends Entity {
   public descriptionGraphics: Container;
@@ -37,6 +39,8 @@ export class Item extends Entity {
   private extraText: ExtraText;
 
   private centerVec: Point;
+  private imageSrc: string;
+  private subtitle: string;
 
   constructor(
     sizeData: SizeData,
@@ -45,7 +49,8 @@ export class Item extends Entity {
     textDatum: TextDatum,
     extraText: ExtraText,
     units: Array<string>,
-    onClick: Function
+    onClick: Function,
+    imageSrc: string
   ) {
     super(sizeData.exponent, sizeData.objectID, textureLow);
 
@@ -57,6 +62,8 @@ export class Item extends Entity {
     this.textDatum = textDatum;
     this.sizeData = sizeData;
     this.units = units;
+    this.imageSrc = imageSrc;
+    this.subtitle = powToUnit(sizeData, units, extraText);
 
     const trim = textureLow.trim ?? {
       x: 0,
@@ -235,7 +242,10 @@ export class Item extends Entity {
       h - insetY * 2
     );
 
-    this.setInteractiveEvents(sprite);
+    if (this.objectID !== 162) {
+      this.setInteractiveEvents(sprite);
+    }
+
   }
 
   setInteractiveEvents(target: DisplayObject) {
@@ -256,5 +266,14 @@ export class Item extends Entity {
 
     target
       .on('pointertap', onPointerTap);
+  }
+
+  getModalData(): ItemModalData {
+    return {
+      imageSrc: this.imageSrc,
+      title: this.textDatum.title,
+      subtitle: this.subtitle,
+      description: this.textDatum.description,
+    };
   }
 }

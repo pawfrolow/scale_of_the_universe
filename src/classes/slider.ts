@@ -54,6 +54,8 @@ export class Slider {
   private touchMoveHandler?: (e: TouchEvent) => void;
   private touchEndHandler?: () => void;
 
+  private animationRunId = 0;
+
   constructor(
     app: Application,
     w: number,
@@ -270,20 +272,36 @@ export class Slider {
     Ticker.shared.speed = 1;
   }
 
-  setAnimationTargetPercent(targetPercent: number) {
-    if (!this.tweenable.isPlaying) {
-      const deltaPercent = Math.abs(this.currentPercent - targetPercent);
-      const duration = Math.min(Math.max(50000 * deltaPercent, 250), 1000);
+  async setAnimationTargetPercent(targetPercent: number, onComplete?: () => void) {
+    if (this.destroyed) {
+      return;
+    }
 
-      this.tweenable.setConfig({
-        from: { pos: this.currentPercent },
-        to: { pos: targetPercent },
-        easing: 'easeInOutSine',
-        duration,
-        render: (state) => typeof state.pos === 'number' && this.setPercent(state.pos)
-      });
+    const runId = ++this.animationRunId;
 
-      this.tweenable.tween();
+    if (this.tweenable.isPlaying) {
+      this.tweenable.stop?.();
+    }
+
+    const deltaPercent = Math.abs((this.currentPercent ?? 0) - targetPercent);
+    const duration = Math.min(Math.max(50000 * deltaPercent, 250), 1000);
+
+    this.tweenable.setConfig({
+      from: { pos: this.currentPercent ?? 0 },
+      to: { pos: targetPercent },
+      easing: 'easeInOutSine',
+      duration,
+      render: (state) => typeof state.pos === 'number' && this.setPercent(state.pos),
+    });
+
+    try {
+      await Promise.resolve(this.tweenable.tween() as any);
+    } catch {
+      // ignore stop/cancel
+    }
+
+    if (!this.destroyed && runId === this.animationRunId) {
+      onComplete?.();
     }
   }
 

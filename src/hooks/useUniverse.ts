@@ -9,13 +9,12 @@ import { throttle } from '../helpers/throttle'
 import { getTextureIdsFromManifest } from '../helpers/getTextureIdsFromManifest'
 import { loadItemTextures } from '../helpers/loadItemTextures'
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config'
-import { TItemsManifest } from '../interfaces'
+import { ItemModalData, TItemsManifest } from '../interfaces'
 import { loadLocaleOverride } from '../helpers/loadLocaleOverride'
 import { resolveItemsManifest } from '../helpers/resolveItemsManifest'
 import { resolveTextureSources } from '../helpers/resolveTextureSources'
 import { useTranslation } from 'react-i18next'
 import { validateItemsOverride } from '../helpers/validateItemsOverride'
-import { NumeralJSLocale } from 'numeral'
 
 PIXI.settings.ROUND_PIXELS = true
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR
@@ -26,6 +25,8 @@ interface IUseUniverseParams {
   onAssetsLoading: () => void
   onAssetsReady: () => void
   onAssetsProgress?: (progress: number) => void
+  onItemModalOpen: (data: ItemModalData) => void
+  onItemModalClose: () => void
 }
 
 export const useUniverse = ({
@@ -34,6 +35,8 @@ export const useUniverse = ({
   onAssetsLoading,
   onAssetsReady,
   onAssetsProgress,
+  onItemModalOpen,
+  onItemModalClose,
 }: IUseUniverseParams) => {
   const appRef = useRef<PIXI.Application | null>(null)
   const initializedRef = useRef(false)
@@ -194,7 +197,13 @@ export const useUniverse = ({
       slider = new Slider(app, w, h, globalResolution, onChange, onHandleClicked)
       slider.init()
 
-      universe = new Universe(0, slider, app)
+      universe = new Universe(
+        0,
+        slider,
+        app,
+        onItemModalOpen,
+        onItemModalClose
+      )
       scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0')
 
       app.stage.addChild(
@@ -207,7 +216,7 @@ export const useUniverse = ({
       containerRef.current.innerHTML = '';
       containerRef.current.appendChild(app.view as HTMLCanvasElement)
 
-      await universe.createItems(allHighTextures, resolvedManifest)
+      await universe.createItems(allHighTextures, resolvedManifest, textureSourceMap)
 
       if (isDestroyed || !app || !slider || !containerRef.current) {
         return
@@ -318,6 +327,8 @@ export const useUniverse = ({
       if (buttons) {
         buttons.style.filter = ''
       }
+
+      onItemModalClose()
 
       initializedRef.current = false
     }
