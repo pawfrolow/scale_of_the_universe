@@ -7,14 +7,14 @@ import { ScaleText } from '../classes/scaleText'
 import { map } from '../helpers/map'
 import { throttle } from '../helpers/throttle'
 import { getTextureIdsFromManifest } from '../helpers/getTextureIdsFromManifest'
-import { loadItemTextures } from '../helpers/loadItemTextures'
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config'
 import { ItemModalData, TItemsManifest } from '../interfaces'
-import { loadLocaleOverride } from '../helpers/loadLocaleOverride'
+import { universeAssetsService } from '../services/universe/universe-assets.service';
 import { resolveItemsManifest } from '../helpers/resolveItemsManifest'
 import { resolveTextureSources } from '../helpers/resolveTextureSources'
 import { useTranslation } from 'react-i18next'
 import { validateItemsOverride } from '../helpers/validateItemsOverride'
+import { nextFrame } from '../helpers/nextFrame'
 
 PIXI.settings.ROUND_PIXELS = true
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR
@@ -76,22 +76,24 @@ export const useUniverse = ({
 
       const locale = i18n.language
 
-      const baseManifest = await (await fetch('data/items.json')).json() as TItemsManifest
-      const override = await loadLocaleOverride(locale)
-      const resolvedManifest = resolveItemsManifest(baseManifest, override)
-      const textureIds = getTextureIdsFromManifest(resolvedManifest)
-      const textureSourceMap = resolveTextureSources(resolvedManifest, locale, override)
+      const baseManifest = await universeAssetsService.getBaseManifest();
+      const override = await universeAssetsService.getLocaleOverride(locale);
 
-      validateItemsOverride(baseManifest, override)
+      const resolvedManifest = resolveItemsManifest(baseManifest, override);
+      const textureIds = getTextureIdsFromManifest(resolvedManifest);
+      const textureSourceMap = resolveTextureSources(resolvedManifest, locale, override);
 
-      const allHighTextures = await loadItemTextures(
+      validateItemsOverride(baseManifest, override);
+
+      const allHighTextures = await universeAssetsService.loadItemTextures({
+        locale,
         textureIds,
-        resolvedManifest,
+        manifest: resolvedManifest,
         textureSourceMap,
-        (loaded, total) => {
-          onAssetsProgress?.(Math.round((loaded / total) * 100))
-        }
-      )
+        onProgress: (loaded, total) => {
+          onAssetsProgress?.(Math.round((loaded / total) * 96))
+        },
+      });
 
       if (isDestroyed || !containerRef.current) {
         return
@@ -123,6 +125,9 @@ export const useUniverse = ({
           resolution: globalResolution,
         })
       }
+
+      onAssetsProgress?.(97)
+      await nextFrame()
 
       if (!app || isDestroyed || !containerRef.current) {
         return
@@ -187,7 +192,7 @@ export const useUniverse = ({
             buttons.style.filter = `invert(${opacity}%)`
           }
 
-          if(opacity > 50) {
+          if (opacity > 50) {
             document.body.classList.add('dark')
           } else {
             document.body.classList.remove('dark')
@@ -226,7 +231,13 @@ export const useUniverse = ({
       containerRef.current.innerHTML = '';
       containerRef.current.appendChild(app.view as HTMLCanvasElement)
 
+      onAssetsProgress?.(98)
+      await nextFrame()
+
       await universe.createItems(allHighTextures, resolvedManifest, textureSourceMap)
+
+      onAssetsProgress?.(99)
+      await nextFrame()
 
       if (isDestroyed || !app || !slider || !containerRef.current) {
         return

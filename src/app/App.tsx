@@ -147,6 +147,14 @@ export const App = () => {
     setItemModalData(null);
   };
 
+  /* return (
+    <LoadingOverlay
+      isVisible={true}
+      progress={98}
+      title={t('html.modal.startLoading', { ns: 'ui' })}
+    />
+  ) */
+
   return (
     <>
       <StartModal

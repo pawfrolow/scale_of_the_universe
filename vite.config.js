@@ -9,12 +9,23 @@ export default defineConfig({
   plugins: [
     legacy({
       targets: ['defaults', 'not IE 11']
-    })
+    }),
   ],
   build: {
     outDir: '../dist',
     emptyOutDir: true,
-    chunkSizeWarningLimit: 1600
+    chunkSizeWarningLimit: 1600,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+          // Use default splitting for application code
+          return null;
+        }
+      }
+    }
   },
   server: {
     open: true,
