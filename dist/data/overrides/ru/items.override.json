@@ -117,47 +117,9 @@
       }
     }
   },
-  "add": {
-    "bd8bf9d2-0d1c-4238-9079-77327904bdaa": {
-      "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 250,
-        "h": 180
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 250,
-        "h": 180
-      },
-      "sourceSize": {
-        "w": 250,
-        "h": 180
-      },
-      "size": {
-        "objectID": 330,
-        "exponent": 2,
-        "coeff": 5,
-        "cullFac": 1,
-        "realRatio": 1
-      },
-      "visualLocation": {
-        "objectID": 330,
-        "titleX": 0,
-        "titleY": 0,
-        "titleScale": 1,
-        "titleWrap": true,
-        "descriptionX": 70,
-        "descriptionY": -100
-      }
-    }
-  },
+  "add": {},
   "textures": {
     "288": true,
-    "331": true,
-    "bd8bf9d2-0d1c-4238-9079-77327904bdaa": true
+    "331": true
   }
 }

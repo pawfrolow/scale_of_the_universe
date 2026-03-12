@@ -6,14 +6,16 @@ import {
   Ticker
 } from "pixi.js-legacy";
 import { Tweenable } from 'shifty';
+import { getCssPxVar } from "../helpers/getCssPxVar";
 
 const WIDTH_PERCENT = 0.9;
 const HEIGHT_PERCENT = 0.05;
-const BOTTOM_MARGIN = 24;
+const BASE_BOTTOM_MARGIN = 24;
 const HANDLE_WIDTH_PERCENT = 0.04;
 const SCROLL_SPEED = -1.5;
 let MAX_SCROLL_SPEED = 3;
 let EASING_CONSTANT = 0.005;
+const MIN_HANDLE_WIDTH_PX = 40;
 
 export class Slider {
   private app: Application;
@@ -44,6 +46,15 @@ export class Slider {
   private tickerHandler?: (deltaTime: number) => void;
   private wheelHandler: (e: Event) => void;
   private destroyed = false;
+
+  private pinchActive = false;
+  private lastPinchDistance: number | null = null;
+  private pinchSensitivity = 0.35;
+  private touchStartHandler?: (e: TouchEvent) => void;
+  private touchMoveHandler?: (e: TouchEvent) => void;
+  private touchEndHandler?: () => void;
+
+  private animationRunId = 0;
 
   constructor(
     app: Application,
@@ -78,6 +89,59 @@ export class Slider {
       this.moveTarget(delta * SCROLL_SPEED);
     };
 
+    this.touchStartHandler = (event: TouchEvent) => {
+      if (this.destroyed) return;
+
+      event.stopPropagation();
+
+      if (event.touches.length === 2) {
+        const distance = this.getTouchesDistance(event.touches);
+
+        this.pinchActive = true;
+        this.lastPinchDistance = distance;
+        this.interact();
+
+        event.preventDefault();
+      }
+    };
+
+    this.touchMoveHandler = (event: TouchEvent) => {
+      if (this.destroyed) return;
+      if (!this.pinchActive) return;
+      if (event.touches.length !== 2) return;
+
+      event.stopPropagation();
+
+      const distance = this.getTouchesDistance(event.touches);
+
+      if (distance === null || this.lastPinchDistance === null) {
+        return;
+      }
+
+      const distanceDelta = distance - this.lastPinchDistance;
+
+      this.lastPinchDistance = distance;
+
+      this.interact();
+      this.moveTarget(-distanceDelta * this.pinchSensitivity);
+
+      event.preventDefault();
+    };
+
+    this.touchEndHandler = () => {
+      if (this.destroyed) return;
+
+      if (this.pinchActive) {
+        this.pinchActive = false;
+        this.lastPinchDistance = null;
+      }
+    };
+
+    document.addEventListener('touchstart', this.touchStartHandler, { passive: false });
+    document.addEventListener('touchmove', this.touchMoveHandler, { passive: false });
+    document.addEventListener('touchend', this.touchEndHandler, false);
+    document.addEventListener('touchcancel', this.touchEndHandler, false);
+
     document.addEventListener('mousewheel', this.wheelHandler, false);
   }
 
@@ -104,7 +168,7 @@ export class Slider {
     const h = this.h * HEIGHT_PERCENT;
 
     const x = this.margin;
-    const y = this.h - h - BOTTOM_MARGIN;
+    const y = this.h - h - this.getBottomMargin();
 
     this.topY = y;
 
@@ -122,14 +186,14 @@ export class Slider {
     graphics.lineStyle(0, 0xaaaaaa, 0);
     graphics.beginFill(0xffffff, 1);
 
-    const w = this.w * HANDLE_WIDTH_PERCENT;
+    const w = this.getHandleWidth();
     this.handleW = w;
     const h = this.h * HEIGHT_PERCENT;
 
     const x = this.w / 2 + w / 2;
     this.currentX = x;
     this.targetX = x;
-    const y = this.h - h - BOTTOM_MARGIN;
+    const y = this.h - h - this.getBottomMargin();
 
     graphics.drawRoundedRect(0, 0, w, h, h / 2);
     graphics.endFill();
@@ -208,20 +272,36 @@ export class Slider {
     Ticker.shared.speed = 1;
   }
 
-  setAnimationTargetPercent(targetPercent: number) {
-    if (!this.tweenable.isPlaying) {
-      const deltaPercent = Math.abs(this.currentPercent - targetPercent);
-      const duration = Math.min(Math.max(50000 * deltaPercent, 250), 1000);
+  async setAnimationTargetPercent(targetPercent: number, onComplete?: () => void) {
+    if (this.destroyed) {
+      return;
+    }
 
-      this.tweenable.setConfig({
-        from: { pos: this.currentPercent },
-        to: { pos: targetPercent },
-        easing: 'easeInOutSine',
-        duration,
-        render: (state) => typeof state.pos === 'number' && this.setPercent(state.pos)
-      });
+    const runId = ++this.animationRunId;
 
-      this.tweenable.tween();
+    if (this.tweenable.isPlaying) {
+      this.tweenable.stop?.();
+    }
+
+    const deltaPercent = Math.abs((this.currentPercent ?? 0) - targetPercent);
+    const duration = Math.min(Math.max(50000 * deltaPercent, 250), 1000);
+
+    this.tweenable.setConfig({
+      from: { pos: this.currentPercent ?? 0 },
+      to: { pos: targetPercent },
+      easing: 'easeInOutSine',
+      duration,
+      render: (state) => typeof state.pos === 'number' && this.setPercent(state.pos),
+    });
+
+    try {
+      await Promise.resolve(this.tweenable.tween() as any);
+    } catch {
+      // ignore stop/cancel
+    }
+
+    if (!this.destroyed && runId === this.animationRunId) {
+      onComplete?.();
     }
   }
 
@@ -310,7 +390,7 @@ export class Slider {
     this.h = h / globalRes;
 
     this.widthPixels = this.w * WIDTH_PERCENT;
-    this.handleWidthPixels = this.w * HANDLE_WIDTH_PERCENT;
+    this.handleWidthPixels = this.getHandleWidth();
     this.scaleWidthPixels = this.widthPixels - this.handleWidthPixels;
     this.margin = (this.w - this.widthPixels) / 2;
 
@@ -338,10 +418,23 @@ export class Slider {
 
     this.container.removeChildren();
     this.container.destroy({ children: true });
+
+    if (this.touchStartHandler) {
+      document.removeEventListener('touchstart', this.touchStartHandler as EventListener);
+    }
+
+    if (this.touchMoveHandler) {
+      document.removeEventListener('touchmove', this.touchMoveHandler as EventListener);
+    }
+
+    if (this.touchEndHandler) {
+      document.removeEventListener('touchend', this.touchEndHandler as EventListener);
+      document.removeEventListener('touchcancel', this.touchEndHandler as EventListener);
+    }
   }
   private getBounds() {
     const widthPixels = this.w * WIDTH_PERCENT;
-    const handleWidthPixels = this.w * HANDLE_WIDTH_PERCENT;
+    const handleWidthPixels = this.getHandleWidth();
     const scaleWidthPixels = widthPixels - handleWidthPixels;
     const margin = (this.w - widthPixels) / 2;
 
@@ -356,5 +449,27 @@ export class Slider {
       scaleWidthPixels,
       margin,
     };
+  }
+
+  private getBottomMargin() {
+    return BASE_BOTTOM_MARGIN + getCssPxVar('--safe-area-bottom');
+  }
+
+  private getHandleWidth() {
+    return Math.max(this.w * HANDLE_WIDTH_PERCENT, MIN_HANDLE_WIDTH_PX);
+  }
+
+  private getTouchesDistance(touches: TouchList): number | null {
+    if (touches.length < 2) {
+      return null;
+    }
+
+    const first = touches[0];
+    const second = touches[1];
+
+    const dx = second.clientX - first.clientX;
+    const dy = second.clientY - first.clientY;
+
+    return Math.sqrt(dx * dx + dy * dy);
   }
 }

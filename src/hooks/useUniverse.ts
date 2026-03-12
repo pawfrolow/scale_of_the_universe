@@ -7,14 +7,14 @@ import { ScaleText } from '../classes/scaleText'
 import { map } from '../helpers/map'
 import { throttle } from '../helpers/throttle'
 import { getTextureIdsFromManifest } from '../helpers/getTextureIdsFromManifest'
-import { loadItemTextures } from '../helpers/loadItemTextures'
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config'
-import { TItemsManifest } from '../interfaces'
-import { loadLocaleOverride } from '../helpers/loadLocaleOverride'
+import { ItemModalData, TItemsManifest } from '../interfaces'
+import { universeAssetsService } from '../services/universe/universe-assets.service';
 import { resolveItemsManifest } from '../helpers/resolveItemsManifest'
 import { resolveTextureSources } from '../helpers/resolveTextureSources'
 import { useTranslation } from 'react-i18next'
 import { validateItemsOverride } from '../helpers/validateItemsOverride'
+import { nextFrame } from '../helpers/nextFrame'
 
 PIXI.settings.ROUND_PIXELS = true
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR
@@ -25,6 +25,8 @@ interface IUseUniverseParams {
   onAssetsLoading: () => void
   onAssetsReady: () => void
   onAssetsProgress?: (progress: number) => void
+  onItemModalOpen: (data: ItemModalData) => void
+  onItemModalClose: () => void
 }
 
 export const useUniverse = ({
@@ -33,10 +35,16 @@ export const useUniverse = ({
   onAssetsLoading,
   onAssetsReady,
   onAssetsProgress,
+  onItemModalOpen,
+  onItemModalClose,
 }: IUseUniverseParams) => {
   const appRef = useRef<PIXI.Application | null>(null)
   const initializedRef = useRef(false)
   const { i18n } = useTranslation();
+
+  let resizeHandler: (() => void) | null = null
+  let orientationHandler: (() => void) | null = null
+  let visualViewportHandler: (() => void) | null = null
 
   useEffect(() => {
     if (!isStarted) {
@@ -51,12 +59,11 @@ export const useUniverse = ({
 
     let app: PIXI.Application | null = null
     let slider: Slider | null = null
-    let resizeHandler: (() => void) | null = null
     let isDestroyed = false
 
     const bootstrap = async () => {
       const frame = document.getElementById('frame') as HTMLElement | null
-      const buttons = document.querySelector('.buttons') as HTMLElement | null
+      const buttons = document.getElementById('buttons') as HTMLElement | null
       const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null
       const earthBg = document.getElementById('earthBgImage') as HTMLElement | null
 
@@ -69,22 +76,24 @@ export const useUniverse = ({
 
       const locale = i18n.language
 
-      const baseManifest = await (await fetch('data/items.json')).json() as TItemsManifest
-      const override = await loadLocaleOverride(locale)
-      const resolvedManifest = resolveItemsManifest(baseManifest, override)
-      const textureIds = getTextureIdsFromManifest(resolvedManifest)
-      const textureSourceMap = resolveTextureSources(resolvedManifest, locale, override)
+      const baseManifest = await universeAssetsService.getBaseManifest();
+      const override = await universeAssetsService.getLocaleOverride(locale);
 
-      validateItemsOverride(baseManifest, override)
+      const resolvedManifest = resolveItemsManifest(baseManifest, override);
+      const textureIds = getTextureIdsFromManifest(resolvedManifest);
+      const textureSourceMap = resolveTextureSources(resolvedManifest, locale, override);
 
-      const allHighTextures = await loadItemTextures(
+      validateItemsOverride(baseManifest, override);
+
+      const allHighTextures = await universeAssetsService.loadItemTextures({
+        locale,
         textureIds,
-        resolvedManifest,
+        manifest: resolvedManifest,
         textureSourceMap,
-        (loaded, total) => {
-          onAssetsProgress?.(Math.round((loaded / total) * 100))
-        }
-      )
+        onProgress: (loaded, total) => {
+          onAssetsProgress?.(Math.round((loaded / total) * 96))
+        },
+      });
 
       if (isDestroyed || !containerRef.current) {
         return
@@ -117,17 +126,20 @@ export const useUniverse = ({
         })
       }
 
+      onAssetsProgress?.(97)
+      await nextFrame()
+
       if (!app || isDestroyed || !containerRef.current) {
         return
       }
 
       appRef.current = app
 
-      const w = app.renderer.width + 3
-      const h = app.renderer.height
+      const w = app.screen.width
+      const h = app.screen.height
 
-      let universe!: Universe
-      let scaleText!: ScaleText
+      let universe: Universe
+      let scaleText: ScaleText
 
       const onHandleClicked = () => {
         universe.onHandleClicked()
@@ -160,6 +172,8 @@ export const useUniverse = ({
           if (buttons) {
             buttons.style.filter = ''
           }
+
+          document.body.classList.remove('dark')
         }
 
         if (scaleExp > 5 && scaleExp < 7) {
@@ -177,10 +191,18 @@ export const useUniverse = ({
           if (buttons) {
             buttons.style.filter = `invert(${opacity}%)`
           }
+
+          if (opacity > 50) {
+            document.body.classList.add('dark')
+          } else {
+            document.body.classList.remove('dark')
+          }
         }
 
         if (scaleExp >= 7 && buttons) {
           buttons.style.filter = 'invert(100%)'
+
+          document.body.classList.add('dark')
         }
 
         universe.update(scaleExp)
@@ -190,20 +212,32 @@ export const useUniverse = ({
       slider = new Slider(app, w, h, globalResolution, onChange, onHandleClicked)
       slider.init()
 
-      universe = new Universe(0, slider, app)
+      universe = new Universe(
+        0,
+        slider,
+        app,
+        onItemModalOpen,
+        onItemModalClose
+      )
       scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0')
 
       app.stage.addChild(
         universe.container,
+        universe.displayContainer,
         slider.container,
-        scaleText.container,
-        universe.displayContainer
+        scaleText.container
       )
 
       containerRef.current.innerHTML = '';
       containerRef.current.appendChild(app.view as HTMLCanvasElement)
 
-      await universe.createItems(allHighTextures, resolvedManifest)
+      onAssetsProgress?.(98)
+      await nextFrame()
+
+      await universe.createItems(allHighTextures, resolvedManifest, textureSourceMap)
+
+      onAssetsProgress?.(99)
+      await nextFrame()
 
       if (isDestroyed || !app || !slider || !containerRef.current) {
         return
@@ -212,28 +246,55 @@ export const useUniverse = ({
       slider.setPercent(map(0, -35, 27, 0, 1))
       universe.prevZoom = 0
 
-      resizeHandler = throttle(() => {
-        if (!app || !slider || isDestroyed) {
+      const performResize = () => {
+        if (!app || !slider || isDestroyed || !containerRef.current) {
           return
         }
 
         requestAnimationFrame(() => {
-          if (!app || !slider || isDestroyed) {
+          if (!app || !slider || isDestroyed || !containerRef.current) {
             return
           }
 
-          const width = app.renderer.width + 3
-          const height = app.renderer.height
+          const frame = document.getElementById('frame') as HTMLElement | null
+
+          if (!frame) {
+            return
+          }
+
+          const rect = containerRef.current.getBoundingClientRect()
+          const width = Math.round(rect.width || frame.clientWidth || window.innerWidth)
+          const height = Math.round(rect.height || frame.clientHeight || window.innerHeight)
+
+          app.renderer.resize(width, height)
+
           const currentPercent = slider.getPercent()
 
-          slider.resize(width, height, globalResolution)
+          slider.resize(app.screen.width, app.screen.height, globalResolution)
           universe.resize()
-          scaleText.resize((width * 0.9) / globalResolution, slider.topY - 40)
+          scaleText.resize((app.screen.width * 0.9) / globalResolution, slider.topY - 40)
           slider.setPercent(currentPercent)
         })
+      }
+
+      resizeHandler = throttle(performResize, 100)
+
+      orientationHandler = () => {
+        // iOS иногда обновляет viewport не мгновенно после rotation
+        setTimeout(performResize, 50)
+        setTimeout(performResize, 250)
+      }
+
+      visualViewportHandler = throttle(() => {
+        performResize()
       }, 100)
 
       window.addEventListener('resize', resizeHandler)
+      window.addEventListener('orientationchange', orientationHandler)
+
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', visualViewportHandler)
+      }
 
       if (!isDestroyed) {
         onAssetsProgress?.(100)
@@ -248,6 +309,14 @@ export const useUniverse = ({
 
       if (resizeHandler) {
         window.removeEventListener('resize', resizeHandler)
+      }
+
+      if (orientationHandler) {
+        window.removeEventListener('orientationchange', orientationHandler)
+      }
+
+      if (visualViewportHandler && window.visualViewport) {
+        window.visualViewport.removeEventListener('resize', visualViewportHandler)
       }
 
       if (slider) {
@@ -266,7 +335,7 @@ export const useUniverse = ({
 
       const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null
       const earthBg = document.getElementById('earthBgImage') as HTMLElement | null
-      const buttons = document.querySelector('.buttons') as HTMLElement | null
+      const buttons = document.getElementById('buttons') as HTMLElement | null
 
       if (spaceBg) {
         spaceBg.style.opacity = '0'
@@ -279,6 +348,8 @@ export const useUniverse = ({
       if (buttons) {
         buttons.style.filter = ''
       }
+
+      onItemModalClose()
 
       initializedRef.current = false
     }

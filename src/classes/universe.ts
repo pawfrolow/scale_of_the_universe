@@ -13,7 +13,7 @@ import { getScaleText } from '../helpers/getScaleText';
 
 import { translationService } from '../services/translation.service';
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config';
-import { ExtraText, SizeData, TextDatum, TItemsManifest, VisualLocation } from '../interfaces';
+import { ExtraText, ItemModalData, SizeData, TextDatum, TItemsManifest, VisualLocation } from '../interfaces';
 
 type TObjectTranslation = {
   title: string;
@@ -47,15 +47,26 @@ export class Universe {
   private itemCount = 0;
   private currentZoomExp = 0;
 
+  private onItemModalOpen?: (data: ItemModalData) => void;
+  private onItemModalClose?: () => void;
+
   constructor(
     startingZoom: number,
     slider: Slider,
-    app: Application
+    app: Application,
+    onItemModalOpen?: (data: ItemModalData) => void,
+    onItemModalClose?: () => void
   ) {
     this.currentZoomExp = startingZoom;
     this.prevZoom = startingZoom;
     this.container = new Container();
     this.displayContainer = new Container();
+
+    this.onItemModalOpen = onItemModalOpen;
+    this.onItemModalClose = onItemModalClose;
+
+    this.displayContainer.eventMode = 'none';
+    this.displayContainer.interactiveChildren = true;
 
     setTimeout(() => {
       for (const entity of [...this.items, ...this.rings]) {
@@ -67,9 +78,6 @@ export class Universe {
     this.app = app;
 
     this.container.sortableChildren = false;
-
-    this.app.stage.eventMode = 'static';
-    this.app.stage.hitArea = this.app.screen;
 
     this.app.stage.eventMode = 'static';
     this.app.stage.hitArea = this.app.screen;
@@ -124,6 +132,7 @@ export class Universe {
     for (const item of this.items) {
       item.hideDescription();
       item.text.renderable = true;
+      item.setInteractiveEnabled(true);
     }
 
     this.container.filters = null;
@@ -144,9 +153,18 @@ export class Universe {
     }
 
     this.displayContainer.visible = false;
+    this.onItemModalClose?.();
   }
 
-  hideAllItemsBut(item: Item) {
+  hideAllItemsBut(
+    item: Item,
+    options: { showDescription?: boolean; blurBackground?: boolean } = {}
+  ) {
+    const {
+      showDescription = true,
+      blurBackground = true,
+    } = options;
+
     if (this.selectedItem !== item) {
       if (this.selectedItem) {
         this.displayContainer.removeChild(this.selectedItem.getContainer());
@@ -158,23 +176,33 @@ export class Universe {
         this.container.addChild(this.selectedItem.getContainer());
       }
 
-      item.showDescription();
+      if (showDescription) {
+        item.showDescription();
+      } else {
+        item.hideDescription();
+      }
 
       this.displayContainer.addChild(item.getContainer());
 
       this.selectedItem = item;
 
-      const filter = new KawaseBlurFilter(1, 3, true);
-      this.container.filters = [filter];
+      item.setInteractiveEnabled(false);
+
+      this.container.filters = blurBackground
+        ? [new KawaseBlurFilter(1, 3, true)]
+        : null;
 
       this.displayContainer.visible = true;
 
       for (const otherItem of this.items.filter((x) => x !== item)) {
         otherItem.hideDescription();
         otherItem.text.renderable = true;
+        otherItem.setInteractiveEnabled(true);
       }
     } else {
-      this.unHideItems();
+      if (showDescription) {
+        item.showDescription();
+      }
     }
   }
 
@@ -184,13 +212,26 @@ export class Universe {
 
     const percent = map(absoluteZoom + zoomOffset, MIN_SCALE_EXP, MAX_SCALE_EXP, 0, 1);
 
-    this.hideAllItemsBut(item);
-
     const percentFinal = window.innerHeight < 750
       ? percent + 0.0065
       : percent + 0.004;
 
-    this.slider.setAnimationTargetPercent(percentFinal);
+    if (this.shouldUseModalDescription()) {
+      this.hideAllItemsBut(item, {
+        showDescription: false,
+        blurBackground: false,
+      });
+
+      void this.slider.setAnimationTargetPercent(percentFinal, () => {
+        this.onItemModalOpen?.(item.getModalData());
+      });
+
+      return;
+    }
+
+    this.hideAllItemsBut(item);
+
+    void this.slider.setAnimationTargetPercent(percentFinal);
   }
 
   private getRingPrefix(scalePrefixes: string[], idx: number): string {
@@ -255,7 +296,7 @@ export class Universe {
     return textDatum;
   }
 
-  async createItems(textures: Record<string, Texture>, manifest: TItemsManifest) {
+  async createItems(textures: Record<string, Texture>, manifest: TItemsManifest, textureSourceMap: Record<string, string>) {
     const frames = manifest.frames ?? {}
 
     const localeData = translationService.getUniverseLocaleData()
@@ -331,7 +372,8 @@ export class Universe {
           textDatum,
           extraText,
           units.scalePrefixes,
-          onClick
+          onClick,
+          textureSourceMap[textureId]
         )
 
         this.items.push(item)
@@ -360,6 +402,8 @@ export class Universe {
 
     this.displayContainer.x = this.app.screen.width / 2;
     this.displayContainer.y = this.app.screen.height / 2;
+
+    this.app.stage.hitArea = this.app.screen;
   }
 
   private isDescendantOf(target: any, parent: any): boolean {
@@ -374,5 +418,9 @@ export class Universe {
     }
 
     return false;
+  }
+
+  private shouldUseModalDescription() {
+    return window.matchMedia('(max-width: 1024px), (pointer: coarse)').matches;
   }
 }

@@ -1,11 +1,16 @@
 import React, { useRef } from 'react'
+import { ItemModalData } from '../../interfaces'
 import { useUniverse } from '../../hooks/useUniverse'
+
+import styles from './styles.module.scss'
 
 interface IUniverseCanvasProps {
   isStarted: boolean
   onAssetsLoading: () => void
   onAssetsReady: () => void
   onAssetsProgress?: (progress: number) => void
+  onItemModalOpen: (data: ItemModalData) => void
+  onItemModalClose: () => void
 }
 
 export const UniverseCanvas = ({
@@ -13,6 +18,8 @@ export const UniverseCanvas = ({
   onAssetsLoading,
   onAssetsReady,
   onAssetsProgress,
+  onItemModalOpen,
+  onItemModalClose,
 }: IUniverseCanvasProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null)
 
@@ -22,7 +29,9 @@ export const UniverseCanvas = ({
     onAssetsLoading,
     onAssetsReady,
     onAssetsProgress,
+    onItemModalOpen,
+    onItemModalClose,
   })
 
-  return <div id="sotu" ref={containerRef} />
+  return <div className={styles.universeCanvas} id="sotu" ref={containerRef} />
 }

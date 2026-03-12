@@ -1,0 +1,33 @@
+
+@use "../assets/css/variables.scss" as *;
+
+.frameStyle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-earth-1;
+}
+
+.bgEarth {
+  background: $color-earth-1;
+  background: radial-gradient(circle, $color-earth-1 0%, $color-earth-2 50%, $color-earth-1 100%);
+}
+
+.bgSpace {
+  background: $color-space-1;
+  background: linear-gradient(0deg, $color-space-1 0%, $color-space-2 50%, $color-space-1 100%);
+  opacity: 0;
+}
+
+.fullBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-bg;
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}

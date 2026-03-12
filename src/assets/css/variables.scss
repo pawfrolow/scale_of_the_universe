@@ -1,0 +1,38 @@
+$color-black: #000;
+$color-white: #fff;
+$color-text-dark: #333;
+$color-text-light: #e9f1f7;
+
+$color-primary: #5c7aff;
+
+$color-earth-1: rgba(229, 229, 229, 1);
+$color-earth-2: rgba(217, 217, 217, 1);
+
+$color-space-1: rgba(11, 13, 35, 1);
+$color-space-2: rgba(15, 18, 52, 1);
+
+$color-transparent-gray: rgba(168, 168, 168, 0);
+$color-transparent-gray-hover: rgba(168, 168, 168, 0.2);
+
+$shadow-soft:
+  0 0 20px rgba(0, 0, 0, 0.1),
+  0 0 5px rgba(0, 0, 0, 0.25);
+
+$shadow-dialog:
+  0 0 40px rgba(0, 0, 0, 0.1),
+  0 0 10px rgba(0, 0, 0, 0.25);
+$radius-pill: 40px;
+
+$font-size-base: 16px;
+$font-size-lg: 24px;
+$font-size-sm: 0.8rem;
+
+$z-bg: -2;
+$z-controls: 5;
+
+$transition-fast: all 0.2s ease-out;
+$transition-hd: background 0.75s;
+
+$dialog-width: 650px;
+
+$start-button-width: 250px;

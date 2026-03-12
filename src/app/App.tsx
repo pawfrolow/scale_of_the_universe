@@ -11,11 +11,15 @@ import {
 import { createFrozenStarAudio } from '../services/audio.service';
 import {
   Controls,
+  ItemDetailsModal,
   LanguageModal,
   LoadingOverlay,
   StartModal,
   UniverseCanvas,
 } from '../components';
+import { ItemModalData } from '../interfaces';
+
+import styles from './styles.module.scss'
 
 export const App = () => {
   const [isStarted, setIsStarted] = useState(false)
@@ -28,6 +32,7 @@ export const App = () => {
   const [isLanguageModalOpen, setIsLanguageModalOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState<TLanguage>(getStoredLanguage());
   const [universeKey, setUniverseKey] = useState(0);
+  const [itemModalData, setItemModalData] = useState<ItemModalData | null>(null);
 
   const { t, i18n } = useTranslation();
   const audio = useMemo(() => createFrozenStarAudio(), []);
@@ -83,6 +88,7 @@ export const App = () => {
   }, [currentLanguage, isI18nReady, t])
 
   const handleStart = async () => {
+    setItemModalData(null);
     setHasEnteredApp(true)
     setIsStarted(true)
   };
@@ -120,6 +126,7 @@ export const App = () => {
       return;
     }
 
+    setItemModalData(null);
     setCurrentLanguage(language);
     setStoredLanguage(language);
     setIsLanguageModalOpen(false);
@@ -131,6 +138,22 @@ export const App = () => {
     setAssetsProgress(0);
     setUniverseKey(prev => prev + 1);
   };
+
+  const handleItemModalOpen = (data: ItemModalData) => {
+    setItemModalData(data);
+  };
+
+  const handleItemModalClose = () => {
+    setItemModalData(null);
+  };
+
+  /* return (
+    <LoadingOverlay
+      isVisible={true}
+      progress={98}
+      title={t('html.modal.startLoading', { ns: 'ui' })}
+    />
+  ) */
 
   return (
     <>
@@ -163,7 +186,7 @@ export const App = () => {
 
       <div
         id="frame"
-        className="frameStyle"
+        className={styles.frameStyle}
         style={{ visibility: hasEnteredApp && isAssetsReady ? 'visible' : 'hidden' }}
       >
         <Controls
@@ -172,8 +195,8 @@ export const App = () => {
           onOpenLanguageModal={handleOpenLanguageModal}
         />
 
-        <div className="bgEarth fullBg" id="earthBgImage" />
-        <div className="bgSpace fullBg" id="spaceBgImage" />
+        <div className={`${styles.bgEarth} ${styles.fullBg}`} id="earthBgImage" />
+        <div className={`${styles.bgSpace} ${styles.fullBg}`} id="spaceBgImage" />
 
         <UniverseCanvas
           key={universeKey}
@@ -181,6 +204,17 @@ export const App = () => {
           onAssetsLoading={handleAssetsLoading}
           onAssetsReady={handleAssetsReady}
           onAssetsProgress={handleAssetsProgress}
+          onItemModalOpen={handleItemModalOpen}
+          onItemModalClose={handleItemModalClose}
+        />
+
+        <ItemDetailsModal
+          isOpen={Boolean(itemModalData)}
+          imageSrc={itemModalData?.imageSrc ?? ''}
+          title={itemModalData?.title ?? ''}
+          subtitle={itemModalData?.subtitle ?? ''}
+          description={itemModalData?.description ?? ''}
+          onClose={handleItemModalClose}
         />
       </div>
     </>

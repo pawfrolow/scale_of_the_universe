@@ -73,3 +73,10 @@ export type TItemsOverride = {
 export type TResolvedItemsManifest = TItemsManifest
 
 export type TTextureSourceMap = Record<string, string>
+
+export interface ItemModalData {
+  imageSrc: string
+  title: string
+  subtitle: string
+  description: string
+}

@@ -7773,7 +7773,7 @@
         "titleScale": 0.8,
         "titleWrap": true,
         "descriptionX": -6.75,
-        "descriptionY": -360.1
+        "descriptionY": -390.1
       }
     },
     "215": {
@@ -10547,7 +10547,7 @@
         "titleY": -268.2,
         "titleScale": 1,
         "titleWrap": true,
-        "descriptionX": 475.35,
+        "descriptionX": 405.35,
         "descriptionY": -322.65
       }
     },
