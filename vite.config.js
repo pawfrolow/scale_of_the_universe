@@ -15,17 +15,6 @@ export default defineConfig({
     outDir: '../dist',
     emptyOutDir: true,
     chunkSizeWarningLimit: 1600,
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            return 'vendor';
-          }
-          // Use default splitting for application code
-          return null;
-        }
-      }
-    }
   },
   server: {
     open: true,
