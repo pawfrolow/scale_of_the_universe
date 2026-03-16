@@ -5,16 +5,11 @@ import { TLanguage } from '../../i18n'
 import { Overlay } from '../Overlay/Overlay'
 
 import styles from './styles.module.scss'
-
-interface ILanguageOption {
-  code: TLanguage
-  label: string
-}
+import { LANGUAGE_OPTIONS } from '../../config'
 
 interface ILanguageModalProps {
   isOpen: boolean
   currentLanguage: TLanguage
-  languages: ILanguageOption[]
   onSelect: (language: TLanguage) => void
   onClose: () => void
 }
@@ -22,7 +17,6 @@ interface ILanguageModalProps {
 export const LanguageModal = ({
   isOpen,
   currentLanguage,
-  languages,
   onSelect,
   onClose,
 }: ILanguageModalProps) => {
@@ -50,7 +44,7 @@ export const LanguageModal = ({
         </div>
 
         <div className={styles.languageList}>
-          {languages.map((language) => (
+          {LANGUAGE_OPTIONS.map((language) => (
             <button
               key={language.code}
               type="button"

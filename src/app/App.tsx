@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import {
   getStoredLanguage,
   initI18n,
-  LANGUAGE_OPTIONS,
   setStoredLanguage,
   TLanguage,
 } from '../i18n';
@@ -18,13 +17,15 @@ import {
   UniverseCanvas,
 } from '../components';
 import { ItemModalData } from '../interfaces';
+import { MUTED_STORAGE_KEY } from '../config';
 
 import styles from './styles.module.scss'
+
 
 export const App = () => {
   const [isStarted, setIsStarted] = useState(false)
   const [hasEnteredApp, setHasEnteredApp] = useState(false)
-  const [isMuted, setIsMuted] = useState(false)
+  const [isMuted, setIsMuted] = useState(!!localStorage.getItem(MUTED_STORAGE_KEY))
   const [isI18nReady, setIsI18nReady] = useState(false)
   const [isAssetsLoading, setIsAssetsLoading] = useState(false)
   const [isAssetsReady, setIsAssetsReady] = useState(false)
@@ -87,6 +88,14 @@ export const App = () => {
     setMetaContent('meta[property="og:description"]', ogDescription)
   }, [currentLanguage, isI18nReady, t])
 
+  useEffect(() => {
+    if (isMuted) {
+      localStorage.setItem(MUTED_STORAGE_KEY, '1');
+    } else {
+      localStorage.removeItem(MUTED_STORAGE_KEY);
+    }
+  }, [isMuted])
+
   const handleStart = async () => {
     setItemModalData(null);
     setHasEnteredApp(true)
@@ -147,14 +156,6 @@ export const App = () => {
     setItemModalData(null);
   };
 
-  /* return (
-    <LoadingOverlay
-      isVisible={true}
-      progress={98}
-      title={t('html.modal.startLoading', { ns: 'ui' })}
-    />
-  ) */
-
   return (
     <>
       <StartModal
@@ -173,7 +174,6 @@ export const App = () => {
       <LanguageModal
         isOpen={isLanguageModalOpen}
         currentLanguage={currentLanguage}
-        languages={LANGUAGE_OPTIONS}
         onSelect={handleLanguageSelect}
         onClose={handleCloseLanguageModal}
       />

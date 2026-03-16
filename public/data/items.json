@@ -12013,6 +12013,42 @@
         "descriptionY": -200,
         "zoomOffset": 0.05
       }
+    },
+    "331": {
+      "frame": {
+        "x": 949,
+        "y": 923,
+        "w": 155,
+        "h": 240
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 652,
+        "y": 88,
+        "w": 155,
+        "h": 240
+      },
+      "sourceSize": {
+        "w": 2160,
+        "h": 1215
+      },
+      "size": {
+        "objectID": 331,
+        "exponent": 0,
+        "coeff": 4.4,
+        "cullFac": 1,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "objectID": 331,
+        "titleX": -462.5,
+        "titleY": -367.6,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": -113.25,
+        "descriptionY": -376.35
+      }
     }
   },
   "meta": {

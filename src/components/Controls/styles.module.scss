@@ -24,6 +24,7 @@
     height: 32px;
     transition: $transition-fast;
     color: $color-text-dark;
+    cursor: pointer;
 
     &:hover {
       background: $color-transparent-gray-hover;
@@ -32,6 +33,7 @@
     img {
       width: 22px;
       height: 22px;
+      cursor: pointer;
     }
   }
 }

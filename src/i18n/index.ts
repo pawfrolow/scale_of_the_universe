@@ -1,5 +1,6 @@
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { LANGUAGE_OPTIONS, LANGUAGE_STORAGE_KEY } from '../config';
 
 import ruObjects from './locales/ru/objects.json';
 import ruUnits from './locales/ru/units.json';
@@ -84,32 +85,6 @@ import faUi from './locales/fa/ui.json';
 import trObjects from './locales/tr/objects.json';
 import trUnits from './locales/tr/units.json';
 import trUi from './locales/tr/ui.json';
-
-export const LANGUAGE_STORAGE_KEY = 'sotu_language';
-
-export const LANGUAGE_OPTIONS = [
-  { code: 'ru', label: 'Русский' },
-  { code: 'en', label: 'English (US)' },
-  { code: 'en-GB', label: 'English (UK)' },
-  { code: 'he', label: 'עברית' },
-  { code: 'nl', label: 'Nederlands' },
-  { code: 'zh-CH', label: '中文(简体)' },
-  { code: 'es', label: 'Español' },
-  { code: 'sv', label: 'Svenska' },
-  { code: 'pl', label: 'Polski' },
-  { code: 'pt', label: 'Português' },
-  { code: 'de', label: 'Deutsch' },
-  { code: 'zh-Hant', label: '中文(繁體)' },
-  { code: 'fr', label: 'Français' },
-  { code: 'eo', label: 'Esperanto' },
-  { code: 'ro', label: 'Romanian' },
-  { code: 'ua', label: 'Українська' },
-  { code: 'ar', label: 'العربية' },
-  { code: 'ko', label: '한국어' },
-  { code: 'et', label: 'Eesti' },
-  { code: 'fa', label: 'فارسی' },
-  { code: 'tr', label: 'Türkçe' },
-];
 
 export const AVAILABLE_LANGUAGES = LANGUAGE_OPTIONS.map(({ code }) => code);
 export type TLanguage = typeof AVAILABLE_LANGUAGES[number];

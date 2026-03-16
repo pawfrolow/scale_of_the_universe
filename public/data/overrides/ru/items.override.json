@@ -186,14 +186,50 @@
         "descriptionX": 377.65,
         "descriptionY": -351
       }
+    },
+    "107": {
+      "frame": {
+        "x": 1199,
+        "y": 1635,
+        "w": 214,
+        "h": 120
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1173,
+        "y": 771,
+        "w": 214,
+        "h": 120
+      },
+      "sourceSize": {
+        "w": 2160,
+        "h": 1215
+      },
+      "size": {
+        "objectID": 107,
+        "exponent": 5,
+        "coeff": 2.05,
+        "cullFac": 1,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "objectID": 107,
+        "titleX": 282.1,
+        "titleY": 390.3,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 720.7,
+        "descriptionY": 141.35
+      }
     }
   },
   "add": {},
   "textures": {
     "288": true,
-    "331": true,
     "042": true,
     "106": true,
-    "319": true
+    "319": true,
+    "107": true
   }
 }

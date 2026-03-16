@@ -1203,6 +1203,10 @@
     "330": {
       "title": "Tardigrade",
       "description": "Les tardigrades sont de minuscules créatures à huit pattes, devenues célèbres pour leur incroyable capacité de survie. Malgré leur taille, ils peuvent supporter la dessiccation, le froid extrême, la chaleur, la haute pression et même les conditions de l’espace ouvert, en entrant dans un état de quasi-arrêt complet de la vie."
+    },
+    "331": {
+      "title": "Vostok 1",
+      "description": "Vostok 1 était un vaisseau spatial soviétique monoplace à bord duquel Youri Gagarine a effectué le premier vol habité de l’histoire le 12 avril 1961. Le lancement a eu lieu depuis Baïkonour, le vol a duré 108 minutes (une orbite autour de la Terre) et l’atterrissage s’est déroulé dans la région de Saratov. Le vaisseau se composait d’une capsule de descente et d’un module d’instruments. C’est avec Vostok 1 qu’a commencé l’ère des vols spatiaux habités."
     }
   }
 }
