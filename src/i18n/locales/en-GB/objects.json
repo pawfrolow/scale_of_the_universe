@@ -1203,6 +1203,10 @@
     "330": {
       "title": "Tardigrade",
       "description": "Tardigrades are tiny eight-legged creatures that became famous for their incredible toughness. Despite their size, they can survive drying out, extreme cold, heat, high pressure, and even the conditions of outer space by entering a state of almost complete suspension of life."
+    },
+    "331": {
+      "title": "Vostok 1",
+      "description": "Vostok 1 was a Soviet single-seat spacecraft on which Yuri Gagarin made the first human spaceflight in history on 12 April 1961. The launch took place from Baikonur, the flight lasted 108 minutes (one orbit around the Earth), and the landing occurred in the Saratov region. The spacecraft consisted of a descent module and an instrument module. The era of crewed spaceflight began with Vostok 1."
     }
   }
 }

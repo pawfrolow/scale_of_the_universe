@@ -1203,6 +1203,10 @@
     "330": {
       "title": "Tardigrad",
       "description": "Tardigradlar, inanılmaz dayanıklılıklarıyla ün kazanan küçücük sekiz bacaklı canlılardır. Boyutlarına rağmen kuraklığa, aşırı soğuğa, ısıya, yüksek basınca ve hatta açık uzay koşullarına, yaşamın neredeyse tamamen durduğu bir duruma girerek dayanabilirler."
+    },
+    "331": {
+      "title": "Vostok-1",
+      "description": "Vostok-1, Yuri Gagarin’in 12 Nisan 1961’de insanlık tarihindeki ilk uzay uçuşunu gerçekleştirdiği Sovyet yapımı tek kişilik bir uzay aracıydı. Fırlatma Baykonur’dan yapıldı, uçuş 108 dakika sürdü (Dünya etrafında 1 tur) ve iniş Saratov bölgesinde gerçekleşti. Araç, iniş kapsülü ile aletler bölümünden oluşuyordu. İnsanlı uzay çağını başlatan da tam olarak Vostok-1 oldu."
     }
   }
 }

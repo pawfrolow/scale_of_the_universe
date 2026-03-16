@@ -1203,6 +1203,10 @@
     "330": {
       "title": "Tardígrado",
       "description": "Los tardígrados son diminutas criaturas de ocho patas que se hicieron famosas por su increíble capacidad de supervivencia. A pesar de su tamaño, pueden soportar la desecación, el frío extremo, el calor, la alta presión e incluso las condiciones del espacio exterior, entrando en un estado de suspensión casi total de la vida."
+    },
+    "331": {
+      "title": "Vostok 1",
+      "description": "Vostok 1 fue una nave espacial soviética monoplaza en la que Yuri Gagarin realizó el primer vuelo espacial tripulado de la historia el 12 de abril de 1961. El lanzamiento se efectuó desde Baikonur, el vuelo duró 108 minutos (una órbita alrededor de la Tierra) y el aterrizaje tuvo lugar en la región de Sarátov. La nave constaba de una cápsula de descenso y un módulo de instrumentos. La era de la cosmonáutica tripulada comenzó precisamente con Vostok 1."
     }
   }
 }
