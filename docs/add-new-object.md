@@ -49,12 +49,6 @@ const MAX_COMMON_TEXTURES = 329
 
 ```json
 "329": {
-  "frame": {
-    "x": 0,
-    "y": 0,
-    "w": 250,
-    "h": 250
-  },
   "rotated": false,
   "trimmed": true,
   "spriteSourceSize": {
@@ -150,12 +144,6 @@ const MAX_COMMON_TEXTURES = 329
 Верхняя часть записи отвечает за геометрию текстуры внутри атласа:
 
 ```json
-"frame": {
-  "x": 0,
-  "y": 0,
-  "w": 250,
-  "h": 250
-},
 "rotated": false,
 "trimmed": true,
 "spriteSourceSize": {
@@ -172,7 +160,6 @@ const MAX_COMMON_TEXTURES = 329
 
 Смысл:
 
-* `frame.w/h` — размер вырезанной текстуры в атласе
 * `spriteSourceSize.x/y/w/h` — положение вырезанной части внутри логического холста объекта
 * `sourceSize.w/h` — размер исходного логического холста
 
@@ -251,7 +238,6 @@ ID должен совпадать с ключом в `frames`.
 
 Проблему обычно нужно искать в texture-части записи:
 
-* `frame.w/h` должны совпадать с фактическим размером вырезанной текстуры
 * `spriteSourceSize.w/h` должны соответствовать размеру объекта внутри логического холста
 * `spriteSourceSize.x/y` регулируют положение изображения
 * `sourceSize` можно взять от соседнего похожего объекта
@@ -348,12 +334,6 @@ ID должен совпадать с ключом в `frames`.
 
 ```json
 "NNN": {
-  "frame": {
-    "x": 0,
-    "y": 0,
-    "w": 100,
-    "h": 100
-  },
   "rotated": false,
   "trimmed": true,
   "spriteSourceSize": {

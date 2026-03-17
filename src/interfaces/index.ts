@@ -25,12 +25,6 @@ export interface SizeData {
 }
 
 export type TFrameMeta = {
-  frame?: {
-    x: number
-    y: number
-    w: number
-    h: number
-  }
   rotated?: boolean
   trimmed?: boolean
   spriteSourceSize: {

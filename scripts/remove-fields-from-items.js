@@ -13,11 +13,11 @@ if (!data.frames || typeof data.frames !== 'object') {
 let updatedCount = 0;
 
 for (const frame of Object.values(data.frames)) {
-  if (!frame.size || typeof frame.size !== 'object') {
+  if (!frame.frame || typeof frame.frame !== 'object') {
     continue;
   }
 
-  delete frame.size.cullFac;
+  delete frame.frame;
 
   updatedCount += 1;
 }

@@ -82,12 +82,6 @@ public/img/textures/overrides/ru/items/330.png
   "remove": ["041", "288"],
   "replace": {
     "105": {
-      "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 320,
-        "h": 220
-      },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
@@ -119,12 +113,6 @@ public/img/textures/overrides/ru/items/330.png
   },
   "add": {
     "330": {
-      "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 250,
-        "h": 180
-      },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
@@ -211,12 +199,6 @@ public/img/textures/overrides/ru/items/330.png
 {
   "replace": {
     "288": {
-      "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 220,
-        "h": 160
-      },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
@@ -262,7 +244,6 @@ public/img/textures/overrides/ru/items/330.png
 
 При `replace` заменяется вся запись объекта целиком:
 
-* `frame`
 * `spriteSourceSize`
 * `sourceSize`
 * `size`
@@ -286,12 +267,6 @@ public/img/textures/overrides/ru/items/330.png
 {
   "add": {
     "330": {
-      "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 260,
-        "h": 190
-      },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
@@ -523,12 +498,6 @@ public/img/textures/overrides/{locale}/items/330.png
   "remove": ["041"],
   "replace": {
     "288": {
-      "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 220,
-        "h": 160
-      },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
@@ -560,12 +529,6 @@ public/img/textures/overrides/{locale}/items/330.png
   },
   "add": {
     "330": {
-      "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 260,
-        "h": 190
-      },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
