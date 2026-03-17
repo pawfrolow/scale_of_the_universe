@@ -17,16 +17,16 @@ export class Entity {
   public cachePeriod: boolean = true;
   public hiddenSprites: boolean = false;
   public isHighQuality: boolean = false;
-  public objectID: number;
+  public textureId: string;
 
   public container: Container;
 
   safetyPeriod: boolean = true;
 
-  constructor(scaleExp: number, objectID: number, textureLow: Texture) {
+  constructor(scaleExp: number, textureId: string, textureLow: Texture) {
     this.scaleExp = scaleExp;
 
-    this.objectID = objectID;
+    this.textureId = textureId;
     this.container = new Container();
 
     setTimeout(() => (this.safetyPeriod = false), 5000);

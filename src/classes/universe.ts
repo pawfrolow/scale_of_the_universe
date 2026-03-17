@@ -350,7 +350,7 @@ export class Universe {
 
         if (!objectTranslation) {
           console.warn(
-            `Translation not found for item index=${idx}, textureId=${textureId}, objectID=${sizeData.objectID}`
+            `Translation not found for item index=${idx}, textureId=${textureId}`
           )
           continue
         }
@@ -366,6 +366,7 @@ export class Universe {
         texture.baseTexture.scaleMode = PIXI.SCALE_MODES.LINEAR
 
         const item = new Item(
+          textureId,
           sizeData,
           texture,
           visualLocation,
@@ -383,6 +384,7 @@ export class Universe {
 
         const ring = new Ring(
           idx,
+          textureId,
           sizeData,
           texture,
           visualLocation,

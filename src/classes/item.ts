@@ -32,8 +32,8 @@ type TSpecialHitAreaConfig = {
   holes: THoleShape[]
 }
 
-const SPECIAL_HIT_AREAS: Partial<Record<number, TSpecialHitAreaConfig>> = {
-  162: {
+const SPECIAL_HIT_AREAS: Partial<Record<string, TSpecialHitAreaConfig>> = {
+  "162": {
     holes: [
       {
         type: 'circle',
@@ -43,7 +43,7 @@ const SPECIAL_HIT_AREAS: Partial<Record<number, TSpecialHitAreaConfig>> = {
       },
     ],
   },
-  163: {
+  "163": {
     holes: [
       {
         type: 'circle',
@@ -77,6 +77,7 @@ export class Item extends Entity {
   private subtitle: string;
 
   constructor(
+    textureId: string,
     sizeData: SizeData,
     textureLow: Texture,
     visualLocation: VisualLocation,
@@ -86,7 +87,7 @@ export class Item extends Entity {
     onClick: Function,
     imageSrc: string
   ) {
-    super(sizeData.exponent, sizeData.objectID, textureLow);
+    super(sizeData.exponent, textureId, textureLow);
 
     this.extraText = extraText;
 
@@ -97,7 +98,7 @@ export class Item extends Entity {
     this.sizeData = sizeData;
     this.units = units;
     this.imageSrc = imageSrc;
-    this.subtitle = powToUnit(sizeData, units, extraText);
+    this.subtitle = powToUnit(textureId, sizeData, units, extraText);
 
     const trim = textureLow.trim ?? {
       x: 0,
@@ -135,6 +136,7 @@ export class Item extends Entity {
     }
 
     const descriptionGfx = getGraphics(
+      this.textureId,
       this.visualLocation,
       this.textDatum,
       this.extraText,
@@ -342,7 +344,7 @@ export class Item extends Entity {
   }
 
   private getSpecialHitAreaConfig(): TSpecialHitAreaConfig | null {
-    return SPECIAL_HIT_AREAS[this.sizeData.objectID] ?? null
+    return SPECIAL_HIT_AREAS[this.textureId] ?? null
   }
 
   private isPointInsideHole(px: number, py: number, hole: THoleShape): boolean {

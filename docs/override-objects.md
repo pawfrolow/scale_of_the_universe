@@ -82,8 +82,6 @@ public/img/textures/overrides/ru/items/330.png
   "remove": ["041", "288"],
   "replace": {
     "105": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 10,
         "y": 20,
@@ -95,13 +93,11 @@ public/img/textures/overrides/ru/items/330.png
         "h": 1215
       },
       "size": {
-        "objectID": 105,
         "exponent": 2,
         "coeff": 1,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 105,
         "titleX": 0,
         "titleY": 0,
         "titleScale": 1,
@@ -113,8 +109,6 @@ public/img/textures/overrides/ru/items/330.png
   },
   "add": {
     "330": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
@@ -126,13 +120,11 @@ public/img/textures/overrides/ru/items/330.png
         "h": 1215
       },
       "size": {
-        "objectID": 330,
         "exponent": 3,
         "coeff": 1,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 330,
         "titleX": 0,
         "titleY": 0,
         "titleScale": 1,
@@ -199,8 +191,6 @@ public/img/textures/overrides/ru/items/330.png
 {
   "replace": {
     "288": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 20,
         "y": 10,
@@ -212,13 +202,11 @@ public/img/textures/overrides/ru/items/330.png
         "h": 1215
       },
       "size": {
-        "objectID": 288,
         "exponent": -2,
         "coeff": 2.15,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 288,
         "titleX": 0,
         "titleY": 0,
         "titleScale": 1,
@@ -267,8 +255,6 @@ public/img/textures/overrides/ru/items/330.png
 {
   "add": {
     "330": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
@@ -280,13 +266,11 @@ public/img/textures/overrides/ru/items/330.png
         "h": 1215
       },
       "size": {
-        "objectID": 330,
         "exponent": 1,
         "coeff": 1,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 330,
         "titleX": 0,
         "titleY": 0,
         "titleScale": 1,
@@ -498,8 +482,6 @@ public/img/textures/overrides/{locale}/items/330.png
   "remove": ["041"],
   "replace": {
     "288": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 20,
         "y": 10,
@@ -511,13 +493,11 @@ public/img/textures/overrides/{locale}/items/330.png
         "h": 1215
       },
       "size": {
-        "objectID": 288,
         "exponent": -2,
         "coeff": 2.15,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 288,
         "titleX": 0,
         "titleY": 0,
         "titleScale": 1,
@@ -529,8 +509,6 @@ public/img/textures/overrides/{locale}/items/330.png
   },
   "add": {
     "330": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
@@ -542,13 +520,11 @@ public/img/textures/overrides/{locale}/items/330.png
         "h": 1215
       },
       "size": {
-        "objectID": 330,
         "exponent": 1,
         "coeff": 1,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 330,
         "titleX": 0,
         "titleY": 0,
         "titleScale": 1,

@@ -34,13 +34,14 @@ export class Ring extends Entity {
 
   constructor(
     idx: number,
+    textureId: string,
     sizeData: SizeData,
     textureLow: Texture,
     visualLocation: VisualLocation,
     textDatum: TextDatum,
     metersText: string
   ) {
-    super(sizeData.exponent, sizeData.objectID, textureLow);
+    super(sizeData.exponent, textureId, textureLow);
 
     this.idx = idx;
     this.coeff = sizeData.coeff;

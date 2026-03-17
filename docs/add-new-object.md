@@ -49,8 +49,6 @@ const MAX_COMMON_TEXTURES = 329
 
 ```json
 "329": {
-  "rotated": false,
-  "trimmed": true,
   "spriteSourceSize": {
     "x": 1121,
     "y": 716,
@@ -62,13 +60,11 @@ const MAX_COMMON_TEXTURES = 329
     "h": 1215
   },
   "size": {
-    "objectID": 329,
     "exponent": -7,
     "coeff": 1,
     "realRatio": 1
   },
   "visualLocation": {
-    "objectID": 329,
     "titleX": 220,
     "titleY": 470,
     "titleScale": 1,
@@ -86,7 +82,6 @@ const MAX_COMMON_TEXTURES = 329
 
 ```json
 "size": {
-  "objectID": 329,
   "exponent": -7,
   "coeff": 1,
   "realRatio": 1
@@ -95,7 +90,6 @@ const MAX_COMMON_TEXTURES = 329
 
 Смысл:
 
-* `objectID` — числовой ID объекта
 * `exponent` и `coeff` задают размер в метрах как `coeff × 10^exponent`
 * `realRatio` — поправка к реальному соотношению размеров
 
@@ -112,7 +106,6 @@ const MAX_COMMON_TEXTURES = 329
 
 ```json
 "visualLocation": {
-  "objectID": 329,
   "titleX": 220,
   "titleY": 470,
   "titleScale": 1,
@@ -144,8 +137,6 @@ const MAX_COMMON_TEXTURES = 329
 Верхняя часть записи отвечает за геометрию текстуры внутри атласа:
 
 ```json
-"rotated": false,
-"trimmed": true,
 "spriteSourceSize": {
   "x": 1121,
   "y": 716,
@@ -212,8 +203,6 @@ ID должен совпадать с ключом в `frames`.
 
 * имя PNG-файла
 * ключ в `items.json -> frames`
-* `size.objectID`
-* `visualLocation.objectID`
 * ключ в locale-файлах
 * при необходимости — в статическом списке `getTextureIds`
 
@@ -300,8 +289,6 @@ ID должен совпадать с ключом в `frames`.
 
    * ID
    * PNG
-   * `size.objectID`
-   * `visualLocation.objectID`
    * `coeff` / `exponent`
 4. Подкрутить:
 
@@ -334,8 +321,6 @@ ID должен совпадать с ключом в `frames`.
 
 ```json
 "NNN": {
-  "rotated": false,
-  "trimmed": true,
   "spriteSourceSize": {
     "x": 0,
     "y": 0,
@@ -347,13 +332,11 @@ ID должен совпадать с ключом в `frames`.
     "h": 1215
   },
   "size": {
-    "objectID": NNN,
     "exponent": 0,
     "coeff": 1,
     "realRatio": 1
   },
   "visualLocation": {
-    "objectID": NNN,
     "titleX": 0,
     "titleY": 120,
     "titleScale": 1,

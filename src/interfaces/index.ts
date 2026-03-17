@@ -6,7 +6,6 @@ export interface TextDatum {
 }
 
 export interface VisualLocation {
-  objectID?: number
   titleX: number
   titleY: number
   titleScale: number
@@ -18,15 +17,12 @@ export interface VisualLocation {
 }
 
 export interface SizeData {
-  objectID: number
   exponent: number
   coeff: number
   realRatio: number
 }
 
 export type TFrameMeta = {
-  rotated?: boolean
-  trimmed?: boolean
   spriteSourceSize: {
     x: number
     y: number

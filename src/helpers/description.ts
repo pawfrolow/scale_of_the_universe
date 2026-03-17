@@ -1,8 +1,16 @@
 import 'pixi.js-legacy';
 import * as PIXI from 'pixi.js-legacy';
 import { powToUnit } from '../helpers/powToUnit'
+import { ExtraText, SizeData, TextDatum, VisualLocation } from 'src/interfaces';
 
-export function getGraphics(visualLocation, textDatum, extraText, units: string[], sizeData) {
+export function getGraphics(
+  textureId: string,
+  visualLocation: VisualLocation, 
+  textDatum: TextDatum, 
+  extraText: ExtraText, 
+  units: string[], 
+  sizeData: SizeData
+) {
   const w = 450;
   const h = 500;
   const x = visualLocation.descriptionX;
@@ -48,17 +56,14 @@ export function getGraphics(visualLocation, textDatum, extraText, units: string[
     fontSize: 32
   };
 
-  const friendly = powToUnit(sizeData, units, extraText)
+  const friendly = powToUnit(textureId, sizeData, units, extraText)
 
-  // DEBUG MODE: object id beside description title VVVV
-  // const titleText = new PIXI.Text(textDatum.title.replace(/\r?\n|\r/g, ' ') + sizeData.objectID, titleStyle);
   const titleText = new PIXI.Text(textDatum.title.replace(/\r?\n|\r/g, ''), titleStyle);
   const scaleText = new PIXI.Text(`${sizeData.coeff} x 10`, scaleStyle);
   const exponentText = new PIXI.Text(`${sizeData.exponent}`, exponentStyle);
   const meterText = new PIXI.Text(textDatum.metersPlural, scaleStyle);
   const unitFriendlyText = new PIXI.Text(friendly, unitFriendlyStyle);
   const descriptionText = new PIXI.Text(textDatum.description, descriptionStyle);
-  // const descriptionText = new PIXI.Text(sizeData.objectID + ' ' + splitDescription, descriptionStyle);
 
   titleText.x = x + margin;
   titleText.y = y + margin;

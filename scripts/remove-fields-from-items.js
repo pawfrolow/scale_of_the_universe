@@ -13,11 +13,15 @@ if (!data.frames || typeof data.frames !== 'object') {
 let updatedCount = 0;
 
 for (const frame of Object.values(data.frames)) {
-  if (!frame.frame || typeof frame.frame !== 'object') {
+  /* if (!frame.frame || typeof frame.frame !== 'object') {
     continue;
+  } */
+  if(frame.size) {
+    delete frame.size.objectID;
   }
-
-  delete frame.frame;
+  if(frame.visualLocation) {
+    delete frame.visualLocation.objectID;
+  }
 
   updatedCount += 1;
 }

@@ -6,8 +6,6 @@
   ],
   "replace": {
     "288": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 254,
         "y": 188,
@@ -19,13 +17,11 @@
         "h": 1215
       },
       "size": {
-        "objectID": 288,
         "exponent": -2,
         "coeff": 1.55,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 288,
         "titleX": -951.9,
         "titleY": -253.2,
         "titleScale": 1,
@@ -36,8 +32,6 @@
       }
     },
     "037": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 884,
         "y": 69,
@@ -49,13 +43,11 @@
         "h": 1215
       },
       "size": {
-        "objectID": 37,
         "exponent": -2,
         "coeff": 1,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 37,
         "titleX": -103.5,
         "titleY": -400.1,
         "titleScale": 1,
@@ -66,8 +58,6 @@
       }
     },
     "215": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 1405,
         "y": 554,
@@ -79,13 +69,11 @@
         "h": 1215
       },
       "size": {
-        "objectID": 215,
         "exponent": -1,
         "coeff": 2,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 215,
         "titleX": 578.6,
         "titleY": 70,
         "titleScale": 1,
@@ -95,8 +83,6 @@
       }
     },
     "106": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 668,
         "y": 490,
@@ -108,13 +94,11 @@
         "h": 1215
       },
       "size": {
-        "objectID": 106,
         "exponent": 6,
         "coeff": 1.2,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 106,
         "titleX": -421.4,
         "titleY": 159.3,
         "titleScale": 1,
@@ -124,8 +108,6 @@
       }
     },
     "319": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 931,
         "y": 259,
@@ -137,13 +119,11 @@
         "h": 1215
       },
       "size": {
-        "objectID": 319,
         "exponent": 6,
         "coeff": 2.3,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 319,
         "titleX": -100.5,
         "titleY": -190.6,
         "titleScale": 1,
@@ -153,8 +133,6 @@
       }
     },
     "107": {
-      "rotated": false,
-      "trimmed": true,
       "spriteSourceSize": {
         "x": 1173,
         "y": 771,
@@ -166,13 +144,11 @@
         "h": 1215
       },
       "size": {
-        "objectID": 107,
         "exponent": 5,
         "coeff": 2.05,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 107,
         "titleX": 282.1,
         "titleY": 390.3,
         "titleScale": 1,
