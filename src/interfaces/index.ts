@@ -21,7 +21,6 @@ export interface SizeData {
   objectID: number
   exponent: number
   coeff: number
-  cullFac: number
   realRatio: number
 }
 

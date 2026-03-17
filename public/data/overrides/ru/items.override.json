@@ -28,7 +28,6 @@
         "objectID": 288,
         "exponent": -2,
         "coeff": 1.55,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
@@ -65,7 +64,6 @@
         "objectID": 37,
         "exponent": -2,
         "coeff": 1,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
@@ -102,7 +100,6 @@
         "objectID": 215,
         "exponent": -1,
         "coeff": 2,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
@@ -138,7 +135,6 @@
         "objectID": 106,
         "exponent": 6,
         "coeff": 1.2,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
@@ -174,7 +170,6 @@
         "objectID": 319,
         "exponent": 6,
         "coeff": 2.3,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
@@ -210,7 +205,6 @@
         "objectID": 107,
         "exponent": 5,
         "coeff": 2.05,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {

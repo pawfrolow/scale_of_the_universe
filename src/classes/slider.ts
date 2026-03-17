@@ -24,7 +24,6 @@ export class Slider {
   private onChange: Function;
   private onHandleClicked: Function;
   public dragging: Boolean = false;
-  private fpsTarget: number = 200;
   private margin: number;
   private targetX: number;
   private currentX: number;

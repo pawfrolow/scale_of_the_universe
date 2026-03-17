@@ -71,7 +71,6 @@ const MAX_COMMON_TEXTURES = 329
     "objectID": 329,
     "exponent": -7,
     "coeff": 1,
-    "cullFac": 1,
     "realRatio": 1
   },
   "visualLocation": {
@@ -96,7 +95,6 @@ const MAX_COMMON_TEXTURES = 329
   "objectID": 329,
   "exponent": -7,
   "coeff": 1,
-  "cullFac": 1,
   "realRatio": 1
 }
 ```
@@ -105,7 +103,6 @@ const MAX_COMMON_TEXTURES = 329
 
 * `objectID` — числовой ID объекта
 * `exponent` и `coeff` задают размер в метрах как `coeff × 10^exponent`
-* `cullFac` — дополнительный коэффициент для логики отображения
 * `realRatio` — поправка к реальному соотношению размеров
 
 Примеры:
@@ -373,7 +370,6 @@ ID должен совпадать с ключом в `frames`.
     "objectID": NNN,
     "exponent": 0,
     "coeff": 1,
-    "cullFac": 1,
     "realRatio": 1
   },
   "visualLocation": {

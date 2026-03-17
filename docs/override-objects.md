@@ -104,7 +104,6 @@ public/img/textures/overrides/ru/items/330.png
         "objectID": 105,
         "exponent": 2,
         "coeff": 1,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
@@ -142,7 +141,6 @@ public/img/textures/overrides/ru/items/330.png
         "objectID": 330,
         "exponent": 3,
         "coeff": 1,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
@@ -235,7 +233,6 @@ public/img/textures/overrides/ru/items/330.png
         "objectID": 288,
         "exponent": -2,
         "coeff": 2.15,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
@@ -311,7 +308,6 @@ public/img/textures/overrides/ru/items/330.png
         "objectID": 330,
         "exponent": 1,
         "coeff": 1,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
@@ -549,7 +545,6 @@ public/img/textures/overrides/{locale}/items/330.png
         "objectID": 288,
         "exponent": -2,
         "coeff": 2.15,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
@@ -587,7 +582,6 @@ public/img/textures/overrides/{locale}/items/330.png
         "objectID": 330,
         "exponent": 1,
         "coeff": 1,
-        "cullFac": 1,
         "realRatio": 1
       },
       "visualLocation": {
