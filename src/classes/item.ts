@@ -4,7 +4,6 @@ import {
   Container,
   Texture,
   Point,
-  Polygon,
   DisplayObject,
   Rectangle
 } from "pixi.js-legacy";
@@ -15,7 +14,8 @@ import {
   TextDatum,
   VisualLocation,
   SizeData,
-  ExtraText
+  ExtraText,
+  SpriteLayout
 } from "../interfaces";
 import { calculateScale } from "../helpers/calculateScale";
 import { powToUnit } from "../helpers/powToUnit";
@@ -72,7 +72,6 @@ export class Item extends Entity {
   private units: Array<string>;
   private extraText: ExtraText;
 
-  private centerVec: Point;
   private imageSrc: string;
   private subtitle: string;
 
@@ -80,6 +79,7 @@ export class Item extends Entity {
     textureId: string,
     sizeData: SizeData,
     textureLow: Texture,
+    spriteLayout: SpriteLayout,
     visualLocation: VisualLocation,
     textDatum: TextDatum,
     extraText: ExtraText,
@@ -87,10 +87,9 @@ export class Item extends Entity {
     onClick: Function,
     imageSrc: string
   ) {
-    super(sizeData.exponent, textureId, textureLow);
+    super(sizeData.exponent, textureId, textureLow, spriteLayout);
 
     this.extraText = extraText;
-
     this.coeff = sizeData.coeff;
     this.realRatio = sizeData.realRatio;
     this.visualLocation = visualLocation;
@@ -100,28 +99,9 @@ export class Item extends Entity {
     this.imageSrc = imageSrc;
     this.subtitle = powToUnit(textureId, sizeData, units, extraText);
 
-    const trim = textureLow.trim ?? {
-      x: 0,
-      y: 0,
-      width: textureLow.width,
-      height: textureLow.height,
-    }
-
-    const orig = textureLow.orig ?? {
-      width: textureLow.width,
-      height: textureLow.height,
-    }
-
-    const dX = orig.width / 2 - trim.x - trim.width / 2
-    const dY = orig.height / 2 - trim.y - trim.height / 2
-
-    const c = Math.sqrt(dX * dX + dY * dY) || 1
-
-    this.centerVec = new Point(dX / c, dY / c)
-
     this.onClick = onClick;
 
-    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio)//  E(this.scaleExp) * this.coeff * this.realRatio;
+    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio);
     this.container.scale = new Point(scale, scale);
 
     this.createClickableRegion();
@@ -247,24 +227,10 @@ export class Item extends Entity {
   }
 
   setSpriteEvents(sprite: Sprite) {
-    const texture = sprite.texture
+    const { width, height } = this.spriteLayout
 
-    const trim = texture.trim ?? {
-      x: 0,
-      y: 0,
-      width: texture.width,
-      height: texture.height,
-    }
-
-    const orig = texture.orig ?? {
-      width: texture.width,
-      height: texture.height,
-    }
-
-    const x = trim.x - orig.width / 2
-    const y = trim.y - orig.height / 2
-    const w = trim.width
-    const h = trim.height
+    const left = -width / 2
+    const top = -height / 2
 
     const specialHitArea = this.getSpecialHitAreaConfig()
 
@@ -272,10 +238,10 @@ export class Item extends Entity {
       sprite.hitArea = {
         contains: (px: number, py: number) => {
           const insideRect =
-            px >= x &&
-            px <= x + w &&
-            py >= y &&
-            py <= y + h
+            px >= left &&
+            px <= left + width &&
+            py >= top &&
+            py <= top + height
 
           if (!insideRect) {
             return false
@@ -289,7 +255,7 @@ export class Item extends Entity {
         },
       }
     } else {
-      sprite.hitArea = new Rectangle(x, y, w, h)
+      sprite.hitArea = new Rectangle(left, top, width, height)
     }
 
     this.setInteractiveEvents(sprite)

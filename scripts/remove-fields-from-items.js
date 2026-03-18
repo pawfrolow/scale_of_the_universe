@@ -16,11 +16,11 @@ for (const frame of Object.values(data.frames)) {
   /* if (!frame.frame || typeof frame.frame !== 'object') {
     continue;
   } */
-  if(frame.size) {
-    delete frame.size.objectID;
+  if(frame.spriteSourceSize) {
+    delete frame.spriteSourceSize;
   }
-  if(frame.visualLocation) {
-    delete frame.visualLocation.objectID;
+  if(frame.sourceSize) {
+    delete frame.sourceSize;
   }
 
   updatedCount += 1;

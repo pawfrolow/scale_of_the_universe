@@ -22,19 +22,17 @@ export interface SizeData {
   realRatio: number
 }
 
+export interface SpriteLayout {
+  x: number
+  y: number
+  width: number
+  height: number
+}
+
 export type TFrameMeta = {
-  spriteSourceSize: {
-    x: number
-    y: number
-    w: number
-    h: number
-  }
-  sourceSize: {
-    w: number
-    h: number
-  }
   size?: SizeData | null
-  visualLocation?: VisualLocation | null
+  visualLocation?: VisualLocation | null,
+  layout: SpriteLayout
 }
 
 export type TItemsManifest = {

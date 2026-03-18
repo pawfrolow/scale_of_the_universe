@@ -9,7 +9,8 @@ import { E } from "../helpers/e";
 import {
   VisualLocation,
   SizeData,
-  TextDatum
+  TextDatum,
+  SpriteLayout
 } from '../interfaces';
 import { calculateScale } from "../helpers/calculateScale";
 
@@ -29,7 +30,6 @@ export class Ring extends Entity {
   private idx: number;
   private sizeData: SizeData;
   private textContainer: Container;
-  private centerVec: Point;
   private meterPlural: string;
 
   constructor(
@@ -37,11 +37,12 @@ export class Ring extends Entity {
     textureId: string,
     sizeData: SizeData,
     textureLow: Texture,
+    spriteLayout: SpriteLayout,
     visualLocation: VisualLocation,
     textDatum: TextDatum,
     metersText: string
   ) {
-    super(sizeData.exponent, textureId, textureLow);
+    super(sizeData.exponent, textureId, textureLow, spriteLayout);
 
     this.idx = idx;
     this.coeff = sizeData.coeff;
@@ -52,26 +53,7 @@ export class Ring extends Entity {
 
     this.meterPlural = metersText;
 
-    const trim = textureLow.trim ?? {
-      x: 0,
-      y: 0,
-      width: textureLow.width,
-      height: textureLow.height,
-    }
-
-    const orig = textureLow.orig ?? {
-      width: textureLow.width,
-      height: textureLow.height,
-    }
-
-    const dX = orig.width / 2 - trim.x - trim.width / 2
-    const dY = orig.height / 2 - trim.y - trim.height / 2
-
-    const c = Math.sqrt(dX * dX + dY * dY) || 1
-
-    this.centerVec = new Point(dX / c, dY / c)
-
-    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio)// E(this.scaleExp) * this.coeff * this.realRatio;
+    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio);
     this.container.scale = new Point(scale, scale);
 
     this.createText();

@@ -342,6 +342,12 @@ export class Universe {
 
       const sizeData: SizeData = frameEntry.size
       const visualLocation: VisualLocation = frameEntry.visualLocation
+      const spriteLayout = frameEntry.layout
+
+      if (!frameEntry?.layout) {
+        console.warn(`Layout not found for key=${textureId}`)
+        continue
+      }
 
       const numericId = Number(textureId)
 
@@ -369,6 +375,7 @@ export class Universe {
           textureId,
           sizeData,
           texture,
+          spriteLayout,
           visualLocation,
           textDatum,
           extraText,
@@ -387,6 +394,7 @@ export class Universe {
           textureId,
           sizeData,
           texture,
+          spriteLayout,
           visualLocation,
           textDatum,
           units.meters
