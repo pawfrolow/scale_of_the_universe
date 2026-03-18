@@ -1,17 +1,13 @@
-import {
-  Sprite,
-  Container,
-  Texture,
-  Point
-} from "pixi.js-legacy";
-import { E } from "../helpers/e";
-import { SpriteLayout } from "../interfaces";
+import { Sprite, Container, Texture, Point } from 'pixi.js-legacy';
+
+import { E } from '../helpers/e';
+import { SpriteLayout } from '../interfaces';
 
 export class Entity {
   public scaleExp: number;
   protected sprite: Sprite;
   protected video: Sprite;
-  public videoStream: any;
+  public videoStream;
   protected spriteLow: Sprite;
   protected spriteMedium: Sprite;
   public culled: boolean = false;
@@ -29,7 +25,7 @@ export class Entity {
     scaleExp: number,
     textureId: string,
     textureLow: Texture,
-    spriteLayout: SpriteLayout
+    spriteLayout: SpriteLayout,
   ) {
     this.scaleExp = scaleExp;
     this.textureId = textureId;
@@ -58,14 +54,14 @@ export class Entity {
     return this.container;
   }
 
-  setZoom(globalZoomExp: number, deltaZoom: number) {
+  setZoom(globalZoomExp: number) {
     const scale = E(this.scaleExp - globalZoomExp);
     this.container.scale = new Point(scale, scale);
   }
 
   setQuality(qualityIndex: number) {
     if (this.sprite) {
-      this.sprite.visible = qualityIndex === 1
+      this.sprite.visible = qualityIndex === 1;
     }
 
     this.spriteLow.visible = qualityIndex === 0;
@@ -83,7 +79,7 @@ export class Entity {
     this.spriteLow.visible = !this.isHighQuality;
   }
 
-  cull(scale: number, sizeData: any) {
+  cull(scale: number) {
     if (scale < 0.001 || scale > 12) {
       this.container.renderable = false;
       this.culled = true;

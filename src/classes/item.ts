@@ -1,39 +1,27 @@
-import {
-  Sprite,
-  Text,
-  Container,
-  Texture,
-  Point,
-  DisplayObject,
-  Rectangle
-} from "pixi.js-legacy";
-import { Entity } from "./entity";
-import { E } from "../helpers/e";
-import { getGraphics } from "../helpers/description";
-import {
-  TextDatum,
-  VisualLocation,
-  SizeData,
-  ExtraText,
-  SpriteLayout
-} from "../interfaces";
-import { calculateScale } from "../helpers/calculateScale";
-import { powToUnit } from "../helpers/powToUnit";
-import { ItemModalData } from "../interfaces";
+import { Sprite, Text, Container, Texture, Point, DisplayObject, Rectangle } from 'pixi.js-legacy';
+
+import { calculateScale } from '../helpers/calculateScale';
+import { getGraphics } from '../helpers/description';
+import { E } from '../helpers/e';
+import { powToUnit } from '../helpers/powToUnit';
+import { TextDatum, VisualLocation, SizeData, ExtraText, SpriteLayout } from '../interfaces';
+import { ItemModalData } from '../interfaces';
+
+import { Entity } from './entity';
 
 type THoleShape = {
-  type: 'circle'
-  x: number
-  y: number
-  radius: number
-}
+  type: 'circle';
+  x: number;
+  y: number;
+  radius: number;
+};
 
 type TSpecialHitAreaConfig = {
-  holes: THoleShape[]
-}
+  holes: THoleShape[];
+};
 
 const SPECIAL_HIT_AREAS: Partial<Record<string, TSpecialHitAreaConfig>> = {
-  "162": {
+  '162': {
     holes: [
       {
         type: 'circle',
@@ -43,7 +31,7 @@ const SPECIAL_HIT_AREAS: Partial<Record<string, TSpecialHitAreaConfig>> = {
       },
     ],
   },
-  "163": {
+  '163': {
     holes: [
       {
         type: 'circle',
@@ -52,8 +40,8 @@ const SPECIAL_HIT_AREAS: Partial<Record<string, TSpecialHitAreaConfig>> = {
         radius: 150,
       },
     ],
-  }
-}
+  },
+};
 
 export class Item extends Entity {
   public descriptionGraphics: Container;
@@ -64,10 +52,10 @@ export class Item extends Entity {
   public currentScale: number = 1;
   public visualLocation: VisualLocation;
   public video: Sprite;
-  public videoSrc: any;
+  public videoSrc;
   private textDatum: TextDatum;
   public text: Text;
-  private onClick: Function;
+  private onClick: (e?) => void;
   private description: Container;
   private units: Array<string>;
   private extraText: ExtraText;
@@ -84,8 +72,8 @@ export class Item extends Entity {
     textDatum: TextDatum,
     extraText: ExtraText,
     units: Array<string>,
-    onClick: Function,
-    imageSrc: string
+    onClick: (e?) => void,
+    imageSrc: string,
   ) {
     super(sizeData.exponent, textureId, textureLow, spriteLayout);
 
@@ -107,7 +95,7 @@ export class Item extends Entity {
     this.createClickableRegion();
     this.createText();
     this.container.sortableChildren = true;
-    this.cull(scale, this.sizeData);
+    this.cull(scale);
   }
 
   showDescription() {
@@ -121,7 +109,7 @@ export class Item extends Entity {
       this.textDatum,
       this.extraText,
       this.units,
-      this.sizeData
+      this.sizeData,
     );
 
     const s = this.visualLocation.descriptionScale;
@@ -151,12 +139,11 @@ export class Item extends Entity {
     }
   }
 
-  setZoom(globalZoomExp: number, deltaZoom: number) {
+  setZoom(globalZoomExp: number) {
     const scaleExp = this.scaleExp - globalZoomExp;
 
-
     if (!this.culled) {
-      const scale = calculateScale(scaleExp, this.coeff, this.realRatio)// Math.round(rawScale * 500) / 500;
+      const scale = calculateScale(scaleExp, this.coeff, this.realRatio); // Math.round(rawScale * 500) / 500;
 
       if (scale > 0.05 && scale < 0.1) {
         this.text.alpha = 0.5;
@@ -172,16 +159,16 @@ export class Item extends Entity {
 
       this.text.visible = this.text.alpha !== 0;
 
-      this.cull(scale, this.sizeData);
+      this.cull(scale);
       this.container.scale = new Point(scale, scale);
       this.currentScale = scale;
     } else {
       const scaleExp = this.scaleExp - globalZoomExp;
       if (scaleExp > 2 || scaleExp < -4) {
-        this.cull(E(-8), this.sizeData);
+        this.cull(E(-8));
       } else {
-        const scale = calculateScale(scaleExp, this.coeff, this.realRatio)// Math.round(rawScale * 500) / 500;
-        this.cull(scale, this.sizeData);
+        const scale = calculateScale(scaleExp, this.coeff, this.realRatio); // Math.round(rawScale * 500) / 500;
+        this.cull(scale);
       }
     }
   }
@@ -192,15 +179,15 @@ export class Item extends Entity {
 
   createText() {
     const textStyle = {
-      fontFamily: "Roboto",
+      fontFamily: 'Roboto',
       fontSize: 48 * this.visualLocation.titleScale,
       fill: 0x000000,
-      align: "center" as const,
+      align: 'center' as const,
       wordWrap: this.visualLocation.titleWrap,
       wordWrapWidth: 400,
     };
 
-    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio)
+    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio);
 
     if (scale > E(5)) {
       textStyle.fill = 0xdddddd;
@@ -227,44 +214,41 @@ export class Item extends Entity {
   }
 
   setSpriteEvents(sprite: Sprite) {
-    const { width, height } = this.spriteLayout
+    const { width, height } = this.spriteLayout;
 
-    const left = -width / 2
-    const top = -height / 2
+    const left = -width / 2;
+    const top = -height / 2;
 
-    const specialHitArea = this.getSpecialHitAreaConfig()
+    const specialHitArea = this.getSpecialHitAreaConfig();
 
     if (specialHitArea) {
       sprite.hitArea = {
         contains: (px: number, py: number) => {
-          const insideRect =
-            px >= left &&
-            px <= left + width &&
-            py >= top &&
-            py <= top + height
+          const insideRect = px >= left && px <= left + width && py >= top && py <= top + height;
 
           if (!insideRect) {
-            return false
+            return false;
           }
 
           const insideAnyHole = specialHitArea.holes.some((hole) =>
-            this.isPointInsideHole(px, py, hole)
-          )
+            this.isPointInsideHole(px, py, hole),
+          );
 
-          return !insideAnyHole
+          return !insideAnyHole;
         },
-      }
+      };
     } else {
-      sprite.hitArea = new Rectangle(left, top, width, height)
+      sprite.hitArea = new Rectangle(left, top, width, height);
     }
 
-    this.setInteractiveEvents(sprite)
+    this.setInteractiveEvents(sprite);
   }
 
   setInteractiveEvents(target: DisplayObject) {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const here = this;
 
-    function onPointerTap(event: any) {
+    function onPointerTap(event) {
       event?.stopPropagation?.();
 
       here.onClick(here);
@@ -274,11 +258,11 @@ export class Item extends Entity {
     target.eventMode = 'static';
     target.interactive = true;
     target.cursor = 'pointer';
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     target.buttonMode = true;
 
-    target
-      .on('pointertap', onPointerTap);
+    target.on('pointertap', onPointerTap);
   }
 
   getModalData(): ItemModalData {
@@ -297,9 +281,11 @@ export class Item extends Entity {
       }
 
       target.eventMode = enabled ? 'static' : 'none';
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       target.interactive = enabled;
       target.cursor = enabled ? 'pointer' : 'default';
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       target.buttonMode = enabled;
     };
@@ -310,17 +296,17 @@ export class Item extends Entity {
   }
 
   private getSpecialHitAreaConfig(): TSpecialHitAreaConfig | null {
-    return SPECIAL_HIT_AREAS[this.textureId] ?? null
+    return SPECIAL_HIT_AREAS[this.textureId] ?? null;
   }
 
   private isPointInsideHole(px: number, py: number, hole: THoleShape): boolean {
     if (hole.type === 'circle') {
-      const dx = px - hole.x
-      const dy = py - hole.y
+      const dx = px - hole.x;
+      const dy = py - hole.y;
 
-      return dx * dx + dy * dy <= hole.radius * hole.radius
+      return dx * dx + dy * dy <= hole.radius * hole.radius;
     }
 
-    return false
+    return false;
   }
 }

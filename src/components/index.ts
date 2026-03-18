@@ -1,8 +1,8 @@
-export { Controls } from './Controls/Controls'
-export { UniverseCanvas } from './UniverseCanvas/UniverseCanvas'
-export { StartModal } from './StartModal/StartModal'
-export { LoadingOverlay } from './LoadingOverlay/LoadingOverlay'
-export { LanguageModal } from './LanguageModal/LanguageModal'
-export { Overlay } from './Overlay/Overlay'
-export { ItemDetailsModal } from './ItemDetailsModal/ItemDetailsModal'
-export { Loader } from './Loader/Loader'
+export { Controls } from './Controls/Controls';
+export { UniverseCanvas } from './UniverseCanvas/UniverseCanvas';
+export { StartModal } from './StartModal/StartModal';
+export { LoadingOverlay } from './LoadingOverlay/LoadingOverlay';
+export { LanguageModal } from './LanguageModal/LanguageModal';
+export { Overlay } from './Overlay/Overlay';
+export { ItemDetailsModal } from './ItemDetailsModal/ItemDetailsModal';
+export { Loader } from './Loader/Loader';

@@ -1,23 +1,10 @@
-import {
-  Text,
-  Container,
-  Point,
-  Texture
-} from "pixi.js-legacy";
-import { Entity } from "./entity";
-import { E } from "../helpers/e";
-import {
-  VisualLocation,
-  SizeData,
-  TextDatum,
-  SpriteLayout
-} from '../interfaces';
-import { calculateScale } from "../helpers/calculateScale";
+import { Text, Container, Point, Texture } from 'pixi.js-legacy';
 
-function supFromDig(dig: string) {
-  const num = Number(dig);
-  return "⁰¹²³⁴⁵⁶⁷⁸⁹".charAt(num);
-}
+import { calculateScale } from '../helpers/calculateScale';
+import { E } from '../helpers/e';
+import { VisualLocation, SizeData, TextDatum, SpriteLayout } from '../interfaces';
+
+import { Entity } from './entity';
 
 export class Ring extends Entity {
   private coeff: number = 1;
@@ -26,7 +13,7 @@ export class Ring extends Entity {
   private textDatum: TextDatum;
   private text: Text;
   private descriptionText: Text;
-  private onClick: Function;
+  private onClick: () => void;
   private idx: number;
   private sizeData: SizeData;
   private textContainer: Container;
@@ -40,7 +27,7 @@ export class Ring extends Entity {
     spriteLayout: SpriteLayout,
     visualLocation: VisualLocation,
     textDatum: TextDatum,
-    metersText: string
+    metersText: string,
   ) {
     super(sizeData.exponent, textureId, textureLow, spriteLayout);
 
@@ -59,14 +46,14 @@ export class Ring extends Entity {
     this.createText();
   }
 
-  setZoom(globalZoomExp: number, deltaZoom: number) {
+  setZoom(globalZoomExp: number) {
     const scaleExp = this.scaleExp - globalZoomExp;
     if (!this.culled) {
-      const scale = calculateScale(scaleExp, this.coeff, this.realRatio)// Math.round(rawScale * 500) / 500;
-      this.cull(scale, this.sizeData);
+      const scale = calculateScale(scaleExp, this.coeff, this.realRatio); // Math.round(rawScale * 500) / 500;
+      this.cull(scale);
 
       if (scale > 0.05 && scale < 0.1) {
-        this.textContainer.alpha = .5
+        this.textContainer.alpha = 0.5;
       } else if (scale > 0.1) {
         this.textContainer.alpha = 1;
       } else if (this.text.alpha !== 0) {
@@ -78,16 +65,15 @@ export class Ring extends Entity {
       }
       this.textContainer.visible = this.textContainer.alpha !== 0;
 
-
       this.container.scale = new Point(scale, scale);
     } else {
       const scaleExp = this.scaleExp - globalZoomExp;
 
       if (scaleExp > 2 || scaleExp < -4) {
-        this.cull(E(-4), this.sizeData);
+        this.cull(E(-4));
       } else {
-        const scale = calculateScale(scaleExp, this.coeff, this.realRatio)// Math.round(rawScale * 500) / 500;
-        this.cull(scale, this.sizeData);
+        const scale = calculateScale(scaleExp, this.coeff, this.realRatio); // Math.round(rawScale * 500) / 500;
+        this.cull(scale);
       }
     }
   }
@@ -100,73 +86,70 @@ export class Ring extends Entity {
       wordWrap: false,
       wordWrapWidth: 1000,
       breakWords: false,
-    }
+    };
 
     const textStyle = {
       ...baseStyle,
       fontSize: 60,
-    }
+    };
 
     const expBaseStyle = {
       ...baseStyle,
       fontSize: 40,
-    }
+    };
 
     const expSupStyle = {
       ...baseStyle,
       fontSize: 24,
-    }
+    };
 
     const descriptionStyle = {
       ...baseStyle,
-    }
+    };
 
-    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio)// Math.round(rawScale * 500) / 500;
+    const scale = calculateScale(this.scaleExp, this.coeff, this.realRatio); // Math.round(rawScale * 500) / 500;
 
     if (scale > E(5)) {
-      textStyle.fill = 0xdddddd
-      expBaseStyle.fill = 0xdddddd
-      expSupStyle.fill = 0xdddddd
-      descriptionStyle.fill = 0xdddddd
+      textStyle.fill = 0xdddddd;
+      expBaseStyle.fill = 0xdddddd;
+      expSupStyle.fill = 0xdddddd;
+      descriptionStyle.fill = 0xdddddd;
     }
 
-    this.text = new Text(this.textDatum.title, textStyle)
-    this.text.anchor.set(0.5, 0)
-    this.text.cacheAsBitmap = false
-    this.text.position.x = 0
-    this.text.position.y = -300
+    this.text = new Text(this.textDatum.title, textStyle);
+    this.text.anchor.set(0.5, 0);
+    this.text.cacheAsBitmap = false;
+    this.text.position.x = 0;
+    this.text.position.y = -300;
 
-    const expTextContainer = new Container()
+    const expTextContainer = new Container();
 
-    const baseText = new Text('10', expBaseStyle)
-    baseText.anchor.set(0, 0)
+    const baseText = new Text('10', expBaseStyle);
+    baseText.anchor.set(0, 0);
 
-    const superscriptText = new Text(String(this.sizeData.exponent), expSupStyle)
-    superscriptText.anchor.set(0, 0)
-    superscriptText.position.x = baseText.width + 2
-    superscriptText.position.y = -2
+    const superscriptText = new Text(String(this.sizeData.exponent), expSupStyle);
+    superscriptText.anchor.set(0, 0);
+    superscriptText.position.x = baseText.width + 2;
+    superscriptText.position.y = -2;
 
-    const unitText = new Text(` ${this.meterPlural}`, expBaseStyle)
-    unitText.anchor.set(0, 0)
-    unitText.position.x = baseText.width + superscriptText.width + 6
-    unitText.position.y = 0
+    const unitText = new Text(` ${this.meterPlural}`, expBaseStyle);
+    unitText.anchor.set(0, 0);
+    unitText.position.x = baseText.width + superscriptText.width + 6;
+    unitText.position.y = 0;
 
-    expTextContainer.addChild(baseText, superscriptText, unitText)
-    expTextContainer.position.x = -expTextContainer.width / 2
-    expTextContainer.position.y = -225
+    expTextContainer.addChild(baseText, superscriptText, unitText);
+    expTextContainer.position.x = -expTextContainer.width / 2;
+    expTextContainer.position.y = -225;
 
-    this.descriptionText = new Text(
-      this.textDatum.description,
-      descriptionStyle
-    )
-    this.descriptionText.anchor.set(0.5, 0)
-    this.descriptionText.cacheAsBitmap = false
-    this.descriptionText.position.x = 0
-    this.descriptionText.position.y = 175
+    this.descriptionText = new Text(this.textDatum.description, descriptionStyle);
+    this.descriptionText.anchor.set(0.5, 0);
+    this.descriptionText.cacheAsBitmap = false;
+    this.descriptionText.position.x = 0;
+    this.descriptionText.position.y = 175;
 
-    this.textContainer = new Container()
-    this.textContainer.addChild(this.text, this.descriptionText, expTextContainer)
+    this.textContainer = new Container();
+    this.textContainer.addChild(this.text, this.descriptionText, expTextContainer);
 
-    this.container.addChild(this.textContainer)
+    this.container.addChild(this.textContainer);
   }
 }

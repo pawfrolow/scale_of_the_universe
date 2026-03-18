@@ -1,32 +1,32 @@
-import { RefObject, useEffect, useRef } from 'react'
-import * as PIXI from 'pixi.js-legacy'
+import * as PIXI from 'pixi.js-legacy';
+import { RefObject, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { Slider } from '../classes/slider'
-import { Universe } from '../classes/universe'
-import { ScaleText } from '../classes/scaleText'
-import { map } from '../helpers/map'
-import { throttle } from '../helpers/throttle'
-import { getTextureIdsFromManifest } from '../helpers/getTextureIdsFromManifest'
-import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config'
-import { ItemModalData, TItemsManifest } from '../interfaces'
+import { ScaleText } from '../classes/scaleText';
+import { Slider } from '../classes/slider';
+import { Universe } from '../classes/universe';
+import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config';
+import { getTextureIdsFromManifest } from '../helpers/getTextureIdsFromManifest';
+import { map } from '../helpers/map';
+import { nextFrame } from '../helpers/nextFrame';
+import { resolveItemsManifest } from '../helpers/resolveItemsManifest';
+import { resolveTextureSources } from '../helpers/resolveTextureSources';
+import { throttle } from '../helpers/throttle';
+import { validateItemsOverride } from '../helpers/validateItemsOverride';
+import { ItemModalData } from '../interfaces';
 import { universeAssetsService } from '../services/universe/universe-assets.service';
-import { resolveItemsManifest } from '../helpers/resolveItemsManifest'
-import { resolveTextureSources } from '../helpers/resolveTextureSources'
-import { useTranslation } from 'react-i18next'
-import { validateItemsOverride } from '../helpers/validateItemsOverride'
-import { nextFrame } from '../helpers/nextFrame'
 
-PIXI.settings.ROUND_PIXELS = true
-PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR
+PIXI.settings.ROUND_PIXELS = true;
+PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
 
 interface IUseUniverseParams {
-  containerRef: RefObject<HTMLDivElement | null>
-  isStarted: boolean
-  onAssetsLoading: () => void
-  onAssetsReady: () => void
-  onAssetsProgress?: (progress: number) => void
-  onItemModalOpen: (data: ItemModalData) => void
-  onItemModalClose: () => void
+  containerRef: RefObject<HTMLDivElement | null>;
+  isStarted: boolean;
+  onAssetsLoading: () => void;
+  onAssetsReady: () => void;
+  onAssetsProgress?: (progress: number) => void;
+  onItemModalOpen: (data: ItemModalData) => void;
+  onItemModalClose: () => void;
 }
 
 export const useUniverse = ({
@@ -38,43 +38,42 @@ export const useUniverse = ({
   onItemModalOpen,
   onItemModalClose,
 }: IUseUniverseParams) => {
-  const appRef = useRef<PIXI.Application | null>(null)
-  const initializedRef = useRef(false)
+  const appRef = useRef<PIXI.Application | null>(null);
+  const initializedRef = useRef(false);
+  const visualViewportHandlerRef = useRef<(() => void) | null>(null);
+  const resizeHandlerRef = useRef<(() => void) | null>(null);
+  const orientationHandlerRef = useRef<(() => void) | null>(null);
   const { i18n } = useTranslation();
-
-  let resizeHandler: (() => void) | null = null
-  let orientationHandler: (() => void) | null = null
-  let visualViewportHandler: (() => void) | null = null
 
   useEffect(() => {
     if (!isStarted) {
-      return
+      return;
     }
 
     if (!containerRef.current || initializedRef.current) {
-      return
+      return;
     }
 
-    initializedRef.current = true
+    initializedRef.current = true;
 
-    let app: PIXI.Application | null = null
-    let slider: Slider | null = null
-    let isDestroyed = false
+    let app: PIXI.Application | null = null;
+    let slider: Slider | null = null;
+    let isDestroyed = false;
 
     const bootstrap = async () => {
-      const frame = document.getElementById('frame') as HTMLElement | null
-      const buttons = document.getElementById('buttons') as HTMLElement | null
-      const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null
-      const earthBg = document.getElementById('earthBgImage') as HTMLElement | null
+      const frame = document.getElementById('frame') as HTMLElement | null;
+      const buttons = document.getElementById('buttons') as HTMLElement | null;
+      const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null;
+      const earthBg = document.getElementById('earthBgImage') as HTMLElement | null;
 
       if (!frame || !containerRef.current || isDestroyed) {
-        return
+        return;
       }
 
-      onAssetsLoading()
-      onAssetsProgress?.(0)
+      onAssetsLoading();
+      onAssetsProgress?.(0);
 
-      const locale = i18n.language
+      const locale = i18n.language;
 
       const baseManifest = await universeAssetsService.getBaseManifest();
       const override = await universeAssetsService.getLocaleOverride(locale);
@@ -91,15 +90,15 @@ export const useUniverse = ({
         manifest: resolvedManifest,
         textureSourceMap,
         onProgress: (loaded, total) => {
-          onAssetsProgress?.(Math.round((loaded / total) * 96))
+          onAssetsProgress?.(Math.round((loaded / total) * 96));
         },
       });
 
       if (isDestroyed || !containerRef.current) {
-        return
+        return;
       }
 
-      const globalResolution = 1
+      const globalResolution = 1;
 
       try {
         app = new PIXI.Application({
@@ -111,9 +110,10 @@ export const useUniverse = ({
           resolution: globalResolution,
           sharedTicker: true,
           resizeTo: containerRef.current,
-        })
+        });
       } catch (err) {
-        console.error(err)
+        // eslint-disable-next-line no-console
+        console.error(err);
 
         app = new PIXI.Application({
           width: frame.offsetWidth,
@@ -123,205 +123,200 @@ export const useUniverse = ({
           antialias: true,
           forceCanvas: true,
           resolution: globalResolution,
-        })
+        });
       }
 
-      onAssetsProgress?.(97)
-      await nextFrame()
+      onAssetsProgress?.(97);
+      await nextFrame();
 
       if (!app || isDestroyed || !containerRef.current) {
-        return
+        return;
       }
 
-      appRef.current = app
+      appRef.current = app;
 
-      const w = app.screen.width
-      const h = app.screen.height
+      const w = app.screen.width;
+      const h = app.screen.height;
 
-      let universe: Universe
-      let scaleText: ScaleText
+      // eslint-disable-next-line prefer-const
+      let onHandleClicked: () => void;
+      // eslint-disable-next-line prefer-const
+      let onChange: (_x: number, percent: number) => void;
 
-      const onHandleClicked = () => {
-        universe.onHandleClicked()
-      }
+      slider = new Slider(app, w, h, globalResolution, onChange, onHandleClicked);
+      slider.init();
 
-      const onChange = (_x: number, percent: number) => {
+      const universe = new Universe(0, slider, app, onItemModalOpen, onItemModalClose);
+      const scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0');
+
+      // Update the functions to use the instances
+      onHandleClicked = () => {
+        universe.onHandleClicked();
+      };
+
+      onChange = (_x: number, percent: number) => {
         if (isDestroyed) {
-          return
+          return;
         }
 
-        const extraRightBoost = 0.2
-        const boost = Math.pow(percent, 4) * extraRightBoost
+        const extraRightBoost = 0.2;
+        const boost = Math.pow(percent, 4) * extraRightBoost;
 
-        const scaleExp =
-          MIN_SCALE_EXP +
-          percent * (MAX_SCALE_EXP - MIN_SCALE_EXP) +
-          boost
+        const scaleExp = MIN_SCALE_EXP + percent * (MAX_SCALE_EXP - MIN_SCALE_EXP) + boost;
 
-        scaleText.setColor(scaleExp)
+        scaleText.setColor(scaleExp);
 
         if (scaleExp <= 5) {
           if (spaceBg) {
-            spaceBg.style.opacity = '0'
+            spaceBg.style.opacity = '0';
           }
 
           if (earthBg) {
-            earthBg.style.opacity = '1'
+            earthBg.style.opacity = '1';
           }
 
           if (buttons) {
-            buttons.style.filter = ''
+            buttons.style.filter = '';
           }
 
-          document.body.classList.remove('dark')
+          document.body.classList.remove('dark');
         }
 
         if (scaleExp > 5 && scaleExp < 7) {
-          const opacity = map(scaleExp, 5, 7, 0.1, 100)
-          const opacityNorm = opacity / 100
+          const opacity = map(scaleExp, 5, 7, 0.1, 100);
+          const opacityNorm = opacity / 100;
 
           if (spaceBg) {
-            spaceBg.style.opacity = `${opacityNorm}`
+            spaceBg.style.opacity = `${opacityNorm}`;
           }
 
           if (earthBg) {
-            earthBg.style.opacity = `${1 - opacityNorm}`
+            earthBg.style.opacity = `${1 - opacityNorm}`;
           }
 
           if (buttons) {
-            buttons.style.filter = `invert(${opacity}%)`
+            buttons.style.filter = `invert(${opacity}%)`;
           }
 
           if (opacity > 50) {
-            document.body.classList.add('dark')
+            document.body.classList.add('dark');
           } else {
-            document.body.classList.remove('dark')
+            document.body.classList.remove('dark');
           }
         }
 
         if (scaleExp >= 7 && buttons) {
-          buttons.style.filter = 'invert(100%)'
+          buttons.style.filter = 'invert(100%)';
 
-          document.body.classList.add('dark')
+          document.body.classList.add('dark');
         }
 
-        universe.update(scaleExp)
-        scaleText.setText(`${Math.round(scaleExp * 10) / 10}`)
-      }
-
-      slider = new Slider(app, w, h, globalResolution, onChange, onHandleClicked)
-      slider.init()
-
-      universe = new Universe(
-        0,
-        slider,
-        app,
-        onItemModalOpen,
-        onItemModalClose
-      )
-      scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0')
+        universe.update(scaleExp);
+        scaleText.setText(`${Math.round(scaleExp * 10) / 10}`);
+      };
 
       app.stage.addChild(
         universe.container,
         universe.displayContainer,
         slider.container,
-        scaleText.container
-      )
+        scaleText.container,
+      );
 
       containerRef.current.innerHTML = '';
-      containerRef.current.appendChild(app.view as HTMLCanvasElement)
+      containerRef.current.appendChild(app.view as HTMLCanvasElement);
 
-      onAssetsProgress?.(98)
-      await nextFrame()
+      onAssetsProgress?.(98);
+      await nextFrame();
 
-      await universe.createItems(allHighTextures, resolvedManifest, textureSourceMap)
+      await universe.createItems(allHighTextures, resolvedManifest, textureSourceMap);
 
-      onAssetsProgress?.(99)
-      await nextFrame()
+      onAssetsProgress?.(99);
+      await nextFrame();
 
       if (isDestroyed || !app || !slider || !containerRef.current) {
-        return
+        return;
       }
 
-      slider.setPercent(map(0, -35, 27, 0, 1))
-      universe.prevZoom = 0
+      slider.setPercent(map(0, -35, 27, 0, 1));
+      universe.prevZoom = 0;
 
       const performResize = () => {
         if (!app || !slider || isDestroyed || !containerRef.current) {
-          return
+          return;
         }
 
         requestAnimationFrame(() => {
           if (!app || !slider || isDestroyed || !containerRef.current) {
-            return
+            return;
           }
 
-          const frame = document.getElementById('frame') as HTMLElement | null
+          const frame = document.getElementById('frame') as HTMLElement | null;
 
           if (!frame) {
-            return
+            return;
           }
 
-          const rect = containerRef.current.getBoundingClientRect()
-          const width = Math.round(rect.width || frame.clientWidth || window.innerWidth)
-          const height = Math.round(rect.height || frame.clientHeight || window.innerHeight)
+          const rect = containerRef.current.getBoundingClientRect();
+          const width = Math.round(rect.width || frame.clientWidth || window.innerWidth);
+          const height = Math.round(rect.height || frame.clientHeight || window.innerHeight);
 
-          app.renderer.resize(width, height)
+          app.renderer.resize(width, height);
 
-          const currentPercent = slider.getPercent()
+          const currentPercent = slider.getPercent();
 
-          slider.resize(app.screen.width, app.screen.height, globalResolution)
-          universe.resize()
-          scaleText.resize((app.screen.width * 0.9) / globalResolution, slider.topY - 40)
-          slider.setPercent(currentPercent)
-        })
-      }
+          slider.resize(app.screen.width, app.screen.height, globalResolution);
+          universe.resize();
+          scaleText.resize((app.screen.width * 0.9) / globalResolution, slider.topY - 40);
+          slider.setPercent(currentPercent);
+        });
+      };
 
-      resizeHandler = throttle(performResize, 100)
+      resizeHandlerRef.current = throttle(performResize, 100);
 
-      orientationHandler = () => {
+      orientationHandlerRef.current = () => {
         // iOS иногда обновляет viewport не мгновенно после rotation
-        setTimeout(performResize, 50)
-        setTimeout(performResize, 250)
-      }
+        setTimeout(performResize, 50);
+        setTimeout(performResize, 250);
+      };
 
-      visualViewportHandler = throttle(() => {
-        performResize()
-      }, 100)
+      visualViewportHandlerRef.current = throttle(() => {
+        performResize();
+      }, 100);
 
-      window.addEventListener('resize', resizeHandler)
-      window.addEventListener('orientationchange', orientationHandler)
+      window.addEventListener('resize', resizeHandlerRef.current!);
+      window.addEventListener('orientationchange', orientationHandlerRef.current!);
 
       if (window.visualViewport) {
-        window.visualViewport.addEventListener('resize', visualViewportHandler)
+        window.visualViewport.addEventListener('resize', visualViewportHandlerRef.current);
       }
 
       if (!isDestroyed) {
-        onAssetsProgress?.(100)
-        onAssetsReady()
+        onAssetsProgress?.(100);
+        onAssetsReady();
       }
-    }
+    };
 
-    void bootstrap().catch(console.error)
+    // eslint-disable-next-line no-console
+    void bootstrap().catch(console.error);
 
     return () => {
-      isDestroyed = true
+      isDestroyed = true;
 
-      if (resizeHandler) {
-        window.removeEventListener('resize', resizeHandler)
+      if (resizeHandlerRef.current) {
+        window.removeEventListener('resize', resizeHandlerRef.current);
       }
 
-      if (orientationHandler) {
-        window.removeEventListener('orientationchange', orientationHandler)
+      if (orientationHandlerRef.current) {
+        window.removeEventListener('orientationchange', orientationHandlerRef.current);
       }
 
-      if (visualViewportHandler && window.visualViewport) {
-        window.visualViewport.removeEventListener('resize', visualViewportHandler)
+      if (visualViewportHandlerRef.current && window.visualViewport) {
+        window.visualViewport.removeEventListener('resize', visualViewportHandlerRef.current);
       }
 
       if (slider) {
-        slider.destroy()
-        slider = null
+        slider.destroy();
+        slider = null;
       }
 
       if (appRef.current) {
@@ -329,29 +324,30 @@ export const useUniverse = ({
           children: true,
           texture: false,
           baseTexture: false,
-        })
-        appRef.current = null
+        });
+        appRef.current = null;
       }
 
-      const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null
-      const earthBg = document.getElementById('earthBgImage') as HTMLElement | null
-      const buttons = document.getElementById('buttons') as HTMLElement | null
+      const spaceBg = document.getElementById('spaceBgImage') as HTMLElement | null;
+      const earthBg = document.getElementById('earthBgImage') as HTMLElement | null;
+      const buttons = document.getElementById('buttons') as HTMLElement | null;
 
       if (spaceBg) {
-        spaceBg.style.opacity = '0'
+        spaceBg.style.opacity = '0';
       }
 
       if (earthBg) {
-        earthBg.style.opacity = '1'
+        earthBg.style.opacity = '1';
       }
 
       if (buttons) {
-        buttons.style.filter = ''
+        buttons.style.filter = '';
       }
 
-      onItemModalClose()
+      onItemModalClose();
 
-      initializedRef.current = false
-    }
-  }, [containerRef, isStarted])
-}
+      initializedRef.current = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [containerRef, isStarted]);
+};

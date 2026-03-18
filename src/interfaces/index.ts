@@ -1,69 +1,73 @@
 export interface TextDatum {
-  title: string
-  description: string
-  metersPlural: string
-  meterSingular: string
+  title: string;
+  description: string;
+  metersPlural: string;
+  meterSingular: string;
 }
 
 export interface VisualLocation {
-  titleX: number
-  titleY: number
-  titleScale: number
-  titleWrap: boolean
-  descriptionX: number
-  descriptionY: number
-  descriptionScale?: number
-  zoomOffset?: number
+  titleX: number;
+  titleY: number;
+  titleScale: number;
+  titleWrap: boolean;
+  descriptionX: number;
+  descriptionY: number;
+  descriptionScale?: number;
+  zoomOffset?: number;
 }
 
 export interface SizeData {
-  exponent: number
-  coeff: number
-  realRatio: number
+  exponent: number;
+  coeff: number;
+  realRatio: number;
 }
 
 export interface SpriteLayout {
-  x: number
-  y: number
-  width: number
-  height: number
+  x: number;
+  y: number;
+  width: number;
+  height: number;
 }
 
 export type TFrameMeta = {
-  size?: SizeData | null
-  visualLocation?: VisualLocation | null,
-  layout: SpriteLayout
-}
+  size?: SizeData | null;
+  visualLocation?: VisualLocation | null;
+  layout: SpriteLayout;
+};
+
+export type TManifestMeta = {
+  scale: number;
+};
 
 export type TItemsManifest = {
-  frames?: Record<string, TFrameMeta>
-  meta?: Record<string, any>
-}
+  frames?: Record<string, TFrameMeta>;
+  meta?: Record<string, TManifestMeta>;
+};
 
 export interface ExtraText {
-  centimeter: string
-  centimeters: string
-  lightyear: string
-  lightyears: string
-  meter: string
-  meterShort: string
-  meters: string
+  centimeter: string;
+  centimeters: string;
+  lightyear: string;
+  lightyears: string;
+  meter: string;
+  meterShort: string;
+  meters: string;
 }
 
 export type TItemsOverride = {
-  remove?: string[]
-  replace?: Record<string, TFrameMeta>
-  add?: Record<string, TFrameMeta>
-  textures?: Record<string, boolean>
-}
+  remove?: string[];
+  replace?: Record<string, TFrameMeta>;
+  add?: Record<string, TFrameMeta>;
+  textures?: Record<string, boolean>;
+};
 
-export type TResolvedItemsManifest = TItemsManifest
+export type TResolvedItemsManifest = TItemsManifest;
 
-export type TTextureSourceMap = Record<string, string>
+export type TTextureSourceMap = Record<string, string>;
 
 export interface ItemModalData {
-  imageSrc: string
-  title: string
-  subtitle: string
-  description: string
+  imageSrc: string;
+  title: string;
+  subtitle: string;
+  description: string;
 }

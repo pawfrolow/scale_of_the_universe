@@ -1,13 +1,15 @@
 import numeral from 'numeral';
-import { E } from './e';
+
 import { ExtraText, SizeData } from '../interfaces';
 import { translationService } from '../services/translation.service';
+
+import { E } from './e';
 
 export function powToUnit(
   textureId: string,
   sizeData: SizeData,
   units: string[],
-  extra: ExtraText
+  extra: ExtraText,
 ) {
   // 10 сантиметров
   if (sizeData.exponent === -1) {
@@ -44,10 +46,12 @@ export function powToUnit(
     const numLYS = sizeData.coeff * Math.pow(10, sizeData.exponent - 16);
     const formattedVal = numeral(numLYS).format('0,0');
 
-    return translationService.formatUnit(formattedVal, {
-      one: extra.lightyear,
-      many: extra.lightyears,
-    }).replace(String(formattedVal), String(formattedVal));
+    return translationService
+      .formatUnit(formattedVal, {
+        one: extra.lightyear,
+        many: extra.lightyears,
+      })
+      .replace(String(formattedVal), String(formattedVal));
   }
 
   // йоктометры

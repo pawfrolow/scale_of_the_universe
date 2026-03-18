@@ -1,10 +1,11 @@
 import i18next from 'i18next';
 import HttpBackend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
+
 import { LANGUAGE_OPTIONS, LANGUAGE_STORAGE_KEY } from './config';
 
 export const AVAILABLE_LANGUAGES = LANGUAGE_OPTIONS.map(({ code }) => code);
-export type TLanguage = typeof AVAILABLE_LANGUAGES[number];
+export type TLanguage = (typeof AVAILABLE_LANGUAGES)[number];
 
 const getPublicBasePath = () => {
   const base = './';

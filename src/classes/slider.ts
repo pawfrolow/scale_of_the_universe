@@ -1,12 +1,7 @@
-import {
-  Graphics,
-  Application,
-  Container,
-  Point,
-  Ticker
-} from "pixi.js-legacy";
+import { Graphics, Application, Container, Point, Ticker } from 'pixi.js-legacy';
 import { Tweenable } from 'shifty';
-import { getCssPxVar } from "../helpers/getCssPxVar";
+
+import { getCssPxVar } from '../helpers/getCssPxVar';
 
 const WIDTH_PERCENT = 0.9;
 const HEIGHT_PERCENT = 0.05;
@@ -21,9 +16,9 @@ export class Slider {
   private app: Application;
   public container: Container;
   private handleGfx!: Graphics;
-  private onChange: Function;
-  private onHandleClicked: Function;
-  public dragging: Boolean = false;
+  private onChange: (e?, percent?: number) => void;
+  private onHandleClicked: (e?) => void;
+  public dragging: boolean = false;
   private margin: number;
   private targetX: number;
   private currentX: number;
@@ -60,8 +55,8 @@ export class Slider {
     w: number,
     h: number,
     globalRes: number,
-    onChange: Function,
-    onHandleClicked: Function
+    onChange: (e, percent?: number) => void,
+    onHandleClicked: (e) => void,
   ) {
     this.app = app;
     this.onChange = onChange;
@@ -81,7 +76,7 @@ export class Slider {
       if (this.destroyed) return;
 
       const e = event as WheelEvent & { wheelDelta?: number; detail?: number };
-      const delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail || 0)));
+      const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail || 0));
 
       this.startOffset = 0;
       this.interact();
@@ -200,9 +195,10 @@ export class Slider {
     graphics.position = new Point(x, y);
     graphics.cacheAsBitmap = true;
 
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const here = this;
 
-    function onDragStart(event: any) {
+    function onDragStart(event) {
       if (here.destroyed || !here.handleGfx || here.handleGfx.destroyed) return;
 
       here.startOffset = event.global.x - here.handleGfx.position.x;
@@ -223,12 +219,12 @@ export class Slider {
       const diff = here.currentX - here.targetX;
       const newDiff = diff / 3;
 
-      if (Math.abs(diff) > (here.w / 10)) {
+      if (Math.abs(diff) > here.w / 10) {
         here.setTarget(here.currentX - newDiff);
       }
     }
 
-    function onGlobalDragMove(event: any) {
+    function onGlobalDragMove(event) {
       if (here.destroyed) return;
       if (!here.dragging) return;
 
@@ -294,7 +290,7 @@ export class Slider {
     });
 
     try {
-      await Promise.resolve(this.tweenable.tween() as any);
+      await Promise.resolve(this.tweenable.tween());
     } catch {
       // ignore stop/cancel
     }
@@ -342,7 +338,7 @@ export class Slider {
 
       const { minX, maxX } = this.getBounds();
 
-      let dX = (this.targetX - this.currentX) * deltaTime;
+      const dX = (this.targetX - this.currentX) * deltaTime;
       let dXScaled = dX * EASING_CONSTANT;
 
       const dir = dXScaled === 0 ? 0 : dXScaled / Math.abs(dXScaled);

@@ -1,15 +1,15 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
 interface IStartModalProps {
-  title: string
-  startText: string
-  isLoading: boolean
-  isOpen: boolean
-  onStart: () => void
-  onOpenLanguageModal: () => void
+  title: string;
+  startText: string;
+  isLoading: boolean;
+  isOpen: boolean;
+  onStart: () => void;
+  onOpenLanguageModal: () => void;
 }
 
 export const StartModal = ({
@@ -20,7 +20,7 @@ export const StartModal = ({
   onStart,
   onOpenLanguageModal,
 }: IStartModalProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <>
@@ -88,12 +88,7 @@ export const StartModal = ({
             </p>
           </div>
 
-          <button
-            className={styles.startBtn}
-            type="button"
-            onClick={onStart}
-            disabled={isLoading}
-          >
+          <button className={styles.startBtn} type="button" onClick={onStart} disabled={isLoading}>
             <img className={styles.startBtnIcon} width="25" src="img/icons/play.svg" alt="Play" />
             <span>{startText}</span>
           </button>
@@ -102,5 +97,5 @@ export const StartModal = ({
 
       <div className={styles.backdrop} />
     </>
-  )
-}
+  );
+};

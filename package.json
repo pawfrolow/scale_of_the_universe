@@ -9,10 +9,24 @@
     "build": "vite build",
     "build:prod": "vite build --mode production",
     "preview": "vite preview",
-    "ts:check": "tsc --noEmit"
+    "ts:check": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "prepare": "husky"
   },
   "author": "",
   "license": "ISC",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,scss,css,md,html,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "@tanstack/react-query": "^5.90.21",
     "axios": "^1.13.6",
@@ -26,17 +40,28 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-i18next": "^16.5.6",
-    "shifty": "^3.0.6",
-    "typescript": "^5.9.3"
+    "shifty": "^3.0.6"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.4",
     "@types/node": "^22.12.0",
     "@types/numeral": "^2.0.5",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-legacy": "^7.2.1",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "globals": "^17.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.1",
     "sass-embedded": "^1.97.3",
     "sharp": "^0.34.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.1",
     "vite": "^7.3.1"
   }
 }

@@ -1,17 +1,17 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { TLanguage } from '../../i18n'
-import { Overlay } from '../Overlay/Overlay'
+import { LANGUAGE_OPTIONS } from '../../config';
+import { TLanguage } from '../../i18n';
+import { Overlay } from '../Overlay/Overlay';
 
-import styles from './styles.module.scss'
-import { LANGUAGE_OPTIONS } from '../../config'
+import styles from './styles.module.scss';
 
 interface ILanguageModalProps {
-  isOpen: boolean
-  currentLanguage: TLanguage
-  onSelect: (language: TLanguage) => void
-  onClose: () => void
+  isOpen: boolean;
+  currentLanguage: TLanguage;
+  onSelect: (language: TLanguage) => void;
+  onClose: () => void;
 }
 
 export const LanguageModal = ({
@@ -20,7 +20,7 @@ export const LanguageModal = ({
   onSelect,
   onClose,
 }: ILanguageModalProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <Overlay isOpen={isOpen} onBackdropClick={onClose}>
@@ -52,11 +52,13 @@ export const LanguageModal = ({
               onClick={() => onSelect(language.code)}
             >
               <span className={styles.languageOptionLabel}>{language.label}</span>
-              {currentLanguage === language.code && <span className={styles.languageOptionCheck}>✓</span>}
+              {currentLanguage === language.code && (
+                <span className={styles.languageOptionCheck}>✓</span>
+              )}
             </button>
           ))}
         </div>
       </div>
     </Overlay>
-  )
-}
+  );
+};

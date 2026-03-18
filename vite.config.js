@@ -1,6 +1,7 @@
-import { defineConfig } from 'vite'
-import legacy from '@vitejs/plugin-legacy'
-import { resolve } from 'path'
+import { resolve } from 'path';
+
+import legacy from '@vitejs/plugin-legacy';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   base: './',
@@ -8,7 +9,7 @@ export default defineConfig({
   publicDir: resolve(__dirname, 'public'),
   plugins: [
     legacy({
-      targets: ['defaults', 'not IE 11']
+      targets: ['defaults', 'not IE 11'],
     }),
   ],
   build: {
@@ -20,7 +21,7 @@ export default defineConfig({
     open: true,
     host: true,
     fs: {
-      allow: ['..']
-    }
-  }
-})
+      allow: ['..'],
+    },
+  },
+});
