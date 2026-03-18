@@ -2,8 +2,6 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
-  getStoredLanguage,
-  initI18n,
   setStoredLanguage,
   TLanguage,
 } from '../i18n';
@@ -12,6 +10,7 @@ import {
   Controls,
   ItemDetailsModal,
   LanguageModal,
+  Loader,
   LoadingOverlay,
   StartModal,
   UniverseCanvas,
@@ -20,31 +19,25 @@ import { ItemModalData } from '../interfaces';
 import { MUTED_STORAGE_KEY } from '../config';
 
 import styles from './styles.module.scss'
-
+import { useLanguage } from '../hooks/useLanguage';
 
 export const App = () => {
   const [isStarted, setIsStarted] = useState(false)
   const [hasEnteredApp, setHasEnteredApp] = useState(false)
   const [isMuted, setIsMuted] = useState(!!localStorage.getItem(MUTED_STORAGE_KEY))
-  const [isI18nReady, setIsI18nReady] = useState(false)
   const [isAssetsLoading, setIsAssetsLoading] = useState(false)
   const [isAssetsReady, setIsAssetsReady] = useState(false)
   const [assetsProgress, setAssetsProgress] = useState(0)
   const [isLanguageModalOpen, setIsLanguageModalOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState<TLanguage>(getStoredLanguage());
   const [universeKey, setUniverseKey] = useState(0);
   const [itemModalData, setItemModalData] = useState<ItemModalData | null>(null);
+
+  const { isI18nReady, currentLanguage, setCurrentLanguage } = useLanguage();
 
   const { t, i18n } = useTranslation();
   const audio = useMemo(() => createFrozenStarAudio(), []);
 
   const isLoading = !isI18nReady || isAssetsLoading;
-
-  useEffect(() => {
-    initI18n(currentLanguage).then(() => {
-      setIsI18nReady(true);
-    });
-  }, []);
 
   useEffect(() => {
     if (!isAssetsReady) {
@@ -137,7 +130,6 @@ export const App = () => {
 
     setItemModalData(null);
     setCurrentLanguage(language);
-    setStoredLanguage(language);
     setIsLanguageModalOpen(false);
 
     await i18n.changeLanguage(language);
@@ -155,6 +147,10 @@ export const App = () => {
   const handleItemModalClose = () => {
     setItemModalData(null);
   };
+
+  if(!isI18nReady) {
+    return <Loader />;
+  }
 
   return (
     <>

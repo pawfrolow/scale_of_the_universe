@@ -19,6 +19,7 @@
     "google-closure-compiler": "^20260304.0.0",
     "i18next": "^25.8.14",
     "i18next-browser-languagedetector": "^8.2.1",
+    "i18next-http-backend": "^3.0.2",
     "numeral": "^2.0.6",
     "pixi-filters": "^5.3.0",
     "pixi.js-legacy": "^7.4.3",
