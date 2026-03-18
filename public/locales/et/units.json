@@ -1,0 +1,30 @@
+{
+  "units": {
+    "meterShort": "m",
+    "meter": "meeter",
+    "meters": "meetrit",
+    "centimeter": "sentimeeter",
+    "centimeters": "sentimeetrit",
+    "lightyear": "valgusaasta",
+    "lightyears": "valgusaastat"
+  },
+  "scalePrefixes": [
+    "jokto",
+    "zepto",
+    "ato",
+    "femto",
+    "piko",
+    "nano",
+    "mikro",
+    "milli",
+    "",
+    "kilo",
+    "mega",
+    "giga",
+    "tera",
+    "peta",
+    "eksa",
+    "zetta",
+    "jotta"
+  ]
+}

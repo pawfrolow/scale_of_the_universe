@@ -1,6 +1,6 @@
+import { QueryClientProvider } from '@tanstack/react-query';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { QueryClientProvider } from '@tanstack/react-query';
 
 import './assets/css/reset.css';
 import './assets/css/styles.scss';
@@ -10,5 +10,5 @@ import { queryClient } from './services/query-client';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <QueryClientProvider client={queryClient}>
     <App />
-  </QueryClientProvider>
+  </QueryClientProvider>,
 );

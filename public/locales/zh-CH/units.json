@@ -1,0 +1,30 @@
+{
+  "units": {
+    "meterShort": "m",
+    "meter": "米",
+    "meters": "米",
+    "centimeter": "公分",
+    "centimeters": "公分",
+    "lightyear": "光年",
+    "lightyears": "光年"
+  },
+  "scalePrefixes": [
+    "攸",
+    "介",
+    "阿",
+    "飞",
+    "皮",
+    "奈",
+    "微",
+    "毫",
+    "",
+    "千",
+    "百万",
+    "十亿",
+    "兆",
+    "拍",
+    "艾",
+    "皆",
+    "佑"
+  ]
+}

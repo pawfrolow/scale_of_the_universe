@@ -34,10 +34,7 @@ function getResource<T>(ns: string): T {
     return data as T;
   }
 
-  const fallback = i18next.getResourceBundle(
-    String(i18next.options.fallbackLng || 'ru'),
-    ns
-  );
+  const fallback = i18next.getResourceBundle(String(i18next.options.fallbackLng || 'ru'), ns);
 
   return (fallback || {}) as T;
 }
@@ -59,7 +56,7 @@ export const translationService = {
     const objectsData = getResource<{ items?: Record<string, TObjectText> }>('objects');
     const unitsData = getResource<{
       units?: {
-        meterShort?: string,
+        meterShort?: string;
         meter?: string;
         meters?: string;
         centimeter?: string;
@@ -90,10 +87,12 @@ export const translationService = {
   getObjectText(index: number): TObjectText {
     const { objects } = this.getUniverseLocaleData();
 
-    return objects[index] ?? {
-      title: '',
-      description: '',
-    };
+    return (
+      objects[index] ?? {
+        title: '',
+        description: '',
+      }
+    );
   },
 
   getUnits(): TUnitsData {

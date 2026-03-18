@@ -1,12 +1,13 @@
-import React from 'react'
-import { Overlay } from '../Overlay/Overlay'
+import React from 'react';
 
-import styles from './styles.module.scss'
+import { Overlay } from '../Overlay/Overlay';
+
+import styles from './styles.module.scss';
 
 interface ILoadingOverlayProps {
-  isVisible: boolean
-  progress: number
-  title?: string
+  isVisible: boolean;
+  progress: number;
+  title?: string;
 }
 
 export const LoadingOverlay = ({
@@ -20,14 +21,11 @@ export const LoadingOverlay = ({
         <div className={styles.loadingTitle}>{title}</div>
 
         <div className={styles.loadingBar}>
-          <div
-            className={styles.loadingBarFill}
-            style={{ width: `${progress}%` }}
-          />
+          <div className={styles.loadingBarFill} style={{ width: `${progress}%` }} />
         </div>
 
         <div className={styles.loadingPercent}>{progress}%</div>
       </div>
     </Overlay>
-  )
-}
+  );
+};

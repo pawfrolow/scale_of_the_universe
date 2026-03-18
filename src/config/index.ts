@@ -1,7 +1,7 @@
-export const MIN_SCALE_EXP = -35
-export const MAX_SCALE_EXP = 27
+export const MIN_SCALE_EXP = -35;
+export const MAX_SCALE_EXP = 27;
 
-export const MAX_COMMON_TEXTURES = 329
+export const MAX_COMMON_TEXTURES = 329;
 
 export const LANGUAGE_STORAGE_KEY = 'sotu_language';
 export const MUTED_STORAGE_KEY = 'sotu_muted';

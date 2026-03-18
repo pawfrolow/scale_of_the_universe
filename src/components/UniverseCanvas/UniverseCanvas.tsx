@@ -1,16 +1,17 @@
-import React, { useRef } from 'react'
-import { ItemModalData } from '../../interfaces'
-import { useUniverse } from '../../hooks/useUniverse'
+import React, { useRef } from 'react';
 
-import styles from './styles.module.scss'
+import { useUniverse } from '../../hooks/useUniverse';
+import { ItemModalData } from '../../interfaces';
+
+import styles from './styles.module.scss';
 
 interface IUniverseCanvasProps {
-  isStarted: boolean
-  onAssetsLoading: () => void
-  onAssetsReady: () => void
-  onAssetsProgress?: (progress: number) => void
-  onItemModalOpen: (data: ItemModalData) => void
-  onItemModalClose: () => void
+  isStarted: boolean;
+  onAssetsLoading: () => void;
+  onAssetsReady: () => void;
+  onAssetsProgress?: (progress: number) => void;
+  onItemModalOpen: (data: ItemModalData) => void;
+  onItemModalClose: () => void;
 }
 
 export const UniverseCanvas = ({
@@ -21,7 +22,7 @@ export const UniverseCanvas = ({
   onItemModalOpen,
   onItemModalClose,
 }: IUniverseCanvasProps) => {
-  const containerRef = useRef<HTMLDivElement | null>(null)
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useUniverse({
     containerRef,
@@ -31,7 +32,7 @@ export const UniverseCanvas = ({
     onAssetsProgress,
     onItemModalOpen,
     onItemModalClose,
-  })
+  });
 
-  return <div className={styles.universeCanvas} id="sotu" ref={containerRef} />
-}
+  return <div className={styles.universeCanvas} id="sotu" ref={containerRef} />;
+};

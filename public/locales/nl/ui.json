@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "De schaal van het heelal",
+    "zoomHint": "Gebruik de schuifbalk om in en uit te zoomen.",
+    "objectHint": "Klik op objecten om er meer over te leren.",
+    "start": "Start"
+  },
+  "language": {
+    "nativeName": "Nederlands",
+    "englishName": "Dutch"
+  },
+  "html": {
+    "meta": {
+      "description": "De schaal van het heelal. Een vergelijking van de afmetingen van verschillende objecten, van elementaire deeltjes tot sterrenstelsels.",
+      "ogTitle": "De schaal van het heelal",
+      "ogDescription": "Een vergelijking van de afmetingen van verschillende objecten — van elementaire deeltjes tot sterrenstelsels."
+    },
+    "modal": {
+      "title": "De schaal van het heelal",
+      "zoomHint": "Gebruik de schuifbalk om in en uit te zoomen.",
+      "objectHint": "Klik op objecten om er meer over te leren.",
+      "startButton": "Start",
+      "startLoading": "Laden...",
+      "selectLanguage": "Selecteer een taal"
+    },
+    "credits": {
+      "createdBy": "Gemaakt door: Cary Huang, Michael Huang",
+      "webDev": "Webontwikkeling: Matthew Martori",
+      "copyright": "Copyright ©: Cary en Michael Huang",
+      "translationAndDev": "Vertaling, ontwikkeling: Pavel Frolov"
+    }
+  }
+}

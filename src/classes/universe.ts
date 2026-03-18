@@ -1,19 +1,25 @@
-import { Application, Container, Texture } from 'pixi.js-legacy';
-import * as PIXI from 'pixi.js-legacy'
+/* eslint-disable no-console */
 import { KawaseBlurFilter } from 'pixi-filters';
+import { Application, Container, Texture } from 'pixi.js-legacy';
+import * as PIXI from 'pixi.js-legacy';
+
+import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config';
+import { E } from '../helpers/e';
+import { getScaleText } from '../helpers/getScaleText';
+import { map } from '../helpers/map';
+import {
+  ExtraText,
+  ItemModalData,
+  SizeData,
+  TextDatum,
+  TItemsManifest,
+  VisualLocation,
+} from '../interfaces';
+import { translationService } from '../services/translation.service';
 
 import { Item } from './item';
 import { Ring } from './ring';
 import { Slider } from './slider';
-
-import { E } from '../helpers/e';
-import { pad } from '../helpers/pad';
-import { map } from '../helpers/map';
-import { getScaleText } from '../helpers/getScaleText';
-
-import { translationService } from '../services/translation.service';
-import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config';
-import { ExtraText, ItemModalData, SizeData, TextDatum, TItemsManifest, VisualLocation } from '../interfaces';
 
 type TObjectTranslation = {
   title: string;
@@ -55,7 +61,7 @@ export class Universe {
     slider: Slider,
     app: Application,
     onItemModalOpen?: (data: ItemModalData) => void,
-    onItemModalClose?: () => void
+    onItemModalClose?: () => void,
   ) {
     this.currentZoomExp = startingZoom;
     this.prevZoom = startingZoom;
@@ -82,7 +88,7 @@ export class Universe {
     this.app.stage.eventMode = 'static';
     this.app.stage.hitArea = this.app.screen;
 
-    this.app.stage.on('pointerdown', (e: any) => {
+    this.app.stage.on('pointerdown', (e) => {
       if (!this.selectedItem) {
         return;
       }
@@ -100,7 +106,7 @@ export class Universe {
       () => {
         this.unHideItems();
       },
-      false
+      false,
     );
 
     this.container.x = this.app.screen.width / 2;
@@ -111,14 +117,12 @@ export class Universe {
   }
 
   update(scaleExp: number) {
-    const delta = this.prevZoom - scaleExp;
-
     for (const ring of this.rings) {
-      ring.setZoom(scaleExp, delta);
+      ring.setZoom(scaleExp);
     }
 
     for (const item of this.items) {
-      item.setZoom(scaleExp, delta);
+      item.setZoom(scaleExp);
     }
 
     this.prevZoom = scaleExp;
@@ -158,12 +162,9 @@ export class Universe {
 
   hideAllItemsBut(
     item: Item,
-    options: { showDescription?: boolean; blurBackground?: boolean } = {}
+    options: { showDescription?: boolean; blurBackground?: boolean } = {},
   ) {
-    const {
-      showDescription = true,
-      blurBackground = true,
-    } = options;
+    const { showDescription = true, blurBackground = true } = options;
 
     if (this.selectedItem !== item) {
       if (this.selectedItem) {
@@ -188,9 +189,7 @@ export class Universe {
 
       item.setInteractiveEnabled(false);
 
-      this.container.filters = blurBackground
-        ? [new KawaseBlurFilter(1, 3, true)]
-        : null;
+      this.container.filters = blurBackground ? [new KawaseBlurFilter(1, 3, true)] : null;
 
       this.displayContainer.visible = true;
 
@@ -212,9 +211,7 @@ export class Universe {
 
     const percent = map(absoluteZoom + zoomOffset, MIN_SCALE_EXP, MAX_SCALE_EXP, 0, 1);
 
-    const percentFinal = window.innerHeight < 750
-      ? percent + 0.0065
-      : percent + 0.004;
+    const percentFinal = window.innerHeight < 750 ? percent + 0.0065 : percent + 0.004;
 
     if (this.shouldUseModalDescription()) {
       this.hideAllItemsBut(item, {
@@ -238,11 +235,7 @@ export class Universe {
     return scalePrefixes[idx] ?? '';
   }
 
-  private buildRingText(
-    idx: number,
-    sizeData: SizeData,
-    units: TUniverseUnits
-  ): TextDatum {
+  private buildRingText(idx: number, sizeData: SizeData, units: TUniverseUnits): TextDatum {
     const textDatum: TextDatum = {
       title: '',
       description: '',
@@ -264,12 +257,17 @@ export class Universe {
     let unitPrefix = units.scalePrefixes[0] || '';
 
     if (idx <= 26) {
-      val = E(idx - 27).toFixed(15).replace(/\.?0+$/, '');
+      val = E(idx - 27)
+        .toFixed(15)
+        .replace(/\.?0+$/, '');
     } else {
-      val = E(idx - 26).toFixed(15).replace(/\.?0+$/, '');
+      val = E(idx - 26)
+        .toFixed(15)
+        .replace(/\.?0+$/, '');
     }
 
     if (val === '100') {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       unitPrefix = units.scalePrefixes[3] || '';
     }
 
@@ -296,12 +294,16 @@ export class Universe {
     return textDatum;
   }
 
-  async createItems(textures: Record<string, Texture>, manifest: TItemsManifest, textureSourceMap: Record<string, string>) {
-    const frames = manifest.frames ?? {}
+  async createItems(
+    textures: Record<string, Texture>,
+    manifest: TItemsManifest,
+    textureSourceMap: Record<string, string>,
+  ) {
+    const frames = manifest.frames ?? {};
 
-    const localeData = translationService.getUniverseLocaleData()
-    const objectTranslations: Record<string, TObjectTranslation> = localeData.objects
-    const units: TUniverseUnits = localeData.units
+    const localeData = translationService.getUniverseLocaleData();
+    const objectTranslations: Record<string, TObjectTranslation> = localeData.objects;
+    const units: TUniverseUnits = localeData.units;
 
     const extraText: ExtraText = {
       centimeter: units.centimeter,
@@ -311,48 +313,52 @@ export class Universe {
       meter: units.meter,
       meters: units.meters,
       meterShort: units.meterShort,
-    }
+    };
 
     const onClick = (item: Item) => {
-      this.itemClicked(item)
-    }
+      this.itemClicked(item);
+    };
 
-    const frameKeys = Object.keys(frames).sort((a, b) => Number(a) - Number(b))
-    this.itemCount = frameKeys.length
+    const frameKeys = Object.keys(frames).sort((a, b) => Number(a) - Number(b));
+    this.itemCount = frameKeys.length;
 
     for (let idx = 0; idx < frameKeys.length; idx++) {
-      const textureId = frameKeys[idx]
-      const frameEntry = frames[textureId]
-      const texture = textures[textureId]
+      const textureId = frameKeys[idx];
+      const frameEntry = frames[textureId];
+      const texture = textures[textureId];
 
       if (!texture) {
-        console.warn(`Texture not found for key=${textureId}`)
-        continue
+        console.warn(`Texture not found for key=${textureId}`);
+        continue;
       }
 
       if (!frameEntry?.size) {
-        console.warn(`Size data not found for key=${textureId}`)
-        continue
+        console.warn(`Size data not found for key=${textureId}`);
+        continue;
       }
 
       if (!frameEntry?.visualLocation) {
-        console.warn(`Visual location not found for key=${textureId}`)
-        continue
+        console.warn(`Visual location not found for key=${textureId}`);
+        continue;
       }
 
-      const sizeData: SizeData = frameEntry.size
-      const visualLocation: VisualLocation = frameEntry.visualLocation
+      const sizeData: SizeData = frameEntry.size;
+      const visualLocation: VisualLocation = frameEntry.visualLocation;
+      const spriteLayout = frameEntry.layout;
 
-      const numericId = Number(textureId)
+      if (!frameEntry?.layout) {
+        console.warn(`Layout not found for key=${textureId}`);
+        continue;
+      }
+
+      const numericId = Number(textureId);
 
       if (numericId >= 30) {
-        const objectTranslation = objectTranslations[textureId]
+        const objectTranslation = objectTranslations[textureId];
 
         if (!objectTranslation) {
-          console.warn(
-            `Translation not found for item index=${idx}, textureId=${textureId}, objectID=${sizeData.objectID}`
-          )
-          continue
+          console.warn(`Translation not found for item index=${idx}, textureId=${textureId}`);
+          continue;
         }
 
         const textDatum: TextDatum = {
@@ -360,38 +366,42 @@ export class Universe {
           description: objectTranslation.description,
           metersPlural: units.meters,
           meterSingular: units.meter,
-        }
+        };
 
-        texture.baseTexture.mipmap = PIXI.MIPMAP_MODES.ON
-        texture.baseTexture.scaleMode = PIXI.SCALE_MODES.LINEAR
+        texture.baseTexture.mipmap = PIXI.MIPMAP_MODES.ON;
+        texture.baseTexture.scaleMode = PIXI.SCALE_MODES.LINEAR;
 
         const item = new Item(
+          textureId,
           sizeData,
           texture,
+          spriteLayout,
           visualLocation,
           textDatum,
           extraText,
           units.scalePrefixes,
           onClick,
-          textureSourceMap[textureId]
-        )
+          textureSourceMap[textureId],
+        );
 
-        this.items.push(item)
-        this.container.addChild(item.getContainer())
+        this.items.push(item);
+        this.container.addChild(item.getContainer());
       } else {
-        const textDatum = this.buildRingText(idx, sizeData, units)
+        const textDatum = this.buildRingText(idx, sizeData, units);
 
         const ring = new Ring(
           idx,
+          textureId,
           sizeData,
           texture,
+          spriteLayout,
           visualLocation,
           textDatum,
-          units.meters
-        )
+          units.meters,
+        );
 
-        this.rings.push(ring)
-        this.container.addChild(ring.getContainer())
+        this.rings.push(ring);
+        this.container.addChild(ring.getContainer());
       }
     }
   }
@@ -406,7 +416,7 @@ export class Universe {
     this.app.stage.hitArea = this.app.screen;
   }
 
-  private isDescendantOf(target: any, parent: any): boolean {
+  private isDescendantOf(target, parent): boolean {
     let current = target;
 
     while (current) {

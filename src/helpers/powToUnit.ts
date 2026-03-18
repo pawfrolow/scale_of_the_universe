@@ -1,12 +1,15 @@
 import numeral from 'numeral';
-import { E } from './e';
+
 import { ExtraText, SizeData } from '../interfaces';
 import { translationService } from '../services/translation.service';
 
+import { E } from './e';
+
 export function powToUnit(
+  textureId: string,
   sizeData: SizeData,
   units: string[],
-  extra: ExtraText
+  extra: ExtraText,
 ) {
   // 10 сантиметров
   if (sizeData.exponent === -1) {
@@ -42,12 +45,13 @@ export function powToUnit(
   if (sizeData.exponent >= 16) {
     const numLYS = sizeData.coeff * Math.pow(10, sizeData.exponent - 16);
     const formattedVal = numeral(numLYS).format('0,0');
-    const numericVal = Number(String(formattedVal).replace(/,/g, ''));
 
-    return translationService.formatUnit(formattedVal, {
-      one: extra.lightyear,
-      many: extra.lightyears,
-    }).replace(String(formattedVal), String(formattedVal));
+    return translationService
+      .formatUnit(formattedVal, {
+        one: extra.lightyear,
+        many: extra.lightyears,
+      })
+      .replace(String(formattedVal), String(formattedVal));
   }
 
   // йоктометры
@@ -57,9 +61,9 @@ export function powToUnit(
 
     let formattedVal = numeral(numVal).format('0,0');
 
-    if (sizeData.objectID === 214) {
+    if (textureId === '214') {
       formattedVal = '0.000000000016';
-    } else if (sizeData.objectID === 213 || sizeData.objectID === 290) {
+    } else if (textureId === '213' || textureId === '290') {
       formattedVal = '0.0000000000093';
     }
 

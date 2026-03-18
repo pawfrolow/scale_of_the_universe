@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "The Scale of the Universe 2",
+    "zoomHint": "Use the scroll bar to zoom in and out.",
+    "objectHint": "Click on objects to learn more.",
+    "start": "Start"
+  },
+  "language": {
+    "nativeName": "English",
+    "englishName": "English"
+  },
+  "html": {
+    "meta": {
+      "description": "The Scale of the Universe. A comparison of the sizes of various objects, from elementary particles to galaxies.",
+      "ogTitle": "The Scale of the Universe",
+      "ogDescription": "A comparison of the sizes of various objects — from elementary particles to galaxies."
+    },
+    "modal": {
+      "title": "The Scale of the Universe 2",
+      "zoomHint": "Use the scroll bar to zoom in and out.",
+      "objectHint": "Click on objects to learn more.",
+      "startButton": "Start",
+      "startLoading": "Loading...",
+      "selectLanguage": "Select language"
+    },
+    "credits": {
+      "createdBy": "Created by: Cary Huang, Michael Huang",
+      "webDev": "Web development: Matthew Martori",
+      "copyright": "Copyright ©: Cary and Michael Huang",
+      "translationAndDev": "Translation, development: Pavel Frolov"
+    }
+  }
+}

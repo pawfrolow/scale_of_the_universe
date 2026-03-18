@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "Scara Universului",
+    "zoomHint": "Folosiți bara de derulare pentru a mări și a micșora.",
+    "objectHint": "Faceți clic pe obiecte pentru a afla mai multe.",
+    "start": "Începe"
+  },
+  "language": {
+    "nativeName": "Română",
+    "englishName": "Romanian"
+  },
+  "html": {
+    "meta": {
+      "description": "Scara Universului. O comparație a dimensiunilor diferitelor obiecte, de la particule elementare până la galaxii.",
+      "ogTitle": "Scara Universului",
+      "ogDescription": "O comparație a dimensiunilor diferitelor obiecte — de la particule elementare până la galaxii."
+    },
+    "modal": {
+      "title": "Scara Universului",
+      "zoomHint": "Folosiți bara de derulare pentru a mări și a micșora.",
+      "objectHint": "Faceți clic pe obiecte pentru a afla mai multe.",
+      "startButton": "Începe",
+      "startLoading": "Se încarcă...",
+      "selectLanguage": "Alegeți limba"
+    },
+    "credits": {
+      "createdBy": "Creat de: Cary Huang, Michael Huang",
+      "webDev": "Dezvoltare web: Matthew Martori",
+      "copyright": "Copyright ©: Cary și Michael Huang",
+      "translationAndDev": "Traducere, dezvoltare: Pavel Frolov"
+    }
+  }
+}

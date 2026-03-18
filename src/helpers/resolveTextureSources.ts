@@ -1,20 +1,20 @@
-import { TItemsManifest, TItemsOverride, TTextureSourceMap } from '../interfaces'
+import { TItemsManifest, TItemsOverride, TTextureSourceMap } from '../interfaces';
 
 export const resolveTextureSources = (
   manifest: TItemsManifest,
   locale: string,
-  override: TItemsOverride | null
+  override: TItemsOverride | null,
 ): TTextureSourceMap => {
-  const frames = manifest.frames ?? {}
-  const map: TTextureSourceMap = {}
+  const frames = manifest.frames ?? {};
+  const map: TTextureSourceMap = {};
 
   for (const id of Object.keys(frames)) {
-    const hasLocaleTexture = Boolean(override?.textures?.[id])    
+    const hasLocaleTexture = Boolean(override?.textures?.[id]);
 
     map[id] = hasLocaleTexture
       ? `img/textures/overrides/${locale}/items/${id}.png`
-      : `img/textures/items/${id}.png`
+      : `img/textures/items/${id}.png`;
   }
 
-  return map
-}
+  return map;
+};

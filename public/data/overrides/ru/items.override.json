@@ -1,38 +1,76 @@
 {
-  "remove": [
-    "041",
-    "269",
-    "276"
-  ],
+  "remove": ["041", "269", "276"],
   "replace": {
-    "288": {
-      "frame": {
-        "x": 1166,
-        "y": 1141,
-        "w": 228,
-        "h": 228
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 254,
-        "y": 188,
-        "w": 228,
-        "h": 228
-      },
-      "sourceSize": {
-        "w": 2160,
-        "h": 1215
-      },
+    "106": {
       "size": {
-        "objectID": 288,
-        "exponent": -2,
-        "coeff": 1.55,
-        "cullFac": 1,
+        "exponent": 6,
+        "coeff": 1.2,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 288,
+        "titleX": -421.4,
+        "titleY": 159.3,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": -849.1,
+        "descriptionY": 7.34999999999999
+      },
+      "layout": {
+        "x": -413.333,
+        "y": 1.333,
+        "width": 272,
+        "height": 316
+      }
+    },
+    "107": {
+      "size": {
+        "exponent": 5,
+        "coeff": 2.05,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": 282.1,
+        "titleY": 390.3,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 720.7,
+        "descriptionY": 141.35
+      },
+      "layout": {
+        "x": 266.667,
+        "y": 298,
+        "width": 285.333,
+        "height": 160
+      }
+    },
+    "215": {
+      "size": {
+        "exponent": -1,
+        "coeff": 2,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": 578.6,
+        "titleY": 70,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 152.75,
+        "descriptionY": 11.4
+      },
+      "layout": {
+        "x": 586.667,
+        "y": -14.667,
+        "width": 306.667,
+        "height": 113.333
+      }
+    },
+    "288": {
+      "size": {
+        "exponent": -2,
+        "coeff": 1.55,
+        "realRatio": 1
+      },
+      "visualLocation": {
         "titleX": -951.9,
         "titleY": -253.2,
         "titleScale": 1,
@@ -40,36 +78,42 @@
         "descriptionX": -487.7,
         "descriptionY": -373.8,
         "zoomOffset": 0.05
+      },
+      "layout": {
+        "x": -949.333,
+        "y": -407.333,
+        "width": 304,
+        "height": 304
       }
     },
-    "037": {
-      "frame": {
-        "x": 1816,
-        "y": 236,
-        "w": 231,
-        "h": 230
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 884,
-        "y": 69,
-        "w": 231,
-        "h": 230
-      },
-      "sourceSize": {
-        "w": 2160,
-        "h": 1215
-      },
+    "319": {
       "size": {
-        "objectID": 37,
-        "exponent": -2,
-        "coeff": 1,
-        "cullFac": 1,
+        "exponent": 6,
+        "coeff": 2.3,
         "realRatio": 1
       },
       "visualLocation": {
-        "objectID": 37,
+        "titleX": -100.5,
+        "titleY": -190.6,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 377.65,
+        "descriptionY": -351
+      },
+      "layout": {
+        "x": -46.667,
+        "y": -312.667,
+        "width": 304,
+        "height": 304
+      }
+    },
+    "037": {
+      "size": {
+        "exponent": -2,
+        "coeff": 1,
+        "realRatio": 1
+      },
+      "visualLocation": {
         "titleX": -103.5,
         "titleY": -400.1,
         "titleScale": 1,
@@ -77,159 +121,21 @@
         "descriptionX": -533.7,
         "descriptionY": -462.45,
         "zoomOffset": 0
-      }
-    },
-    "215": {
-      "frame": {
-        "x": 463,
-        "y": 1960,
-        "w": 230,
-        "h": 85
       },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1405,
-        "y": 554,
-        "w": 230,
-        "h": 85
-      },
-      "sourceSize": {
-        "w": 2160,
-        "h": 1215
-      },
-      "size": {
-        "objectID": 215,
-        "exponent": -1,
-        "coeff": 2,
-        "cullFac": 1,
-        "realRatio": 1
-      },
-      "visualLocation": {
-        "objectID": 215,
-        "titleX": 578.6,
-        "titleY": 70,
-        "titleScale": 1,
-        "titleWrap": true,
-        "descriptionX": 152.75,
-        "descriptionY": 11.4
-      }
-    },
-    "106": {
-      "frame": {
-        "x": 454,
-        "y": 454,
-        "w": 204,
-        "h": 237
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 668,
-        "y": 490,
-        "w": 204,
-        "h": 237
-      },
-      "sourceSize": {
-        "w": 2160,
-        "h": 1215
-      },
-      "size": {
-        "objectID": 106,
-        "exponent": 6,
-        "coeff": 1.2,
-        "cullFac": 1,
-        "realRatio": 1
-      },
-      "visualLocation": {
-        "objectID": 106,
-        "titleX": -421.4,
-        "titleY": 159.3,
-        "titleScale": 1,
-        "titleWrap": true,
-        "descriptionX": -849.1,
-        "descriptionY": 7.34999999999999
-      }
-    },
-    "319": {
-      "frame": {
-        "x": 660,
-        "y": 1824,
-        "w": 228,
-        "h": 228
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 931,
-        "y": 259,
-        "w": 228,
-        "h": 228
-      },
-      "sourceSize": {
-        "w": 2160,
-        "h": 1215
-      },
-      "size": {
-        "objectID": 319,
-        "exponent": 6,
-        "coeff": 2.3,
-        "cullFac": 1,
-        "realRatio": 1
-      },
-      "visualLocation": {
-        "objectID": 319,
-        "titleX": -100.5,
-        "titleY": -190.6,
-        "titleScale": 1,
-        "titleWrap": true,
-        "descriptionX": 377.65,
-        "descriptionY": -351
-      }
-    },
-    "107": {
-      "frame": {
-        "x": 1199,
-        "y": 1635,
-        "w": 214,
-        "h": 120
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1173,
-        "y": 771,
-        "w": 214,
-        "h": 120
-      },
-      "sourceSize": {
-        "w": 2160,
-        "h": 1215
-      },
-      "size": {
-        "objectID": 107,
-        "exponent": 5,
-        "coeff": 2.05,
-        "cullFac": 1,
-        "realRatio": 1
-      },
-      "visualLocation": {
-        "objectID": 107,
-        "titleX": 282.1,
-        "titleY": 390.3,
-        "titleScale": 1,
-        "titleWrap": true,
-        "descriptionX": 720.7,
-        "descriptionY": 141.35
+      "layout": {
+        "x": -107.333,
+        "y": -564.667,
+        "width": 308,
+        "height": 306.667
       }
     }
   },
   "add": {},
   "textures": {
-    "288": true,
-    "042": true,
     "106": true,
+    "107": true,
+    "288": true,
     "319": true,
-    "107": true
+    "042": true
   }
 }

@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "Масштаб Всесвіту",
+    "zoomHint": "Використовуйте смугу прокрутки, щоб збільшувати та зменшувати масштаб.",
+    "objectHint": "Натискайте на об'єкти, щоб дізнатися більше.",
+    "start": "Почати"
+  },
+  "language": {
+    "nativeName": "Українська",
+    "englishName": "Ukrainian"
+  },
+  "html": {
+    "meta": {
+      "description": "Масштаб Всесвіту. Порівняння розмірів різних об'єктів — від елементарних частинок до галактик.",
+      "ogTitle": "Масштаб Всесвіту",
+      "ogDescription": "Порівняння розмірів різних об'єктів — від елементарних частинок до галактик."
+    },
+    "modal": {
+      "title": "Масштаб Всесвіту",
+      "zoomHint": "Використовуйте смугу прокрутки, щоб збільшувати та зменшувати масштаб.",
+      "objectHint": "Натискайте на об'єкти, щоб дізнатися більше.",
+      "startButton": "Почати",
+      "startLoading": "Завантаження...",
+      "selectLanguage": "Виберіть мову"
+    },
+    "credits": {
+      "createdBy": "Створено: Cary Huang, Michael Huang",
+      "webDev": "Веброзробка: Matthew Martori",
+      "copyright": "Copyright ©: Cary Huang, Michael Huang",
+      "translationAndDev": "Переклад, розробка: Pavel Frolov"
+    }
+  }
+}

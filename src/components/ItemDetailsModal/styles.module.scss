@@ -1,4 +1,4 @@
-@use "../../assets/css/variables.scss" as *;
+@use '../../assets/css/variables.scss' as *;
 
 .itemDetailsDialog {
   width: min(720px, calc(100vw - 24px));
@@ -96,7 +96,7 @@
   .itemDetailsDialog {
     background: $color-space-1;
     background: linear-gradient(0deg, $color-space-1 0%, $color-space-2 50%, $color-space-1 100%);
-    
+
     .itemDetailsTitle {
       color: $color-white;
     }

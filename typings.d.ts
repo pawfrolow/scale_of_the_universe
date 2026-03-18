@@ -1,9 +1,9 @@
-declare module "*.json" {
-  const value: any;
+declare module '*.json' {
+  const value;
   export default value;
 }
 
-declare module "*.module.scss" {
+declare module '*.module.scss' {
   const content: Record<string, string>;
   export default content;
 }

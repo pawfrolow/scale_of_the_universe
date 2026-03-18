@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "مقياس الكون",
+    "zoomHint": "استخدم شريط التمرير للتكبير والتصغير.",
+    "objectHint": "اضغط على الأجسام لمعرفة المزيد.",
+    "start": "ابدأ"
+  },
+  "language": {
+    "nativeName": "العربية",
+    "englishName": "Arabic"
+  },
+  "html": {
+    "meta": {
+      "description": "مقياس الكون. مقارنة أحجام الأجسام المختلفة، من الجسيمات الأولية إلى المجرات.",
+      "ogTitle": "مقياس الكون",
+      "ogDescription": "مقارنة أحجام الأجسام المختلفة — من الجسيمات الأولية إلى المجرات."
+    },
+    "modal": {
+      "title": "مقياس الكون",
+      "zoomHint": "استخدم شريط التمرير للتكبير والتصغير.",
+      "objectHint": "اضغط على الأجسام لمعرفة المزيد.",
+      "startButton": "ابدأ",
+      "startLoading": "جارٍ التحميل...",
+      "selectLanguage": "اختر اللغة"
+    },
+    "credits": {
+      "createdBy": "من إعداد: Cary Huang, Michael Huang",
+      "webDev": "تطوير الويب: Matthew Martori",
+      "copyright": "Copyright ©: Cary و Michael Huang",
+      "translationAndDev": "الترجمة والتطوير: Pavel Frolov"
+    }
+  }
+}

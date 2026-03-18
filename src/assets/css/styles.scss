@@ -1,4 +1,4 @@
-@use "./variables.scss" as *;
+@use './variables.scss' as *;
 
 :root {
   --safe-area-top: env(safe-area-inset-top, 0px);
@@ -37,5 +37,5 @@ body,
   width: 100%;
   height: 100%;
   overflow: hidden;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }

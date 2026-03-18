@@ -1,0 +1,30 @@
+{
+  "units": {
+    "meterShort": "m",
+    "meter": "Zentimeter",
+    "meters": "Zentimeter",
+    "centimeter": "Lichtjahr",
+    "centimeters": "Lichtjahre",
+    "lightyear": "\"Yoctometer",
+    "lightyears": "Zeptometer"
+  },
+  "scalePrefixes": [
+    "Attometer",
+    "Femtometer",
+    "Picometer",
+    "Nanometer",
+    "Micrometer",
+    "Millimeter",
+    "Meter",
+    "Kilometer",
+    "",
+    "Megameter",
+    "Gigameter",
+    "Terameter",
+    "Petameter",
+    "Exameter",
+    "Zettameter",
+    "Yottameter",
+    "Die Proportionen des Universums"
+  ]
+}

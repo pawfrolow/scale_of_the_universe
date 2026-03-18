@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "Die Skala des Universums",
+    "zoomHint": "Benutze die Scrollleiste, um hinein- oder herauszuzoomen.",
+    "objectHint": "Klicke auf Objekte, um mehr zu erfahren.",
+    "start": "Starten"
+  },
+  "language": {
+    "nativeName": "Deutsch",
+    "englishName": "German"
+  },
+  "html": {
+    "meta": {
+      "description": "Die Skala des Universums. Ein Vergleich der Größen verschiedener Objekte – von Elementarteilchen bis hin zu Galaxien.",
+      "ogTitle": "Die Skala des Universums",
+      "ogDescription": "Ein Vergleich der Größen verschiedener Objekte – von Elementarteilchen bis hin zu Galaxien."
+    },
+    "modal": {
+      "title": "Die Skala des Universums",
+      "zoomHint": "Benutze die Scrollleiste, um hinein- oder herauszuzoomen.",
+      "objectHint": "Klicke auf Objekte, um mehr zu erfahren.",
+      "startButton": "Starten",
+      "startLoading": "Laden...",
+      "selectLanguage": "Sprache auswählen"
+    },
+    "credits": {
+      "createdBy": "Erstellt von: Cary Huang, Michael Huang",
+      "webDev": "Webentwicklung: Matthew Martori",
+      "copyright": "Copyright ©: Cary und Michael Huang",
+      "translationAndDev": "Übersetzung, Entwicklung: Pavel Frolov"
+    }
+  }
+}

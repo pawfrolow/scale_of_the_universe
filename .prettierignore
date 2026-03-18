@@ -1,0 +1,7 @@
+dist
+build
+output
+scripts
+coverage
+node_modules
+package-lock.json

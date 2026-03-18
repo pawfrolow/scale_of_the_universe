@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 export function enterFullscreen(element: HTMLElement = document.documentElement) {
   const target = element as HTMLElement & {
     webkitRequestFullscreen?: () => Promise<void> | void;

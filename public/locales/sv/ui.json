@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "Universums skala",
+    "zoomHint": "Använd rullningslisten för att zooma in och ut.",
+    "objectHint": "Klicka på objekten för att lära dig mer.",
+    "start": "Starta"
+  },
+  "language": {
+    "nativeName": "Svenska",
+    "englishName": "Swedish"
+  },
+  "html": {
+    "meta": {
+      "description": "Universums skala. En jämförelse av storleken på olika objekt, från elementarpartiklar till galaxer.",
+      "ogTitle": "Universums skala",
+      "ogDescription": "En jämförelse av storleken på olika objekt — från elementarpartiklar till galaxer."
+    },
+    "modal": {
+      "title": "Universums skala",
+      "zoomHint": "Använd rullningslisten för att zooma in och ut.",
+      "objectHint": "Klicka på objekten för att lära dig mer.",
+      "startButton": "Starta",
+      "startLoading": "Laddar...",
+      "selectLanguage": "Välj språk"
+    },
+    "credits": {
+      "createdBy": "Skapad av: Cary Huang, Michael Huang",
+      "webDev": "Webbutveckling: Matthew Martori",
+      "copyright": "Copyright ©: Cary och Michael Huang",
+      "translationAndDev": "Översättning, utveckling: Pavel Frolov"
+    }
+  }
+}

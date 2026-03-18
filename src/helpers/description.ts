@@ -1,26 +1,34 @@
 import 'pixi.js-legacy';
 import * as PIXI from 'pixi.js-legacy';
-import { powToUnit } from '../helpers/powToUnit'
+import { ExtraText, SizeData, TextDatum, VisualLocation } from 'src/interfaces';
 
-export function getGraphics(visualLocation, textDatum, extraText, units: string[], sizeData) {
+import { powToUnit } from '../helpers/powToUnit';
+
+export function getGraphics(
+  textureId: string,
+  visualLocation: VisualLocation,
+  textDatum: TextDatum,
+  extraText: ExtraText,
+  units: string[],
+  sizeData: SizeData,
+) {
   const w = 450;
   const h = 500;
   const x = visualLocation.descriptionX;
   const y = visualLocation.descriptionY;
   const margin = 20;
 
-
   const baseStyle = {
     fontFamily: 'Roboto',
     align: 'left' as const,
     fill: 0x000000,
-    wordWrapWidth: w - (margin * 2),
-    wordWrap: true
-  }
+    wordWrapWidth: w - margin * 2,
+    wordWrap: true,
+  };
 
   const titleStyle = {
     fontSize: 40,
-    ...baseStyle
+    ...baseStyle,
   };
 
   const scaleStyle = {
@@ -40,25 +48,22 @@ export function getGraphics(visualLocation, textDatum, extraText, units: string[
   const exponentStyle = {
     ...baseStyle,
     fontSize: scaleStyle.fontSize - 8,
-    fill: 0x333333
+    fill: 0x333333,
   };
 
   const descriptionStyle = {
     ...baseStyle,
-    fontSize: 32
+    fontSize: 32,
   };
 
-  const friendly = powToUnit(sizeData, units, extraText)
+  const friendly = powToUnit(textureId, sizeData, units, extraText);
 
-  // DEBUG MODE: object id beside description title VVVV
-  // const titleText = new PIXI.Text(textDatum.title.replace(/\r?\n|\r/g, ' ') + sizeData.objectID, titleStyle);
   const titleText = new PIXI.Text(textDatum.title.replace(/\r?\n|\r/g, ''), titleStyle);
   const scaleText = new PIXI.Text(`${sizeData.coeff} x 10`, scaleStyle);
   const exponentText = new PIXI.Text(`${sizeData.exponent}`, exponentStyle);
   const meterText = new PIXI.Text(textDatum.metersPlural, scaleStyle);
   const unitFriendlyText = new PIXI.Text(friendly, unitFriendlyStyle);
   const descriptionText = new PIXI.Text(textDatum.description, descriptionStyle);
-  // const descriptionText = new PIXI.Text(sizeData.objectID + ' ' + splitDescription, descriptionStyle);
 
   titleText.x = x + margin;
   titleText.y = y + margin;
@@ -90,39 +95,39 @@ export function getGraphics(visualLocation, textDatum, extraText, units: string[
 
   const descriptionContainer = new PIXI.Container();
   const graphics = new PIXI.Graphics();
-  const totalTextHeight = titleText.height + descriptionText.height + scaleText.height + unitFriendlyText.height + 60;
+  const totalTextHeight =
+    titleText.height + descriptionText.height + scaleText.height + unitFriendlyText.height + 60;
   //shadow
-  graphics.beginFill(0x000000, .2);
-
+  graphics.beginFill(0x000000, 0.2);
 
   graphics.drawRoundedRect(x + 5, y + 5, w, totalTextHeight, 15);
   graphics.endFill();
   // set a fill and a line style again and draw a rectangle
   graphics.lineStyle(2, 0xaaaaaa, 1);
-  graphics.beginFill(0xFFFFFF, 1);
-
+  graphics.beginFill(0xffffff, 1);
 
   let widthToUse = w;
 
   if (unitFriendlyText.width + 30 >= widthToUse) {
-
-    widthToUse = unitFriendlyText.width + 40
+    widthToUse = unitFriendlyText.width + 40;
   }
 
   graphics.drawRoundedRect(x, y, widthToUse, totalTextHeight, 15);
   graphics.endFill();
-  graphics.alpha = .9;
+  graphics.alpha = 0.9;
 
   descriptionContainer.x -= w / 2;
   descriptionContainer.y -= h / 2;
 
   descriptionContainer.addChild(graphics);
-  descriptionContainer.addChild(titleText,
+  descriptionContainer.addChild(
+    titleText,
     descriptionText,
     scaleText,
     exponentText,
     meterText,
-    unitFriendlyText);
+    unitFriendlyText,
+  );
 
   return descriptionContainer;
 }

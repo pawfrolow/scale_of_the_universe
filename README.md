@@ -26,7 +26,7 @@ Built with React, TypeScript, Vite and PixiJS.
 
 ```bash
 npm install
-````
+```
 
 ## Development
 

@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "مقیاس جهان ۲",
+    "zoomHint": "برای بزرگ‌نمایی و کوچک‌نمایی از نوار پیمایش استفاده کنید.",
+    "objectHint": "برای کسب اطلاعات بیشتر روی اشیا کلیک کنید.",
+    "start": "شروع"
+  },
+  "language": {
+    "nativeName": "فارسی",
+    "englishName": "Persian"
+  },
+  "html": {
+    "meta": {
+      "description": "مقیاس جهان. مقایسهٔ اندازهٔ اجرام گوناگون، از ذرات بنیادی تا کهکشان‌ها.",
+      "ogTitle": "مقیاس جهان",
+      "ogDescription": "مقایسهٔ اندازهٔ اجرام گوناگون — از ذرات بنیادی تا کهکشان‌ها."
+    },
+    "modal": {
+      "title": "مقیاس جهان ۲",
+      "zoomHint": "برای بزرگ‌نمایی و کوچک‌نمایی از نوار پیمایش استفاده کنید.",
+      "objectHint": "برای کسب اطلاعات بیشتر روی اشیا کلیک کنید.",
+      "startButton": "شروع",
+      "startLoading": "در حال بارگذاری...",
+      "selectLanguage": "زبان را انتخاب کنید"
+    },
+    "credits": {
+      "createdBy": "ایجادشده توسط: Cary Huang, Michael Huang",
+      "webDev": "توسعهٔ وب: Matthew Martori",
+      "copyright": "Copyright ©: Cary Huang, Michael Huang",
+      "translationAndDev": "ترجمه و توسعه: Pavel Frolov"
+    }
+  }
+}
