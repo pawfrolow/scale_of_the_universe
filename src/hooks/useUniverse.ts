@@ -138,24 +138,15 @@ export const useUniverse = ({
       const w = app.screen.width;
       const h = app.screen.height;
 
-      // eslint-disable-next-line prefer-const
-      let onHandleClicked: () => void;
-      // eslint-disable-next-line prefer-const
-      let onChange: (_x: number, percent: number) => void;
+      let universe: Universe | null = null;
+      let scaleText: ScaleText | null = null;
 
-      slider = new Slider(app, w, h, globalResolution, onChange, onHandleClicked);
-      slider.init();
-
-      const universe = new Universe(0, slider, app, onItemModalOpen, onItemModalClose);
-      const scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0');
-
-      // Update the functions to use the instances
-      onHandleClicked = () => {
-        universe.onHandleClicked();
+      const onHandleClicked = () => {
+        universe?.onHandleClicked();
       };
 
-      onChange = (_x: number, percent: number) => {
-        if (isDestroyed) {
+      const onChange = (_x: number, percent: number) => {
+        if (isDestroyed || !universe || !scaleText) {
           return;
         }
 
@@ -207,13 +198,18 @@ export const useUniverse = ({
 
         if (scaleExp >= 7 && buttons) {
           buttons.style.filter = 'invert(100%)';
-
           document.body.classList.add('dark');
         }
 
         universe.update(scaleExp);
         scaleText.setText(`${Math.round(scaleExp * 10) / 10}`);
       };
+
+      slider = new Slider(app, w, h, globalResolution, onChange, onHandleClicked);
+      slider.init();
+
+      universe = new Universe(0, slider, app, onItemModalOpen, onItemModalClose);
+      scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0');
 
       app.stage.addChild(
         universe.container,
@@ -233,7 +229,7 @@ export const useUniverse = ({
       onAssetsProgress?.(99);
       await nextFrame();
 
-      if (isDestroyed || !app || !slider || !containerRef.current) {
+      if (isDestroyed || !app || !slider || !universe || !scaleText || !containerRef.current) {
         return;
       }
 
@@ -241,24 +237,24 @@ export const useUniverse = ({
       universe.prevZoom = 0;
 
       const performResize = () => {
-        if (!app || !slider || isDestroyed || !containerRef.current) {
+        if (!app || !slider || !universe || !scaleText || isDestroyed || !containerRef.current) {
           return;
         }
 
         requestAnimationFrame(() => {
-          if (!app || !slider || isDestroyed || !containerRef.current) {
+          if (!app || !slider || !universe || !scaleText || isDestroyed || !containerRef.current) {
             return;
           }
 
-          const frame = document.getElementById('frame') as HTMLElement | null;
+          const currentFrame = document.getElementById('frame') as HTMLElement | null;
 
-          if (!frame) {
+          if (!currentFrame) {
             return;
           }
 
           const rect = containerRef.current.getBoundingClientRect();
-          const width = Math.round(rect.width || frame.clientWidth || window.innerWidth);
-          const height = Math.round(rect.height || frame.clientHeight || window.innerHeight);
+          const width = Math.round(rect.width || currentFrame.clientWidth || window.innerWidth);
+          const height = Math.round(rect.height || currentFrame.clientHeight || window.innerHeight);
 
           app.renderer.resize(width, height);
 
@@ -274,7 +270,6 @@ export const useUniverse = ({
       resizeHandlerRef.current = throttle(performResize, 100);
 
       orientationHandlerRef.current = () => {
-        // iOS иногда обновляет viewport не мгновенно после rotation
         setTimeout(performResize, 50);
         setTimeout(performResize, 250);
       };
@@ -283,8 +278,8 @@ export const useUniverse = ({
         performResize();
       }, 100);
 
-      window.addEventListener('resize', resizeHandlerRef.current!);
-      window.addEventListener('orientationchange', orientationHandlerRef.current!);
+      window.addEventListener('resize', resizeHandlerRef.current);
+      window.addEventListener('orientationchange', orientationHandlerRef.current);
 
       if (window.visualViewport) {
         window.visualViewport.addEventListener('resize', visualViewportHandlerRef.current);
