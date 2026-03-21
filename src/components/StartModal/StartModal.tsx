@@ -3,24 +3,31 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
+import { CREDIT_LINKS } from '@/config';
+import { ymClick } from '@/helpers/ymClick';
+
 interface IStartModalProps {
   title: string;
   startText: string;
-  isLoading: boolean;
   isOpen: boolean;
   onStart: () => void;
   onOpenLanguageModal: () => void;
+  onOpenDonateModal: () => void;
 }
 
 export const StartModal = ({
   title,
   startText,
-  isLoading,
   isOpen,
   onStart,
   onOpenLanguageModal,
+  onOpenDonateModal,
 }: IStartModalProps) => {
   const { t } = useTranslation();
+
+  const openLink = (link: string) => {
+    ymClick('openLink', { link });
+  };
 
   return (
     <>
@@ -35,6 +42,14 @@ export const StartModal = ({
             aria-label="Select language"
           >
             <img src="img/icons/language.svg" alt="Language" />
+          </button>
+          <button
+            type="button"
+            className={styles.modalLangButton}
+            onClick={onOpenDonateModal}
+            aria-label="Support"
+          >
+            <img src="img/icons/pay.svg" alt="Support" />
           </button>
         </div>
 
@@ -57,7 +72,8 @@ export const StartModal = ({
               {t('html.credits.webDev', { ns: 'ui' })}{' '}
               <a
                 className={styles.creditsLink}
-                href="https://github.com/matttt/scale_of_the_universe"
+                href={CREDIT_LINKS.webDev}
+                onClick={() => openLink(CREDIT_LINKS.webDev)}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -68,9 +84,10 @@ export const StartModal = ({
               {t('html.credits.copyright', { ns: 'ui' })}{' '}
               <a
                 className={styles.creditsLink}
-                href="https://www.htwins.net/scale2/"
+                href={CREDIT_LINKS.copyright}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => openLink(CREDIT_LINKS.copyright)}
               >
                 htwins.net
               </a>
@@ -79,16 +96,17 @@ export const StartModal = ({
               {t('html.credits.translationAndDev', { ns: 'ui' })}{' '}
               <a
                 className={styles.creditsLink}
-                href="https://github.com/pawfrolow/scale_of_the_universe"
+                href={CREDIT_LINKS.pawfrolow}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => openLink(CREDIT_LINKS.pawfrolow)}
               >
                 github.com
               </a>
             </p>
           </div>
 
-          <button className={styles.startBtn} type="button" onClick={onStart} disabled={isLoading}>
+          <button className={styles.startBtn} type="button" onClick={onStart}>
             <img className={styles.startBtnIcon} width="25" src="img/icons/play.svg" alt="Play" />
             <span>{startText}</span>
           </button>

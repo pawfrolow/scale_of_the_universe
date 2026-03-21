@@ -28,6 +28,11 @@
       "webDev": "Veebiarendus: Matthew Martori",
       "copyright": "Copyright ©: Cary Huang, Michael Huang",
       "translationAndDev": "Tõlge, arendus: Pavel Frolov"
+    },
+    "donate": {
+      "title": "Toeta projekti",
+      "description": "Arendan seda projekti oma vabast ajast ning parandan järk-järgult selle sisu, tõlkeid, kasutajaliidest ja jõudlust.\n\nKui sulle meeldib Scale of the Universe, saad projekti annetusega toetada.",
+      "closeAriaLabel": "Sulge toetusaken"
     }
   }
 }

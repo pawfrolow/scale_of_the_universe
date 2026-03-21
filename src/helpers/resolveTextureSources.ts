@@ -1,4 +1,4 @@
-import { TItemsManifest, TItemsOverride, TTextureSourceMap } from '../interfaces';
+import { TItemsManifest, TItemsOverride, TTextureSourceMap } from '@/interfaces';
 
 export const resolveTextureSources = (
   manifest: TItemsManifest,

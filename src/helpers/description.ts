@@ -1,8 +1,8 @@
 import 'pixi.js-legacy';
 import * as PIXI from 'pixi.js-legacy';
-import { ExtraText, SizeData, TextDatum, VisualLocation } from 'src/interfaces';
 
-import { powToUnit } from '../helpers/powToUnit';
+import { powToUnit } from '@/helpers/powToUnit';
+import { ExtraText, SizeData, TextDatum, VisualLocation } from '@/interfaces';
 
 export function getGraphics(
   textureId: string,

@@ -1,9 +1,8 @@
 import numeral from 'numeral';
 
-import { ExtraText, SizeData } from '../interfaces';
-import { translationService } from '../services/translation.service';
-
-import { E } from './e';
+import { E } from '@/helpers/e';
+import { ExtraText, SizeData } from '@/interfaces';
+import { translationService } from '@/services/translation.service';
 
 export function powToUnit(
   textureId: string,

@@ -2,19 +2,19 @@ import * as PIXI from 'pixi.js-legacy';
 import { RefObject, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { ScaleText } from '../classes/scaleText';
-import { Slider } from '../classes/slider';
-import { Universe } from '../classes/universe';
-import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config';
-import { getTextureIdsFromManifest } from '../helpers/getTextureIdsFromManifest';
-import { map } from '../helpers/map';
-import { nextFrame } from '../helpers/nextFrame';
-import { resolveItemsManifest } from '../helpers/resolveItemsManifest';
-import { resolveTextureSources } from '../helpers/resolveTextureSources';
-import { throttle } from '../helpers/throttle';
-import { validateItemsOverride } from '../helpers/validateItemsOverride';
-import { ItemModalData } from '../interfaces';
-import { universeAssetsService } from '../services/universe/universe-assets.service';
+import { ScaleText } from '@/classes/scaleText';
+import { Slider } from '@/classes/slider';
+import { Universe } from '@/classes/universe';
+import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '@/config';
+import { getTextureIdsFromManifest } from '@/helpers/getTextureIdsFromManifest';
+import { map } from '@/helpers/map';
+import { nextFrame } from '@/helpers/nextFrame';
+import { resolveItemsManifest } from '@/helpers/resolveItemsManifest';
+import { resolveTextureSources } from '@/helpers/resolveTextureSources';
+import { throttle } from '@/helpers/throttle';
+import { validateItemsOverride } from '@/helpers/validateItemsOverride';
+import { ItemModalData } from '@/interfaces';
+import { universeAssetsService } from '@/services/universe/universe-assets.service';
 
 PIXI.settings.ROUND_PIXELS = true;
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
@@ -46,10 +46,6 @@ export const useUniverse = ({
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    if (!isStarted) {
-      return;
-    }
-
     if (!containerRef.current || initializedRef.current) {
       return;
     }

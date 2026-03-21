@@ -1,7 +1,7 @@
 import { Sprite, Container, Texture, Point } from 'pixi.js-legacy';
 
-import { E } from '../helpers/e';
-import { SpriteLayout } from '../interfaces';
+import { E } from '@/helpers/e';
+import { SpriteLayout } from '@/interfaces';
 
 export class Entity {
   public scaleExp: number;

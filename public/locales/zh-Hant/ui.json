@@ -28,6 +28,11 @@
       "webDev": "網頁開發：Matthew Martori",
       "copyright": "版權所有 ©：Cary Huang、Michael Huang",
       "translationAndDev": "翻譯、開發：Pavel Frolov"
+    },
+    "donate": {
+      "title": "支持這個專案",
+      "description": "我在空閒時間開發這個專案，並持續改進內容、翻譯、介面與效能。\n\n如果你喜歡《宇宙尺度》，你可以透過贊助來支持這個專案。",
+      "closeAriaLabel": "關閉支持視窗"
     }
   }
 }

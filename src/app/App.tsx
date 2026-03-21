@@ -1,22 +1,24 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import styles from './styles.module.scss';
+
 import {
   Controls,
+  DonateModal,
   ItemDetailsModal,
   LanguageModal,
   Loader,
   LoadingOverlay,
   StartModal,
   UniverseCanvas,
-} from '../components';
-import { MUTED_STORAGE_KEY } from '../config';
-import { useLanguage } from '../hooks/useLanguage';
-import { TLanguage } from '../i18n';
-import { ItemModalData } from '../interfaces';
-import { createFrozenStarAudio } from '../services/audio.service';
-
-import styles from './styles.module.scss';
+} from '@/components';
+import { MUTED_STORAGE_KEY } from '@/config';
+import { ymClick } from '@/helpers/ymClick';
+import { useLanguage } from '@/hooks/useLanguage';
+import { TLanguage } from '@/i18n';
+import { ItemModalData } from '@/interfaces';
+import { createFrozenStarAudio } from '@/services/audio.service';
 
 export const App = () => {
   const [isStarted, setIsStarted] = useState(false);
@@ -26,6 +28,7 @@ export const App = () => {
   const [isAssetsReady, setIsAssetsReady] = useState(false);
   const [assetsProgress, setAssetsProgress] = useState(0);
   const [isLanguageModalOpen, setIsLanguageModalOpen] = useState(false);
+  const [isDonateModalOpen, setIsDonateModalOpen] = useState(false);
   const [universeKey, setUniverseKey] = useState(0);
   const [itemModalData, setItemModalData] = useState<ItemModalData | null>(null);
 
@@ -33,8 +36,6 @@ export const App = () => {
 
   const { t, i18n } = useTranslation();
   const audio = useMemo(() => createFrozenStarAudio(), []);
-
-  const isLoading = !isI18nReady || isAssetsLoading;
 
   useEffect(() => {
     if (!isAssetsReady) {
@@ -76,7 +77,9 @@ export const App = () => {
 
     setMetaContent('meta[name="description"]', description);
     setMetaContent('meta[property="og:title"]', ogTitle);
+    setMetaContent('meta[property="twitter:title"]', ogTitle);
     setMetaContent('meta[property="og:description"]', ogDescription);
+    setMetaContent('meta[property="twitter:description"]', ogDescription);
   }, [currentLanguage, isI18nReady, t]);
 
   useEffect(() => {
@@ -87,14 +90,24 @@ export const App = () => {
     }
   }, [isMuted]);
 
+  useEffect(() => {
+    if ([25, 50, 75, 100].includes(assetsProgress)) {
+      ymClick('assetsProgress', { progress: assetsProgress });
+    }
+  }, [assetsProgress]);
+
   const handleStart = async () => {
     setItemModalData(null);
     setHasEnteredApp(true);
     setIsStarted(true);
+
+    ymClick('startBtn');
   };
 
   const handleToggleMute = () => {
     setIsMuted((prev) => !prev);
+
+    ymClick('toggleSound', { muted: !isMuted });
   };
 
   const handleAssetsLoading = () => {
@@ -120,6 +133,15 @@ export const App = () => {
     setIsLanguageModalOpen(false);
   };
 
+  const handleOpenDonateModal = () => {
+    setIsDonateModalOpen(true);
+    ymClick('openDonateModal');
+  };
+
+  const handleCloseDonateModal = () => {
+    setIsDonateModalOpen(false);
+  };
+
   const handleLanguageSelect = async (language: TLanguage) => {
     if (language === currentLanguage) {
       setIsLanguageModalOpen(false);
@@ -131,6 +153,8 @@ export const App = () => {
     setIsLanguageModalOpen(false);
 
     await i18n.changeLanguage(language);
+
+    ymClick('toggleLanguage', { language, fromMainPage: !hasEnteredApp });
 
     setIsAssetsReady(false);
     setIsAssetsLoading(false);
@@ -154,15 +178,11 @@ export const App = () => {
     <>
       <StartModal
         title={t('html.modal.title', { ns: 'ui' })}
-        startText={
-          isLoading
-            ? t('html.modal.startLoading', { ns: 'ui' })
-            : t('html.modal.startButton', { ns: 'ui' })
-        }
-        isLoading={isLoading}
+        startText={t('html.modal.startButton', { ns: 'ui' })}
         isOpen={!hasEnteredApp}
         onStart={handleStart}
         onOpenLanguageModal={handleOpenLanguageModal}
+        onOpenDonateModal={handleOpenDonateModal}
       />
 
       <LanguageModal
@@ -171,6 +191,8 @@ export const App = () => {
         onSelect={handleLanguageSelect}
         onClose={handleCloseLanguageModal}
       />
+
+      <DonateModal isOpen={isDonateModalOpen} onClose={handleCloseDonateModal} />
 
       <LoadingOverlay
         isVisible={hasEnteredApp && isAssetsLoading}
@@ -187,6 +209,7 @@ export const App = () => {
           isMuted={isMuted}
           onToggleMute={handleToggleMute}
           onOpenLanguageModal={handleOpenLanguageModal}
+          onOpenDonateModal={handleOpenDonateModal}
         />
 
         <div className={`${styles.bgEarth} ${styles.fullBg}`} id="earthBgImage" />

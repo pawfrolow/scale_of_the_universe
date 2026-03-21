@@ -6,3 +6,4 @@ export { LanguageModal } from './LanguageModal/LanguageModal';
 export { Overlay } from './Overlay/Overlay';
 export { ItemDetailsModal } from './ItemDetailsModal/ItemDetailsModal';
 export { Loader } from './Loader/Loader';
+export { DonateModal } from './DonateModal/DonateModal';

@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 
-import { useUniverse } from '../../hooks/useUniverse';
-import { ItemModalData } from '../../interfaces';
-
 import styles from './styles.module.scss';
+
+import { useUniverse } from '@/hooks/useUniverse';
+import { ItemModalData } from '@/interfaces';
 
 interface IUniverseCanvasProps {
   isStarted: boolean;

@@ -1,11 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { LANGUAGE_OPTIONS } from '../../config';
-import { TLanguage } from '../../i18n';
 import { Overlay } from '../Overlay/Overlay';
 
 import styles from './styles.module.scss';
+
+import { LANGUAGE_OPTIONS } from '@/config';
+import { TLanguage } from '@/i18n';
 
 interface ILanguageModalProps {
   isOpen: boolean;

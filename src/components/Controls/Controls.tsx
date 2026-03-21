@@ -1,16 +1,23 @@
 import React from 'react';
 
-import { toggleFullscreen } from '../../helpers/fullscreen';
-
 import styles from './styles.module.scss';
+
+import { isLocalhost, isProduction } from '@/config';
+import { toggleFullscreen } from '@/helpers/fullscreen';
 
 interface IControlsProps {
   isMuted: boolean;
   onToggleMute: () => void;
   onOpenLanguageModal: () => void;
+  onOpenDonateModal: () => void;
 }
 
-export const Controls = ({ isMuted, onToggleMute, onOpenLanguageModal }: IControlsProps) => {
+export const Controls = ({
+  isMuted,
+  onToggleMute,
+  onOpenLanguageModal,
+  onOpenDonateModal,
+}: IControlsProps) => {
   const handleHomeClick = () => {
     window.location.reload();
   };
@@ -25,6 +32,11 @@ export const Controls = ({ isMuted, onToggleMute, onOpenLanguageModal }: IContro
 
   return (
     <div id="buttons" className={styles.buttons}>
+      {(isLocalhost || isProduction) && (
+        <button onClick={onOpenDonateModal} type="button" aria-label="Support project">
+          <img src="img/icons/pay.svg" alt="Donate" />
+        </button>
+      )}
       <button onClick={handleHomeClick} className={styles.lang} type="button">
         <img src="img/icons/home.svg" alt="Home" />
       </button>

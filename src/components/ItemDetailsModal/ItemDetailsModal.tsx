@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Overlay } from '../Overlay/Overlay';
-
 import styles from './styles.module.scss';
+
+import { Overlay } from '@/components';
 
 interface IItemDetailsModalProps {
   isOpen: boolean;

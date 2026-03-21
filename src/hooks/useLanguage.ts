@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { getStoredLanguage, initI18n, setStoredLanguage, TLanguage } from '../i18n';
+import { getStoredLanguage, initI18n, setStoredLanguage, TLanguage } from '@/i18n';
 
 export const useLanguage = () => {
   const [isI18nReady, setIsI18nReady] = useState(false);

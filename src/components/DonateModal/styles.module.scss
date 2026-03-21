@@ -1,0 +1,102 @@
+@use '../../assets/css/variables.scss' as *;
+
+.donateDialog {
+  width: min(560px, calc(100vw - 32px));
+  max-height: min(80vh, 760px);
+  overflow: auto;
+  border-radius: 20px;
+  background: $color-white;
+  color: $color-text-dark;
+  box-shadow: $shadow-dialog;
+  padding: 20px;
+}
+
+.donateHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.donateTitle {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: $color-text-dark;
+}
+
+.donateClose {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: $color-text-dark;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: $color-transparent-gray-hover;
+  }
+}
+
+.donateBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donateDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-text-dark;
+  white-space: pre-line;
+}
+
+.donateLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.donateLink {
+  padding: 12px 16px;
+  border-radius: 14px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba($color-text-dark, 0.12);
+  border-radius: 10px;
+  background: rgba($color-text-dark, 0.04);
+  color: $color-text-dark;
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+
+  &:hover {
+    background: $color-transparent-gray-hover;
+  }
+}
+
+.donateLink:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.donateLinkIcon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}

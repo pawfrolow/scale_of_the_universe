@@ -63,8 +63,7 @@ dialog {
   .modalHeader {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    gap: 8px;
   }
 
   .modalLangButton {
@@ -100,6 +99,7 @@ dialog {
     font-size: 32px;
     line-height: 1.15;
     word-break: break-word;
+    margin-right: auto;
   }
 
   .infoRow {
