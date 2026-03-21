@@ -1,10 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Overlay } from '../Overlay/Overlay';
-
 import styles from './styles.module.scss';
 
+import { ModalDialog, ModalHeader, Overlay } from '@/components';
 import { LANGUAGE_OPTIONS } from '@/config';
 import { TLanguage } from '@/i18n';
 
@@ -25,24 +24,15 @@ export const LanguageModal = ({
 
   return (
     <Overlay isOpen={isOpen} onBackdropClick={onClose}>
-      <div
-        className={styles.languageDialog}
-        role="dialog"
-        aria-modal="true"
-        aria-label={t('html.modal.selectLanguage', { ns: 'ui' })}
-      >
-        <div className={styles.languageDialogHeader}>
-          <h2>{t('html.modal.selectLanguage', { ns: 'ui' })}</h2>
-
-          <button
-            type="button"
-            className={styles.languageDialogClose}
-            onClick={onClose}
-            aria-label="Close language modal"
-          >
-            ×
-          </button>
-        </div>
+      <ModalDialog width="md" ariaLabel={t('html.modal.selectLanguage', { ns: 'ui' })}>
+        <ModalHeader
+          title={t('html.modal.selectLanguage', { ns: 'ui' })}
+          onClose={onClose}
+          closeAriaLabel={t('html.modal.closeLanguageModal', {
+            ns: 'ui',
+            defaultValue: 'Close language modal',
+          })}
+        />
 
         <div className={styles.languageList}>
           {LANGUAGE_OPTIONS.map((language) => (
@@ -59,7 +49,7 @@ export const LanguageModal = ({
             </button>
           ))}
         </div>
-      </div>
+      </ModalDialog>
     </Overlay>
   );
 };

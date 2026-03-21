@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-import { Overlay } from '@/components';
+import { ModalDialog, Overlay } from '@/components';
 
 interface ILoadingOverlayProps {
   isVisible: boolean;
@@ -17,7 +17,7 @@ export const LoadingOverlay = ({
 }: ILoadingOverlayProps) => {
   return (
     <Overlay isOpen={isVisible}>
-      <div className={styles.loadingCard}>
+      <ModalDialog width="sm" className={styles.loadingCard}>
         <div className={styles.loadingTitle}>{title}</div>
 
         <div className={styles.loadingBar}>
@@ -25,7 +25,7 @@ export const LoadingOverlay = ({
         </div>
 
         <div className={styles.loadingPercent}>{progress}%</div>
-      </div>
+      </ModalDialog>
     </Overlay>
   );
 };

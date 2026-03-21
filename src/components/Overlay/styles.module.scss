@@ -12,25 +12,25 @@
   .overlayBackdrop {
     position: absolute;
     inset: 0;
-    background: rgba($color-white, 0.45);
+    background: $overlay-light;
     backdrop-filter: blur(6px);
   }
 
   .overlayContent {
     position: relative;
     z-index: 1;
-    border-radius: 16px;
+    border-radius: $modal-radius-desktop;
   }
 }
 
 :global(.dark) {
   .overlay {
     .overlayBackdrop {
-      background: rgba($color-space-1, 0.45);
+      background: $overlay-dark;
     }
 
     .overlayContent {
-      border: 1px solid rgba($color-primary, 0.5);
+      border: 1px solid $overlay-border-dark;
     }
   }
 }

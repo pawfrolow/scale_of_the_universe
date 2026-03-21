@@ -12,8 +12,8 @@ export const resolveTextureSources = (
     const hasLocaleTexture = Boolean(override?.textures?.[id]);
 
     map[id] = hasLocaleTexture
-      ? `img/textures/overrides/${locale}/items/${id}.png`
-      : `img/textures/items/${id}.png`;
+      ? `img/textures/overrides/${locale}/items/${id}.webp`
+      : `img/textures/items/${id}.webp`;
   }
 
   return map;

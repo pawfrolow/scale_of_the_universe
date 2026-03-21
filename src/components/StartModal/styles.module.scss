@@ -66,34 +66,6 @@ dialog {
     gap: 8px;
   }
 
-  .modalLangButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-
-    width: 42px;
-    height: 42px;
-    padding: 0;
-
-    border: none;
-    border-radius: 50%;
-    background: $color-transparent-gray;
-    cursor: pointer;
-    transition: $transition-fast;
-
-    &:hover {
-      background: $color-transparent-gray-hover;
-    }
-
-    img {
-      width: 22px;
-      height: 22px;
-      display: block;
-      cursor: pointer;
-    }
-  }
-
   .title {
     margin: 0;
     font-size: 32px;
@@ -241,16 +213,6 @@ dialog {
       gap: 12px;
     }
 
-    .modalLangButton {
-      width: 32px;
-      height: 32px;
-
-      img {
-        width: 22px;
-        height: 22px;
-      }
-    }
-
     .title {
       font-size: 22px;
     }
@@ -287,6 +249,7 @@ dialog {
         min-height: 50px;
         padding: 12px 20px;
         font-size: 24px;
+
         img {
           width: 24px;
         }

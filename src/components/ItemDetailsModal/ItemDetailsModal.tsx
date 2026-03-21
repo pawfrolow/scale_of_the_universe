@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-import { Overlay } from '@/components';
+import { ModalDialog, ModalHeader, Overlay } from '@/components';
 
 interface IItemDetailsModalProps {
   isOpen: boolean;
@@ -23,19 +23,14 @@ export const ItemDetailsModal = ({
 }: IItemDetailsModalProps) => {
   return (
     <Overlay isOpen={isOpen} onBackdropClick={onClose}>
-      <div className={styles.itemDetailsDialog} role="dialog" aria-modal="true" aria-label={title}>
-        <div className={styles.itemDetailsHeader}>
-          <h2 className={styles.itemDetailsTitle}>{title}</h2>
-
-          <button
-            type="button"
-            className={styles.itemDetailsClose}
-            onClick={onClose}
-            aria-label="Close item details"
-          >
-            ×
-          </button>
-        </div>
+      <ModalDialog width="lg" ariaLabel={title}>
+        <ModalHeader
+          title={title}
+          onClose={onClose}
+          closeAriaLabel="Close item details"
+          align="start"
+          titleClassName={styles.itemDetailsTitle}
+        />
 
         <div className={styles.itemDetailsBody}>
           <div className={styles.itemDetailsImageWrap}>
@@ -46,7 +41,7 @@ export const ItemDetailsModal = ({
 
           <div className={styles.itemDetailsDescription}>{description}</div>
         </div>
-      </div>
+      </ModalDialog>
     </Overlay>
   );
 };

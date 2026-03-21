@@ -1,0 +1,54 @@
+@use '../../assets/css/variables.scss' as *;
+
+.iconButton {
+  padding: 0;
+  border: none;
+  background: none;
+  color: $text-primary-light;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+  transition: $transition-fast;
+
+  &:hover {
+    background: $surface-muted-hover-light;
+  }
+
+  img {
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.md {
+  width: $icon-button-size;
+  height: $icon-button-size;
+}
+
+.lg {
+  width: $icon-button-size-lg;
+  height: $icon-button-size-lg;
+}
+
+.round {
+  border-radius: 50%;
+  background: $color-transparent-gray;
+}
+
+:global(.dark) {
+  .iconButton {
+    color: $text-primary-dark;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .lg {
+    width: $icon-button-size-mobile;
+    height: $icon-button-size-mobile;
+  }
+}

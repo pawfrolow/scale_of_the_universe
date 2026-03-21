@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
+import { IconButton } from '@/components';
 import { CREDIT_LINKS } from '@/config';
 import { ymClick } from '@/helpers/ymClick';
 
@@ -35,22 +36,23 @@ export const StartModal = ({
         <div className={styles.modalHeader}>
           <h1 className={styles.title}>{title}</h1>
 
-          <button
-            type="button"
-            className={styles.modalLangButton}
+          <IconButton
             onClick={onOpenLanguageModal}
-            aria-label="Select language"
-          >
-            <img src="img/icons/language.svg" alt="Language" />
-          </button>
-          <button
-            type="button"
-            className={styles.modalLangButton}
+            iconSrc="img/icons/language.svg"
+            alt="Language"
+            ariaLabel="Select language"
+            size="lg"
+            round
+          />
+
+          <IconButton
             onClick={onOpenDonateModal}
-            aria-label="Support"
-          >
-            <img src="img/icons/pay.svg" alt="Support" />
-          </button>
+            iconSrc="img/icons/pay.svg"
+            alt="Support"
+            ariaLabel="Support"
+            size="lg"
+            round
+          />
         </div>
 
         <div className={styles.infoRow}>

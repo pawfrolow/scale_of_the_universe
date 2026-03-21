@@ -7,3 +7,7 @@ export { Overlay } from './Overlay/Overlay';
 export { ItemDetailsModal } from './ItemDetailsModal/ItemDetailsModal';
 export { Loader } from './Loader/Loader';
 export { DonateModal } from './DonateModal/DonateModal';
+export { CloseButton } from './CloseButton/CloseButton';
+export { ModalDialog } from './ModalDialog/ModalDialog';
+export { ModalHeader } from './ModalHeader/ModalHeader';
+export { IconButton } from './IconButton/IconButton';

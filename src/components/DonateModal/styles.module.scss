@@ -1,54 +1,5 @@
 @use '../../assets/css/variables.scss' as *;
 
-.donateDialog {
-  width: min(560px, calc(100vw - 32px));
-  max-height: min(80vh, 760px);
-  overflow: auto;
-  border-radius: 20px;
-  background: $color-white;
-  color: $color-text-dark;
-  box-shadow: $shadow-dialog;
-  padding: 20px;
-}
-
-.donateHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.donateTitle {
-  margin: 0;
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: 700;
-  color: $color-text-dark;
-}
-
-.donateClose {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: none;
-  border-radius: 10px;
-  background: transparent;
-  color: $color-text-dark;
-  font-size: 30px;
-  line-height: 1;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &:hover {
-    background: $color-transparent-gray-hover;
-  }
-}
-
 .donateBody {
   display: flex;
   flex-direction: column;
@@ -58,7 +9,7 @@
 .donateDescription {
   font-size: 16px;
   line-height: 1.6;
-  color: $color-text-dark;
+  color: $text-primary-light;
   white-space: pre-line;
 }
 
@@ -71,32 +22,67 @@
 
 .donateLink {
   padding: 12px 16px;
-  border-radius: 14px;
   display: inline-flex;
   gap: 8px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba($color-text-dark, 0.12);
+
+  border: 1px solid $border-light;
   border-radius: 10px;
-  background: rgba($color-text-dark, 0.04);
-  color: $color-text-dark;
+  background: $surface-muted-light;
+  color: $text-primary-light;
   text-decoration: none;
   transition:
     transform 0.15s ease,
-    background 0.15s ease;
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
 
   &:hover {
-    background: $color-transparent-gray-hover;
+    transform: translateY(-2px);
+    background: $surface-muted-hover-light;
   }
-}
-
-.donateLink:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.14);
 }
 
 .donateLinkIcon {
   width: 28px;
   height: 28px;
   object-fit: contain;
+}
+
+:global(.dark) {
+  .donateDescription {
+    color: rgba($color-white, 0.82);
+  }
+
+  .donateLink {
+    border-color: $border-dark;
+    background: $surface-muted-dark;
+    color: $text-primary-dark;
+
+    &:hover {
+      background: $surface-muted-hover-dark;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .donateBody {
+    gap: 16px;
+  }
+
+  .donateDescription {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .donateLinks {
+    gap: 10px;
+  }
+
+  .donateLink {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px;
+  }
 }

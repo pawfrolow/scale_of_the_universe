@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
-import { Overlay } from '@/components';
+import { ModalDialog, ModalHeader, Overlay } from '@/components';
 import { DONATE_LINKS } from '@/config';
 import { ymClick } from '@/helpers/ymClick';
 
@@ -21,24 +21,12 @@ export const DonateModal = ({ isOpen, onClose }: IDonateModalProps) => {
 
   return (
     <Overlay isOpen={isOpen} onBackdropClick={onClose}>
-      <div
-        className={styles.donateDialog}
-        role="dialog"
-        aria-modal="true"
-        aria-label={t('html.donate.title', { ns: 'ui' })}
-      >
-        <div className={styles.donateHeader}>
-          <h2 className={styles.donateTitle}>{t('html.donate.title', { ns: 'ui' })}</h2>
-
-          <button
-            type="button"
-            className={styles.donateClose}
-            onClick={onClose}
-            aria-label={t('html.donate.closeAriaLabel', { ns: 'ui' })}
-          >
-            ×
-          </button>
-        </div>
+      <ModalDialog width="md" ariaLabel={t('html.donate.title', { ns: 'ui' })}>
+        <ModalHeader
+          title={t('html.donate.title', { ns: 'ui' })}
+          onClose={onClose}
+          closeAriaLabel={t('html.donate.closeAriaLabel', { ns: 'ui' })}
+        />
 
         <div className={styles.donateBody}>
           <div className={styles.donateDescription}>
@@ -63,7 +51,7 @@ export const DonateModal = ({ isOpen, onClose }: IDonateModalProps) => {
             ))}
           </div>
         </div>
-      </div>
+      </ModalDialog>
     </Overlay>
   );
 };
