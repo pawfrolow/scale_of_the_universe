@@ -1,0 +1,47 @@
+@use '../../assets/css/variables.scss' as *;
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.center {
+  align-items: center;
+}
+
+.start {
+  align-items: flex-start;
+}
+
+.modalTitle {
+  margin: 0;
+  color: $text-primary-light;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+:global(.dark) {
+  .modalTitle {
+    color: $text-primary-dark;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .modalHeader {
+    margin-bottom: 14px;
+  }
+
+  .modalTitle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .modalTitle {
+    font-size: 18px;
+  }
+}

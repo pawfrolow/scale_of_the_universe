@@ -3,10 +3,14 @@ import { KawaseBlurFilter } from 'pixi-filters';
 import { Application, Container, Texture } from 'pixi.js-legacy';
 import * as PIXI from 'pixi.js-legacy';
 
-import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '../config';
-import { E } from '../helpers/e';
-import { getScaleText } from '../helpers/getScaleText';
-import { map } from '../helpers/map';
+import { Item } from './item';
+import { Ring } from './ring';
+import { Slider } from './slider';
+
+import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '@/config';
+import { E } from '@/helpers/e';
+import { getScaleText } from '@/helpers/getScaleText';
+import { map } from '@/helpers/map';
 import {
   ExtraText,
   ItemModalData,
@@ -14,12 +18,8 @@ import {
   TextDatum,
   TItemsManifest,
   VisualLocation,
-} from '../interfaces';
-import { translationService } from '../services/translation.service';
-
-import { Item } from './item';
-import { Ring } from './ring';
-import { Slider } from './slider';
+} from '@/interfaces';
+import { translationService } from '@/services/translation.service';
 
 type TObjectTranslation = {
   title: string;

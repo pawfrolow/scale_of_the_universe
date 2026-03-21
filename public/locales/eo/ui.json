@@ -28,6 +28,11 @@
       "webDev": "Reta evoluigo: Matthew Martori",
       "copyright": "Copyright ©: Cary kaj Michael Huang",
       "translationAndDev": "Traduko, evoluigo: Pavel Frolov"
+    },
+    "donate": {
+      "title": "Subtenu la projekton",
+      "description": "Mi evoluigas ĉi tiun projekton en mia libera tempo kaj iom post iom plibonigas ĝian enhavon, tradukojn, interfacon kaj rendimenton.\n\nSe al vi plaĉas Scale of the Universe, vi povas subteni la projekton per donaco.",
+      "closeAriaLabel": "Fermi la subtenan fenestron"
     }
   }
 }

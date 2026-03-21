@@ -1,3 +1,5 @@
+import { ymClick } from './ymClick';
+
 /* eslint-disable no-console */
 export function enterFullscreen(element: HTMLElement = document.documentElement) {
   const target = element as HTMLElement & {
@@ -58,6 +60,7 @@ export function exitFullscreen() {
 }
 
 export function toggleFullscreen(element: HTMLElement = document.documentElement) {
+  ymClick('toggleFullscreen', { mode: document.fullscreenElement ? 'exit' : 'enter' });
   if (document.fullscreenElement) {
     exitFullscreen();
   } else {

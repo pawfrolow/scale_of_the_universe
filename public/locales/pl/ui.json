@@ -28,6 +28,11 @@
       "webDev": "Tworzenie wersji internetowej: Matthew Martori",
       "copyright": "Copyright ©: Cary i Michael Huang",
       "translationAndDev": "Tłumaczenie, rozwój: Pavel Frolov"
+    },
+    "donate": {
+      "title": "Wesprzyj projekt",
+      "description": "Rozwijam ten projekt w wolnym czasie i stopniowo ulepszam jego treść, tłumaczenia, interfejs oraz wydajność.\n\nJeśli podoba Ci się Scale of the Universe, możesz wesprzeć projekt darowizną.",
+      "closeAriaLabel": "Zamknij okno wsparcia"
     }
   }
 }

@@ -1,0 +1,43 @@
+@use '../../assets/css/variables.scss' as *;
+
+.closeButton {
+  flex-shrink: 0;
+  width: $close-button-size;
+  height: $close-button-size;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: $text-primary-light;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: $transition-fast;
+
+  &:hover {
+    background: $surface-muted-hover-light;
+  }
+}
+
+:global(.dark) {
+  .closeButton {
+    color: $text-primary-dark;
+
+    &:hover {
+      background: $surface-muted-hover-dark;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .closeButton {
+    width: $close-button-size-mobile;
+    height: $close-button-size-mobile;
+    font-size: 28px;
+  }
+}

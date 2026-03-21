@@ -1,4 +1,4 @@
-import { TItemsManifest, TItemsOverride } from '../interfaces';
+import { TItemsManifest, TItemsOverride } from '@/interfaces';
 
 const normalizeId = (id: string | number) => String(id).padStart(3, '0');
 

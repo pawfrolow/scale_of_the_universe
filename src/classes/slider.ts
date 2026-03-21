@@ -1,7 +1,7 @@
 import { Graphics, Application, Container, Point, Ticker } from 'pixi.js-legacy';
 import { Tweenable } from 'shifty';
 
-import { getCssPxVar } from '../helpers/getCssPxVar';
+import { getCssPxVar } from '@/helpers/getCssPxVar';
 
 const WIDTH_PERCENT = 0.9;
 const HEIGHT_PERCENT = 0.05;

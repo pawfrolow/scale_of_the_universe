@@ -1,16 +1,24 @@
 import React from 'react';
 
-import { toggleFullscreen } from '../../helpers/fullscreen';
-
 import styles from './styles.module.scss';
+
+import { IconButton } from '@/components';
+import { isLocalhost, isProduction } from '@/config';
+import { toggleFullscreen } from '@/helpers/fullscreen';
 
 interface IControlsProps {
   isMuted: boolean;
   onToggleMute: () => void;
   onOpenLanguageModal: () => void;
+  onOpenDonateModal: () => void;
 }
 
-export const Controls = ({ isMuted, onToggleMute, onOpenLanguageModal }: IControlsProps) => {
+export const Controls = ({
+  isMuted,
+  onToggleMute,
+  onOpenLanguageModal,
+  onOpenDonateModal,
+}: IControlsProps) => {
   const handleHomeClick = () => {
     window.location.reload();
   };
@@ -25,25 +33,42 @@ export const Controls = ({ isMuted, onToggleMute, onOpenLanguageModal }: IContro
 
   return (
     <div id="buttons" className={styles.buttons}>
-      <button onClick={handleHomeClick} className={styles.lang} type="button">
-        <img src="img/icons/home.svg" alt="Home" />
-      </button>
+      {(isLocalhost || isProduction) && (
+        <IconButton
+          onClick={onOpenDonateModal}
+          iconSrc="img/icons/pay.svg"
+          alt="Donate"
+          ariaLabel="Support project"
+        />
+      )}
 
-      <button onClick={onOpenLanguageModal} type="button" aria-label="Select language">
-        <img src="img/icons/language.svg" alt="Language" />
-      </button>
+      <IconButton
+        onClick={handleHomeClick}
+        iconSrc="img/icons/home.svg"
+        alt="Home"
+        ariaLabel="Home"
+      />
 
-      <button onClick={onToggleMute} type="button" aria-label={isMuted ? 'Unmute' : 'Mute'}>
-        {isMuted ? (
-          <img src="img/icons/speaker_muted.svg" alt="Mute" />
-        ) : (
-          <img src="img/icons/speaker_active.svg" alt="Unmute" />
-        )}
-      </button>
+      <IconButton
+        onClick={onOpenLanguageModal}
+        iconSrc="img/icons/language.svg"
+        alt="Language"
+        ariaLabel="Select language"
+      />
 
-      <button onClick={handleFullscreenClick} type="button" aria-label="Fullscreen">
-        <img src="img/icons/fullscreen.svg" alt="Fullscreen" />
-      </button>
+      <IconButton
+        onClick={onToggleMute}
+        iconSrc={isMuted ? 'img/icons/speaker_muted.svg' : 'img/icons/speaker_active.svg'}
+        alt={isMuted ? 'Mute' : 'Unmute'}
+        ariaLabel={isMuted ? 'Unmute' : 'Mute'}
+      />
+
+      <IconButton
+        onClick={handleFullscreenClick}
+        iconSrc="img/icons/fullscreen.svg"
+        alt="Fullscreen"
+        ariaLabel="Fullscreen"
+      />
     </div>
   );
 };

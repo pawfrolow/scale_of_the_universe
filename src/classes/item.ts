@@ -1,13 +1,14 @@
 import { Sprite, Text, Container, Texture, Point, DisplayObject, Rectangle } from 'pixi.js-legacy';
 
-import { calculateScale } from '../helpers/calculateScale';
-import { getGraphics } from '../helpers/description';
-import { E } from '../helpers/e';
-import { powToUnit } from '../helpers/powToUnit';
-import { TextDatum, VisualLocation, SizeData, ExtraText, SpriteLayout } from '../interfaces';
-import { ItemModalData } from '../interfaces';
-
 import { Entity } from './entity';
+
+import { calculateScale } from '@/helpers/calculateScale';
+import { getGraphics } from '@/helpers/description';
+import { E } from '@/helpers/e';
+import { powToUnit } from '@/helpers/powToUnit';
+import { ymClick } from '@/helpers/ymClick';
+import { TextDatum, VisualLocation, SizeData, ExtraText, SpriteLayout } from '@/interfaces';
+import { ItemModalData } from '@/interfaces';
 
 type THoleShape = {
   type: 'circle';
@@ -250,6 +251,8 @@ export class Item extends Entity {
 
     function onPointerTap(event) {
       event?.stopPropagation?.();
+
+      ymClick('clickObject', { id: here.textureId });
 
       here.onClick(here);
     }

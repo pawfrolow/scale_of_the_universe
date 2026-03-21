@@ -2,6 +2,7 @@ import { resolve } from 'path';
 
 import legacy from '@vitejs/plugin-legacy';
 import { defineConfig } from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   base: './',
@@ -11,6 +12,7 @@ export default defineConfig({
     legacy({
       targets: ['defaults', 'not IE 11'],
     }),
+    tsconfigPaths(),
   ],
   build: {
     outDir: '../dist',

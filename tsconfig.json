@@ -10,7 +10,10 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "exclude": ["node_modules"],
   "include": ["src/**/*", "typings.d.ts"]

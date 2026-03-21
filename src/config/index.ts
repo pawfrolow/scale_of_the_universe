@@ -29,3 +29,24 @@ export const LANGUAGE_OPTIONS = [
   { code: 'fa', label: 'فارسی' },
   { code: 'tr', label: 'Türkçe' },
 ];
+
+export const APP_HOST = 'universe.pavelfrolov.com';
+
+export const isLocalhost = window.location.hostname === 'localhost';
+
+export const isProduction = window.location.host === 'universe.pavelfrolov.com';
+
+export const CREDIT_LINKS = {
+  webDev: 'https://github.com/matttt/scale_of_the_universe',
+  copyright: 'https://www.htwins.net/scale2/',
+  pawfrolow: 'https://github.com/pawfrolow/scale_of_the_universe',
+};
+
+export const DONATE_LINKS = [
+  {
+    key: 'boosty',
+    href: 'https://boosty.to/pawfrolow/donate',
+    label: 'Boosty',
+    iconSrc: 'img/icons/boosty.svg',
+  },
+];

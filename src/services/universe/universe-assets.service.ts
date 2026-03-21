@@ -1,12 +1,12 @@
 import * as PIXI from 'pixi.js-legacy';
 import { Assets } from 'pixi.js-legacy';
 
-import { nextFrame } from '../../helpers/nextFrame';
-import { TItemsManifest, TItemsOverride } from '../../interfaces';
-import { http } from '../http.service';
-import { queryClient } from '../query-client';
-
 import { universeQueryKeys } from './universe.query-keys';
+
+import { nextFrame } from '@/helpers/nextFrame';
+import { TItemsManifest, TItemsOverride } from '@/interfaces';
+import { http } from '@/services/http.service';
+import { queryClient } from '@/services/query-client';
 
 type TLoadAssetsParams = {
   locale: string;
@@ -22,25 +22,22 @@ const chunkArray = <T>(items: T[], chunkSize: number): T[][] => {
   for (let i = 0; i < items.length; i += chunkSize) {
     chunks.push(items.slice(i, i + chunkSize));
   }
-
   return chunks;
 };
 
-const loadTextureWithCache = async (
-  locale: string,
-  id: string,
-  src: string,
-): Promise<PIXI.Texture> => {
-  return queryClient.fetchQuery({
-    queryKey: universeQueryKeys.texture(locale, id, src),
-    staleTime: Infinity,
-    gcTime: Infinity,
-    retry: 3,
-    queryFn: async () => {
-      const loaded = await Assets.load(src);
-      return loaded as PIXI.Texture;
-    },
-  });
+const textureCache = new Map<string, Promise<PIXI.Texture>>();
+
+const loadTextureWithCache = (src: string): Promise<PIXI.Texture> => {
+  const cached = textureCache.get(src);
+
+  if (cached) {
+    return cached;
+  }
+
+  const promise = Assets.load(src).then((loaded) => loaded as PIXI.Texture);
+  textureCache.set(src, promise);
+
+  return promise;
 };
 
 export const universeAssetsService = {
@@ -82,7 +79,6 @@ export const universeAssetsService = {
   },
 
   async loadItemTextures({
-    locale,
     textureIds,
     manifest,
     textureSourceMap,
@@ -94,41 +90,39 @@ export const universeAssetsService = {
     const total = textureIds.length;
     let loadedCount = 0;
 
-    const chunks = chunkArray(textureIds, 20);
+    const chunks = chunkArray(textureIds, 40);
 
     for (const batch of chunks) {
-      const loadedBatch = await Promise.all(
+      const loadedBatch = await Promise.allSettled(
         batch.map(async (id) => {
-          try {
-            const src = textureSourceMap[id] ?? `img/textures/items/${id}.png`;
-            const texture = await loadTextureWithCache(locale, id, src);
+          const src = textureSourceMap[id] ?? `img/textures/items/${id}.webp`;
+          const texture = await loadTextureWithCache(src);
 
-            const baseTexture = texture.baseTexture;
+          const baseTexture = texture.baseTexture;
 
-            if (baseTexture.resolution !== manifestScale) {
-              baseTexture.setResolution(manifestScale);
-              baseTexture.update();
-            }
-
-            return { id, texture };
-          } catch (error) {
-            // eslint-disable-next-line no-console
-            console.warn(`Failed to load texture id=${id}`, error);
-            return null;
+          if (baseTexture.resolution !== manifestScale) {
+            baseTexture.setResolution(manifestScale);
+            baseTexture.update();
           }
+
+          return { id, texture };
         }),
       );
 
       for (const entry of loadedBatch) {
         loadedCount += 1;
 
-        if (entry) {
-          result[entry.id] = entry.texture;
+        if (entry.status === 'fulfilled') {
+          result[entry.value.id] = entry.value.texture;
+        } else {
+          // eslint-disable-next-line no-console
+          console.warn('Failed to load texture', entry.reason);
         }
 
         onProgress?.(loadedCount, total);
-        await nextFrame();
       }
+
+      await nextFrame();
     }
 
     return result;

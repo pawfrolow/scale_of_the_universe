@@ -21,6 +21,7 @@ $shadow-soft:
 $shadow-dialog:
   0 0 40px rgba(0, 0, 0, 0.1),
   0 0 10px rgba(0, 0, 0, 0.25);
+
 $radius-pill: 40px;
 
 $font-size-base: 16px;
@@ -34,5 +35,48 @@ $transition-fast: all 0.2s ease-out;
 $transition-hd: background 0.75s;
 
 $dialog-width: 650px;
-
 $start-button-width: 250px;
+
+/* Theme tokens */
+
+$surface-dialog-light: $color-white;
+$surface-dialog-dark: linear-gradient(
+  0deg,
+  $color-space-1 0%,
+  $color-space-2 50%,
+  $color-space-1 100%
+);
+
+$text-primary-light: $color-text-dark;
+$text-primary-dark: $color-white;
+
+$text-secondary-light: rgba($color-text-dark, 0.8);
+$text-secondary-dark: rgba($color-white, 0.8);
+
+$surface-muted-light: rgba($color-text-dark, 0.04);
+$surface-muted-dark: rgba($color-white, 0.04);
+
+$surface-muted-hover-light: $color-transparent-gray-hover;
+$surface-muted-hover-dark: rgba($color-white, 0.1);
+
+$border-light: rgba($color-text-dark, 0.12);
+$border-dark: rgba($color-white, 0.18);
+
+$overlay-light: rgba($color-white, 0.45);
+$overlay-dark: rgba($color-space-1, 0.45);
+
+$overlay-border-dark: rgba($color-primary, 0.5);
+
+$modal-radius-desktop: 16px;
+$modal-radius-mobile: 14px;
+
+$modal-padding-desktop: 20px;
+$modal-padding-mobile: 16px;
+$modal-padding-mobile-sm: 14px;
+
+$icon-button-size: 32px;
+$icon-button-size-lg: 42px;
+$icon-button-size-mobile: 32px;
+
+$close-button-size: 40px;
+$close-button-size-mobile: 36px;

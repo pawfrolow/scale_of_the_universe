@@ -1,0 +1,71 @@
+@use '../../assets/css/variables.scss' as *;
+
+.modalDialog {
+  width: min(560px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px - var(--safe-area-top) - var(--safe-area-bottom));
+  overflow: auto;
+
+  padding: $modal-padding-desktop;
+  border: none;
+  border-radius: $modal-radius-desktop;
+  background: $surface-dialog-light;
+  color: $text-primary-light;
+  box-shadow: $shadow-dialog;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sm {
+  width: min(420px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+}
+
+.md {
+  width: min(560px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+}
+
+.lg {
+  width: min(720px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+}
+
+:global(.dark) {
+  .modalDialog {
+    background: $surface-dialog-dark;
+    color: $text-primary-dark;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .modalDialog {
+    width: calc(100vw - 16px);
+    max-width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px - var(--safe-area-top) - var(--safe-area-bottom));
+    padding: $modal-padding-mobile;
+    border-radius: $modal-radius-mobile;
+  }
+
+  .sm,
+  .md,
+  .lg {
+    width: calc(100vw - 16px);
+    max-width: calc(100vw - 16px);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .modalDialog {
+    width: calc(100vw - 12px);
+    max-width: calc(100vw - 12px);
+    padding: $modal-padding-mobile-sm;
+  }
+
+  .sm,
+  .md,
+  .lg {
+    width: calc(100vw - 12px);
+    max-width: calc(100vw - 12px);
+  }
+}

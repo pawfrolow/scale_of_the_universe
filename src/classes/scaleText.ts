@@ -1,6 +1,6 @@
 import { Text, Container } from 'pixi.js-legacy';
 
-import { map } from '../helpers/map';
+import { map } from '@/helpers/map';
 
 export class ScaleText {
   public textSpace: Text;

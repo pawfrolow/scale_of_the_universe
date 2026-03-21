@@ -1,0 +1,88 @@
+@use '../../assets/css/variables.scss' as *;
+
+.donateBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donateDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: $text-primary-light;
+  white-space: pre-line;
+}
+
+.donateLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.donateLink {
+  padding: 12px 16px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid $border-light;
+  border-radius: 10px;
+  background: $surface-muted-light;
+  color: $text-primary-light;
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: $surface-muted-hover-light;
+  }
+}
+
+.donateLinkIcon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+:global(.dark) {
+  .donateDescription {
+    color: rgba($color-white, 0.82);
+  }
+
+  .donateLink {
+    border-color: $border-dark;
+    background: $surface-muted-dark;
+    color: $text-primary-dark;
+
+    &:hover {
+      background: $surface-muted-hover-dark;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .donateBody {
+    gap: 16px;
+  }
+
+  .donateDescription {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .donateLinks {
+    gap: 10px;
+  }
+
+  .donateLink {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px;
+  }
+}

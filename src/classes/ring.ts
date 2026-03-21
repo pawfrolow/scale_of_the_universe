@@ -1,10 +1,10 @@
 import { Text, Container, Point, Texture } from 'pixi.js-legacy';
 
-import { calculateScale } from '../helpers/calculateScale';
-import { E } from '../helpers/e';
-import { VisualLocation, SizeData, TextDatum, SpriteLayout } from '../interfaces';
-
 import { Entity } from './entity';
+
+import { calculateScale } from '@/helpers/calculateScale';
+import { E } from '@/helpers/e';
+import { VisualLocation, SizeData, TextDatum, SpriteLayout } from '@/interfaces';
 
 export class Ring extends Entity {
   private coeff: number = 1;
