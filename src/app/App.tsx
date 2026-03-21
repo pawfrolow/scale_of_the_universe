@@ -10,7 +10,7 @@ import {
   LanguageModal,
   Loader,
   LoadingOverlay,
-  StartModal,
+  StartScreen,
   UniverseCanvas,
 } from '@/components';
 import { MUTED_STORAGE_KEY } from '@/config';
@@ -176,14 +176,50 @@ export const App = () => {
 
   return (
     <>
-      <StartModal
-        title={t('html.modal.title', { ns: 'ui' })}
-        startText={t('html.modal.startButton', { ns: 'ui' })}
-        isOpen={!hasEnteredApp}
-        onStart={handleStart}
-        onOpenLanguageModal={handleOpenLanguageModal}
-        onOpenDonateModal={handleOpenDonateModal}
-      />
+      <div className={styles.frameStyle} id="frame">
+        <div className={`${styles.bgEarth} ${styles.fullBg}`} id="earthBgImage" />
+        <div className={`${styles.bgSpace} ${styles.fullBg}`} id="spaceBgImage" />
+
+        <StartScreen
+          title={t('html.modal.title', { ns: 'ui' })}
+          startText={t('html.modal.startButton', { ns: 'ui' })}
+          isVisible={!hasEnteredApp}
+          onStart={handleStart}
+          onOpenLanguageModal={handleOpenLanguageModal}
+          onOpenDonateModal={handleOpenDonateModal}
+        />
+
+        <div
+          className={styles.universeLayer}
+          style={{ visibility: hasEnteredApp && isAssetsReady ? 'visible' : 'hidden' }}
+        >
+          <Controls
+            isMuted={isMuted}
+            onToggleMute={handleToggleMute}
+            onOpenLanguageModal={handleOpenLanguageModal}
+            onOpenDonateModal={handleOpenDonateModal}
+          />
+
+          <UniverseCanvas
+            key={universeKey}
+            isStarted={isStarted}
+            onAssetsLoading={handleAssetsLoading}
+            onAssetsReady={handleAssetsReady}
+            onAssetsProgress={handleAssetsProgress}
+            onItemModalOpen={handleItemModalOpen}
+            onItemModalClose={handleItemModalClose}
+          />
+
+          <ItemDetailsModal
+            isOpen={Boolean(itemModalData)}
+            imageSrc={itemModalData?.imageSrc ?? ''}
+            title={itemModalData?.title ?? ''}
+            subtitle={itemModalData?.subtitle ?? ''}
+            description={itemModalData?.description ?? ''}
+            onClose={handleItemModalClose}
+          />
+        </div>
+      </div>
 
       <LanguageModal
         isOpen={isLanguageModalOpen}
@@ -199,41 +235,6 @@ export const App = () => {
         progress={assetsProgress}
         title={t('html.modal.startLoading', { ns: 'ui' })}
       />
-
-      <div
-        id="frame"
-        className={styles.frameStyle}
-        style={{ visibility: hasEnteredApp && isAssetsReady ? 'visible' : 'hidden' }}
-      >
-        <Controls
-          isMuted={isMuted}
-          onToggleMute={handleToggleMute}
-          onOpenLanguageModal={handleOpenLanguageModal}
-          onOpenDonateModal={handleOpenDonateModal}
-        />
-
-        <div className={`${styles.bgEarth} ${styles.fullBg}`} id="earthBgImage" />
-        <div className={`${styles.bgSpace} ${styles.fullBg}`} id="spaceBgImage" />
-
-        <UniverseCanvas
-          key={universeKey}
-          isStarted={isStarted}
-          onAssetsLoading={handleAssetsLoading}
-          onAssetsReady={handleAssetsReady}
-          onAssetsProgress={handleAssetsProgress}
-          onItemModalOpen={handleItemModalOpen}
-          onItemModalClose={handleItemModalClose}
-        />
-
-        <ItemDetailsModal
-          isOpen={Boolean(itemModalData)}
-          imageSrc={itemModalData?.imageSrc ?? ''}
-          title={itemModalData?.title ?? ''}
-          subtitle={itemModalData?.subtitle ?? ''}
-          description={itemModalData?.description ?? ''}
-          onClose={handleItemModalClose}
-        />
-      </div>
     </>
   );
 };

@@ -4,55 +4,62 @@ import { useTranslation } from 'react-i18next';
 import styles from './styles.module.scss';
 
 import { IconButton } from '@/components';
-import { CREDIT_LINKS } from '@/config';
+import { CREDIT_LINKS, isLocalhost, isProduction } from '@/config';
 import { ymClick } from '@/helpers/ymClick';
 
-interface IStartModalProps {
+interface IStartScreenProps {
   title: string;
   startText: string;
-  isOpen: boolean;
+  isVisible: boolean;
   onStart: () => void;
   onOpenLanguageModal: () => void;
   onOpenDonateModal: () => void;
 }
 
-export const StartModal = ({
+export const StartScreen = ({
   title,
   startText,
-  isOpen,
+  isVisible,
   onStart,
   onOpenLanguageModal,
   onOpenDonateModal,
-}: IStartModalProps) => {
+}: IStartScreenProps) => {
   const { t } = useTranslation();
 
   const openLink = (link: string) => {
     ymClick('openLink', { link });
   };
 
+  if (!isVisible) {
+    return null;
+  }
+
   return (
-    <>
-      <dialog className={styles.startModal} open={isOpen}>
-        <div className={styles.modalHeader}>
-          <h1 className={styles.title}>{title}</h1>
+    <section className={styles.startScreen} aria-label={title}>
+      <div className={styles.actions}>
+        <IconButton
+          onClick={onOpenLanguageModal}
+          iconSrc="img/icons/language.svg"
+          alt="Language"
+          ariaLabel="Select language"
+          size="lg"
+          round
+        />
 
-          <IconButton
-            onClick={onOpenLanguageModal}
-            iconSrc="img/icons/language.svg"
-            alt="Language"
-            ariaLabel="Select language"
-            size="lg"
-            round
-          />
-
+        {(isLocalhost || isProduction) && (
           <IconButton
             onClick={onOpenDonateModal}
             iconSrc="img/icons/pay.svg"
             alt="Support"
-            ariaLabel="Support"
+            ariaLabel="Support project"
             size="lg"
             round
           />
+        )}
+      </div>
+      <div className={styles.content}>
+        <div className={styles.hero}>
+          <h1 className={styles.title}>{title}</h1>
         </div>
 
         <div className={styles.infoRow}>
@@ -67,7 +74,7 @@ export const StartModal = ({
           </div>
         </div>
 
-        <div className={styles.bottomRow}>
+        <div className={styles.bottomSection}>
           <div className={styles.credits}>
             <p>{t('html.credits.createdBy', { ns: 'ui' })}</p>
             <p>
@@ -113,9 +120,7 @@ export const StartModal = ({
             <span>{startText}</span>
           </button>
         </div>
-      </dialog>
-
-      <div className={styles.backdrop} />
-    </>
+      </div>
+    </section>
   );
 };
