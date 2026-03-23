@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
-import { IconButton } from '@/components';
-import { CREDIT_LINKS, isLocalhost, isProduction } from '@/config';
+import { Version } from '@/components';
+import { CREDIT_LINKS } from '@/config';
 import { ymClick } from '@/helpers/ymClick';
 
 interface IStartScreenProps {
@@ -12,18 +12,9 @@ interface IStartScreenProps {
   startText: string;
   isVisible: boolean;
   onStart: () => void;
-  onOpenLanguageModal: () => void;
-  onOpenDonateModal: () => void;
 }
 
-export const StartScreen = ({
-  title,
-  startText,
-  isVisible,
-  onStart,
-  onOpenLanguageModal,
-  onOpenDonateModal,
-}: IStartScreenProps) => {
+export const StartScreen = ({ title, startText, isVisible, onStart }: IStartScreenProps) => {
   const { t } = useTranslation();
 
   const openLink = (link: string) => {
@@ -36,27 +27,6 @@ export const StartScreen = ({
 
   return (
     <section className={styles.startScreen} aria-label={title}>
-      <div className={styles.actions}>
-        <IconButton
-          onClick={onOpenLanguageModal}
-          iconSrc="img/icons/language.svg"
-          alt="Language"
-          ariaLabel="Select language"
-          size="lg"
-          round
-        />
-
-        {(isLocalhost || isProduction) && (
-          <IconButton
-            onClick={onOpenDonateModal}
-            iconSrc="img/icons/pay.svg"
-            alt="Support"
-            ariaLabel="Support project"
-            size="lg"
-            round
-          />
-        )}
-      </div>
       <div className={styles.content}>
         <div className={styles.hero}>
           <h1 className={styles.title}>{title}</h1>
@@ -121,6 +91,7 @@ export const StartScreen = ({
           </button>
         </div>
       </div>
+      <Version />
     </section>
   );
 };

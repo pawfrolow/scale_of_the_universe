@@ -11,3 +11,5 @@ declare module '*.module.scss' {
 interface Window {
   ym: (...args) => void;
 }
+
+declare const __APP_VERSION__: string;

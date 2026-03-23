@@ -185,21 +185,12 @@ export const App = () => {
           startText={t('html.modal.startButton', { ns: 'ui' })}
           isVisible={!hasEnteredApp}
           onStart={handleStart}
-          onOpenLanguageModal={handleOpenLanguageModal}
-          onOpenDonateModal={handleOpenDonateModal}
         />
 
         <div
           className={styles.universeLayer}
           style={{ visibility: hasEnteredApp && isAssetsReady ? 'visible' : 'hidden' }}
         >
-          <Controls
-            isMuted={isMuted}
-            onToggleMute={handleToggleMute}
-            onOpenLanguageModal={handleOpenLanguageModal}
-            onOpenDonateModal={handleOpenDonateModal}
-          />
-
           <UniverseCanvas
             key={universeKey}
             isStarted={isStarted}
@@ -234,6 +225,14 @@ export const App = () => {
         isVisible={hasEnteredApp && isAssetsLoading}
         progress={assetsProgress}
         title={t('html.modal.startLoading', { ns: 'ui' })}
+      />
+
+      <Controls
+        hasEnteredApp={hasEnteredApp}
+        isMuted={isMuted}
+        onToggleMute={handleToggleMute}
+        onOpenLanguageModal={handleOpenLanguageModal}
+        onOpenDonateModal={handleOpenDonateModal}
       />
     </>
   );
