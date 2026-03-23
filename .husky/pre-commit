@@ -1,1 +1,4 @@
 npx lint-staged
+
+exec < /dev/tty
+node scripts/bump-version.js

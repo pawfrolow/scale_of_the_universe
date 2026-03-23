@@ -26,15 +26,6 @@
   justify-content: space-between;
 }
 
-.actions {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .hero {
   margin-top: auto;
   padding-top: 12px;
@@ -263,10 +254,6 @@
     min-height: 52px;
     padding: 12px 20px;
     font-size: 20px;
-  }
-
-  .actions {
-    gap: 6px;
   }
 }
 

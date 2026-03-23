@@ -4,6 +4,8 @@ import legacy from '@vitejs/plugin-legacy';
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
+import pkg from './package.json';
+
 export default defineConfig({
   base: './',
   root: 'src',
@@ -25,5 +27,8 @@ export default defineConfig({
     fs: {
       allow: ['..'],
     },
+  },
+  define: {
+    __APP_VERSION__: JSON.stringify(pkg.version),
   },
 });
