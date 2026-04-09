@@ -2,10 +2,28 @@ import i18next from 'i18next';
 import HttpBackend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 
-import { LANGUAGE_OPTIONS, LANGUAGE_STORAGE_KEY } from './config';
+import { LANGUAGE_OPTIONS, LANGUAGE_STORAGE_KEY, LEGACY_LANGUAGE_CODE_MAP } from './config';
 
 export const AVAILABLE_LANGUAGES = LANGUAGE_OPTIONS.map(({ code }) => code);
 export type TLanguage = (typeof AVAILABLE_LANGUAGES)[number];
+
+const normalizeLanguageCode = (language: string | null): TLanguage | null => {
+  if (!language) {
+    return null;
+  }
+
+  const normalizedLanguage = LEGACY_LANGUAGE_CODE_MAP[
+    language as keyof typeof LEGACY_LANGUAGE_CODE_MAP
+  ]
+    ? LEGACY_LANGUAGE_CODE_MAP[language as keyof typeof LEGACY_LANGUAGE_CODE_MAP]
+    : language;
+
+  if (AVAILABLE_LANGUAGES.includes(normalizedLanguage as TLanguage)) {
+    return normalizedLanguage as TLanguage;
+  }
+
+  return null;
+};
 
 const getPublicBasePath = () => {
   const base = './';
@@ -13,10 +31,14 @@ const getPublicBasePath = () => {
 };
 
 export const getStoredLanguage = (): TLanguage => {
-  const stored = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+  const stored = normalizeLanguageCode(localStorage.getItem(LANGUAGE_STORAGE_KEY));
 
-  if (stored && AVAILABLE_LANGUAGES.includes(stored as TLanguage)) {
-    return stored as TLanguage;
+  if (stored) {
+    if (localStorage.getItem(LANGUAGE_STORAGE_KEY) !== stored) {
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, stored);
+    }
+
+    return stored;
   }
 
   return 'ru';
