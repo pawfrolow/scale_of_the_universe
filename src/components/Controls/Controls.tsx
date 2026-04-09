@@ -41,7 +41,7 @@ export const Controls = ({
       {hasEnteredApp && (
         <IconButton
           onClick={handleHomeClick}
-          iconSrc="img/icons/home.svg"
+          iconSrc="/img/icons/home.svg"
           alt="Home"
           ariaLabel="Home"
         />
@@ -50,7 +50,7 @@ export const Controls = ({
       {(isLocalhost || isProduction) && (
         <IconButton
           onClick={onOpenDonateModal}
-          iconSrc="img/icons/pay.svg"
+          iconSrc="/img/icons/pay.svg"
           alt="Donate"
           ariaLabel="Support project"
         />
@@ -58,7 +58,7 @@ export const Controls = ({
 
       <IconButton
         onClick={onOpenLanguageModal}
-        iconSrc="img/icons/language.svg"
+        iconSrc="/img/icons/language.svg"
         alt="Language"
         ariaLabel="Select language"
       />
@@ -66,7 +66,7 @@ export const Controls = ({
       {hasEnteredApp && (
         <IconButton
           onClick={onToggleMute}
-          iconSrc={isMuted ? 'img/icons/speaker_muted.svg' : 'img/icons/speaker_active.svg'}
+          iconSrc={isMuted ? '/img/icons/speaker_muted.svg' : '/img/icons/speaker_active.svg'}
           alt={isMuted ? 'Mute' : 'Unmute'}
           ariaLabel={isMuted ? 'Unmute' : 'Mute'}
         />
@@ -75,7 +75,9 @@ export const Controls = ({
       {hasEnteredApp && (
         <IconButton
           onClick={handleFullscreenClick}
-          iconSrc={isFullscreen ? 'img/icons/fullscreen_hide.svg' : 'img/icons/fullscreen_open.svg'}
+          iconSrc={
+            isFullscreen ? '/img/icons/fullscreen_hide.svg' : '/img/icons/fullscreen_open.svg'
+          }
           alt={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
           ariaLabel={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
         />

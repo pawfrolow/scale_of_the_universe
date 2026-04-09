@@ -52,6 +52,6 @@ export const DONATE_LINKS = [
     key: 'boosty',
     href: 'https://boosty.to/pawfrolow/donate',
     label: 'Boosty',
-    iconSrc: 'img/icons/boosty.svg',
+    iconSrc: '/img/icons/boosty.svg',
   },
 ];

@@ -2,11 +2,12 @@
   "compilerOptions": {
     "jsx": "react",
     "noImplicitAny": false,
-    "target": "es2015",
+    "target": "es2016",
     "sourceMap": true,
     "baseUrl": ".",
     "rootDir": "src",
     "moduleResolution": "node",
+    "strictPropertyInitialization": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,

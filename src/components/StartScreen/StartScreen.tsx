@@ -34,12 +34,12 @@ export const StartScreen = ({ title, startText, isVisible, onStart }: IStartScre
 
         <div className={styles.infoRow}>
           <div className={styles.infoItem}>
-            <img src="img/slider.png" alt="Slider" />
+            <img src="/img/slider.png" alt="Slider" />
             <p>{t('html.modal.zoomHint', { ns: 'ui' })}</p>
           </div>
 
           <div className={styles.infoItem}>
-            <img src="img/object.png" alt="Object" />
+            <img src="/img/object.png" alt="Object" />
             <p>{t('html.modal.objectHint', { ns: 'ui' })}</p>
           </div>
         </div>
@@ -86,7 +86,7 @@ export const StartScreen = ({ title, startText, isVisible, onStart }: IStartScre
           </div>
 
           <button className={styles.startBtn} type="button" onClick={onStart}>
-            <img className={styles.startBtnIcon} width="25" src="img/icons/play.svg" alt="Play" />
+            <img className={styles.startBtnIcon} width="25" src="/img/icons/play.svg" alt="Play" />
             <span>{startText}</span>
           </button>
         </div>

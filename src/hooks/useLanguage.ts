@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import { getStoredLanguage, initI18n, setStoredLanguage, TLanguage } from '@/i18n';
+import { getInitialLanguage, initI18n, setStoredLanguage, TLanguage } from '@/i18n';
 
 export const useLanguage = () => {
   const [isI18nReady, setIsI18nReady] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState<TLanguage>(getStoredLanguage());
+  const [currentLanguage, setCurrentLanguage] = useState<TLanguage>(getInitialLanguage());
 
   useEffect(() => {
     initI18n(currentLanguage).then(() => {

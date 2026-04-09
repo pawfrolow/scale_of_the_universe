@@ -48,7 +48,7 @@ export const universeAssetsService = {
       gcTime: Infinity,
       retry: 3,
       queryFn: async () => {
-        const { data } = await http.get<TItemsManifest>('data/items.json');
+        const { data } = await http.get<TItemsManifest>('/data/items.json');
         return data;
       },
     });
@@ -63,7 +63,7 @@ export const universeAssetsService = {
       queryFn: async () => {
         try {
           const { data } = await http.get<TItemsOverride>(
-            `data/overrides/${locale}/items.override.json`,
+            `/data/overrides/${locale}/items.override.json`,
           );
 
           return data;
@@ -95,7 +95,7 @@ export const universeAssetsService = {
     for (const batch of chunks) {
       const loadedBatch = await Promise.allSettled(
         batch.map(async (id) => {
-          const src = textureSourceMap[id] ?? `img/textures/items/${id}.webp`;
+          const src = textureSourceMap[id] ?? `/img/textures/items/${id}.webp`;
           const texture = await loadTextureWithCache(src);
 
           const baseTexture = texture.baseTexture;

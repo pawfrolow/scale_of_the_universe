@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const http = axios.create({
-  baseURL: window.location.href,
+  baseURL: window.location.origin,
   timeout: 15000,
 });
 
