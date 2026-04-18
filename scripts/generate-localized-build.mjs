@@ -12,6 +12,9 @@ const manifestSourcePath = path.join(projectRoot, 'public', 'manifest.webmanifes
 
 const APP_ORIGIN = 'https://universe.pavelfrolov.com';
 const DEFAULT_LANGUAGE = 'ru';
+const CANONICAL_LANGUAGE_MAP = {
+  'en-GB': 'en',
+};
 const RTL_LANGUAGES = new Set(['ar', 'fa', 'he']);
 const OG_LOCALE_MAP = {
   ar: 'ar_AR',
@@ -52,6 +55,10 @@ const getLanguagePath = (language) => {
 
   return segment ? `/${segment}/` : '/';
 };
+
+const getCanonicalLanguage = (language) => CANONICAL_LANGUAGE_MAP[language] ?? language;
+
+const getCanonicalPath = (language) => getLanguagePath(getCanonicalLanguage(language));
 
 const getManifestFileName = (language) => {
   const segment = getLanguagePathSegment(language);
@@ -158,6 +165,8 @@ const loadLocales = async () => {
       return {
         language,
         path: getLanguagePath(language),
+        canonicalLanguage: getCanonicalLanguage(language),
+        canonicalPath: getCanonicalPath(language),
         dir: RTL_LANGUAGES.has(language) ? 'rtl' : 'ltr',
         title: buildSeoTitle({
           appTitle: ui.app?.title ?? ui.html?.modal?.title ?? ui.html?.meta?.ogTitle ?? 'Universe Scale',
@@ -185,23 +194,35 @@ const loadLocales = async () => {
         appTitle: ui.app?.title ?? ui.html?.modal?.title ?? 'Universe Scale',
         manifestFileName: getManifestFileName(language),
         ogLocale: OG_LOCALE_MAP[language] ?? 'en_US',
+        hreflangs: [],
       };
     }),
+  ).then((locales) =>
+    locales.map((locale) => ({
+      ...locale,
+      hreflangs: locales
+        .filter((candidate) => candidate.canonicalPath === locale.canonicalPath)
+        .map((candidate) => candidate.language),
+    })),
   );
 };
 
 const buildAlternateLinks = (locales) =>
   [
-    ...locales.map(
-      (locale) =>
-        `<link rel="alternate" hreflang="${locale.language}" href="${APP_ORIGIN}${locale.path}" />`,
-    ),
+    ...locales
+      .filter((locale) => locale.language === locale.canonicalLanguage)
+      .flatMap((locale) =>
+        locale.hreflangs.map(
+          (hreflang) =>
+            `<link rel="alternate" hreflang="${hreflang}" href="${APP_ORIGIN}${locale.canonicalPath}" />`,
+        ),
+      ),
     `<link rel="alternate" hreflang="x-default" href="${APP_ORIGIN}/" />`,
   ].join('\n    ');
 
 const localizeHtml = (html, locale, locales) => {
   let localizedHtml = html.replace(
-    /<html lang="[^"]*"(?: dir="[^"]*")?>/,
+    /<html[^>]*lang="[^"]*"[^>]*>/,
     `<html lang="${locale.language}" dir="${locale.dir}">`,
   );
 
@@ -215,7 +236,7 @@ const localizeHtml = (html, locale, locales) => {
   localizedHtml = replaceMetaContent(localizedHtml, 'name="twitter:title"', locale.ogTitle);
   localizedHtml = replaceMetaContent(localizedHtml, 'name="twitter:description"', locale.ogDescription);
   localizedHtml = replaceMetaContent(localizedHtml, 'name="twitter:image"', locale.ogImage);
-  localizedHtml = replaceLinkHref(localizedHtml, 'canonical', `${APP_ORIGIN}${locale.path}`);
+  localizedHtml = replaceLinkHref(localizedHtml, 'canonical', `${APP_ORIGIN}${locale.canonicalPath}`);
   localizedHtml = replaceLinkHref(localizedHtml, 'manifest', `/${locale.manifestFileName}`);
   localizedHtml = localizedHtml.replace('<!-- SEO_ALTERNATES -->', buildAlternateLinks(locales));
 
@@ -254,14 +275,21 @@ const writeManifests = async (locales) => {
 
 const writeSitemap = async (locales) => {
   const urls = locales
-    .map(
-      (locale) =>
-        `  <url>\n    <loc>${APP_ORIGIN}${locale.path}</loc>\n  </url>`,
-    )
+    .filter((locale) => locale.language === locale.canonicalLanguage)
+    .map((locale) => {
+      const alternates = locale.hreflangs
+        .map(
+          (hreflang) =>
+            `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${APP_ORIGIN}${locale.canonicalPath}" />`,
+        )
+        .join('\n');
+
+      return `  <url>\n    <loc>${APP_ORIGIN}${locale.canonicalPath}</loc>\n${alternates}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${APP_ORIGIN}/" />\n  </url>`;
+    })
     .join('\n');
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls}
 </urlset>
 `;
