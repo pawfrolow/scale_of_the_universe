@@ -1207,6 +1207,10 @@
     "331": {
       "title": "Vostok 1",
       "description": "Vostok 1 fue una nave espacial soviética monoplaza en la que Yuri Gagarin realizó el primer vuelo espacial tripulado de la historia el 12 de abril de 1961. El lanzamiento se efectuó desde Baikonur, el vuelo duró 108 minutos (una órbita alrededor de la Tierra) y el aterrizaje tuvo lugar en la región de Sarátov. La nave constaba de una cápsula de descenso y un módulo de instrumentos. La era de la cosmonáutica tripulada comenzó precisamente con Vostok 1."
+    },
+    "332": {
+      "title": "Bosón de Higgs",
+      "description": "El bosón de Higgs es una partícula elemental asociada al campo de Higgs, que ayuda a otras partículas a adquirir masa. Peter Higgs describió la existencia de esta partícula en 1964, y el bosón de Higgs no fue detectado hasta 2012 en el Gran Colisionador de Hadrones."
     }
   }
 }
