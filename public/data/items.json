@@ -7106,6 +7106,28 @@
         "width": 320,
         "height": 290.667
       }
+    },
+    "333": {
+      "size": {
+        "exponent": -5,
+        "coeff": 2,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": -590.5,
+        "titleY": 208.9,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": -100.7,
+        "descriptionY": 100.1,
+        "zoomOffset": 0.05
+      },
+      "layout": {
+        "x": -590,
+        "y": 81.333,
+        "width": 320,
+        "height": 320
+      }
     }
   },
   "meta": {

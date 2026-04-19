@@ -1211,6 +1211,10 @@
     "332": {
       "title": "Bóson de Higgs",
       "description": "O bóson de Higgs é uma partícula elementar associada ao campo de Higgs, que ajuda outras partículas a adquirirem massa. Peter Higgs descreveu a existência dessa partícula em 1964, e o bóson de Higgs só foi detectado em 2012 no Grande Colisor de Hádrons."
+    },
+    "333": {
+      "title": "Neurónio humano",
+      "description": "Um neurónio é uma célula do sistema nervoso que recebe, processa e transmite sinais. Graças aos neurónios, podemos pensar, mover-nos, sentir dor, reconhecer rostos e recordar acontecimentos. O tamanho do corpo celular de um neurónio varia normalmente entre 5 e 120-150 micrómetros, consoante o seu tipo."
     }
   }
 }

@@ -1211,6 +1211,10 @@
     "332": {
       "title": "Higgsbosonen",
       "description": "Higgsbosonen är en elementarpartikel som är kopplad till Higgsfältet, vilket hjälper andra partiklar att få massa. Peter Higgs beskrev existensen av denna partikel 1964, men Higgsbosonen upptäcktes först 2012 vid Large Hadron Collider."
+    },
+    "333": {
+      "title": "Mänsklig neuron",
+      "description": "En neuron är en cell i nervsystemet som tar emot, bearbetar och överför signaler. Tack vare neuroner kan vi tänka, röra oss, känna smärta, känna igen ansikten och minnas händelser. Storleken på en neurons cellkropp är vanligtvis mellan 5 och 120-150 mikrometer, beroende på typ."
     }
   }
 }

@@ -1211,6 +1211,10 @@
     "332": {
       "title": "Bosón de Higgs",
       "description": "El bosón de Higgs es una partícula elemental asociada al campo de Higgs, que ayuda a otras partículas a adquirir masa. Peter Higgs describió la existencia de esta partícula en 1964, y el bosón de Higgs no fue detectado hasta 2012 en el Gran Colisionador de Hadrones."
+    },
+    "333": {
+      "title": "Neurona humana",
+      "description": "Una neurona es una célula del sistema nervioso que recibe, procesa y transmite señales. Gracias a las neuronas podemos pensar, movernos, sentir dolor, reconocer rostros y recordar acontecimientos. El tamaño del cuerpo de una neurona suele variar entre 5 y 120-150 micrómetros, según su tipo."
     }
   }
 }

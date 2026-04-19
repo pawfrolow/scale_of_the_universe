@@ -1211,6 +1211,10 @@
     "332": {
       "title": "Bozon Higgsa",
       "description": "Bozon Higgsa to cząstka elementarna związana z polem Higgsa, które pomaga innym cząstkom uzyskiwać masę. Peter Higgs opisał istnienie tej cząstki w 1964 roku, a sam bozon Higgsa wykryto dopiero w 2012 roku w Wielkim Zderzaczu Hadronów."
+    },
+    "333": {
+      "title": "Neuron człowieka",
+      "description": "Neuron to komórka układu nerwowego, która odbiera, przetwarza i przekazuje sygnały. To dzięki neuronom możemy myśleć, poruszać się, odczuwać ból, rozpoznawać twarze i zapamiętywać wydarzenia. Rozmiar ciała komórki neuronu zwykle wynosi od 5 do 120-150 mikrometrów, w zależności od jego typu."
     }
   }
 }

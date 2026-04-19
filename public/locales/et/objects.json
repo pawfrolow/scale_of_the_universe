@@ -1211,6 +1211,10 @@
     "332": {
       "title": "Higgsi boson",
       "description": "Higgsi boson on elementaarosake, mis on seotud Higgsi väljaga ja aitab teistel osakestel massi omandada. Peter Higgs kirjeldas selle osakese olemasolu 1964. aastal, kuid Higgsi boson avastati alles 2012. aastal Suures Hadronite Põrgutis."
+    },
+    "333": {
+      "title": "Inimese neuron",
+      "description": "Neuron on närvisüsteemi rakk, mis võtab vastu, töötleb ja edastab signaale. Tänu neuronitele saame mõelda, liikuda, tunda valu, ära tunda nägusid ja mäletada sündmusi. Neuroni rakukeha suurus on tavaliselt 5 kuni 120-150 mikromeetrit, sõltuvalt selle tüübist."
     }
   }
 }

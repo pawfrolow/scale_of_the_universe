@@ -1211,6 +1211,10 @@
     "332": {
       "title": "Bosonul Higgs",
       "description": "Bosonul Higgs este o particulă elementară asociată cu câmpul Higgs, care ajută alte particule să dobândească masă. Peter Higgs a descris existența acestei particule în 1964, iar bosonul Higgs a fost detectat abia în 2012 la Large Hadron Collider."
+    },
+    "333": {
+      "title": "Neuron uman",
+      "description": "Neuronul este o celulă a sistemului nervos care primește, procesează și transmite semnale. Datorită neuronilor putem gândi, ne putem mișca, putem simți durerea, recunoaște fețe și memora evenimente. Dimensiunea corpului celular al unui neuron este de obicei între 5 și 120-150 de micrometri, în funcție de tipul său."
     }
   }
 }

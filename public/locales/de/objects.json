@@ -1211,6 +1211,10 @@
     "332": {
       "title": "Higgs-Boson",
       "description": "Das Higgs-Boson ist ein Elementarteilchen, das mit dem Higgs-Feld verbunden ist, welches anderen Teilchen hilft, Masse zu erhalten. Peter Higgs beschrieb die Existenz dieses Teilchens 1964, nachgewiesen wurde das Higgs-Boson jedoch erst 2012 am Large Hadron Collider."
+    },
+    "333": {
+      "title": "Menschliches Neuron",
+      "description": "Ein Neuron ist eine Zelle des Nervensystems, die Signale empfängt, verarbeitet und weiterleitet. Dank der Neuronen können wir denken, uns bewegen, Schmerz empfinden, Gesichter erkennen und uns an Ereignisse erinnern. Der Zellkörper eines Neurons ist je nach Typ in der Regel etwa 5 bis 120-150 Mikrometer groß."
     }
   }
 }
