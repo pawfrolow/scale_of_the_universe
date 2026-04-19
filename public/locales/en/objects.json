@@ -1215,6 +1215,10 @@
     "333": {
       "title": "Human neuron",
       "description": "A neuron is a cell of the nervous system that receives, processes, and transmits signals. Thanks to neurons, we can think, move, feel pain, recognize faces, and remember events. The size of a neuron's cell body usually ranges from 5 to 120-150 micrometers, depending on its type."
+    },
+    "334": {
+      "title": "Laniakea",
+      "description": "Laniakea is a supercluster of galaxies that includes the Milky Way, nearby galaxy groups, and many other clusters connected by a shared gravitational flow. Its name can be translated from Hawaiian as \"immense heavens.\""
     }
   }
 }

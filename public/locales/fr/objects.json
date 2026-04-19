@@ -1215,6 +1215,10 @@
     "333": {
       "title": "Neurone humain",
       "description": "Un neurone est une cellule du système nerveux qui reçoit, traite et transmet des signaux. Grâce aux neurones, nous pouvons penser, bouger, ressentir la douleur, reconnaître des visages et mémoriser des événements. La taille du corps cellulaire d'un neurone varie généralement de 5 à 120-150 micromètres, selon son type."
+    },
+    "334": {
+      "title": "Laniakea",
+      "description": "Laniakea est un superamas de galaxies qui comprend la Voie lactée, des groupes de galaxies voisins et de nombreux autres amas liés par un flux gravitationnel commun. Son nom peut être traduit de l'hawaïen par « cieux immenses »."
     }
   }
 }

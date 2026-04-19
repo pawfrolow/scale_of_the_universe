@@ -1215,6 +1215,10 @@
     "333": {
       "title": "Inimese neuron",
       "description": "Neuron on närvisüsteemi rakk, mis võtab vastu, töötleb ja edastab signaale. Tänu neuronitele saame mõelda, liikuda, tunda valu, ära tunda nägusid ja mäletada sündmusi. Neuroni rakukeha suurus on tavaliselt 5 kuni 120-150 mikromeetrit, sõltuvalt selle tüübist."
+    },
+    "334": {
+      "title": "Laniakea",
+      "description": "Laniakea on galaktikate ülisuperparv, kuhu kuuluvad Linnutee, naabruses asuvad galaktikarühmad ja paljud teised ühise gravitatsioonilise voo kaudu seotud parved. Selle nimi on havai keelest tõlgitav kui „mõõtmatud taevad“."
     }
   }
 }

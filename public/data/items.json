@@ -3695,16 +3695,16 @@
         "realRatio": 1
       },
       "visualLocation": {
-        "titleX": -276.9,
+        "titleX": -326.9,
         "titleY": 352.8,
         "titleScale": 1,
         "titleWrap": true,
-        "descriptionX": -712.5,
+        "descriptionX": -762.5,
         "descriptionY": 276.3,
         "zoomOffset": 0.1
       },
       "layout": {
-        "x": -278.667,
+        "x": -338.667,
         "y": 202,
         "width": 320,
         "height": 298.667
@@ -7127,6 +7127,28 @@
         "y": 81.333,
         "width": 320,
         "height": 320
+      }
+    },
+    "334": {
+      "size": {
+        "exponent": 24,
+        "coeff": 5.2,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": -40,
+        "titleY": 472.8,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 460.45,
+        "descriptionY": 366.3,
+        "zoomOffset": 0.1
+      },
+      "layout": {
+        "x": -40,
+        "y": 324,
+        "width": 320,
+        "height": 234.667
       }
     }
   },
