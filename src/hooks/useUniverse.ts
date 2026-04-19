@@ -19,6 +19,8 @@ import { universeAssetsService } from '@/services/universe/universe-assets.servi
 PIXI.settings.ROUND_PIXELS = true;
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
 
+const MOBILE_MAX_PERCENT_STEP = 0.004;
+
 interface IUseUniverseParams {
   containerRef: RefObject<HTMLDivElement | null>;
   isStarted: boolean;
@@ -136,6 +138,10 @@ export const useUniverse = ({
 
       let universe: Universe | null = null;
       let scaleText: ScaleText | null = null;
+      const isMobileDevice =
+        typeof window !== 'undefined' &&
+        (window.matchMedia?.('(pointer: coarse)').matches ?? 'ontouchstart' in window);
+      let lastAppliedPercent: number | null = null;
 
       const onHandleClicked = () => {
         universe?.onHandleClicked();
@@ -146,10 +152,24 @@ export const useUniverse = ({
           return;
         }
 
-        const extraRightBoost = 0.2;
-        const boost = Math.pow(percent, 4) * extraRightBoost;
+        let nextPercent = percent;
 
-        const scaleExp = MIN_SCALE_EXP + percent * (MAX_SCALE_EXP - MIN_SCALE_EXP) + boost;
+        if (isMobileDevice && lastAppliedPercent !== null) {
+          const delta = percent - lastAppliedPercent;
+          const limitedDelta = Math.max(
+            -MOBILE_MAX_PERCENT_STEP,
+            Math.min(MOBILE_MAX_PERCENT_STEP, delta),
+          );
+
+          nextPercent = lastAppliedPercent + limitedDelta;
+        }
+
+        lastAppliedPercent = nextPercent;
+
+        const extraRightBoost = 0.2;
+        const boost = Math.pow(nextPercent, 4) * extraRightBoost;
+
+        const scaleExp = MIN_SCALE_EXP + nextPercent * (MAX_SCALE_EXP - MIN_SCALE_EXP) + boost;
 
         scaleText.setColor(scaleExp);
 
@@ -230,6 +250,7 @@ export const useUniverse = ({
       }
 
       slider.setPercent(map(0, -35, 27, 0, 1));
+      lastAppliedPercent = slider.getPercent();
       universe.prevZoom = 0;
 
       const performResize = () => {
@@ -260,6 +281,7 @@ export const useUniverse = ({
           universe.resize();
           scaleText.resize((app.screen.width * 0.9) / globalResolution, slider.topY - 40);
           slider.setPercent(currentPercent);
+          lastAppliedPercent = currentPercent;
         });
       };
 
