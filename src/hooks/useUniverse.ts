@@ -24,6 +24,7 @@ const MOBILE_MAX_PERCENT_STEP = 0.004;
 interface IUseUniverseParams {
   containerRef: RefObject<HTMLDivElement | null>;
   isStarted: boolean;
+  isItemModalOpen: boolean;
   onAssetsLoading: () => void;
   onAssetsReady: () => void;
   onAssetsProgress?: (progress: number) => void;
@@ -34,6 +35,7 @@ interface IUseUniverseParams {
 export const useUniverse = ({
   containerRef,
   isStarted,
+  isItemModalOpen,
   onAssetsLoading,
   onAssetsReady,
   onAssetsProgress,
@@ -42,10 +44,19 @@ export const useUniverse = ({
 }: IUseUniverseParams) => {
   const appRef = useRef<PIXI.Application | null>(null);
   const initializedRef = useRef(false);
+  const universeRef = useRef<Universe | null>(null);
   const visualViewportHandlerRef = useRef<(() => void) | null>(null);
   const resizeHandlerRef = useRef<(() => void) | null>(null);
   const orientationHandlerRef = useRef<(() => void) | null>(null);
   const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (isItemModalOpen) {
+      return;
+    }
+
+    universeRef.current?.unHideItems();
+  }, [isItemModalOpen]);
 
   useEffect(() => {
     if (!containerRef.current || initializedRef.current) {
@@ -225,6 +236,7 @@ export const useUniverse = ({
       slider.init();
 
       universe = new Universe(0, slider, app, onItemModalOpen, onItemModalClose);
+      universeRef.current = universe;
       scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0');
 
       app.stage.addChild(
@@ -331,6 +343,8 @@ export const useUniverse = ({
         slider.destroy();
         slider = null;
       }
+
+      universeRef.current = null;
 
       if (appRef.current) {
         appRef.current.destroy(true, {

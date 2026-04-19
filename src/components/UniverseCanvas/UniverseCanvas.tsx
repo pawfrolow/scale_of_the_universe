@@ -7,6 +7,7 @@ import { ItemModalData } from '@/interfaces';
 
 interface IUniverseCanvasProps {
   isStarted: boolean;
+  isItemModalOpen: boolean;
   onAssetsLoading: () => void;
   onAssetsReady: () => void;
   onAssetsProgress?: (progress: number) => void;
@@ -16,6 +17,7 @@ interface IUniverseCanvasProps {
 
 export const UniverseCanvas = ({
   isStarted,
+  isItemModalOpen,
   onAssetsLoading,
   onAssetsReady,
   onAssetsProgress,
@@ -27,6 +29,7 @@ export const UniverseCanvas = ({
   useUniverse({
     containerRef,
     isStarted,
+    isItemModalOpen,
     onAssetsLoading,
     onAssetsReady,
     onAssetsProgress,

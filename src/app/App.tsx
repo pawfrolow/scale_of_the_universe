@@ -200,6 +200,7 @@ export const App = () => {
           <UniverseCanvas
             key={universeKey}
             isStarted={isStarted}
+            isItemModalOpen={Boolean(itemModalData)}
             onAssetsLoading={handleAssetsLoading}
             onAssetsReady={handleAssetsReady}
             onAssetsProgress={handleAssetsProgress}
