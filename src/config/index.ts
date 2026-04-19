@@ -6,13 +6,18 @@ export const MAX_COMMON_TEXTURES = 329;
 export const LANGUAGE_STORAGE_KEY = 'sotu_language';
 export const MUTED_STORAGE_KEY = 'sotu_muted';
 
+export const LEGACY_LANGUAGE_CODE_MAP = {
+  ua: 'uk',
+  'zh-CH': 'zh-CN',
+} as const;
+
 export const LANGUAGE_OPTIONS = [
   { code: 'ru', label: 'Русский' },
   { code: 'en', label: 'English (US)' },
   { code: 'en-GB', label: 'English (UK)' },
   { code: 'he', label: 'עברית' },
   { code: 'nl', label: 'Nederlands' },
-  { code: 'zh-CH', label: '中文(简体)' },
+  { code: 'zh-CN', label: '中文(简体)' },
   { code: 'es', label: 'Español' },
   { code: 'sv', label: 'Svenska' },
   { code: 'pl', label: 'Polski' },
@@ -22,7 +27,7 @@ export const LANGUAGE_OPTIONS = [
   { code: 'fr', label: 'Français' },
   { code: 'eo', label: 'Esperanto' },
   { code: 'ro', label: 'Romanian' },
-  { code: 'ua', label: 'Українська' },
+  { code: 'uk', label: 'Українська' },
   { code: 'ar', label: 'العربية' },
   { code: 'ko', label: '한국어' },
   { code: 'et', label: 'Eesti' },
@@ -47,6 +52,6 @@ export const DONATE_LINKS = [
     key: 'boosty',
     href: 'https://boosty.to/pawfrolow/donate',
     label: 'Boosty',
-    iconSrc: 'img/icons/boosty.svg',
+    iconSrc: '/img/icons/boosty.svg',
   },
 ];

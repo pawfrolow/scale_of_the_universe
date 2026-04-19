@@ -1,6 +1,9 @@
 import { TItemsManifest, TItemsOverride } from '@/interfaces';
 
-export const validateItemsOverride = (baseManifest: TItemsManifest, override: TItemsOverride) => {
+export const validateItemsOverride = (
+  baseManifest: TItemsManifest,
+  override: TItemsOverride | null,
+) => {
   if (!override) {
     return;
   }

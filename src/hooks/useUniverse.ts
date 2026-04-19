@@ -19,9 +19,12 @@ import { universeAssetsService } from '@/services/universe/universe-assets.servi
 PIXI.settings.ROUND_PIXELS = true;
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
 
+const MOBILE_MAX_PERCENT_STEP = 0.004;
+
 interface IUseUniverseParams {
   containerRef: RefObject<HTMLDivElement | null>;
   isStarted: boolean;
+  isItemModalOpen: boolean;
   onAssetsLoading: () => void;
   onAssetsReady: () => void;
   onAssetsProgress?: (progress: number) => void;
@@ -32,6 +35,7 @@ interface IUseUniverseParams {
 export const useUniverse = ({
   containerRef,
   isStarted,
+  isItemModalOpen,
   onAssetsLoading,
   onAssetsReady,
   onAssetsProgress,
@@ -40,10 +44,19 @@ export const useUniverse = ({
 }: IUseUniverseParams) => {
   const appRef = useRef<PIXI.Application | null>(null);
   const initializedRef = useRef(false);
+  const universeRef = useRef<Universe | null>(null);
   const visualViewportHandlerRef = useRef<(() => void) | null>(null);
   const resizeHandlerRef = useRef<(() => void) | null>(null);
   const orientationHandlerRef = useRef<(() => void) | null>(null);
   const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (isItemModalOpen) {
+      return;
+    }
+
+    universeRef.current?.unHideItems();
+  }, [isItemModalOpen]);
 
   useEffect(() => {
     if (!containerRef.current || initializedRef.current) {
@@ -136,6 +149,10 @@ export const useUniverse = ({
 
       let universe: Universe | null = null;
       let scaleText: ScaleText | null = null;
+      const isMobileDevice =
+        typeof window !== 'undefined' &&
+        (window.matchMedia?.('(pointer: coarse)').matches ?? 'ontouchstart' in window);
+      let lastAppliedPercent: number | null = null;
 
       const onHandleClicked = () => {
         universe?.onHandleClicked();
@@ -146,10 +163,24 @@ export const useUniverse = ({
           return;
         }
 
-        const extraRightBoost = 0.2;
-        const boost = Math.pow(percent, 4) * extraRightBoost;
+        let nextPercent = percent;
 
-        const scaleExp = MIN_SCALE_EXP + percent * (MAX_SCALE_EXP - MIN_SCALE_EXP) + boost;
+        if (isMobileDevice && lastAppliedPercent !== null) {
+          const delta = percent - lastAppliedPercent;
+          const limitedDelta = Math.max(
+            -MOBILE_MAX_PERCENT_STEP,
+            Math.min(MOBILE_MAX_PERCENT_STEP, delta),
+          );
+
+          nextPercent = lastAppliedPercent + limitedDelta;
+        }
+
+        lastAppliedPercent = nextPercent;
+
+        const extraRightBoost = 0.2;
+        const boost = Math.pow(nextPercent, 4) * extraRightBoost;
+
+        const scaleExp = MIN_SCALE_EXP + nextPercent * (MAX_SCALE_EXP - MIN_SCALE_EXP) + boost;
 
         scaleText.setColor(scaleExp);
 
@@ -205,6 +236,7 @@ export const useUniverse = ({
       slider.init();
 
       universe = new Universe(0, slider, app, onItemModalOpen, onItemModalClose);
+      universeRef.current = universe;
       scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0');
 
       app.stage.addChild(
@@ -230,6 +262,7 @@ export const useUniverse = ({
       }
 
       slider.setPercent(map(0, -35, 27, 0, 1));
+      lastAppliedPercent = slider.getPercent();
       universe.prevZoom = 0;
 
       const performResize = () => {
@@ -260,6 +293,7 @@ export const useUniverse = ({
           universe.resize();
           scaleText.resize((app.screen.width * 0.9) / globalResolution, slider.topY - 40);
           slider.setPercent(currentPercent);
+          lastAppliedPercent = currentPercent;
         });
       };
 
@@ -309,6 +343,8 @@ export const useUniverse = ({
         slider.destroy();
         slider = null;
       }
+
+      universeRef.current = null;
 
       if (appRef.current) {
         appRef.current.destroy(true, {

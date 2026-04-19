@@ -1,14 +1,14 @@
 {
   "name": "sotu",
-  "version": "1.1.0",
+  "version": "1.6.0",
   "description": "scale of the universe visualization",
   "type": "module",
   "scripts": {
     "postinstall": "husky",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
-    "build": "vite build",
-    "build:prod": "vite build --mode production",
+    "build": "vite build && node scripts/generate-localized-build.mjs",
+    "build:prod": "vite build --mode production && node scripts/generate-localized-build.mjs",
     "preview": "vite preview",
     "ts:check": "tsc --noEmit",
     "lint": "eslint .",

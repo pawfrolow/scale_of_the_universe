@@ -1207,6 +1207,18 @@
     "331": {
       "title": "Vostok-1",
       "description": "Vostok-1, Yuri Gagarin’in 12 Nisan 1961’de insanlık tarihindeki ilk uzay uçuşunu gerçekleştirdiği Sovyet yapımı tek kişilik bir uzay aracıydı. Fırlatma Baykonur’dan yapıldı, uçuş 108 dakika sürdü (Dünya etrafında 1 tur) ve iniş Saratov bölgesinde gerçekleşti. Araç, iniş kapsülü ile aletler bölümünden oluşuyordu. İnsanlı uzay çağını başlatan da tam olarak Vostok-1 oldu."
+    },
+    "332": {
+      "title": "Higgs bozonu",
+      "description": "Higgs bozonu, diğer parçacıkların kütle kazanmasına yardımcı olan Higgs alanıyla ilişkili temel bir parçacıktır. Peter Higgs bu parçacığın varlığını 1964 yılında tanımladı; Higgs bozonu ise ancak 2012 yılında Büyük Hadron Çarpıştırıcısı'nda tespit edildi."
+    },
+    "333": {
+      "title": "İnsan nöronu",
+      "description": "Nöron, sinir sisteminin sinyalleri alan, işleyen ve ileten hücresidir. Nöronlar sayesinde düşünebilir, hareket edebilir, acı hissedebilir, yüzleri tanıyabilir ve olayları hatırlayabiliriz. Bir nöronun hücre gövdesinin boyutu, tipine bağlı olarak genellikle 5 ile 120-150 mikrometre arasındadır."
+    },
+    "334": {
+      "title": "Laniakea",
+      "description": "Laniakea, Samanyolu'nu, komşu gökada gruplarını ve ortak bir kütleçekim akışıyla birbirine bağlı birçok başka kümeyi içeren bir gökada üstkümesidir. Adı Hawaii dilinden \"uçsuz bucaksız gökler\" olarak çevrilebilir."
     }
   }
 }

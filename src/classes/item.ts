@@ -57,7 +57,7 @@ export class Item extends Entity {
   private textDatum: TextDatum;
   public text: Text;
   private onClick: (e?) => void;
-  private description: Container;
+  private description?: Container;
   private units: Array<string>;
   private extraText: ExtraText;
 

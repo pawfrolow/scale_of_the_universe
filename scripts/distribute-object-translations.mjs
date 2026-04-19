@@ -5,10 +5,10 @@ const root = process.cwd()
 
 const translationsPath = path.resolve(
   root,
-  'scripts/objects-329.translations.json'
+  'scripts/new-object.translations.json'
 )
 
-const localesRoot = path.resolve(root, 'src/i18n/locales')
+const localesRoot = path.resolve(root, 'public/locales')
 
 const readJson = (filePath) => {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'))

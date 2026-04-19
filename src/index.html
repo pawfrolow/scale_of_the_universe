@@ -7,10 +7,13 @@
       name="description"
       content="Интерактивная шкала масштабов Вселенной: сравнение размеров объектов от самого маленького до самого большого — от элементарных частиц и атомов до планет, звёзд, туманностей и галактик."
     />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="theme-color" content="#171933" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="canonical" href="https://universe.pavelfrolov.com/" />
+    <!-- SEO_ALTERNATES -->
     <title>
       Шкала масштабов Вселенной — сравнение размеров объектов от самого маленького до самого
       большого
@@ -42,7 +45,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/x-icon" href="https://universe.pavelfrolov.com/img/favicon.ico" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
   </head>
 
   <body>
@@ -51,7 +57,7 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', async () => {
-          await navigator.serviceWorker.register('./sw.js');
+          await navigator.serviceWorker.register('/sw.js');
         });
       }
     </script>

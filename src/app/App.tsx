@@ -16,7 +16,7 @@ import {
 import { MUTED_STORAGE_KEY } from '@/config';
 import { ymClick } from '@/helpers/ymClick';
 import { useLanguage } from '@/hooks/useLanguage';
-import { TLanguage } from '@/i18n';
+import { getLanguageUrl, isRtlLanguage, TLanguage } from '@/i18n';
 import { ItemModalData } from '@/interfaces';
 import { createFrozenStarAudio } from '@/services/audio.service';
 
@@ -65,7 +65,7 @@ export const App = () => {
     document.title = title;
 
     document.documentElement.lang = currentLanguage;
-    document.documentElement.dir = ['he', 'ar', 'fa'].includes(currentLanguage) ? 'rtl' : 'ltr';
+    document.documentElement.dir = isRtlLanguage(currentLanguage) ? 'rtl' : 'ltr';
 
     const setMetaContent = (selector: string, content: string) => {
       const element = document.querySelector(selector);
@@ -151,10 +151,16 @@ export const App = () => {
     setItemModalData(null);
     setCurrentLanguage(language);
     setIsLanguageModalOpen(false);
+    ymClick('toggleLanguage', { language, fromMainPage: !hasEnteredApp });
+
+    const nextUrl = getLanguageUrl(language);
+
+    if (window.location.pathname !== nextUrl) {
+      window.location.assign(nextUrl);
+      return;
+    }
 
     await i18n.changeLanguage(language);
-
-    ymClick('toggleLanguage', { language, fromMainPage: !hasEnteredApp });
 
     setIsAssetsReady(false);
     setIsAssetsLoading(false);
@@ -194,6 +200,7 @@ export const App = () => {
           <UniverseCanvas
             key={universeKey}
             isStarted={isStarted}
+            isItemModalOpen={Boolean(itemModalData)}
             onAssetsLoading={handleAssetsLoading}
             onAssetsReady={handleAssetsReady}
             onAssetsProgress={handleAssetsProgress}

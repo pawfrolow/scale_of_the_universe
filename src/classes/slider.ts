@@ -8,8 +8,14 @@ const HEIGHT_PERCENT = 0.05;
 const BASE_BOTTOM_MARGIN = 24;
 const HANDLE_WIDTH_PERCENT = 0.04;
 const SCROLL_SPEED = -1.5;
-let MAX_SCROLL_SPEED = 3;
-let EASING_CONSTANT = 0.005;
+const DEFAULT_MAX_SCROLL_SPEED = 3;
+const MOBILE_MAX_SCROLL_SPEED = 0.45;
+const ANIMATION_MAX_SCROLL_SPEED = 9;
+const INITIAL_EASING_CONSTANT = 0.005;
+const DEFAULT_EASING_CONSTANT = 0.025;
+const MOBILE_EASING_CONSTANT = 0.055;
+const MOBILE_TOUCH_STEP_LIMIT = 2;
+const MOBILE_SLIDER_STEP_LIMIT = 6;
 const MIN_HANDLE_WIDTH_PX = 40;
 
 export class Slider {
@@ -44,11 +50,15 @@ export class Slider {
   private pinchActive = false;
   private lastPinchDistance: number | null = null;
   private pinchSensitivity = 0.35;
+  private mobilePinchSensitivity = 0.12;
   private touchStartHandler?: (e: TouchEvent) => void;
   private touchMoveHandler?: (e: TouchEvent) => void;
   private touchEndHandler?: () => void;
 
   private animationRunId = 0;
+  private currentMaxScrollSpeed = DEFAULT_MAX_SCROLL_SPEED;
+  private currentEasingConstant = INITIAL_EASING_CONSTANT;
+  private readonly isMobileDevice: boolean;
 
   constructor(
     app: Application,
@@ -63,6 +73,9 @@ export class Slider {
     this.onHandleClicked = onHandleClicked;
     this.w = w / globalRes;
     this.h = h / globalRes;
+    this.isMobileDevice = window.matchMedia('(max-width: 1024px), (pointer: coarse)').matches;
+    this.currentMaxScrollSpeed = this.getBaseMaxScrollSpeed();
+    this.currentEasingConstant = this.getBaseEasingConstant();
 
     this.tweenable = new Tweenable();
     this.container = new Container();
@@ -117,7 +130,11 @@ export class Slider {
       this.lastPinchDistance = distance;
 
       this.interact();
-      this.moveTarget(-distanceDelta * this.pinchSensitivity);
+      const limitedDistanceDelta = this.limitInputDelta(distanceDelta, MOBILE_TOUCH_STEP_LIMIT);
+      const pinchSensitivity = this.isMobileDevice
+        ? this.mobilePinchSensitivity
+        : this.pinchSensitivity;
+      this.moveTarget(-limitedDistanceDelta * pinchSensitivity);
 
       event.preventDefault();
     };
@@ -230,8 +247,12 @@ export class Slider {
 
       here.interact();
 
-      const newX = event.global.x;
-      here.setTarget(newX - here.startOffset);
+      const nextTarget = event.global.x - here.startOffset;
+      const limitedDelta = here.limitInputDelta(
+        nextTarget - here.targetX,
+        MOBILE_SLIDER_STEP_LIMIT,
+      );
+      here.setTarget(here.targetX + limitedDelta);
     }
 
     graphics.on('pointerdown', onDragStart);
@@ -251,12 +272,13 @@ export class Slider {
   }
 
   setTargetPercent(percent: number) {
-    if (percent < 0) {
-      percent = 0;
-    }
+    const normalizedPercent = Math.max(0, Math.min(1, percent));
+    this.currentMaxScrollSpeed = ANIMATION_MAX_SCROLL_SPEED;
+    this.currentEasingConstant = 0.1;
 
-    MAX_SCROLL_SPEED = 9;
-    EASING_CONSTANT = 0.1;
+    const { minX, maxX } = this.getBounds();
+    this.currentPercent = normalizedPercent;
+    this.targetX = minX + (maxX - minX) * normalizedPercent;
   }
 
   interact(): void {
@@ -301,8 +323,8 @@ export class Slider {
   }
 
   animStopped() {
-    EASING_CONSTANT = 0.025;
-    MAX_SCROLL_SPEED = 3;
+    this.currentEasingConstant = this.getBaseEasingConstant();
+    this.currentMaxScrollSpeed = this.getBaseMaxScrollSpeed();
   }
 
   setPercent(percent: number) {
@@ -339,12 +361,12 @@ export class Slider {
       const { minX, maxX } = this.getBounds();
 
       const dX = (this.targetX - this.currentX) * deltaTime;
-      let dXScaled = dX * EASING_CONSTANT;
+      let dXScaled = dX * this.currentEasingConstant;
 
       const dir = dXScaled === 0 ? 0 : dXScaled / Math.abs(dXScaled);
 
-      if (Math.abs(dXScaled) > MAX_SCROLL_SPEED) {
-        dXScaled = MAX_SCROLL_SPEED * dir;
+      if (Math.abs(dXScaled) > this.currentMaxScrollSpeed) {
+        dXScaled = this.currentMaxScrollSpeed * dir;
       }
 
       if (Math.abs(this.targetX - this.currentX) <= 0.01) {
@@ -448,6 +470,22 @@ export class Slider {
 
   private getBottomMargin() {
     return BASE_BOTTOM_MARGIN + getCssPxVar('--safe-area-bottom');
+  }
+
+  private getBaseMaxScrollSpeed() {
+    return this.isMobileDevice ? MOBILE_MAX_SCROLL_SPEED : DEFAULT_MAX_SCROLL_SPEED;
+  }
+
+  private getBaseEasingConstant() {
+    return this.isMobileDevice ? MOBILE_EASING_CONSTANT : DEFAULT_EASING_CONSTANT;
+  }
+
+  private limitInputDelta(delta: number, maxDelta: number) {
+    if (!this.isMobileDevice) {
+      return delta;
+    }
+
+    return Math.max(-maxDelta, Math.min(maxDelta, delta));
   }
 
   private getHandleWidth() {

@@ -1207,6 +1207,18 @@
     "331": {
       "title": "Vostok 1",
       "description": "Vostok 1 was a Soviet single-seat spacecraft on which Yuri Gagarin made the first human spaceflight in history on 12 April 1961. The launch took place from Baikonur, the flight lasted 108 minutes (one orbit around the Earth), and the landing occurred in the Saratov region. The spacecraft consisted of a descent module and an instrument module. The era of crewed spaceflight began with Vostok 1."
+    },
+    "332": {
+      "title": "Higgs Boson",
+      "description": "The Higgs boson is an elementary particle associated with the Higgs field, which helps other particles acquire mass. Peter Higgs described the existence of this particle in 1964, and the Higgs boson was finally detected in 2012 at the Large Hadron Collider."
+    },
+    "333": {
+      "title": "Human neuron",
+      "description": "A neuron is a cell of the nervous system that receives, processes, and transmits signals. Thanks to neurons, we can think, move, feel pain, recognise faces, and remember events. The size of a neuron's cell body usually ranges from 5 to 120-150 micrometres, depending on its type."
+    },
+    "334": {
+      "title": "Laniakea",
+      "description": "Laniakea is a supercluster of galaxies that includes the Milky Way, nearby galaxy groups, and many other clusters connected by a shared gravitational flow. Its name can be translated from Hawaiian as \"immense heavens.\""
     }
   }
 }

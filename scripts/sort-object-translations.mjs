@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const root = process.cwd()
-const localesRoot = path.resolve(root, 'src/i18n/locales')
+const localesRoot = path.resolve(root, 'public/locales')
 
 const readJson = (filePath) => {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'))

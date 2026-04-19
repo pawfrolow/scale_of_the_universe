@@ -7,7 +7,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import pkg from './package.json';
 
 export default defineConfig({
-  base: './',
+  base: '/',
   root: 'src',
   publicDir: resolve(__dirname, 'public'),
   plugins: [

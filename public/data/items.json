@@ -3695,16 +3695,16 @@
         "realRatio": 1
       },
       "visualLocation": {
-        "titleX": -276.9,
+        "titleX": -326.9,
         "titleY": 352.8,
         "titleScale": 1,
         "titleWrap": true,
-        "descriptionX": -712.5,
+        "descriptionX": -762.5,
         "descriptionY": 276.3,
         "zoomOffset": 0.1
       },
       "layout": {
-        "x": -278.667,
+        "x": -338.667,
         "y": 202,
         "width": 320,
         "height": 298.667
@@ -7083,6 +7083,72 @@
         "y": -532.667,
         "width": 206.667,
         "height": 320
+      }
+    },
+    "332": {
+      "size": {
+        "exponent": -18,
+        "coeff": 1,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": 0,
+        "titleY": 580,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 420,
+        "descriptionY": 260,
+        "zoomOffset": 0.05
+      },
+      "layout": {
+        "x": 0,
+        "y": 410.667,
+        "width": 320,
+        "height": 290.667
+      }
+    },
+    "333": {
+      "size": {
+        "exponent": -5,
+        "coeff": 2,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": -590.5,
+        "titleY": 208.9,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": -100.7,
+        "descriptionY": 100.1,
+        "zoomOffset": 0.05
+      },
+      "layout": {
+        "x": -590,
+        "y": 81.333,
+        "width": 320,
+        "height": 320
+      }
+    },
+    "334": {
+      "size": {
+        "exponent": 24,
+        "coeff": 5.2,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": -40,
+        "titleY": 472.8,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 460.45,
+        "descriptionY": 366.3,
+        "zoomOffset": 0.1
+      },
+      "layout": {
+        "x": -40,
+        "y": 324,
+        "width": 320,
+        "height": 234.667
       }
     }
   },
