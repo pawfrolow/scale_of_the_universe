@@ -3465,10 +3465,9 @@
         "titleY": -229.65,
         "titleScale": 1,
         "titleWrap": true,
-        "descriptionX": 900,
-        "descriptionY": 100,
-        "descriptionScale": 0.5,
-        "zoomOffset": -0.18
+        "descriptionX": 780,
+        "descriptionY": 0,
+        "descriptionScale": 0.8
       },
       "layout": {
         "x": -0.667,

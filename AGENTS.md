@@ -10,12 +10,12 @@
 
 ## Key Directories
 
-- `src/` — React UI, Pixi scene classes, hooks, helpers, services.
-- `public/data/` — base manifest and locale overrides for scale objects.
-- `public/locales/` — translation namespaces `objects`, `ui`, `units`.
-- `public/img/` — textures, icons, OG images, favicon assets.
-- `docs/` — manual content workflow docs for objects and locale overrides.
-- `scripts/` — one-off maintenance scripts for build, translations, sorting, and data cleanup.
+- `src/` - React UI, Pixi scene classes, hooks, helpers, services.
+- `public/data/` - base manifest and locale overrides for scale objects.
+- `public/locales/` - translation namespaces `objects`, `ui`, `units`.
+- `public/img/` - textures, icons, OG images, favicon assets.
+- `docs/` - manual content workflow docs for objects and locale overrides.
+- `scripts/` - one-off maintenance scripts for build, translations, sorting, and data cleanup.
 
 ## Docs
 
@@ -85,13 +85,13 @@ Practical rules from recent object additions:
 
 ## NPM Commands
 
-- `npm run dev` — start Vite dev server.
-- `npm run build` — build app and run `scripts/generate-localized-build.mjs`.
-- `npm run build:prod` — production-mode build plus localized post-processing.
-- `npm run preview` — preview the built app locally.
-- `npm run ts:check` — run TypeScript without emitting files.
-- `npm run lint` / `npm run lint:fix` — run ESLint.
-- `npm run format` / `npm run format:check` — run Prettier.
+- `npm run dev` - start Vite dev server.
+- `npm run build` - build app and run `scripts/generate-localized-build.mjs`.
+- `npm run build:prod` - production-mode build plus localized post-processing.
+- `npm run preview` - preview the built app locally.
+- `npm run ts:check` - run TypeScript without emitting files.
+- `npm run lint` / `npm run lint:fix` - run ESLint.
+- `npm run format` / `npm run format:check` - run Prettier.
 
 ## Notes For Future Edits
 

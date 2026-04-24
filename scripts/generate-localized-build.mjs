@@ -269,7 +269,7 @@ const writeManifests = async (locales) => {
     };
 
     const outputPath = path.join(distDir, locale.manifestFileName);
-    await writeFile(outputPath, `${JSON.stringify(localizedManifest, null, 2)}\n`);
+    await writeFile(outputPath, `${JSON.stringify(localizedManifest)}\n`);
   }
 };
 
