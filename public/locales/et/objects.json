@@ -1219,6 +1219,22 @@
     "334": {
       "title": "Laniakea",
       "description": "Laniakea on galaktikate ülisuperparv, kuhu kuuluvad Linnutee, naabruses asuvad galaktikarühmad ja paljud teised ühise gravitatsioonilise voo kaudu seotud parved. Selle nimi on havai keelest tõlgitav kui „mõõtmatud taevad“."
+    },
+    "335": {
+      "title": "Starship",
+      "description": "Starship on SpaceXi stardisüsteemi kosmoselaev ja ülemine aste. Seda arendatakse täielikult korduskasutatava sõidukina lendudeks orbiidile, Kuule ja tulevikus Marsile. Koos Super Heavy kiirendiga on kogu süsteem umbes 123 meetrit kõrge ning kuulub ajaloo suurimate raketisüsteemide hulka."
+    },
+    "336": {
+      "title": "RATAN-600",
+      "description": "RATAN-600 on maailma suurim raadioteleskoop ning asub Venemaal Karatšai-Tšerkessias. Erinevalt tavalistest teleskoopidest ei vaatle RATAN-600 nähtavat valgust, vaid Päikeselt, galaktikatelt, kvasaritelt ja teistelt kaugetelt objektidelt saabuvad raadiolained. Nimi RATAN tähendab „Teaduste Akadeemia raadioteleskoopi“."
+    },
+    "337": {
+      "title": "Fagotsüüt",
+      "description": "Fagotsüüt on immuunsüsteemi rakk, mis suudab neelata ja seedida baktereid, võõrosakesi ning rakujäänuseid. Sellised rakud aitavad organismil kaitsta end nakkuste eest ja samal ajal puhastavad kudesid kõigest üleliigsest. Sõna „fagotsüüt“ tähendab sõna-sõnalt „sööv rakk“."
+    },
+    "338": {
+      "title": "Trombotsüüt",
+      "description": "Trombotsüüt on väike vere koostisosa, mis aitab verejooksu peatada. Kui veresoon saab kahjustada, kogunevad trombotsüüdid sinna kiiresti, kleepuvad üksteise külge ja osalevad trombi moodustumises. Huvitaval kombel pole trombotsüütidel rakutuuma: need ei ole täisrakud, vaid väikesed rakufragmendid."
     }
   }
 }
