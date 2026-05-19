@@ -52,7 +52,7 @@
 
 - `scripts/sort-object-translations.mjs`
   Sorts object translation entries numerically inside each locale `objects.json`.
-  Uses `public/locales` and should be run after bulk translation merge so object ids stay ordered.
+  Uses `public/locales` and should be run immediately after `scripts/distribute-object-translations.mjs` so object ids settle back into the correct order.
 
 ## Adding Objects
 
@@ -62,13 +62,17 @@ When adding a new scale object, use this workflow:
 2. Add or update the primary object text in `public/locales/ru/objects.json`.
 3. Fill `scripts/new-object.translations.json` with the new object id and translations for all supported locales.
 4. Run `node scripts/distribute-object-translations.mjs` to merge the new object into every `public/locales/*/objects.json`.
-5. Run `node scripts/sort-object-translations.mjs` so keys remain numerically ordered after the merge.
+5. Immediately run `node scripts/sort-object-translations.mjs` so keys return to their proper order after the merge.
 6. Add the frame entry to `public/data/items.json` with `size`, `visualLocation`, and `layout`.
 7. If needed, run `node scripts/sort-frames-items.mjs` to keep `frames` ordered.
 
 Practical rules from recent object additions:
 
 - `public/locales/` is the only valid locale source for bulk object translation scripts.
+- The required bulk translation sequence is:
+  fill `scripts/new-object.translations.json`,
+  run `node scripts/distribute-object-translations.mjs`,
+  then run `node scripts/sort-object-translations.mjs`.
 - After bulk merge, verify that the new id exists in every `public/locales/*/objects.json`.
 - `size` in `public/data/items.json` should be stored as `coeff × 10^exponent` meters.
 - Match `layout.width` / `layout.height` to the actual texture proportions. For example, a `256x256` texture can start with a square `layout`.

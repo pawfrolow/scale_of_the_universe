@@ -1219,6 +1219,22 @@
     "334": {
       "title": "Laniakea",
       "description": "Laniakea, Samanyolu'nu, komşu gökada gruplarını ve ortak bir kütleçekim akışıyla birbirine bağlı birçok başka kümeyi içeren bir gökada üstkümesidir. Adı Hawaii dilinden \"uçsuz bucaksız gökler\" olarak çevrilebilir."
+    },
+    "335": {
+      "title": "Starship",
+      "description": "Starship, SpaceX'in fırlatma sisteminin uzay aracı ve üst kademesidir. Tamamen yeniden kullanılabilir bir araç olarak yörüngeye, Ay'a ve gelecekte Mars'a yapılacak uçuşlar için geliştirilmektedir. Super Heavy güçlendiricisiyle birlikte tüm sistem yaklaşık 123 metre yüksekliğindedir ve tarihteki en büyük roket sistemlerinden biridir."
+    },
+    "336": {
+      "title": "RATAN-600",
+      "description": "RATAN-600, Rusya'nın Karaçay-Çerkesya bölgesinde bulunan dünyanın en büyük radyo teleskobudur. RATAN-600, sıradan teleskopların aksine görünür ışığı değil, Güneş'ten, galaksilerden, kuasarlardan ve diğer uzak cisimlerden gelen radyo dalgalarını gözlemler. RATAN adı \"Bilimler Akademisi Radyo Teleskobu\" anlamına gelir."
+    },
+    "337": {
+      "title": "Fagosit",
+      "description": "Fagosit, bakterileri, yabancı parçacıkları ve hücresel artıkları yutup sindirebilen bir bağışıklık sistemi hücresidir. Bu hücreler vücudun enfeksiyonlara karşı kendini savunmasına yardımcı olurken aynı zamanda dokuları gereksiz maddelerden temizler. \"Fagosit\" kelimesi kelimenin tam anlamıyla \"yiyen hücre\" demektir."
+    },
+    "338": {
+      "title": "Trombosit",
+      "description": "Trombosit, kanamayı durdurmaya yardımcı olan küçük bir kan bileşenidir. Bir damar hasar gördüğünde trombositler o bölgede hızla toplanır, birbirine yapışır ve pıhtı oluşumuna katılır. İlginç olan, trombositlerin çekirdeğinin olmamasıdır: bunlar tam hücreler değil, küçük hücre parçalarıdır."
     }
   }
 }

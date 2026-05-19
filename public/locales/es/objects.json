@@ -1219,6 +1219,22 @@
     "334": {
       "title": "Laniakea",
       "description": "Laniakea es un supercúmulo de galaxias que incluye la Vía Láctea, grupos de galaxias cercanos y muchos otros cúmulos conectados por un flujo gravitacional común. Su nombre puede traducirse del hawaiano como «cielos inmensos»."
+    },
+    "335": {
+      "title": "Starship",
+      "description": "Starship es la nave espacial y la etapa superior del sistema de lanzamiento de SpaceX. Se está desarrollando como un vehículo totalmente reutilizable para misiones a órbita, la Luna y, en el futuro, Marte. Junto con el propulsor Super Heavy, el conjunto completo mide unos 123 metros de altura y se encuentra entre los sistemas de cohetes más grandes de la historia."
+    },
+    "336": {
+      "title": "RATAN-600",
+      "description": "RATAN-600 es el radiotelescopio más grande del mundo y está situado en Karacháyevo-Cherkesia, en Rusia. A diferencia de los telescopios normales, RATAN-600 no observa luz visible, sino ondas de radio procedentes del Sol, de galaxias, cuásares y otros objetos lejanos. El nombre RATAN significa «Radiotelescopio de la Academia de Ciencias»."
+    },
+    "337": {
+      "title": "Fagocito",
+      "description": "Un fagocito es una célula del sistema inmunitario que puede engullir y digerir bacterias, partículas extrañas y restos celulares. Estas células ayudan al organismo a defenderse de las infecciones y al mismo tiempo limpian los tejidos de todo lo innecesario. La palabra «fagocito» significa literalmente «célula comedora»."
+    },
+    "338": {
+      "title": "Plaqueta",
+      "description": "Una plaqueta es un pequeño componente de la sangre que ayuda a detener el sangrado. Cuando un vaso sanguíneo se daña, las plaquetas se reúnen rápidamente allí, se adhieren unas a otras y participan en la formación de un coágulo. Curiosamente, las plaquetas no tienen núcleo: no son células completas, sino pequeños fragmentos celulares."
     }
   }
 }

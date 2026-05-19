@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.7.0
+
+- Added the Starship object and translations for all supported locales.
+- Added the RATAN-600 object and translations for all supported locales.
+- Added the Phagocyte object and translations for all supported locales.
+- Added the Platelet object and translations for all supported locales.
+
 ## 1.6.0
 
 - Added the Laniakea object.

@@ -5021,15 +5021,15 @@
         "realRatio": 2
       },
       "visualLocation": {
-        "titleX": -69.9,
+        "titleX": -219.9,
         "titleY": -409.2,
         "titleScale": 1,
         "titleWrap": true,
-        "descriptionX": -522.75,
+        "descriptionX": -672.75,
         "descriptionY": -296.1
       },
       "layout": {
-        "x": -65.333,
+        "x": -215.333,
         "y": -458,
         "width": 378.667,
         "height": 98.667
@@ -7149,25 +7149,94 @@
         "width": 320,
         "height": 234.667
       }
-    }
-  },
-  "meta": {
-    "app": "https://www.codeandweb.com/texturepacker",
-    "version": "1.0",
-    "image": "new_items_0.png",
-    "format": "RGBA8888",
-    "size": {
-      "w": 2046,
-      "h": 2048
     },
-    "scale": "0.75",
-    "related_multi_packs": [
-      "new_items_1.json",
-      "new_items_2.json",
-      "new_items_3.json",
-      "new_items_4.json",
-      "new_items_5.json"
-    ],
-    "smartupdate": "$TexturePacker:SmartUpdate:c84757223015ee9c7ea2c9d580826b62:2ddd851f8ca6736005606e672a8b708a:b87cbd19f941ffad51919d4e570e6f91$"
+    "335": {
+      "size": {
+        "exponent": 2,
+        "coeff": 1.23,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": 530,
+        "titleY": -252,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 894,
+        "descriptionY": -342,
+        "zoomOffset": 0.1
+      },
+      "layout": {
+        "x": 536,
+        "y": -406.667,
+        "width": 92,
+        "height": 320
+      }
+    },
+    "336": {
+      "size": {
+        "exponent": 2,
+        "coeff": 5.76,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": -454.9,
+        "titleY": 206.3,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 0,
+        "descriptionY": -96.25,
+        "zoomOffset": 0.1
+      },
+      "layout": {
+        "x": -458.667,
+        "y": 119.333,
+        "width": 306,
+        "height": 138
+      }
+    },
+    "337": {
+      "size": {
+        "exponent": -5,
+        "coeff": 1.5,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": 206.1,
+        "titleY": -341.2,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": 628.25,
+        "descriptionY": -416.1,
+        "zoomOffset": 0.05
+      },
+      "layout": {
+        "x": 210.667,
+        "y": -489.333,
+        "width": 341.333,
+        "height": 285.333
+      }
+    },
+    "338": {
+      "size": {
+        "exponent": -6,
+        "coeff": 3,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": -180.5,
+        "titleY": 354.25,
+        "titleScale": 1,
+        "titleWrap": true,
+        "descriptionX": -600.95,
+        "descriptionY": 225,
+        "zoomOffset": 0.15
+      },
+      "layout": {
+        "x": -180,
+        "y": 223.333,
+        "width": 341.333,
+        "height": 286.667
+      }
+    }
   }
 }
