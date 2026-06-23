@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.1
+
+- Added the Gluon object and translations for all supported locales.
+
 ## 1.7.0
 
 - Added the Starship object and translations for all supported locales.

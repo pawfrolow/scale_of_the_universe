@@ -1235,6 +1235,10 @@
     "338": {
       "title": "Trombocit",
       "description": "Un trombocit este o mică componentă a sângelui care ajută la oprirea sângerării. Când un vas de sânge este deteriorat, trombocitele se adună rapid acolo, se lipesc unele de altele și participă la formarea unui cheag. Interesant este că trombocitele nu au nucleu: ele nu sunt celule complete, ci mici fragmente celulare."
+    },
+    "339": {
+      "title": "Gluon",
+      "description": "Un gluon este o particulă elementară care transportă interacțiunea tare. Această forță ține quarcurile împreună în interiorul protonilor și neutronilor, din care sunt alcătuite nucleele atomice. Interesant este că gluonii parcă „lipesc” particulele de materie între ele: numele lor vine din cuvântul englezesc glue, adică „lipici”."
     }
   }
 }

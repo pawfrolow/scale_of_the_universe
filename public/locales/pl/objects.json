@@ -1,5 +1,285 @@
 {
   "items": {
+    "030": {
+      "title": "Piksel LCD",
+      "description": "Chociaz rozmiary pikseli róznia sie znacznie to 300 mikrometrów to mniej wiecej ich srednia. Piksel sklada sie z trzech podpikseli w kolorach: czerwonym, zielonym i niebieskim. Piksele sa calkiem fajne ale voksele sa jeszcze lepsze. To sa takie trójwymiarowe piksele."
+    },
+    "031": {
+      "title": "Palm Jebel Ali",
+      "description": "Palm Jebel Ali to najwieksza zbudowana przez czlowieka wyspa (nie biorac pod uwage takich wysp jak Flevopolder, gdzie osuszono pewien region Holandii, zeby zdobyc wiecej ziemi).  Palm Jebel Ali nie jest jeszcze ukonczona.  Jest czescia Palm Islands i ma pomiescic domy dla 250,000 osób!"
+    },
+    "032": {
+      "title": "Neutrino",
+      "description": "Neutrina bez przerwy przenikaja przez zwykla materie, taka z jakiej ty czy ja jestesmy zbudowani!  Szczerze mówiac, robia to nawet teraz!  Neutrina nie maja ladunku wiec wplyw na nie ma jedynie grawitacja i slabe oddzialywania.  Jednak sa tak male, ze wplyw ten jest niewielki."
+    },
+    "033": {
+      "title": "Neutrino wysokiej energii",
+      "description": "Neutrina o wysokiej energii sa wieksze.  Po wiecej informacji o neutrinie, przejdz do neutrina, przedstawionego w swej sredniej wielkosci.  Jest ono az 15000 mniejsze!"
+    },
+    "034": {
+      "title": "Zapalka",
+      "description": "Zapalka to bardzo uzyteczne male narzedzie.  Uderzone o cos innego, zapala sie.  To sprawia, ze jest równiez niebezpieczne!  To dlatego lepiej nie bawic sie zapalkami.  Zrozumiales?"
+    },
+    "035": {
+      "title": "Kurze jajo",
+      "description": "Z kurzego jaja zazwyczaj wykluwaja sie piskleta.  Wielu ludzi uwielbia jesc kurze jaja.   Nie ma róznicy pomiedzy brazowym i bialym jajkiem, oczywiscie poza róznica w wygladzie."
+    },
+    "036": {
+      "title": "Jajo przepiórcze",
+      "description": "Wiele osób uwaza, ze jaja przepiórki sa lepsze od jaj kurzych.  Przepiórze jajka sa mniejsze i rzadziej spotykane od kurzych lecz fakt ten nie powstrzymuje niektórych ludzi, którzy kochaja te jajka!"
+    },
+    "037": {
+      "title": "Cal kwadratowy",
+      "description": "Jesli nie przywykles do systemu metrycznego - oto cal kwadratowy.  Niestety, niemal wszytko inne nalezy do systemu metrycznego.  W dodatku 2,5 centymetra to dlugosc jednego boku, a nie powierzchni.   (Wtedy byloby to w cm^2.)"
+    },
+    "038": {
+      "title": "Ziarnko kawy",
+      "description": "Ziarnko kawy ma okolo jednego centymetra dlugosci - i o dziwo jest to owoc, przypominajacy zreszta fasolke.  Jest brazowe i ma paski, a czasem, gdy sie w nie wpatrujesz zapominasz, ze jego srednica to 10^-29 srednicy znanego nam wszechswiata."
+    },
+    "039": {
+      "title": "Zwykla dzdzownica",
+      "description": "Czyz nie uwielbiasz wijacych sie, sluzowatych dzdzownic?  Wbrew miejskim legendom, wiekszosc gatunków dzdzownic zdycha po przecieciu na pól.  Czasem przezywa glowa i odrasta jej nowy ogon."
+    },
+    "040": {
+      "title": "Rigel",
+      "description": "Rigel to plonaca niebieskim ogniem gwiazda, najjasniejsza w konstelacji Oriona. Lezy w poblizu równika wiec jest widoczna niemal za kazdego miejsca na Ziemi.  Poza tym nie mów na nia rygiel bo nie ma nic wspólnego z drzwiami."
+    },
+    "041": {
+      "title": "Stany Zjednoczone Ameryki Pólnocnej",
+      "description": "Oto USA.  Chociaz wydaja sie wieksze od Plutona, Pluton ma jeszcze druga strone, zatem jego powierzchnia jest wieksza!"
+    },
+    "042": {
+      "title": "Ziemia",
+      "description": "Ziemia jest naszym jedynym domem.  Dopóki na niej mieszkamy moze wydawac sie nam wielka, lecz nadal powinnismy o nia dbac.  Gdyby jej zabraklo - nie mielibysmy sie gdzie podziac."
+    },
+    "043": {
+      "title": "Deneb",
+      "description": "Deneb to najjasniejsza gwiazda w konstelacji Labedzia. Poniewaz lezy 1500 lat swietlnych od nas, jest najodleglejsza  z 25 najjasniejszych gwiazd.  Gdybys mieszkal na Marsie to Deneb, a nie Gwiazda Polarna, swiecilby nad Biegunem Pólnocnym."
+    },
+    "044": {
+      "title": "V V Cephei A",
+      "description": "Przez pewien czas V V Cephei A byla najwieksza gwiazda.  Teraz jest nia VY Canis Majoris.  A to dlatego, ze wciaz sa odkrywane nowe gwiazdy!"
+    },
+    "045": {
+      "title": "R Doradus",
+      "description": "R Doradus to stosunkowo duza gwiazda i lezy tylko 200 lat swietlnych od Ziemi, wiec widac ja jako drugi, najwiekszy obiekt na niebie!  Ma 0.05 sekundy katowej.  Najwiekszym zas jest Slonce ze swoimi 1,920 sekundami katowymi - czyli jest 40,000 razy wieksze."
+    },
+    "046": {
+      "title": "Aldebaran",
+      "description": "Nie myl Aldebarana z Alderaanem czyli planeta z Gwiezdnych Wojen. Alderaan przypomina Ziemie zarówno pod wzgledem wielkosci, dlugosci dnia jak i pokrycia oceanami.  Za to Aldebaran jest 5,000 razy wiekszy, jeden jego obrót to 643 dni ziemskie i nie ma na nim wody."
+    },
+    "047": {
+      "title": "Polluks",
+      "description": "W greckiej mitologii Polluks byl blizniakiem Kastora.  Sa to dwie gwiazdy w konstelacji Gemini czyli Blizniat.  W rzeczywistosci Polluks jest pojedyncza gwiazda, podczas gdy Kastor to trzy gwiazdy podwójne czyli razem szesc gwiazd.  Kastor to szescioraczki!"
+    },
+    "048": {
+      "title": "Arkturus",
+      "description": "Arkturus to trzecia pod wzgledem jasnosci gwiazda na nocnym niebie, przed nia sa Syriusz i Kanopus.  To najjasniejsza gwiazda w gwiazdozbiorze Wolarza.  Odszukaj ja sledzac przebieg dyszla Wilkiego Wozu."
+    },
+    "049": {
+      "title": "Slonce",
+      "description": "Znane pod nazwa Sol, Slonce uzycza swojej energii Ziemi i umozliwia trwanie zycia.   Srednica Slonca tysiackrotnie przekracza srednice Ziemi!  Rocznie, do Ziemi dociera 20.000 razy wiecej energii slonecznej niz cala ludzka rasa jest w stanie przez ten rok zuzyc."
+    },
+    "050": {
+      "title": "Alfa Centauri A",
+      "description": "Alfa Centauri A to najwieksza gwiazda w ukladzie alfy Centauri (skladajacego sie z trzech gwiazd), który jest najblizszym od nas ukladem gwiezdnym.  Jest to równiez czwarta pod wzgledem jasnosci gwiazda na nicnym niebie."
+    },
+    "051": {
+      "title": "Alfa Centauri B",
+      "description": "Alfa Centauri B to druga pod wzgledem wielkosci gwiazda w ukladzie alfy Centauri.  Jej srednica to ok. milion kilometrów, wiec jest troche mniejsza od Slonca.  Alfa Centuari A i B leza od siebie tak blisko, ze nam Ziemianom zlewaja sie w jedna gwiazde."
+    },
+    "052": {
+      "title": "Proxima Centauri",
+      "description": "Proxima Centauri znana jako najblizsza, oprócz Slonca, gwiazda od Ziemi.  Jej nazwa pochodzi o lacinskiego slowa proxima czyli najblizsza.  Proxima Centauri to czerwony karzel.  Niestety, swieci tak slablo, ze do jej obserwacji niezbedny jest teleskop."
+    },
+    "053": {
+      "title": "Syriusz A",
+      "description": "Syriusz to najjasniejsza gwiazda na nocnym niebie.  Swieci dwa razy jasniej od Kanopusa, gwiazdy drugiej pod wzgledem jasnosci.  Jednak Syriusz nie jest duza gwiazda.  Swieci najmocniej bo lezy blisko nas - tylko osiem lat swietlnych."
+    },
+    "054": {
+      "title": "Syriusz B",
+      "description": "Syriusz B to bialy karzel.  Jest tylko odrobine wiekszy od Ziemi!  Zazwyczaj trudno go wypatrzyc gdyz chowa sie w oslepiajacym swietle Syriusza A.  Syriusz B znany jest tez jako Szczeniak."
+    },
+    "055": {
+      "title": "Wega",
+      "description": "Wega lezy w gwiazdozbiorze Lutni.  Tworzy tzw. trójkat letni skladajacy sie z Altaira, Deneb i oczywiscie Wegi.  Wega obraca sie tak predko, ze az sie wybrzusza.  My widzimy ja od strony bieguna wiec wyglada jak okrag."
+    },
+    "056": {
+      "title": "Regulus",
+      "description": "Regulus obraca sie tak predko, ze sie wybrzusza - zupelnie jak Altair i Wega.  Regulus rozpadlby sie gdyby jego obroty wzrosly o 16%!  Regulus jest najjasniejsza gwiazda w gwiazdozbiorze Lwa.  Posiada dwa skladniki: B i C."
+    },
+    "057": {
+      "title": "Spica",
+      "description": "Spica jest pietnasta pod wzgledem jasnosci gwiazda na nocnym niebie i lezy w gwiazdozbiorze Panny.  W rzeczywistosci jest to podwójny system gwiazdowy.  Obie gwiazdy sa od siebie blisko polozone, a ich orbita ma cztery dni."
+    },
+    "058": {
+      "title": "Alnitak",
+      "description": "Alnitak rozswietla Mglawice Plomien.  Alnitak jest najbardziej na wschód polozona gwiazda w pasie Oriona.  Pozostale dwie to Alnilam oraz Mintaka, zas z planety Ziemia wszystkie trzy wydaja sie bardzo jasne."
+    },
+    "059": {
+      "title": "Gacrux",
+      "description": "Gacrux mozna zobaczyc w gwiazdozbiorze Krzyz Poludnia.  Crux po lacinie oznacza \"krzyz\".  Gacrux to gwiazda podwójna.  Wiekszy skladnik jest czerwonym olbrzymem."
+    },
+    "060": {
+      "title": "Uran",
+      "description": "Starozytni astronomowie nie uznawali Urana za planete choc wlasnie jest siódma planeta od Slonca. Jest równiez pierwsza planeta odkryta za pomoca teleskopu. Jego nazwa pochodzi od greckiego boga Uranosa, który byl dziadkiem greckiego \"celebryty\" Zeusa."
+    },
+    "061": {
+      "title": "Neptun",
+      "description": "Na dzien dzisiejszy Neptun jest najdalsza od Slonca planeta Ukladu Slonecznego.  Obrót wokól Slonca zajmuje mu 164,8 ziemskich lat!  Podczas calego swojego zycia nie zobaczysz jednego, pelnego obrotu Neptuna, chyba ze srednia dlugosc ludzkiego zycia nieco sie wydluzy."
+    },
+    "062": {
+      "title": "Wolf 359",
+      "description": "Wolf 359 jest czerwonym karlem.  Jest szósta pod wzgledem odleglosci od Ziemi, po Sloncu, Proxima Centauri, Alfa Centauri A i B oraz  gwiezdzie Barnarda.  Jego wielkosc gwiazdowa to +13.5."
+    },
+    "063": {
+      "title": "Gliese 229A",
+      "description": "Gliese 229A to czerwony karzel. Jest troche mniejsza od Slonca.  Czerwony karzel opisany jest równiez jako GJ 229 lub GI 229.  Jest czescia systemu podwójnego, z drugim skladnikiem: Gliese 229B."
+    },
+    "064": {
+      "title": "Gliese 229B",
+      "description": "Gliese 229B to brazowy karzel. Obiega po orbicie wiekszego karla Gliese 229A.  Gliese 229B móglby byc zaliczony do planet ale jest duzo bardziej gesty od Jowisza i ze wzgledu na swoja mase nie moze byc planeta."
+    },
+    "065": {
+      "title": "Jowisz",
+      "description": "Jowisz to najwieksza planeta w Systemie Slonecznym.  Jednakze nie jest najwieksza znana planeta.  Jest nia TReS-4.  Jowisz jest gazowym gigantem, jest wiec tylko kula gazu.  Nie mozna na nim wyladowac.  Dodatkowo Jowisz ma 64 ksiezyce wliczajac w to cztery ksiezyce galileuszowe."
+    },
+    "066": {
+      "title": "Saturn",
+      "description": "Saturn ma najszersze, najlepiej widoczne pierscienie w Systemie Slonecznym.  Galileo byl pierwsza osoba, która je ujrzala, nazwal wiec Saturna “planeta z uszami\".  Mozesz sobie wyobrazic Saturna bez pierscieni? Wygladalby jak zwykla, zólta kula."
+    },
+    "067": {
+      "title": "TReS-4",
+      "description": "TReS-4 to najwieksza kiedykolwiek odkryta planeta.  Lezy 1.400 lat swietlnych od nas.  Obecnie zaden teleskop nie jest w stanie pokazac TReS-4.  Wiemy, ze istniej poniewaz TReS-4 przechodzi na tle tarczy gwiazdy, wokól której orbituje, powodujac jej chwilowe zaciemnienie."
+    },
+    "068": {
+      "title": "Wenus",
+      "description": "W pewnym okresie czasu uwazano, ze Wenus i Ziemia to planety siostrzane.  To nieprawda!  Temperatura powierzchni Wenus wynosi zawsze ponad 450? C, poniewaz jej atmosfera, skladajaca sie w wiekszosci z dwutlenku wegla, przechwytuje energie sloneczna!"
+    },
+    "069": {
+      "title": "Mars",
+      "description": "Mars zany jest jako Czerwona Planeta.  Wydaje sie czerwona bo jest rdzawa.  Wiele osób wierzy, ze woda i zycie istnialy niegdys na Marsie. Nawet jesli to prawda, zycie nie przypominaloby malych, zielonych ludzików."
+    },
+    "070": {
+      "title": "Merkury",
+      "description": "Merkury lezy najblizej Slonca.  Nie posiada atmosfery.  Podczas dnia temperatura osiaga na nim 400? C, lecz w nocy spada do -180? C. Jeden rok Merkurego odpowiada 88 dniom ziemskim."
+    },
+    "071": {
+      "title": "Ganimedes",
+      "description": "Ganimedes jest najwiekszym ksiezycem w Systemie Slonecznym.  Obiega Jowisza i zostal odkryty przez Galileusza co czyni go ksiezycem galileuszowskim.  Prosze nie mylic Ganimedesa z Ganymedem 1036 – asteroida z grupy Amora!"
+    },
+    "072": {
+      "title": "Kallisto",
+      "description": "Kallisto to najbardziej odlegly ksiezyc galileuszowski.  Orbituje na zewnatrz pozostalych ksiezyców galileuszowskich wiec jest najczesciej bombardowany przez meteory. Tworza one mnóstwo kraterów."
+    },
+    "073": {
+      "title": "Io",
+      "description": "Io ma mnóstwo wulkanów – najwiecej w Systemie Slonecznym!  Gejzery na Io emituja zmrozony dwutlenek siarki na wysokosc az  500 kilometrów!  Krajobraz Io zmienia sie nieustannie.  Po roku wyglada zupelnie inaczej!"
+    },
+    "074": {
+      "title": "Europa",
+      "description": "Europa jest najmniejszym ksiezycem galileuszowym. Pokrywa go lód.  Jego powierzchnie pokrywaja tajemnicze rysy i pekniecia.  Niektórzy ludzie uwazaja, ze pod pokrywa lodu posiada on ocean cieklej wody, a nawet ze istnieje tam zycie."
+    },
+    "075": {
+      "title": "Tytan",
+      "description": "Tytan to jedyny ksiezyc Saturna.  Ma bardzo gesta atmosfere skladajaca sie w wiekszosci azotu.  Atmosfera Ziemi równiez w wiekszosci sklada sie z azotu.  Na Tytanie znajduja sie jeziora cieklego metanu. (Temperatura wynosi -180? C.)  Jest tam nawet kontynent zwany Xanadu."
+    },
+    "076": {
+      "title": "Ksiezyc",
+      "description": "Ksiezyc, po lac. Luna, to najjasniejszy obiekt na nocnym niebie.  Obiega Ziemie co 27 dni, 7 godzin i 43 minuty.  Lubie wyobrazac sobie nad glowa wiele ksiezyców przeplywajacych przez nocne niebo.  To byloby wspaniale!"
+    },
+    "077": {
+      "title": "Tryton",
+      "description": "Tryton jest najwiekszym ksiezycem Neptuna.  Jest takze najzimniejszym obiektem w Systemie Slonecznym, z temperatura -240? C.  Tryton to równiez bardzo wietrzne miejsce, wiatry wieja tam z predkoscia dzwieku!"
+    },
+    "078": {
+      "title": "Pluton",
+      "description": "Pluton nie jest juz planeta.  Powodem tej zmiany bylo odkrycie wielu podobnych wielkoscia asteroid, krazacych miedzy orbitami Marsa  Jowisza.  Pluton otrzymal oficjalna nazwe: 134340 Pluton, poniewaz jest planeta karlowata."
+    },
+    "079": {
+      "title": "Charon",
+      "description": "Charon to naturalny satelita Plutona.  Maja podobny rozmiar.  Leza tak blisko siebie, ze niektórzy ludzie uznali je za planete podwójna.  Czy wiesz, ze Charon zwrócony jest zawsze ta sama strona do Plutona i vice versa?"
+    },
+    "080": {
+      "title": "Eris",
+      "description": "Eris to najwieksza planeta karlowata.  Jest nawet wieksza od Plutona, który równiez jest planeta karlowata.  W dodatku Eris lezy bardzo daleko od Slonca.  Posiada ksiezyc o nazwie Dysnomia."
+    },
+    "081": {
+      "title": "Dysnomia",
+      "description": "Dysnomia to jedyny ksiezyc Eris, odkryty w sobote, 10 wrzesnia 2005 roku.  Czy wiesz, ze  Dysnomia oznacza równiez zaburzenie neurologiczne podobne do dyslekcji?"
+    },
+    "082": {
+      "title": "Sedna",
+      "description": "Sedna ma bardzo eliptyczna orbite.   Lezy na tak odleglej orbicie, ze obiegniecie Slonca zajmuje jej ponad 10.000 ziemskich lat.  Obiekt nazwany zostal na czesc Sedny, bóstwa oceanu w wierzeniach Inuitów – ludów pólnocy, zamieszkujacych od Grenlandii po Czukotke w Rosji."
+    },
+    "083": {
+      "title": "Quaoar",
+      "description": "Quaoar jest bardzo gesta planetoida, a to za sprawa bardzo duzego jadra.  Dawno temu Quaoar mógl byc duzo wiekszy. Mógl równiez zostac uderzony przez obiekt wielkosci Plutona, który zdmuchnal jego zewnetrzne warstwy."
+    },
+    "084": {
+      "title": "Ceres",
+      "description": "Ceres To niezbyt fajne miejsce do zycia dla ludzi.  Ceres jest najwieksza asteroida i fakt ten zapoczatkowal debate nad definicja planety.  Poczatkowo byl uznawany za planete ale z czasem utracil ten przywilej."
+    },
+    "085": {
+      "title": "Gwiazda Polarna",
+      "description": "Gwiazda Polarna albo Polaris znana jest równiez jako Gwiazda Pólnocna.  Lezy bardzo blisko bieguna pólnocnego, wiec jesli zechcesz odnalezc pólnoc – szukaj Gwiazdy Polarnej.  Odszukaj dwie gwiazdy lezace najdalej w Wielkiej Niedzwiedzicy i popatrz wyzej."
+    },
+    "086": {
+      "title": "Antares",
+      "description": "Antares jest czerwonym nadolbrzymem polozonym blisko ekliptyki wiec dosc czesto bywa zaslonieta przez Ksiezyc.  Antares wazy septyliony ton i powoli traci swa wage z powodu wiatru slonecznego. Szybciej starci wage gdy eksploduje, co stanie sie troche pózniej."
+    },
+    "087": {
+      "title": "Altair",
+      "description": "Altair to jedna z trzech gwiazd trójkata letniego.  Trójkat Letni jest trójkatem ostrym, co oznacza ze kazdy z jego katów ma mniej niz 90?!  Pozostale dwie gwiazdy to: Wega i Deneb.  Jak wiele innych gwiazd, Altair obraca sie bardzo szybko co powoduje jego wybrzuszenie!"
+    },
+    "088": {
+      "title": "La Superba",
+      "description": "La Superba to jedna z najbardziej czerwonych gwiazd na nocnym niebie.  Ma tak czerwona barwe z powodu obecnosci duzych ilosci izotopu wegla C13   (Zwykly wegiel to C12.)  La Superba ma tylko 2500? C, co czyni ja jedna z najzimniejszych gwiazd."
+    },
+    "089": {
+      "title": "Gwiazda Pistolet",
+      "description": "Gwiazda Pistolet jest jedna z najjasniejszych, znanych nam gwiazd.  W ciagu 20 sekund emituje tyle energii jaka wysyla Slonce w ciagu jednego roku. Pyl miedzygwiazdowy nie pozwala nam na obserwacje bezposrednia. Poniewaz gwiazda znajduje sie za mglawica, której ksztalt przypomina dym wystrzelajacy z pistoletu, nazwano ja Gwiazda Pistolet."
+    },
+    "090": {
+      "title": "S Doradus",
+      "description": "S Doradus to hiperolbrzym i jednoczesnie jedna z najjasniejszych gwiazd w Wielkim Obloku Magellana.  By poczytac wiecej o Wielkim Obloku Magellana oddal sie 8,5 raza."
+    },
+    "091": {
+      "title": "Enif",
+      "description": "Enif jest pomaranczowym nadolbrzymem.  Jego nazwa po arabsku oznacza \"nos\", poniewaz w konstelacji Pegaza lezy w miejscu nozdrzy."
+    },
+    "092": {
+      "title": "Gwiazda Granat",
+      "description": "Gwiazda Granat (Mu Cephei) jest bardzo czerwona.  Nazywana jest czasem Granatem Herschela, gdyz to wlasnie William Herschel jako pierwszy opisal wyjatkowy jasnoczerwony kolor gwiazdy porównujac go z kolorem kamienia szlachetnego granatu.  Inna jej nazwa jest Erakis, to w razie gdyby nie podobaly sie dwie wczesniejsze nazwy."
+    },
+    "093": {
+      "title": "KY Cygni",
+      "description": "KY Cygni jest 300,000 razy bardziej jasna niz Slonce, a Slonce jest calkiem jasne, nieprawdaz? Slonce jest tak jasne, ze nie da sie na nie patrzec bezposrednio. Ale mozna golym okiem spojrzec na KY Cyngi poniewaz jest polozona 300 milionów razy dalej niz Slonce."
+    },
+    "094": {
+      "title": "V354 Cephei",
+      "description": "V354 Cephei jest czerwonym nadolbrzymem, i jest rzeczywiscie ogromny.  Gdyby go wstawic do Systemu Slonecznego to zakrylby nawet orbite Jupitera. Liczba 354, która wystepuje w nazwie jest rokiem urodzenia Augustine of Hippo."
+    },
+    "095": {
+      "title": "WOH G64",
+      "description": "Ja wiem... Ty myslisz \"WOH... to jest dopiero wielka gwiazda!\"  Cóz, zgaduje, ze masz racje, poniewaz obecnie jest to druga co do wielkosci znana gwiazda.  WOH G64 mozna znalezc w Wielkim Obloku Magellana. Gwiazde otacza oblok  o rozmiarach polowy roku swietlnego."
+    },
+    "096": {
+      "title": "VY Canis Majoris",
+      "description": "VY Canis Majoris jest najwieksza znana gwiazda.  Jest tak wielka, ze gdyby byla wstawiona do Systemu slonecznego ro zakryla by orbite planety Saturn! Aby okrazyc ja samolotem potrzebowalibysmy okolo 1200 lat."
+    },
+    "097": {
+      "title": "Betelguese",
+      "description": "Wiek Betelguese's wynosi miliony lat.  Betelguese jest tak stara, ze spodziewamy sie jej eksplozji w przeciagu nastepnych dziesieciu tysiecy lat. Mniejsze gwiazdy zyja ok cztery tryliony lat. Betelguese jako wielka gwiazda starzeje sie szybciej."
+    },
+    "098": {
+      "title": "Albireo",
+      "description": "Albireo sklada sie tak naprawde z trzech gwiazd. Tu pokazujemy najwieksza z nich. Dwie z gwiazd znajduja sie blizej siebie, i formuja zólty punkt.  Trzecia gwiazda jest niebieska i znajduje sie w dalszej odleglosci. Niebieska gwiazda i dwie zólte sa jednak tak odlegle od siebie, ze jeden ich obrót trwa ok 100,000 lat."
+    },
+    "099": {
+      "title": "Kapteyn's Star",
+      "description": "Kapteyn's Star is only thirteen light-years away.  Even so, its magnitude is +9, so you need binoculars to see it.  Around 10,000 years ago, Kapteyn's Star was only seven light-years away!"
+    },
     "100": {
       "title": "Luyten's Star",
       "description": "Gwiazda Luyten's jest Czerwonym Karlem oddalonym od nas o 12 lat swietlnych. Znajduje sie tak blisko gwiazdy Procyon, ze Procyon wyglada 10 razy jasniej wzgledem gwiazdy Luyten's niz wyglada Sirius."
@@ -956,285 +1236,9 @@
       "title": "Płytka krwi",
       "description": "Płytka krwi to mały składnik krwi, który pomaga zatrzymać krwawienie. Gdy naczynie krwionośne zostaje uszkodzone, płytki szybko gromadzą się w tym miejscu, przyklejają się do siebie i uczestniczą w tworzeniu skrzepu. Co ciekawe, płytki krwi nie mają jądra: nie są pełnymi komórkami, lecz małymi fragmentami komórkowymi."
     },
-    "030": {
-      "title": "Piksel LCD",
-      "description": "Chociaz rozmiary pikseli róznia sie znacznie to 300 mikrometrów to mniej wiecej ich srednia. Piksel sklada sie z trzech podpikseli w kolorach: czerwonym, zielonym i niebieskim. Piksele sa calkiem fajne ale voksele sa jeszcze lepsze. To sa takie trójwymiarowe piksele."
-    },
-    "031": {
-      "title": "Palm Jebel Ali",
-      "description": "Palm Jebel Ali to najwieksza zbudowana przez czlowieka wyspa (nie biorac pod uwage takich wysp jak Flevopolder, gdzie osuszono pewien region Holandii, zeby zdobyc wiecej ziemi).  Palm Jebel Ali nie jest jeszcze ukonczona.  Jest czescia Palm Islands i ma pomiescic domy dla 250,000 osób!"
-    },
-    "032": {
-      "title": "Neutrino",
-      "description": "Neutrina bez przerwy przenikaja przez zwykla materie, taka z jakiej ty czy ja jestesmy zbudowani!  Szczerze mówiac, robia to nawet teraz!  Neutrina nie maja ladunku wiec wplyw na nie ma jedynie grawitacja i slabe oddzialywania.  Jednak sa tak male, ze wplyw ten jest niewielki."
-    },
-    "033": {
-      "title": "Neutrino wysokiej energii",
-      "description": "Neutrina o wysokiej energii sa wieksze.  Po wiecej informacji o neutrinie, przejdz do neutrina, przedstawionego w swej sredniej wielkosci.  Jest ono az 15000 mniejsze!"
-    },
-    "034": {
-      "title": "Zapalka",
-      "description": "Zapalka to bardzo uzyteczne male narzedzie.  Uderzone o cos innego, zapala sie.  To sprawia, ze jest równiez niebezpieczne!  To dlatego lepiej nie bawic sie zapalkami.  Zrozumiales?"
-    },
-    "035": {
-      "title": "Kurze jajo",
-      "description": "Z kurzego jaja zazwyczaj wykluwaja sie piskleta.  Wielu ludzi uwielbia jesc kurze jaja.   Nie ma róznicy pomiedzy brazowym i bialym jajkiem, oczywiscie poza róznica w wygladzie."
-    },
-    "036": {
-      "title": "Jajo przepiórcze",
-      "description": "Wiele osób uwaza, ze jaja przepiórki sa lepsze od jaj kurzych.  Przepiórze jajka sa mniejsze i rzadziej spotykane od kurzych lecz fakt ten nie powstrzymuje niektórych ludzi, którzy kochaja te jajka!"
-    },
-    "037": {
-      "title": "Cal kwadratowy",
-      "description": "Jesli nie przywykles do systemu metrycznego - oto cal kwadratowy.  Niestety, niemal wszytko inne nalezy do systemu metrycznego.  W dodatku 2,5 centymetra to dlugosc jednego boku, a nie powierzchni.   (Wtedy byloby to w cm^2.)"
-    },
-    "038": {
-      "title": "Ziarnko kawy",
-      "description": "Ziarnko kawy ma okolo jednego centymetra dlugosci - i o dziwo jest to owoc, przypominajacy zreszta fasolke.  Jest brazowe i ma paski, a czasem, gdy sie w nie wpatrujesz zapominasz, ze jego srednica to 10^-29 srednicy znanego nam wszechswiata."
-    },
-    "039": {
-      "title": "Zwykla dzdzownica",
-      "description": "Czyz nie uwielbiasz wijacych sie, sluzowatych dzdzownic?  Wbrew miejskim legendom, wiekszosc gatunków dzdzownic zdycha po przecieciu na pól.  Czasem przezywa glowa i odrasta jej nowy ogon."
-    },
-    "040": {
-      "title": "Rigel",
-      "description": "Rigel to plonaca niebieskim ogniem gwiazda, najjasniejsza w konstelacji Oriona. Lezy w poblizu równika wiec jest widoczna niemal za kazdego miejsca na Ziemi.  Poza tym nie mów na nia rygiel bo nie ma nic wspólnego z drzwiami."
-    },
-    "041": {
-      "title": "Stany Zjednoczone Ameryki Pólnocnej",
-      "description": "Oto USA.  Chociaz wydaja sie wieksze od Plutona, Pluton ma jeszcze druga strone, zatem jego powierzchnia jest wieksza!"
-    },
-    "042": {
-      "title": "Ziemia",
-      "description": "Ziemia jest naszym jedynym domem.  Dopóki na niej mieszkamy moze wydawac sie nam wielka, lecz nadal powinnismy o nia dbac.  Gdyby jej zabraklo - nie mielibysmy sie gdzie podziac."
-    },
-    "043": {
-      "title": "Deneb",
-      "description": "Deneb to najjasniejsza gwiazda w konstelacji Labedzia. Poniewaz lezy 1500 lat swietlnych od nas, jest najodleglejsza  z 25 najjasniejszych gwiazd.  Gdybys mieszkal na Marsie to Deneb, a nie Gwiazda Polarna, swiecilby nad Biegunem Pólnocnym."
-    },
-    "044": {
-      "title": "V V Cephei A",
-      "description": "Przez pewien czas V V Cephei A byla najwieksza gwiazda.  Teraz jest nia VY Canis Majoris.  A to dlatego, ze wciaz sa odkrywane nowe gwiazdy!"
-    },
-    "045": {
-      "title": "R Doradus",
-      "description": "R Doradus to stosunkowo duza gwiazda i lezy tylko 200 lat swietlnych od Ziemi, wiec widac ja jako drugi, najwiekszy obiekt na niebie!  Ma 0.05 sekundy katowej.  Najwiekszym zas jest Slonce ze swoimi 1,920 sekundami katowymi - czyli jest 40,000 razy wieksze."
-    },
-    "046": {
-      "title": "Aldebaran",
-      "description": "Nie myl Aldebarana z Alderaanem czyli planeta z Gwiezdnych Wojen. Alderaan przypomina Ziemie zarówno pod wzgledem wielkosci, dlugosci dnia jak i pokrycia oceanami.  Za to Aldebaran jest 5,000 razy wiekszy, jeden jego obrót to 643 dni ziemskie i nie ma na nim wody."
-    },
-    "047": {
-      "title": "Polluks",
-      "description": "W greckiej mitologii Polluks byl blizniakiem Kastora.  Sa to dwie gwiazdy w konstelacji Gemini czyli Blizniat.  W rzeczywistosci Polluks jest pojedyncza gwiazda, podczas gdy Kastor to trzy gwiazdy podwójne czyli razem szesc gwiazd.  Kastor to szescioraczki!"
-    },
-    "048": {
-      "title": "Arkturus",
-      "description": "Arkturus to trzecia pod wzgledem jasnosci gwiazda na nocnym niebie, przed nia sa Syriusz i Kanopus.  To najjasniejsza gwiazda w gwiazdozbiorze Wolarza.  Odszukaj ja sledzac przebieg dyszla Wilkiego Wozu."
-    },
-    "049": {
-      "title": "Slonce",
-      "description": "Znane pod nazwa Sol, Slonce uzycza swojej energii Ziemi i umozliwia trwanie zycia.   Srednica Slonca tysiackrotnie przekracza srednice Ziemi!  Rocznie, do Ziemi dociera 20.000 razy wiecej energii slonecznej niz cala ludzka rasa jest w stanie przez ten rok zuzyc."
-    },
-    "050": {
-      "title": "Alfa Centauri A",
-      "description": "Alfa Centauri A to najwieksza gwiazda w ukladzie alfy Centauri (skladajacego sie z trzech gwiazd), który jest najblizszym od nas ukladem gwiezdnym.  Jest to równiez czwarta pod wzgledem jasnosci gwiazda na nicnym niebie."
-    },
-    "051": {
-      "title": "Alfa Centauri B",
-      "description": "Alfa Centauri B to druga pod wzgledem wielkosci gwiazda w ukladzie alfy Centauri.  Jej srednica to ok. milion kilometrów, wiec jest troche mniejsza od Slonca.  Alfa Centuari A i B leza od siebie tak blisko, ze nam Ziemianom zlewaja sie w jedna gwiazde."
-    },
-    "052": {
-      "title": "Proxima Centauri",
-      "description": "Proxima Centauri znana jako najblizsza, oprócz Slonca, gwiazda od Ziemi.  Jej nazwa pochodzi o lacinskiego slowa proxima czyli najblizsza.  Proxima Centauri to czerwony karzel.  Niestety, swieci tak slablo, ze do jej obserwacji niezbedny jest teleskop."
-    },
-    "053": {
-      "title": "Syriusz A",
-      "description": "Syriusz to najjasniejsza gwiazda na nocnym niebie.  Swieci dwa razy jasniej od Kanopusa, gwiazdy drugiej pod wzgledem jasnosci.  Jednak Syriusz nie jest duza gwiazda.  Swieci najmocniej bo lezy blisko nas - tylko osiem lat swietlnych."
-    },
-    "054": {
-      "title": "Syriusz B",
-      "description": "Syriusz B to bialy karzel.  Jest tylko odrobine wiekszy od Ziemi!  Zazwyczaj trudno go wypatrzyc gdyz chowa sie w oslepiajacym swietle Syriusza A.  Syriusz B znany jest tez jako Szczeniak."
-    },
-    "055": {
-      "title": "Wega",
-      "description": "Wega lezy w gwiazdozbiorze Lutni.  Tworzy tzw. trójkat letni skladajacy sie z Altaira, Deneb i oczywiscie Wegi.  Wega obraca sie tak predko, ze az sie wybrzusza.  My widzimy ja od strony bieguna wiec wyglada jak okrag."
-    },
-    "056": {
-      "title": "Regulus",
-      "description": "Regulus obraca sie tak predko, ze sie wybrzusza - zupelnie jak Altair i Wega.  Regulus rozpadlby sie gdyby jego obroty wzrosly o 16%!  Regulus jest najjasniejsza gwiazda w gwiazdozbiorze Lwa.  Posiada dwa skladniki: B i C."
-    },
-    "057": {
-      "title": "Spica",
-      "description": "Spica jest pietnasta pod wzgledem jasnosci gwiazda na nocnym niebie i lezy w gwiazdozbiorze Panny.  W rzeczywistosci jest to podwójny system gwiazdowy.  Obie gwiazdy sa od siebie blisko polozone, a ich orbita ma cztery dni."
-    },
-    "058": {
-      "title": "Alnitak",
-      "description": "Alnitak rozswietla Mglawice Plomien.  Alnitak jest najbardziej na wschód polozona gwiazda w pasie Oriona.  Pozostale dwie to Alnilam oraz Mintaka, zas z planety Ziemia wszystkie trzy wydaja sie bardzo jasne."
-    },
-    "059": {
-      "title": "Gacrux",
-      "description": "Gacrux mozna zobaczyc w gwiazdozbiorze Krzyz Poludnia.  Crux po lacinie oznacza \"krzyz\".  Gacrux to gwiazda podwójna.  Wiekszy skladnik jest czerwonym olbrzymem."
-    },
-    "060": {
-      "title": "Uran",
-      "description": "Starozytni astronomowie nie uznawali Urana za planete choc wlasnie jest siódma planeta od Slonca. Jest równiez pierwsza planeta odkryta za pomoca teleskopu. Jego nazwa pochodzi od greckiego boga Uranosa, który byl dziadkiem greckiego \"celebryty\" Zeusa."
-    },
-    "061": {
-      "title": "Neptun",
-      "description": "Na dzien dzisiejszy Neptun jest najdalsza od Slonca planeta Ukladu Slonecznego.  Obrót wokól Slonca zajmuje mu 164,8 ziemskich lat!  Podczas calego swojego zycia nie zobaczysz jednego, pelnego obrotu Neptuna, chyba ze srednia dlugosc ludzkiego zycia nieco sie wydluzy."
-    },
-    "062": {
-      "title": "Wolf 359",
-      "description": "Wolf 359 jest czerwonym karlem.  Jest szósta pod wzgledem odleglosci od Ziemi, po Sloncu, Proxima Centauri, Alfa Centauri A i B oraz  gwiezdzie Barnarda.  Jego wielkosc gwiazdowa to +13.5."
-    },
-    "063": {
-      "title": "Gliese 229A",
-      "description": "Gliese 229A to czerwony karzel. Jest troche mniejsza od Slonca.  Czerwony karzel opisany jest równiez jako GJ 229 lub GI 229.  Jest czescia systemu podwójnego, z drugim skladnikiem: Gliese 229B."
-    },
-    "064": {
-      "title": "Gliese 229B",
-      "description": "Gliese 229B to brazowy karzel. Obiega po orbicie wiekszego karla Gliese 229A.  Gliese 229B móglby byc zaliczony do planet ale jest duzo bardziej gesty od Jowisza i ze wzgledu na swoja mase nie moze byc planeta."
-    },
-    "065": {
-      "title": "Jowisz",
-      "description": "Jowisz to najwieksza planeta w Systemie Slonecznym.  Jednakze nie jest najwieksza znana planeta.  Jest nia TReS-4.  Jowisz jest gazowym gigantem, jest wiec tylko kula gazu.  Nie mozna na nim wyladowac.  Dodatkowo Jowisz ma 64 ksiezyce wliczajac w to cztery ksiezyce galileuszowe."
-    },
-    "066": {
-      "title": "Saturn",
-      "description": "Saturn ma najszersze, najlepiej widoczne pierscienie w Systemie Slonecznym.  Galileo byl pierwsza osoba, która je ujrzala, nazwal wiec Saturna “planeta z uszami\".  Mozesz sobie wyobrazic Saturna bez pierscieni? Wygladalby jak zwykla, zólta kula."
-    },
-    "067": {
-      "title": "TReS-4",
-      "description": "TReS-4 to najwieksza kiedykolwiek odkryta planeta.  Lezy 1.400 lat swietlnych od nas.  Obecnie zaden teleskop nie jest w stanie pokazac TReS-4.  Wiemy, ze istniej poniewaz TReS-4 przechodzi na tle tarczy gwiazdy, wokól której orbituje, powodujac jej chwilowe zaciemnienie."
-    },
-    "068": {
-      "title": "Wenus",
-      "description": "W pewnym okresie czasu uwazano, ze Wenus i Ziemia to planety siostrzane.  To nieprawda!  Temperatura powierzchni Wenus wynosi zawsze ponad 450? C, poniewaz jej atmosfera, skladajaca sie w wiekszosci z dwutlenku wegla, przechwytuje energie sloneczna!"
-    },
-    "069": {
-      "title": "Mars",
-      "description": "Mars zany jest jako Czerwona Planeta.  Wydaje sie czerwona bo jest rdzawa.  Wiele osób wierzy, ze woda i zycie istnialy niegdys na Marsie. Nawet jesli to prawda, zycie nie przypominaloby malych, zielonych ludzików."
-    },
-    "070": {
-      "title": "Merkury",
-      "description": "Merkury lezy najblizej Slonca.  Nie posiada atmosfery.  Podczas dnia temperatura osiaga na nim 400? C, lecz w nocy spada do -180? C. Jeden rok Merkurego odpowiada 88 dniom ziemskim."
-    },
-    "071": {
-      "title": "Ganimedes",
-      "description": "Ganimedes jest najwiekszym ksiezycem w Systemie Slonecznym.  Obiega Jowisza i zostal odkryty przez Galileusza co czyni go ksiezycem galileuszowskim.  Prosze nie mylic Ganimedesa z Ganymedem 1036 – asteroida z grupy Amora!"
-    },
-    "072": {
-      "title": "Kallisto",
-      "description": "Kallisto to najbardziej odlegly ksiezyc galileuszowski.  Orbituje na zewnatrz pozostalych ksiezyców galileuszowskich wiec jest najczesciej bombardowany przez meteory. Tworza one mnóstwo kraterów."
-    },
-    "073": {
-      "title": "Io",
-      "description": "Io ma mnóstwo wulkanów – najwiecej w Systemie Slonecznym!  Gejzery na Io emituja zmrozony dwutlenek siarki na wysokosc az  500 kilometrów!  Krajobraz Io zmienia sie nieustannie.  Po roku wyglada zupelnie inaczej!"
-    },
-    "074": {
-      "title": "Europa",
-      "description": "Europa jest najmniejszym ksiezycem galileuszowym. Pokrywa go lód.  Jego powierzchnie pokrywaja tajemnicze rysy i pekniecia.  Niektórzy ludzie uwazaja, ze pod pokrywa lodu posiada on ocean cieklej wody, a nawet ze istnieje tam zycie."
-    },
-    "075": {
-      "title": "Tytan",
-      "description": "Tytan to jedyny ksiezyc Saturna.  Ma bardzo gesta atmosfere skladajaca sie w wiekszosci azotu.  Atmosfera Ziemi równiez w wiekszosci sklada sie z azotu.  Na Tytanie znajduja sie jeziora cieklego metanu. (Temperatura wynosi -180? C.)  Jest tam nawet kontynent zwany Xanadu."
-    },
-    "076": {
-      "title": "Ksiezyc",
-      "description": "Ksiezyc, po lac. Luna, to najjasniejszy obiekt na nocnym niebie.  Obiega Ziemie co 27 dni, 7 godzin i 43 minuty.  Lubie wyobrazac sobie nad glowa wiele ksiezyców przeplywajacych przez nocne niebo.  To byloby wspaniale!"
-    },
-    "077": {
-      "title": "Tryton",
-      "description": "Tryton jest najwiekszym ksiezycem Neptuna.  Jest takze najzimniejszym obiektem w Systemie Slonecznym, z temperatura -240? C.  Tryton to równiez bardzo wietrzne miejsce, wiatry wieja tam z predkoscia dzwieku!"
-    },
-    "078": {
-      "title": "Pluton",
-      "description": "Pluton nie jest juz planeta.  Powodem tej zmiany bylo odkrycie wielu podobnych wielkoscia asteroid, krazacych miedzy orbitami Marsa  Jowisza.  Pluton otrzymal oficjalna nazwe: 134340 Pluton, poniewaz jest planeta karlowata."
-    },
-    "079": {
-      "title": "Charon",
-      "description": "Charon to naturalny satelita Plutona.  Maja podobny rozmiar.  Leza tak blisko siebie, ze niektórzy ludzie uznali je za planete podwójna.  Czy wiesz, ze Charon zwrócony jest zawsze ta sama strona do Plutona i vice versa?"
-    },
-    "080": {
-      "title": "Eris",
-      "description": "Eris to najwieksza planeta karlowata.  Jest nawet wieksza od Plutona, który równiez jest planeta karlowata.  W dodatku Eris lezy bardzo daleko od Slonca.  Posiada ksiezyc o nazwie Dysnomia."
-    },
-    "081": {
-      "title": "Dysnomia",
-      "description": "Dysnomia to jedyny ksiezyc Eris, odkryty w sobote, 10 wrzesnia 2005 roku.  Czy wiesz, ze  Dysnomia oznacza równiez zaburzenie neurologiczne podobne do dyslekcji?"
-    },
-    "082": {
-      "title": "Sedna",
-      "description": "Sedna ma bardzo eliptyczna orbite.   Lezy na tak odleglej orbicie, ze obiegniecie Slonca zajmuje jej ponad 10.000 ziemskich lat.  Obiekt nazwany zostal na czesc Sedny, bóstwa oceanu w wierzeniach Inuitów – ludów pólnocy, zamieszkujacych od Grenlandii po Czukotke w Rosji."
-    },
-    "083": {
-      "title": "Quaoar",
-      "description": "Quaoar jest bardzo gesta planetoida, a to za sprawa bardzo duzego jadra.  Dawno temu Quaoar mógl byc duzo wiekszy. Mógl równiez zostac uderzony przez obiekt wielkosci Plutona, który zdmuchnal jego zewnetrzne warstwy."
-    },
-    "084": {
-      "title": "Ceres",
-      "description": "Ceres To niezbyt fajne miejsce do zycia dla ludzi.  Ceres jest najwieksza asteroida i fakt ten zapoczatkowal debate nad definicja planety.  Poczatkowo byl uznawany za planete ale z czasem utracil ten przywilej."
-    },
-    "085": {
-      "title": "Gwiazda Polarna",
-      "description": "Gwiazda Polarna albo Polaris znana jest równiez jako Gwiazda Pólnocna.  Lezy bardzo blisko bieguna pólnocnego, wiec jesli zechcesz odnalezc pólnoc – szukaj Gwiazdy Polarnej.  Odszukaj dwie gwiazdy lezace najdalej w Wielkiej Niedzwiedzicy i popatrz wyzej."
-    },
-    "086": {
-      "title": "Antares",
-      "description": "Antares jest czerwonym nadolbrzymem polozonym blisko ekliptyki wiec dosc czesto bywa zaslonieta przez Ksiezyc.  Antares wazy septyliony ton i powoli traci swa wage z powodu wiatru slonecznego. Szybciej starci wage gdy eksploduje, co stanie sie troche pózniej."
-    },
-    "087": {
-      "title": "Altair",
-      "description": "Altair to jedna z trzech gwiazd trójkata letniego.  Trójkat Letni jest trójkatem ostrym, co oznacza ze kazdy z jego katów ma mniej niz 90?!  Pozostale dwie gwiazdy to: Wega i Deneb.  Jak wiele innych gwiazd, Altair obraca sie bardzo szybko co powoduje jego wybrzuszenie!"
-    },
-    "088": {
-      "title": "La Superba",
-      "description": "La Superba to jedna z najbardziej czerwonych gwiazd na nocnym niebie.  Ma tak czerwona barwe z powodu obecnosci duzych ilosci izotopu wegla C13   (Zwykly wegiel to C12.)  La Superba ma tylko 2500? C, co czyni ja jedna z najzimniejszych gwiazd."
-    },
-    "089": {
-      "title": "Gwiazda Pistolet",
-      "description": "Gwiazda Pistolet jest jedna z najjasniejszych, znanych nam gwiazd.  W ciagu 20 sekund emituje tyle energii jaka wysyla Slonce w ciagu jednego roku. Pyl miedzygwiazdowy nie pozwala nam na obserwacje bezposrednia. Poniewaz gwiazda znajduje sie za mglawica, której ksztalt przypomina dym wystrzelajacy z pistoletu, nazwano ja Gwiazda Pistolet."
-    },
-    "090": {
-      "title": "S Doradus",
-      "description": "S Doradus to hiperolbrzym i jednoczesnie jedna z najjasniejszych gwiazd w Wielkim Obloku Magellana.  By poczytac wiecej o Wielkim Obloku Magellana oddal sie 8,5 raza."
-    },
-    "091": {
-      "title": "Enif",
-      "description": "Enif jest pomaranczowym nadolbrzymem.  Jego nazwa po arabsku oznacza \"nos\", poniewaz w konstelacji Pegaza lezy w miejscu nozdrzy."
-    },
-    "092": {
-      "title": "Gwiazda Granat",
-      "description": "Gwiazda Granat (Mu Cephei) jest bardzo czerwona.  Nazywana jest czasem Granatem Herschela, gdyz to wlasnie William Herschel jako pierwszy opisal wyjatkowy jasnoczerwony kolor gwiazdy porównujac go z kolorem kamienia szlachetnego granatu.  Inna jej nazwa jest Erakis, to w razie gdyby nie podobaly sie dwie wczesniejsze nazwy."
-    },
-    "093": {
-      "title": "KY Cygni",
-      "description": "KY Cygni jest 300,000 razy bardziej jasna niz Slonce, a Slonce jest calkiem jasne, nieprawdaz? Slonce jest tak jasne, ze nie da sie na nie patrzec bezposrednio. Ale mozna golym okiem spojrzec na KY Cyngi poniewaz jest polozona 300 milionów razy dalej niz Slonce."
-    },
-    "094": {
-      "title": "V354 Cephei",
-      "description": "V354 Cephei jest czerwonym nadolbrzymem, i jest rzeczywiscie ogromny.  Gdyby go wstawic do Systemu Slonecznego to zakrylby nawet orbite Jupitera. Liczba 354, która wystepuje w nazwie jest rokiem urodzenia Augustine of Hippo."
-    },
-    "095": {
-      "title": "WOH G64",
-      "description": "Ja wiem... Ty myslisz \"WOH... to jest dopiero wielka gwiazda!\"  Cóz, zgaduje, ze masz racje, poniewaz obecnie jest to druga co do wielkosci znana gwiazda.  WOH G64 mozna znalezc w Wielkim Obloku Magellana. Gwiazde otacza oblok  o rozmiarach polowy roku swietlnego."
-    },
-    "096": {
-      "title": "VY Canis Majoris",
-      "description": "VY Canis Majoris jest najwieksza znana gwiazda.  Jest tak wielka, ze gdyby byla wstawiona do Systemu slonecznego ro zakryla by orbite planety Saturn! Aby okrazyc ja samolotem potrzebowalibysmy okolo 1200 lat."
-    },
-    "097": {
-      "title": "Betelguese",
-      "description": "Wiek Betelguese's wynosi miliony lat.  Betelguese jest tak stara, ze spodziewamy sie jej eksplozji w przeciagu nastepnych dziesieciu tysiecy lat. Mniejsze gwiazdy zyja ok cztery tryliony lat. Betelguese jako wielka gwiazda starzeje sie szybciej."
-    },
-    "098": {
-      "title": "Albireo",
-      "description": "Albireo sklada sie tak naprawde z trzech gwiazd. Tu pokazujemy najwieksza z nich. Dwie z gwiazd znajduja sie blizej siebie, i formuja zólty punkt.  Trzecia gwiazda jest niebieska i znajduje sie w dalszej odleglosci. Niebieska gwiazda i dwie zólte sa jednak tak odlegle od siebie, ze jeden ich obrót trwa ok 100,000 lat."
-    },
-    "099": {
-      "title": "Kapteyn's Star",
-      "description": "Kapteyn's Star is only thirteen light-years away.  Even so, its magnitude is +9, so you need binoculars to see it.  Around 10,000 years ago, Kapteyn's Star was only seven light-years away!"
+    "339": {
+      "title": "Gluon",
+      "description": "Gluon to cząstka elementarna, która przenosi oddziaływanie silne. To właśnie ono utrzymuje kwarki wewnątrz protonów i neutronów, z których zbudowane są jądra atomowe. Co ciekawe, gluony jakby „sklejają” cząstki materii: ich nazwa pochodzi od angielskiego słowa glue, czyli „klej”."
     }
   }
 }

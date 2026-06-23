@@ -1235,6 +1235,10 @@
     "338": {
       "title": "Plaquette sanguine",
       "description": "Une plaquette est un petit élément du sang qui aide à arrêter le saignement. Lorsqu'un vaisseau sanguin est endommagé, les plaquettes s'y rassemblent rapidement, adhèrent les unes aux autres et participent à la formation d'un caillot. Fait intéressant, les plaquettes n'ont pas de noyau : ce ne sont pas des cellules complètes, mais de petits fragments cellulaires."
+    },
+    "339": {
+      "title": "Gluon",
+      "description": "Un gluon est une particule élémentaire qui transmet l’interaction forte. C’est cette force qui maintient les quarks ensemble à l’intérieur des protons et des neutrons, qui composent les noyaux atomiques. Fait intéressant, les gluons semblent « coller » les particules de matière entre elles : leur nom vient du mot anglais glue, qui signifie « colle »."
     }
   }
 }

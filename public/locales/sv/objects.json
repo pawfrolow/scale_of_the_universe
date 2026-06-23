@@ -1235,6 +1235,10 @@
     "338": {
       "title": "Blodplätt",
       "description": "En blodplätt är en liten beståndsdel i blodet som hjälper till att stoppa blödningar. När ett blodkärl skadas samlas blodplättar snabbt där, klibbar fast vid varandra och deltar i bildandet av en propp. Intressant nog har blodplättar ingen cellkärna: de är inte fullständiga celler utan små cellfragment."
+    },
+    "339": {
+      "title": "Gluon",
+      "description": "En gluon är en elementarpartikel som förmedlar den starka växelverkan. Det är denna kraft som håller ihop kvarkar inuti protoner och neutroner, som atomkärnor består av. Intressant nog verkar gluoner på sätt och vis “klistra ihop” materiens partiklar: namnet kommer från det engelska ordet glue, som betyder “lim”."
     }
   }
 }

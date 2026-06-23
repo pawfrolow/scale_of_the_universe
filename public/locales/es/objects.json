@@ -1235,6 +1235,10 @@
     "338": {
       "title": "Plaqueta",
       "description": "Una plaqueta es un pequeño componente de la sangre que ayuda a detener el sangrado. Cuando un vaso sanguíneo se daña, las plaquetas se reúnen rápidamente allí, se adhieren unas a otras y participan en la formación de un coágulo. Curiosamente, las plaquetas no tienen núcleo: no son células completas, sino pequeños fragmentos celulares."
+    },
+    "339": {
+      "title": "Gluón",
+      "description": "Un gluón es una partícula elemental que transporta la interacción fuerte. Esta fuerza mantiene unidos a los quarks dentro de los protones y neutrones, que forman los núcleos atómicos. Curiosamente, los gluones parecen “pegar” las partículas de materia entre sí: su nombre proviene de la palabra inglesa glue, que significa “pegamento”."
     }
   }
 }

@@ -1235,6 +1235,10 @@
     "338": {
       "title": "Platelet",
       "description": "A platelet is a small blood component that helps stop bleeding. When a blood vessel is damaged, platelets quickly gather there, stick to one another, and take part in forming a clot. Interestingly, platelets have no nucleus: they are not full cells but tiny cell fragments."
+    },
+    "339": {
+      "title": "Gluon",
+      "description": "A gluon is an elementary particle that carries the strong interaction. This is the force that holds quarks together inside protons and neutrons, which make up atomic nuclei. Interestingly, gluons seem to “glue” particles of matter together: their name comes from the English word glue."
     }
   }
 }

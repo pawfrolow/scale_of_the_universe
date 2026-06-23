@@ -1235,6 +1235,10 @@
     "338": {
       "title": "Trombotsüüt",
       "description": "Trombotsüüt on väike vere koostisosa, mis aitab verejooksu peatada. Kui veresoon saab kahjustada, kogunevad trombotsüüdid sinna kiiresti, kleepuvad üksteise külge ja osalevad trombi moodustumises. Huvitaval kombel pole trombotsüütidel rakutuuma: need ei ole täisrakud, vaid väikesed rakufragmendid."
+    },
+    "339": {
+      "title": "Gluoon",
+      "description": "Gluoon on elementaarosake, mis kannab tugevat vastastikmõju. Just see jõud hoiab kvarke koos prootonite ja neutronite sees, millest koosnevad aatomituumad. Huvitaval kombel justkui „liimivad“ gluoonid aineosakesi kokku: nende nimi tuleb ingliskeelsest sõnast glue, mis tähendab „liimi“."
     }
   }
 }

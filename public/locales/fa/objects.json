@@ -1,5 +1,285 @@
 {
   "items": {
+    "030": {
+      "title": "پیکسل LCD",
+      "description": "اگرچه اندازه ی پیکسل ها بسیار متفاوتند، اما مقدار متوسط آنها را می توان 033 میکرو300 در نظر گرفت. پیکسل ها حاوی سه زیر پیکسل قرمز، سبز، و آبی هستند. پیکسل ها بسیار عالی هستند، اما بهتر از آنها voxel ها هستند. آنها پیکسل های سه بعدی اند."
+    },
+    "031": {
+      "title": "نخل جبل علی",
+      "description": "نخل جبل علی بزرگترین جزیره ی ساخته ی دست بشر است )که شامل جزایری مانند Flevopolderنمی شود، جائی که قسمتی از هلند خشک شده و به جزیره تبدیل شده است(. نخل جبل علی کامل نیست. در واقع این قسمتی از مجمع الجزایر نخلی است که قرار است 250,000 نفر را در خود مستقر کند"
+    },
+    "032": {
+      "title": "نوترینو",
+      "description": "نوترینوها همواره از مواد معمولی مانند من و شما عبور می کنند! در واقع، هم اکنون در حال انجام این کار هستند! نوترینوها بار ندارند، بنابراین تنها تحت تأثیر گرانش و نیروی ضعیف قرار می گیرند. گرچه، آنها آنقدر کوچکند که تأثیر پذیری بسیار اندکی دارند."
+    },
+    "033": {
+      "title": "نوترینوی انرژی باا",
+      "description": "نوترینوی های انرژی باا بزرگترند. برای کسب اطاعات بیشتر در مورد نوترینوها به نوترینو بروید، و اندازه ی متوسط آنرا ببینید. بزرگترین آنها 15,000 بار کوچکتر است!"
+    },
+    "034": {
+      "title": "چوب کبریت",
+      "description": "چوب کبریت یک وسیله ی کوچک و مفید است. هنگامی که به چیزی سابیده می شود می تواند آتش بگیرد. که این موضوع آن را بسیار خطرناک می کند! به همین دلیل است که نباید با آنها بازی کرد. فهمیدید؟"
+    },
+    "035": {
+      "title": "تخم مرغ",
+      "description": "تخم مرغ جایی است که جوجه ها از آن بیرون می جهند. بسیاری از انسان ها از خوردن تخم مرغ لذت می برند. برخاف ظاهر، بین تخم مرغ سفید و قهوه ای تفاوتی وجود ندارد."
+    },
+    "036": {
+      "title": "تخم بلدرچین",
+      "description": "بسیاری از مردم بر این باورند که تخم بلدرچین از تخم مرغ بهتر است. تخم بلدرچین کوچکتر و همچنین کمیاب تر از تخم مرغ است، اما این دلیلی بر توقف دوست داشتن بعضی مردم از آن نمی شود!"
+    },
+    "037": {
+      "title": "اینچ مربع",
+      "description": "اگر به سیستم متریک عادت ندارید، این اینچ مربع است. متأسفانه برای شما، تقریبا تمامی چیزهای دیگر در سیستم متریک نوشته شده اند. همچنین، 2.2 سانتیمتر واحد طول است، نه مساحت. )در این مورد cm^2 به کار می رود.("
+    },
+    "038": {
+      "title": "دانه ی قهوه",
+      "description": "عرض دانه ی قهوه تقریبا یک سانتیمتر است – و در واقع میوه ایست شبیه لوبیا. قهوه ای است و دارای شیار، و بعضی اوقات، هنگامی که به آن زل می زنید، فراموش می کنید که قطر آن تنها 10^-29 برابر جهانی است که ما می شناسیم."
+    },
+    "039": {
+      "title": "کرم خاکی معمولی",
+      "description": "آیا شما حرکات پیچشی کرم خاکی و لزجی آنرا دوست ندارید؟ عارغم افسانه های شهری، بسیاری از گونه های کرم خاکی اگر به دو نیمه شوند می میرند. بعضی وقتها، سر زنده می ماند و دم جدیدی در می آورد."
+    },
+    "040": {
+      "title": "پای شکارچی",
+      "description": "پای شکارچی یک ستاره ی آبی تابناک ، و درخشان ترین ستاره در صورت فلکی شکارچی است. در کنار استواست، بنابراین از تقریبا همه جای کره ی زمین قابل دیدن است. بنابراین، به آن \"wriggle\" نگوئید چرا که به صورت \"rye-jel\" تلفظ می شود."
+    },
+    "041": {
+      "title": "ایاات متحده ی آمریکا",
+      "description": "اینجا U.S.A است. گرچه به نظر بزرگتر از پلوتوست، پلوتو چهره ی پشتی دارد، که به معنای داشتن مساحت بیشتری است!"
+    },
+    "042": {
+      "title": "زمین",
+      "description": "زمین تنها خانه ی ماست. هنگامی که روی آن زندگی می کنیم، ممکن است آنرا بزرگ ببینیم، اما همچنان مهم است که از آن نگهداری کنیم. اگر آن را از دست بدهیم، جائی برای رفتن نداریم."
+    },
+    "043": {
+      "title": "دنب",
+      "description": "دنب درخشان ترین ستاره در صورت فلکی ماکیان است. دنب در فاصله ی 1,500 سال نوری است، که آن را در رده ی 22 ستاره ی درخشان بسیار دور قرار می دهد. اگر بر روی مریخ زندگی می کردید، دنب باای قطب شمال قرار می گرفت – نه ستاره ی قطبی."
+    },
+    "044": {
+      "title": "A قیفاووس V V",
+      "description": "برای مدتی VV قیفاووس A بزرگترین ستاره ی شناخته شده بود. هم اکنون این عنوان متعلق است به سگ بزرگ VY است. به این دلیل که همواره ستارگان جدید در حال کشف شدن هستند!"
+    },
+    "045": {
+      "title": "ماهی زرین R",
+      "description": "ماهی زرین R تقریبا بزرگ است و تنها 233 سال نوری از زمین فاصله دارد، بنابراین اندازه ی ظاهری آن از لحاظ بزرگی دومین در آسمان است! پهنای آن 3.32 ثانیه ی قوسی است. خورشید بزرگترین است با 1,920 ثانیه ی قوسی پهنا – 40,000 بار بزرگتر"
+    },
+    "046": {
+      "title": "دبران",
+      "description": "Aldebaran را نباید با Alderaan اشتباه گرفت، که یک سیاره در جنگ ستارگان است. Alderaan بسیار به زمین شبیه است از لحاظ اندازه، طول روز، و پوشش آبی. گرچه، دبران 5,000 بار قطرش بزرگتر است، هر 340 روز زمینی یک دور می زند، و آبی در آن وجود ندارد."
+    },
+    "047": {
+      "title": "رأس پیکر پسین",
+      "description": "در اساطیر یونانی، دوقلوی رأس پیکر پسین، رأس پیکر پیشین است. همچنین این ستاره ها در صورت فلکی دوپیکر، به معنای \"دوقلو\" قرار دارند. با اینحال، در واقعیت رأس پیکر پسین یک ستاره ی تنهاست، در حالی که رأس پیکر پیشین سه تا دوتایی است، که جمعأ شش ستاره می شود. رأس پیکر پیشین یکی از شش تایی هاست!"
+    },
+    "048": {
+      "title": "نگهبان شمال",
+      "description": "نگهبان شمال سومین ستاره ی درخشان در آسمان شب، بعد از شباهنگ و سهیل است. این ستاره درخشانترین ستاره در صورت فلکی گاوران است. می توان با دنبال کردن دسته ی خرس بزرگ آن را پیدا کرد."
+    },
+    "049": {
+      "title": "خورشید",
+      "description": "نام دیگر خورشید مهر است، خورشید آن چیزی است که به زمین انرژی برای ادامه ی حیات می دهد. قطر خورشید باای 033 برابر قطر زمین است! 20,000 برابر انرژی ای که نژاد بشر مصرف می کند به زمین از طرف خورشید برخورد می کند."
+    },
+    "050": {
+      "title": "آلفا قنطورس A",
+      "description": "آلفا قنطورس A بزرگترین ستاره در مجموعه ی ستاره ای آلفا قنطورس )متشکل از سه ستاره(، که نزدیکترین مجموعه ی ستاره ای به ماست می باشد. همچنین چهارمین ستاره ی درخشان در آسمان شب است."
+    },
+    "051": {
+      "title": "آلفا قنطورس B",
+      "description": "آلفا قنطورس B دومین ستاره از نظر بزرگی در مجموعه ی ستاره ای آلفا قنطورس است. قطر آن به طور تقریبی یک میلیون کیلومتر است، بنابراین کمی از خورشید کوچکتر است. آلفا قنطورس A و B آنقدر به یکدیگر نزدیکند که به مانند یک ستاره از زمین دیده می شوند."
+    },
+    "052": {
+      "title": "پروکسیما قنطورس",
+      "description": "پروکسیما قنطورس به عنوان نزدیکترین ستاره به زمین به غیر از خورشید شناخته می شود. اسم آن از  “proximity” به معنای نزدیکی می آید. پروکسیما قنطورس یک ستاره ی کوچک و قرمز رنگ است. متأسفانه، آنچنان کم نور است، که برای دیدن آن به تلسکوپ نیاز دارید."
+    },
+    "053": {
+      "title": "شباهنگ A",
+      "description": "شباهنگ درخشانترین ستاره در آسمان شب است. تقریبا دو برابر درخشان تر از سهیل، دومین ستاره ی درخشان است. با اینحال شباهنگ ستاره ی بزرگی نیست. دلیل درخشندگی زیاد آن نزدیکی آن به ماست چیزی در حدود 8 سال نوری."
+    },
+    "054": {
+      "title": "شباهنگ B",
+      "description": "شباهنگ B یک کوتوله ی سفید است. به سختی بزرگتر از زمین است! همچنین رصد آن بسیار سخت است چرا که در پس نور خیره کننده ی شباهنگ A پنهان می شود. شباهنگ B به عنوان \"توله ی سگ\" نیز شناخته می شود."
+    },
+    "055": {
+      "title": "نسر واقع",
+      "description": "نسر واقع در صورت فلکی شلیاق قرار دارد. همچنین قسمتی از مثلث تابستانی متشکل از نسر واقع ، نسر طائر، و دنب است. نسر واقع آنقدر سریع به دور خود می چرخد که ورم می کند. گرچه ما آنرا از طرف قطبش مشاهده می کنیم و به نظر دایروی می رسد."
+    },
+    "056": {
+      "title": "قلب ااسد",
+      "description": "قلب ااسد مانند نسر طائر و نسر واقع آنقدر سریع می چرخد که ورم می کند. اگر قلب 1سد 16% بیشتر از سرعت فعلی می چرخید از هم گسیخته می شد! قلب ااسد همچنین درخشانترین ستاره در صورت فلکی شیر است. قلب ااسد B و  C نیز وجود دارند."
+    },
+    "057": {
+      "title": "سماک اعزل",
+      "description": "سماک اعزل پانزدهمین ستاره ی درخشان در آسمان شب است و در صورت فلکی سنبله قرار دارد. در واقع سماک اعزل یک سیستم دوتائی است. این دو ستاره بسیار به هم نزدیکند، دوره ی تناوب آنها 4 روز است."
+    },
+    "058": {
+      "title": "نطاق",
+      "description": "نطاق نور چشم سحابی شعله است. نطاق همچنین شرقی ترین ستاره از سه ستاره ای است که کمربند شکارچی را تشکیل می دهند. دو تای دیگر روجینه و منطقه هستند، هر سه از زمین بسیار درخشان دیده می شوند."
+    },
+    "059": {
+      "title": "گاکروکس",
+      "description": "گاکروکس را می توانید در صورت فلکی چلیپا پیدا کنید. چلیپا به معنای صلیب است در اتین آنرا به عنوان صلیب جنوبی می شناسند. گاکروکس یه ستاره ی دوتائی است. ستاره ی بزرگتر یک غول قرمز است."
+    },
+    "060": {
+      "title": "اورانوس",
+      "description": "بسیاری از مردم دوست دارند که فکر کنند \"Uranus\" شبیه \"your anus\" تلفظ می شود. تلفظ های دیگر و بهتری وجود دارند. اورانوس همچنین می تواند به صورت \"Yer-uh-niss\" یا \"Seh-venth-pla-net\" تلفظ شود."
+    },
+    "061": {
+      "title": "Neptune",
+      "description": "Currently, Neptune is the farthest planet in the Solar System from the Sun.  It takes 164.8 Earth years for it to orbit the Sun.  You'll never see Neptune complete a single orbit in your whole life, unless life expectancies increase."
+    },
+    "062": {
+      "title": "Wolf 359",
+      "description": "Wolf 359 is a small red dwarf, dwarfed by normal stars.  It is the sixth closest star to Earth, after the Sun, Proxima Centauri, Alpha Centauri A & B and Barnard's star.  Still, its magnitude is a dim +13.5."
+    },
+    "063": {
+      "title": "Gliese 229A",
+      "description": "Gliese 229A is a red dwarf star.  It is a bit smaller than the Sun.  The red dwarf star is also written as GJ 229 or GI 229.  It is part of a binary star system, the second star being Gliese 229B."
+    },
+    "064": {
+      "title": "Gliese 229B",
+      "description": "Gliese 229B is a brown dwarf star.  It orbits a larger dwarf star, which is Gliese 229A.  Gliese 229B would be classified as a planet, but it is much denser than Jupiter, making its mass too large to be considered a planet."
+    },
+    "065": {
+      "title": "Jupiter",
+      "description": "Jupiter is the largest planet in the solar system.  However, it is not the largest known planet.  That's TrES-4.  Jupiter is a gas giant, so it's just a ball of gas.  You can't land anywhere on it.  Also, Jupiter has 64 moons, including the four Gallilean moons."
+    },
+    "066": {
+      "title": "Saturn",
+      "description": "Saturn has the widest, most visible rings of the Solar System.  Galileo, who was the first person to see these rings, first thought they were \"ears\".  Can you imagine a Saturn without rings?  It would be just a yellow ball."
+    },
+    "067": {
+      "title": "TrES-4",
+      "description": "TrES-4 is the largest planet discovered.  No telescope can actually see TrES-4, but there are ways to prove its existence indirectly.  TrES-4's gravity causes the star it orbits to wobble slightly.  Also, whenever TrES-4 goes in front of the star, the shine of the star dims a little."
+    },
+    "068": {
+      "title": "Venus",
+      "description": "There was a time when Venus and Earth were thought to be sister planets.  That isn't true at all!  Venus's surface temperature is always above 450° C, because its atmosphere, which is mostly carbon dioxide, traps the Sun's heat!"
+    },
+    "069": {
+      "title": "Mars",
+      "description": "Mars is known as the Red Planet.  It is red because it is rusty.  Many people believe water and life once existed on Mars.  However, even if that is true, the life wouldn't be like the little green men."
+    },
+    "070": {
+      "title": "Mercury",
+      "description": "Mercury is the closest planet to the Sun.  It has no atmosphere.  During the day, temperatures reach 400° C, but at night, the temperatures fall to -180° C. One Mercurian year is 88 Earth days."
+    },
+    "071": {
+      "title": "Ganymede",
+      "description": "Ganymede is the largest moon in the Solar System.  It orbits Jupiter and was discovered by Galileo, which makes it a Galilean moon.  Also, Ganymede is not to be confused with Ganymed, which is an asteroid whose name doesn't have the final \"e\"!"
+    },
+    "072": {
+      "title": "Callisto",
+      "description": "Callisto is the most distant of the Gallilean moons.  It orbits outside all the other Gallilean moons and gets hit with the most meteors.  All these impacts create many, many craters."
+    },
+    "073": {
+      "title": "Io",
+      "description": "Io has a lot of volcanoes - the most in the Solar System!  Io's geysers emit frozen sulfur dioxide up to 500 kilometers into space!  The landscape of Io is constantly changing.  In one year, it will look very different!"
+    },
+    "074": {
+      "title": "Europa",
+      "description": "Europa is the puniest of the Galilean moons.  It is covered with ice.  There are mysterious streaks that cover the moon's surface.  Some people believe water might exist beneath the layer of ice, possibly even holding life."
+    },
+    "075": {
+      "title": "Titan",
+      "description": "Titan is Saturn's only large moon.  It has a very thick atmosphere, which is made up of mostly nitrogen.  Earth's atmosphere is also mostly nitrogen.  Titan has seas of liquid methane. (It's around -180° C.)  There's even a continent called \"Xanadu\"."
+    },
+    "076": {
+      "title": "The Moon",
+      "description": "The Moon, also known as \"Luna\\ is the brightest object in the night sky.  It orbits Earth every 27 days, 7 hours and 43 minutes.  I like to imagine seeing several moons scattered across the night sky. That would be amazing!"
+    },
+    "077": {
+      "title": "Triton",
+      "description": "Triton is Neptune's largest moon.  It is also the coldest object in the Solar System, at -240° C.  Triton is also a very windy place, with winds going at almost the speed of sound!"
+    },
+    "078": {
+      "title": "Pluto",
+      "description": "Pluto is no longer a planet.  Why do people feel sympathy for it?  It has no feelings.  Even if it did, why would it care about what people way over on Earth thought?  On another note, Pluto's official name is now \"134340 Pluto\\ because it's a dwarf planet."
+    },
+    "079": {
+      "title": "Charon",
+      "description": "Charon is Pluto's only large moon.  They are very close in size.  They are so close, some people consider Pluto and Charon to be a double planet.  Did you know the same side of Charon always faces Pluto, and the same side of Pluto always faces Charon?"
+    },
+    "080": {
+      "title": "Eris",
+      "description": "Eris is the largest dwarf planet.  It is even bigger than Pluto, which is also a dwarf planet.  Eris is also very far from the Sun.  Eris has a moon, and that's Dysnomia.  Where's Dysnomia?  It's directly beneath the period at the end of this last sentence."
+    },
+    "081": {
+      "title": "Dysnomia",
+      "description": "Dysnomia is Eris's only moon and was discovered on September 10, 2005, which was a Saturday.  Also, did you know that \"Dysnomia\" also refers to a law conflict?"
+    },
+    "082": {
+      "title": "Sedna",
+      "description": "Sedna has a very elliptical orbit.   It is so far away it takes 10,000 Earth years to complete one orbit.  You probably realized that \"Sedna\" backwards is \"Andes\\ the world's longest mountain range. (It's in South America.)  Both may seem other-worldly!"
+    },
+    "083": {
+      "title": "Quaoar",
+      "description": "Quaoar is very dense because its core is very big.  Quaoar may have been much larger long ago. It might have been hit by an object the size of Pluto, which would have stripped away the outer layers."
+    },
+    "084": {
+      "title": "Ceres",
+      "description": "Ceres is not a very good place for humans to live.  Ceres is also the largest asteroid, and began the debate over the definition of \"planet\".  For a time, Ceres was considered a planet, but then it wasn't."
+    },
+    "085": {
+      "title": "Polaris",
+      "description": "Polaris is known as the North Star.  It is very near the north pole, so if you want to know which way is north, just try to find Polaris.  Locate the two stars on the far side of the Big Dipper, and go upward."
+    },
+    "086": {
+      "title": "Antares",
+      "description": "Antares is a red supergiant very near the ecliptic, so it gets occulted by the Moon quite often.  Also, Antares weighs septillions of tons and is losing weight through solar wind, but this method is slow. The fast way is to explode, which it'll do later."
+    },
+    "087": {
+      "title": "Altair",
+      "description": "Altair is one of the three stars in the Summer Triangle.  The Summer Triangle is an acute triangle, which means that all the angles are less than 90°!  The other two are Vega and Deneb.  Like many other stars, Altair spins very quickly, bulging at the center!"
+    },
+    "088": {
+      "title": "La Superba",
+      "description": "La Superba is one of the reddest stars in the night sky.  It is so red because of all the carbon-13 it creates when fusing helium.   (Normal carbon is carbon-12.)  La Superba is only 2500° C, making it one of the coldest stars."
+    },
+    "089": {
+      "title": "Pistol Star",
+      "description": "The Pistol Star is one of the most luminous stars known.  In twenty seconds, it radiates as much energy as the Sun does in a year. Interstellar dust prevents us from seeing it. It's called the Pistol Star not because of its luminosity, but because it's in the Pistol Nebula."
+    },
+    "090": {
+      "title": "S Doradus",
+      "description": "S Doradus is a hypergiant, as well as one of the brightest stars in the Large Magellanic Cloud.  For more about the Large Magellanic Cloud, zoom out 8.5 orders of magnitude."
+    },
+    "091": {
+      "title": "Enif",
+      "description": "Enif is an orange supergiant.  Its name means \"nose\" in Arabic, because in the constellation Pegasus, it is in the position of the muzzle.  Concidentally, the word \"Enif\" backwards is \"Fine\"."
+    },
+    "092": {
+      "title": "Mu Cephei",
+      "description": "Mu Cephei is very red.  It is sometimes referred to as \"Herschel's Garnet Star\" because it is garnet red.  Another alternative name is Erakis, if you don't like the first two names."
+    },
+    "093": {
+      "title": "KY Cygni",
+      "description": "KY Cygni is 300,000 times more luminous than the Sun, and the Sun is pretty luminous, isn't it?  The Sun is so luminous you aren't supposed to look at it!  However, it's okay to look at KY Cyngi because it is 300 million times farther away."
+    },
+    "094": {
+      "title": "V354 Cephei",
+      "description": "V354 Cephei is red supergiant, and it's huge.  If placed in the Solar System, it would extend past the orbit of Jupiter.  354, in addition to being in this star's name, is also the year Augustine of Hippo was born."
+    },
+    "095": {
+      "title": "WOH G64",
+      "description": "I know... you're thinking, \"WOH... that's a big star!\"  Well, I guess you're right, because currently it's the second largest known star.  WOH G64 is found in the Large Magellanic Cloud.  There is a cloud surrounding the star that extends half of a light-year."
+    },
+    "096": {
+      "title": "VY Canis Majoris",
+      "description": "VY Canis Majoris is the largest known star.  It is so large that if it were placed in the Solar System, it would extend beyond the orbit of Saturn!  It would take a plane 1,200 years to circle it once."
+    },
+    "097": {
+      "title": "Betelgeuse",
+      "description": "Betelgeuse's age is in the millions of years.  Betelgeuse is so old, it is expected to explode in the next ten thousand years.  Smaller stars live for trillions of years.  Betelgeuse is so big it aged fast."
+    },
+    "098": {
+      "title": "Albireo",
+      "description": "Albireo is made up of three stars total.  Here we are just showing the largest one.  Two of the stars are close, and form a yellow dot.  The third is blue and further away.  The blue star and yellow stars are so far apart it takes them 100,000 years to complete one orbit."
+    },
+    "099": {
+      "title": "Kapteyn's Star",
+      "description": "Kapteyn's Star is only thirteen light-years away.  Even so, its magnitude is +9, so you need binoculars to see it.  Around 10,000 years ago, Kapteyn's Star was only seven light-years away!"
+    },
     "100": {
       "title": "Luyten's Star",
       "description": "Luyten's Star is a red dwarf star  12 light-years away from us.  It is so close to Procyon that Procyon would appear 10 times brighter to Luyten's Star than Sirius appears to us."
@@ -956,285 +1236,9 @@
       "title": "پلاکت",
       "description": "پلاکت جزء کوچکی از خون است که به بند آمدن خونریزی کمک می‌کند. وقتی رگ خونی آسیب می‌بیند، پلاکت‌ها خیلی سریع در آن محل جمع می‌شوند، به هم می‌چسبند و در تشکیل لخته نقش دارند. جالب است که پلاکت‌ها هسته ندارند: آن‌ها سلول کامل نیستند، بلکه قطعات کوچک سلولی‌اند."
     },
-    "030": {
-      "title": "پیکسل LCD",
-      "description": "اگرچه اندازه ی پیکسل ها بسیار متفاوتند، اما مقدار متوسط آنها را می توان 033 میکرو300 در نظر گرفت. پیکسل ها حاوی سه زیر پیکسل قرمز، سبز، و آبی هستند. پیکسل ها بسیار عالی هستند، اما بهتر از آنها voxel ها هستند. آنها پیکسل های سه بعدی اند."
-    },
-    "031": {
-      "title": "نخل جبل علی",
-      "description": "نخل جبل علی بزرگترین جزیره ی ساخته ی دست بشر است )که شامل جزایری مانند Flevopolderنمی شود، جائی که قسمتی از هلند خشک شده و به جزیره تبدیل شده است(. نخل جبل علی کامل نیست. در واقع این قسمتی از مجمع الجزایر نخلی است که قرار است 250,000 نفر را در خود مستقر کند"
-    },
-    "032": {
-      "title": "نوترینو",
-      "description": "نوترینوها همواره از مواد معمولی مانند من و شما عبور می کنند! در واقع، هم اکنون در حال انجام این کار هستند! نوترینوها بار ندارند، بنابراین تنها تحت تأثیر گرانش و نیروی ضعیف قرار می گیرند. گرچه، آنها آنقدر کوچکند که تأثیر پذیری بسیار اندکی دارند."
-    },
-    "033": {
-      "title": "نوترینوی انرژی باا",
-      "description": "نوترینوی های انرژی باا بزرگترند. برای کسب اطاعات بیشتر در مورد نوترینوها به نوترینو بروید، و اندازه ی متوسط آنرا ببینید. بزرگترین آنها 15,000 بار کوچکتر است!"
-    },
-    "034": {
-      "title": "چوب کبریت",
-      "description": "چوب کبریت یک وسیله ی کوچک و مفید است. هنگامی که به چیزی سابیده می شود می تواند آتش بگیرد. که این موضوع آن را بسیار خطرناک می کند! به همین دلیل است که نباید با آنها بازی کرد. فهمیدید؟"
-    },
-    "035": {
-      "title": "تخم مرغ",
-      "description": "تخم مرغ جایی است که جوجه ها از آن بیرون می جهند. بسیاری از انسان ها از خوردن تخم مرغ لذت می برند. برخاف ظاهر، بین تخم مرغ سفید و قهوه ای تفاوتی وجود ندارد."
-    },
-    "036": {
-      "title": "تخم بلدرچین",
-      "description": "بسیاری از مردم بر این باورند که تخم بلدرچین از تخم مرغ بهتر است. تخم بلدرچین کوچکتر و همچنین کمیاب تر از تخم مرغ است، اما این دلیلی بر توقف دوست داشتن بعضی مردم از آن نمی شود!"
-    },
-    "037": {
-      "title": "اینچ مربع",
-      "description": "اگر به سیستم متریک عادت ندارید، این اینچ مربع است. متأسفانه برای شما، تقریبا تمامی چیزهای دیگر در سیستم متریک نوشته شده اند. همچنین، 2.2 سانتیمتر واحد طول است، نه مساحت. )در این مورد cm^2 به کار می رود.("
-    },
-    "038": {
-      "title": "دانه ی قهوه",
-      "description": "عرض دانه ی قهوه تقریبا یک سانتیمتر است – و در واقع میوه ایست شبیه لوبیا. قهوه ای است و دارای شیار، و بعضی اوقات، هنگامی که به آن زل می زنید، فراموش می کنید که قطر آن تنها 10^-29 برابر جهانی است که ما می شناسیم."
-    },
-    "039": {
-      "title": "کرم خاکی معمولی",
-      "description": "آیا شما حرکات پیچشی کرم خاکی و لزجی آنرا دوست ندارید؟ عارغم افسانه های شهری، بسیاری از گونه های کرم خاکی اگر به دو نیمه شوند می میرند. بعضی وقتها، سر زنده می ماند و دم جدیدی در می آورد."
-    },
-    "040": {
-      "title": "پای شکارچی",
-      "description": "پای شکارچی یک ستاره ی آبی تابناک ، و درخشان ترین ستاره در صورت فلکی شکارچی است. در کنار استواست، بنابراین از تقریبا همه جای کره ی زمین قابل دیدن است. بنابراین، به آن \"wriggle\" نگوئید چرا که به صورت \"rye-jel\" تلفظ می شود."
-    },
-    "041": {
-      "title": "ایاات متحده ی آمریکا",
-      "description": "اینجا U.S.A است. گرچه به نظر بزرگتر از پلوتوست، پلوتو چهره ی پشتی دارد، که به معنای داشتن مساحت بیشتری است!"
-    },
-    "042": {
-      "title": "زمین",
-      "description": "زمین تنها خانه ی ماست. هنگامی که روی آن زندگی می کنیم، ممکن است آنرا بزرگ ببینیم، اما همچنان مهم است که از آن نگهداری کنیم. اگر آن را از دست بدهیم، جائی برای رفتن نداریم."
-    },
-    "043": {
-      "title": "دنب",
-      "description": "دنب درخشان ترین ستاره در صورت فلکی ماکیان است. دنب در فاصله ی 1,500 سال نوری است، که آن را در رده ی 22 ستاره ی درخشان بسیار دور قرار می دهد. اگر بر روی مریخ زندگی می کردید، دنب باای قطب شمال قرار می گرفت – نه ستاره ی قطبی."
-    },
-    "044": {
-      "title": "A قیفاووس V V",
-      "description": "برای مدتی VV قیفاووس A بزرگترین ستاره ی شناخته شده بود. هم اکنون این عنوان متعلق است به سگ بزرگ VY است. به این دلیل که همواره ستارگان جدید در حال کشف شدن هستند!"
-    },
-    "045": {
-      "title": "ماهی زرین R",
-      "description": "ماهی زرین R تقریبا بزرگ است و تنها 233 سال نوری از زمین فاصله دارد، بنابراین اندازه ی ظاهری آن از لحاظ بزرگی دومین در آسمان است! پهنای آن 3.32 ثانیه ی قوسی است. خورشید بزرگترین است با 1,920 ثانیه ی قوسی پهنا – 40,000 بار بزرگتر"
-    },
-    "046": {
-      "title": "دبران",
-      "description": "Aldebaran را نباید با Alderaan اشتباه گرفت، که یک سیاره در جنگ ستارگان است. Alderaan بسیار به زمین شبیه است از لحاظ اندازه، طول روز، و پوشش آبی. گرچه، دبران 5,000 بار قطرش بزرگتر است، هر 340 روز زمینی یک دور می زند، و آبی در آن وجود ندارد."
-    },
-    "047": {
-      "title": "رأس پیکر پسین",
-      "description": "در اساطیر یونانی، دوقلوی رأس پیکر پسین، رأس پیکر پیشین است. همچنین این ستاره ها در صورت فلکی دوپیکر، به معنای \"دوقلو\" قرار دارند. با اینحال، در واقعیت رأس پیکر پسین یک ستاره ی تنهاست، در حالی که رأس پیکر پیشین سه تا دوتایی است، که جمعأ شش ستاره می شود. رأس پیکر پیشین یکی از شش تایی هاست!"
-    },
-    "048": {
-      "title": "نگهبان شمال",
-      "description": "نگهبان شمال سومین ستاره ی درخشان در آسمان شب، بعد از شباهنگ و سهیل است. این ستاره درخشانترین ستاره در صورت فلکی گاوران است. می توان با دنبال کردن دسته ی خرس بزرگ آن را پیدا کرد."
-    },
-    "049": {
-      "title": "خورشید",
-      "description": "نام دیگر خورشید مهر است، خورشید آن چیزی است که به زمین انرژی برای ادامه ی حیات می دهد. قطر خورشید باای 033 برابر قطر زمین است! 20,000 برابر انرژی ای که نژاد بشر مصرف می کند به زمین از طرف خورشید برخورد می کند."
-    },
-    "050": {
-      "title": "آلفا قنطورس A",
-      "description": "آلفا قنطورس A بزرگترین ستاره در مجموعه ی ستاره ای آلفا قنطورس )متشکل از سه ستاره(، که نزدیکترین مجموعه ی ستاره ای به ماست می باشد. همچنین چهارمین ستاره ی درخشان در آسمان شب است."
-    },
-    "051": {
-      "title": "آلفا قنطورس B",
-      "description": "آلفا قنطورس B دومین ستاره از نظر بزرگی در مجموعه ی ستاره ای آلفا قنطورس است. قطر آن به طور تقریبی یک میلیون کیلومتر است، بنابراین کمی از خورشید کوچکتر است. آلفا قنطورس A و B آنقدر به یکدیگر نزدیکند که به مانند یک ستاره از زمین دیده می شوند."
-    },
-    "052": {
-      "title": "پروکسیما قنطورس",
-      "description": "پروکسیما قنطورس به عنوان نزدیکترین ستاره به زمین به غیر از خورشید شناخته می شود. اسم آن از  “proximity” به معنای نزدیکی می آید. پروکسیما قنطورس یک ستاره ی کوچک و قرمز رنگ است. متأسفانه، آنچنان کم نور است، که برای دیدن آن به تلسکوپ نیاز دارید."
-    },
-    "053": {
-      "title": "شباهنگ A",
-      "description": "شباهنگ درخشانترین ستاره در آسمان شب است. تقریبا دو برابر درخشان تر از سهیل، دومین ستاره ی درخشان است. با اینحال شباهنگ ستاره ی بزرگی نیست. دلیل درخشندگی زیاد آن نزدیکی آن به ماست چیزی در حدود 8 سال نوری."
-    },
-    "054": {
-      "title": "شباهنگ B",
-      "description": "شباهنگ B یک کوتوله ی سفید است. به سختی بزرگتر از زمین است! همچنین رصد آن بسیار سخت است چرا که در پس نور خیره کننده ی شباهنگ A پنهان می شود. شباهنگ B به عنوان \"توله ی سگ\" نیز شناخته می شود."
-    },
-    "055": {
-      "title": "نسر واقع",
-      "description": "نسر واقع در صورت فلکی شلیاق قرار دارد. همچنین قسمتی از مثلث تابستانی متشکل از نسر واقع ، نسر طائر، و دنب است. نسر واقع آنقدر سریع به دور خود می چرخد که ورم می کند. گرچه ما آنرا از طرف قطبش مشاهده می کنیم و به نظر دایروی می رسد."
-    },
-    "056": {
-      "title": "قلب ااسد",
-      "description": "قلب ااسد مانند نسر طائر و نسر واقع آنقدر سریع می چرخد که ورم می کند. اگر قلب 1سد 16% بیشتر از سرعت فعلی می چرخید از هم گسیخته می شد! قلب ااسد همچنین درخشانترین ستاره در صورت فلکی شیر است. قلب ااسد B و  C نیز وجود دارند."
-    },
-    "057": {
-      "title": "سماک اعزل",
-      "description": "سماک اعزل پانزدهمین ستاره ی درخشان در آسمان شب است و در صورت فلکی سنبله قرار دارد. در واقع سماک اعزل یک سیستم دوتائی است. این دو ستاره بسیار به هم نزدیکند، دوره ی تناوب آنها 4 روز است."
-    },
-    "058": {
-      "title": "نطاق",
-      "description": "نطاق نور چشم سحابی شعله است. نطاق همچنین شرقی ترین ستاره از سه ستاره ای است که کمربند شکارچی را تشکیل می دهند. دو تای دیگر روجینه و منطقه هستند، هر سه از زمین بسیار درخشان دیده می شوند."
-    },
-    "059": {
-      "title": "گاکروکس",
-      "description": "گاکروکس را می توانید در صورت فلکی چلیپا پیدا کنید. چلیپا به معنای صلیب است در اتین آنرا به عنوان صلیب جنوبی می شناسند. گاکروکس یه ستاره ی دوتائی است. ستاره ی بزرگتر یک غول قرمز است."
-    },
-    "060": {
-      "title": "اورانوس",
-      "description": "بسیاری از مردم دوست دارند که فکر کنند \"Uranus\" شبیه \"your anus\" تلفظ می شود. تلفظ های دیگر و بهتری وجود دارند. اورانوس همچنین می تواند به صورت \"Yer-uh-niss\" یا \"Seh-venth-pla-net\" تلفظ شود."
-    },
-    "061": {
-      "title": "Neptune",
-      "description": "Currently, Neptune is the farthest planet in the Solar System from the Sun.  It takes 164.8 Earth years for it to orbit the Sun.  You'll never see Neptune complete a single orbit in your whole life, unless life expectancies increase."
-    },
-    "062": {
-      "title": "Wolf 359",
-      "description": "Wolf 359 is a small red dwarf, dwarfed by normal stars.  It is the sixth closest star to Earth, after the Sun, Proxima Centauri, Alpha Centauri A & B and Barnard's star.  Still, its magnitude is a dim +13.5."
-    },
-    "063": {
-      "title": "Gliese 229A",
-      "description": "Gliese 229A is a red dwarf star.  It is a bit smaller than the Sun.  The red dwarf star is also written as GJ 229 or GI 229.  It is part of a binary star system, the second star being Gliese 229B."
-    },
-    "064": {
-      "title": "Gliese 229B",
-      "description": "Gliese 229B is a brown dwarf star.  It orbits a larger dwarf star, which is Gliese 229A.  Gliese 229B would be classified as a planet, but it is much denser than Jupiter, making its mass too large to be considered a planet."
-    },
-    "065": {
-      "title": "Jupiter",
-      "description": "Jupiter is the largest planet in the solar system.  However, it is not the largest known planet.  That's TrES-4.  Jupiter is a gas giant, so it's just a ball of gas.  You can't land anywhere on it.  Also, Jupiter has 64 moons, including the four Gallilean moons."
-    },
-    "066": {
-      "title": "Saturn",
-      "description": "Saturn has the widest, most visible rings of the Solar System.  Galileo, who was the first person to see these rings, first thought they were \"ears\".  Can you imagine a Saturn without rings?  It would be just a yellow ball."
-    },
-    "067": {
-      "title": "TrES-4",
-      "description": "TrES-4 is the largest planet discovered.  No telescope can actually see TrES-4, but there are ways to prove its existence indirectly.  TrES-4's gravity causes the star it orbits to wobble slightly.  Also, whenever TrES-4 goes in front of the star, the shine of the star dims a little."
-    },
-    "068": {
-      "title": "Venus",
-      "description": "There was a time when Venus and Earth were thought to be sister planets.  That isn't true at all!  Venus's surface temperature is always above 450° C, because its atmosphere, which is mostly carbon dioxide, traps the Sun's heat!"
-    },
-    "069": {
-      "title": "Mars",
-      "description": "Mars is known as the Red Planet.  It is red because it is rusty.  Many people believe water and life once existed on Mars.  However, even if that is true, the life wouldn't be like the little green men."
-    },
-    "070": {
-      "title": "Mercury",
-      "description": "Mercury is the closest planet to the Sun.  It has no atmosphere.  During the day, temperatures reach 400° C, but at night, the temperatures fall to -180° C. One Mercurian year is 88 Earth days."
-    },
-    "071": {
-      "title": "Ganymede",
-      "description": "Ganymede is the largest moon in the Solar System.  It orbits Jupiter and was discovered by Galileo, which makes it a Galilean moon.  Also, Ganymede is not to be confused with Ganymed, which is an asteroid whose name doesn't have the final \"e\"!"
-    },
-    "072": {
-      "title": "Callisto",
-      "description": "Callisto is the most distant of the Gallilean moons.  It orbits outside all the other Gallilean moons and gets hit with the most meteors.  All these impacts create many, many craters."
-    },
-    "073": {
-      "title": "Io",
-      "description": "Io has a lot of volcanoes - the most in the Solar System!  Io's geysers emit frozen sulfur dioxide up to 500 kilometers into space!  The landscape of Io is constantly changing.  In one year, it will look very different!"
-    },
-    "074": {
-      "title": "Europa",
-      "description": "Europa is the puniest of the Galilean moons.  It is covered with ice.  There are mysterious streaks that cover the moon's surface.  Some people believe water might exist beneath the layer of ice, possibly even holding life."
-    },
-    "075": {
-      "title": "Titan",
-      "description": "Titan is Saturn's only large moon.  It has a very thick atmosphere, which is made up of mostly nitrogen.  Earth's atmosphere is also mostly nitrogen.  Titan has seas of liquid methane. (It's around -180° C.)  There's even a continent called \"Xanadu\"."
-    },
-    "076": {
-      "title": "The Moon",
-      "description": "The Moon, also known as \"Luna\\ is the brightest object in the night sky.  It orbits Earth every 27 days, 7 hours and 43 minutes.  I like to imagine seeing several moons scattered across the night sky. That would be amazing!"
-    },
-    "077": {
-      "title": "Triton",
-      "description": "Triton is Neptune's largest moon.  It is also the coldest object in the Solar System, at -240° C.  Triton is also a very windy place, with winds going at almost the speed of sound!"
-    },
-    "078": {
-      "title": "Pluto",
-      "description": "Pluto is no longer a planet.  Why do people feel sympathy for it?  It has no feelings.  Even if it did, why would it care about what people way over on Earth thought?  On another note, Pluto's official name is now \"134340 Pluto\\ because it's a dwarf planet."
-    },
-    "079": {
-      "title": "Charon",
-      "description": "Charon is Pluto's only large moon.  They are very close in size.  They are so close, some people consider Pluto and Charon to be a double planet.  Did you know the same side of Charon always faces Pluto, and the same side of Pluto always faces Charon?"
-    },
-    "080": {
-      "title": "Eris",
-      "description": "Eris is the largest dwarf planet.  It is even bigger than Pluto, which is also a dwarf planet.  Eris is also very far from the Sun.  Eris has a moon, and that's Dysnomia.  Where's Dysnomia?  It's directly beneath the period at the end of this last sentence."
-    },
-    "081": {
-      "title": "Dysnomia",
-      "description": "Dysnomia is Eris's only moon and was discovered on September 10, 2005, which was a Saturday.  Also, did you know that \"Dysnomia\" also refers to a law conflict?"
-    },
-    "082": {
-      "title": "Sedna",
-      "description": "Sedna has a very elliptical orbit.   It is so far away it takes 10,000 Earth years to complete one orbit.  You probably realized that \"Sedna\" backwards is \"Andes\\ the world's longest mountain range. (It's in South America.)  Both may seem other-worldly!"
-    },
-    "083": {
-      "title": "Quaoar",
-      "description": "Quaoar is very dense because its core is very big.  Quaoar may have been much larger long ago. It might have been hit by an object the size of Pluto, which would have stripped away the outer layers."
-    },
-    "084": {
-      "title": "Ceres",
-      "description": "Ceres is not a very good place for humans to live.  Ceres is also the largest asteroid, and began the debate over the definition of \"planet\".  For a time, Ceres was considered a planet, but then it wasn't."
-    },
-    "085": {
-      "title": "Polaris",
-      "description": "Polaris is known as the North Star.  It is very near the north pole, so if you want to know which way is north, just try to find Polaris.  Locate the two stars on the far side of the Big Dipper, and go upward."
-    },
-    "086": {
-      "title": "Antares",
-      "description": "Antares is a red supergiant very near the ecliptic, so it gets occulted by the Moon quite often.  Also, Antares weighs septillions of tons and is losing weight through solar wind, but this method is slow. The fast way is to explode, which it'll do later."
-    },
-    "087": {
-      "title": "Altair",
-      "description": "Altair is one of the three stars in the Summer Triangle.  The Summer Triangle is an acute triangle, which means that all the angles are less than 90°!  The other two are Vega and Deneb.  Like many other stars, Altair spins very quickly, bulging at the center!"
-    },
-    "088": {
-      "title": "La Superba",
-      "description": "La Superba is one of the reddest stars in the night sky.  It is so red because of all the carbon-13 it creates when fusing helium.   (Normal carbon is carbon-12.)  La Superba is only 2500° C, making it one of the coldest stars."
-    },
-    "089": {
-      "title": "Pistol Star",
-      "description": "The Pistol Star is one of the most luminous stars known.  In twenty seconds, it radiates as much energy as the Sun does in a year. Interstellar dust prevents us from seeing it. It's called the Pistol Star not because of its luminosity, but because it's in the Pistol Nebula."
-    },
-    "090": {
-      "title": "S Doradus",
-      "description": "S Doradus is a hypergiant, as well as one of the brightest stars in the Large Magellanic Cloud.  For more about the Large Magellanic Cloud, zoom out 8.5 orders of magnitude."
-    },
-    "091": {
-      "title": "Enif",
-      "description": "Enif is an orange supergiant.  Its name means \"nose\" in Arabic, because in the constellation Pegasus, it is in the position of the muzzle.  Concidentally, the word \"Enif\" backwards is \"Fine\"."
-    },
-    "092": {
-      "title": "Mu Cephei",
-      "description": "Mu Cephei is very red.  It is sometimes referred to as \"Herschel's Garnet Star\" because it is garnet red.  Another alternative name is Erakis, if you don't like the first two names."
-    },
-    "093": {
-      "title": "KY Cygni",
-      "description": "KY Cygni is 300,000 times more luminous than the Sun, and the Sun is pretty luminous, isn't it?  The Sun is so luminous you aren't supposed to look at it!  However, it's okay to look at KY Cyngi because it is 300 million times farther away."
-    },
-    "094": {
-      "title": "V354 Cephei",
-      "description": "V354 Cephei is red supergiant, and it's huge.  If placed in the Solar System, it would extend past the orbit of Jupiter.  354, in addition to being in this star's name, is also the year Augustine of Hippo was born."
-    },
-    "095": {
-      "title": "WOH G64",
-      "description": "I know... you're thinking, \"WOH... that's a big star!\"  Well, I guess you're right, because currently it's the second largest known star.  WOH G64 is found in the Large Magellanic Cloud.  There is a cloud surrounding the star that extends half of a light-year."
-    },
-    "096": {
-      "title": "VY Canis Majoris",
-      "description": "VY Canis Majoris is the largest known star.  It is so large that if it were placed in the Solar System, it would extend beyond the orbit of Saturn!  It would take a plane 1,200 years to circle it once."
-    },
-    "097": {
-      "title": "Betelgeuse",
-      "description": "Betelgeuse's age is in the millions of years.  Betelgeuse is so old, it is expected to explode in the next ten thousand years.  Smaller stars live for trillions of years.  Betelgeuse is so big it aged fast."
-    },
-    "098": {
-      "title": "Albireo",
-      "description": "Albireo is made up of three stars total.  Here we are just showing the largest one.  Two of the stars are close, and form a yellow dot.  The third is blue and further away.  The blue star and yellow stars are so far apart it takes them 100,000 years to complete one orbit."
-    },
-    "099": {
-      "title": "Kapteyn's Star",
-      "description": "Kapteyn's Star is only thirteen light-years away.  Even so, its magnitude is +9, so you need binoculars to see it.  Around 10,000 years ago, Kapteyn's Star was only seven light-years away!"
+    "339": {
+      "title": "گلوئون",
+      "description": "گلوئون یک ذرهٔ بنیادی است که برهم‌کنش قوی را منتقل می‌کند. همین نیرو کوارک‌ها را درون پروتون‌ها و نوترون‌ها کنار هم نگه می‌دارد؛ ذراتی که هسته‌های اتم از آن‌ها ساخته شده‌اند. جالب است که گلوئون‌ها انگار ذرات ماده را به هم «می‌چسبانند»: نام آن‌ها از واژهٔ انگلیسی glue به معنی «چسب» گرفته شده است."
     }
   }
 }

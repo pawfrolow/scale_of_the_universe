@@ -1235,6 +1235,10 @@
     "338": {
       "title": "Trombosit",
       "description": "Trombosit, kanamayı durdurmaya yardımcı olan küçük bir kan bileşenidir. Bir damar hasar gördüğünde trombositler o bölgede hızla toplanır, birbirine yapışır ve pıhtı oluşumuna katılır. İlginç olan, trombositlerin çekirdeğinin olmamasıdır: bunlar tam hücreler değil, küçük hücre parçalarıdır."
+    },
+    "339": {
+      "title": "Gluon",
+      "description": "Gluon, güçlü etkileşimi taşıyan temel bir parçacıktır. Atom çekirdeklerini oluşturan proton ve nötronların içindeki kuarkları bir arada tutan şey bu kuvvettir. İlginç olan, gluonların madde parçacıklarını adeta “yapıştırmasıdır”: adları İngilizce glue, yani “yapıştırıcı” kelimesinden gelir."
     }
   }
 }
