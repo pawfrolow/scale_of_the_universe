@@ -12,9 +12,6 @@ const manifestSourcePath = path.join(projectRoot, 'public', 'manifest.webmanifes
 
 const APP_ORIGIN = 'https://universe.pavelfrolov.com';
 const DEFAULT_LANGUAGE = 'ru';
-const CANONICAL_LANGUAGE_MAP = {
-  'en-GB': 'en',
-};
 const RTL_LANGUAGES = new Set(['ar', 'fa', 'he']);
 const OG_LOCALE_MAP = {
   ar: 'ar_AR',
@@ -47,6 +44,9 @@ const escapeHtml = (value) =>
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;');
 
+const escapeJsonForHtml = (value) =>
+  value.replaceAll('<', '\\u003c').replaceAll('>', '\\u003e').replaceAll('&', '\\u0026');
+
 const getLanguagePathSegment = (language) =>
   language === DEFAULT_LANGUAGE ? '' : language.toLowerCase();
 
@@ -55,10 +55,6 @@ const getLanguagePath = (language) => {
 
   return segment ? `/${segment}/` : '/';
 };
-
-const getCanonicalLanguage = (language) => CANONICAL_LANGUAGE_MAP[language] ?? language;
-
-const getCanonicalPath = (language) => getLanguagePath(getCanonicalLanguage(language));
 
 const getManifestFileName = (language) => {
   const segment = getLanguagePathSegment(language);
@@ -140,6 +136,39 @@ const replaceLinkHref = (html, rel, href) => {
   );
 };
 
+const buildStructuredData = (locale) => {
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: locale.appTitle,
+      url: `${APP_ORIGIN}${locale.path}`,
+      description: locale.metaDescription,
+      inLanguage: locale.language,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebApplication',
+      name: locale.appTitle,
+      url: `${APP_ORIGIN}${locale.path}`,
+      description: locale.metaDescription,
+      inLanguage: locale.language,
+      applicationCategory: 'EducationalApplication',
+      operatingSystem: 'Any',
+      browserRequirements: 'Requires JavaScript',
+      image: locale.ogImage,
+      isAccessibleForFree: true,
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+    },
+  ];
+
+  return `<script type="application/ld+json">${escapeJsonForHtml(JSON.stringify(structuredData))}</script>`;
+};
+
 const loadLocales = async () => {
   const entries = await readdir(localesDir, { withFileTypes: true });
   const localeDirs = entries
@@ -161,12 +190,11 @@ const loadLocales = async () => {
     localeDirs.map(async (language) => {
       const uiPath = path.join(localesDir, language, 'ui.json');
       const ui = JSON.parse(await readFile(uiPath, 'utf8'));
+      const metaDescription = normalizeText(ui.html?.meta?.description ?? ui.html?.meta?.ogDescription ?? '');
 
       return {
         language,
         path: getLanguagePath(language),
-        canonicalLanguage: getCanonicalLanguage(language),
-        canonicalPath: getCanonicalPath(language),
         dir: RTL_LANGUAGES.has(language) ? 'rtl' : 'ltr',
         title: buildSeoTitle({
           appTitle: ui.app?.title ?? ui.html?.modal?.title ?? ui.html?.meta?.ogTitle ?? 'Universe Scale',
@@ -190,33 +218,21 @@ const loadLocales = async () => {
           objectHint: ui.html?.modal?.objectHint ?? '',
           zoomHint: ui.html?.modal?.zoomHint ?? '',
         }),
+        metaDescription,
         ogImage: getOgImageUrl(language),
         appTitle: ui.app?.title ?? ui.html?.modal?.title ?? 'Universe Scale',
         manifestFileName: getManifestFileName(language),
         ogLocale: OG_LOCALE_MAP[language] ?? 'en_US',
-        hreflangs: [],
       };
     }),
-  ).then((locales) =>
-    locales.map((locale) => ({
-      ...locale,
-      hreflangs: locales
-        .filter((candidate) => candidate.canonicalPath === locale.canonicalPath)
-        .map((candidate) => candidate.language),
-    })),
   );
 };
 
 const buildAlternateLinks = (locales) =>
   [
-    ...locales
-      .filter((locale) => locale.language === locale.canonicalLanguage)
-      .flatMap((locale) =>
-        locale.hreflangs.map(
-          (hreflang) =>
-            `<link rel="alternate" hreflang="${hreflang}" href="${APP_ORIGIN}${locale.canonicalPath}" />`,
-        ),
-      ),
+    ...locales.map(
+      (locale) => `<link rel="alternate" hreflang="${locale.language}" href="${APP_ORIGIN}${locale.path}" />`,
+    ),
     `<link rel="alternate" hreflang="x-default" href="${APP_ORIGIN}/" />`,
   ].join('\n    ');
 
@@ -236,9 +252,10 @@ const localizeHtml = (html, locale, locales) => {
   localizedHtml = replaceMetaContent(localizedHtml, 'name="twitter:title"', locale.ogTitle);
   localizedHtml = replaceMetaContent(localizedHtml, 'name="twitter:description"', locale.ogDescription);
   localizedHtml = replaceMetaContent(localizedHtml, 'name="twitter:image"', locale.ogImage);
-  localizedHtml = replaceLinkHref(localizedHtml, 'canonical', `${APP_ORIGIN}${locale.canonicalPath}`);
+  localizedHtml = replaceLinkHref(localizedHtml, 'canonical', `${APP_ORIGIN}${locale.path}`);
   localizedHtml = replaceLinkHref(localizedHtml, 'manifest', `/${locale.manifestFileName}`);
   localizedHtml = localizedHtml.replace('<!-- SEO_ALTERNATES -->', buildAlternateLinks(locales));
+  localizedHtml = localizedHtml.replace('<!-- SEO_STRUCTURED_DATA -->', buildStructuredData(locale));
 
   return localizedHtml;
 };
@@ -275,16 +292,15 @@ const writeManifests = async (locales) => {
 
 const writeSitemap = async (locales) => {
   const urls = locales
-    .filter((locale) => locale.language === locale.canonicalLanguage)
     .map((locale) => {
-      const alternates = locale.hreflangs
+      const alternates = locales
         .map(
-          (hreflang) =>
-            `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${APP_ORIGIN}${locale.canonicalPath}" />`,
+          (alternateLocale) =>
+            `    <xhtml:link rel="alternate" hreflang="${alternateLocale.language}" href="${APP_ORIGIN}${alternateLocale.path}" />`,
         )
         .join('\n');
 
-      return `  <url>\n    <loc>${APP_ORIGIN}${locale.canonicalPath}</loc>\n${alternates}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${APP_ORIGIN}/" />\n  </url>`;
+      return `  <url>\n    <loc>${APP_ORIGIN}${locale.path}</loc>\n${alternates}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${APP_ORIGIN}/" />\n  </url>`;
     })
     .join('\n');
 

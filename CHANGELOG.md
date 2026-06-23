@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.2
+
+- Fixed localized canonical and `hreflang` SEO signals so locale pages no longer conflict with each other in search indexing.
+- Added localized crawlable intro content and structured data to strengthen page understanding for search engines.
+
 ## 1.7.1
 
 - Added the Gluon object and translations for all supported locales.
