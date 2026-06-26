@@ -3,6 +3,7 @@
 ## 1.7.3
 
 - Added the Patu digua object and placed it on the scale with translations for all supported locales.
+- Added the Paedophryne amauensis object and placed it on the scale with translations for all supported locales.
 
 ## 1.7.2
 
