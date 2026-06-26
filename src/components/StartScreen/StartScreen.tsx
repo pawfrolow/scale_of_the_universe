@@ -16,10 +16,6 @@ interface IStartScreenProps {
 
 export const StartScreen = ({ title, startText, isVisible, onStart }: IStartScreenProps) => {
   const { t } = useTranslation();
-  const seoSummary = [
-    t('html.meta.description', { ns: 'ui' }),
-    `${t('html.modal.zoomHint', { ns: 'ui' })} ${t('html.modal.objectHint', { ns: 'ui' })}`,
-  ];
 
   const openLink = (link: string) => {
     ymClick('openLink', { link });
@@ -47,12 +43,6 @@ export const StartScreen = ({ title, startText, isVisible, onStart }: IStartScre
             <p>{t('html.modal.objectHint', { ns: 'ui' })}</p>
           </div>
         </div>
-
-        <section className={styles.summary} aria-label={title}>
-          {seoSummary.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </section>
 
         <div className={styles.bottomSection}>
           <div className={styles.credits}>

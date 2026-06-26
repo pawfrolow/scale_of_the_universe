@@ -169,6 +169,20 @@ const buildStructuredData = (locale) => {
   return `<script type="application/ld+json">${escapeJsonForHtml(JSON.stringify(structuredData))}</script>`;
 };
 
+const buildStaticSeoContent = (locale) => {
+  const paragraphs = [`<p>${escapeHtml(locale.metaDescription)}</p>`].join('');
+
+  return [
+    '<section',
+    '  data-seo-static="true"',
+    '  style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;white-space:normal;"',
+    '>',
+    `  <h1>${escapeHtml(locale.appTitle)}</h1>`,
+    `  ${paragraphs}`,
+    '</section>',
+  ].join('\n');
+};
+
 const loadLocales = async () => {
   const entries = await readdir(localesDir, { withFileTypes: true });
   const localeDirs = entries
@@ -256,6 +270,7 @@ const localizeHtml = (html, locale, locales) => {
   localizedHtml = replaceLinkHref(localizedHtml, 'manifest', `/${locale.manifestFileName}`);
   localizedHtml = localizedHtml.replace('<!-- SEO_ALTERNATES -->', buildAlternateLinks(locales));
   localizedHtml = localizedHtml.replace('<!-- SEO_STRUCTURED_DATA -->', buildStructuredData(locale));
+  localizedHtml = localizedHtml.replace('<!-- SEO_STATIC_CONTENT -->', buildStaticSeoContent(locale));
 
   return localizedHtml;
 };
