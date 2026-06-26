@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.3
+
+- Added the Patu digua object and placed it on the scale with translations for all supported locales.
+
 ## 1.7.2
 
 - Fixed localized canonical and `hreflang` SEO signals so locale pages no longer conflict with each other in search indexing.
