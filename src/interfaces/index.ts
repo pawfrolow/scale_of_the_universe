@@ -71,3 +71,27 @@ export interface ItemModalData {
   subtitle: string;
   description: string;
 }
+
+export interface StartScreenCredits {
+  createdBy: string;
+  webDev: string;
+  copyright: string;
+  translationAndDev: string;
+}
+
+export interface StartScreenContent {
+  title: string;
+  startText: string;
+  startLoadingText: string;
+  introParagraphs: string[];
+  zoomHint: string;
+  objectHint: string;
+  credits: StartScreenCredits;
+}
+
+export interface SeoLocaleData {
+  language: string;
+  dir: 'ltr' | 'rtl';
+  ui?: Record<string, unknown>;
+  startScreen?: StartScreenContent;
+}

@@ -12,6 +12,7 @@
   "html": {
     "meta": {
       "description": "Scara Universului. O comparație a dimensiunilor diferitelor obiecte, de la particule elementare până la galaxii.",
+      "intro": "Scara Universului este un proiect interactiv care te ajută să vezi cât de mult diferă dimensiunile obiectelor, de la lumea microscopică până la galaxii.",
       "ogTitle": "Scara Universului",
       "ogDescription": "O comparație a dimensiunilor diferitelor obiecte — de la particule elementare până la galaxii."
     },

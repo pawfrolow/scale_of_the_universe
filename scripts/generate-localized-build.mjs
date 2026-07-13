@@ -1,4 +1,4 @@
-import { readdir, readFile, mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -67,55 +67,19 @@ const getOgImageUrl = (language) =>
 
 const normalizeText = (value) => String(value ?? '').replace(/\s+/g, ' ').trim();
 
-const trimToLength = (value, maxLength) => {
-  const normalizedValue = normalizeText(value);
+const dedupeTexts = (values) => {
+  const seen = new Set();
 
-  if (normalizedValue.length <= maxLength) {
-    return normalizedValue;
-  }
+  return values.filter((value) => {
+    const normalizedValue = normalizeText(value);
 
-  const targetLength = Math.max(maxLength - 3, 1);
-  const trimmedValue = normalizedValue.slice(0, targetLength + 1);
-  const lastSpaceIndex = trimmedValue.lastIndexOf(' ');
-  const safeValue =
-    lastSpaceIndex > Math.floor(targetLength * 0.6)
-      ? trimmedValue.slice(0, lastSpaceIndex)
-      : trimmedValue.slice(0, targetLength);
+    if (!normalizedValue || seen.has(normalizedValue)) {
+      return false;
+    }
 
-  return `${safeValue.trim().replace(/[.,;:!?-]+$/u, '')}...`;
-};
-
-const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
-const buildSeoTitle = ({ appTitle, ogTitle, description }) => {
-  const baseTitle = normalizeText(ogTitle || appTitle || 'Universe Scale');
-
-  if (baseTitle.length >= 45 && baseTitle.length <= 60) {
-    return baseTitle;
-  }
-
-  const normalizedDescription = normalizeText(description);
-  const descriptionWithoutTitle = normalizedDescription.replace(
-    new RegExp(`^${escapeRegExp(baseTitle)}[.:\u2014\\-\\s]*`, 'iu'),
-    '',
-  );
-  const combinedTitle = `${baseTitle} — ${descriptionWithoutTitle}`;
-
-  return trimToLength(combinedTitle, 60);
-};
-
-const buildSeoDescription = ({ description, ogDescription, objectHint, zoomHint }) => {
-  const parts = [description, ogDescription, objectHint, zoomHint]
-    .map((part) => normalizeText(part))
-    .filter(Boolean);
-  const uniqueParts = [...new Set(parts)];
-  const combinedDescription = uniqueParts.join(' ');
-
-  if (combinedDescription.length >= 110 && combinedDescription.length <= 160) {
-    return combinedDescription;
-  }
-
-  return trimToLength(combinedDescription, 155);
+    seen.add(normalizedValue);
+    return true;
+  });
 };
 
 const replaceMetaContent = (html, selector, content) => {
@@ -170,17 +134,38 @@ const buildStructuredData = (locale) => {
 };
 
 const buildStaticSeoContent = (locale) => {
-  const paragraphs = [`<p>${escapeHtml(locale.metaDescription)}</p>`].join('');
+  const introParagraphs = locale.startScreen.introParagraphs
+    .map(
+      (paragraph) =>
+        `    <p style="margin:0 0 14px;font-size:1.0625rem;line-height:1.7;color:#1f2937;">${escapeHtml(paragraph)}</p>`,
+    )
+    .join('\n');
 
-  return [
-    '<section',
-    '  data-seo-static="true"',
-    '  style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;white-space:normal;"',
-    '>',
-    `  <h1>${escapeHtml(locale.appTitle)}</h1>`,
-    `  ${paragraphs}`,
-    '</section>',
-  ].join('\n');
+  return `<main data-seo-static="true" style="max-width:1120px;margin:0 auto;padding:24px 24px 40px;font-family:Roboto,system-ui,sans-serif;color:#0f172a;box-sizing:border-box;">
+  <section style="margin:0 0 20px;">
+    <h1 style="margin:0 0 16px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;font-weight:800;letter-spacing:-0.02em;color:#0f172a;">${escapeHtml(locale.startScreen.title)}</h1>
+${introParagraphs}
+  </section>
+  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:0 0 16px;">
+    <article style="padding:20px;border:1px solid rgba(15,23,42,0.08);border-radius:24px;background:rgba(255,255,255,0.88);box-sizing:border-box;">
+      <p style="margin:0;font-size:1rem;line-height:1.6;color:#1f2937;">${escapeHtml(locale.startScreen.zoomHint)}</p>
+    </article>
+    <article style="padding:20px;border:1px solid rgba(15,23,42,0.08);border-radius:24px;background:rgba(255,255,255,0.88);box-sizing:border-box;">
+      <p style="margin:0;font-size:1rem;line-height:1.6;color:#1f2937;">${escapeHtml(locale.startScreen.objectHint)}</p>
+    </article>
+  </section>
+</main>`;
+};
+
+const buildSeoLocaleDataScript = (locale) => {
+  const payload = {
+    language: locale.language,
+    dir: locale.dir,
+    ui: locale.ui,
+    startScreen: locale.startScreen,
+  };
+
+  return `<script id="seo-locale-data" type="application/json">${escapeJsonForHtml(JSON.stringify(payload))}</script>`;
 };
 
 const loadLocales = async () => {
@@ -204,39 +189,40 @@ const loadLocales = async () => {
     localeDirs.map(async (language) => {
       const uiPath = path.join(localesDir, language, 'ui.json');
       const ui = JSON.parse(await readFile(uiPath, 'utf8'));
-      const metaDescription = normalizeText(ui.html?.meta?.description ?? ui.html?.meta?.ogDescription ?? '');
-
+      const appTitle = normalizeText(ui.app?.title ?? ui.html?.modal?.title ?? 'Universe Scale');
+      const title = normalizeText(ui.html?.meta?.title ?? ui.html?.meta?.ogTitle ?? appTitle);
+      const description = normalizeText(ui.html?.meta?.description ?? ui.html?.meta?.ogDescription ?? '');
+      const ogTitle = normalizeText(ui.html?.meta?.ogTitle ?? title);
+      const ogDescription = normalizeText(ui.html?.meta?.ogDescription ?? description);
+      const introParagraphs = dedupeTexts([normalizeText(ui.html?.meta?.intro ?? description)]);
       return {
         language,
         path: getLanguagePath(language),
         dir: RTL_LANGUAGES.has(language) ? 'rtl' : 'ltr',
-        title: buildSeoTitle({
-          appTitle: ui.app?.title ?? ui.html?.modal?.title ?? ui.html?.meta?.ogTitle ?? 'Universe Scale',
-          ogTitle: ui.html?.meta?.ogTitle ?? ui.html?.modal?.title ?? ui.app?.title ?? 'Universe Scale',
-          description: ui.html?.meta?.description ?? ui.html?.meta?.ogDescription ?? '',
-        }),
-        description: buildSeoDescription({
-          description: ui.html?.meta?.description ?? '',
-          ogDescription: ui.html?.meta?.ogDescription ?? '',
-          objectHint: ui.html?.modal?.objectHint ?? '',
-          zoomHint: ui.html?.modal?.zoomHint ?? '',
-        }),
-        ogTitle: buildSeoTitle({
-          appTitle: ui.app?.title ?? ui.html?.modal?.title ?? ui.html?.meta?.ogTitle ?? 'Universe Scale',
-          ogTitle: ui.html?.meta?.ogTitle ?? ui.html?.modal?.title ?? ui.app?.title ?? 'Universe Scale',
-          description: ui.html?.meta?.description ?? ui.html?.meta?.ogDescription ?? '',
-        }),
-        ogDescription: buildSeoDescription({
-          description: ui.html?.meta?.description ?? '',
-          ogDescription: ui.html?.meta?.ogDescription ?? '',
-          objectHint: ui.html?.modal?.objectHint ?? '',
-          zoomHint: ui.html?.modal?.zoomHint ?? '',
-        }),
-        metaDescription,
+        title,
+        description,
+        ogTitle,
+        ogDescription,
+        metaDescription: description,
         ogImage: getOgImageUrl(language),
-        appTitle: ui.app?.title ?? ui.html?.modal?.title ?? 'Universe Scale',
+        appTitle,
         manifestFileName: getManifestFileName(language),
         ogLocale: OG_LOCALE_MAP[language] ?? 'en_US',
+        ui,
+        startScreen: {
+          title: normalizeText(ui.html?.modal?.title ?? appTitle),
+          startText: normalizeText(ui.html?.modal?.startButton ?? ui.app?.start ?? 'Start'),
+          startLoadingText: normalizeText(ui.html?.modal?.startLoading ?? 'Loading...'),
+          introParagraphs,
+          zoomHint: normalizeText(ui.html?.modal?.zoomHint ?? ui.app?.zoomHint ?? ''),
+          objectHint: normalizeText(ui.html?.modal?.objectHint ?? ui.app?.objectHint ?? ''),
+          credits: {
+            createdBy: normalizeText(ui.html?.credits?.createdBy ?? ''),
+            webDev: normalizeText(ui.html?.credits?.webDev ?? ''),
+            copyright: normalizeText(ui.html?.credits?.copyright ?? ''),
+            translationAndDev: normalizeText(ui.html?.credits?.translationAndDev ?? ''),
+          },
+        },
       };
     }),
   );
@@ -271,6 +257,7 @@ const localizeHtml = (html, locale, locales) => {
   localizedHtml = localizedHtml.replace('<!-- SEO_ALTERNATES -->', buildAlternateLinks(locales));
   localizedHtml = localizedHtml.replace('<!-- SEO_STRUCTURED_DATA -->', buildStructuredData(locale));
   localizedHtml = localizedHtml.replace('<!-- SEO_STATIC_CONTENT -->', buildStaticSeoContent(locale));
+  localizedHtml = localizedHtml.replace('<!-- SEO_LOCALE_DATA -->', buildSeoLocaleDataScript(locale));
 
   return localizedHtml;
 };

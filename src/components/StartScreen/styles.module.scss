@@ -83,6 +83,23 @@
   }
 }
 
+.summaryCard {
+  margin-bottom: 24px;
+  box-sizing: border-box;
+
+  p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba($color-text-dark, 0.88);
+    word-break: break-word;
+  }
+
+  p + p {
+    margin-top: 10px;
+  }
+}
+
 .bottomSection {
   display: flex;
   justify-content: space-between;
@@ -145,6 +162,12 @@
     opacity: 0.95;
     transform: translateY(-1px);
   }
+
+  &:disabled {
+    cursor: progress;
+    opacity: 0.72;
+    transform: none;
+  }
 }
 
 .startBtnIcon {
@@ -163,6 +186,15 @@
 
     p {
       color: $text-primary-dark;
+    }
+  }
+
+  .summaryCard {
+    border-color: rgba($color-white, 0.12);
+    background: rgba($color-space-1, 0.42);
+
+    p {
+      color: rgba($color-white, 0.86);
     }
   }
 
@@ -191,6 +223,14 @@
 
     img {
       height: 96px;
+    }
+  }
+
+  .summaryCard {
+    padding: 18px 20px;
+
+    p {
+      font-size: 16px;
     }
   }
 
@@ -238,6 +278,16 @@
     p {
       font-size: 16px;
       line-height: 1.45;
+    }
+  }
+
+  .summaryCard {
+    padding: 16px;
+    border-radius: 18px;
+
+    p {
+      font-size: 15px;
+      line-height: 1.5;
     }
   }
 

@@ -12,6 +12,7 @@
   "html": {
     "meta": {
       "description": "Evrenin Ölçeği. Temel parçacıklardan galaksilere kadar çeşitli nesnelerin boyutlarının karşılaştırması.",
+      "intro": "Evrenin Ölçeği, nesnelerin boyutlarının ne kadar büyük ölçüde değiştiğini mikro dünyadan galaksilere kadar görmeyi sağlayan etkileşimli bir projedir.",
       "ogTitle": "Evrenin Ölçeği",
       "ogDescription": "Çeşitli nesnelerin boyutlarının karşılaştırması — temel parçacıklardan galaksilere kadar."
     },

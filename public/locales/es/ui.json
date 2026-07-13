@@ -12,6 +12,7 @@
   "html": {
     "meta": {
       "description": "La Escala del Universo. Una comparación de los tamaños de diversos objetos, desde partículas elementales hasta galaxias.",
+      "intro": "La Escala del Universo es un proyecto interactivo que te ayuda a ver cuánto varían los tamaños de los objetos, desde el micromundo hasta las galaxias.",
       "ogTitle": "La Escala del Universo",
       "ogDescription": "Una comparación de los tamaños de diversos objetos, desde partículas elementales hasta galaxias."
     },

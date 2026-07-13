@@ -12,6 +12,7 @@
   "html": {
     "meta": {
       "description": "L'échelle de l'Univers. Une comparaison des tailles de différents objets, des particules élémentaires aux galaxies.",
+      "intro": "L'échelle de l'Univers est un projet interactif qui vous aide à voir à quel point la taille des objets varie, du micromonde jusqu'aux galaxies.",
       "ogTitle": "L'échelle de l'Univers",
       "ogDescription": "Une comparaison des tailles de différents objets — des particules élémentaires aux galaxies."
     },

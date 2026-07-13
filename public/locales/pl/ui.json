@@ -12,6 +12,7 @@
   "html": {
     "meta": {
       "description": "Rozmiar Wszechświata. Porównanie rozmiarów różnych obiektów, od cząstek elementarnych po galaktyki.",
+      "intro": "Rozmiar Wszechświata to interaktywny projekt, który pomaga zobaczyć, jak bardzo różnią się rozmiary obiektów - od mikroświata po galaktyki.",
       "ogTitle": "Rozmiar Wszechświata",
       "ogDescription": "Porównanie rozmiarów różnych obiektów — od cząstek elementarnych po galaktyki."
     },

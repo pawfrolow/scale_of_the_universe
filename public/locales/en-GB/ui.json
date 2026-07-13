@@ -12,6 +12,7 @@
   "html": {
     "meta": {
       "description": "The Scale of the Universe. A comparison of the sizes of various objects, from elementary particles to galaxies.",
+      "intro": "The Scale of the Universe is an interactive project that helps you see how dramatically object sizes differ, from the microworld to galaxies.",
       "ogTitle": "The Scale of the Universe",
       "ogDescription": "A comparison of the sizes of various objects — from elementary particles to galaxies."
     },

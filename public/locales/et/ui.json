@@ -12,6 +12,7 @@
   "html": {
     "meta": {
       "description": "Universumi ulatus. Erinevate objektide suuruste võrdlus alates elementaarosakestest kuni galaktikateni.",
+      "intro": "Universumi ulatus on interaktiivne projekt, mis aitab näha, kui palju objektide suurused erinevad - mikromaailmast galaktikateni.",
       "ogTitle": "Universumi ulatus",
       "ogDescription": "Erinevate objektide suuruste võrdlus — alates elementaarosakestest kuni galaktikateni."
     },
