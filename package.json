@@ -1,6 +1,6 @@
 {
   "name": "sotu",
-  "version": "1.7.3",
+  "version": "1.8.0",
   "description": "scale of the universe visualization",
   "type": "module",
   "scripts": {
@@ -10,6 +10,7 @@
     "build": "vite build && node scripts/generate-localized-build.mjs",
     "build:prod": "vite build --mode production && node scripts/generate-localized-build.mjs",
     "preview": "vite preview",
+    "seo:check": "node scripts/check-production-seo.mjs",
     "ts:check": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

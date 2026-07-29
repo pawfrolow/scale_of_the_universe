@@ -23,6 +23,31 @@ import { getSeoLocaleData } from '@/services/seo-locale-data.service';
 
 const normalizeText = (value: string) => value.replace(/\s+/g, ' ').trim();
 
+const getLocalizedSubPath = (language: TLanguage, subPath: string) => {
+  const languageUrl = getLanguageUrl(language);
+
+  return languageUrl === '/' ? `/${subPath}/` : `${languageUrl}${subPath}/`;
+};
+
+const getNavLabels = (language: TLanguage, t: ReturnType<typeof useTranslation>['t']) => ({
+  about: t('html.nav.about', {
+    ns: 'ui',
+    defaultValue: language === 'ru' ? 'О проекте' : 'About',
+  }),
+  objects: t('html.nav.objects', {
+    ns: 'ui',
+    defaultValue: language === 'ru' ? 'Объекты' : 'Objects',
+  }),
+  language: t('html.nav.language', {
+    ns: 'ui',
+    defaultValue: language === 'ru' ? 'Язык' : 'Language',
+  }),
+  donate: t('html.nav.donate', {
+    ns: 'ui',
+    defaultValue: language === 'ru' ? 'Поддержать' : 'Support',
+  }),
+});
+
 const dedupeTexts = (values: string[]) => {
   const seen = new Set<string>();
 
@@ -70,6 +95,10 @@ export const App = () => {
           ]),
           zoomHint: t('html.modal.zoomHint', { ns: 'ui' }),
           objectHint: t('html.modal.objectHint', { ns: 'ui' }),
+          homePath: getLanguageUrl(currentLanguage),
+          aboutPath: getLocalizedSubPath(currentLanguage, 'about'),
+          objectIndexPath: getLocalizedSubPath(currentLanguage, 'objects'),
+          navLabels: getNavLabels(currentLanguage, t),
           credits: {
             createdBy: t('html.credits.createdBy', { ns: 'ui' }),
             webDev: t('html.credits.webDev', { ns: 'ui' }),
@@ -245,6 +274,7 @@ export const App = () => {
             content={startScreenContent}
             isVisible={!hasEnteredApp}
             isStartEnabled={isI18nReady}
+            onOpenLanguageModal={handleOpenLanguageModal}
             onStart={handleStart}
           />
         ) : null}
@@ -296,13 +326,15 @@ export const App = () => {
             title={t('html.modal.startLoading', { ns: 'ui' })}
           />
 
-          <Controls
-            hasEnteredApp={hasEnteredApp}
-            isMuted={isMuted}
-            onToggleMute={handleToggleMute}
-            onOpenLanguageModal={handleOpenLanguageModal}
-            onOpenDonateModal={handleOpenDonateModal}
-          />
+          {hasEnteredApp ? (
+            <Controls
+              hasEnteredApp={hasEnteredApp}
+              isMuted={isMuted}
+              onToggleMute={handleToggleMute}
+              onOpenLanguageModal={handleOpenLanguageModal}
+              onOpenDonateModal={handleOpenDonateModal}
+            />
+          ) : null}
         </>
       ) : null}
     </>

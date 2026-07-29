@@ -79,6 +79,13 @@ export interface StartScreenCredits {
   translationAndDev: string;
 }
 
+export interface StartScreenNavLabels {
+  about: string;
+  objects: string;
+  language: string;
+  donate: string;
+}
+
 export interface StartScreenContent {
   title: string;
   startText: string;
@@ -86,6 +93,10 @@ export interface StartScreenContent {
   introParagraphs: string[];
   zoomHint: string;
   objectHint: string;
+  homePath: string;
+  aboutPath: string;
+  objectIndexPath: string;
+  navLabels: StartScreenNavLabels;
   credits: StartScreenCredits;
 }
 
