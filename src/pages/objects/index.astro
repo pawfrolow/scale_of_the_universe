@@ -12,10 +12,10 @@ import {
   getAppVersion,
   getLocaleData,
   getLocales,
+  getObjectIndexPageCopy,
   getObjectScaleGroup,
   getObjectScaleGroupLabel,
   OBJECT_SCALE_GROUPS,
-  trimToLength,
 } from '@/services/seo-static.service';
 
 const locales = await getLocales();
@@ -26,8 +26,9 @@ if (!locale) {
 }
 
 const appVersion = await getAppVersion();
-const title = `${locale.appTitle} | ${locale.startScreen.objectHint}`;
-const description = trimToLength(`${locale.metaDescription} ${locale.startScreen.objectHint}`, 155);
+const pageCopy = getObjectIndexPageCopy(locale);
+const title = `${pageCopy.heading} | ${locale.appTitle}`;
+const description = pageCopy.seoDescription;
 const breadcrumbs = [
   { label: locale.appTitle, href: locale.path },
   { label: locale.navLabels.objects, href: locale.objectIndexPath },
@@ -57,8 +58,8 @@ const objectGroups = OBJECT_SCALE_GROUPS.map((group) => ({
     <Header locale={locale} locales={locales} page={{ type: 'objects' }} />
     <main class="page">
       <Breadcrumbs items={breadcrumbs} />
-      <h1>{locale.startScreen.objectHint}</h1>
-      <p>{locale.metaDescription}</p>
+      <h1>{pageCopy.heading}</h1>
+      <p>{pageCopy.intro}</p>
       {
         objectGroups.map(({ label, objects, rangeHtml }) => (
           <section class="object-section">

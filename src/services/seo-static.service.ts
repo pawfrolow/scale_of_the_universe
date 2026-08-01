@@ -8,6 +8,14 @@ export const APP_ORIGIN = 'https://universe.pavelfrolov.com';
 export const DEFAULT_LANGUAGE = 'ru';
 export const COPYRIGHT_YEAR = '2026';
 export const DONATE_LINK = 'https://boosty.to/pawfrolow/donate';
+export const DONATE_LINKS = [
+  {
+    key: 'boosty',
+    href: DONATE_LINK,
+    label: 'Boosty',
+    iconSrc: '/img/icons/boosty.svg',
+  },
+] as const;
 export const CONTACT_EMAIL = 'paw.frolow@gmail.com';
 export const CREDIT_LINKS = {
   webDev: 'https://github.com/matttt/scale_of_the_universe',
@@ -508,6 +516,34 @@ export const getLocalizedPagePath = (locale: TSeoLocale, page: TSeoPage) => {
     default:
       return locale.path;
   }
+};
+
+export const getObjectIndexPageCopy = (locale: TSeoLocale) => {
+  if (locale.language === DEFAULT_LANGUAGE) {
+    return {
+      heading: 'Все объекты шкалы',
+      intro:
+        'Каталог объектов «Шкалы масштабов Вселенной»: от элементарных частиц, атомов и клеток до планет, звёзд, галактик и наблюдаемой Вселенной. Откройте карточку объекта, чтобы посмотреть его размер и описание.',
+      seoDescription:
+        'Каталог объектов «Шкалы масштабов Вселенной»: размеры частиц, клеток, людей, планет, звёзд, галактик и Вселенной на одной шкале.',
+    };
+  }
+
+  if (locale.language === 'en' || locale.language === 'en-GB') {
+    return {
+      heading: 'All scale objects',
+      intro:
+        'A catalog of objects from The Scale of the Universe: from elementary particles, atoms, and cells to planets, stars, galaxies, and the observable universe. Open an object card to see its size and description.',
+      seoDescription:
+        'Catalog of objects from The Scale of the Universe: sizes of particles, cells, humans, planets, stars, galaxies, and the universe on one scale.',
+    };
+  }
+
+  return {
+    heading: locale.startScreen.objectHint,
+    intro: locale.metaDescription,
+    seoDescription: trimToLength(`${locale.metaDescription} ${locale.startScreen.objectHint}`, 155),
+  };
 };
 
 export const getAlternateLinks = (locales: TSeoLocale[], page: TSeoPage) =>

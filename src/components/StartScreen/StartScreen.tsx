@@ -2,14 +2,13 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import styles from './styles.module.scss';
 
-import { DONATE_LINKS } from '@/config';
-import { ymClick } from '@/helpers/ymClick';
 import { StartScreenContent } from '@/interfaces';
 
 interface IStartScreenProps {
   content: StartScreenContent;
   isVisible: boolean;
   isStartEnabled: boolean;
+  onOpenDonateModal: () => void;
   onOpenLanguageModal: () => void;
   onStart: () => void;
 }
@@ -18,15 +17,12 @@ export const StartScreen = ({
   content,
   isVisible,
   isStartEnabled,
+  onOpenDonateModal,
   onOpenLanguageModal,
   onStart,
 }: IStartScreenProps) => {
   const [isNavSidebarOpen, setIsNavSidebarOpen] = useState(false);
   const navSidebarId = 'start-screen-nav-sidebar';
-
-  const openLink = (link: string) => {
-    ymClick('openLink', { link });
-  };
 
   const closeNavSidebar = useCallback(() => {
     setIsNavSidebarOpen(false);
@@ -36,6 +32,12 @@ export const StartScreen = ({
     event.preventDefault();
     closeNavSidebar();
     onOpenLanguageModal();
+  };
+
+  const handleDonateClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    closeNavSidebar();
+    onOpenDonateModal();
   };
 
   useEffect(() => {
@@ -82,12 +84,7 @@ export const StartScreen = ({
             <a href={`${content.homePath}#language`} onClick={handleLanguageClick}>
               {content.navLabels.language}
             </a>
-            <a
-              href={DONATE_LINKS[0].href}
-              onClick={() => openLink(DONATE_LINKS[0].href)}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={`${content.homePath}#donate`} onClick={handleDonateClick}>
               {content.navLabels.donate}
             </a>
           </nav>
@@ -151,14 +148,9 @@ export const StartScreen = ({
               {content.navLabels.language}
             </a>
             <a
-              href={DONATE_LINKS[0].href}
+              href={`${content.homePath}#donate`}
               tabIndex={isNavSidebarOpen ? 0 : -1}
-              onClick={() => {
-                closeNavSidebar();
-                openLink(DONATE_LINKS[0].href);
-              }}
-              target="_blank"
-              rel="noreferrer"
+              onClick={handleDonateClick}
             >
               {content.navLabels.donate}
             </a>
@@ -206,6 +198,9 @@ export const StartScreen = ({
           <nav className={styles.footerLinks} aria-label="Footer">
             <a href={content.aboutPath}>{content.navLabels.about}</a>
             <a href={content.objectIndexPath}>{content.navLabels.objects}</a>
+            <a href={`${content.homePath}#donate`} onClick={handleDonateClick}>
+              {content.navLabels.donate}
+            </a>
           </nav>
 
           <div className={styles.footerMeta}>

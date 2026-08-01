@@ -302,6 +302,7 @@ export const App = ({
             content={startScreenContent}
             isVisible={!hasEnteredApp}
             isStartEnabled={isI18nReady}
+            onOpenDonateModal={handleOpenDonateModal}
             onOpenLanguageModal={handleOpenLanguageModal}
             onStart={handleStart}
           />

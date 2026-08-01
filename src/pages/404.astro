@@ -37,11 +37,21 @@ const getNotFoundText = (entry: typeof locale) => {
     objectsAction: normalizeText(localizedText.objectsAction ?? fallbackNotFound.objectsAction),
   };
 };
+const getDonateText = (entry: typeof locale) => {
+  const localizedText = entry.ui.html?.donate ?? {};
+
+  return {
+    title: normalizeText(localizedText.title ?? entry.navLabels.donate),
+    description: normalizeText(localizedText.description ?? ''),
+    closeAriaLabel: normalizeText(localizedText.closeAriaLabel ?? 'Close support dialog'),
+  };
+};
 const initialNotFound = getNotFoundText(locale);
 const title = `${initialNotFound.title} | ${locale.appTitle}`;
 const description = initialNotFound.description;
 const notFoundLocales = locales.map((entry) => {
   const notFound = getNotFoundText(entry);
+  const donate = getDonateText(entry);
 
   return {
     language: entry.language,
@@ -57,6 +67,7 @@ const notFoundLocales = locales.map((entry) => {
     closeModalLabel: normalizeText(
       entry.ui.html?.modal?.closeLanguageModal ?? 'Close language modal',
     ),
+    donate,
     notFound,
   };
 });
@@ -161,6 +172,8 @@ const notFoundPayloadJson = serializeJsonForHtml({
         setText('navLanguage', locale.navLabels.language);
         setText('navDonate', locale.navLabels.donate);
         setText('modalTitle', locale.modalTitle);
+        setText('donateModalTitle', locale.donate.title);
+        setText('donateModalDescription', locale.donate.description);
         setText('notFoundTitle', locale.notFound.title);
         setText('notFoundDescription', locale.notFound.description);
         setText('homeAction', locale.notFound.homeAction);
@@ -172,6 +185,9 @@ const notFoundPayloadJson = serializeJsonForHtml({
 
         document.querySelectorAll('[data-language-close]').forEach((element) => {
           element.setAttribute('aria-label', locale.closeModalLabel);
+        });
+        document.querySelectorAll('[data-donate-close]').forEach((element) => {
+          element.setAttribute('aria-label', locale.donate.closeAriaLabel);
         });
         document.querySelector('.language-modal-list')?.setAttribute('aria-label', locale.modalTitle);
         document.querySelectorAll('[data-language-option]').forEach((option) => {
