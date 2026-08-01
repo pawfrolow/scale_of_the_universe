@@ -1,0 +1,93 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.astro';
+import Footer from '@/components/Footer/Footer.astro';
+import Header from '@/components/Header/Header.astro';
+import SeoLayout from '@/layouts/SeoLayout.astro';
+import {
+  buildBreadcrumbStructuredData,
+  buildObjectIndexStructuredData,
+  buildPowerOfTenRangeHtml,
+  buildSizeHtml,
+  DEFAULT_LANGUAGE,
+  getAppVersion,
+  getLocaleData,
+  getLocales,
+  getObjectScaleGroup,
+  getObjectScaleGroupLabel,
+  OBJECT_SCALE_GROUPS,
+  trimToLength,
+} from '@/services/seo-static.service';
+
+const locales = await getLocales();
+const locale = await getLocaleData(DEFAULT_LANGUAGE);
+
+if (!locale) {
+  throw new Error(`Locale not found: ${DEFAULT_LANGUAGE}`);
+}
+
+const appVersion = await getAppVersion();
+const title = `${locale.appTitle} | ${locale.startScreen.objectHint}`;
+const description = trimToLength(`${locale.metaDescription} ${locale.startScreen.objectHint}`, 155);
+const breadcrumbs = [
+  { label: locale.appTitle, href: locale.path },
+  { label: locale.navLabels.objects, href: locale.objectIndexPath },
+];
+const sortedObjects = [...locale.objects].sort(
+  (left, right) => left.sizeMeters - right.sizeMeters || Number(left.id) - Number(right.id),
+);
+const objectGroups = OBJECT_SCALE_GROUPS.map((group) => ({
+  group,
+  label: getObjectScaleGroupLabel(locale.language, group),
+  rangeHtml: buildPowerOfTenRangeHtml(group, locale.units),
+  objects: sortedObjects.filter((object) => getObjectScaleGroup(object) === group),
+})).filter((group) => group.objects.length > 0);
+---
+
+<SeoLayout
+  canonicalPath={locale.objectIndexPath}
+  description={description}
+  locale={locale}
+  locales={locales}
+  ogImage={locale.ogImage}
+  page={{ type: 'objects' }}
+  structuredData={[buildObjectIndexStructuredData(locale), buildBreadcrumbStructuredData(breadcrumbs)]}
+  title={title}
+>
+  <div class="seo-static-shell">
+    <Header locale={locale} locales={locales} page={{ type: 'objects' }} />
+    <main class="page">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>{locale.startScreen.objectHint}</h1>
+      <p>{locale.metaDescription}</p>
+      {
+        objectGroups.map(({ label, objects, rangeHtml }) => (
+          <section class="object-section">
+            <div class="object-section-header">
+              <h2 class="object-section-title">{label}</h2>
+              <span class="object-section-range" set:html={rangeHtml} />
+            </div>
+            <nav class="grid" aria-label={label}>
+              {objects.map((object) => (
+                <a class="card" href={object.path}>
+                  <span class="card-image-wrap">
+                    <img
+                      class="card-image"
+                      src={object.imageSrc}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      aria-hidden="true"
+                    />
+                  </span>
+                  <span class="card-title">{object.title}</span>
+                  <span class="card-size" set:html={buildSizeHtml(object.sizeText)} />
+                </a>
+              ))}
+            </nav>
+          </section>
+        ))
+      }
+    </main>
+    <Footer locale={locale} appVersion={appVersion} />
+  </div>
+</SeoLayout>

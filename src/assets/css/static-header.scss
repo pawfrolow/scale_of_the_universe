@@ -1,0 +1,322 @@
+.site-header-band {
+  flex-shrink: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.site-header {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: calc(16px + var(--safe-area-top)) calc(24px + var(--safe-area-right)) 12px
+    calc(24px + var(--safe-area-left));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: #0f172a;
+  font-size: 1.0625rem;
+  line-height: 1.25;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-brand img {
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.site-brand span {
+  min-width: 0;
+  word-break: break-word;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 4px 0;
+  color: #111827;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.site-nav a:hover {
+  color: #1d4ed8;
+}
+
+.site-menu-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.78);
+  cursor: pointer;
+}
+
+.site-menu-button img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.site-nav-sidebar-shell {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.site-nav-sidebar-shell.is-open {
+  pointer-events: auto;
+}
+
+.site-nav-sidebar-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: rgba(15, 23, 42, 0.42);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.18s ease;
+}
+
+.site-nav-sidebar-shell.is-open .site-nav-sidebar-backdrop {
+  opacity: 1;
+}
+
+.site-nav-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: min(320px, calc(100vw - 48px));
+  height: 100%;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: -18px 0 48px rgba(15, 23, 42, 0.18);
+  transform: translateX(100%);
+  transition: transform 0.2s ease;
+}
+
+.site-nav-sidebar-shell.is-open .site-nav-sidebar {
+  transform: translateX(0);
+}
+
+.site-nav-sidebar-close {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.06);
+  color: #111827;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.site-nav-sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.site-nav-sidebar-links a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 2px;
+  color: #111827;
+  font-size: 1.125rem;
+  line-height: 1.25;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.site-nav-sidebar-links a:hover {
+  color: #1d4ed8;
+}
+
+.language-modal-shell {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.language-modal-shell:target,
+.language-modal-shell.is-open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.language-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.42);
+}
+
+.language-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(650px, 100%);
+  max-height: min(720px, calc(100dvh - 48px));
+  overflow: auto;
+  padding: 20px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow:
+    0 0 40px rgba(0, 0, 0, 0.1),
+    0 0 10px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.language-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.language-modal-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.language-modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(51, 51, 51, 0.06);
+  color: #333;
+  font-size: 28px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.language-modal-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.language-modal-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid rgba(51, 51, 51, 0.12);
+  border-radius: 10px;
+  background: rgba(51, 51, 51, 0.04);
+  color: #333;
+  text-align: left;
+  text-decoration: none;
+  transition:
+    background 0.2s ease-out,
+    border-color 0.2s ease-out;
+}
+
+.language-modal-option:hover {
+  background: rgba(168, 168, 168, 0.2);
+}
+
+.language-modal-option.is-active {
+  border-color: rgba(92, 122, 255, 0.45);
+  background: rgba(92, 122, 255, 0.1);
+}
+
+.language-modal-option span:first-child {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 767px) {
+  .site-header {
+    padding: calc(12px + var(--safe-area-top)) calc(16px + var(--safe-area-right)) 10px
+      calc(16px + var(--safe-area-left));
+    align-items: center;
+    gap: 10px;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .site-menu-button {
+    display: inline-flex;
+  }
+
+  .language-modal-shell {
+    padding: 16px;
+  }
+
+  .language-modal-dialog {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .language-modal-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .language-modal-option {
+    min-height: 46px;
+    padding: 12px;
+    font-size: 16px;
+  }
+}

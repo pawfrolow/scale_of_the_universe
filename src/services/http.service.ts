@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const http = axios.create({
-  baseURL: window.location.origin,
+  baseURL: typeof window === 'undefined' ? '/' : window.location.origin,
   timeout: 15000,
 });
 

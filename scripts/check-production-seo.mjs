@@ -1,11 +1,12 @@
 import http from 'node:http';
 import https from 'node:https';
 
-const TARGET_ORIGIN = process.env.SEO_CHECK_ORIGIN ?? 'https://universe.pavelfrolov.com';
+const TARGET_ORIGIN = process.env.SEO_CHECK_ORIGIN ?? 'http://localhost:4321';
+const CANONICAL_ORIGIN = process.env.SEO_CANONICAL_ORIGIN ?? 'https://universe.pavelfrolov.com';
 const HOSTNAME = new URL(TARGET_ORIGIN).hostname;
 const TIMEOUT_MS = 10000;
 
-const checks = [
+const redirectChecks = [
   {
     name: 'HTTP redirects to HTTPS',
     url: `http://${HOSTNAME}/`,
@@ -24,12 +25,15 @@ const checks = [
     expect: ({ statusCode, headers }) =>
       [301, 308].includes(statusCode) && headers.location === `${TARGET_ORIGIN}/`,
   },
+];
+
+const contentChecks = [
   {
     name: 'root page has self canonical and navigation',
     url: `${TARGET_ORIGIN}/`,
     expect: ({ statusCode, body }) =>
       statusCode === 200 &&
-      body.includes(`<link rel="canonical" href="${TARGET_ORIGIN}/" />`) &&
+      body.includes(`<link rel="canonical" href="${CANONICAL_ORIGIN}/"`) &&
       body.includes('href="/about/"') &&
       body.includes('href="/objects/"'),
   },
@@ -38,7 +42,7 @@ const checks = [
     url: `${TARGET_ORIGIN}/about/`,
     expect: ({ statusCode, body }) =>
       statusCode === 200 &&
-      body.includes(`<link rel="canonical" href="${TARGET_ORIGIN}/about/" />`) &&
+      body.includes(`<link rel="canonical" href="${CANONICAL_ORIGIN}/about/"`) &&
       body.includes('htwins.net'),
   },
   {
@@ -46,15 +50,15 @@ const checks = [
     url: `${TARGET_ORIGIN}/en/about/`,
     expect: ({ statusCode, body }) =>
       statusCode === 200 &&
-      body.includes(`<link rel="canonical" href="${TARGET_ORIGIN}/en/about/" />`) &&
+      body.includes(`<link rel="canonical" href="${CANONICAL_ORIGIN}/en/about/"`) &&
       body.includes('Created by:'),
   },
   {
     name: 'localized object page has self canonical and layout chrome',
-    url: `${TARGET_ORIGIN}/en/objects/030/`,
+    url: `${TARGET_ORIGIN}/en/objects/lcd-pixel/`,
     expect: ({ statusCode, body }) =>
       statusCode === 200 &&
-      body.includes(`<link rel="canonical" href="${TARGET_ORIGIN}/en/objects/030/" />`) &&
+      body.includes(`<link rel="canonical" href="${CANONICAL_ORIGIN}/en/objects/lcd-pixel/"`) &&
       body.includes('<h1>LCD Pixel</h1>') &&
       body.includes('class="site-header"') &&
       body.includes('class="site-footer"'),
@@ -65,11 +69,15 @@ const checks = [
     expect: ({ statusCode, body }) =>
       statusCode === 200 &&
       body.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">') &&
-      body.includes(`<loc>${TARGET_ORIGIN}/about/</loc>`) &&
-      body.includes(`<loc>${TARGET_ORIGIN}/objects/030/</loc>`) &&
+      body.includes(`<loc>${CANONICAL_ORIGIN}/about/</loc>`) &&
+      body.includes(`<loc>${CANONICAL_ORIGIN}/objects/lcd-pixel/</loc>`) &&
+      body.includes(`<loc>${CANONICAL_ORIGIN}/en/objects/lcd-pixel/</loc>`) &&
       body.includes('<lastmod>'),
   },
 ];
+
+const checks =
+  HOSTNAME === 'universe.pavelfrolov.com' ? [...redirectChecks, ...contentChecks] : contentChecks;
 
 const request = (url) =>
   new Promise((resolve, reject) => {

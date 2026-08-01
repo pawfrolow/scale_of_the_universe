@@ -34,6 +34,12 @@
       "title": "Projeyi destekle",
       "description": "Bu projeyi boş zamanlarımda geliştiriyor ve içeriğini, çevirilerini, arayüzünü ve performansını adım adım iyileştiriyorum.\n\nScale of the Universe hoşunuza gidiyorsa projeyi bağış yaparak destekleyebilirsiniz.",
       "closeAriaLabel": "Destek penceresini kapat"
+    },
+    "notFound": {
+      "title": "Sayfa bulunamadı",
+      "description": "Aradığınız sayfa mevcut değil veya taşınmış.",
+      "homeAction": "Ana sayfaya git",
+      "objectsAction": "Nesnelere göz at"
     }
   }
 }

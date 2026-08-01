@@ -34,6 +34,12 @@
       "title": "支持這個專案",
       "description": "我在空閒時間開發這個專案，並持續改進內容、翻譯、介面與效能。\n\n如果你喜歡《宇宙尺度》，你可以透過贊助來支持這個專案。",
       "closeAriaLabel": "關閉支持視窗"
+    },
+    "notFound": {
+      "title": "找不到頁面",
+      "description": "你要查找的頁面不存在或已被移動。",
+      "homeAction": "返回首頁",
+      "objectsAction": "瀏覽物件"
     }
   }
 }

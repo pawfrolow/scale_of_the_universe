@@ -48,6 +48,7 @@ export const useUniverse = ({
   const visualViewportHandlerRef = useRef<(() => void) | null>(null);
   const resizeHandlerRef = useRef<(() => void) | null>(null);
   const orientationHandlerRef = useRef<(() => void) | null>(null);
+  const fullscreenHandlerRef = useRef<(() => void) | null>(null);
   const { i18n } = useTranslation();
 
   useEffect(() => {
@@ -304,12 +305,21 @@ export const useUniverse = ({
         setTimeout(performResize, 250);
       };
 
+      fullscreenHandlerRef.current = () => {
+        setTimeout(performResize, 50);
+        setTimeout(performResize, 250);
+      };
+
       visualViewportHandlerRef.current = throttle(() => {
         performResize();
       }, 100);
 
       window.addEventListener('resize', resizeHandlerRef.current);
       window.addEventListener('orientationchange', orientationHandlerRef.current);
+      document.addEventListener('fullscreenchange', fullscreenHandlerRef.current);
+      document.addEventListener('webkitfullscreenchange', fullscreenHandlerRef.current);
+      document.addEventListener('mozfullscreenchange', fullscreenHandlerRef.current);
+      document.addEventListener('MSFullscreenChange', fullscreenHandlerRef.current);
 
       if (window.visualViewport) {
         window.visualViewport.addEventListener('resize', visualViewportHandlerRef.current);
@@ -333,6 +343,13 @@ export const useUniverse = ({
 
       if (orientationHandlerRef.current) {
         window.removeEventListener('orientationchange', orientationHandlerRef.current);
+      }
+
+      if (fullscreenHandlerRef.current) {
+        document.removeEventListener('fullscreenchange', fullscreenHandlerRef.current);
+        document.removeEventListener('webkitfullscreenchange', fullscreenHandlerRef.current);
+        document.removeEventListener('mozfullscreenchange', fullscreenHandlerRef.current);
+        document.removeEventListener('MSFullscreenChange', fullscreenHandlerRef.current);
       }
 
       if (visualViewportHandlerRef.current && window.visualViewport) {

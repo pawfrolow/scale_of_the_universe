@@ -34,6 +34,12 @@
       "title": "Soutenir le projet",
       "description": "Je développe ce projet sur mon temps libre et j’en améliore progressivement le contenu, les traductions, l’interface et les performances.\n\nSi vous aimez Scale of the Universe, vous pouvez soutenir le projet par un don.",
       "closeAriaLabel": "Fermer la fenêtre de soutien"
+    },
+    "notFound": {
+      "title": "Page introuvable",
+      "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+      "homeAction": "Aller à l'accueil",
+      "objectsAction": "Parcourir les objets"
     }
   }
 }

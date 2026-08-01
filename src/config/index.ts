@@ -37,9 +37,11 @@ export const LANGUAGE_OPTIONS = [
 
 export const APP_HOST = 'universe.pavelfrolov.com';
 
-export const isLocalhost = window.location.hostname === 'localhost';
+export const isLocalhost = () =>
+  typeof window !== 'undefined' && window.location.hostname === 'localhost';
 
-export const isProduction = window.location.host === 'universe.pavelfrolov.com';
+export const isProduction = () =>
+  typeof window !== 'undefined' && window.location.host === 'universe.pavelfrolov.com';
 
 export const CREDIT_LINKS = {
   webDev: 'https://github.com/matttt/scale_of_the_universe',

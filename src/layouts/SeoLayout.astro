@@ -1,0 +1,400 @@
+---
+import '@/assets/css/reset.css';
+import '@/assets/css/static-header.scss';
+
+import {
+  APP_ORIGIN,
+  getAlternateLinks,
+  getXDefaultAlternate,
+  serializeJsonForHtml,
+} from '@/services/seo-static.service';
+import type { TSeoLocale, TSeoPage } from '@/services/seo-static.service';
+
+type Props = {
+  canonicalPath: string;
+  description: string;
+  includeAlternateLinks?: boolean;
+  includeClientScripts?: boolean;
+  locale: TSeoLocale;
+  locales: TSeoLocale[];
+  ogImage: string;
+  ogType?: string;
+  page: TSeoPage;
+  robots?: string;
+  structuredData?: unknown;
+  title: string;
+};
+
+const {
+  canonicalPath,
+  description,
+  includeAlternateLinks = true,
+  includeClientScripts = false,
+  locale,
+  locales,
+  ogImage,
+  ogType = 'website',
+  page,
+  robots = 'index,follow,max-image-preview:large',
+  structuredData,
+  title,
+} = Astro.props;
+const canonicalUrl = `${APP_ORIGIN}${canonicalPath}`;
+const alternates = includeAlternateLinks ? getAlternateLinks(locales, page) : [];
+const xDefault = includeAlternateLinks ? getXDefaultAlternate(locales, page) : null;
+const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData) : null;
+---
+
+<!doctype html>
+<html lang={locale.language} dir={locale.dir}>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
+    />
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <meta name="theme-color" content="#171933" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="canonical" href={canonicalUrl} />
+    {alternates.map((alternate) => <link rel="alternate" hreflang={alternate.hreflang} href={alternate.href} />)}
+    {xDefault ? <link rel="alternate" hreflang="x-default" href={xDefault} /> : null}
+    <title>{title}</title>
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={locale.ogLocale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    {structuredDataJson ? <script is:inline type="application/ld+json" set:html={structuredDataJson} /> : null}
+    <slot name="head" />
+  </head>
+  <body>
+    <script is:inline>
+      if ('serviceWorker' in navigator && window.location.host !== 'universe.pavelfrolov.com') {
+        window.addEventListener('load', async () => {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(registrations.map((registration) => registration.unregister()));
+
+          if ('caches' in window) {
+            const cacheNames = await caches.keys();
+            await Promise.all(
+              cacheNames
+                .filter((cacheName) => cacheName.startsWith('app-cache'))
+                .map((cacheName) => caches.delete(cacheName)),
+            );
+          }
+        });
+      }
+    </script>
+
+    <slot />
+
+    {
+      includeClientScripts ? (
+        <>
+          <script is:inline>
+            if ('serviceWorker' in navigator && window.location.host === 'universe.pavelfrolov.com') {
+              window.addEventListener('load', async () => {
+                await navigator.serviceWorker.register('/sw.js');
+              });
+            }
+          </script>
+          <script is:inline>
+            if (window.location.host === 'universe.pavelfrolov.com') {
+              (function (m, e, t, r, i, k, a) {
+                m[i] =
+                  m[i] ||
+                  function () {
+                    (m[i].a = m[i].a || []).push(arguments);
+                  };
+                m[i].l = 1 * new Date();
+                for (var j = 0; j < document.scripts.length; j++) {
+                  if (document.scripts[j].src === r) {
+                    return;
+                  }
+                }
+                ((k = e.createElement(t)),
+                  (a = e.getElementsByTagName(t)[0]),
+                  (k.async = 1),
+                  (k.src = r),
+                  a.parentNode.insertBefore(k, a));
+              })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=108142388', 'ym');
+
+              ym(108142388, 'init', {
+                ssr: true,
+                webvisor: true,
+                clickmap: true,
+                ecommerce: 'dataLayer',
+                referrer: document.referrer,
+                url: location.href,
+                accurateTrackBounce: true,
+                trackLinks: true,
+              });
+            }
+          </script>
+          <noscript>
+            <div>
+              <img
+                src="https://mc.yandex.ru/watch/108142388"
+                style="position: absolute; left: -9999px"
+                alt=""
+              />
+            </div>
+          </noscript>
+        </>
+      ) : null
+    }
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --safe-area-top: env(safe-area-inset-top, 0px);
+    --safe-area-right: env(safe-area-inset-right, 0px);
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-area-left: env(safe-area-inset-left, 0px);
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    min-height: 100dvh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto, system-ui, sans-serif;
+    color: #111827;
+    background: radial-gradient(circle, #e5e5e5 0%, #d9d9d9 50%, #e5e5e5 100%);
+  }
+
+  a {
+    color: #172554;
+  }
+
+  .seo-static-shell {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto, system-ui, sans-serif;
+    color: #111827;
+  }
+
+  .page {
+    flex: 1;
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: 28px 24px 44px;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
+    gap: 28px;
+    align-items: center;
+  }
+
+  h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2.25rem, 6vw, 4.5rem);
+    line-height: 1.03;
+    color: #0f172a;
+  }
+
+  h2 {
+    margin: 34px 0 16px;
+    font-size: 1.4rem;
+    color: #0f172a;
+  }
+
+  p {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin: 0 0 16px;
+  }
+
+  .size {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #1e3a8a;
+  }
+
+  .image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    padding: 24px;
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  .image-wrap img {
+    display: block;
+    width: min(100%, 360px);
+    max-height: 360px;
+    object-fit: contain;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    margin-top: 8px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: #5c7aff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  .about-credits {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    margin: 24px 0 16px;
+    color: rgba(17, 24, 39, 0.78);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .about-credits p {
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .about-credits a {
+    color: inherit;
+    text-underline-offset: 2px;
+  }
+
+  .object-section {
+    margin-top: 34px;
+  }
+
+  .object-section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+    padding-bottom: 8px;
+  }
+
+  .object-section-title {
+    margin: 0;
+    color: #0f172a;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  .object-section-range {
+    flex-shrink: 0;
+    color: rgba(17, 24, 39, 0.62);
+    font-size: 0.875rem;
+    line-height: 1.3;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6px;
+    min-height: 148px;
+    padding: 12px 14px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.82);
+    color: #172554;
+    text-decoration: none;
+    line-height: 1.35;
+  }
+
+  .card-image-wrap {
+    width: 100%;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    background: rgba(241, 245, 249, 0.72);
+    overflow: hidden;
+  }
+
+  .card-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .card-title {
+    color: #172554;
+    font-size: 1rem;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  .card-size {
+    color: rgba(17, 24, 39, 0.68);
+    font-size: 0.8125rem;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 767px) {
+    .page {
+      padding: 22px 16px 32px;
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+    }
+
+    .image-wrap {
+      min-height: 200px;
+    }
+
+    .object-section {
+      margin-top: 28px;
+    }
+
+    .object-section-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+  }
+</style>

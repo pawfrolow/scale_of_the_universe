@@ -1,0 +1,228 @@
+---
+import Footer from '@/components/Footer/Footer.astro';
+import Header from '@/components/Header/Header.astro';
+import SeoLayout from '@/layouts/SeoLayout.astro';
+import {
+  DEFAULT_LANGUAGE,
+  getAppVersion,
+  getLocaleData,
+  getLocales,
+  normalizeText,
+  serializeJsonForHtml,
+} from '@/services/seo-static.service';
+
+const NOT_FOUND_LANGUAGE = DEFAULT_LANGUAGE;
+const NOT_FOUND_CLIENT_FALLBACK_LANGUAGE = DEFAULT_LANGUAGE;
+const locales = await getLocales();
+const locale = await getLocaleData(NOT_FOUND_LANGUAGE);
+
+if (!locale) {
+  throw new Error(`Locale not found: ${NOT_FOUND_LANGUAGE}`);
+}
+
+const appVersion = await getAppVersion();
+const fallbackNotFound = {
+  title: 'Page not found',
+  description: 'The page you are looking for does not exist or has moved.',
+  homeAction: 'Go to homepage',
+  objectsAction: 'Browse objects',
+};
+const getNotFoundText = (entry: typeof locale) => {
+  const localizedText = entry.ui.html?.notFound ?? {};
+
+  return {
+    title: normalizeText(localizedText.title ?? fallbackNotFound.title),
+    description: normalizeText(localizedText.description ?? fallbackNotFound.description),
+    homeAction: normalizeText(localizedText.homeAction ?? fallbackNotFound.homeAction),
+    objectsAction: normalizeText(localizedText.objectsAction ?? fallbackNotFound.objectsAction),
+  };
+};
+const initialNotFound = getNotFoundText(locale);
+const title = `${initialNotFound.title} | ${locale.appTitle}`;
+const description = initialNotFound.description;
+const notFoundLocales = locales.map((entry) => {
+  const notFound = getNotFoundText(entry);
+
+  return {
+    language: entry.language,
+    segment: entry.segment,
+    dir: entry.dir,
+    appTitle: entry.appTitle,
+    pageTitle: `${notFound.title} | ${entry.appTitle}`,
+    path: entry.path,
+    aboutPath: entry.aboutPath,
+    objectIndexPath: entry.objectIndexPath,
+    navLabels: entry.navLabels,
+    modalTitle: normalizeText(entry.ui.html?.modal?.selectLanguage ?? entry.navLabels.language),
+    closeModalLabel: normalizeText(
+      entry.ui.html?.modal?.closeLanguageModal ?? 'Close language modal',
+    ),
+    notFound,
+  };
+});
+const notFoundPayloadJson = serializeJsonForHtml({
+  defaultLanguage: NOT_FOUND_CLIENT_FALLBACK_LANGUAGE,
+  locales: notFoundLocales,
+});
+---
+
+<SeoLayout
+  canonicalPath="/404.html"
+  description={description}
+  includeAlternateLinks={false}
+  locale={locale}
+  locales={locales}
+  ogImage={locale.ogImage}
+  page={{ type: 'home' }}
+  robots="noindex,follow"
+  title={title}
+>
+  <div class="seo-static-shell">
+    <Header locale={locale} locales={locales} page={{ type: 'home' }} />
+    <main class="page not-found-page">
+      <p class="not-found-kicker">404</p>
+      <h1 data-not-found-text="notFoundTitle">{initialNotFound.title}</h1>
+      <p data-not-found-text="notFoundDescription">{description}</p>
+      <div class="not-found-actions">
+        <a class="button" href={locale.path} data-not-found-link="home" data-not-found-text="homeAction">
+          {initialNotFound.homeAction}
+        </a>
+        <a
+          class="button button-secondary"
+          href={locale.objectIndexPath}
+          data-not-found-link="objects"
+          data-not-found-text="objectsAction"
+        >
+          {initialNotFound.objectsAction}
+        </a>
+      </div>
+    </main>
+    <Footer locale={locale} appVersion={appVersion} />
+    <script is:inline id="not-found-locale-data" type="application/json" set:html={notFoundPayloadJson} />
+    <script is:inline>
+      (() => {
+        const dataElement = document.getElementById('not-found-locale-data');
+
+        if (!dataElement?.textContent) {
+          return;
+        }
+
+        const data = JSON.parse(dataElement.textContent);
+        const locales = Array.isArray(data.locales) ? data.locales : [];
+        const byLanguage = new Map(locales.map((entry) => [entry.language, entry]));
+        const bySegment = new Map(
+          locales
+            .flatMap((entry) => [
+              entry.segment ? [entry.segment.toLowerCase(), entry] : null,
+              [entry.language.toLowerCase(), entry],
+            ])
+            .filter(Boolean),
+        );
+        const getPathLanguage = () => {
+          const firstSegment = window.location.pathname.split('/').filter(Boolean)[0]?.toLowerCase();
+
+          return firstSegment ? bySegment.get(firstSegment)?.language ?? null : null;
+        };
+        const locale =
+          byLanguage.get(getPathLanguage()) ??
+          byLanguage.get(data.defaultLanguage) ??
+          locales[0];
+
+        if (!locale) {
+          return;
+        }
+
+        const setText = (key, value) => {
+          document.querySelectorAll(`[data-not-found-text="${key}"]`).forEach((element) => {
+            element.textContent = value;
+          });
+        };
+        const setHref = (key, value) => {
+          document.querySelectorAll(`[data-not-found-link="${key}"]`).forEach((element) => {
+            element.setAttribute('href', value);
+          });
+        };
+        const setMetaContent = (selector, value) => {
+          document.querySelector(selector)?.setAttribute('content', value);
+        };
+
+        document.documentElement.lang = locale.language;
+        document.documentElement.dir = locale.dir;
+        document.title = locale.pageTitle;
+        setMetaContent('meta[name="description"]', locale.notFound.description);
+        setMetaContent('meta[property="og:title"]', locale.pageTitle);
+        setMetaContent('meta[property="og:description"]', locale.notFound.description);
+        setMetaContent('meta[name="twitter:title"]', locale.pageTitle);
+        setMetaContent('meta[name="twitter:description"]', locale.notFound.description);
+
+        setText('appTitle', locale.appTitle);
+        setText('navAbout', locale.navLabels.about);
+        setText('navObjects', locale.navLabels.objects);
+        setText('navLanguage', locale.navLabels.language);
+        setText('navDonate', locale.navLabels.donate);
+        setText('modalTitle', locale.modalTitle);
+        setText('notFoundTitle', locale.notFound.title);
+        setText('notFoundDescription', locale.notFound.description);
+        setText('homeAction', locale.notFound.homeAction);
+        setText('objectsAction', locale.notFound.objectsAction);
+
+        setHref('home', locale.path);
+        setHref('about', locale.aboutPath);
+        setHref('objects', locale.objectIndexPath);
+
+        document.querySelectorAll('[data-language-close]').forEach((element) => {
+          element.setAttribute('aria-label', locale.closeModalLabel);
+        });
+        document.querySelector('.language-modal-list')?.setAttribute('aria-label', locale.modalTitle);
+        document.querySelectorAll('[data-language-option]').forEach((option) => {
+          const isActive = option.getAttribute('data-language-option') === locale.language;
+          option.classList.toggle('is-active', isActive);
+          option.querySelector('[data-language-active-marker]')?.remove();
+
+          if (isActive) {
+            const marker = document.createElement('span');
+            marker.setAttribute('aria-hidden', 'true');
+            marker.setAttribute('data-language-active-marker', '');
+            marker.textContent = '✓';
+            option.append(' ', marker);
+          }
+        });
+      })();
+    </script>
+  </div>
+</SeoLayout>
+
+<style>
+  .not-found-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 62dvh;
+  }
+
+  .not-found-kicker {
+    margin: 0 0 8px;
+    color: rgba(17, 24, 39, 0.58);
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .not-found-page p {
+    max-width: 620px;
+  }
+
+  .not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .button-secondary {
+    background: rgba(255, 255, 255, 0.82);
+    color: #172554;
+    border: 1px solid rgba(23, 37, 84, 0.18);
+  }
+</style>

@@ -34,6 +34,12 @@
       "title": "Subtenu la projekton",
       "description": "Mi evoluigas ĉi tiun projekton en mia libera tempo kaj iom post iom plibonigas ĝian enhavon, tradukojn, interfacon kaj rendimenton.\n\nSe al vi plaĉas Scale of the Universe, vi povas subteni la projekton per donaco.",
       "closeAriaLabel": "Fermi la subtenan fenestron"
+    },
+    "notFound": {
+      "title": "Paĝo ne trovita",
+      "description": "La paĝo, kiun vi serĉas, ne ekzistas aŭ estis movita.",
+      "homeAction": "Iri al la ĉefpaĝo",
+      "objectsAction": "Foliumi objektojn"
     }
   }
 }

@@ -52,7 +52,7 @@ export class Item extends Entity {
   public realRatio: number = 1;
   public currentScale: number = 1;
   public visualLocation: VisualLocation;
-  public video: Sprite;
+  declare public video: Sprite;
   public videoSrc;
   private textDatum: TextDatum;
   public text: Text;

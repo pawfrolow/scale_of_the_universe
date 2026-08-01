@@ -59,7 +59,7 @@
     <div id="root"></div>
     <script type="module" src="./main.tsx"></script>
     <script>
-      if ('serviceWorker' in navigator) {
+      if ('serviceWorker' in navigator && window.location.host === 'universe.pavelfrolov.com') {
         window.addEventListener('load', async () => {
           await navigator.serviceWorker.register('/sw.js');
         });

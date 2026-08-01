@@ -1,0 +1,45 @@
+---
+import HomeSeoFallback from '@/components/seo/HomeSeoFallback.astro';
+import SeoLayout from '@/layouts/SeoLayout.astro';
+import {
+  buildSeoLocaleData,
+  buildWebsiteStructuredData,
+  DEFAULT_LANGUAGE,
+  getAppVersion,
+  getLocaleData,
+  getLocales,
+  serializeJsonForHtml,
+} from '@/services/seo-static.service';
+
+const locales = await getLocales();
+const locale = await getLocaleData(DEFAULT_LANGUAGE);
+
+if (!locale) {
+  throw new Error(`Locale not found: ${DEFAULT_LANGUAGE}`);
+}
+
+const appVersion = await getAppVersion();
+const seoLocaleData = buildSeoLocaleData(locale);
+const seoLocaleDataJson = serializeJsonForHtml(seoLocaleData);
+---
+
+<SeoLayout
+  canonicalPath={locale.path}
+  description={locale.description}
+  includeClientScripts
+  locale={locale}
+  locales={locales}
+  ogImage={locale.ogImage}
+  page={{ type: 'home' }}
+  structuredData={buildWebsiteStructuredData(locale)}
+  title={locale.title}
+>
+  <HomeSeoFallback locale={locale} locales={locales} appVersion={appVersion} />
+  <script is:inline id="seo-locale-data" type="application/json" set:html={seoLocaleDataJson}></script>
+  <div id="universe-runtime-root" data-initial-language={locale.language}></div>
+  <script>
+    import { initUniverseBootstrap } from '@/app/universe-bootstrap';
+
+    initUniverseBootstrap();
+  </script>
+</SeoLayout>

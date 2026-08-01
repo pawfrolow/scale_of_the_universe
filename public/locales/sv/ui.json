@@ -34,6 +34,12 @@
       "title": "Stöd projektet",
       "description": "Jag utvecklar det här projektet på min fritid och förbättrar gradvis innehåll, översättningar, gränssnitt och prestanda.\n\nOm du gillar Scale of the Universe kan du stödja projektet med en donation.",
       "closeAriaLabel": "Stäng stödfönstret"
+    },
+    "notFound": {
+      "title": "Sidan hittades inte",
+      "description": "Sidan du söker finns inte eller har flyttats.",
+      "homeAction": "Gå till startsidan",
+      "objectsAction": "Bläddra bland objekt"
     }
   }
 }

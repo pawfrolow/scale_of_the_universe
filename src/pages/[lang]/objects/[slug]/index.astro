@@ -1,0 +1,73 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.astro';
+import Footer from '@/components/Footer/Footer.astro';
+import Header from '@/components/Header/Header.astro';
+import SeoLayout from '@/layouts/SeoLayout.astro';
+import {
+  APP_ORIGIN,
+  buildBreadcrumbStructuredData,
+  buildObjectStructuredData,
+  buildSizeHtml,
+  DEFAULT_LANGUAGE,
+  getAppVersion,
+  getLocales,
+  trimToLength,
+} from '@/services/seo-static.service';
+import type { TSeoLocale, TSeoObject } from '@/services/seo-static.service';
+
+export async function getStaticPaths() {
+  const locales = await getLocales();
+
+  return locales
+    .filter((locale) => locale.language !== DEFAULT_LANGUAGE)
+    .flatMap((locale) =>
+      locale.objects.map((object) => ({
+        params: { lang: locale.segment, slug: object.slug },
+        props: { locale, object },
+      })),
+    );
+}
+
+const locales = await getLocales();
+const { locale, object } = Astro.props as { locale: TSeoLocale; object: TSeoObject };
+const appVersion = await getAppVersion();
+const title = `${object.title} | ${locale.appTitle}`;
+const description = trimToLength(`${object.title}. ${object.description}`, 155);
+const imageUrl = `${APP_ORIGIN}${object.imageSrc}`;
+const breadcrumbs = [
+  { label: locale.appTitle, href: locale.path },
+  { label: locale.navLabels.objects, href: locale.objectIndexPath },
+  { label: object.title, href: object.path },
+];
+---
+
+<SeoLayout
+  canonicalPath={object.path}
+  description={description}
+  locale={locale}
+  locales={locales}
+  ogImage={imageUrl}
+  ogType="article"
+  page={{ type: 'object', id: object.id }}
+  structuredData={[buildObjectStructuredData(locale, object), buildBreadcrumbStructuredData(breadcrumbs)]}
+  title={title}
+>
+  <div class="seo-static-shell">
+    <Header locale={locale} locales={locales} page={{ type: 'object', id: object.id }} />
+    <main class="page">
+      <Breadcrumbs items={breadcrumbs} />
+      <section class="hero">
+        <div>
+          <h1>{object.title}</h1>
+          <p class="size" set:html={buildSizeHtml(object.sizeText)} />
+          <p>{object.description}</p>
+          <a class="button" href={locale.path}>{locale.startScreen.startText}</a>
+        </div>
+        <div class="image-wrap">
+          <img src={object.imageSrc} alt={object.title} loading="eager" />
+        </div>
+      </section>
+    </main>
+    <Footer locale={locale} appVersion={appVersion} />
+  </div>
+</SeoLayout>

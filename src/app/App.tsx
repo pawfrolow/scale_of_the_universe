@@ -21,6 +21,12 @@ import { ItemModalData, StartScreenContent } from '@/interfaces';
 import { createFrozenStarAudio } from '@/services/audio.service';
 import { getSeoLocaleData } from '@/services/seo-locale-data.service';
 
+export interface UniverseAppProps {
+  autoStart?: boolean;
+  initialLanguage?: TLanguage;
+  seoLocaleData?: ReturnType<typeof getSeoLocaleData>;
+}
+
 const normalizeText = (value: string) => value.replace(/\s+/g, ' ').trim();
 
 const getLocalizedSubPath = (language: TLanguage, subPath: string) => {
@@ -63,11 +69,17 @@ const dedupeTexts = (values: string[]) => {
   });
 };
 
-export const App = () => {
-  const [isStarted, setIsStarted] = useState(false);
-  const [hasEnteredApp, setHasEnteredApp] = useState(false);
-  const [isMuted, setIsMuted] = useState(!!localStorage.getItem(MUTED_STORAGE_KEY));
-  const [isAssetsLoading, setIsAssetsLoading] = useState(false);
+export const App = ({
+  autoStart = false,
+  initialLanguage,
+  seoLocaleData: initialSeoLocaleData,
+}: UniverseAppProps = {}) => {
+  const [isStarted, setIsStarted] = useState(autoStart);
+  const [hasEnteredApp, setHasEnteredApp] = useState(autoStart);
+  const [isMuted, setIsMuted] = useState(() =>
+    typeof localStorage === 'undefined' ? false : !!localStorage.getItem(MUTED_STORAGE_KEY),
+  );
+  const [isAssetsLoading, setIsAssetsLoading] = useState(autoStart);
   const [isAssetsReady, setIsAssetsReady] = useState(false);
   const [assetsProgress, setAssetsProgress] = useState(0);
   const [isLanguageModalOpen, setIsLanguageModalOpen] = useState(false);
@@ -75,11 +87,14 @@ export const App = () => {
   const [universeKey, setUniverseKey] = useState(0);
   const [itemModalData, setItemModalData] = useState<ItemModalData | null>(null);
 
-  const { isI18nReady, currentLanguage, setCurrentLanguage } = useLanguage();
+  const { isI18nReady, currentLanguage, setCurrentLanguage } = useLanguage(
+    initialLanguage,
+    initialSeoLocaleData,
+  );
 
   const { t, i18n } = useTranslation();
   const audio = useMemo(() => createFrozenStarAudio(), []);
-  const seoLocaleData = getSeoLocaleData();
+  const seoLocaleData = initialSeoLocaleData ?? getSeoLocaleData();
   const startScreenContent =
     seoLocaleData?.startScreen ??
     (isI18nReady
@@ -107,6 +122,9 @@ export const App = () => {
           },
         } satisfies StartScreenContent)
       : null);
+  const loadingTitle =
+    startScreenContent?.startLoadingText ??
+    (isI18nReady ? t('html.modal.startLoading', { ns: 'ui' }) : 'Загрузка...');
 
   useEffect(() => {
     if (!isAssetsReady) {
@@ -162,6 +180,16 @@ export const App = () => {
   }, [startScreenContent]);
 
   useEffect(() => {
+    if (autoStart && isI18nReady) {
+      ymClick('startBtn');
+    }
+  }, [autoStart, isI18nReady]);
+
+  useEffect(() => {
+    if (typeof localStorage === 'undefined') {
+      return;
+    }
+
     if (isMuted) {
       localStorage.setItem(MUTED_STORAGE_KEY, '1');
     } else {
@@ -281,7 +309,7 @@ export const App = () => {
 
         <div
           className={styles.universeLayer}
-          style={{ visibility: hasEnteredApp && isAssetsReady ? 'visible' : 'hidden' }}
+          style={{ visibility: hasEnteredApp ? 'visible' : 'hidden' }}
         >
           {isI18nReady ? (
             <>
@@ -307,36 +335,36 @@ export const App = () => {
             </>
           ) : null}
         </div>
-      </div>
 
-      {isI18nReady ? (
-        <>
-          <LanguageModal
-            isOpen={isLanguageModalOpen}
-            currentLanguage={currentLanguage}
-            onSelect={handleLanguageSelect}
-            onClose={handleCloseLanguageModal}
-          />
+        <LoadingOverlay
+          isVisible={hasEnteredApp && (isAssetsLoading || !isAssetsReady)}
+          progress={assetsProgress}
+          title={loadingTitle}
+        />
 
-          <DonateModal isOpen={isDonateModalOpen} onClose={handleCloseDonateModal} />
-
-          <LoadingOverlay
-            isVisible={hasEnteredApp && isAssetsLoading}
-            progress={assetsProgress}
-            title={t('html.modal.startLoading', { ns: 'ui' })}
-          />
-
-          {hasEnteredApp ? (
-            <Controls
-              hasEnteredApp={hasEnteredApp}
-              isMuted={isMuted}
-              onToggleMute={handleToggleMute}
-              onOpenLanguageModal={handleOpenLanguageModal}
-              onOpenDonateModal={handleOpenDonateModal}
+        {isI18nReady ? (
+          <>
+            <LanguageModal
+              isOpen={isLanguageModalOpen}
+              currentLanguage={currentLanguage}
+              onSelect={handleLanguageSelect}
+              onClose={handleCloseLanguageModal}
             />
-          ) : null}
-        </>
-      ) : null}
+
+            <DonateModal isOpen={isDonateModalOpen} onClose={handleCloseDonateModal} />
+
+            {hasEnteredApp ? (
+              <Controls
+                hasEnteredApp={hasEnteredApp}
+                isMuted={isMuted}
+                onToggleMute={handleToggleMute}
+                onOpenLanguageModal={handleOpenLanguageModal}
+                onOpenDonateModal={handleOpenDonateModal}
+              />
+            ) : null}
+          </>
+        ) : null}
+      </div>
     </>
   );
 };

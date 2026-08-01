@@ -1,17 +1,19 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-jsx",
     "noImplicitAny": false,
-    "target": "es2016",
+    "target": "ES2020",
     "sourceMap": true,
     "baseUrl": ".",
     "rootDir": "src",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "strictPropertyInitialization": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
+    "types": ["astro/client", "node"],
     "paths": {
       "@/*": ["src/*"]
     }
