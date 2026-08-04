@@ -71,8 +71,11 @@ export class ScaleText {
   }
 
   setText(str: string) {
-    this.textSpace.text = Number(str).toFixed(1);
-    this.textGround.text = Number(str).toFixed(1);
+    const value = Math.round(Number(str) * 10) / 10;
+    const formattedValue = Number.isInteger(value) ? String(value) : value.toFixed(1);
+
+    this.textSpace.text = formattedValue;
+    this.textGround.text = formattedValue;
   }
 
   setColor(scaleExp: number) {

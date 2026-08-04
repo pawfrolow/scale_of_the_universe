@@ -20,6 +20,19 @@ PIXI.settings.ROUND_PIXELS = true;
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
 
 const MOBILE_MAX_PERCENT_STEP = 0.004;
+const EXTRA_RIGHT_BOOST = 0.2;
+
+const clampScaleExp = (scaleExp: number) =>
+  Math.max(MIN_SCALE_EXP, Math.min(MAX_SCALE_EXP, scaleExp));
+
+const getScaleExpByPercent = (percent: number) => {
+  const scaleRange = MAX_SCALE_EXP - MIN_SCALE_EXP;
+  const normalizedLinearRange = scaleRange - EXTRA_RIGHT_BOOST;
+
+  return clampScaleExp(
+    MIN_SCALE_EXP + percent * normalizedLinearRange + Math.pow(percent, 4) * EXTRA_RIGHT_BOOST,
+  );
+};
 
 interface IUseUniverseParams {
   containerRef: RefObject<HTMLDivElement | null>;
@@ -159,8 +172,8 @@ export const useUniverse = ({
         universe?.onHandleClicked();
       };
 
-      const onChange = (_x: number, percent: number) => {
-        if (isDestroyed || !universe || !scaleText) {
+      const onChange = (_x: number, percent?: number) => {
+        if (isDestroyed || !universe || !scaleText || typeof percent !== 'number') {
           return;
         }
 
@@ -178,10 +191,7 @@ export const useUniverse = ({
 
         lastAppliedPercent = nextPercent;
 
-        const extraRightBoost = 0.2;
-        const boost = Math.pow(nextPercent, 4) * extraRightBoost;
-
-        const scaleExp = MIN_SCALE_EXP + nextPercent * (MAX_SCALE_EXP - MIN_SCALE_EXP) + boost;
+        const scaleExp = getScaleExpByPercent(nextPercent);
 
         scaleText.setColor(scaleExp);
 
@@ -262,7 +272,7 @@ export const useUniverse = ({
         return;
       }
 
-      slider.setPercent(map(0, -35, 27, 0, 1));
+      slider.setPercent(map(0, MIN_SCALE_EXP, MAX_SCALE_EXP, 0, 1));
       lastAppliedPercent = slider.getPercent();
       universe.prevZoom = 0;
 
