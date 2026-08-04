@@ -36,7 +36,7 @@ const { items } = Astro.props;
 <style>
   .breadcrumbs {
     margin: 0 0 18px;
-    color: rgba(17, 24, 39, 0.62);
+    color: var(--theme-text-soft, rgba(20, 27, 65, 0.58));
     font-size: 0.875rem;
     line-height: 1.35;
   }
@@ -60,19 +60,19 @@ const { items } = Astro.props;
   .breadcrumbs li:not(:first-child)::before {
     content: "/";
     margin: 0 6px 0 0;
-    color: rgba(17, 24, 39, 0.38);
+    color: rgba(20, 27, 65, 0.34);
   }
 
   .breadcrumbs a {
-    color: rgba(23, 37, 84, 0.74);
+    color: rgba(48, 107, 172, 0.86);
     text-decoration: none;
   }
 
   .breadcrumbs a:hover {
-    color: #1d4ed8;
+    color: var(--theme-ocean-deep, #306bac);
   }
 
   .breadcrumbs span {
-    color: rgba(17, 24, 39, 0.72);
+    color: var(--theme-text-muted, rgba(20, 27, 65, 0.72));
   }
 </style>

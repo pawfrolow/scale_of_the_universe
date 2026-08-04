@@ -1,11 +1,27 @@
+@use './variables.scss' as *;
+
 .site-header-band {
+  position: relative;
+  isolation: isolate;
+  z-index: 100;
   flex-shrink: 0;
   width: 100%;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-  background: rgba(255, 255, 255, 0.76);
+  border-bottom: 1px solid rgba($color-ocean-deep, 0.14);
+}
+
+.site-header-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba($color-white, 0.64);
+  backdrop-filter: blur(14px);
+  pointer-events: none;
 }
 
 .site-header {
+  position: relative;
+  z-index: 1;
   width: min(1120px, 100%);
   margin: 0 auto;
   padding: calc(16px + var(--safe-area-top)) calc(24px + var(--safe-area-right)) 12px
@@ -21,7 +37,7 @@
   align-items: center;
   gap: 10px;
   min-width: 0;
-  color: #0f172a;
+  color: $text-primary-light;
   font-size: 1.0625rem;
   line-height: 1.25;
   font-weight: 800;
@@ -37,6 +53,7 @@
 
 .site-brand span {
   min-width: 0;
+  font-family: var(--font-brand);
   word-break: break-word;
 }
 
@@ -54,7 +71,7 @@
   justify-content: center;
   min-height: 32px;
   padding: 4px 0;
-  color: #111827;
+  color: $text-primary-light;
   font-size: 0.875rem;
   line-height: 1.2;
   text-decoration: none;
@@ -63,7 +80,7 @@
 }
 
 .site-nav a:hover {
-  color: #1d4ed8;
+  color: $color-ocean-deep;
 }
 
 .site-menu-button {
@@ -76,7 +93,7 @@
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba($color-white, 0.64);
   cursor: pointer;
 }
 
@@ -104,7 +121,7 @@
   height: 100%;
   padding: 0;
   border: 0;
-  background: rgba(15, 23, 42, 0.42);
+  background: rgba($color-space-indigo, 0.48);
   opacity: 0;
   cursor: pointer;
   transition: opacity 0.18s ease;
@@ -124,8 +141,9 @@
   width: min(320px, calc(100vw - 48px));
   height: 100%;
   padding: 18px;
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: -18px 0 48px rgba(15, 23, 42, 0.18);
+  background: rgba($color-white, 0.94);
+  box-shadow: -18px 0 48px rgba($color-space-indigo, 0.22);
+  backdrop-filter: blur(18px);
   transform: translateX(100%);
   transition: transform 0.2s ease;
 }
@@ -144,8 +162,8 @@
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: rgba(15, 23, 42, 0.06);
-  color: #111827;
+  background: rgba($color-baby-blue-ice, 0.28);
+  color: $text-primary-light;
   font-size: 28px;
   line-height: 1;
   cursor: pointer;
@@ -162,7 +180,7 @@
   align-items: center;
   min-height: 44px;
   padding: 8px 2px;
-  color: #111827;
+  color: $text-primary-light;
   font-size: 1.125rem;
   line-height: 1.25;
   text-decoration: none;
@@ -170,7 +188,7 @@
 }
 
 .site-nav-sidebar-links a:hover {
-  color: #1d4ed8;
+  color: $color-ocean-deep;
 }
 
 @media (max-width: 767px) {

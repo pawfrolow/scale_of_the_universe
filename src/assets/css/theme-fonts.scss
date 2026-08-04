@@ -1,0 +1,26 @@
+@use './variables.scss' as *;
+
+@font-face {
+  font-family: $font-body-name;
+  src: url('#{$font-body-src}') format('truetype');
+  font-display: swap;
+  font-style: oblique -10deg 0deg;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: $font-brand-name;
+  src: url('#{$font-brand-src}') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --font-primary: #{$font-primary};
+  --font-brand: #{$font-brand};
+}
+
+html {
+  font-family: var(--font-primary);
+}

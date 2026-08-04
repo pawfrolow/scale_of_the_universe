@@ -16,13 +16,13 @@
   height: 12px;
   border-radius: 999px;
   overflow: hidden;
-  background: rgba($color-text-dark, 0.12);
+  background: rgba($color-ocean-deep, 0.14);
 }
 
 .loadingBarFill {
   height: 100%;
   border-radius: 999px;
-  background: linear-gradient(90deg, $color-primary 0%, rgba($color-primary, 0.65) 100%);
+  background: linear-gradient(90deg, $color-ocean-deep 0%, $color-soft-periwinkle 100%);
   transition: width 0.2s ease;
 }
 

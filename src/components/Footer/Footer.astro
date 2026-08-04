@@ -28,8 +28,9 @@ const { appVersion, locale } = Astro.props;
   .site-footer-band {
     flex-shrink: 0;
     width: 100%;
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
-    background: rgba(255, 255, 255, 0.78);
+    border-top: 1px solid var(--theme-border, rgba(48, 107, 172, 0.18));
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(14px);
   }
 
   .site-footer {
@@ -52,14 +53,14 @@ const { appVersion, locale } = Astro.props;
   }
 
   .site-footer-links a {
-    color: rgba(17, 24, 39, 0.8);
+    color: var(--theme-text-muted, rgba(20, 27, 65, 0.72));
     font-size: 0.875rem;
     text-decoration: none;
     word-break: break-word;
   }
 
   .site-footer-links a:hover {
-    color: #1d4ed8;
+    color: var(--theme-ocean-deep, #306bac);
   }
 
   .footer-meta {
@@ -67,7 +68,7 @@ const { appVersion, locale } = Astro.props;
     align-items: center;
     gap: 16px;
     flex-shrink: 0;
-    color: rgba(17, 24, 39, 0.72);
+    color: var(--theme-text-muted, rgba(20, 27, 65, 0.72));
     font-size: 0.8125rem;
   }
 

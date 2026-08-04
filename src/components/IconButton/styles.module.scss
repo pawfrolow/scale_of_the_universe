@@ -43,6 +43,10 @@
 :global(.dark) {
   .iconButton {
     color: $text-primary-dark;
+
+    &:hover {
+      background: $surface-muted-hover-dark;
+    }
   }
 }
 

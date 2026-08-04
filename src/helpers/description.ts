@@ -1,6 +1,7 @@
 import 'pixi.js-legacy';
 import * as PIXI from 'pixi.js-legacy';
 
+import { PIXI_TEXT_FONT_FAMILY } from '@/config';
 import { powToUnit } from '@/helpers/powToUnit';
 import { ExtraText, SizeData, TextDatum, VisualLocation } from '@/interfaces';
 
@@ -19,7 +20,7 @@ export function getGraphics(
   const margin = 20;
 
   const baseStyle = {
-    fontFamily: 'Roboto',
+    fontFamily: PIXI_TEXT_FONT_FAMILY,
     align: 'left' as const,
     fill: 0x000000,
     wordWrapWidth: w - margin * 2,

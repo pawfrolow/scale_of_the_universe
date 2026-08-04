@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.9.2
+
+- Refreshed the site shell with a Space Indigo, Ocean Deep, Cornflower Blue, Baby Blue Ice, and Soft Periwinkle color theme.
+- Added shared theme color and font tokens with local Inter and branded display font loading.
+- Updated static SEO pages, header, footer, modals, controls, overlays, loader, and fallback pages to use the refreshed theme.
+- Switched Pixi text styles from hardcoded Roboto to a shared Inter font-family constant.
+- Fixed header language and support modals so their backdrop and dialog positioning cover the full page above main content.
+
 ## 1.9.1
 
 - Added a shared static modal style system for header and footer dialogs.

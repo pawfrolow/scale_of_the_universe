@@ -12,6 +12,7 @@
   background: $surface-dialog-light;
   color: $text-primary-light;
   box-shadow: $shadow-dialog;
+  backdrop-filter: blur(18px);
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
 }

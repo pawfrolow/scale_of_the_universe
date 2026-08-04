@@ -1,5 +1,6 @@
 ---
 import '@/assets/css/reset.css';
+import '@/assets/css/theme-fonts.scss';
 import '@/assets/css/static-header.scss';
 import '@/assets/css/static-modal.scss';
 
@@ -57,7 +58,7 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     />
     <meta name="description" content={description} />
     <meta name="robots" content={robots} />
-    <meta name="theme-color" content="#171933" />
+    <meta name="theme-color" content="#141b41" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -75,11 +76,6 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap"
-      rel="stylesheet"
-    />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
@@ -173,6 +169,17 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     --safe-area-right: env(safe-area-inset-right, 0px);
     --safe-area-bottom: env(safe-area-inset-bottom, 0px);
     --safe-area-left: env(safe-area-inset-left, 0px);
+    --theme-space-indigo: #141b41;
+    --theme-ocean-deep: #306bac;
+    --theme-cornflower-blue: #6f9ceb;
+    --theme-baby-blue-ice: #98b9f2;
+    --theme-soft-periwinkle: #918ef4;
+    --theme-ink: #141b41;
+    --theme-text-muted: rgba(20, 27, 65, 0.72);
+    --theme-text-soft: rgba(20, 27, 65, 0.58);
+    --theme-border: rgba(48, 107, 172, 0.18);
+    --theme-surface: rgba(255, 255, 255, 0.76);
+    --theme-surface-muted: rgba(152, 185, 242, 0.18);
   }
 
   * {
@@ -185,21 +192,23 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     margin: 0;
     display: flex;
     flex-direction: column;
-    font-family: Roboto, system-ui, sans-serif;
-    color: #111827;
-    background: radial-gradient(circle, #e5e5e5 0%, #d9d9d9 50%, #e5e5e5 100%);
+    color: var(--theme-ink);
+    background:
+      radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0) 32%),
+      radial-gradient(circle at 76% 12%, rgba(145, 142, 244, 0.28) 0%, rgba(255, 255, 255, 0) 34%),
+      linear-gradient(145deg, #eef6ff 0%, #cfe0ff 52%, var(--theme-baby-blue-ice) 100%);
   }
 
   a {
-    color: #172554;
+    color: var(--theme-ocean-deep);
   }
 
   .seo-static-shell {
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    font-family: Roboto, system-ui, sans-serif;
-    color: #111827;
+    font-family: var(--font-primary);
+    color: var(--theme-ink);
   }
 
   .page {
@@ -218,15 +227,16 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
 
   h1 {
     margin: 0 0 16px;
+    font-family: var(--font-brand);
     font-size: clamp(2.25rem, 6vw, 4.5rem);
     line-height: 1.03;
-    color: #0f172a;
+    color: var(--theme-ink);
   }
 
   h2 {
     margin: 34px 0 16px;
     font-size: 1.4rem;
-    color: #0f172a;
+    color: var(--theme-ink);
   }
 
   p {
@@ -238,7 +248,7 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
   .size {
     font-size: 1.3rem;
     font-weight: 800;
-    color: #1e3a8a;
+    color: var(--theme-ocean-deep);
   }
 
   .image-wrap {
@@ -247,9 +257,11 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     justify-content: center;
     min-height: 260px;
     padding: 24px;
-    border: 1px solid rgba(15, 23, 42, 0.1);
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--theme-border);
+    border-radius: 14px;
+    background: var(--theme-surface);
+    box-shadow: 0 18px 48px rgba(20, 27, 65, 0.1);
+    backdrop-filter: blur(14px);
   }
 
   .image-wrap img {
@@ -267,8 +279,8 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     margin-top: 8px;
     padding: 12px 22px;
     border-radius: 999px;
-    background: #5c7aff;
-    color: #fff;
+    background: linear-gradient(135deg, var(--theme-ocean-deep) 0%, var(--theme-cornflower-blue) 100%);
+    color: #f4f8ff;
     text-decoration: none;
     font-weight: 800;
   }
@@ -279,7 +291,7 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     gap: 2px;
     min-width: 0;
     margin: 24px 0 16px;
-    color: rgba(17, 24, 39, 0.78);
+    color: var(--theme-text-muted);
     font-size: 0.9375rem;
     line-height: 1.5;
   }
@@ -305,20 +317,20 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     justify-content: space-between;
     gap: 16px;
     margin-bottom: 12px;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+    border-bottom: 1px solid var(--theme-border);
     padding-bottom: 8px;
   }
 
   .object-section-title {
     margin: 0;
-    color: #0f172a;
+    color: var(--theme-ink);
     font-size: 1.25rem;
     line-height: 1.25;
   }
 
   .object-section-range {
     flex-shrink: 0;
-    color: rgba(17, 24, 39, 0.62);
+    color: var(--theme-text-soft);
     font-size: 0.875rem;
     line-height: 1.3;
   }
@@ -336,10 +348,11 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     gap: 6px;
     min-height: 148px;
     padding: 12px 14px;
-    border: 1px solid rgba(15, 23, 42, 0.12);
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.82);
-    color: #172554;
+    border: 1px solid var(--theme-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.76);
+    color: var(--theme-ocean-deep);
+    box-shadow: 0 12px 34px rgba(20, 27, 65, 0.08);
     text-decoration: none;
     line-height: 1.35;
   }
@@ -352,7 +365,7 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     justify-content: center;
     margin-bottom: 4px;
     border-radius: 10px;
-    background: rgba(241, 245, 249, 0.72);
+    background: var(--theme-surface-muted);
     overflow: hidden;
   }
 
@@ -363,14 +376,14 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
   }
 
   .card-title {
-    color: #172554;
+    color: var(--theme-ocean-deep);
     font-size: 1rem;
     line-height: 1.35;
     word-break: break-word;
   }
 
   .card-size {
-    color: rgba(17, 24, 39, 0.68);
+    color: var(--theme-text-muted);
     font-size: 0.8125rem;
     line-height: 1.3;
   }

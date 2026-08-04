@@ -17,12 +17,30 @@
 
 .bgEarth {
   background: $color-earth-1;
-  background: radial-gradient(circle, $color-earth-1 0%, $color-earth-2 50%, $color-earth-1 100%);
+  background:
+    radial-gradient(circle at 18% 18%, rgba($color-white, 0.92) 0%, rgba($color-white, 0) 32%),
+    radial-gradient(
+      circle at 76% 12%,
+      rgba($color-soft-periwinkle, 0.28) 0%,
+      rgba($color-white, 0) 34%
+    ),
+    linear-gradient(145deg, $color-earth-1 0%, $color-earth-2 52%, $color-earth-3 100%);
 }
 
 .bgSpace {
   background: $color-space-1;
-  background: linear-gradient(0deg, $color-space-1 0%, $color-space-2 50%, $color-space-1 100%);
+  background:
+    radial-gradient(
+      circle at 18% 24%,
+      rgba($color-soft-periwinkle, 0.22) 0%,
+      rgba($color-space-1, 0) 34%
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      rgba($color-cornflower-blue, 0.18) 0%,
+      rgba($color-space-1, 0) 30%
+    ),
+    linear-gradient(0deg, $color-space-1 0%, $color-space-2 48%, $color-space-3 100%);
   opacity: 0;
 }
 

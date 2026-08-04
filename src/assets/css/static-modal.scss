@@ -39,6 +39,7 @@
   background: $surface-dialog-light;
   color: $text-primary-light;
   box-shadow: $shadow-dialog;
+  backdrop-filter: blur(18px);
   outline: none;
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
@@ -174,8 +175,8 @@
 }
 
 .language-modal-option.is-active {
-  border-color: rgba($color-primary, 0.45);
-  background: rgba($color-primary, 0.1);
+  border-color: rgba($color-ocean-deep, 0.34);
+  background: rgba($color-baby-blue-ice, 0.24);
 }
 
 .language-modal-option span:first-child {
