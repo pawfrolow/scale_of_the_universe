@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.9.3
+
+- Added animated starfield backgrounds for the start screen and static SEO pages.
+- Updated static page styling to a darker space theme with glass content islands and interactive object cards.
+- Moved theme font loading to public CSS with explicit font preloads for the app and Astro pages.
+- Refined mobile shell navigation, version metadata placement, and footer visibility.
+- Updated language and donate modals to follow the active light or dark shell theme.
+
 ## 1.9.2
 
 - Refreshed the site shell with a Space Indigo, Ocean Deep, Cornflower Blue, Baby Blue Ice, and Soft Periwinkle color theme.

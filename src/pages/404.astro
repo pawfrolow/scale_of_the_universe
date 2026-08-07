@@ -89,7 +89,7 @@ const notFoundPayloadJson = serializeJsonForHtml({
   title={title}
 >
   <div class="seo-static-shell">
-    <Header locale={locale} locales={locales} page={{ type: 'home' }} />
+    <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'home' }} />
     <main class="page not-found-page">
       <p class="not-found-kicker">404</p>
       <h1 data-not-found-text="notFoundTitle">{initialNotFound.title}</h1>
@@ -237,8 +237,8 @@ const notFoundPayloadJson = serializeJsonForHtml({
   }
 
   .button-secondary {
-    background: rgba(255, 255, 255, 0.76);
-    color: var(--theme-ocean-deep, #306bac);
+    background: rgba(20, 27, 65, 0.5);
+    color: var(--theme-baby-blue-ice, #98b9f2);
     border: 1px solid var(--theme-border, rgba(48, 107, 172, 0.18));
   }
 </style>

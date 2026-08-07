@@ -1,0 +1,20 @@
+---
+import styles from './styles.module.scss';
+---
+
+<div class={styles.canvasWarpStars} aria-hidden="true">
+  <canvas class={styles.canvas} data-canvas-warp-stars></canvas>
+</div>
+
+<script>
+  import { initCanvasWarpStars } from './canvas-warp-stars';
+
+  document.querySelectorAll<HTMLCanvasElement>('[data-canvas-warp-stars]').forEach((canvas) => {
+    if (canvas.dataset.canvasWarpStarsReady) {
+      return;
+    }
+
+    canvas.dataset.canvasWarpStarsReady = 'true';
+    initCanvasWarpStars(canvas);
+  });
+</script>

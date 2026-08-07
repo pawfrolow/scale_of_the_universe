@@ -22,7 +22,7 @@
 .static-modal-backdrop {
   position: absolute;
   inset: 0;
-  background: $overlay-light;
+  background: $overlay-dark;
   backdrop-filter: blur(6px);
 }
 
@@ -34,10 +34,10 @@
   max-height: calc(100dvh - 24px - var(--safe-area-top) - var(--safe-area-bottom));
   overflow: auto;
   padding: $modal-padding-desktop;
-  border: none;
+  border: 1px solid $border-dark;
   border-radius: $modal-radius-desktop;
-  background: $surface-dialog-light;
-  color: $text-primary-light;
+  background: $surface-dialog-dark;
+  color: $text-primary-dark;
   box-shadow: $shadow-dialog;
   backdrop-filter: blur(18px);
   outline: none;
@@ -77,7 +77,7 @@
 
 .static-modal-title {
   margin: 0;
-  color: $text-primary-light;
+  color: $text-primary-dark;
   font-size: 24px;
   line-height: 1.2;
   font-weight: 700;
@@ -92,7 +92,7 @@
   border: none;
   border-radius: 10px;
   background: transparent;
-  color: $text-primary-light;
+  color: $text-primary-dark;
   font-size: 30px;
   line-height: 1;
   text-decoration: none;
@@ -103,8 +103,12 @@
   transition: $transition-fast;
 }
 
+.static-modal-close span {
+  margin-bottom: 4px;
+}
+
 .static-modal-close:hover {
-  background: $surface-muted-hover-light;
+  background: $surface-muted-hover-dark;
 }
 
 .static-modal-body {
@@ -115,7 +119,7 @@
 
 .static-modal-body p {
   margin: 0;
-  color: $text-primary-light;
+  color: rgba($color-white, 0.82);
   font-size: 16px;
   line-height: 1.6;
   white-space: pre-line;
@@ -136,10 +140,10 @@
   gap: 8px;
   min-height: 48px;
   padding: 12px 14px;
-  border: 1px solid $border-light;
+  border: 1px solid $border-dark;
   border-radius: 10px;
-  background: $surface-muted-light;
-  color: $text-primary-light;
+  background: $surface-muted-dark;
+  color: $text-primary-dark;
   text-decoration: none;
   transition:
     transform 0.15s ease,
@@ -149,7 +153,7 @@
 
 .static-modal-action-link:hover,
 .language-modal-option:hover {
-  background: $surface-muted-hover-light;
+  background: $surface-muted-hover-dark;
 }
 
 .static-modal-action-link:hover {
@@ -175,8 +179,9 @@
 }
 
 .language-modal-option.is-active {
-  border-color: rgba($color-ocean-deep, 0.34);
-  background: rgba($color-baby-blue-ice, 0.24);
+  border-color: rgba($color-cornflower-blue, 0.5);
+  background: rgba($color-ocean-deep, 0.42);
+  color: $text-primary-dark;
 }
 
 .language-modal-option span:first-child {

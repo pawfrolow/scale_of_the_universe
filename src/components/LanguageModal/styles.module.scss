@@ -48,6 +48,24 @@
   font-weight: 700;
 }
 
+.dark {
+  .languageOption {
+    border-color: rgba($color-baby-blue-ice, 0.22);
+    background: $surface-muted-dark;
+    color: rgba($text-primary-dark, 0.72);
+
+    &:hover {
+      background: $surface-muted-hover-dark;
+    }
+
+    &.active {
+      border-color: rgba($color-cornflower-blue, 0.5);
+      background: rgba($color-ocean-deep, 0.42);
+      color: $text-primary-dark;
+    }
+  }
+}
+
 :global(.dark) {
   .languageOption {
     border-color: rgba($color-baby-blue-ice, 0.22);

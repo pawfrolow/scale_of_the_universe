@@ -32,6 +32,12 @@
   max-width: calc(100vw - 24px);
 }
 
+.dark {
+  border: 1px solid $border-dark;
+  background: $surface-dialog-dark;
+  color: $text-primary-dark;
+}
+
 :global(.dark) {
   .modalDialog {
     background: $surface-dialog-dark;

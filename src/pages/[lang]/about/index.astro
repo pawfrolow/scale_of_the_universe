@@ -2,6 +2,7 @@
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.astro';
 import Footer from '@/components/Footer/Footer.astro';
 import Header from '@/components/Header/Header.astro';
+import HeadingWithShadow from '@/components/HeadingWithShadow/HeadingWithShadow.astro';
 import SeoLayout from '@/layouts/SeoLayout.astro';
 import {
   buildAboutStructuredData,
@@ -52,30 +53,32 @@ const originalRepositoryCredit =
   title={title}
 >
   <div class="seo-static-shell">
-    <Header locale={locale} locales={locales} page={{ type: 'about' }} />
+    <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'about' }} />
     <main class="page">
       <Breadcrumbs items={breadcrumbs} />
-      <h1>{locale.navLabels.about}</h1>
-      {locale.startScreen.introParagraphs.map((paragraph) => <p>{paragraph}</p>)}
-      <div class="about-credits">
-        <p>
-          {locale.startScreen.credits.createdBy}
-          {' '}
-          <a href={CREDIT_LINKS.copyright} target="_blank" rel="noreferrer">htwins.net</a>
-        </p>
-        <p>
-          {originalRepositoryCredit}
-          {' '}
-          <a href={CREDIT_LINKS.webDev} target="_blank" rel="noreferrer">github.com</a>
-        </p>
-        <p>
-          {locale.startScreen.credits.translationAndDev}
-          {' '}
-          <a href={CREDIT_LINKS.pawfrolow} target="_blank" rel="noreferrer">github.com</a>
-        </p>
-        <p>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+      <div class="content-island">
+        <HeadingWithShadow text={locale.navLabels.about} />
+        {locale.startScreen.introParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+        <div class="about-credits">
+          <p>
+            {locale.startScreen.credits.createdBy}
+            {' '}
+            <a href={CREDIT_LINKS.copyright} target="_blank" rel="noreferrer">htwins.net</a>
+          </p>
+          <p>
+            {originalRepositoryCredit}
+            {' '}
+            <a href={CREDIT_LINKS.webDev} target="_blank" rel="noreferrer">github.com</a>
+          </p>
+          <p>
+            {locale.startScreen.credits.translationAndDev}
+            {' '}
+            <a href={CREDIT_LINKS.pawfrolow} target="_blank" rel="noreferrer">github.com</a>
+          </p>
+          <p>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+        </div>
+        <a class="button" href={locale.objectIndexPath}>{locale.navLabels.objects}</a>
       </div>
-      <a class="button" href={locale.objectIndexPath}>{locale.navLabels.objects}</a>
     </main>
     <Footer locale={locale} appVersion={appVersion} />
   </div>

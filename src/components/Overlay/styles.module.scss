@@ -23,6 +23,16 @@
   }
 }
 
+.dark {
+  .overlayBackdrop {
+    background: $overlay-dark;
+  }
+
+  .overlayContent {
+    border: 1px solid $overlay-border-dark;
+  }
+}
+
 :global(.dark) {
   .overlay {
     .overlayBackdrop {

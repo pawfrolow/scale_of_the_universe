@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
+import { CanvasWarpStars } from '../CanvasWarpStars/CanvasWarpStars';
+
 import styles from './styles.module.scss';
 
 import { StartScreenContent } from '@/interfaces';
@@ -64,6 +66,8 @@ export const StartScreen = ({
 
   return (
     <section className={styles.startScreen} aria-label={content.title}>
+      <CanvasWarpStars />
+
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <a className={styles.brandLink} href={content.homePath}>
@@ -155,6 +159,11 @@ export const StartScreen = ({
               {content.navLabels.donate}
             </a>
           </nav>
+
+          <div className={styles.navSidebarMeta}>
+            <span>v{__APP_VERSION__}</span>
+            <span>© 2026</span>
+          </div>
         </aside>
       </div>
 
@@ -187,7 +196,12 @@ export const StartScreen = ({
             onClick={onStart}
             disabled={!isStartEnabled}
           >
-            <img className={styles.startBtnIcon} width="25" src="/img/icons/play.svg" alt="Play" />
+            <img
+              className={styles.startBtnIcon}
+              width="25"
+              src="/img/icons/rocket.svg"
+              alt="Play"
+            />
             <span>{isStartEnabled ? content.startText : content.startLoadingText}</span>
           </button>
         </div>

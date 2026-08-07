@@ -2,6 +2,7 @@
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.astro';
 import Footer from '@/components/Footer/Footer.astro';
 import Header from '@/components/Header/Header.astro';
+import HeadingWithShadow from '@/components/HeadingWithShadow/HeadingWithShadow.astro';
 import SeoLayout from '@/layouts/SeoLayout.astro';
 import {
   APP_ORIGIN,
@@ -60,20 +61,22 @@ const breadcrumbs = [
   title={title}
 >
   <div class="seo-static-shell">
-    <Header locale={locale} locales={locales} page={{ type: 'object', id: object.id }} />
+    <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'object', id: object.id }} />
     <main class="page">
       <Breadcrumbs items={breadcrumbs} />
-      <section class="hero">
-        <div>
-          <h1>{object.title}</h1>
-          <p class="size" set:html={buildSizeHtml(object.sizeText)} />
-          <p>{object.description}</p>
-          <a class="button" href={locale.path}>{locale.startScreen.startText}</a>
-        </div>
-        <div class="image-wrap">
-          <img src={object.imageSrc} alt={object.title} loading="eager" />
-        </div>
-      </section>
+      <div class="content-island">
+        <section class="hero">
+          <div>
+            <HeadingWithShadow text={object.title} />
+            <p class="size" set:html={buildSizeHtml(object.sizeText)} />
+            <p>{object.description}</p>
+            <a class="button" href={locale.path}>{locale.startScreen.startText}</a>
+          </div>
+          <div class="image-wrap">
+            <img src={object.imageSrc} alt={object.title} loading="eager" />
+          </div>
+        </section>
+      </div>
     </main>
     <Footer locale={locale} appVersion={appVersion} />
   </div>

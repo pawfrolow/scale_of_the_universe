@@ -12,6 +12,9 @@ export default defineConfig({
   outDir: 'dist',
   publicDir: 'public',
   integrations: [react()],
+  devToolbar: {
+    enabled: false,
+  },
   vite: {
     plugins: [tsconfigPaths()],
     define: {

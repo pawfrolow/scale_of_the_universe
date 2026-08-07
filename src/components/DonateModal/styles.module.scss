@@ -50,6 +50,22 @@
   object-fit: contain;
 }
 
+.dark {
+  .donateDescription {
+    color: rgba($color-white, 0.82);
+  }
+
+  .donateLink {
+    border-color: $border-dark;
+    background: $surface-muted-dark;
+    color: $text-primary-dark;
+
+    &:hover {
+      background: $surface-muted-hover-dark;
+    }
+  }
+}
+
 :global(.dark) {
   .donateDescription {
     color: rgba($color-white, 0.82);

@@ -8,6 +8,7 @@ $color-ocean-deep: #306bac; // Strong UI surfaces, primary button starts, and li
 $color-cornflower-blue: #6f9ceb; // Primary accent, button ends, progress fills, and active outlines.
 $color-baby-blue-ice: #98b9f2; // Light sky background, subtle borders, muted surfaces, and dark-mode text support.
 $color-soft-periwinkle: #918ef4; // Secondary glow/accent in backgrounds and loading gradients.
+$color-orange-frame: #ffba08; // Experimental orange frame, branded headings, and object card focus outlines.
 
 $color-primary: $color-cornflower-blue; // Shared legacy primary token for existing controls and active states.
 
@@ -24,17 +25,6 @@ $color-transparent-gray-hover: rgba(
   $color-ocean-deep,
   0.14
 ); // Light-mode hover fill for muted controls.
-
-$font-body-name: 'Inter'; // Main UI/content font for everything except branded header and H1 text.
-$font-body-src: '/fonts/Inter-VariableFont_slnt,wght.ttf'; // Body font file served from public/fonts.
-$font-body:
-  $font-body-name, system-ui, sans-serif; // Change this stack to replace the default shell font.
-
-$font-brand-name: 'Oldtimer'; // Branded display font for site headers and H1/title text.
-$font-brand-src: '/fonts/Oldtimer.ttf'; // Brand font file served from public/fonts.
-$font-brand: $font-brand-name, $font-body; // Change this stack to replace the branded shell font.
-
-$font-primary: $font-body;
 
 $shadow-soft:
   0 0 20px rgba(0, 0, 0, 0.1),
@@ -102,3 +92,7 @@ $icon-button-size-mobile: 32px;
 
 $close-button-size: 40px;
 $close-button-size-mobile: 36px;
+
+@mixin theme-custom-properties {
+  --theme-orange-frame: #{$color-orange-frame};
+}

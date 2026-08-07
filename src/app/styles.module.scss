@@ -5,8 +5,21 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background-color: $color-earth-1;
+  background-color: rgba(229, 229, 229, 1);
   overflow: hidden;
+}
+
+.frameStyle::before {
+  content: '';
+  position: fixed;
+  inset: 16px;
+  z-index: 25;
+  border: 1px solid rgba(255, 152, 49, 0.88);
+  pointer-events: none;
+}
+
+.frameStyleEntered::before {
+  display: none;
 }
 
 .universeLayer {
@@ -16,31 +29,23 @@
 }
 
 .bgEarth {
-  background: $color-earth-1;
-  background:
-    radial-gradient(circle at 18% 18%, rgba($color-white, 0.92) 0%, rgba($color-white, 0) 32%),
-    radial-gradient(
-      circle at 76% 12%,
-      rgba($color-soft-periwinkle, 0.28) 0%,
-      rgba($color-white, 0) 34%
-    ),
-    linear-gradient(145deg, $color-earth-1 0%, $color-earth-2 52%, $color-earth-3 100%);
+  background: rgba(229, 229, 229, 1);
+  background: radial-gradient(
+    circle,
+    rgba(229, 229, 229, 1) 0%,
+    rgba(217, 217, 217, 1) 50%,
+    rgba(229, 229, 229, 1) 100%
+  );
 }
 
 .bgSpace {
-  background: $color-space-1;
-  background:
-    radial-gradient(
-      circle at 18% 24%,
-      rgba($color-soft-periwinkle, 0.22) 0%,
-      rgba($color-space-1, 0) 34%
-    ),
-    radial-gradient(
-      circle at 82% 18%,
-      rgba($color-cornflower-blue, 0.18) 0%,
-      rgba($color-space-1, 0) 30%
-    ),
-    linear-gradient(0deg, $color-space-1 0%, $color-space-2 48%, $color-space-3 100%);
+  background: rgba(11, 13, 35, 1);
+  background: linear-gradient(
+    0deg,
+    rgba(11, 13, 35, 1) 0%,
+    rgba(15, 18, 52, 1) 50%,
+    rgba(11, 13, 35, 1) 100%
+  );
   opacity: 0;
 }
 

@@ -12,11 +12,11 @@ const { appVersion, locale } = Astro.props;
 
 <footer class="site-footer-band">
   <div class="site-footer">
-    <nav class="site-footer-links" aria-label="Footer">
+    <!-- <nav class="site-footer-links" aria-label="Footer">
       <a href={locale.aboutPath} data-not-found-link="about" data-not-found-text="navAbout">{locale.navLabels.about}</a>
       <a href={locale.objectIndexPath} data-not-found-link="objects" data-not-found-text="navObjects">{locale.navLabels.objects}</a>
       <a href="#donate-modal" data-donate-open data-not-found-text="navDonate">{locale.navLabels.donate}</a>
-    </nav>
+    </nav> -->
     <div class="footer-meta">
       <span>v{appVersion}</span>
       <span>{COPYRIGHT_YEAR}</span>
@@ -28,9 +28,7 @@ const { appVersion, locale } = Astro.props;
   .site-footer-band {
     flex-shrink: 0;
     width: 100%;
-    border-top: 1px solid var(--theme-border, rgba(48, 107, 172, 0.18));
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(14px);
+    z-index: 0;
   }
 
   .site-footer {
@@ -60,22 +58,27 @@ const { appVersion, locale } = Astro.props;
   }
 
   .site-footer-links a:hover {
-    color: var(--theme-ocean-deep, #306bac);
+    color: var(--theme-baby-blue-ice, #98b9f2);
   }
 
   .footer-meta {
     display: flex;
     align-items: center;
     gap: 16px;
+    margin-left: auto;
     flex-shrink: 0;
     color: var(--theme-text-muted, rgba(20, 27, 65, 0.72));
     font-size: 0.8125rem;
   }
 
   @media (max-width: 767px) {
+    .site-footer-band {
+      display: none;
+    }
+
     .site-footer {
-      padding: 18px calc(16px + var(--safe-area-right)) calc(18px + var(--safe-area-bottom))
-        calc(16px + var(--safe-area-left));
+      padding: 18px calc(24px + var(--safe-area-right)) calc(18px + var(--safe-area-bottom))
+        calc(24px + var(--safe-area-left));
       flex-direction: column;
       align-items: stretch;
       gap: 12px;

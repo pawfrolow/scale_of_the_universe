@@ -60,16 +60,16 @@ const { items } = Astro.props;
   .breadcrumbs li:not(:first-child)::before {
     content: "/";
     margin: 0 6px 0 0;
-    color: rgba(20, 27, 65, 0.34);
+    color: var(--theme-text-soft, rgba(152, 185, 242, 0.7));
   }
 
   .breadcrumbs a {
-    color: rgba(48, 107, 172, 0.86);
+    color: var(--theme-baby-blue-ice, #98b9f2);
     text-decoration: none;
   }
 
   .breadcrumbs a:hover {
-    color: var(--theme-ocean-deep, #306bac);
+    color: var(--theme-soft-periwinkle, #918ef4);
   }
 
   .breadcrumbs span {

@@ -3,6 +3,8 @@ import type { TSeoLocale } from '@/services/seo-static.service';
 
 import Footer from '@/components/Footer/Footer.astro';
 import Header from '@/components/Header/Header.astro';
+import HeadingWithShadow from '@/components/HeadingWithShadow/HeadingWithShadow.astro';
+import CanvasWarpStars from '../CanvasWarpStars/CanvasWarpStars.astro';
 
 type Props = {
   appVersion: string;
@@ -14,10 +16,11 @@ const { appVersion, locale, locales } = Astro.props;
 ---
 
 <div data-seo-static="true" class="seo-static-shell">
-  <Header locale={locale} locales={locales} page={{ type: 'home' }} />
+   <CanvasWarpStars />
+  <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'home' }} />
   <main class="home-start-page">
     <section class="home-start-hero" aria-label={locale.startScreen.title}>
-      <h1>{locale.startScreen.title}</h1>
+      <HeadingWithShadow text={locale.startScreen.title} />
     </section>
 
     <section class="home-start-summary">
@@ -43,7 +46,7 @@ const { appVersion, locale, locales } = Astro.props;
         data-start-text={locale.startScreen.startText}
         data-loading-text={locale.startScreen.startLoadingText}
       >
-        <img src="/img/icons/play.svg" width="25" height="25" alt="" aria-hidden="true" />
+        <img src="/img/icons/rocket.svg" width="25" height="25" alt="" aria-hidden="true" />
         <span data-universe-start-text>{locale.startScreen.startText}</span>
       </button>
     </div>
@@ -71,30 +74,18 @@ const { appVersion, locale, locales } = Astro.props;
     padding-top: 12px;
   }
 
-  .home-start-hero h1 {
-    max-width: 900px;
-    margin: 0;
-    color: var(--theme-ink, #141b41);
-    font-family: var(--font-brand);
-    font-size: 56px;
-    line-height: 1.04;
-    font-weight: 800;
-    letter-spacing: 0;
-    text-shadow: 0 12px 42px rgba(255, 255, 255, 0.34);
-    word-break: break-word;
-  }
-
   .home-start-summary {
     margin-bottom: 24px;
     box-sizing: border-box;
+    z-index: 0;
   }
 
   .home-start-summary p {
     margin: 0;
-    color: rgba(20, 27, 65, 0.88);
+    color: var(--theme-text-muted, rgba(244, 248, 255, 0.74));
     font-size: 17px;
     line-height: 1.6;
-    text-shadow: 0 8px 32px rgba(255, 255, 255, 0.28);
+    text-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
     word-break: break-word;
   }
 
@@ -119,8 +110,8 @@ const { appVersion, locale, locales } = Astro.props;
     padding: 24px;
     border: 1px solid var(--theme-border, rgba(48, 107, 172, 0.18));
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.72);
-    box-shadow: 0 18px 48px rgba(20, 27, 65, 0.1);
+    background: rgba(20, 27, 65, 0.5);
+    box-shadow: 0 18px 54px rgba(0, 0, 0, 0.24);
     backdrop-filter: blur(8px);
     box-sizing: border-box;
   }
@@ -136,9 +127,9 @@ const { appVersion, locale, locales } = Astro.props;
 
   .home-start-info-item p {
     margin: 0;
-    color: var(--theme-ink, #141b41);
-    font-size: 22px;
-    line-height: 1.4;
+    color: var(--theme-ink, #f4f8ff);
+    font-size: 18px;
+    line-height: 1.45;
     text-align: center;
     word-break: break-word;
   }
@@ -177,6 +168,7 @@ const { appVersion, locale, locales } = Astro.props;
     box-sizing: border-box;
     -webkit-touch-callout: none;
     user-select: none;
+    z-index: 0;
   }
 
   .home-start-button:hover {
@@ -197,13 +189,8 @@ const { appVersion, locale, locales } = Astro.props;
 
   @media screen and (max-width: 900px) {
     .home-start-page {
-      padding: 4px calc(20px + var(--safe-area-right, 0px)) 22px
-        calc(20px + var(--safe-area-left, 0px));
-    }
-
-    .home-start-hero h1 {
-      max-width: 720px;
-      font-size: 42px;
+      padding: 4px calc(12px + var(--safe-area-right, 0px)) 22px
+        calc(12px + var(--safe-area-left, 0px));
     }
 
     .home-start-info-item {
@@ -212,23 +199,20 @@ const { appVersion, locale, locales } = Astro.props;
     }
 
     .home-start-info-item p {
-      font-size: 20px;
+      font-size: 17px;
     }
   }
 
   @media screen and (max-width: 700px) {
     .home-start-page {
       justify-content: flex-start;
+      padding-bottom: calc(100px + var(--safe-area-bottom, 0px));
     }
 
     .home-start-hero {
       margin-top: 0;
       margin-bottom: 16px;
       padding-top: 24px;
-    }
-
-    .home-start-hero h1 {
-      font-size: 36px;
     }
 
     .home-start-summary {
@@ -242,27 +226,35 @@ const { appVersion, locale, locales } = Astro.props;
 
     .home-start-info-grid {
       grid-template-columns: 1fr;
+      gap: 8px;
       margin-bottom: 0;
     }
 
     .home-start-info-item {
-      min-height: 180px;
-      gap: 12px;
-      padding: 18px;
-      border-radius: 14px;
+      min-height: 0;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 12px;
     }
 
     .home-start-info-item img {
-      height: 86px;
+      height: 50px;
     }
 
     .home-start-info-item p {
-      font-size: 17px;
+      font-size: 12px;
+      line-height: 1.35;
     }
 
     .home-start-actions {
+      position: fixed;
+      right: calc(24px + var(--safe-area-right, 0px));
+      bottom: calc(14px + var(--safe-area-bottom, 0px));
+      left: calc(24px + var(--safe-area-left, 0px));
+      z-index: 6;
       justify-content: stretch;
-      margin-top: 22px;
+      margin: 0;
+      padding: 0;
     }
 
     .home-start-button {
@@ -273,16 +265,16 @@ const { appVersion, locale, locales } = Astro.props;
   }
 
   @media screen and (max-width: 420px) {
-    .home-start-hero h1 {
-      font-size: 30px;
-    }
-
     .home-start-info-item {
-      min-height: 150px;
+      padding: 10px;
     }
 
     .home-start-info-item img {
-      height: 70px;
+      height: 64px;
+    }
+
+    .home-start-info-item p {
+      font-size: 14px;
     }
   }
 </style>

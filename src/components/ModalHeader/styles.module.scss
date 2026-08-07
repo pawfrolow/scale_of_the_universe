@@ -24,6 +24,10 @@
   word-break: break-word;
 }
 
+.darkTitle {
+  color: $text-primary-dark;
+}
+
 :global(.dark) {
   .modalTitle {
     color: $text-primary-dark;

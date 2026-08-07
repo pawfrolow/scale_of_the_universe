@@ -1,9 +1,10 @@
 ---
 import '@/assets/css/reset.css';
-import '@/assets/css/theme-fonts.scss';
 import '@/assets/css/static-header.scss';
 import '@/assets/css/static-modal.scss';
+import CanvasWarpStars from '@/components/CanvasWarpStars/CanvasWarpStars.astro';
 
+import ParallaxStars from '@/components/ParallaxStars/ParallaxStars.astro';
 import {
   APP_ORIGIN,
   getAlternateLinks,
@@ -62,6 +63,9 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="preload" href="/fonts/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/fonts/Oldtimer.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="/css/theme-fonts.css" />
     <link rel="canonical" href={canonicalUrl} />
     {alternates.map((alternate) => <link rel="alternate" hreflang={alternate.hreflang} href={alternate.href} />)}
     {xDefault ? <link rel="alternate" hreflang="x-default" href={xDefault} /> : null}
@@ -85,6 +89,14 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     <slot name="head" />
   </head>
   <body>
+    {!includeClientScripts ? <CanvasWarpStars /> : null}
+
+    <script>
+      import { lockViewportScale } from '@/helpers/lockViewportScale';
+
+      lockViewportScale();
+    </script>
+
     <script is:inline>
       if ('serviceWorker' in navigator && window.location.host !== 'universe.pavelfrolov.com') {
         window.addEventListener('load', async () => {
@@ -163,7 +175,9 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
   </body>
 </html>
 
-<style is:global>
+<style is:global lang="scss">
+  @use '@/assets/css/variables.scss' as *;
+
   :root {
     --safe-area-top: env(safe-area-inset-top, 0px);
     --safe-area-right: env(safe-area-inset-right, 0px);
@@ -174,12 +188,15 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     --theme-cornflower-blue: #6f9ceb;
     --theme-baby-blue-ice: #98b9f2;
     --theme-soft-periwinkle: #918ef4;
-    --theme-ink: #141b41;
-    --theme-text-muted: rgba(20, 27, 65, 0.72);
-    --theme-text-soft: rgba(20, 27, 65, 0.58);
-    --theme-border: rgba(48, 107, 172, 0.18);
-    --theme-surface: rgba(255, 255, 255, 0.76);
-    --theme-surface-muted: rgba(152, 185, 242, 0.18);
+    --theme-red: #D52941;
+    --theme-ink: #f4f8ff;
+    --theme-text-muted: rgba(244, 248, 255, 0.74);
+    --theme-text-soft: rgba(152, 185, 242, 0.7);
+    --theme-border: rgba(152, 185, 242, 0.2);
+    --theme-surface: rgba(20, 27, 65, 0.5);
+    --theme-surface-muted: rgba(152, 185, 242, 0.12);
+
+    @include theme-custom-properties;
   }
 
   * {
@@ -193,22 +210,24 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     display: flex;
     flex-direction: column;
     color: var(--theme-ink);
-    background:
-      radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0) 32%),
-      radial-gradient(circle at 76% 12%, rgba(145, 142, 244, 0.28) 0%, rgba(255, 255, 255, 0) 34%),
-      linear-gradient(145deg, #eef6ff 0%, #cfe0ff 52%, var(--theme-baby-blue-ice) 100%);
+    background: linear-gradient(0deg, #0b0d23 0%, #0f1234 50%, #0b0d23 100%);
+    touch-action: pan-y;
   }
 
   a {
-    color: var(--theme-ocean-deep);
+    color: var(--theme-baby-blue-ice);
   }
 
   .seo-static-shell {
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
     font-family: var(--font-primary);
     color: var(--theme-ink);
+    touch-action: pan-y;
   }
 
   .page {
@@ -216,6 +235,18 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     width: min(1120px, 100%);
     margin: 0 auto;
     padding: 28px 24px 44px;
+  }
+
+  .content-island {
+    position: relative;
+    z-index: 1;
+    padding: 28px;
+    border: 1px solid var(--theme-border, rgba(152, 185, 242, 0.2));
+    border-radius: 14px;
+    background: rgba(20, 27, 65, 0.5);
+    box-shadow: 0 18px 54px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .hero {
@@ -248,7 +279,7 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
   .size {
     font-size: 1.3rem;
     font-weight: 800;
-    color: var(--theme-ocean-deep);
+    color: var(--theme-cornflower-blue);
   }
 
   .image-wrap {
@@ -260,7 +291,7 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     border: 1px solid var(--theme-border);
     border-radius: 14px;
     background: var(--theme-surface);
-    box-shadow: 0 18px 48px rgba(20, 27, 65, 0.1);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(14px);
   }
 
@@ -350,11 +381,17 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     padding: 12px 14px;
     border: 1px solid var(--theme-border);
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.76);
-    color: var(--theme-ocean-deep);
-    box-shadow: 0 12px 34px rgba(20, 27, 65, 0.08);
+    background: rgba(20, 27, 65, 0.5);
+    color: var(--theme-baby-blue-ice);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
     text-decoration: none;
     line-height: 1.35;
+    transition:
+      transform 160ms ease,
+      border-color 160ms ease,
+      background 160ms ease,
+      box-shadow 160ms ease,
+      color 160ms ease;
   }
 
   .card-image-wrap {
@@ -367,19 +404,24 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     border-radius: 10px;
     background: var(--theme-surface-muted);
     overflow: hidden;
+    transition:
+      background 160ms ease,
+      box-shadow 160ms ease;
   }
 
   .card-image {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    transition: transform 180ms ease;
   }
 
   .card-title {
-    color: var(--theme-ocean-deep);
+    color: var(--theme-baby-blue-ice);
     font-size: 1rem;
     line-height: 1.35;
     word-break: break-word;
+    transition: color 160ms ease;
   }
 
   .card-size {
@@ -388,9 +430,61 @@ const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData)
     line-height: 1.3;
   }
 
+  .card:hover,
+  .card:focus-visible {
+    transform: translateY(-3px);
+    border-color: rgba(255, 186, 8, 0.72);
+    background: linear-gradient(180deg, rgba(48, 107, 172, 0.36) 0%, rgba(20, 27, 65, 0.62) 100%);
+    color: #f4f8ff;
+    box-shadow:
+      0 18px 44px rgba(0, 0, 0, 0.26),
+      0 0 0 1px rgba(255, 186, 8, 0.18);
+  }
+
+  .card:focus-visible {
+    outline: 2px solid var(--theme-orange-frame);
+    outline-offset: 3px;
+  }
+
+  .card:hover .card-image-wrap,
+  .card:focus-visible .card-image-wrap {
+    background: rgba(152, 185, 242, 0.18);
+    box-shadow: inset 0 0 0 1px rgba(152, 185, 242, 0.18);
+  }
+
+  .card:hover .card-image,
+  .card:focus-visible .card-image {
+    transform: scale(1.045);
+  }
+
+  .card:hover .card-title,
+  .card:focus-visible .card-title {
+    color: #f4f8ff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card,
+    .card-image-wrap,
+    .card-image,
+    .card-title {
+      transition: none;
+    }
+
+    .card:hover,
+    .card:focus-visible,
+    .card:hover .card-image,
+    .card:focus-visible .card-image {
+      transform: none;
+    }
+  }
+
   @media (max-width: 767px) {
     .page {
-      padding: 22px 16px 32px;
+      padding: 22px 12px 32px;
+    }
+
+    .content-island {
+      padding: 18px;
     }
 
     .hero {

@@ -24,6 +24,14 @@
   }
 }
 
+.dark {
+  color: $text-primary-dark;
+
+  &:hover {
+    background: $surface-muted-hover-dark;
+  }
+}
+
 :global(.dark) {
   .closeButton {
     color: $text-primary-dark;

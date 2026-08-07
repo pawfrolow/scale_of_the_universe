@@ -9,6 +9,7 @@ interface IModalDialogProps {
   role?: string;
   ariaModal?: boolean;
   ariaLabel?: string;
+  theme?: 'light' | 'dark';
 }
 
 export const ModalDialog = ({
@@ -18,10 +19,13 @@ export const ModalDialog = ({
   role = 'dialog',
   ariaModal = true,
   ariaLabel,
+  theme = 'light',
 }: IModalDialogProps) => {
   return (
     <div
-      className={[styles.modalDialog, styles[width], className].filter(Boolean).join(' ')}
+      className={[styles.modalDialog, styles[width], theme === 'dark' ? styles.dark : '', className]
+        .filter(Boolean)
+        .join(' ')}
       role={role}
       aria-modal={ariaModal}
       aria-label={ariaLabel}

@@ -10,7 +10,6 @@ import {
   LanguageModal,
   Loader,
   LoadingOverlay,
-  StartScreen,
   UniverseCanvas,
 } from '@/components';
 import { MUTED_STORAGE_KEY } from '@/config';
@@ -125,6 +124,7 @@ export const App = ({
   const loadingTitle =
     startScreenContent?.startLoadingText ??
     (isI18nReady ? t('html.modal.startLoading', { ns: 'ui' }) : 'Загрузка...');
+  const shellModalTheme = hasEnteredApp ? 'light' : 'dark';
 
   useEffect(() => {
     if (!isAssetsReady) {
@@ -293,11 +293,14 @@ export const App = ({
 
   return (
     <>
-      <div className={styles.frameStyle} id="frame">
+      <div
+        className={`${styles.frameStyle} ${hasEnteredApp ? styles.frameStyleEntered : ''}`}
+        id="frame"
+      >
         <div className={`${styles.bgEarth} ${styles.fullBg}`} id="earthBgImage" />
         <div className={`${styles.bgSpace} ${styles.fullBg}`} id="spaceBgImage" />
 
-        {startScreenContent ? (
+        {/* startScreenContent ? (
           <StartScreen
             content={startScreenContent}
             isVisible={!hasEnteredApp}
@@ -306,7 +309,7 @@ export const App = ({
             onOpenLanguageModal={handleOpenLanguageModal}
             onStart={handleStart}
           />
-        ) : null}
+        ) : null */}
 
         <div
           className={styles.universeLayer}
@@ -350,9 +353,14 @@ export const App = ({
               currentLanguage={currentLanguage}
               onSelect={handleLanguageSelect}
               onClose={handleCloseLanguageModal}
+              theme={shellModalTheme}
             />
 
-            <DonateModal isOpen={isDonateModalOpen} onClose={handleCloseDonateModal} />
+            <DonateModal
+              isOpen={isDonateModalOpen}
+              onClose={handleCloseDonateModal}
+              theme={shellModalTheme}
+            />
 
             {hasEnteredApp ? (
               <Controls

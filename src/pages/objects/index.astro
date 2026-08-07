@@ -2,6 +2,7 @@
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.astro';
 import Footer from '@/components/Footer/Footer.astro';
 import Header from '@/components/Header/Header.astro';
+import HeadingWithShadow from '@/components/HeadingWithShadow/HeadingWithShadow.astro';
 import SeoLayout from '@/layouts/SeoLayout.astro';
 import {
   buildBreadcrumbStructuredData,
@@ -55,39 +56,41 @@ const objectGroups = OBJECT_SCALE_GROUPS.map((group) => ({
   title={title}
 >
   <div class="seo-static-shell">
-    <Header locale={locale} locales={locales} page={{ type: 'objects' }} />
+    <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'objects' }} />
     <main class="page">
       <Breadcrumbs items={breadcrumbs} />
-      <h1>{pageCopy.heading}</h1>
-      <p>{pageCopy.intro}</p>
-      {
-        objectGroups.map(({ label, objects, rangeHtml }) => (
-          <section class="object-section">
-            <div class="object-section-header">
-              <h2 class="object-section-title">{label}</h2>
-              <span class="object-section-range" set:html={rangeHtml} />
-            </div>
-            <nav class="grid" aria-label={label}>
-              {objects.map((object) => (
-                <a class="card" href={object.path}>
-                  <span class="card-image-wrap">
-                    <img
-                      class="card-image"
-                      src={object.imageSrc}
-                      alt=""
-                      loading="lazy"
-                      decoding="async"
-                      aria-hidden="true"
-                    />
-                  </span>
-                  <span class="card-title">{object.title}</span>
-                  <span class="card-size" set:html={buildSizeHtml(object.sizeText)} />
-                </a>
-              ))}
-            </nav>
-          </section>
-        ))
-      }
+      <div class="content-island">
+        <HeadingWithShadow text={pageCopy.heading} />
+        <p>{pageCopy.intro}</p>
+        {
+          objectGroups.map(({ label, objects, rangeHtml }) => (
+            <section class="object-section">
+              <div class="object-section-header">
+                <h2 class="object-section-title">{label}</h2>
+                <span class="object-section-range" set:html={rangeHtml} />
+              </div>
+              <nav class="grid" aria-label={label}>
+                {objects.map((object) => (
+                  <a class="card" href={object.path}>
+                    <span class="card-image-wrap">
+                      <img
+                        class="card-image"
+                        src={object.imageSrc}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <span class="card-title">{object.title}</span>
+                    <span class="card-size" set:html={buildSizeHtml(object.sizeText)} />
+                  </a>
+                ))}
+              </nav>
+            </section>
+          ))
+        }
+      </div>
     </main>
     <Footer locale={locale} appVersion={appVersion} />
   </div>

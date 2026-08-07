@@ -1,5 +1,6 @@
 ---
 import {
+  COPYRIGHT_YEAR,
   DONATE_LINKS,
   getLocalizedPagePath,
   normalizeText,
@@ -8,12 +9,13 @@ import { LANGUAGE_OPTIONS } from '@/config';
 import type { TSeoLocale, TSeoPage } from '@/services/seo-static.service';
 
 type Props = {
+  appVersion?: string;
   locale: TSeoLocale;
   locales: TSeoLocale[];
   page: TSeoPage;
 };
 
-const { locale, locales, page } = Astro.props;
+const { appVersion, locale, locales, page } = Astro.props;
 const languageLinks = locales
   .filter((entry) => page.type !== 'object' || entry.objects.some((object) => object.id === page.id))
   .map((entry) => ({
@@ -68,6 +70,14 @@ const donateCloseLabel = normalizeText(
           <a href="#language-modal" data-language-open data-not-found-text="navLanguage">{locale.navLabels.language}</a>
           <a href="#donate-modal" data-donate-open data-not-found-text="navDonate">{locale.navLabels.donate}</a>
         </nav>
+        {
+          appVersion ? (
+            <div class="site-nav-sidebar-meta">
+              <span>v{appVersion}</span>
+              <span>{COPYRIGHT_YEAR}</span>
+            </div>
+          ) : null
+        }
       </aside>
     </div>
     <div id="language-modal" class="static-modal-shell" aria-hidden="true" data-language-shell>
