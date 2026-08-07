@@ -40,6 +40,12 @@
       "description": "Lehte, mida otsid, ei ole olemas või see on teisaldatud.",
       "homeAction": "Ava avaleht",
       "objectsAction": "Sirvi objekte"
+    },
+    "objectsSearch": {
+      "label": "Otsi objekte",
+      "placeholder": "Objekti nimi",
+      "clear": "Tühjenda",
+      "empty": "Objekte ei leitud."
     }
   }
 }

@@ -6,6 +6,7 @@ import {
   normalizeText,
 } from '@/services/seo-static.service';
 import { LANGUAGE_OPTIONS } from '@/config';
+import styles from './styles.module.scss';
 import type { TSeoLocale, TSeoPage } from '@/services/seo-static.service';
 
 type Props = {
@@ -36,20 +37,20 @@ const donateCloseLabel = normalizeText(
 );
 ---
 
-<header class="site-header-band">
-  <div class="site-header">
-    <a class="site-brand" href={locale.path} data-not-found-link="home">
+<header class={styles.headerBand}>
+  <div class={styles.header}>
+    <a class={styles.brand} href={locale.path} data-not-found-link="home">
       <img src="/img/favicon/favicon.svg" width="24" height="24" alt="" aria-hidden="true" />
       <span data-not-found-text="appTitle">{locale.appTitle}</span>
     </a>
-    <nav class="site-nav" aria-label="Primary">
+    <nav class={styles.nav} aria-label="Primary">
       <a href={locale.aboutPath} data-not-found-link="about" data-not-found-text="navAbout">{locale.navLabels.about}</a>
       <a href={locale.objectIndexPath} data-not-found-link="objects" data-not-found-text="navObjects">{locale.navLabels.objects}</a>
       <a href="#language-modal" data-language-open data-not-found-text="navLanguage">{locale.navLabels.language}</a>
       <a href="#donate-modal" data-donate-open data-not-found-text="navDonate">{locale.navLabels.donate}</a>
     </nav>
     <button
-      class="site-menu-button"
+      class={styles.menuButton}
       type="button"
       aria-label="Open menu"
       aria-controls="site-nav-sidebar"
@@ -58,13 +59,13 @@ const donateCloseLabel = normalizeText(
     >
       <img src="/img/icons/menu.svg" width="20" height="20" alt="" aria-hidden="true" />
     </button>
-    <div class="site-nav-sidebar-shell" aria-hidden="true" data-menu-shell>
-      <button class="site-nav-sidebar-backdrop" type="button" aria-label="Close menu" data-menu-close></button>
-      <aside id="site-nav-sidebar" class="site-nav-sidebar" aria-label="Primary">
-        <button class="site-nav-sidebar-close" type="button" aria-label="Close menu" data-menu-close>
+    <div class={styles.sidebarShell} aria-hidden="true" data-menu-shell>
+      <button class={styles.sidebarBackdrop} type="button" aria-label="Close menu" data-menu-close></button>
+      <aside id="site-nav-sidebar" class={styles.sidebar} aria-label="Primary">
+        <button class={styles.sidebarClose} type="button" aria-label="Close menu" data-menu-close>
           <span aria-hidden="true">&times;</span>
         </button>
-        <nav class="site-nav-sidebar-links" aria-label="Primary">
+        <nav class={styles.sidebarLinks} aria-label="Primary">
           <a href={locale.aboutPath} data-not-found-link="about" data-not-found-text="navAbout">{locale.navLabels.about}</a>
           <a href={locale.objectIndexPath} data-not-found-link="objects" data-not-found-text="navObjects">{locale.navLabels.objects}</a>
           <a href="#language-modal" data-language-open data-not-found-text="navLanguage">{locale.navLabels.language}</a>
@@ -72,38 +73,39 @@ const donateCloseLabel = normalizeText(
         </nav>
         {
           appVersion ? (
-            <div class="site-nav-sidebar-meta">
+            <div class={styles.sidebarMeta}>
+              <span>{COPYRIGHT_YEAR}. {locale.startScreen.title}</span>
               <span>v{appVersion}</span>
-              <span>{COPYRIGHT_YEAR}</span>
             </div>
           ) : null
         }
       </aside>
     </div>
-    <div id="language-modal" class="static-modal-shell" aria-hidden="true" data-language-shell>
-      <a class="static-modal-backdrop" href="#" aria-label={closeModalLabel} data-language-close></a>
+    <div id="language-modal" class={styles.modalShell} aria-hidden="true" data-language-shell>
+      <a class={styles.modalBackdrop} href="#" aria-label={closeModalLabel} data-language-close></a>
       <section
-        class="static-modal-dialog static-modal-dialog-md"
+        class:list={[styles.modalDialog, styles.modalDialogMd]}
         role="dialog"
         aria-modal="true"
         aria-labelledby="language-modal-title"
         tabindex="-1"
         data-language-dialog
       >
-        <header class="static-modal-header static-modal-header-center">
-          <h2 class="static-modal-title" id="language-modal-title" data-not-found-text="modalTitle">{modalTitle}</h2>
-          <a class="static-modal-close" href="#" aria-label={closeModalLabel} data-language-close>
+        <header class:list={[styles.modalHeader, styles.modalHeaderCenter]}>
+          <h2 class={styles.modalTitle} id="language-modal-title" data-not-found-text="modalTitle">{modalTitle}</h2>
+          <a class={styles.modalClose} href="#" aria-label={closeModalLabel} data-language-close>
             <span aria-hidden="true">&times;</span>
           </a>
         </header>
-        <nav class="language-modal-list" aria-label={modalTitle}>
+        <nav class={styles.languageList} aria-label={modalTitle} data-language-list>
           {
             languageLinks.map((link) => (
               <a
-                class={`language-modal-option ${link.language === locale.language ? 'is-active' : ''}`}
+                class={styles.languageOption}
                 href={link.path}
                 lang={link.language}
                 data-language-option={link.language}
+                data-active={link.language === locale.language ? 'true' : undefined}
               >
                 <span>{link.label}</span>
                 {link.language === locale.language ? <span aria-hidden="true" data-language-active-marker>✓</span> : null}
@@ -113,29 +115,29 @@ const donateCloseLabel = normalizeText(
         </nav>
       </section>
     </div>
-    <div id="donate-modal" class="static-modal-shell" aria-hidden="true" data-donate-shell>
-      <a class="static-modal-backdrop" href="#" aria-label={donateCloseLabel} data-donate-close></a>
+    <div id="donate-modal" class={styles.modalShell} aria-hidden="true" data-donate-shell>
+      <a class={styles.modalBackdrop} href="#" aria-label={donateCloseLabel} data-donate-close></a>
       <section
-        class="static-modal-dialog static-modal-dialog-md"
+        class:list={[styles.modalDialog, styles.modalDialogMd]}
         role="dialog"
         aria-modal="true"
         aria-labelledby="donate-modal-title"
         tabindex="-1"
         data-donate-dialog
       >
-        <header class="static-modal-header static-modal-header-center">
-          <h2 class="static-modal-title" id="donate-modal-title" data-not-found-text="donateModalTitle">{donateTitle}</h2>
-          <a class="static-modal-close" href="#" aria-label={donateCloseLabel} data-donate-close>
+        <header class:list={[styles.modalHeader, styles.modalHeaderCenter]}>
+          <h2 class={styles.modalTitle} id="donate-modal-title" data-not-found-text="donateModalTitle">{donateTitle}</h2>
+          <a class={styles.modalClose} href="#" aria-label={donateCloseLabel} data-donate-close>
             <span aria-hidden="true">&times;</span>
           </a>
         </header>
-        <div class="static-modal-body">
+        <div class={styles.modalBody}>
           <p data-not-found-text="donateModalDescription">{donateDescription}</p>
-          <div class="static-modal-actions">
+          <div class={styles.modalActions}>
             {
               DONATE_LINKS.map((link) => (
                 <a
-                  class="static-modal-action-link"
+                  class={styles.modalActionLink}
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
@@ -183,7 +185,7 @@ const donateCloseLabel = normalizeText(
         return;
       }
 
-      languageShell.classList.toggle('is-open', isOpen);
+      languageShell.toggleAttribute('data-open', isOpen);
       languageShell.setAttribute('aria-hidden', String(!isOpen));
 
       if (isOpen) {
@@ -198,7 +200,7 @@ const donateCloseLabel = normalizeText(
         return;
       }
 
-      donateShell.classList.toggle('is-open', isOpen);
+      donateShell.toggleAttribute('data-open', isOpen);
       donateShell.setAttribute('aria-hidden', String(!isOpen));
 
       if (isOpen) {
@@ -213,7 +215,7 @@ const donateCloseLabel = normalizeText(
     };
 
     const setOpen = (isOpen) => {
-      shell.classList.toggle('is-open', isOpen);
+      shell.toggleAttribute('data-open', isOpen);
       shell.setAttribute('aria-hidden', String(!isOpen));
       openButton.setAttribute('aria-expanded', String(isOpen));
     };
@@ -238,7 +240,7 @@ const donateCloseLabel = normalizeText(
         history.replaceState(null, '', window.location.pathname + window.location.search);
       });
     });
-    languageShell?.querySelectorAll('.language-modal-option').forEach((link) => {
+    languageShell?.querySelectorAll('[data-language-option]').forEach((link) => {
       link.addEventListener('click', () => setLanguageOpen(false));
     });
     document.addEventListener('click', (event) => {
@@ -270,9 +272,9 @@ const donateCloseLabel = normalizeText(
     });
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
-        if (donateShell?.classList.contains('is-open')) {
+        if (donateShell?.hasAttribute('data-open')) {
           setDonateOpen(false);
-        } else if (languageShell?.classList.contains('is-open')) {
+        } else if (languageShell?.hasAttribute('data-open')) {
           setLanguageOpen(false);
         } else {
           setOpen(false);

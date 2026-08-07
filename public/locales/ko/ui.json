@@ -40,6 +40,12 @@
       "description": "찾고 있는 페이지가 존재하지 않거나 이동되었습니다.",
       "homeAction": "홈으로 가기",
       "objectsAction": "객체 둘러보기"
+    },
+    "objectsSearch": {
+      "label": "객체 검색",
+      "placeholder": "객체 이름",
+      "clear": "지우기",
+      "empty": "객체를 찾을 수 없습니다."
     }
   }
 }

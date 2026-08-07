@@ -40,6 +40,12 @@
       "description": "Sidan du söker finns inte eller har flyttats.",
       "homeAction": "Gå till startsidan",
       "objectsAction": "Bläddra bland objekt"
+    },
+    "objectsSearch": {
+      "label": "Sök objekt",
+      "placeholder": "Objektnamn",
+      "clear": "Rensa",
+      "empty": "Inga objekt hittades."
     }
   }
 }

@@ -1,4 +1,4 @@
-@use './variables.scss' as *;
+@use '@/styles/variables.scss' as *;
 
 :root {
   --safe-area-top: env(safe-area-inset-top, 0px);
@@ -9,27 +9,9 @@
   @include theme-custom-properties;
 }
 
-/* Отключаем выделение при долгом тапе на мобилках */
-
 * {
   -webkit-tap-highlight-color: transparent;
 }
-
-.frameStyle,
-canvas,
-.buttons button,
-.modalLangButton,
-.startBtn {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-canvas {
-  touch-action: none;
-}
-
-/* Common styles */
 
 html,
 body,

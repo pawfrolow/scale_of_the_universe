@@ -3,7 +3,9 @@ import type { TSeoLocale } from '@/services/seo-static.service';
 
 import Footer from '@/components/Footer/Footer.astro';
 import Header from '@/components/Header/Header.astro';
-import HeadingWithShadow from '@/components/HeadingWithShadow/HeadingWithShadow.astro';
+import SeoPageHeading from '@/components/SeoPageHeading/SeoPageHeading.astro';
+import seoStyles from '@/layouts/SeoLayout.module.scss';
+import styles from './styles.module.scss';
 import CanvasWarpStars from '../CanvasWarpStars/CanvasWarpStars.astro';
 
 type Props = {
@@ -15,32 +17,30 @@ type Props = {
 const { appVersion, locale, locales } = Astro.props;
 ---
 
-<div data-seo-static="true" class="seo-static-shell">
-   <CanvasWarpStars />
+<div data-seo-static="true" class={seoStyles.shell}>
+  <CanvasWarpStars />
   <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'home' }} />
-  <main class="home-start-page">
-    <section class="home-start-hero" aria-label={locale.startScreen.title}>
-      <HeadingWithShadow text={locale.startScreen.title} />
-    </section>
+  <main class={styles.page}>
+    <SeoPageHeading
+      class={styles.hero}
+      title={locale.startScreen.title}
+      description={locale.startScreen.introParagraphs}
+    />
 
-    <section class="home-start-summary">
-      {locale.startScreen.introParagraphs.map((paragraph) => <p>{paragraph}</p>)}
-    </section>
-
-    <section class="home-start-info-grid">
-      <article class="home-start-info-item">
+    <section class={styles.infoGrid}>
+      <article class={styles.infoItem}>
         <img src="/img/slider.png" alt="" aria-hidden="true" />
         <p>{locale.startScreen.zoomHint}</p>
       </article>
-      <article class="home-start-info-item">
+      <article class={styles.infoItem}>
         <img src="/img/object.png" alt="" aria-hidden="true" />
         <p>{locale.startScreen.objectHint}</p>
       </article>
     </section>
 
-    <div class="home-start-actions">
+    <div class={styles.actions}>
       <button
-        class="home-start-button"
+        class={styles.startButton}
         type="button"
         data-universe-start
         data-start-text={locale.startScreen.startText}
@@ -53,228 +53,3 @@ const { appVersion, locale, locales } = Astro.props;
   </main>
   <Footer locale={locale} appVersion={appVersion} />
 </div>
-
-<style>
-  .home-start-page {
-    flex: 1;
-    min-height: 0;
-    width: min(1120px, 100%);
-    margin: 0 auto;
-    padding: 8px calc(24px + var(--safe-area-right, 0px)) 24px
-      calc(24px + var(--safe-area-left, 0px));
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-  }
-
-  .home-start-hero {
-    margin-top: auto;
-    margin-bottom: 24px;
-    padding-top: 12px;
-  }
-
-  .home-start-summary {
-    margin-bottom: 24px;
-    box-sizing: border-box;
-    z-index: 0;
-  }
-
-  .home-start-summary p {
-    margin: 0;
-    color: var(--theme-text-muted, rgba(244, 248, 255, 0.74));
-    font-size: 17px;
-    line-height: 1.6;
-    text-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
-    word-break: break-word;
-  }
-
-  .home-start-summary p + p {
-    margin-top: 10px;
-  }
-
-  .home-start-info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    margin-bottom: auto;
-  }
-
-  .home-start-info-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 18px;
-    min-width: 0;
-    min-height: 280px;
-    padding: 24px;
-    border: 1px solid var(--theme-border, rgba(48, 107, 172, 0.18));
-    border-radius: 14px;
-    background: rgba(20, 27, 65, 0.5);
-    box-shadow: 0 18px 54px rgba(0, 0, 0, 0.24);
-    backdrop-filter: blur(8px);
-    box-sizing: border-box;
-  }
-
-  .home-start-info-item img {
-    display: block;
-    width: auto;
-    max-width: 100%;
-    height: 120px;
-    object-fit: contain;
-    align-self: center;
-  }
-
-  .home-start-info-item p {
-    margin: 0;
-    color: var(--theme-ink, #f4f8ff);
-    font-size: 18px;
-    line-height: 1.45;
-    text-align: center;
-    word-break: break-word;
-  }
-
-  .home-start-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 24px;
-    margin-top: 28px;
-    padding-top: 8px;
-  }
-
-  .home-start-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex-shrink: 0;
-    min-width: 260px;
-    min-height: 56px;
-    padding: 14px 32px;
-    border: 0;
-    border-radius: 40px;
-    background: linear-gradient(135deg, #306bac 0%, #6f9ceb 100%);
-    color: #f4f8ff;
-    font-size: 24px;
-    line-height: 1.2;
-    box-shadow:
-      0 0 20px rgba(0, 0, 0, 0.1),
-      0 0 5px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    transition:
-      transform 0.15s ease,
-      opacity 0.15s ease;
-    box-sizing: border-box;
-    -webkit-touch-callout: none;
-    user-select: none;
-    z-index: 0;
-  }
-
-  .home-start-button:hover {
-    opacity: 0.95;
-    transform: translateY(-1px);
-  }
-
-  .home-start-button:disabled {
-    cursor: progress;
-    opacity: 0.72;
-    transform: none;
-  }
-
-  .home-start-button img {
-    display: block;
-    flex-shrink: 0;
-  }
-
-  @media screen and (max-width: 900px) {
-    .home-start-page {
-      padding: 4px calc(12px + var(--safe-area-right, 0px)) 22px
-        calc(12px + var(--safe-area-left, 0px));
-    }
-
-    .home-start-info-item {
-      min-height: 240px;
-      padding: 22px;
-    }
-
-    .home-start-info-item p {
-      font-size: 17px;
-    }
-  }
-
-  @media screen and (max-width: 700px) {
-    .home-start-page {
-      justify-content: flex-start;
-      padding-bottom: calc(100px + var(--safe-area-bottom, 0px));
-    }
-
-    .home-start-hero {
-      margin-top: 0;
-      margin-bottom: 16px;
-      padding-top: 24px;
-    }
-
-    .home-start-summary {
-      margin-bottom: 18px;
-    }
-
-    .home-start-summary p {
-      font-size: 16px;
-      line-height: 1.55;
-    }
-
-    .home-start-info-grid {
-      grid-template-columns: 1fr;
-      gap: 8px;
-      margin-bottom: 0;
-    }
-
-    .home-start-info-item {
-      min-height: 0;
-      gap: 10px;
-      padding: 12px;
-      border-radius: 12px;
-    }
-
-    .home-start-info-item img {
-      height: 50px;
-    }
-
-    .home-start-info-item p {
-      font-size: 12px;
-      line-height: 1.35;
-    }
-
-    .home-start-actions {
-      position: fixed;
-      right: calc(24px + var(--safe-area-right, 0px));
-      bottom: calc(14px + var(--safe-area-bottom, 0px));
-      left: calc(24px + var(--safe-area-left, 0px));
-      z-index: 6;
-      justify-content: stretch;
-      margin: 0;
-      padding: 0;
-    }
-
-    .home-start-button {
-      width: 100%;
-      min-width: 0;
-      font-size: 22px;
-    }
-  }
-
-  @media screen and (max-width: 420px) {
-    .home-start-info-item {
-      padding: 10px;
-    }
-
-    .home-start-info-item img {
-      height: 64px;
-    }
-
-    .home-start-info-item p {
-      font-size: 14px;
-    }
-  }
-</style>

@@ -6,8 +6,8 @@ import { App } from './app/App';
 import { lockViewportScale } from './helpers/lockViewportScale';
 import { queryClient } from './services/query-client';
 
-import './assets/css/reset.css';
-import './assets/css/styles.scss';
+import './styles/reset.css';
+import './app/global.scss';
 
 lockViewportScale();
 

@@ -40,6 +40,12 @@
       "description": "הדף שחיפשת אינו קיים או הועבר.",
       "homeAction": "לעמוד הבית",
       "objectsAction": "עיון באובייקטים"
+    },
+    "objectsSearch": {
+      "label": "חיפוש אובייקטים",
+      "placeholder": "שם האובייקט",
+      "clear": "נקה",
+      "empty": "לא נמצאו אובייקטים."
     }
   }
 }

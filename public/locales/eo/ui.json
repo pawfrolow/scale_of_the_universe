@@ -40,6 +40,12 @@
       "description": "La paĝo, kiun vi serĉas, ne ekzistas aŭ estis movita.",
       "homeAction": "Iri al la ĉefpaĝo",
       "objectsAction": "Foliumi objektojn"
+    },
+    "objectsSearch": {
+      "label": "Serĉi objektojn",
+      "placeholder": "Objektnomo",
+      "clear": "Forviŝi",
+      "empty": "Neniuj objektoj trovitaj."
     }
   }
 }

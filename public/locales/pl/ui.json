@@ -40,6 +40,12 @@
       "description": "Strona, której szukasz, nie istnieje albo została przeniesiona.",
       "homeAction": "Przejdź do strony głównej",
       "objectsAction": "Przeglądaj obiekty"
+    },
+    "objectsSearch": {
+      "label": "Szukaj obiektów",
+      "placeholder": "Nazwa obiektu",
+      "clear": "Wyczyść",
+      "empty": "Nie znaleziono obiektów."
     }
   }
 }

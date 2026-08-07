@@ -6,6 +6,7 @@ import { ScaleText } from '@/classes/scaleText';
 import { Slider } from '@/classes/slider';
 import { Universe } from '@/classes/universe';
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '@/config';
+import { checkMobileDevice } from '@/helpers/checkMobileDevice';
 import { getTextureIdsFromManifest } from '@/helpers/getTextureIdsFromManifest';
 import { map } from '@/helpers/map';
 import { nextFrame } from '@/helpers/nextFrame';
@@ -163,9 +164,7 @@ export const useUniverse = ({
 
       let universe: Universe | null = null;
       let scaleText: ScaleText | null = null;
-      const isMobileDevice =
-        typeof window !== 'undefined' &&
-        (window.matchMedia?.('(pointer: coarse)').matches ?? 'ontouchstart' in window);
+      const isMobileDevice = checkMobileDevice();
       let lastAppliedPercent: number | null = null;
 
       const onHandleClicked = () => {
@@ -248,7 +247,10 @@ export const useUniverse = ({
 
       universe = new Universe(0, slider, app, onItemModalOpen, onItemModalClose);
       universeRef.current = universe;
-      scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0');
+      const scaleTextX = isMobileDevice
+        ? (w * 0.9 - 30) / globalResolution
+        : (w * 0.9) / globalResolution;
+      scaleText = new ScaleText(scaleTextX, slider.topY - 40, '0');
 
       app.stage.addChild(
         universe.container,

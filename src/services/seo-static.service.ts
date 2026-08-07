@@ -105,6 +105,13 @@ export type TSeoObject = {
   sizeText: string;
 };
 
+export type TObjectsSearchCopy = {
+  label: string;
+  placeholder: string;
+  clear: string;
+  empty: string;
+};
+
 export type TSeoLocale = {
   language: string;
   segment: string;
@@ -305,6 +312,33 @@ const getNavLabels = (language: string, ui: TJsonRecord) => {
     objects: normalizeText(ui.html?.nav?.objects ?? fallback.objects),
     language: normalizeText(ui.html?.nav?.language ?? fallback.language),
     donate: normalizeText(ui.html?.nav?.donate ?? ui.html?.donate?.title ?? fallback.donate),
+  };
+};
+
+const getFallbackObjectsSearchCopy = (language: string): TObjectsSearchCopy =>
+  language === DEFAULT_LANGUAGE
+    ? {
+        label: 'Поиск объектов',
+        placeholder: 'Название объекта',
+        clear: 'Очистить',
+        empty: 'Объекты не найдены.',
+      }
+    : {
+        label: 'Search objects',
+        placeholder: 'Object name',
+        clear: 'Clear',
+        empty: 'No objects found.',
+      };
+
+export const getObjectsSearchCopy = (locale: TSeoLocale): TObjectsSearchCopy => {
+  const fallback = getFallbackObjectsSearchCopy(locale.language);
+  const copy = locale.ui.html?.objectsSearch;
+
+  return {
+    label: normalizeText(copy?.label ?? fallback.label),
+    placeholder: normalizeText(copy?.placeholder ?? fallback.placeholder),
+    clear: normalizeText(copy?.clear ?? fallback.clear),
+    empty: normalizeText(copy?.empty ?? fallback.empty),
   };
 };
 

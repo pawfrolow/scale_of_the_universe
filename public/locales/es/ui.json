@@ -40,6 +40,12 @@
       "description": "La página que buscas no existe o se ha movido.",
       "homeAction": "Ir a la página principal",
       "objectsAction": "Ver objetos"
+    },
+    "objectsSearch": {
+      "label": "Buscar objetos",
+      "placeholder": "Nombre del objeto",
+      "clear": "Borrar",
+      "empty": "No se encontraron objetos."
     }
   }
 }

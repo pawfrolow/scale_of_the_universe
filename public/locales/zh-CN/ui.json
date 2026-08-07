@@ -40,6 +40,12 @@
       "description": "你要查找的页面不存在或已被移动。",
       "homeAction": "返回首页",
       "objectsAction": "浏览对象"
+    },
+    "objectsSearch": {
+      "label": "搜索对象",
+      "placeholder": "对象名称",
+      "clear": "清除",
+      "empty": "未找到对象。"
     }
   }
 }

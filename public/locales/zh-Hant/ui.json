@@ -40,6 +40,12 @@
       "description": "你要查找的頁面不存在或已被移動。",
       "homeAction": "返回首頁",
       "objectsAction": "瀏覽物件"
+    },
+    "objectsSearch": {
+      "label": "搜尋物件",
+      "placeholder": "物件名稱",
+      "clear": "清除",
+      "empty": "找不到物件。"
     }
   }
 }

@@ -40,6 +40,12 @@
       "description": "Pagina pe care o cauți nu există sau a fost mutată.",
       "homeAction": "Mergi la pagina principală",
       "objectsAction": "Răsfoiește obiectele"
+    },
+    "objectsSearch": {
+      "label": "Caută obiecte",
+      "placeholder": "Numele obiectului",
+      "clear": "Șterge",
+      "empty": "Nu s-au găsit obiecte."
     }
   }
 }

@@ -1,7 +1,9 @@
-@use '../../assets/css/variables.scss' as *;
+@use '@/styles/variables.scss' as *;
 
 .buttons {
   user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
   position: absolute;
   top: calc(12px + var(--safe-area-top));
   right: calc(16px + var(--safe-area-right));
@@ -10,4 +12,10 @@
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.buttons button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }

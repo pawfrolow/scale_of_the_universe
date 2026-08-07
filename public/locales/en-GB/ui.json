@@ -40,6 +40,12 @@
       "description": "The page you are looking for does not exist or has moved.",
       "homeAction": "Go to homepage",
       "objectsAction": "Browse objects"
+    },
+    "objectsSearch": {
+      "label": "Search objects",
+      "placeholder": "Object name",
+      "clear": "Clear",
+      "empty": "No objects found."
     }
   }
 }

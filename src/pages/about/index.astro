@@ -2,7 +2,8 @@
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.astro';
 import Footer from '@/components/Footer/Footer.astro';
 import Header from '@/components/Header/Header.astro';
-import HeadingWithShadow from '@/components/HeadingWithShadow/HeadingWithShadow.astro';
+import SeoPageHeading from '@/components/SeoPageHeading/SeoPageHeading.astro';
+import seoStyles from '@/layouts/SeoLayout.module.scss';
 import SeoLayout from '@/layouts/SeoLayout.astro';
 import {
   buildAboutStructuredData,
@@ -46,14 +47,13 @@ const originalRepositoryCredit =
   structuredData={[buildAboutStructuredData(locale), buildBreadcrumbStructuredData(breadcrumbs)]}
   title={title}
 >
-  <div class="seo-static-shell">
+  <div class={seoStyles.shell}>
     <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'about' }} />
-    <main class="page">
+    <main class={seoStyles.page}>
       <Breadcrumbs items={breadcrumbs} />
-      <div class="content-island">
-        <HeadingWithShadow text={locale.navLabels.about} />
-        {locale.startScreen.introParagraphs.map((paragraph) => <p>{paragraph}</p>)}
-        <div class="about-credits">
+      <div class={seoStyles.contentIsland}>
+        <SeoPageHeading title={locale.navLabels.about} description={locale.startScreen.introParagraphs} />
+        <div class={seoStyles.aboutCredits}>
           <p>
             {locale.startScreen.credits.createdBy}
             {' '}

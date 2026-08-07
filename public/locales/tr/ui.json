@@ -40,6 +40,12 @@
       "description": "Aradığınız sayfa mevcut değil veya taşınmış.",
       "homeAction": "Ana sayfaya git",
       "objectsAction": "Nesnelere göz at"
+    },
+    "objectsSearch": {
+      "label": "Nesneleri ara",
+      "placeholder": "Nesne adı",
+      "clear": "Temizle",
+      "empty": "Nesne bulunamadı."
     }
   }
 }

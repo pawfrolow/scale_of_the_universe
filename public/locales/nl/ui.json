@@ -40,6 +40,12 @@
       "description": "De pagina die je zoekt bestaat niet of is verplaatst.",
       "homeAction": "Naar de startpagina",
       "objectsAction": "Objecten bekijken"
+    },
+    "objectsSearch": {
+      "label": "Objecten zoeken",
+      "placeholder": "Objectnaam",
+      "clear": "Wissen",
+      "empty": "Geen objecten gevonden."
     }
   }
 }

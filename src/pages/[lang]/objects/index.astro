@@ -2,7 +2,9 @@
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.astro';
 import Footer from '@/components/Footer/Footer.astro';
 import Header from '@/components/Header/Header.astro';
-import HeadingWithShadow from '@/components/HeadingWithShadow/HeadingWithShadow.astro';
+import ObjectsSearch from '@/components/ObjectsSearch/ObjectsSearch.astro';
+import SeoPageHeading from '@/components/SeoPageHeading/SeoPageHeading.astro';
+import seoStyles from '@/layouts/SeoLayout.module.scss';
 import SeoLayout from '@/layouts/SeoLayout.astro';
 import {
   buildBreadcrumbStructuredData,
@@ -15,6 +17,7 @@ import {
   getObjectIndexPageCopy,
   getObjectScaleGroup,
   getObjectScaleGroupLabel,
+  getObjectsSearchCopy,
   OBJECT_SCALE_GROUPS,
 } from '@/services/seo-static.service';
 import type { TSeoLocale } from '@/services/seo-static.service';
@@ -34,6 +37,7 @@ const locales = await getLocales();
 const { locale } = Astro.props as { locale: TSeoLocale };
 const appVersion = await getAppVersion();
 const pageCopy = getObjectIndexPageCopy(locale);
+const objectsSearchCopy = getObjectsSearchCopy(locale);
 const title = `${pageCopy.heading} | ${locale.appTitle}`;
 const description = pageCopy.seoDescription;
 const breadcrumbs = [
@@ -61,26 +65,31 @@ const objectGroups = OBJECT_SCALE_GROUPS.map((group) => ({
   structuredData={[buildObjectIndexStructuredData(locale), buildBreadcrumbStructuredData(breadcrumbs)]}
   title={title}
 >
-  <div class="seo-static-shell">
+  <div class={seoStyles.shell}>
     <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'objects' }} />
-    <main class="page">
+    <main class={seoStyles.page}>
       <Breadcrumbs items={breadcrumbs} />
-      <div class="content-island">
-        <HeadingWithShadow text={pageCopy.heading} />
-        <p>{pageCopy.intro}</p>
+      <div class={seoStyles.contentIsland} data-objects-search-scope>
+        <SeoPageHeading title={pageCopy.heading} description={pageCopy.intro} />
+        <ObjectsSearch copy={objectsSearchCopy} locale={locale.language} />
         {
           objectGroups.map(({ label, objects, rangeHtml }) => (
-            <section class="object-section">
-              <div class="object-section-header">
-                <h2 class="object-section-title">{label}</h2>
-                <span class="object-section-range" set:html={rangeHtml} />
+            <section class={seoStyles.objectSection} data-objects-search-section>
+              <div class={seoStyles.objectSectionHeader}>
+                <h2 class={seoStyles.objectSectionTitle}>{label}</h2>
+                <span class={seoStyles.objectSectionRange} set:html={rangeHtml} />
               </div>
-              <nav class="grid" aria-label={label}>
+              <nav class={seoStyles.grid} aria-label={label}>
                 {objects.map((object) => (
-                  <a class="card" href={object.path}>
-                    <span class="card-image-wrap">
+                  <a
+                    class={seoStyles.card}
+                    href={object.path}
+                    data-objects-search-card
+                    data-search-text={object.title}
+                  >
+                    <span class={seoStyles.cardImageWrap}>
                       <img
-                        class="card-image"
+                        class={seoStyles.cardImage}
                         src={object.imageSrc}
                         alt=""
                         loading="lazy"
@@ -88,8 +97,8 @@ const objectGroups = OBJECT_SCALE_GROUPS.map((group) => ({
                         aria-hidden="true"
                       />
                     </span>
-                    <span class="card-title">{object.title}</span>
-                    <span class="card-size" set:html={buildSizeHtml(object.sizeText)} />
+                    <span class={seoStyles.cardTitle}>{object.title}</span>
+                    <span class={seoStyles.cardSize} set:html={buildSizeHtml(object.sizeText)} />
                   </a>
                 ))}
               </nav>

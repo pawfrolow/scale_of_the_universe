@@ -1,0 +1,484 @@
+@use '@/styles/variables.scss' as *;
+
+.headerBand {
+  position: relative;
+  isolation: isolate;
+  z-index: 100;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: calc(16px + var(--safe-area-top)) calc(24px + var(--safe-area-right)) 12px
+    calc(24px + var(--safe-area-left));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: $text-primary-dark;
+  font-size: 1.0625rem;
+  line-height: 1.25;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand img {
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.brand span {
+  min-width: 0;
+  font-family: var(--font-brand);
+  word-break: break-word;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 4px 0;
+  color: rgba($color-white, 0.9);
+  font-size: 0.875rem;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  color: $color-baby-blue-ice;
+}
+
+.menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba($color-baby-blue-ice, 0.1);
+  cursor: pointer;
+}
+
+.menuButton img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+.sidebarShell {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.sidebarShell[data-open] {
+  pointer-events: auto;
+}
+
+.sidebarBackdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: rgba($color-space-indigo, 0.48);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.18s ease;
+}
+
+.sidebarShell[data-open] .sidebarBackdrop {
+  opacity: 1;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: min(320px, calc(100vw - 48px));
+  height: 100%;
+  padding: 18px;
+  background: rgba($color-space-2, 0.96);
+  box-shadow: -18px 0 48px rgba($color-black, 0.34);
+  backdrop-filter: blur(18px);
+  transform: translateX(100%);
+  transition: transform 0.2s ease;
+}
+
+.sidebarShell[data-open] .sidebar {
+  transform: translateX(0);
+}
+
+.sidebarClose {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba($color-baby-blue-ice, 0.28);
+  color: $text-primary-dark;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.sidebarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebarLinks a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 2px;
+  color: rgba($color-white, 0.9);
+  font-size: 1.125rem;
+  line-height: 1.25;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.sidebarLinks a:hover {
+  color: $color-baby-blue-ice;
+}
+
+.sidebarMeta {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba($color-baby-blue-ice, 0.16);
+  color: rgba($text-primary-dark, 0.68);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.modalShell {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.modalShell:target,
+.modalShell[data-open] {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modalBackdrop {
+  position: absolute;
+  inset: 0;
+  background: $overlay-dark;
+  backdrop-filter: blur(6px);
+}
+
+.modalDialog {
+  position: relative;
+  z-index: 1;
+  width: min(560px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px - var(--safe-area-top) - var(--safe-area-bottom));
+  overflow: auto;
+  padding: $modal-padding-desktop;
+  border: 1px solid $border-dark;
+  border-radius: $modal-radius-desktop;
+  background: $surface-dialog-dark;
+  color: $text-primary-dark;
+  box-shadow: $shadow-dialog;
+  backdrop-filter: blur(18px);
+  outline: none;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modalDialogSm {
+  width: min(420px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+}
+
+.modalDialogMd {
+  width: min(560px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+}
+
+.modalDialogLg {
+  width: min(720px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.modalHeaderCenter {
+  align-items: center;
+}
+
+.modalHeaderStart {
+  align-items: flex-start;
+}
+
+.modalTitle {
+  margin: 0;
+  color: $text-primary-dark;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.modalClose {
+  flex-shrink: 0;
+  width: $close-button-size;
+  height: $close-button-size;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: $text-primary-dark;
+  font-size: 30px;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $transition-fast;
+}
+
+.modalClose span {
+  margin-bottom: 4px;
+}
+
+.modalClose:hover {
+  background: $surface-muted-hover-dark;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modalBody p {
+  margin: 0;
+  color: rgba($color-white, 0.82);
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.modalActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.modalActionLink,
+.languageOption {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid $border-dark;
+  border-radius: 10px;
+  background: $surface-muted-dark;
+  color: $text-primary-dark;
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.modalActionLink:hover,
+.languageOption:hover {
+  background: $surface-muted-hover-dark;
+}
+
+.modalActionLink:hover {
+  transform: translateY(-2px);
+}
+
+.modalActionLink img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.languageList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.languageOption {
+  justify-content: space-between;
+  text-align: left;
+}
+
+.languageOption[data-active] {
+  border-color: rgba($color-cornflower-blue, 0.5);
+  background: rgba($color-ocean-deep, 0.42);
+  color: $text-primary-dark;
+}
+
+.languageOption span:first-child {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: calc(12px + var(--safe-area-top)) calc(12px + var(--safe-area-right)) 10px
+      calc(12px + var(--safe-area-left));
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+
+  .sidebarMeta {
+    display: flex;
+    gap: 14px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .modalShell {
+    padding: 8px;
+  }
+
+  .modalDialog,
+  .modalDialogSm,
+  .modalDialogMd,
+  .modalDialogLg {
+    width: calc(100vw - 16px);
+    max-width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px - var(--safe-area-top) - var(--safe-area-bottom));
+    padding: $modal-padding-mobile;
+    border-radius: $modal-radius-mobile;
+  }
+
+  .modalHeader {
+    margin-bottom: 14px;
+  }
+
+  .modalTitle {
+    font-size: 20px;
+  }
+
+  .modalClose {
+    width: $close-button-size-mobile;
+    height: $close-button-size-mobile;
+    font-size: 28px;
+  }
+
+  .modalBody {
+    gap: 16px;
+  }
+
+  .modalBody p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .modalActions {
+    gap: 10px;
+  }
+
+  .modalActionLink {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px;
+  }
+
+  .languageList {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .languageOption {
+    min-height: 46px;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .modalDialog,
+  .modalDialogSm,
+  .modalDialogMd,
+  .modalDialogLg {
+    width: calc(100vw - 12px);
+    max-width: calc(100vw - 12px);
+    padding: $modal-padding-mobile-sm;
+  }
+
+  .modalTitle {
+    font-size: 18px;
+  }
+}

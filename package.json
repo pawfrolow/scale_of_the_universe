@@ -1,6 +1,6 @@
 {
   "name": "sotu",
-  "version": "1.9.3",
+  "version": "1.9.4",
   "description": "scale of the universe visualization",
   "type": "module",
   "scripts": {

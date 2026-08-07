@@ -1,0 +1,33 @@
+---
+import HeadingWithShadow from '@/components/HeadingWithShadow/HeadingWithShadow.astro';
+import styles from './styles.module.scss';
+
+type Props = {
+  title: string;
+  description?: string | string[] | null;
+  ariaLabel?: string;
+  class?: string;
+};
+
+const { title, description, ariaLabel, class: className } = Astro.props;
+const descriptionParagraphs = (Array.isArray(description) ? description : [description]).filter(
+  (paragraph): paragraph is string => typeof paragraph === 'string' && paragraph.trim().length > 0,
+);
+---
+
+<section class:list={[styles.root, className]} aria-label={ariaLabel ?? title}>
+  <HeadingWithShadow text={title} />
+  <slot name="after-title" />
+
+  {
+    descriptionParagraphs.length > 0 && (
+      <section class={styles.summary}>
+        {descriptionParagraphs.map((paragraph) => (
+          <p class={styles.paragraph}>{paragraph}</p>
+        ))}
+      </section>
+    )
+  }
+
+  <slot />
+</section>

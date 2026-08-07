@@ -1,4 +1,4 @@
-@use '../../assets/css/variables.scss' as *;
+@use '@/styles/variables.scss' as *;
 
 .startScreen {
   position: absolute;
@@ -409,6 +409,9 @@
     transform 0.15s ease,
     opacity 0.15s ease;
   box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 
   &:hover {
     opacity: 0.95;

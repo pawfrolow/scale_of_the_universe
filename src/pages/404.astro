@@ -1,6 +1,7 @@
 ---
 import Footer from '@/components/Footer/Footer.astro';
 import Header from '@/components/Header/Header.astro';
+import seoStyles from '@/layouts/SeoLayout.module.scss';
 import SeoLayout from '@/layouts/SeoLayout.astro';
 import {
   DEFAULT_LANGUAGE,
@@ -88,18 +89,18 @@ const notFoundPayloadJson = serializeJsonForHtml({
   robots="noindex,follow"
   title={title}
 >
-  <div class="seo-static-shell">
+  <div class={seoStyles.shell}>
     <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'home' }} />
-    <main class="page not-found-page">
-      <p class="not-found-kicker">404</p>
-      <h1 data-not-found-text="notFoundTitle">{initialNotFound.title}</h1>
+    <main class:list={[seoStyles.page, seoStyles.notFoundPage]}>
+      <p class={seoStyles.notFoundKicker}>404</p>
+      <h1 class={seoStyles.notFoundTitle} data-not-found-text="notFoundTitle">{initialNotFound.title}</h1>
       <p data-not-found-text="notFoundDescription">{description}</p>
-      <div class="not-found-actions">
-        <a class="button" href={locale.path} data-not-found-link="home" data-not-found-text="homeAction">
+      <div class={seoStyles.notFoundActions}>
+        <a class={seoStyles.button} href={locale.path} data-not-found-link="home" data-not-found-text="homeAction">
           {initialNotFound.homeAction}
         </a>
         <a
-          class="button button-secondary"
+          class:list={[seoStyles.button, seoStyles.buttonSecondary]}
           href={locale.objectIndexPath}
           data-not-found-link="objects"
           data-not-found-text="objectsAction"
@@ -189,10 +190,10 @@ const notFoundPayloadJson = serializeJsonForHtml({
         document.querySelectorAll('[data-donate-close]').forEach((element) => {
           element.setAttribute('aria-label', locale.donate.closeAriaLabel);
         });
-        document.querySelector('.language-modal-list')?.setAttribute('aria-label', locale.modalTitle);
+        document.querySelector('[data-language-list]')?.setAttribute('aria-label', locale.modalTitle);
         document.querySelectorAll('[data-language-option]').forEach((option) => {
           const isActive = option.getAttribute('data-language-option') === locale.language;
-          option.classList.toggle('is-active', isActive);
+          option.toggleAttribute('data-active', isActive);
           option.querySelector('[data-language-active-marker]')?.remove();
 
           if (isActive) {
@@ -207,38 +208,3 @@ const notFoundPayloadJson = serializeJsonForHtml({
     </script>
   </div>
 </SeoLayout>
-
-<style>
-  .not-found-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 62dvh;
-  }
-
-  .not-found-kicker {
-    margin: 0 0 8px;
-    color: var(--theme-text-soft, rgba(20, 27, 65, 0.58));
-    font-size: 0.875rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .not-found-page p {
-    max-width: 620px;
-  }
-
-  .not-found-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 12px;
-  }
-
-  .button-secondary {
-    background: rgba(20, 27, 65, 0.5);
-    color: var(--theme-baby-blue-ice, #98b9f2);
-    border: 1px solid var(--theme-border, rgba(48, 107, 172, 0.18));
-  }
-</style>

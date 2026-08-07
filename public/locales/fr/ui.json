@@ -40,6 +40,12 @@
       "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
       "homeAction": "Aller à l'accueil",
       "objectsAction": "Parcourir les objets"
+    },
+    "objectsSearch": {
+      "label": "Rechercher des objets",
+      "placeholder": "Nom de l'objet",
+      "clear": "Effacer",
+      "empty": "Aucun objet trouvé."
     }
   }
 }
