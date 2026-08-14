@@ -16,6 +16,11 @@
       "ogTitle": "Scara Universului",
       "ogDescription": "O comparație a dimensiunilor diferitelor obiecte — de la particule elementare până la galaxii."
     },
+    "nav": {
+      "about": "Despre proiect",
+      "objects": "Obiecte",
+      "language": "Limbă"
+    },
     "modal": {
       "title": "Scara Universului",
       "zoomHint": "Folosiți bara de derulare pentru a mări și a micșora.",

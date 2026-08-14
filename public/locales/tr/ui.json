@@ -16,6 +16,11 @@
       "ogTitle": "Evrenin Ölçeği",
       "ogDescription": "Çeşitli nesnelerin boyutlarının karşılaştırması — temel parçacıklardan galaksilere kadar."
     },
+    "nav": {
+      "about": "Proje hakkında",
+      "objects": "Nesneler",
+      "language": "Dil"
+    },
     "modal": {
       "title": "Evrenin Ölçeği",
       "zoomHint": "Yakınlaşmak ve uzaklaşmak için kaydırma çubuğunu kullanın.",

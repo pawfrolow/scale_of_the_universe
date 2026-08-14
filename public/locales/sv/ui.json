@@ -16,6 +16,11 @@
       "ogTitle": "Universums skala",
       "ogDescription": "En jämförelse av storleken på olika objekt — från elementarpartiklar till galaxer."
     },
+    "nav": {
+      "about": "Om projektet",
+      "objects": "Objekt",
+      "language": "Språk"
+    },
     "modal": {
       "title": "Universums skala",
       "zoomHint": "Använd rullningslisten för att zooma in och ut.",

@@ -16,6 +16,11 @@
       "ogTitle": "Die Skala des Universums",
       "ogDescription": "Ein Vergleich der Größen verschiedener Objekte – von Elementarteilchen bis hin zu Galaxien."
     },
+    "nav": {
+      "about": "Über das Projekt",
+      "objects": "Objekte",
+      "language": "Sprache"
+    },
     "modal": {
       "title": "Die Skala des Universums",
       "zoomHint": "Benutze die Scrollleiste, um hinein- oder herauszuzoomen.",

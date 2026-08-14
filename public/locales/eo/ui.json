@@ -16,6 +16,11 @@
       "ogTitle": "La Skalo de la Universo",
       "ogDescription": "Komparo de la grandecoj de diversaj objektoj — de elementaj partikloj ĝis galaksioj."
     },
+    "nav": {
+      "about": "Pri la projekto",
+      "objects": "Objektoj",
+      "language": "Lingvo"
+    },
     "modal": {
       "title": "La Skalo de la Universo",
       "zoomHint": "Uzu la rulumbreton por zomi kaj malzomi.",

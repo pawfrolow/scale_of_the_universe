@@ -113,6 +113,27 @@
   text-underline-offset: 2px;
 }
 
+.aboutBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 820px;
+}
+
+.aboutBody p {
+  margin: 0;
+  color: var(--theme-text-muted, rgba(244, 248, 255, 0.74));
+  font-size: 17px;
+  line-height: 1.6;
+  text-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+  word-break: break-word;
+}
+
+.aboutBody a {
+  color: var(--theme-baby-blue-ice);
+  text-underline-offset: 3px;
+}
+
 .objectSection {
   margin-top: 34px;
 }

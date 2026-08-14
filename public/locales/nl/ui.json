@@ -16,6 +16,11 @@
       "ogTitle": "De schaal van het heelal",
       "ogDescription": "Een vergelijking van de afmetingen van verschillende objecten — van elementaire deeltjes tot sterrenstelsels."
     },
+    "nav": {
+      "about": "Over het project",
+      "objects": "Objecten",
+      "language": "Taal"
+    },
     "modal": {
       "title": "De schaal van het heelal",
       "zoomHint": "Gebruik de schuifbalk om in en uit te zoomen.",

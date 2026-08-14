@@ -32,15 +32,11 @@ const locales = await getLocales();
 const { locale } = Astro.props as { locale: TSeoLocale };
 const appVersion = await getAppVersion();
 const title = `${locale.navLabels.about} | ${locale.appTitle}`;
-const description = trimToLength(`${locale.metaDescription} ${locale.startScreen.credits.createdBy}`, 155);
+const description = trimToLength(locale.aboutPage.paragraphs.join(' '), 155);
 const breadcrumbs = [
   { label: locale.appTitle, href: locale.path },
   { label: locale.navLabels.about, href: locale.aboutPath },
 ];
-const originalRepositoryCredit =
-  locale.language === DEFAULT_LANGUAGE
-    ? 'Оригинальный репозиторий: Мэтью Мартори'
-    : locale.startScreen.credits.webDev;
 ---
 
 <SeoLayout
@@ -58,26 +54,17 @@ const originalRepositoryCredit =
     <main class={seoStyles.page}>
       <Breadcrumbs items={breadcrumbs} />
       <div class={seoStyles.contentIsland}>
-        <SeoPageHeading title={locale.navLabels.about} description={locale.startScreen.introParagraphs} />
-        <div class={seoStyles.aboutCredits}>
-          <p>
-            {locale.startScreen.credits.createdBy}
-            {' '}
-            <a href={CREDIT_LINKS.copyright} target="_blank" rel="noreferrer">htwins.net</a>
-          </p>
-          <p>
-            {originalRepositoryCredit}
-            {' '}
-            <a href={CREDIT_LINKS.webDev} target="_blank" rel="noreferrer">github.com</a>
-          </p>
-          <p>
-            {locale.startScreen.credits.translationAndDev}
-            {' '}
-            <a href={CREDIT_LINKS.pawfrolow} target="_blank" rel="noreferrer">github.com</a>
-          </p>
-          <p>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
-        </div>
-        <a class={seoStyles.button} href={locale.objectIndexPath}>{locale.navLabels.objects}</a>
+        <SeoPageHeading title={locale.navLabels.about}>
+          <div class={seoStyles.aboutBody}>
+            {locale.aboutPage.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            <p>
+              {locale.aboutPage.history.beforeOriginalLink}{' '}<a href={CREDIT_LINKS.copyright} target="_blank" rel="noreferrer">{locale.aboutPage.history.originalLinkLabel}</a>{' '}{locale.aboutPage.history.betweenLinks}{' '}<a href={CREDIT_LINKS.webDev} target="_blank" rel="noreferrer">{locale.aboutPage.history.webDevLinkLabel}</a>{locale.aboutPage.history.afterLinks}
+            </p>
+            <p>
+              {locale.aboutPage.contact.beforeEmail}{' '}<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>{locale.aboutPage.contact.afterEmail}
+            </p>
+          </div>
+        </SeoPageHeading>
       </div>
     </main>
     <Footer locale={locale} appVersion={appVersion} />

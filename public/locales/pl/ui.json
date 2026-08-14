@@ -16,6 +16,11 @@
       "ogTitle": "Rozmiar Wszechświata",
       "ogDescription": "Porównanie rozmiarów różnych obiektów — od cząstek elementarnych po galaktyki."
     },
+    "nav": {
+      "about": "O projekcie",
+      "objects": "Obiekty",
+      "language": "Język"
+    },
     "modal": {
       "title": "Rozmiar Wszechświata",
       "zoomHint": "Użyj paska przewijania, aby przybliżać i oddalać.",

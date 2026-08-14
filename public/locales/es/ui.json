@@ -16,6 +16,11 @@
       "ogTitle": "La Escala del Universo",
       "ogDescription": "Una comparación de los tamaños de diversos objetos, desde partículas elementales hasta galaxias."
     },
+    "nav": {
+      "about": "Acerca del proyecto",
+      "objects": "Objetos",
+      "language": "Idioma"
+    },
     "modal": {
       "title": "La Escala del Universo",
       "zoomHint": "Usa la barra de desplazamiento para acercar y alejar.",

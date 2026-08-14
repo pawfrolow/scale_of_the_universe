@@ -16,6 +16,11 @@
       "ogTitle": "宇宙的刻度",
       "ogDescription": "比较各种物体的大小——从基本粒子到星系。"
     },
+    "nav": {
+      "about": "关于项目",
+      "objects": "对象",
+      "language": "语言"
+    },
     "modal": {
       "title": "宇宙的刻度",
       "zoomHint": "使用滚动条进行放大和缩小。",

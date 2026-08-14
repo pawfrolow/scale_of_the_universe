@@ -16,6 +16,28 @@
       "ogTitle": "The Scale of the Universe",
       "ogDescription": "A comparison of the sizes of various objects — from elementary particles to galaxies."
     },
+    "about": {
+      "paragraphs": [
+        "The Scale of the Universe is an interactive visualization that helps you feel the difference between the sizes of objects. The scale starts at human size: you can scroll down toward the microworld and up toward planets, stars, galaxies, and the observable Universe.",
+        "The object sizes here are often approximate or characteristic values. For some objects, an average size, a typical example, or a convenient comparison value is used so they can all exist on one shared scale."
+      ],
+      "history": {
+        "beforeOriginalLink": "This version builds on",
+        "originalLinkLabel": "the original idea by Cary and Michael Huang",
+        "betweenLinks": "and",
+        "webDevLinkLabel": "the web implementation by Matthew Martori",
+        "afterLinks": ". The project is gradually updated and expanded."
+      },
+      "contact": {
+        "beforeEmail": "If you have ideas for improving the project, write to me at",
+        "afterEmail": "."
+      }
+    },
+    "nav": {
+      "about": "About",
+      "objects": "Objects",
+      "language": "Language"
+    },
     "modal": {
       "title": "The Scale of the Universe",
       "zoomHint": "Use the scroll bar to zoom in and out.",

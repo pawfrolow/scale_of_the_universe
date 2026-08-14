@@ -16,7 +16,7 @@ export const DONATE_LINKS = [
     iconSrc: '/img/icons/boosty.svg',
   },
 ] as const;
-export const CONTACT_EMAIL = 'paw.frolow@gmail.com';
+export const CONTACT_EMAIL = 'paw.frolow@icloud.com';
 export const CREDIT_LINKS = {
   webDev: 'https://github.com/matttt/scale_of_the_universe',
   copyright: 'https://www.htwins.net/scale2/',
@@ -112,6 +112,21 @@ export type TObjectsSearchCopy = {
   empty: string;
 };
 
+export type TAboutPageCopy = {
+  paragraphs: string[];
+  history: {
+    beforeOriginalLink: string;
+    originalLinkLabel: string;
+    betweenLinks: string;
+    webDevLinkLabel: string;
+    afterLinks: string;
+  };
+  contact: {
+    beforeEmail: string;
+    afterEmail: string;
+  };
+};
+
 export type TSeoLocale = {
   language: string;
   segment: string;
@@ -130,6 +145,7 @@ export type TSeoLocale = {
   ui: TJsonRecord;
   units: TJsonRecord;
   objects: TSeoObject[];
+  aboutPage: TAboutPageCopy;
   navLabels: {
     about: string;
     objects: string;
@@ -186,6 +202,14 @@ export const normalizeText = (value: unknown) =>
   String(value ?? '')
     .replace(/\s+/g, ' ')
     .trim();
+
+const normalizeTextOrFallback = (value: unknown, fallback: string) =>
+  normalizeText(value) || fallback;
+
+const toRecord = (value: unknown): Record<string, unknown> =>
+  value && typeof value === 'object' && !Array.isArray(value)
+    ? (value as Record<string, unknown>)
+    : {};
 
 const dedupeTexts = (values: string[]) => {
   const seen = new Set<string>();
@@ -339,6 +363,82 @@ export const getObjectsSearchCopy = (locale: TSeoLocale): TObjectsSearchCopy => 
     placeholder: normalizeText(copy?.placeholder ?? fallback.placeholder),
     clear: normalizeText(copy?.clear ?? fallback.clear),
     empty: normalizeText(copy?.empty ?? fallback.empty),
+  };
+};
+
+const ABOUT_PAGE_FALLBACKS = {
+  ru: {
+    paragraphs: [
+      '«Шкала масштабов Вселенной» — интерактивная визуализация, которая помогает почувствовать разницу между размерами объектов. Шкала начинается с размера человека: её можно прокручивать в меньшую сторону, к микромиру, и в большую — к планетам, звёздам, галактикам и наблюдаемой Вселенной.',
+      'Размеры объектов здесь часто приведены как приближённые или характерные значения. Для некоторых объектов выбран средний размер, типичный пример или удобная для сравнения величина, чтобы все они могли существовать на одной общей шкале.',
+    ],
+    history: {
+      beforeOriginalLink: 'Эта версия развивает',
+      originalLinkLabel: 'оригинальную идею Кэри и Майкла Хуан',
+      betweenLinks: 'и',
+      webDevLinkLabel: 'веб-реализацию Мэтью Мартори',
+      afterLinks: '. Проект постепенно обновляется и дополняется.',
+    },
+    contact: {
+      beforeEmail: 'Если у вас есть предложения по улучшению проекта, напишите мне на',
+      afterEmail: '.',
+    },
+  },
+  en: {
+    paragraphs: [
+      'The Scale of the Universe is an interactive visualization that helps you feel the difference between the sizes of objects. The scale starts at human size: you can scroll down toward the microworld and up toward planets, stars, galaxies, and the observable Universe.',
+      'The object sizes here are often approximate or characteristic values. For some objects, an average size, a typical example, or a convenient comparison value is used so they can all exist on one shared scale.',
+    ],
+    history: {
+      beforeOriginalLink: 'This version builds on',
+      originalLinkLabel: 'the original idea by Cary and Michael Huang',
+      betweenLinks: 'and',
+      webDevLinkLabel: 'the web implementation by Matthew Martori',
+      afterLinks: '. The project is gradually updated and expanded.',
+    },
+    contact: {
+      beforeEmail: 'If you have ideas for improving the project, write to me at',
+      afterEmail: '.',
+    },
+  },
+} satisfies Record<'ru' | 'en', TAboutPageCopy>;
+
+const getFallbackAboutPageCopy = (language: string) =>
+  language === DEFAULT_LANGUAGE ? ABOUT_PAGE_FALLBACKS.ru : ABOUT_PAGE_FALLBACKS.en;
+
+const getAboutPageCopy = (language: string, ui: TJsonRecord): TAboutPageCopy => {
+  const fallback = getFallbackAboutPageCopy(language);
+  const about = toRecord(ui.html?.about);
+  const history = toRecord(about.history);
+  const contact = toRecord(about.contact);
+  const configuredParagraphs = Array.isArray(about.paragraphs)
+    ? about.paragraphs.map((paragraph) => normalizeText(paragraph)).filter(Boolean)
+    : [];
+
+  return {
+    paragraphs: fallback.paragraphs.map(
+      (paragraph, index) => configuredParagraphs[index] ?? paragraph,
+    ),
+    history: {
+      beforeOriginalLink: normalizeTextOrFallback(
+        history.beforeOriginalLink,
+        fallback.history.beforeOriginalLink,
+      ),
+      originalLinkLabel: normalizeTextOrFallback(
+        history.originalLinkLabel,
+        fallback.history.originalLinkLabel,
+      ),
+      betweenLinks: normalizeTextOrFallback(history.betweenLinks, fallback.history.betweenLinks),
+      webDevLinkLabel: normalizeTextOrFallback(
+        history.webDevLinkLabel,
+        fallback.history.webDevLinkLabel,
+      ),
+      afterLinks: normalizeTextOrFallback(history.afterLinks, fallback.history.afterLinks),
+    },
+    contact: {
+      beforeEmail: normalizeTextOrFallback(contact.beforeEmail, fallback.contact.beforeEmail),
+      afterEmail: normalizeTextOrFallback(contact.afterEmail, fallback.contact.afterEmail),
+    },
   };
 };
 
@@ -500,6 +600,7 @@ const loadLocales = async () => {
         ui,
         units,
         objects,
+        aboutPage: getAboutPageCopy(language, ui),
         navLabels,
         startScreen: {
           title: normalizeText(ui.html?.modal?.title ?? appTitle),

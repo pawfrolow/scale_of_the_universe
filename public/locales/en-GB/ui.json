@@ -16,6 +16,11 @@
       "ogTitle": "The Scale of the Universe",
       "ogDescription": "A comparison of the sizes of various objects — from elementary particles to galaxies."
     },
+    "nav": {
+      "about": "About",
+      "objects": "Objects",
+      "language": "Language"
+    },
     "modal": {
       "title": "The Scale of the Universe",
       "zoomHint": "Use the scroll bar to zoom in and out.",

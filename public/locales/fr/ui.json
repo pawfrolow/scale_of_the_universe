@@ -16,6 +16,11 @@
       "ogTitle": "L'échelle de l'Univers",
       "ogDescription": "Une comparaison des tailles de différents objets — des particules élémentaires aux galaxies."
     },
+    "nav": {
+      "about": "À propos du projet",
+      "objects": "Objets",
+      "language": "Langue"
+    },
     "modal": {
       "title": "L'échelle de l'Univers",
       "zoomHint": "Utilisez la barre de défilement pour zoomer et dézoomer.",
