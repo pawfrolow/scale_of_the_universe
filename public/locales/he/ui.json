@@ -16,6 +16,11 @@
       "ogTitle": "סדרי גודל ביקום",
       "ogDescription": "השוואת הגדלים של אובייקטים שונים — מחלקיקים יסודיים ועד גלקסיות."
     },
+    "nav": {
+      "about": "על הפרויקט",
+      "objects": "אובייקטים",
+      "language": "שפה"
+    },
     "modal": {
       "title": "סדרי גודל ביקום",
       "zoomHint": "השתמשו בסרגל הגלילה כדי להתקרב ולהתרחק.",
@@ -23,6 +28,23 @@
       "startButton": "התחל",
       "startLoading": "טוען...",
       "selectLanguage": "בחר שפה"
+    },
+    "object": {
+      "openOnScaleAction": "פתח בסקאלה"
+    },
+    "objectScaleGroups": {
+      "subatomic": "קני מידה תת-אטומיים",
+      "particles": "חלקיקים",
+      "atomsMolecules": "אטומים ומולקולות",
+      "microworld": "עולם המיקרו",
+      "smallObjects": "מילימטרים וסנטימטרים",
+      "humanScales": "קני מידה אנושיים",
+      "buildingsLandscapes": "מבנים ונופים",
+      "planets": "כוכבי לכת",
+      "stars": "כוכבים",
+      "solarSystem": "מערכת השמש",
+      "interstellar": "קני מידה בין-כוכביים",
+      "galaxiesUniverse": "גלקסיות והיקום"
     },
     "credits": {
       "createdBy": "נוצר על ידי: קארי הואנג, מייקל הואנג",
@@ -40,6 +62,12 @@
       "description": "הדף שחיפשת אינו קיים או הועבר.",
       "homeAction": "לעמוד הבית",
       "objectsAction": "עיון באובייקטים"
+    },
+    "objectsSearch": {
+      "label": "חיפוש אובייקטים",
+      "placeholder": "שם האובייקט",
+      "clear": "נקה",
+      "empty": "לא נמצאו אובייקטים."
     }
   }
 }

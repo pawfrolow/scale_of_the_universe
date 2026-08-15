@@ -1,0 +1,98 @@
+$color-black: #000; // Utility shadow color for deep overlays and dark-mode elevation.
+$color-white: #fff; // Utility surface color for light glass panels and highlights.
+$color-text-dark: #141b41; // Main text color in the light shell and static SEO pages.
+$color-text-light: #f4f8ff; // Main text color on dark/action surfaces.
+
+$color-space-indigo: #141b41; // Dark shell background, dark overlays, and browser theme color.
+$color-ocean-deep: #306bac; // Strong UI surfaces, primary button starts, and light-mode links.
+$color-cornflower-blue: #6f9ceb; // Primary accent, button ends, progress fills, and active outlines.
+$color-baby-blue-ice: #98b9f2; // Light sky background, subtle borders, muted surfaces, and dark-mode text support.
+$color-soft-periwinkle: #918ef4; // Secondary glow/accent in backgrounds and loading gradients.
+$color-orange-frame: #ffba08; // Experimental orange frame, branded headings, and object card focus outlines.
+
+$color-primary: $color-cornflower-blue; // Shared legacy primary token for existing controls and active states.
+
+$color-earth-1: #eef6ff; // Light-mode base background for the pre-space shell.
+$color-earth-2: #cfe0ff; // Light-mode mid-gradient background stop.
+$color-earth-3: #98b9f2; // Light-mode deep-gradient background stop.
+
+$color-space-1: $color-space-indigo; // Dark-mode base background and modal gradient edge.
+$color-space-2: #1d346b; // Dark-mode mid-gradient surface depth.
+$color-space-3: $color-ocean-deep; // Dark-mode gradient lift near the horizon.
+
+$color-transparent-gray: rgba(168, 168, 168, 0); // Transparent baseline for round icon buttons.
+$color-transparent-gray-hover: rgba(
+  $color-ocean-deep,
+  0.14
+); // Light-mode hover fill for muted controls.
+
+$shadow-soft:
+  0 0 20px rgba(0, 0, 0, 0.1),
+  0 0 5px rgba(0, 0, 0, 0.25);
+
+$shadow-dialog:
+  0 0 40px rgba(0, 0, 0, 0.1),
+  0 0 10px rgba(0, 0, 0, 0.25);
+
+$radius-pill: 40px;
+
+$font-size-base: 16px;
+$font-size-lg: 24px;
+$font-size-sm: 0.8rem;
+
+$z-bg: -2;
+$z-controls: 5;
+
+$transition-fast: all 0.2s ease-out;
+$transition-hd: background 0.75s;
+
+$dialog-width: 650px;
+$start-button-width: 250px;
+
+/* Theme tokens */
+
+$surface-dialog-light: rgba($color-white, 0.9);
+$surface-dialog-dark: linear-gradient(
+  0deg,
+  $color-space-1 0%,
+  $color-space-2 50%,
+  $color-space-1 100%
+);
+
+$text-primary-light: $color-text-dark;
+$text-primary-dark: #f4f8ff;
+
+$text-secondary-light: rgba($color-text-dark, 0.8);
+$text-secondary-dark: rgba($text-primary-dark, 0.8);
+
+$surface-muted-light: rgba($color-baby-blue-ice, 0.2);
+$surface-muted-dark: rgba($color-baby-blue-ice, 0.08);
+
+$surface-muted-hover-light: $color-transparent-gray-hover;
+$surface-muted-hover-dark: rgba($color-baby-blue-ice, 0.14);
+
+$border-light: rgba($color-ocean-deep, 0.18);
+$border-dark: rgba($color-baby-blue-ice, 0.22);
+
+$overlay-light: rgba($color-baby-blue-ice, 0.34);
+$overlay-dark: rgba($color-space-1, 0.58);
+
+$overlay-border-dark: rgba($color-primary, 0.5);
+
+$modal-radius-desktop: 16px;
+$modal-radius-mobile: 14px;
+
+$modal-padding-desktop: 20px;
+$modal-padding-mobile: 16px;
+$modal-padding-mobile-sm: 14px;
+
+$icon-button-size: 32px;
+$icon-button-size-lg: 42px;
+$icon-button-size-mobile: 32px;
+
+$close-button-size: 40px;
+$close-button-size-mobile: 36px;
+
+@mixin theme-custom-properties {
+  --theme-orange-frame: #{$color-orange-frame};
+}

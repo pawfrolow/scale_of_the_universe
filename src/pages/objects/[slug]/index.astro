@@ -2,6 +2,8 @@
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.astro';
 import Footer from '@/components/Footer/Footer.astro';
 import Header from '@/components/Header/Header.astro';
+import SeoPageHeading from '@/components/SeoPageHeading/SeoPageHeading.astro';
+import seoStyles from '@/layouts/SeoLayout.module.scss';
 import SeoLayout from '@/layouts/SeoLayout.astro';
 import {
   APP_ORIGIN,
@@ -23,10 +25,12 @@ export async function getStaticPaths() {
     return [];
   }
 
-  return locale.objects.map((object) => ({
-    params: { slug: object.slug },
-    props: { object },
-  }));
+  return locale.objects.flatMap((object) =>
+    [object.slug, ...object.slugAliases].map((slug) => ({
+      params: { slug },
+      props: { object },
+    })),
+  );
 }
 
 const locales = await getLocales();
@@ -46,6 +50,7 @@ const breadcrumbs = [
   { label: locale.navLabels.objects, href: locale.objectIndexPath },
   { label: object.title, href: object.path },
 ];
+const startObjectHref = `${locale.path}?object=${encodeURIComponent(object.id)}`;
 ---
 
 <SeoLayout
@@ -59,21 +64,23 @@ const breadcrumbs = [
   structuredData={[buildObjectStructuredData(locale, object), buildBreadcrumbStructuredData(breadcrumbs)]}
   title={title}
 >
-  <div class="seo-static-shell">
-    <Header locale={locale} locales={locales} page={{ type: 'object', id: object.id }} />
-    <main class="page">
+  <div class={seoStyles.shell}>
+    <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'object', id: object.id }} />
+    <main class={seoStyles.page}>
       <Breadcrumbs items={breadcrumbs} />
-      <section class="hero">
-        <div>
-          <h1>{object.title}</h1>
-          <p class="size" set:html={buildSizeHtml(object.sizeText)} />
-          <p>{object.description}</p>
-          <a class="button" href={locale.path}>{locale.startScreen.startText}</a>
-        </div>
-        <div class="image-wrap">
-          <img src={object.imageSrc} alt={object.title} loading="eager" />
-        </div>
-      </section>
+      <div class={seoStyles.contentIsland}>
+        <section class={seoStyles.hero}>
+          <div>
+            <SeoPageHeading title={object.title} description={object.description}>
+              <p slot="after-title" class={seoStyles.size} set:html={buildSizeHtml(object.sizeText)} />
+              <a class={seoStyles.button} href={startObjectHref}>{locale.objectPage.openOnScaleAction}</a>
+            </SeoPageHeading>
+          </div>
+          <div class={seoStyles.imageWrap}>
+            <img src={object.imageSrc} alt={object.title} loading="eager" />
+          </div>
+        </section>
+      </div>
     </main>
     <Footer locale={locale} appVersion={appVersion} />
   </div>

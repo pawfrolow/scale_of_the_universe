@@ -12,3 +12,5 @@ export { ModalHeader } from './ModalHeader/ModalHeader';
 export { IconButton } from './IconButton/IconButton';
 export { StartScreen } from './StartScreen/StartScreen';
 export { Version } from './Version/Version';
+export { ParallaxStars } from './ParallaxStars/ParallaxStars';
+export { CanvasWarpStars } from './CanvasWarpStars/CanvasWarpStars';

@@ -6,6 +6,7 @@ import { ScaleText } from '@/classes/scaleText';
 import { Slider } from '@/classes/slider';
 import { Universe } from '@/classes/universe';
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '@/config';
+import { checkMobileDevice } from '@/helpers/checkMobileDevice';
 import { getTextureIdsFromManifest } from '@/helpers/getTextureIdsFromManifest';
 import { map } from '@/helpers/map';
 import { nextFrame } from '@/helpers/nextFrame';
@@ -36,22 +37,26 @@ const getScaleExpByPercent = (percent: number) => {
 
 interface IUseUniverseParams {
   containerRef: RefObject<HTMLDivElement | null>;
+  initialObjectId?: string;
   isStarted: boolean;
   isItemModalOpen: boolean;
   onAssetsLoading: () => void;
   onAssetsReady: () => void;
   onAssetsProgress?: (progress: number) => void;
+  onInitialObjectFocused?: () => void;
   onItemModalOpen: (data: ItemModalData) => void;
   onItemModalClose: () => void;
 }
 
 export const useUniverse = ({
   containerRef,
+  initialObjectId,
   isStarted,
   isItemModalOpen,
   onAssetsLoading,
   onAssetsReady,
   onAssetsProgress,
+  onInitialObjectFocused,
   onItemModalOpen,
   onItemModalClose,
 }: IUseUniverseParams) => {
@@ -163,9 +168,7 @@ export const useUniverse = ({
 
       let universe: Universe | null = null;
       let scaleText: ScaleText | null = null;
-      const isMobileDevice =
-        typeof window !== 'undefined' &&
-        (window.matchMedia?.('(pointer: coarse)').matches ?? 'ontouchstart' in window);
+      const isMobileDevice = checkMobileDevice();
       let lastAppliedPercent: number | null = null;
 
       const onHandleClicked = () => {
@@ -248,7 +251,10 @@ export const useUniverse = ({
 
       universe = new Universe(0, slider, app, onItemModalOpen, onItemModalClose);
       universeRef.current = universe;
-      scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0');
+      const scaleTextX = isMobileDevice
+        ? (w * 0.9 - 30) / globalResolution
+        : (w * 0.9) / globalResolution;
+      scaleText = new ScaleText(scaleTextX, slider.topY - 40, '0');
 
       app.stage.addChild(
         universe.container,
@@ -338,6 +344,14 @@ export const useUniverse = ({
       if (!isDestroyed) {
         onAssetsProgress?.(100);
         onAssetsReady();
+
+        if (initialObjectId) {
+          void universe.focusItemById(initialObjectId).then((isFocused) => {
+            if (!isDestroyed && isFocused) {
+              onInitialObjectFocused?.();
+            }
+          });
+        }
       }
     };
 
@@ -403,5 +417,5 @@ export const useUniverse = ({
       initializedRef.current = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [containerRef, isStarted]);
+  }, [containerRef, initialObjectId, isStarted, onInitialObjectFocused]);
 };

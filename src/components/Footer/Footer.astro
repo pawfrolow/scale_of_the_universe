@@ -1,5 +1,6 @@
 ---
 import { COPYRIGHT_YEAR } from '@/services/seo-static.service';
+import styles from './styles.module.scss';
 import type { TSeoLocale } from '@/services/seo-static.service';
 
 type Props = {
@@ -10,78 +11,9 @@ type Props = {
 const { appVersion, locale } = Astro.props;
 ---
 
-<footer class="site-footer-band">
-  <div class="site-footer">
-    <nav class="site-footer-links" aria-label="Footer">
-      <a href={locale.aboutPath} data-not-found-link="about" data-not-found-text="navAbout">{locale.navLabels.about}</a>
-      <a href={locale.objectIndexPath} data-not-found-link="objects" data-not-found-text="navObjects">{locale.navLabels.objects}</a>
-      <a href="#donate-modal" data-donate-open data-not-found-text="navDonate">{locale.navLabels.donate}</a>
-    </nav>
-    <div class="footer-meta">
-      <span>v{appVersion}</span>
-      <span>{COPYRIGHT_YEAR}</span>
-    </div>
+<footer class={styles.footerBand}>
+  <div class={styles.footer}>
+    <span>{COPYRIGHT_YEAR}. {locale.startScreen.title}</span>
+    <span>v{appVersion}</span>
   </div>
 </footer>
-
-<style>
-  .site-footer-band {
-    flex-shrink: 0;
-    width: 100%;
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
-    background: rgba(255, 255, 255, 0.78);
-  }
-
-  .site-footer {
-    width: min(1120px, 100%);
-    margin: 0 auto;
-    padding: 22px calc(24px + var(--safe-area-right)) calc(22px + var(--safe-area-bottom))
-      calc(24px + var(--safe-area-left));
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
-
-  .site-footer-links {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    min-width: 0;
-  }
-
-  .site-footer-links a {
-    color: rgba(17, 24, 39, 0.8);
-    font-size: 0.875rem;
-    text-decoration: none;
-    word-break: break-word;
-  }
-
-  .site-footer-links a:hover {
-    color: #1d4ed8;
-  }
-
-  .footer-meta {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-shrink: 0;
-    color: rgba(17, 24, 39, 0.72);
-    font-size: 0.8125rem;
-  }
-
-  @media (max-width: 767px) {
-    .site-footer {
-      padding: 18px calc(16px + var(--safe-area-right)) calc(18px + var(--safe-area-bottom))
-        calc(16px + var(--safe-area-left));
-      flex-direction: column;
-      align-items: stretch;
-      gap: 12px;
-    }
-
-    .footer-meta {
-      justify-content: space-between;
-    }
-  }
-</style>

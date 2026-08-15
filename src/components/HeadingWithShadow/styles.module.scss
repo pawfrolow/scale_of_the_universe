@@ -1,0 +1,47 @@
+.heading {
+  position: relative;
+  isolation: isolate;
+  margin: 0;
+  color: var(--theme-orange-frame, #ffba08);
+  font-family: var(--font-brand);
+  font-size: 56px;
+  line-height: 1.04;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-shadow: 0 18px 48px rgba(111, 156, 235, 0.18);
+  word-break: break-word;
+}
+
+.heading::after {
+  content: attr(data-text-shadow);
+  position: absolute;
+  left: 0.0575em;
+  top: 0.0575em;
+  z-index: -1;
+  width: 100%;
+  color: transparent;
+  text-shadow: none;
+  background: var(--theme-red, #d52941);
+  background-size: 4px 4px;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@media screen and (max-width: 900px) {
+  .heading {
+    max-width: 720px;
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .heading {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .heading {
+    font-size: 30px;
+  }
+}

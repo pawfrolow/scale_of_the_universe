@@ -1,6 +1,6 @@
 {
   "name": "sotu",
-  "version": "1.9.1",
+  "version": "1.9.5",
   "description": "scale of the universe visualization",
   "type": "module",
   "scripts": {
@@ -46,15 +46,15 @@
     "shifty": "^3.0.6"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/react": "^5.0.0",
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/react": "^6.0.2",
     "@eslint/js": "^9.39.4",
     "@types/node": "^22.12.0",
     "@types/numeral": "^2.0.5",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-legacy": "^7.2.1",
-    "astro": "^6.3.1",
+    "astro": "^7.2.2",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",

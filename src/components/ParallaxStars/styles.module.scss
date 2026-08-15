@@ -1,0 +1,115 @@
+@use 'sass:list';
+@use 'sass:math';
+
+$star-field-size: 2000;
+
+@function star-shadows($count) {
+  $shadows: ();
+
+  @for $index from 1 through $count {
+    $shadow: #{math.random($star-field-size)}px #{math.random($star-field-size)}px #fff;
+    $shadows: list.append($shadows, $shadow, comma);
+  }
+
+  @return $shadows;
+}
+
+$shadows-small: star-shadows(700);
+$shadows-medium: star-shadows(200);
+$shadows-big: star-shadows(100);
+
+.parallaxStars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  overflow: clip;
+  contain: strict;
+  background: radial-gradient(ellipse at bottom, #0f1234 0%, #0b0d23 100%);
+  pointer-events: none;
+}
+
+:global(#stars),
+:global(#stars2),
+:global(#stars3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  animation: animStar 50s linear infinite;
+  contain: paint;
+  will-change: transform;
+}
+
+:global(#stars),
+:global(#stars)::after {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+}
+
+:global(#stars) {
+  animation: animStar 50s linear infinite;
+}
+
+:global(#stars2),
+:global(#stars2)::after {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+}
+
+:global(#stars2) {
+  animation-duration: 100s;
+}
+
+:global(#stars3),
+:global(#stars3)::after {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+}
+
+:global(#stars3) {
+  animation-duration: 150s;
+}
+
+:global(#stars)::after,
+:global(#stars2)::after,
+:global(#stars3)::after {
+  content: ' ';
+  position: absolute;
+  top: #{$star-field-size}px;
+  left: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(#stars),
+  :global(#stars2),
+  :global(#stars3) {
+    animation: none;
+  }
+
+  :global(#stars)::after,
+  :global(#stars2)::after,
+  :global(#stars3)::after {
+    display: none;
+  }
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-#{$star-field-size}px);
+  }
+}

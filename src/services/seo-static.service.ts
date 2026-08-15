@@ -16,7 +16,7 @@ export const DONATE_LINKS = [
     iconSrc: '/img/icons/boosty.svg',
   },
 ] as const;
-export const CONTACT_EMAIL = 'paw.frolow@gmail.com';
+export const CONTACT_EMAIL = 'paw.frolow@icloud.com';
 export const CREDIT_LINKS = {
   webDev: 'https://github.com/matttt/scale_of_the_universe',
   copyright: 'https://www.htwins.net/scale2/',
@@ -55,39 +55,50 @@ const OG_LOCALE_MAP: Record<string, string> = {
 };
 
 export const OBJECT_SCALE_GROUPS = [
-  { minSize: 0, maxSize: 1e-24, ruLabel: 'Субатомные масштабы', enLabel: 'Subatomic scales' },
-  { minSize: 1e-24, maxSize: 1e-18, ruLabel: 'Частицы', enLabel: 'Particles' },
-  { minSize: 1e-18, maxSize: 1e-12, ruLabel: 'Атомы и молекулы', enLabel: 'Atoms and molecules' },
-  { minSize: 1e-12, maxSize: 1e-6, ruLabel: 'Микромир', enLabel: 'Microworld' },
-  {
-    minSize: 1e-6,
-    maxSize: 1e-3,
-    ruLabel: 'Миллиметры и сантиметры',
-    enLabel: 'Millimeters and centimeters',
-  },
-  { minSize: 1e-3, maxSize: 1e3, ruLabel: 'Человеческие масштабы', enLabel: 'Human scales' },
-  {
-    minSize: 1e3,
-    maxSize: 1e6,
-    ruLabel: 'Здания и ландшафты',
-    enLabel: 'Buildings and landscapes',
-  },
-  { minSize: 1e6, maxSize: 1e9, ruLabel: 'Планеты', enLabel: 'Planets' },
-  { minSize: 1e9, maxSize: 1e12, ruLabel: 'Звезды', enLabel: 'Stars' },
-  { minSize: 1e12, maxSize: 1e16, ruLabel: 'Солнечная система', enLabel: 'Solar system' },
-  {
-    minSize: 1e16,
-    maxSize: 1e22,
-    ruLabel: 'Межзвездные масштабы',
-    enLabel: 'Interstellar scales',
-  },
-  {
-    minSize: 1e22,
-    maxSize: Infinity,
-    ruLabel: 'Галактики и Вселенная',
-    enLabel: 'Galaxies and the Universe',
-  },
+  { key: 'subatomic', minSize: 0, maxSize: 1e-24 },
+  { key: 'particles', minSize: 1e-24, maxSize: 1e-18 },
+  { key: 'atomsMolecules', minSize: 1e-18, maxSize: 1e-12 },
+  { key: 'microworld', minSize: 1e-12, maxSize: 1e-6 },
+  { key: 'smallObjects', minSize: 1e-6, maxSize: 1e-3 },
+  { key: 'humanScales', minSize: 1e-3, maxSize: 1e3 },
+  { key: 'buildingsLandscapes', minSize: 1e3, maxSize: 1e6 },
+  { key: 'planets', minSize: 1e6, maxSize: 1e9 },
+  { key: 'stars', minSize: 1e9, maxSize: 1e12 },
+  { key: 'solarSystem', minSize: 1e12, maxSize: 1e16 },
+  { key: 'interstellar', minSize: 1e16, maxSize: 1e22 },
+  { key: 'galaxiesUniverse', minSize: 1e22, maxSize: Infinity },
 ] as const;
+
+const OBJECT_SCALE_GROUP_LABEL_FALLBACKS = {
+  ru: {
+    subatomic: 'Субатомные масштабы',
+    particles: 'Частицы',
+    atomsMolecules: 'Атомы и молекулы',
+    microworld: 'Микромир',
+    smallObjects: 'Миллиметры и сантиметры',
+    humanScales: 'Человеческие масштабы',
+    buildingsLandscapes: 'Здания и ландшафты',
+    planets: 'Планеты',
+    stars: 'Звезды',
+    solarSystem: 'Солнечная система',
+    interstellar: 'Межзвездные масштабы',
+    galaxiesUniverse: 'Галактики и Вселенная',
+  },
+  en: {
+    subatomic: 'Subatomic scales',
+    particles: 'Particles',
+    atomsMolecules: 'Atoms and molecules',
+    microworld: 'Microworld',
+    smallObjects: 'Millimeters and centimeters',
+    humanScales: 'Human scales',
+    buildingsLandscapes: 'Buildings and landscapes',
+    planets: 'Planets',
+    stars: 'Stars',
+    solarSystem: 'Solar system',
+    interstellar: 'Interstellar scales',
+    galaxiesUniverse: 'Galaxies and the Universe',
+  },
+} satisfies Record<'ru' | 'en', Record<(typeof OBJECT_SCALE_GROUPS)[number]['key'], string>>;
 
 type TJsonRecord = {
   [key: string]: TJsonRecord | undefined;
@@ -96,6 +107,7 @@ type TJsonRecord = {
 export type TSeoObject = {
   id: string;
   slug: string;
+  slugAliases: string[];
   title: string;
   description: string;
   path: string;
@@ -103,6 +115,26 @@ export type TSeoObject = {
   imageSrc: string;
   sizeMeters: number;
   sizeText: string;
+};
+
+export type TObjectsSearchCopy = {
+  label: string;
+  placeholder: string;
+  clear: string;
+  empty: string;
+};
+
+export type TAboutPageCopy = {
+  paragraphs: string[];
+  history: {
+    beforeOriginalLink: string;
+    originalLinkLabel: string;
+    afterLinks: string;
+  };
+  contact: {
+    beforeEmail: string;
+    afterEmail: string;
+  };
 };
 
 export type TSeoLocale = {
@@ -123,11 +155,15 @@ export type TSeoLocale = {
   ui: TJsonRecord;
   units: TJsonRecord;
   objects: TSeoObject[];
+  aboutPage: TAboutPageCopy;
   navLabels: {
     about: string;
     objects: string;
     language: string;
     donate: string;
+  };
+  objectPage: {
+    openOnScaleAction: string;
   };
   startScreen: {
     title: string;
@@ -179,6 +215,14 @@ export const normalizeText = (value: unknown) =>
   String(value ?? '')
     .replace(/\s+/g, ' ')
     .trim();
+
+const normalizeTextOrFallback = (value: unknown, fallback: string) =>
+  normalizeText(value) || fallback;
+
+const toRecord = (value: unknown): Record<string, unknown> =>
+  value && typeof value === 'object' && !Array.isArray(value)
+    ? (value as Record<string, unknown>)
+    : {};
 
 const dedupeTexts = (values: string[]) => {
   const seen = new Set<string>();
@@ -308,6 +352,109 @@ const getNavLabels = (language: string, ui: TJsonRecord) => {
   };
 };
 
+const getFallbackObjectsSearchCopy = (language: string): TObjectsSearchCopy =>
+  language === DEFAULT_LANGUAGE
+    ? {
+        label: 'Поиск объектов',
+        placeholder: 'Название объекта',
+        clear: 'Очистить',
+        empty: 'Объекты не найдены.',
+      }
+    : {
+        label: 'Search objects',
+        placeholder: 'Object name',
+        clear: 'Clear',
+        empty: 'No objects found.',
+      };
+
+export const getObjectsSearchCopy = (locale: TSeoLocale): TObjectsSearchCopy => {
+  const fallback = getFallbackObjectsSearchCopy(locale.language);
+  const copy = locale.ui.html?.objectsSearch;
+
+  return {
+    label: normalizeText(copy?.label ?? fallback.label),
+    placeholder: normalizeText(copy?.placeholder ?? fallback.placeholder),
+    clear: normalizeText(copy?.clear ?? fallback.clear),
+    empty: normalizeText(copy?.empty ?? fallback.empty),
+  };
+};
+
+const getObjectPageCopy = (language: string, ui: TJsonRecord) => ({
+  openOnScaleAction: normalizeText(
+    ui.html?.object?.openOnScaleAction ??
+      (language === DEFAULT_LANGUAGE ? 'Открыть на шкале' : 'Open on scale'),
+  ),
+});
+
+const ABOUT_PAGE_FALLBACKS = {
+  ru: {
+    paragraphs: [
+      '«Шкала масштабов Вселенной» — это интерактивная визуализация, которая помогает наглядно почувствовать размеры объектов вокруг нас: от мельчайших элементарных частиц до планет, звёзд, галактик и наблюдаемой Вселенной. Все объекты собраны на одной непрерывной шкале, поэтому их проще сравнить между собой — даже если в обычной жизни такие масштабы почти невозможно представить рядом.',
+      'Размеры объектов часто указаны как приближённые или характерные значения. В некоторых случаях используется средний размер, типичный пример или удобная для сравнения величина, чтобы разные объекты могли существовать на общей шкале и оставаться понятными для восприятия.',
+      'Первая версия проекта появилась в 2010 году как Flash-приложение и быстро стала популярным образовательным инструментом. Со временем идея развивалась: появились новые данные, современные веб-технологии, дополнительные локализации и более удобный формат для изучения масштаба Вселенной.',
+      'Оригинальную Scale of the Universe создали Кэри Хуан и его брат Майкл Хуан. Их работа стала одним из самых узнаваемых интерактивных проектов о размерах объектов во Вселенной и вдохновила многих людей интересоваться наукой, космосом и визуализацией данных.',
+    ],
+    history: {
+      beforeOriginalLink: 'Эта версия проекта основана на',
+      originalLinkLabel: 'веб-реализации шкалы Мэтью Мартори',
+      afterLinks: '. Проект постепенно обновляется и дополняется.',
+    },
+    contact: {
+      beforeEmail: 'Если у вас есть предложения по улучшению проекта, напишите мне на',
+      afterEmail: '.',
+    },
+  },
+  en: {
+    paragraphs: [
+      'The Scale of the Universe is an interactive visualization that helps you get an intuitive sense of the sizes of objects around us: from the smallest elementary particles to planets, stars, galaxies, and the observable Universe. All objects are placed on one continuous scale, making it easier to compare things that are almost impossible to imagine side by side in everyday life.',
+      'Object sizes are often shown as approximate or characteristic values. In some cases, an average size, a typical example, or a convenient comparison value is used so different objects can share one scale and remain easy to understand.',
+      'The first version of the project appeared in 2010 as a Flash application and quickly became a popular educational tool. Over time, the idea has evolved with new data, modern web technologies, additional localizations, and a more convenient format for exploring the scale of the Universe.',
+      'The original Scale of the Universe was created by Cary Huang and his brother Michael Huang. Their work became one of the most recognizable interactive projects about the sizes of objects in the Universe and inspired many people to take an interest in science, space, and data visualization.',
+    ],
+    history: {
+      beforeOriginalLink: 'This version of the project is based on',
+      originalLinkLabel: 'the web implementation of the scale by Matthew Martori',
+      afterLinks: '. The project is gradually updated and expanded.',
+    },
+    contact: {
+      beforeEmail: 'If you have ideas for improving the project, write to me at',
+      afterEmail: '.',
+    },
+  },
+} satisfies Record<'ru' | 'en', TAboutPageCopy>;
+
+const getFallbackAboutPageCopy = (language: string) =>
+  language === DEFAULT_LANGUAGE ? ABOUT_PAGE_FALLBACKS.ru : ABOUT_PAGE_FALLBACKS.en;
+
+const getAboutPageCopy = (language: string, ui: TJsonRecord): TAboutPageCopy => {
+  const fallback = getFallbackAboutPageCopy(language);
+  const about = toRecord(ui.html?.about);
+  const history = toRecord(about.history);
+  const contact = toRecord(about.contact);
+  const configuredParagraphs = Array.isArray(about.paragraphs)
+    ? about.paragraphs.map((paragraph) => normalizeText(paragraph)).filter(Boolean)
+    : [];
+
+  return {
+    paragraphs: configuredParagraphs.length > 0 ? configuredParagraphs : fallback.paragraphs,
+    history: {
+      beforeOriginalLink: normalizeTextOrFallback(
+        history.beforeOriginalLink,
+        fallback.history.beforeOriginalLink,
+      ),
+      originalLinkLabel: normalizeTextOrFallback(
+        history.originalLinkLabel,
+        fallback.history.originalLinkLabel,
+      ),
+      afterLinks: normalizeTextOrFallback(history.afterLinks, fallback.history.afterLinks),
+    },
+    contact: {
+      beforeEmail: normalizeTextOrFallback(contact.beforeEmail, fallback.contact.beforeEmail),
+      afterEmail: normalizeTextOrFallback(contact.afterEmail, fallback.contact.afterEmail),
+    },
+  };
+};
+
 const createObjectSlugMap = (englishObjectTranslations: TJsonRecord) => {
   const translatedObjects = englishObjectTranslations.items ?? {};
   const slugEntries = new Map<string, string>();
@@ -338,6 +485,54 @@ const createObjectSlugMap = (englishObjectTranslations: TJsonRecord) => {
   return slugEntries;
 };
 
+const normalizeObjectId = (id: string | number) => String(id).padStart(3, '0');
+
+const createObjectSlugOverrideMap = (language: string, override: TItemsOverride | null) => {
+  const slugs = new Map<string, string>();
+
+  Object.entries(override?.slugs ?? {}).forEach(([rawId, slugValue]) => {
+    const id = normalizeObjectId(rawId);
+    const slug = createObjectSlug(slugValue);
+
+    if (!slug) {
+      throw new Error(`Empty object slug override for ${language}:${id}`);
+    }
+
+    slugs.set(id, slug);
+  });
+
+  return slugs;
+};
+
+const validateSeoObjectSlugs = (language: string, objects: TSeoObject[]) => {
+  const primarySlugOwners = new Map<string, string>();
+  const routeSlugOwners = new Map<string, string>();
+
+  objects.forEach((object) => {
+    const existingPrimaryId = primarySlugOwners.get(object.slug);
+
+    if (existingPrimaryId) {
+      throw new Error(
+        `Duplicate object slug "${object.slug}" for locale ${language}: ${existingPrimaryId} and ${object.id}`,
+      );
+    }
+
+    primarySlugOwners.set(object.slug, object.id);
+
+    [object.slug, ...object.slugAliases].forEach((slug) => {
+      const existingRouteId = routeSlugOwners.get(slug);
+
+      if (existingRouteId && existingRouteId !== object.id) {
+        throw new Error(
+          `Duplicate object route slug "${slug}" for locale ${language}: ${existingRouteId} and ${object.id}`,
+        );
+      }
+
+      routeSlugOwners.set(slug, object.id);
+    });
+  });
+};
+
 const createSeoObjects = ({
   language,
   manifest,
@@ -355,8 +550,9 @@ const createSeoObjects = ({
 }) => {
   const frames = manifest.frames ?? {};
   const translatedObjects = objectTranslations.items ?? {};
+  const slugOverrides = createObjectSlugOverrideMap(language, override);
 
-  return Object.entries(frames)
+  const objects = Object.entries(frames)
     .map(([id, frame]) => {
       const objectText = translatedObjects[id];
 
@@ -366,17 +562,20 @@ const createSeoObjects = ({
 
       const title = normalizeText(objectText.title);
       const description = normalizeText(objectText.description);
-      const slug = objectSlugs.get(id);
+      const englishSlug = objectSlugs.get(id);
 
-      if (!slug) {
+      if (!englishSlug) {
         throw new Error(`Missing English object slug for ${id}`);
       }
 
+      const slug = slugOverrides.get(id) ?? englishSlug;
+      const slugAliases = slug === englishSlug ? [] : [englishSlug];
       const path = getObjectSlugPath(language, slug);
 
       return {
         id,
         slug,
+        slugAliases,
         title,
         description,
         path,
@@ -388,6 +587,10 @@ const createSeoObjects = ({
     })
     .filter(Boolean)
     .sort((left, right) => Number(left!.id) - Number(right!.id)) as TSeoObject[];
+
+  validateSeoObjectSlugs(language, objects);
+
+  return objects;
 };
 
 let localesCache: Promise<TSeoLocale[]> | null = null;
@@ -466,7 +669,9 @@ const loadLocales = async () => {
         ui,
         units,
         objects,
+        aboutPage: getAboutPageCopy(language, ui),
         navLabels,
+        objectPage: getObjectPageCopy(language, ui),
         startScreen: {
           title: normalizeText(ui.html?.modal?.title ?? appTitle),
           startText: normalizeText(ui.html?.modal?.startButton ?? ui.app?.start ?? 'Start'),
@@ -576,9 +781,16 @@ export const getObjectScaleGroup = (object: TSeoObject) =>
   ) ?? OBJECT_SCALE_GROUPS.at(-1);
 
 export const getObjectScaleGroupLabel = (
-  language: string,
+  locale: TSeoLocale,
   group: (typeof OBJECT_SCALE_GROUPS)[number],
-) => (language === DEFAULT_LANGUAGE ? group.ruLabel : group.enLabel);
+) => {
+  const fallback =
+    locale.language === DEFAULT_LANGUAGE
+      ? OBJECT_SCALE_GROUP_LABEL_FALLBACKS.ru[group.key]
+      : OBJECT_SCALE_GROUP_LABEL_FALLBACKS.en[group.key];
+
+  return normalizeTextOrFallback(locale.ui.html?.objectScaleGroups?.[group.key], fallback);
+};
 
 export const buildSizeHtml = (sizeText: string) => {
   const match = sizeText.match(/^(.*?) x 10\^(-?\d+) (.*)$/u);

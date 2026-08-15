@@ -16,6 +16,11 @@
       "ogTitle": "Scara Universului",
       "ogDescription": "O comparație a dimensiunilor diferitelor obiecte — de la particule elementare până la galaxii."
     },
+    "nav": {
+      "about": "Despre proiect",
+      "objects": "Obiecte",
+      "language": "Limbă"
+    },
     "modal": {
       "title": "Scara Universului",
       "zoomHint": "Folosiți bara de derulare pentru a mări și a micșora.",
@@ -23,6 +28,23 @@
       "startButton": "Începe",
       "startLoading": "Se încarcă...",
       "selectLanguage": "Alegeți limba"
+    },
+    "object": {
+      "openOnScaleAction": "Deschide pe scară"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Scări subatomice",
+      "particles": "Particule",
+      "atomsMolecules": "Atomi și molecule",
+      "microworld": "Microlumea",
+      "smallObjects": "Milimetri și centimetri",
+      "humanScales": "Scări umane",
+      "buildingsLandscapes": "Clădiri și peisaje",
+      "planets": "Planete",
+      "stars": "Stele",
+      "solarSystem": "Sistemul solar",
+      "interstellar": "Scări interstelare",
+      "galaxiesUniverse": "Galaxii și Universul"
     },
     "credits": {
       "createdBy": "Creat de: Cary Huang, Michael Huang",
@@ -40,6 +62,12 @@
       "description": "Pagina pe care o cauți nu există sau a fost mutată.",
       "homeAction": "Mergi la pagina principală",
       "objectsAction": "Răsfoiește obiectele"
+    },
+    "objectsSearch": {
+      "label": "Caută obiecte",
+      "placeholder": "Numele obiectului",
+      "clear": "Șterge",
+      "empty": "Nu s-au găsit obiecte."
     }
   }
 }

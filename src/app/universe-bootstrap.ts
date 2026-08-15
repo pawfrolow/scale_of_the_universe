@@ -7,13 +7,15 @@ const ROOT_ID = 'universe-runtime-root';
 const SEO_LOCALE_DATA_ID = 'seo-locale-data';
 const START_SELECTOR = '[data-universe-start]';
 const LOADING_TEXT_SELECTOR = '[data-universe-start-text]';
-const BOOTSTRAP_STATE_VERSION = 2;
+const BOOTSTRAP_STATE_VERSION = 3;
+const INITIAL_OBJECT_QUERY_PARAM = 'object';
 
 type RuntimeModule = typeof import('./universe-runtime-loader');
 
 interface BootstrapState {
   abortController: AbortController | null;
   isDomReadyQueued: boolean;
+  isMounting: boolean;
   isMounted: boolean;
   runtimePromise: Promise<RuntimeModule> | null;
   version: number;
@@ -31,6 +33,7 @@ const getBootstrapState = (): BootstrapState => {
     bootstrapWindow.__sotuUniverseBootstrapState = {
       abortController: null,
       isDomReadyQueued: false,
+      isMounting: false,
       isMounted: false,
       runtimePromise: null,
       version: BOOTSTRAP_STATE_VERSION,
@@ -72,6 +75,23 @@ const getInitialLanguage = (root: HTMLElement | null) => {
   return root.dataset.initialLanguage as UniverseAppProps['initialLanguage'];
 };
 
+const getInitialObjectId = () => {
+  const objectId = new URLSearchParams(window.location.search).get(INITIAL_OBJECT_QUERY_PARAM);
+
+  return objectId?.trim() || undefined;
+};
+
+const removeInitialObjectParam = () => {
+  const url = new URL(window.location.href);
+
+  if (!url.searchParams.has(INITIAL_OBJECT_QUERY_PARAM)) {
+    return;
+  }
+
+  url.searchParams.delete(INITIAL_OBJECT_QUERY_PARAM);
+  window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
+};
+
 const setButtonLoading = (button: HTMLButtonElement, isLoading: boolean) => {
   const label = button.querySelector(LOADING_TEXT_SELECTOR);
   const startText = button.dataset.startText ?? '';
@@ -93,6 +113,8 @@ const getStartButton = (target: EventTarget | null) => {
   return target.closest(START_SELECTOR) as HTMLButtonElement | null;
 };
 
+const queryStartButton = () => document.querySelector(START_SELECTOR) as HTMLButtonElement | null;
+
 const startTexturePreload = () => {
   const initialLanguage = getInitialLanguage(getRoot());
 
@@ -103,10 +125,10 @@ const startTexturePreload = () => {
   void startUniverseTexturePreload(initialLanguage);
 };
 
-const mountRuntime = async (button: HTMLButtonElement) => {
+const mountRuntime = async (button?: HTMLButtonElement) => {
   const state = getBootstrapState();
 
-  if (state.isMounted) {
+  if (state.isMounted || state.isMounting) {
     return;
   }
 
@@ -121,7 +143,11 @@ const mountRuntime = async (button: HTMLButtonElement) => {
     void startUniverseTexturePreload(initialLanguage);
   }
 
-  setButtonLoading(button, true);
+  if (button) {
+    setButtonLoading(button, true);
+  }
+
+  state.isMounting = true;
 
   try {
     const runtimeLoader = await loadRuntime();
@@ -131,16 +157,22 @@ const mountRuntime = async (button: HTMLButtonElement) => {
 
     runtime.mountUniverseRuntime(root, {
       autoStart: true,
+      initialObjectId: getInitialObjectId(),
       initialLanguage,
+      onInitialObjectFocused: removeInitialObjectParam,
       seoLocaleData,
     });
     state.isMounted = true;
   } catch (error) {
     state.isMounted = false;
     state.runtimePromise = null;
-    setButtonLoading(button, false);
+    if (button) {
+      setButtonLoading(button, false);
+    }
     // eslint-disable-next-line no-console
     console.error(error);
+  } finally {
+    state.isMounting = false;
   }
 };
 
@@ -186,6 +218,10 @@ const setupUniverseBootstrap = () => {
   );
 
   startTexturePreload();
+
+  if (getInitialObjectId()) {
+    void mountRuntime(queryStartButton() ?? undefined);
+  }
 };
 
 export const initUniverseBootstrap = () => {

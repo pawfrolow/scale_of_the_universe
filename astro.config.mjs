@@ -1,4 +1,5 @@
 import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
 
 import react from '@astrojs/react';
 import { defineConfig } from 'astro/config';
@@ -12,8 +13,16 @@ export default defineConfig({
   outDir: 'dist',
   publicDir: 'public',
   integrations: [react()],
+  devToolbar: {
+    enabled: false,
+  },
   vite: {
     plugins: [tsconfigPaths()],
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+      },
+    },
     define: {
       __APP_VERSION__: JSON.stringify(pkg.version),
     },

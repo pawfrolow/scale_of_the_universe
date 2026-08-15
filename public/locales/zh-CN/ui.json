@@ -16,6 +16,11 @@
       "ogTitle": "宇宙的刻度",
       "ogDescription": "比较各种物体的大小——从基本粒子到星系。"
     },
+    "nav": {
+      "about": "关于项目",
+      "objects": "对象",
+      "language": "语言"
+    },
     "modal": {
       "title": "宇宙的刻度",
       "zoomHint": "使用滚动条进行放大和缩小。",
@@ -23,6 +28,23 @@
       "startButton": "开始",
       "startLoading": "加载中...",
       "selectLanguage": "选择语言"
+    },
+    "object": {
+      "openOnScaleAction": "在尺度上打开"
+    },
+    "objectScaleGroups": {
+      "subatomic": "亚原子尺度",
+      "particles": "粒子",
+      "atomsMolecules": "原子和分子",
+      "microworld": "微观世界",
+      "smallObjects": "毫米和厘米",
+      "humanScales": "人类尺度",
+      "buildingsLandscapes": "建筑与景观",
+      "planets": "行星",
+      "stars": "恒星",
+      "solarSystem": "太阳系",
+      "interstellar": "星际尺度",
+      "galaxiesUniverse": "星系与宇宙"
     },
     "credits": {
       "createdBy": "作者：Cary Huang、Michael Huang",
@@ -40,6 +62,12 @@
       "description": "你要查找的页面不存在或已被移动。",
       "homeAction": "返回首页",
       "objectsAction": "浏览对象"
+    },
+    "objectsSearch": {
+      "label": "搜索对象",
+      "placeholder": "对象名称",
+      "clear": "清除",
+      "empty": "未找到对象。"
     }
   }
 }

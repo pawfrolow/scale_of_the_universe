@@ -16,6 +16,11 @@
       "ogTitle": "La Escala del Universo",
       "ogDescription": "Una comparación de los tamaños de diversos objetos, desde partículas elementales hasta galaxias."
     },
+    "nav": {
+      "about": "Acerca del proyecto",
+      "objects": "Objetos",
+      "language": "Idioma"
+    },
     "modal": {
       "title": "La Escala del Universo",
       "zoomHint": "Usa la barra de desplazamiento para acercar y alejar.",
@@ -23,6 +28,23 @@
       "startButton": "Comenzar",
       "startLoading": "Cargando...",
       "selectLanguage": "Selecciona un idioma"
+    },
+    "object": {
+      "openOnScaleAction": "Abrir en la escala"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Escalas subatómicas",
+      "particles": "Partículas",
+      "atomsMolecules": "Átomos y moléculas",
+      "microworld": "Micromundo",
+      "smallObjects": "Milímetros y centímetros",
+      "humanScales": "Escalas humanas",
+      "buildingsLandscapes": "Edificios y paisajes",
+      "planets": "Planetas",
+      "stars": "Estrellas",
+      "solarSystem": "Sistema solar",
+      "interstellar": "Escalas interestelares",
+      "galaxiesUniverse": "Galaxias y Universo"
     },
     "credits": {
       "createdBy": "Creado por: Cary Huang, Michael Huang",
@@ -40,6 +62,12 @@
       "description": "La página que buscas no existe o se ha movido.",
       "homeAction": "Ir a la página principal",
       "objectsAction": "Ver objetos"
+    },
+    "objectsSearch": {
+      "label": "Buscar objetos",
+      "placeholder": "Nombre del objeto",
+      "clear": "Borrar",
+      "empty": "No se encontraron objetos."
     }
   }
 }

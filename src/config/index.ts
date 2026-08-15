@@ -6,6 +6,8 @@ export const MAX_COMMON_TEXTURES = 329;
 export const LANGUAGE_STORAGE_KEY = 'sotu_language';
 export const MUTED_STORAGE_KEY = 'sotu_muted';
 
+export const PIXI_TEXT_FONT_FAMILY = 'Inter';
+
 export const LEGACY_LANGUAGE_CODE_MAP = {
   ua: 'uk',
   'zh-CH': 'zh-CN',

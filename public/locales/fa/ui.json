@@ -16,6 +16,11 @@
       "ogTitle": "مقیاس جهان",
       "ogDescription": "مقایسهٔ اندازهٔ اجرام گوناگون — از ذرات بنیادی تا کهکشان‌ها."
     },
+    "nav": {
+      "about": "دربارهٔ پروژه",
+      "objects": "اشیا",
+      "language": "زبان"
+    },
     "modal": {
       "title": "مقیاس جهان ۲",
       "zoomHint": "برای بزرگ‌نمایی و کوچک‌نمایی از نوار پیمایش استفاده کنید.",
@@ -23,6 +28,23 @@
       "startButton": "شروع",
       "startLoading": "در حال بارگذاری...",
       "selectLanguage": "زبان را انتخاب کنید"
+    },
+    "object": {
+      "openOnScaleAction": "باز کردن روی مقیاس"
+    },
+    "objectScaleGroups": {
+      "subatomic": "مقیاس‌های زیراتمی",
+      "particles": "ذرات",
+      "atomsMolecules": "اتم‌ها و مولکول‌ها",
+      "microworld": "جهان میکروسکوپی",
+      "smallObjects": "میلی‌مترها و سانتی‌مترها",
+      "humanScales": "مقیاس‌های انسانی",
+      "buildingsLandscapes": "ساختمان‌ها و چشم‌اندازها",
+      "planets": "سیاره‌ها",
+      "stars": "ستاره‌ها",
+      "solarSystem": "منظومهٔ شمسی",
+      "interstellar": "مقیاس‌های میان‌ستاره‌ای",
+      "galaxiesUniverse": "کهکشان‌ها و جهان"
     },
     "credits": {
       "createdBy": "ایجادشده توسط: Cary Huang, Michael Huang",
@@ -40,6 +62,12 @@
       "description": "صفحه‌ای که به دنبال آن هستید وجود ندارد یا منتقل شده است.",
       "homeAction": "رفتن به صفحه اصلی",
       "objectsAction": "مرور اجسام"
+    },
+    "objectsSearch": {
+      "label": "جستجوی اشیاء",
+      "placeholder": "نام شیء",
+      "clear": "پاک کردن",
+      "empty": "هیچ شیئی پیدا نشد."
     }
   }
 }

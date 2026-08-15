@@ -6,8 +6,8 @@ import type { UniverseAppProps } from './App';
 
 import { queryClient } from '@/services/query-client';
 
-import '@/assets/css/reset.css';
-import '@/assets/css/styles.scss';
+import '@/styles/reset.css';
+import '@/app/global.scss';
 
 const UniverseApp = (props: UniverseAppProps) => (
   <QueryClientProvider client={queryClient}>
