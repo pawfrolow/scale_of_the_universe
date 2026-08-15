@@ -16,6 +16,11 @@
       "ogTitle": "مقياس الكون",
       "ogDescription": "مقارنة أحجام الأجسام المختلفة — من الجسيمات الأولية إلى المجرات."
     },
+    "nav": {
+      "about": "حول المشروع",
+      "objects": "الأجسام",
+      "language": "اللغة"
+    },
     "modal": {
       "title": "مقياس الكون",
       "zoomHint": "استخدم شريط التمرير للتكبير والتصغير.",
@@ -23,6 +28,23 @@
       "startButton": "ابدأ",
       "startLoading": "جارٍ التحميل...",
       "selectLanguage": "اختر اللغة"
+    },
+    "object": {
+      "openOnScaleAction": "افتح على المقياس"
+    },
+    "objectScaleGroups": {
+      "subatomic": "المقاييس دون الذرية",
+      "particles": "الجسيمات",
+      "atomsMolecules": "الذرات والجزيئات",
+      "microworld": "العالم المجهري",
+      "smallObjects": "المليمترات والسنتيمترات",
+      "humanScales": "المقاييس البشرية",
+      "buildingsLandscapes": "المباني والمناظر الطبيعية",
+      "planets": "الكواكب",
+      "stars": "النجوم",
+      "solarSystem": "النظام الشمسي",
+      "interstellar": "المقاييس بين النجمية",
+      "galaxiesUniverse": "المجرات والكون"
     },
     "credits": {
       "createdBy": "من إعداد: Cary Huang, Michael Huang",
@@ -34,6 +56,18 @@
       "title": "ادعم المشروع",
       "description": "أطوّر هذا المشروع في وقت فراغي وأعمل تدريجياً على تحسين المحتوى والترجمات والواجهة والأداء.\n\nإذا أعجبك Scale of the Universe، فيمكنك دعم المشروع بتبرع.",
       "closeAriaLabel": "إغلاق نافذة الدعم"
+    },
+    "notFound": {
+      "title": "الصفحة غير موجودة",
+      "description": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+      "homeAction": "الانتقال إلى الصفحة الرئيسية",
+      "objectsAction": "تصفح الأجسام"
+    },
+    "objectsSearch": {
+      "label": "البحث في الكائنات",
+      "placeholder": "اسم الكائن",
+      "clear": "مسح",
+      "empty": "لم يتم العثور على كائنات."
     }
   }
 }

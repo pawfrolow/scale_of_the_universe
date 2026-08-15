@@ -16,6 +16,11 @@
       "ogTitle": "宇宙的刻度",
       "ogDescription": "比較各種物體的大小——從基本粒子到星系。"
     },
+    "nav": {
+      "about": "關於專案",
+      "objects": "物件",
+      "language": "語言"
+    },
     "modal": {
       "title": "宇宙的刻度",
       "zoomHint": "使用捲軸進行放大和縮小。",
@@ -23,6 +28,23 @@
       "startButton": "開始",
       "startLoading": "載入中...",
       "selectLanguage": "選擇語言"
+    },
+    "object": {
+      "openOnScaleAction": "在尺度上開啟"
+    },
+    "objectScaleGroups": {
+      "subatomic": "次原子尺度",
+      "particles": "粒子",
+      "atomsMolecules": "原子與分子",
+      "microworld": "微觀世界",
+      "smallObjects": "毫米與公分",
+      "humanScales": "人類尺度",
+      "buildingsLandscapes": "建築與景觀",
+      "planets": "行星",
+      "stars": "恆星",
+      "solarSystem": "太陽系",
+      "interstellar": "星際尺度",
+      "galaxiesUniverse": "星系與宇宙"
     },
     "credits": {
       "createdBy": "作者：Cary Huang、Michael Huang",
@@ -34,6 +56,18 @@
       "title": "支持這個專案",
       "description": "我在空閒時間開發這個專案，並持續改進內容、翻譯、介面與效能。\n\n如果你喜歡《宇宙尺度》，你可以透過贊助來支持這個專案。",
       "closeAriaLabel": "關閉支持視窗"
+    },
+    "notFound": {
+      "title": "找不到頁面",
+      "description": "你要查找的頁面不存在或已被移動。",
+      "homeAction": "返回首頁",
+      "objectsAction": "瀏覽物件"
+    },
+    "objectsSearch": {
+      "label": "搜尋物件",
+      "placeholder": "物件名稱",
+      "clear": "清除",
+      "empty": "找不到物件。"
     }
   }
 }

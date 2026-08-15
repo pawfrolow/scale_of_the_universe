@@ -1,5 +1,6 @@
 import { Text, Container } from 'pixi.js-legacy';
 
+import { PIXI_TEXT_FONT_FAMILY } from '@/config';
 import { map } from '@/helpers/map';
 
 export class ScaleText {
@@ -16,7 +17,7 @@ export class ScaleText {
 
   constructor(x: number, y: number, text: string) {
     this.baseTextGround = new Text('10', {
-      fontFamily: 'Roboto',
+      fontFamily: PIXI_TEXT_FONT_FAMILY,
       fontSize: 32,
       fill: this.textColor,
       stroke: this.textColor,
@@ -24,7 +25,7 @@ export class ScaleText {
     });
 
     this.textGround = new Text(text, {
-      fontFamily: 'Roboto',
+      fontFamily: PIXI_TEXT_FONT_FAMILY,
       fontSize: 14,
       fill: this.textColor,
       stroke: this.textColor,
@@ -32,7 +33,7 @@ export class ScaleText {
     });
 
     this.baseTextSpace = new Text('10', {
-      fontFamily: 'Roboto',
+      fontFamily: PIXI_TEXT_FONT_FAMILY,
       fontSize: 32,
       fill: this.textColorSpace,
       stroke: this.textColorSpace,
@@ -40,7 +41,7 @@ export class ScaleText {
     });
 
     this.textSpace = new Text(text, {
-      fontFamily: 'Roboto',
+      fontFamily: PIXI_TEXT_FONT_FAMILY,
       fontSize: 14,
       fill: this.textColorSpace,
       stroke: this.textColorSpace,
@@ -71,8 +72,11 @@ export class ScaleText {
   }
 
   setText(str: string) {
-    this.textSpace.text = Number(str).toFixed(1);
-    this.textGround.text = Number(str).toFixed(1);
+    const value = Math.round(Number(str) * 10) / 10;
+    const formattedValue = Number.isInteger(value) ? String(value) : value.toFixed(1);
+
+    this.textSpace.text = formattedValue;
+    this.textGround.text = formattedValue;
   }
 
   setColor(scaleExp: number) {

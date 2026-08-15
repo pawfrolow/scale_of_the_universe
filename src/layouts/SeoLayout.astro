@@ -1,0 +1,218 @@
+---
+import '@/styles/reset.css';
+import CanvasWarpStars from '@/components/CanvasWarpStars/CanvasWarpStars.astro';
+
+import ParallaxStars from '@/components/ParallaxStars/ParallaxStars.astro';
+import {
+  APP_ORIGIN,
+  getAlternateLinks,
+  getXDefaultAlternate,
+  serializeJsonForHtml,
+} from '@/services/seo-static.service';
+import type { TSeoLocale, TSeoPage } from '@/services/seo-static.service';
+
+type Props = {
+  canonicalPath: string;
+  description: string;
+  includeAlternateLinks?: boolean;
+  includeClientScripts?: boolean;
+  locale: TSeoLocale;
+  locales: TSeoLocale[];
+  ogImage: string;
+  ogType?: string;
+  page: TSeoPage;
+  robots?: string;
+  structuredData?: unknown;
+  title: string;
+};
+
+const {
+  canonicalPath,
+  description,
+  includeAlternateLinks = true,
+  includeClientScripts = false,
+  locale,
+  locales,
+  ogImage,
+  ogType = 'website',
+  page,
+  robots = 'index,follow,max-image-preview:large',
+  structuredData,
+  title,
+} = Astro.props;
+const canonicalUrl = `${APP_ORIGIN}${canonicalPath}`;
+const alternates = includeAlternateLinks ? getAlternateLinks(locales, page) : [];
+const xDefault = includeAlternateLinks ? getXDefaultAlternate(locales, page) : null;
+const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData) : null;
+---
+
+<!doctype html>
+<html lang={locale.language} dir={locale.dir}>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
+    />
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <meta name="theme-color" content="#141b41" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="preload" href="/fonts/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/fonts/Oldtimer.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="/css/theme-fonts.css" />
+    <link rel="canonical" href={canonicalUrl} />
+    {alternates.map((alternate) => <link rel="alternate" hreflang={alternate.hreflang} href={alternate.href} />)}
+    {xDefault ? <link rel="alternate" hreflang="x-default" href={xDefault} /> : null}
+    <title>{title}</title>
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={locale.ogLocale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    {structuredDataJson ? <script is:inline type="application/ld+json" set:html={structuredDataJson} /> : null}
+    <slot name="head" />
+  </head>
+  <body>
+    {!includeClientScripts ? <CanvasWarpStars /> : null}
+
+    <script>
+      import { lockViewportScale } from '@/helpers/lockViewportScale';
+
+      lockViewportScale();
+    </script>
+
+    <script is:inline>
+      if ('serviceWorker' in navigator && window.location.host !== 'universe.pavelfrolov.com') {
+        window.addEventListener('load', async () => {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(registrations.map((registration) => registration.unregister()));
+
+          if ('caches' in window) {
+            const cacheNames = await caches.keys();
+            await Promise.all(
+              cacheNames
+                .filter((cacheName) => cacheName.startsWith('app-cache'))
+                .map((cacheName) => caches.delete(cacheName)),
+            );
+          }
+        });
+      }
+    </script>
+
+    <slot />
+
+    {
+      includeClientScripts ? (
+        <>
+          <script is:inline>
+            if ('serviceWorker' in navigator && window.location.host === 'universe.pavelfrolov.com') {
+              window.addEventListener('load', async () => {
+                await navigator.serviceWorker.register('/sw.js');
+              });
+            }
+          </script>
+          <script is:inline>
+            if (window.location.host === 'universe.pavelfrolov.com') {
+              (function (m, e, t, r, i, k, a) {
+                m[i] =
+                  m[i] ||
+                  function () {
+                    (m[i].a = m[i].a || []).push(arguments);
+                  };
+                m[i].l = 1 * new Date();
+                for (var j = 0; j < document.scripts.length; j++) {
+                  if (document.scripts[j].src === r) {
+                    return;
+                  }
+                }
+                ((k = e.createElement(t)),
+                  (a = e.getElementsByTagName(t)[0]),
+                  (k.async = 1),
+                  (k.src = r),
+                  a.parentNode.insertBefore(k, a));
+              })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=108142388', 'ym');
+
+              ym(108142388, 'init', {
+                ssr: true,
+                webvisor: true,
+                clickmap: true,
+                ecommerce: 'dataLayer',
+                referrer: document.referrer,
+                url: location.href,
+                accurateTrackBounce: true,
+                trackLinks: true,
+              });
+            }
+          </script>
+          <noscript>
+            <div>
+              <img
+                src="https://mc.yandex.ru/watch/108142388"
+                style="position: absolute; left: -9999px"
+                alt=""
+              />
+            </div>
+          </noscript>
+        </>
+      ) : null
+    }
+  </body>
+</html>
+
+<style is:global lang="scss">
+  @use '@/styles/variables.scss' as *;
+
+  :root {
+    --safe-area-top: env(safe-area-inset-top, 0px);
+    --safe-area-right: env(safe-area-inset-right, 0px);
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-area-left: env(safe-area-inset-left, 0px);
+    --theme-space-indigo: #141b41;
+    --theme-ocean-deep: #306bac;
+    --theme-cornflower-blue: #6f9ceb;
+    --theme-baby-blue-ice: #98b9f2;
+    --theme-soft-periwinkle: #918ef4;
+    --theme-red: #D52941;
+    --theme-ink: #f4f8ff;
+    --theme-text-muted: rgba(244, 248, 255, 0.74);
+    --theme-text-soft: rgba(152, 185, 242, 0.7);
+    --theme-border: rgba(152, 185, 242, 0.2);
+    --theme-surface: rgba(20, 27, 65, 0.5);
+    --theme-surface-muted: rgba(152, 185, 242, 0.12);
+
+    @include theme-custom-properties;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    min-height: 100dvh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: var(--theme-ink);
+    background: linear-gradient(0deg, #0b0d23 0%, #0f1234 50%, #0b0d23 100%);
+    touch-action: pan-y;
+  }
+
+  a {
+    color: var(--theme-baby-blue-ice);
+  }
+</style>

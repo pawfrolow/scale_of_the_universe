@@ -1,4 +1,4 @@
-@use '../../assets/css/variables.scss' as *;
+@use '@/styles/variables.scss' as *;
 
 .closeButton {
   flex-shrink: 0;
@@ -21,6 +21,14 @@
 
   &:hover {
     background: $surface-muted-hover-light;
+  }
+}
+
+.dark {
+  color: $text-primary-dark;
+
+  &:hover {
+    background: $surface-muted-hover-dark;
   }
 }
 

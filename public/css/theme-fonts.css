@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+  font-display: swap;
+  font-style: oblique -10deg 0deg;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: 'Oldtimer';
+  src: url('/fonts/Oldtimer.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --font-primary: 'Inter', system-ui, sans-serif;
+  --font-brand: 'Oldtimer', var(--font-primary);
+}
+
+html,
+body,
+#root {
+  font-family: var(--font-primary);
+}

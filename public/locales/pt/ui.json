@@ -16,6 +16,11 @@
       "ogTitle": "A Escala do Universo",
       "ogDescription": "Uma comparação dos tamanhos de vários objetos — de partículas elementares a galáxias."
     },
+    "nav": {
+      "about": "Sobre o projeto",
+      "objects": "Objetos",
+      "language": "Idioma"
+    },
     "modal": {
       "title": "A Escala do Universo",
       "zoomHint": "Use a barra de rolagem para ampliar e reduzir o zoom.",
@@ -23,6 +28,23 @@
       "startButton": "Começar",
       "startLoading": "Carregando...",
       "selectLanguage": "Selecione um idioma"
+    },
+    "object": {
+      "openOnScaleAction": "Abrir na escala"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Escalas subatômicas",
+      "particles": "Partículas",
+      "atomsMolecules": "Átomos e moléculas",
+      "microworld": "Micromundo",
+      "smallObjects": "Milímetros e centímetros",
+      "humanScales": "Escalas humanas",
+      "buildingsLandscapes": "Edifícios e paisagens",
+      "planets": "Planetas",
+      "stars": "Estrelas",
+      "solarSystem": "Sistema Solar",
+      "interstellar": "Escalas interestelares",
+      "galaxiesUniverse": "Galáxias e Universo"
     },
     "credits": {
       "createdBy": "Criado por: Cary Huang, Michael Huang",
@@ -34,6 +56,18 @@
       "title": "Apoiar o projeto",
       "description": "Desenvolvo este projeto no meu tempo livre e vou melhorando gradualmente o conteúdo, as traduções, a interface e o desempenho.\n\nSe gostas do Scale of the Universe, podes apoiar o projeto com uma doação.",
       "closeAriaLabel": "Fechar janela de apoio"
+    },
+    "notFound": {
+      "title": "Página não encontrada",
+      "description": "A página que procuras não existe ou foi movida.",
+      "homeAction": "Ir para a página inicial",
+      "objectsAction": "Ver objetos"
+    },
+    "objectsSearch": {
+      "label": "Pesquisar objetos",
+      "placeholder": "Nome do objeto",
+      "clear": "Limpar",
+      "empty": "Nenhum objeto encontrado."
     }
   }
 }

@@ -1,4 +1,4 @@
-@use '../../assets/css/variables.scss' as *;
+@use '@/styles/variables.scss' as *;
 
 .modalDialog {
   width: min(560px, calc(100vw - 24px));
@@ -12,6 +12,7 @@
   background: $surface-dialog-light;
   color: $text-primary-light;
   box-shadow: $shadow-dialog;
+  backdrop-filter: blur(18px);
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
 }
@@ -29,6 +30,12 @@
 .lg {
   width: min(720px, calc(100vw - 24px));
   max-width: calc(100vw - 24px);
+}
+
+.dark {
+  border: 1px solid $border-dark;
+  background: $surface-dialog-dark;
+  color: $text-primary-dark;
 }
 
 :global(.dark) {

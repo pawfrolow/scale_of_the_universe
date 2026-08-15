@@ -1,0 +1,285 @@
+---
+import {
+  COPYRIGHT_YEAR,
+  DONATE_LINKS,
+  getLocalizedPagePath,
+  normalizeText,
+} from '@/services/seo-static.service';
+import { LANGUAGE_OPTIONS } from '@/config';
+import styles from './styles.module.scss';
+import type { TSeoLocale, TSeoPage } from '@/services/seo-static.service';
+
+type Props = {
+  appVersion?: string;
+  locale: TSeoLocale;
+  locales: TSeoLocale[];
+  page: TSeoPage;
+};
+
+const { appVersion, locale, locales, page } = Astro.props;
+const languageLinks = locales
+  .filter((entry) => page.type !== 'object' || entry.objects.some((object) => object.id === page.id))
+  .map((entry) => ({
+    language: entry.language,
+    label:
+      LANGUAGE_OPTIONS.find((languageOption) => languageOption.code === entry.language)?.label ??
+      entry.language,
+    path: getLocalizedPagePath(entry, page),
+  }));
+const modalTitle = normalizeText(locale.ui.html?.modal?.selectLanguage ?? locale.navLabels.language);
+const closeModalLabel = normalizeText(
+  locale.ui.html?.modal?.closeLanguageModal ?? 'Close language modal',
+);
+const donateTitle = normalizeText(locale.ui.html?.donate?.title ?? locale.navLabels.donate);
+const donateDescription = normalizeText(locale.ui.html?.donate?.description ?? '');
+const donateCloseLabel = normalizeText(
+  locale.ui.html?.donate?.closeAriaLabel ?? 'Close support dialog',
+);
+---
+
+<header class={styles.headerBand}>
+  <div class={styles.header}>
+    <a class={styles.brand} href={locale.path} data-not-found-link="home">
+      <img src="/img/favicon/favicon.svg" width="24" height="24" alt="" aria-hidden="true" />
+      <span data-not-found-text="appTitle">{locale.appTitle}</span>
+    </a>
+    <nav class={styles.nav} aria-label="Primary">
+      <a href={locale.aboutPath} data-not-found-link="about" data-not-found-text="navAbout">{locale.navLabels.about}</a>
+      <a href={locale.objectIndexPath} data-not-found-link="objects" data-not-found-text="navObjects">{locale.navLabels.objects}</a>
+      <a href="#language-modal" data-language-open data-not-found-text="navLanguage">{locale.navLabels.language}</a>
+      <a href="#donate-modal" data-donate-open data-not-found-text="navDonate">{locale.navLabels.donate}</a>
+    </nav>
+    <button
+      class={styles.menuButton}
+      type="button"
+      aria-label="Open menu"
+      aria-controls="site-nav-sidebar"
+      aria-expanded="false"
+      data-menu-open
+    >
+      <img src="/img/icons/menu.svg" width="20" height="20" alt="" aria-hidden="true" />
+    </button>
+    <div class={styles.sidebarShell} aria-hidden="true" data-menu-shell>
+      <button class={styles.sidebarBackdrop} type="button" aria-label="Close menu" data-menu-close></button>
+      <aside id="site-nav-sidebar" class={styles.sidebar} aria-label="Primary">
+        <button class={styles.sidebarClose} type="button" aria-label="Close menu" data-menu-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <nav class={styles.sidebarLinks} aria-label="Primary">
+          <a href={locale.aboutPath} data-not-found-link="about" data-not-found-text="navAbout">{locale.navLabels.about}</a>
+          <a href={locale.objectIndexPath} data-not-found-link="objects" data-not-found-text="navObjects">{locale.navLabels.objects}</a>
+          <a href="#language-modal" data-language-open data-not-found-text="navLanguage">{locale.navLabels.language}</a>
+          <a href="#donate-modal" data-donate-open data-not-found-text="navDonate">{locale.navLabels.donate}</a>
+        </nav>
+        {
+          appVersion ? (
+            <div class={styles.sidebarMeta}>
+              <span>{COPYRIGHT_YEAR}. {locale.startScreen.title}</span>
+              <span>v{appVersion}</span>
+            </div>
+          ) : null
+        }
+      </aside>
+    </div>
+    <div id="language-modal" class={styles.modalShell} aria-hidden="true" data-language-shell>
+      <a class={styles.modalBackdrop} href="#" aria-label={closeModalLabel} data-language-close></a>
+      <section
+        class:list={[styles.modalDialog, styles.modalDialogMd]}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="language-modal-title"
+        tabindex="-1"
+        data-language-dialog
+      >
+        <header class:list={[styles.modalHeader, styles.modalHeaderCenter]}>
+          <h2 class={styles.modalTitle} id="language-modal-title" data-not-found-text="modalTitle">{modalTitle}</h2>
+          <a class={styles.modalClose} href="#" aria-label={closeModalLabel} data-language-close>
+            <span aria-hidden="true">&times;</span>
+          </a>
+        </header>
+        <nav class={styles.languageList} aria-label={modalTitle} data-language-list>
+          {
+            languageLinks.map((link) => (
+              <a
+                class={styles.languageOption}
+                href={link.path}
+                lang={link.language}
+                data-language-option={link.language}
+                data-active={link.language === locale.language ? 'true' : undefined}
+              >
+                <span>{link.label}</span>
+                {link.language === locale.language ? <span aria-hidden="true" data-language-active-marker>✓</span> : null}
+              </a>
+            ))
+          }
+        </nav>
+      </section>
+    </div>
+    <div id="donate-modal" class={styles.modalShell} aria-hidden="true" data-donate-shell>
+      <a class={styles.modalBackdrop} href="#" aria-label={donateCloseLabel} data-donate-close></a>
+      <section
+        class:list={[styles.modalDialog, styles.modalDialogMd]}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="donate-modal-title"
+        tabindex="-1"
+        data-donate-dialog
+      >
+        <header class:list={[styles.modalHeader, styles.modalHeaderCenter]}>
+          <h2 class={styles.modalTitle} id="donate-modal-title" data-not-found-text="donateModalTitle">{donateTitle}</h2>
+          <a class={styles.modalClose} href="#" aria-label={donateCloseLabel} data-donate-close>
+            <span aria-hidden="true">&times;</span>
+          </a>
+        </header>
+        <div class={styles.modalBody}>
+          <p data-not-found-text="donateModalDescription">{donateDescription}</p>
+          <div class={styles.modalActions}>
+            {
+              DONATE_LINKS.map((link) => (
+                <a
+                  class={styles.modalActionLink}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={link.label}
+                  title={link.label}
+                  data-donate-link={link.key}
+                >
+                  <img src={link.iconSrc} width="28" height="28" alt="" aria-hidden="true" />
+                  <span>{link.label}</span>
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  (() => {
+    const header = document.currentScript?.previousElementSibling;
+
+    if (!header) {
+      return;
+    }
+
+    const openButton = header.querySelector('[data-menu-open]');
+    const closeButtons = header.querySelectorAll('[data-menu-close]');
+    const shell = header.querySelector('[data-menu-shell]');
+    const languageOpenButtons = header.querySelectorAll('[data-language-open]');
+    const languageCloseButtons = header.querySelectorAll('[data-language-close]');
+    const languageShell = header.querySelector('[data-language-shell]');
+    const languageDialog = header.querySelector('[data-language-dialog]');
+    const donateCloseButtons = header.querySelectorAll('[data-donate-close]');
+    const donateShell = header.querySelector('[data-donate-shell]');
+    const donateDialog = header.querySelector('[data-donate-dialog]');
+
+    if (!openButton || !shell) {
+      return;
+    }
+
+    const setLanguageOpen = (isOpen) => {
+      if (!languageShell) {
+        return;
+      }
+
+      languageShell.toggleAttribute('data-open', isOpen);
+      languageShell.setAttribute('aria-hidden', String(!isOpen));
+
+      if (isOpen) {
+        setOpen(false);
+        setDonateOpen(false);
+        languageDialog?.focus();
+      }
+    };
+
+    const setDonateOpen = (isOpen) => {
+      if (!donateShell) {
+        return;
+      }
+
+      donateShell.toggleAttribute('data-open', isOpen);
+      donateShell.setAttribute('aria-hidden', String(!isOpen));
+
+      if (isOpen) {
+        setOpen(false);
+        setLanguageOpen(false);
+        donateDialog?.focus();
+
+        if (typeof window.ym === 'function') {
+          window.ym(108142388, 'reachGoal', 'openDonateModal');
+        }
+      }
+    };
+
+    const setOpen = (isOpen) => {
+      shell.toggleAttribute('data-open', isOpen);
+      shell.setAttribute('aria-hidden', String(!isOpen));
+      openButton.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    openButton.addEventListener('click', () => setOpen(true));
+    closeButtons.forEach((button) => {
+      button.addEventListener('click', () => setOpen(false));
+    });
+    shell.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setOpen(false));
+    });
+    languageOpenButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        setLanguageOpen(true);
+      });
+    });
+    languageCloseButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        setLanguageOpen(false);
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      });
+    });
+    languageShell?.querySelectorAll('[data-language-option]').forEach((link) => {
+      link.addEventListener('click', () => setLanguageOpen(false));
+    });
+    document.addEventListener('click', (event) => {
+      const openButton = event.target?.closest?.('[data-donate-open]');
+
+      if (!openButton) {
+        return;
+      }
+
+      event.preventDefault();
+      setDonateOpen(true);
+    });
+    donateCloseButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        setDonateOpen(false);
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      });
+    });
+    donateShell?.querySelectorAll('[data-donate-link]').forEach((link) => {
+      link.addEventListener('click', () => {
+        const platform = link.getAttribute('data-donate-link');
+        const href = link.getAttribute('href');
+
+        if (typeof window.ym === 'function') {
+          window.ym(108142388, 'reachGoal', 'donateClick', { platform, href });
+        }
+      });
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        if (donateShell?.hasAttribute('data-open')) {
+          setDonateOpen(false);
+        } else if (languageShell?.hasAttribute('data-open')) {
+          setLanguageOpen(false);
+        } else {
+          setOpen(false);
+        }
+      }
+    });
+  })();
+</script>

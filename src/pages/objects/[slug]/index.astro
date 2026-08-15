@@ -1,0 +1,87 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.astro';
+import Footer from '@/components/Footer/Footer.astro';
+import Header from '@/components/Header/Header.astro';
+import SeoPageHeading from '@/components/SeoPageHeading/SeoPageHeading.astro';
+import seoStyles from '@/layouts/SeoLayout.module.scss';
+import SeoLayout from '@/layouts/SeoLayout.astro';
+import {
+  APP_ORIGIN,
+  buildBreadcrumbStructuredData,
+  buildObjectStructuredData,
+  buildSizeHtml,
+  DEFAULT_LANGUAGE,
+  getAppVersion,
+  getLocaleData,
+  getLocales,
+  trimToLength,
+} from '@/services/seo-static.service';
+import type { TSeoObject } from '@/services/seo-static.service';
+
+export async function getStaticPaths() {
+  const locale = await getLocaleData(DEFAULT_LANGUAGE);
+
+  if (!locale) {
+    return [];
+  }
+
+  return locale.objects.flatMap((object) =>
+    [object.slug, ...object.slugAliases].map((slug) => ({
+      params: { slug },
+      props: { object },
+    })),
+  );
+}
+
+const locales = await getLocales();
+const locale = await getLocaleData(DEFAULT_LANGUAGE);
+const { object } = Astro.props as { object: TSeoObject };
+
+if (!locale) {
+  throw new Error(`Locale not found: ${DEFAULT_LANGUAGE}`);
+}
+
+const appVersion = await getAppVersion();
+const title = `${object.title} | ${locale.appTitle}`;
+const description = trimToLength(`${object.title}. ${object.description}`, 155);
+const imageUrl = `${APP_ORIGIN}${object.imageSrc}`;
+const breadcrumbs = [
+  { label: locale.appTitle, href: locale.path },
+  { label: locale.navLabels.objects, href: locale.objectIndexPath },
+  { label: object.title, href: object.path },
+];
+const startObjectHref = `${locale.path}?object=${encodeURIComponent(object.id)}`;
+---
+
+<SeoLayout
+  canonicalPath={object.path}
+  description={description}
+  locale={locale}
+  locales={locales}
+  ogImage={imageUrl}
+  ogType="article"
+  page={{ type: 'object', id: object.id }}
+  structuredData={[buildObjectStructuredData(locale, object), buildBreadcrumbStructuredData(breadcrumbs)]}
+  title={title}
+>
+  <div class={seoStyles.shell}>
+    <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'object', id: object.id }} />
+    <main class={seoStyles.page}>
+      <Breadcrumbs items={breadcrumbs} />
+      <div class={seoStyles.contentIsland}>
+        <section class={seoStyles.hero}>
+          <div>
+            <SeoPageHeading title={object.title} description={object.description}>
+              <p slot="after-title" class={seoStyles.size} set:html={buildSizeHtml(object.sizeText)} />
+              <a class={seoStyles.button} href={startObjectHref}>{locale.objectPage.openOnScaleAction}</a>
+            </SeoPageHeading>
+          </div>
+          <div class={seoStyles.imageWrap}>
+            <img src={object.imageSrc} alt={object.title} loading="eager" />
+          </div>
+        </section>
+      </div>
+    </main>
+    <Footer locale={locale} appVersion={appVersion} />
+  </div>
+</SeoLayout>

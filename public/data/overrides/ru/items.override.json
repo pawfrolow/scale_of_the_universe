@@ -137,5 +137,13 @@
     "288": true,
     "319": true,
     "042": true
+  },
+  "slugs": {
+    "037": "square-centimeter",
+    "106": "kamchatsky-krai",
+    "107": "kaliningrad-oblast",
+    "215": "centimeter-ruler",
+    "288": "kopeika",
+    "319": "yakutia"
   }
 }

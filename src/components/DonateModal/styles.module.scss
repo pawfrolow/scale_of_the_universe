@@ -1,4 +1,4 @@
-@use '../../assets/css/variables.scss' as *;
+@use '@/styles/variables.scss' as *;
 
 .donateBody {
   display: flex;
@@ -48,6 +48,22 @@
   width: 28px;
   height: 28px;
   object-fit: contain;
+}
+
+.dark {
+  .donateDescription {
+    color: rgba($color-white, 0.82);
+  }
+
+  .donateLink {
+    border-color: $border-dark;
+    background: $surface-muted-dark;
+    color: $text-primary-dark;
+
+    &:hover {
+      background: $surface-muted-hover-dark;
+    }
+  }
 }
 
 :global(.dark) {

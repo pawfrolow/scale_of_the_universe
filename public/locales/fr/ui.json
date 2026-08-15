@@ -16,6 +16,11 @@
       "ogTitle": "L'échelle de l'Univers",
       "ogDescription": "Une comparaison des tailles de différents objets — des particules élémentaires aux galaxies."
     },
+    "nav": {
+      "about": "À propos du projet",
+      "objects": "Objets",
+      "language": "Langue"
+    },
     "modal": {
       "title": "L'échelle de l'Univers",
       "zoomHint": "Utilisez la barre de défilement pour zoomer et dézoomer.",
@@ -23,6 +28,23 @@
       "startButton": "Commencer",
       "startLoading": "Chargement...",
       "selectLanguage": "Choisissez une langue"
+    },
+    "object": {
+      "openOnScaleAction": "Ouvrir sur l’échelle"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Échelles subatomiques",
+      "particles": "Particules",
+      "atomsMolecules": "Atomes et molécules",
+      "microworld": "Micromonde",
+      "smallObjects": "Millimètres et centimètres",
+      "humanScales": "Échelles humaines",
+      "buildingsLandscapes": "Bâtiments et paysages",
+      "planets": "Planètes",
+      "stars": "Étoiles",
+      "solarSystem": "Système solaire",
+      "interstellar": "Échelles interstellaires",
+      "galaxiesUniverse": "Galaxies et Univers"
     },
     "credits": {
       "createdBy": "Créé par : Cary Huang, Michael Huang",
@@ -34,6 +56,18 @@
       "title": "Soutenir le projet",
       "description": "Je développe ce projet sur mon temps libre et j’en améliore progressivement le contenu, les traductions, l’interface et les performances.\n\nSi vous aimez Scale of the Universe, vous pouvez soutenir le projet par un don.",
       "closeAriaLabel": "Fermer la fenêtre de soutien"
+    },
+    "notFound": {
+      "title": "Page introuvable",
+      "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+      "homeAction": "Aller à l'accueil",
+      "objectsAction": "Parcourir les objets"
+    },
+    "objectsSearch": {
+      "label": "Rechercher des objets",
+      "placeholder": "Nom de l'objet",
+      "clear": "Effacer",
+      "empty": "Aucun objet trouvé."
     }
   }
 }

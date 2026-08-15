@@ -1,0 +1,112 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.astro';
+import Footer from '@/components/Footer/Footer.astro';
+import Header from '@/components/Header/Header.astro';
+import ObjectsSearch from '@/components/ObjectsSearch/ObjectsSearch.astro';
+import SeoPageHeading from '@/components/SeoPageHeading/SeoPageHeading.astro';
+import seoStyles from '@/layouts/SeoLayout.module.scss';
+import SeoLayout from '@/layouts/SeoLayout.astro';
+import {
+  buildBreadcrumbStructuredData,
+  buildObjectIndexStructuredData,
+  buildPowerOfTenRangeHtml,
+  buildSizeHtml,
+  DEFAULT_LANGUAGE,
+  getAppVersion,
+  getLocales,
+  getObjectIndexPageCopy,
+  getObjectScaleGroup,
+  getObjectScaleGroupLabel,
+  getObjectsSearchCopy,
+  OBJECT_SCALE_GROUPS,
+} from '@/services/seo-static.service';
+import type { TSeoLocale } from '@/services/seo-static.service';
+
+export async function getStaticPaths() {
+  const locales = await getLocales();
+
+  return locales
+    .filter((locale) => locale.language !== DEFAULT_LANGUAGE)
+    .map((locale) => ({
+      params: { lang: locale.segment },
+      props: { locale },
+    }));
+}
+
+const locales = await getLocales();
+const { locale } = Astro.props as { locale: TSeoLocale };
+const appVersion = await getAppVersion();
+const pageCopy = getObjectIndexPageCopy(locale);
+const objectsSearchCopy = getObjectsSearchCopy(locale);
+const title = `${pageCopy.heading} | ${locale.appTitle}`;
+const description = pageCopy.seoDescription;
+const breadcrumbs = [
+  { label: locale.appTitle, href: locale.path },
+  { label: locale.navLabels.objects, href: locale.objectIndexPath },
+];
+const sortedObjects = [...locale.objects].sort(
+  (left, right) => left.sizeMeters - right.sizeMeters || Number(left.id) - Number(right.id),
+);
+const objectGroups = OBJECT_SCALE_GROUPS.map((group) => ({
+  group,
+  label: getObjectScaleGroupLabel(locale, group),
+  rangeHtml: buildPowerOfTenRangeHtml(group, locale.units),
+  objects: sortedObjects.filter((object) => getObjectScaleGroup(object) === group),
+})).filter((group) => group.objects.length > 0);
+---
+
+<SeoLayout
+  canonicalPath={locale.objectIndexPath}
+  description={description}
+  locale={locale}
+  locales={locales}
+  ogImage={locale.ogImage}
+  page={{ type: 'objects' }}
+  structuredData={[buildObjectIndexStructuredData(locale), buildBreadcrumbStructuredData(breadcrumbs)]}
+  title={title}
+>
+  <div class={seoStyles.shell}>
+    <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'objects' }} />
+    <main class={seoStyles.page}>
+      <Breadcrumbs items={breadcrumbs} />
+      <div class={seoStyles.contentIsland} data-objects-search-scope>
+        <SeoPageHeading title={pageCopy.heading} description={pageCopy.intro} />
+        <ObjectsSearch copy={objectsSearchCopy} locale={locale.language} />
+        {
+          objectGroups.map(({ label, objects, rangeHtml }) => (
+            <section class={seoStyles.objectSection} data-objects-search-section>
+              <div class={seoStyles.objectSectionHeader}>
+                <h2 class={seoStyles.objectSectionTitle}>{label}</h2>
+                <span class={seoStyles.objectSectionRange} set:html={rangeHtml} />
+              </div>
+              <nav class={seoStyles.grid} aria-label={label}>
+                {objects.map((object) => (
+                  <a
+                    class={seoStyles.card}
+                    href={object.path}
+                    data-objects-search-card
+                    data-search-text={object.title}
+                  >
+                    <span class={seoStyles.cardImageWrap}>
+                      <img
+                        class={seoStyles.cardImage}
+                        src={object.imageSrc}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <span class={seoStyles.cardTitle}>{object.title}</span>
+                    <span class={seoStyles.cardSize} set:html={buildSizeHtml(object.sizeText)} />
+                  </a>
+                ))}
+              </nav>
+            </section>
+          ))
+        }
+      </div>
+    </main>
+    <Footer locale={locale} appVersion={appVersion} />
+  </div>
+</SeoLayout>

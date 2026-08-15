@@ -16,6 +16,11 @@
       "ogTitle": "Die Skala des Universums",
       "ogDescription": "Ein Vergleich der Größen verschiedener Objekte – von Elementarteilchen bis hin zu Galaxien."
     },
+    "nav": {
+      "about": "Über das Projekt",
+      "objects": "Objekte",
+      "language": "Sprache"
+    },
     "modal": {
       "title": "Die Skala des Universums",
       "zoomHint": "Benutze die Scrollleiste, um hinein- oder herauszuzoomen.",
@@ -23,6 +28,23 @@
       "startButton": "Starten",
       "startLoading": "Laden...",
       "selectLanguage": "Sprache auswählen"
+    },
+    "object": {
+      "openOnScaleAction": "Auf der Skala öffnen"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Subatomare Maßstäbe",
+      "particles": "Teilchen",
+      "atomsMolecules": "Atome und Moleküle",
+      "microworld": "Mikrowelt",
+      "smallObjects": "Millimeter und Zentimeter",
+      "humanScales": "Menschliche Maßstäbe",
+      "buildingsLandscapes": "Gebäude und Landschaften",
+      "planets": "Planeten",
+      "stars": "Sterne",
+      "solarSystem": "Sonnensystem",
+      "interstellar": "Interstellare Maßstäbe",
+      "galaxiesUniverse": "Galaxien und das Universum"
     },
     "credits": {
       "createdBy": "Erstellt von: Cary Huang, Michael Huang",
@@ -34,6 +56,18 @@
       "title": "Projekt unterstützen",
       "description": "Ich entwickle dieses Projekt in meiner Freizeit und verbessere nach und nach Inhalte, Übersetzungen, Benutzeroberfläche und Leistung.\n\nWenn dir Scale of the Universe gefällt, kannst du das Projekt mit einer Spende unterstützen.",
       "closeAriaLabel": "Unterstützungsfenster schließen"
+    },
+    "notFound": {
+      "title": "Seite nicht gefunden",
+      "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+      "homeAction": "Zur Startseite",
+      "objectsAction": "Objekte ansehen"
+    },
+    "objectsSearch": {
+      "label": "Objekte suchen",
+      "placeholder": "Objektname",
+      "clear": "Löschen",
+      "empty": "Keine Objekte gefunden."
     }
   }
 }

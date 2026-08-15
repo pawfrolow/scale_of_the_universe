@@ -1,0 +1,51 @@
+---
+import HomeSeoFallback from '@/components/seo/HomeSeoFallback.astro';
+import SeoLayout from '@/layouts/SeoLayout.astro';
+import {
+  buildSeoLocaleData,
+  buildWebsiteStructuredData,
+  DEFAULT_LANGUAGE,
+  getAppVersion,
+  getLocales,
+  serializeJsonForHtml,
+} from '@/services/seo-static.service';
+import type { TSeoLocale } from '@/services/seo-static.service';
+
+export async function getStaticPaths() {
+  const locales = await getLocales();
+
+  return locales
+    .filter((locale) => locale.language !== DEFAULT_LANGUAGE)
+    .map((locale) => ({
+      params: { lang: locale.segment },
+      props: { locale },
+    }));
+}
+
+const locales = await getLocales();
+const { locale } = Astro.props as { locale: TSeoLocale };
+const appVersion = await getAppVersion();
+const seoLocaleData = buildSeoLocaleData(locale);
+const seoLocaleDataJson = serializeJsonForHtml(seoLocaleData);
+---
+
+<SeoLayout
+  canonicalPath={locale.path}
+  description={locale.description}
+  includeClientScripts
+  locale={locale}
+  locales={locales}
+  ogImage={locale.ogImage}
+  page={{ type: 'home' }}
+  structuredData={buildWebsiteStructuredData(locale)}
+  title={locale.title}
+>
+  <HomeSeoFallback locale={locale} locales={locales} appVersion={appVersion} />
+  <script is:inline id="seo-locale-data" type="application/json" set:html={seoLocaleDataJson}></script>
+  <div id="universe-runtime-root" data-initial-language={locale.language}></div>
+  <script>
+    import { initUniverseBootstrap } from '@/app/universe-bootstrap';
+
+    initUniverseBootstrap();
+  </script>
+</SeoLayout>

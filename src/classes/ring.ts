@@ -2,6 +2,7 @@ import { Text, Container, Point, Texture } from 'pixi.js-legacy';
 
 import { Entity } from './entity';
 
+import { PIXI_TEXT_FONT_FAMILY } from '@/config';
 import { calculateScale } from '@/helpers/calculateScale';
 import { E } from '@/helpers/e';
 import { VisualLocation, SizeData, TextDatum, SpriteLayout } from '@/interfaces';
@@ -79,7 +80,7 @@ export class Ring extends Entity {
   }
   createText() {
     const baseStyle = {
-      fontFamily: 'Roboto',
+      fontFamily: PIXI_TEXT_FONT_FAMILY,
       fontSize: 40,
       fill: 0x777777,
       align: 'center' as const,

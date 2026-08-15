@@ -1,4 +1,4 @@
-@use '../../assets/css/variables.scss' as *;
+@use '@/styles/variables.scss' as *;
 
 .languageList {
   display: grid;
@@ -30,8 +30,8 @@
   }
 
   &.active {
-    border-color: rgba($color-primary, 0.45);
-    background: rgba($color-primary, 0.1);
+    border-color: rgba($color-ocean-deep, 0.34);
+    background: rgba($color-baby-blue-ice, 0.24);
     color: $text-primary-light;
   }
 }
@@ -48,19 +48,37 @@
   font-weight: 700;
 }
 
-:global(.dark) {
+.dark {
   .languageOption {
-    border-color: rgba($color-white, 0.5);
+    border-color: rgba($color-baby-blue-ice, 0.22);
     background: $surface-muted-dark;
-    color: rgba($color-white, 0.7);
+    color: rgba($text-primary-dark, 0.72);
 
     &:hover {
       background: $surface-muted-hover-dark;
     }
 
     &.active {
-      border-color: rgba($color-primary, 0.45);
-      background: rgba($color-primary, 0.4);
+      border-color: rgba($color-cornflower-blue, 0.5);
+      background: rgba($color-ocean-deep, 0.42);
+      color: $text-primary-dark;
+    }
+  }
+}
+
+:global(.dark) {
+  .languageOption {
+    border-color: rgba($color-baby-blue-ice, 0.22);
+    background: $surface-muted-dark;
+    color: rgba($text-primary-dark, 0.72);
+
+    &:hover {
+      background: $surface-muted-hover-dark;
+    }
+
+    &.active {
+      border-color: rgba($color-cornflower-blue, 0.5);
+      background: rgba($color-ocean-deep, 0.42);
       color: $text-primary-dark;
     }
   }

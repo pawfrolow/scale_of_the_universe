@@ -1,0 +1,19 @@
+---
+import { COPYRIGHT_YEAR } from '@/services/seo-static.service';
+import styles from './styles.module.scss';
+import type { TSeoLocale } from '@/services/seo-static.service';
+
+type Props = {
+  appVersion: string;
+  locale: TSeoLocale;
+};
+
+const { appVersion, locale } = Astro.props;
+---
+
+<footer class={styles.footerBand}>
+  <div class={styles.footer}>
+    <span>{COPYRIGHT_YEAR}. {locale.startScreen.title}</span>
+    <span>v{appVersion}</span>
+  </div>
+</footer>

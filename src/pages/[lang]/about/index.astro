@@ -1,0 +1,72 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs.astro';
+import Footer from '@/components/Footer/Footer.astro';
+import Header from '@/components/Header/Header.astro';
+import SeoPageHeading from '@/components/SeoPageHeading/SeoPageHeading.astro';
+import seoStyles from '@/layouts/SeoLayout.module.scss';
+import SeoLayout from '@/layouts/SeoLayout.astro';
+import {
+  buildAboutStructuredData,
+  buildBreadcrumbStructuredData,
+  CONTACT_EMAIL,
+  CREDIT_LINKS,
+  DEFAULT_LANGUAGE,
+  getAppVersion,
+  getLocales,
+  trimToLength,
+} from '@/services/seo-static.service';
+import type { TSeoLocale } from '@/services/seo-static.service';
+
+export async function getStaticPaths() {
+  const locales = await getLocales();
+
+  return locales
+    .filter((locale) => locale.language !== DEFAULT_LANGUAGE)
+    .map((locale) => ({
+      params: { lang: locale.segment },
+      props: { locale },
+    }));
+}
+
+const locales = await getLocales();
+const { locale } = Astro.props as { locale: TSeoLocale };
+const appVersion = await getAppVersion();
+const title = `${locale.navLabels.about} | ${locale.appTitle}`;
+const description = trimToLength(locale.aboutPage.paragraphs.join(' '), 155);
+const breadcrumbs = [
+  { label: locale.appTitle, href: locale.path },
+  { label: locale.navLabels.about, href: locale.aboutPath },
+];
+---
+
+<SeoLayout
+  canonicalPath={locale.aboutPath}
+  description={description}
+  locale={locale}
+  locales={locales}
+  ogImage={locale.ogImage}
+  page={{ type: 'about' }}
+  structuredData={[buildAboutStructuredData(locale), buildBreadcrumbStructuredData(breadcrumbs)]}
+  title={title}
+>
+  <div class={seoStyles.shell}>
+    <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'about' }} />
+    <main class={seoStyles.page}>
+      <Breadcrumbs items={breadcrumbs} />
+      <div class={seoStyles.contentIsland}>
+        <SeoPageHeading title={locale.navLabels.about}>
+          <div class={seoStyles.aboutBody}>
+            {locale.aboutPage.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            <p>
+              {locale.aboutPage.history.beforeOriginalLink}{' '}<a href={CREDIT_LINKS.webDev} target="_blank" rel="noreferrer">{locale.aboutPage.history.originalLinkLabel}</a>{locale.aboutPage.history.afterLinks}
+            </p>
+            <p>
+              {locale.aboutPage.contact.beforeEmail}{' '}<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>{locale.aboutPage.contact.afterEmail}
+            </p>
+          </div>
+        </SeoPageHeading>
+      </div>
+    </main>
+    <Footer locale={locale} appVersion={appVersion} />
+  </div>
+</SeoLayout>

@@ -1,5 +1,58 @@
 # Changelog
 
+## 1.9.5
+
+- Added object deep links so object pages can open the scale directly at the selected object.
+- Updated object detail actions to use localized "Open on scale" copy while keeping the home start button unchanged.
+- Expanded the about page text and attribution copy for Russian and English pages.
+- Localized object scale group headings across supported languages.
+- Added locale-aware object slugs with alias pages for Russian object replacements.
+
+## 1.9.4
+
+- Added search to the objects pages so objects can be found faster by name.
+- Improved headings and intro text across static pages for a more consistent reading experience.
+
+## 1.9.3
+
+- Added animated starfield backgrounds for the start screen and static SEO pages.
+- Updated static page styling to a darker space theme with glass content islands and interactive object cards.
+- Refined mobile navigation, version placement, and footer visibility.
+- Updated language and donate dialogs to better match the active theme.
+
+## 1.9.2
+
+- Refreshed the site shell with an updated space-inspired color theme and typography.
+- Brought static pages, navigation, dialogs, controls, overlays, and loading states into the refreshed theme.
+- Fixed header dialogs so they open cleanly above the page content.
+
+## 1.9.1
+
+- Changed the support action to open an in-page dialog instead of navigating away immediately.
+- Shortened the support navigation label from "Support project" to "Support" in Russian UI copy.
+- Refined the objects index page heading and intro copy.
+- Improved maximum-scale slider behavior so the slider reaches the final scale exactly at the end of the track.
+- Fixed the maximum-scale label formatting so integer powers are displayed without a trailing decimal.
+- Adjusted the Universe object placement at the largest scale.
+
+## 1.9.0
+
+- Added localized pages for home, about, objects, and object detail routes.
+- Improved search and sharing metadata across localized pages.
+- Added header, footer, and breadcrumbs to static pages.
+- Added images to object cards on the objects index pages.
+- Changed object page URLs from numeric ids to readable names.
+- Added a multilingual 404 page.
+- Improved the home page loading experience.
+- Improved fullscreen behavior so top controls stay visible.
+
+## 1.8.0
+
+- Added localized about, objects, and object detail pages for better search visibility.
+- Added a site header and footer around static pages.
+- Improved SEO metadata and social sharing previews.
+- Improved the start screen layout and mobile header behavior.
+
 ## 1.7.3
 
 - Added the Patu digua object and placed it on the scale with translations for all supported locales.
@@ -7,8 +60,8 @@
 
 ## 1.7.2
 
-- Fixed localized canonical and `hreflang` SEO signals so locale pages no longer conflict with each other in search indexing.
-- Added localized crawlable intro content and structured data to strengthen page understanding for search engines.
+- Improved localized SEO signals so language versions are indexed more reliably.
+- Added localized intro content to improve page previews and search visibility.
 
 ## 1.7.1
 
@@ -55,7 +108,7 @@
 
 ## 1.3.1
 
-- Added a Content Security Policy header.
+- Improved site security headers.
 
 ## 1.3.0
 
@@ -63,11 +116,11 @@
 
 ## 1.2.0
 
-- Updated locale keys and language code handling.
+- Improved locale and language handling.
 
 ## 1.1.0
 
-- Improved SEO configuration and metadata handling.
+- Improved SEO metadata.
 
 ## 1.0.1
 
@@ -76,12 +129,11 @@
 
 ## 1.0.0
 
-- Rewrote the project in React with a modernized application structure.
-- Updated core libraries and dependencies.
+- Rebuilt the project with a modernized application structure.
 - Optimized rendering performance and improved rendering quality.
 - Added fullscreen mode.
 - Removed the unnecessary HQ button.
-- Moved translations to i18n instead of loading them line by line from txt files.
-- Added support for locale-specific item overrides.
+- Improved translation handling.
+- Added support for locale-specific object adjustments.
 - Prepared the project for future multilingual support while keeping a single language in the first release of the new version.
 - Included a broader round of cleanup, modernization, and UX improvements across the project.

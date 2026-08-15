@@ -16,6 +16,11 @@
       "ogTitle": "Rozmiar Wszechświata",
       "ogDescription": "Porównanie rozmiarów różnych obiektów — od cząstek elementarnych po galaktyki."
     },
+    "nav": {
+      "about": "O projekcie",
+      "objects": "Obiekty",
+      "language": "Język"
+    },
     "modal": {
       "title": "Rozmiar Wszechświata",
       "zoomHint": "Użyj paska przewijania, aby przybliżać i oddalać.",
@@ -23,6 +28,23 @@
       "startButton": "Rozpocznij",
       "startLoading": "Ładowanie...",
       "selectLanguage": "Wybierz język"
+    },
+    "object": {
+      "openOnScaleAction": "Otwórz na skali"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Skale subatomowe",
+      "particles": "Cząstki",
+      "atomsMolecules": "Atomy i cząsteczki",
+      "microworld": "Mikroświat",
+      "smallObjects": "Milimetry i centymetry",
+      "humanScales": "Skale ludzkie",
+      "buildingsLandscapes": "Budynki i krajobrazy",
+      "planets": "Planety",
+      "stars": "Gwiazdy",
+      "solarSystem": "Układ Słoneczny",
+      "interstellar": "Skale międzygwiezdne",
+      "galaxiesUniverse": "Galaktyki i Wszechświat"
     },
     "credits": {
       "createdBy": "Stworzone przez: Cary Huang, Michael Huang",
@@ -34,6 +56,18 @@
       "title": "Wesprzyj projekt",
       "description": "Rozwijam ten projekt w wolnym czasie i stopniowo ulepszam jego treść, tłumaczenia, interfejs oraz wydajność.\n\nJeśli podoba Ci się Scale of the Universe, możesz wesprzeć projekt darowizną.",
       "closeAriaLabel": "Zamknij okno wsparcia"
+    },
+    "notFound": {
+      "title": "Nie znaleziono strony",
+      "description": "Strona, której szukasz, nie istnieje albo została przeniesiona.",
+      "homeAction": "Przejdź do strony głównej",
+      "objectsAction": "Przeglądaj obiekty"
+    },
+    "objectsSearch": {
+      "label": "Szukaj obiektów",
+      "placeholder": "Nazwa obiektu",
+      "clear": "Wyczyść",
+      "empty": "Nie znaleziono obiektów."
     }
   }
 }
