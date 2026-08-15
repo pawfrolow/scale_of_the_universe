@@ -29,6 +29,23 @@
       "startLoading": "Ładowanie...",
       "selectLanguage": "Wybierz język"
     },
+    "object": {
+      "openOnScaleAction": "Otwórz na skali"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Skale subatomowe",
+      "particles": "Cząstki",
+      "atomsMolecules": "Atomy i cząsteczki",
+      "microworld": "Mikroświat",
+      "smallObjects": "Milimetry i centymetry",
+      "humanScales": "Skale ludzkie",
+      "buildingsLandscapes": "Budynki i krajobrazy",
+      "planets": "Planety",
+      "stars": "Gwiazdy",
+      "solarSystem": "Układ Słoneczny",
+      "interstellar": "Skale międzygwiezdne",
+      "galaxiesUniverse": "Galaktyki i Wszechświat"
+    },
     "credits": {
       "createdBy": "Stworzone przez: Cary Huang, Michael Huang",
       "webDev": "Tworzenie wersji internetowej: Matthew Martori",

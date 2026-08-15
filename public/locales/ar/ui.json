@@ -29,6 +29,23 @@
       "startLoading": "جارٍ التحميل...",
       "selectLanguage": "اختر اللغة"
     },
+    "object": {
+      "openOnScaleAction": "افتح على المقياس"
+    },
+    "objectScaleGroups": {
+      "subatomic": "المقاييس دون الذرية",
+      "particles": "الجسيمات",
+      "atomsMolecules": "الذرات والجزيئات",
+      "microworld": "العالم المجهري",
+      "smallObjects": "المليمترات والسنتيمترات",
+      "humanScales": "المقاييس البشرية",
+      "buildingsLandscapes": "المباني والمناظر الطبيعية",
+      "planets": "الكواكب",
+      "stars": "النجوم",
+      "solarSystem": "النظام الشمسي",
+      "interstellar": "المقاييس بين النجمية",
+      "galaxiesUniverse": "المجرات والكون"
+    },
     "credits": {
       "createdBy": "من إعداد: Cary Huang, Michael Huang",
       "webDev": "تطوير الويب: Matthew Martori",

@@ -29,6 +29,23 @@
       "startLoading": "Yükleniyor...",
       "selectLanguage": "Dil seçin"
     },
+    "object": {
+      "openOnScaleAction": "Ölçekte aç"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Atom altı ölçekler",
+      "particles": "Parçacıklar",
+      "atomsMolecules": "Atomlar ve moleküller",
+      "microworld": "Mikro dünya",
+      "smallObjects": "Milimetreler ve santimetreler",
+      "humanScales": "İnsan ölçekleri",
+      "buildingsLandscapes": "Binalar ve manzaralar",
+      "planets": "Gezegenler",
+      "stars": "Yıldızlar",
+      "solarSystem": "Güneş sistemi",
+      "interstellar": "Yıldızlararası ölçekler",
+      "galaxiesUniverse": "Galaksiler ve Evren"
+    },
     "credits": {
       "createdBy": "Oluşturanlar: Cary Huang, Michael Huang",
       "webDev": "Web geliştirme: Matthew Martori",

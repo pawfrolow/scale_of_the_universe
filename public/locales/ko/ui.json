@@ -29,6 +29,23 @@
       "startLoading": "로딩 중...",
       "selectLanguage": "언어 선택"
     },
+    "object": {
+      "openOnScaleAction": "척도에서 열기"
+    },
+    "objectScaleGroups": {
+      "subatomic": "아원자 규모",
+      "particles": "입자",
+      "atomsMolecules": "원자와 분자",
+      "microworld": "미시 세계",
+      "smallObjects": "밀리미터와 센티미터",
+      "humanScales": "인간 규모",
+      "buildingsLandscapes": "건물과 풍경",
+      "planets": "행성",
+      "stars": "별",
+      "solarSystem": "태양계",
+      "interstellar": "성간 규모",
+      "galaxiesUniverse": "은하와 우주"
+    },
     "credits": {
       "createdBy": "제작: Cary Huang, Michael Huang",
       "webDev": "웹 개발: Matthew Martori",

@@ -29,6 +29,23 @@
       "startLoading": "載入中...",
       "selectLanguage": "選擇語言"
     },
+    "object": {
+      "openOnScaleAction": "在尺度上開啟"
+    },
+    "objectScaleGroups": {
+      "subatomic": "次原子尺度",
+      "particles": "粒子",
+      "atomsMolecules": "原子與分子",
+      "microworld": "微觀世界",
+      "smallObjects": "毫米與公分",
+      "humanScales": "人類尺度",
+      "buildingsLandscapes": "建築與景觀",
+      "planets": "行星",
+      "stars": "恆星",
+      "solarSystem": "太陽系",
+      "interstellar": "星際尺度",
+      "galaxiesUniverse": "星系與宇宙"
+    },
     "credits": {
       "createdBy": "作者：Cary Huang、Michael Huang",
       "webDev": "網頁開發：Matthew Martori",

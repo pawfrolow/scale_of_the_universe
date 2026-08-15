@@ -58,7 +58,7 @@ const breadcrumbs = [
           <div class={seoStyles.aboutBody}>
             {locale.aboutPage.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
             <p>
-              {locale.aboutPage.history.beforeOriginalLink}{' '}<a href={CREDIT_LINKS.copyright} target="_blank" rel="noreferrer">{locale.aboutPage.history.originalLinkLabel}</a>{' '}{locale.aboutPage.history.betweenLinks}{' '}<a href={CREDIT_LINKS.webDev} target="_blank" rel="noreferrer">{locale.aboutPage.history.webDevLinkLabel}</a>{locale.aboutPage.history.afterLinks}
+              {locale.aboutPage.history.beforeOriginalLink}{' '}<a href={CREDIT_LINKS.webDev} target="_blank" rel="noreferrer">{locale.aboutPage.history.originalLinkLabel}</a>{locale.aboutPage.history.afterLinks}
             </p>
             <p>
               {locale.aboutPage.contact.beforeEmail}{' '}<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>{locale.aboutPage.contact.afterEmail}

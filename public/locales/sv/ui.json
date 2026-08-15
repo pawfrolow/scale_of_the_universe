@@ -29,6 +29,23 @@
       "startLoading": "Laddar...",
       "selectLanguage": "Välj språk"
     },
+    "object": {
+      "openOnScaleAction": "Öppna på skalan"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Subatomära skalor",
+      "particles": "Partiklar",
+      "atomsMolecules": "Atomer och molekyler",
+      "microworld": "Mikrovärlden",
+      "smallObjects": "Millimeter och centimeter",
+      "humanScales": "Mänskliga skalor",
+      "buildingsLandscapes": "Byggnader och landskap",
+      "planets": "Planeter",
+      "stars": "Stjärnor",
+      "solarSystem": "Solsystemet",
+      "interstellar": "Interstellära skalor",
+      "galaxiesUniverse": "Galaxer och universum"
+    },
     "credits": {
       "createdBy": "Skapad av: Cary Huang, Michael Huang",
       "webDev": "Webbutveckling: Matthew Martori",

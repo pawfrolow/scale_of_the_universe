@@ -29,6 +29,23 @@
       "startLoading": "Завантаження...",
       "selectLanguage": "Виберіть мову"
     },
+    "object": {
+      "openOnScaleAction": "Відкрити на шкалі"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Субатомні масштаби",
+      "particles": "Частинки",
+      "atomsMolecules": "Атоми й молекули",
+      "microworld": "Мікросвіт",
+      "smallObjects": "Міліметри й сантиметри",
+      "humanScales": "Людські масштаби",
+      "buildingsLandscapes": "Будівлі та ландшафти",
+      "planets": "Планети",
+      "stars": "Зорі",
+      "solarSystem": "Сонячна система",
+      "interstellar": "Міжзоряні масштаби",
+      "galaxiesUniverse": "Галактики й Всесвіт"
+    },
     "credits": {
       "createdBy": "Створено: Cary Huang, Michael Huang",
       "webDev": "Веброзробка: Matthew Martori",

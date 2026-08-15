@@ -59,6 +59,7 @@ export type TItemsOverride = {
   replace?: Record<string, TFrameMeta>;
   add?: Record<string, TFrameMeta>;
   textures?: Record<string, boolean>;
+  slugs?: Record<string, string>;
 };
 
 export type TResolvedItemsManifest = TItemsManifest;

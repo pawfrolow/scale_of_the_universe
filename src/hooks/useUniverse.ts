@@ -37,22 +37,26 @@ const getScaleExpByPercent = (percent: number) => {
 
 interface IUseUniverseParams {
   containerRef: RefObject<HTMLDivElement | null>;
+  initialObjectId?: string;
   isStarted: boolean;
   isItemModalOpen: boolean;
   onAssetsLoading: () => void;
   onAssetsReady: () => void;
   onAssetsProgress?: (progress: number) => void;
+  onInitialObjectFocused?: () => void;
   onItemModalOpen: (data: ItemModalData) => void;
   onItemModalClose: () => void;
 }
 
 export const useUniverse = ({
   containerRef,
+  initialObjectId,
   isStarted,
   isItemModalOpen,
   onAssetsLoading,
   onAssetsReady,
   onAssetsProgress,
+  onInitialObjectFocused,
   onItemModalOpen,
   onItemModalClose,
 }: IUseUniverseParams) => {
@@ -340,6 +344,14 @@ export const useUniverse = ({
       if (!isDestroyed) {
         onAssetsProgress?.(100);
         onAssetsReady();
+
+        if (initialObjectId) {
+          void universe.focusItemById(initialObjectId).then((isFocused) => {
+            if (!isDestroyed && isFocused) {
+              onInitialObjectFocused?.();
+            }
+          });
+        }
       }
     };
 
@@ -405,5 +417,5 @@ export const useUniverse = ({
       initializedRef.current = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [containerRef, isStarted]);
+  }, [containerRef, initialObjectId, isStarted, onInitialObjectFocused]);
 };

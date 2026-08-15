@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.9.5
+
+- Added object deep links so object pages can open the scale directly at the selected object.
+- Updated object detail actions to use localized "Open on scale" copy while keeping the home start button unchanged.
+- Expanded the about page text and attribution copy for Russian and English pages.
+- Localized object scale group headings across supported languages.
+- Added locale-aware object slugs with alias pages for Russian object replacements.
+
 ## 1.9.4
 
 - Added search to the objects pages so objects can be found faster by name.

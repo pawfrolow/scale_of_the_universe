@@ -23,10 +23,12 @@ export async function getStaticPaths() {
   return locales
     .filter((locale) => locale.language !== DEFAULT_LANGUAGE)
     .flatMap((locale) =>
-      locale.objects.map((object) => ({
-        params: { lang: locale.segment, slug: object.slug },
-        props: { locale, object },
-      })),
+      locale.objects.flatMap((object) =>
+        [object.slug, ...object.slugAliases].map((slug) => ({
+          params: { lang: locale.segment, slug },
+          props: { locale, object },
+        })),
+      ),
     );
 }
 
@@ -41,6 +43,7 @@ const breadcrumbs = [
   { label: locale.navLabels.objects, href: locale.objectIndexPath },
   { label: object.title, href: object.path },
 ];
+const startObjectHref = `${locale.path}?object=${encodeURIComponent(object.id)}`;
 ---
 
 <SeoLayout
@@ -63,7 +66,7 @@ const breadcrumbs = [
           <div>
             <SeoPageHeading title={object.title} description={object.description}>
               <p slot="after-title" class={seoStyles.size} set:html={buildSizeHtml(object.sizeText)} />
-              <a class={seoStyles.button} href={locale.path}>{locale.startScreen.startText}</a>
+              <a class={seoStyles.button} href={startObjectHref}>{locale.objectPage.openOnScaleAction}</a>
             </SeoPageHeading>
           </div>
           <div class={seoStyles.imageWrap}>

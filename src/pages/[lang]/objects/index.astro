@@ -49,7 +49,7 @@ const sortedObjects = [...locale.objects].sort(
 );
 const objectGroups = OBJECT_SCALE_GROUPS.map((group) => ({
   group,
-  label: getObjectScaleGroupLabel(locale.language, group),
+  label: getObjectScaleGroupLabel(locale, group),
   rangeHtml: buildPowerOfTenRangeHtml(group, locale.units),
   objects: sortedObjects.filter((object) => getObjectScaleGroup(object) === group),
 })).filter((group) => group.objects.length > 0);

@@ -29,6 +29,23 @@
       "startLoading": "加载中...",
       "selectLanguage": "选择语言"
     },
+    "object": {
+      "openOnScaleAction": "在尺度上打开"
+    },
+    "objectScaleGroups": {
+      "subatomic": "亚原子尺度",
+      "particles": "粒子",
+      "atomsMolecules": "原子和分子",
+      "microworld": "微观世界",
+      "smallObjects": "毫米和厘米",
+      "humanScales": "人类尺度",
+      "buildingsLandscapes": "建筑与景观",
+      "planets": "行星",
+      "stars": "恒星",
+      "solarSystem": "太阳系",
+      "interstellar": "星际尺度",
+      "galaxiesUniverse": "星系与宇宙"
+    },
     "credits": {
       "createdBy": "作者：Cary Huang、Michael Huang",
       "webDev": "网页开发：Matthew Martori",

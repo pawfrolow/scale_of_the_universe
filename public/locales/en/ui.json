@@ -18,14 +18,14 @@
     },
     "about": {
       "paragraphs": [
-        "The Scale of the Universe is an interactive visualization that helps you feel the difference between the sizes of objects. The scale starts at human size: you can scroll down toward the microworld and up toward planets, stars, galaxies, and the observable Universe.",
-        "The object sizes here are often approximate or characteristic values. For some objects, an average size, a typical example, or a convenient comparison value is used so they can all exist on one shared scale."
+        "The Scale of the Universe is an interactive visualization that helps you get an intuitive sense of the sizes of objects around us: from the smallest elementary particles to planets, stars, galaxies, and the observable Universe. All objects are placed on one continuous scale, making it easier to compare things that are almost impossible to imagine side by side in everyday life.",
+        "Object sizes are often shown as approximate or characteristic values. In some cases, an average size, a typical example, or a convenient comparison value is used so different objects can share one scale and remain easy to understand.",
+        "The first version of the project appeared in 2010 as a Flash application and quickly became a popular educational tool. Over time, the idea has evolved with new data, modern web technologies, additional localizations, and a more convenient format for exploring the scale of the Universe.",
+        "The original Scale of the Universe was created by Cary Huang and his brother Michael Huang. Their work became one of the most recognizable interactive projects about the sizes of objects in the Universe and inspired many people to take an interest in science, space, and data visualization."
       ],
       "history": {
-        "beforeOriginalLink": "This version builds on",
-        "originalLinkLabel": "the original idea by Cary and Michael Huang",
-        "betweenLinks": "and",
-        "webDevLinkLabel": "the web implementation by Matthew Martori",
+        "beforeOriginalLink": "This version of the project is based on",
+        "originalLinkLabel": "the web implementation of the scale by Matthew Martori",
         "afterLinks": ". The project is gradually updated and expanded."
       },
       "contact": {
@@ -45,6 +45,23 @@
       "startButton": "Start",
       "startLoading": "Loading...",
       "selectLanguage": "Select language"
+    },
+    "object": {
+      "openOnScaleAction": "Open on scale"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Subatomic scales",
+      "particles": "Particles",
+      "atomsMolecules": "Atoms and molecules",
+      "microworld": "Microworld",
+      "smallObjects": "Millimeters and centimeters",
+      "humanScales": "Human scales",
+      "buildingsLandscapes": "Buildings and landscapes",
+      "planets": "Planets",
+      "stars": "Stars",
+      "solarSystem": "Solar system",
+      "interstellar": "Interstellar scales",
+      "galaxiesUniverse": "Galaxies and the Universe"
     },
     "credits": {
       "createdBy": "Created by: Cary Huang, Michael Huang",

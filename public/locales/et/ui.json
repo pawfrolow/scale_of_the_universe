@@ -29,6 +29,23 @@
       "startLoading": "Laadimine...",
       "selectLanguage": "Vali keel"
     },
+    "object": {
+      "openOnScaleAction": "Ava skaalal"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Subatomaarsed mõõtkavad",
+      "particles": "Osakesed",
+      "atomsMolecules": "Aatomid ja molekulid",
+      "microworld": "Mikromaailm",
+      "smallObjects": "Millimeetrid ja sentimeetrid",
+      "humanScales": "Inimlikud mõõtkavad",
+      "buildingsLandscapes": "Hooned ja maastikud",
+      "planets": "Planeedid",
+      "stars": "Tähed",
+      "solarSystem": "Päikesesüsteem",
+      "interstellar": "Tähtedevahelised mõõtkavad",
+      "galaxiesUniverse": "Galaktikad ja Universum"
+    },
     "credits": {
       "createdBy": "Loonud: Cary Huang, Michael Huang",
       "webDev": "Veebiarendus: Matthew Martori",

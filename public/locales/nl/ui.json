@@ -29,6 +29,23 @@
       "startLoading": "Laden...",
       "selectLanguage": "Selecteer een taal"
     },
+    "object": {
+      "openOnScaleAction": "Openen op de schaal"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Subatomaire schalen",
+      "particles": "Deeltjes",
+      "atomsMolecules": "Atomen en moleculen",
+      "microworld": "Microwereld",
+      "smallObjects": "Millimeters en centimeters",
+      "humanScales": "Menselijke schalen",
+      "buildingsLandscapes": "Gebouwen en landschappen",
+      "planets": "Planeten",
+      "stars": "Sterren",
+      "solarSystem": "Zonnestelsel",
+      "interstellar": "Interstellaire schalen",
+      "galaxiesUniverse": "Sterrenstelsels en het heelal"
+    },
     "credits": {
       "createdBy": "Gemaakt door: Cary Huang, Michael Huang",
       "webDev": "Webontwikkeling: Matthew Martori",
