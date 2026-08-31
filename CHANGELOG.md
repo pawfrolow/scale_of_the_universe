@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.9.6
+
+- Added a centralized SEO indexation policy for static pages.
+- Limited indexed object detail pages to Russian and English while keeping other locales accessible with `noindex,follow`.
+- Limited indexed about pages to Russian and English until localized about content is expanded.
+- Reduced the sitemap to indexable URLs only and switched sitemap `lastmod` values to a stable date.
+- Updated hreflang output so noindex pages do not advertise alternate noindex variants.
+- Marked object alias pages as noindex while keeping canonicals pointed at the primary object slug.
+- Removed empty search-state copy from static object index HTML so it does not appear in search snippets.
+- Expanded the production SEO check script to cover sitemap size, robots meta, hreflang filtering, and static snippet text.
+
 ## 1.9.5
 
 - Added object deep links so object pages can open the scale directly at the selected object.

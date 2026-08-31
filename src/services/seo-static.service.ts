@@ -191,6 +191,37 @@ export type TSeoPage =
   | { type: 'objects' }
   | { type: 'object'; id: string };
 
+export const SEO_INDEX_ROBOTS = 'index,follow,max-image-preview:large';
+export const SEO_NOINDEX_ROBOTS = 'noindex,follow';
+
+const SEO_INDEXABLE_ABOUT_LANGUAGES = new Set([DEFAULT_LANGUAGE, 'en']);
+const SEO_INDEXABLE_OBJECT_LANGUAGES = new Set([DEFAULT_LANGUAGE, 'en']);
+
+export const isSeoPageIndexable = (
+  locale: Pick<TSeoLocale, 'language'>,
+  page: TSeoPage,
+  options: { isAlias?: boolean } = {},
+) => {
+  if (options.isAlias) {
+    return false;
+  }
+
+  switch (page.type) {
+    case 'about':
+      return SEO_INDEXABLE_ABOUT_LANGUAGES.has(locale.language);
+    case 'object':
+      return SEO_INDEXABLE_OBJECT_LANGUAGES.has(locale.language);
+    default:
+      return true;
+  }
+};
+
+export const getSeoRobots = (
+  locale: Pick<TSeoLocale, 'language'>,
+  page: TSeoPage,
+  options: { isAlias?: boolean } = {},
+) => (isSeoPageIndexable(locale, page, options) ? SEO_INDEX_ROBOTS : SEO_NOINDEX_ROBOTS);
+
 export type TSeoBreadcrumbItem = {
   href: string;
   label: string;
@@ -754,7 +785,9 @@ export const getObjectIndexPageCopy = (locale: TSeoLocale) => {
 export const getAlternateLinks = (locales: TSeoLocale[], page: TSeoPage) =>
   locales
     .filter(
-      (locale) => page.type !== 'object' || locale.objects.some((object) => object.id === page.id),
+      (locale) =>
+        isSeoPageIndexable(locale, page) &&
+        (page.type !== 'object' || locale.objects.some((object) => object.id === page.id)),
     )
     .map((locale) => ({
       hreflang: locale.language,
@@ -768,7 +801,10 @@ export const getXDefaultAlternate = (locales: TSeoLocale[], page: TSeoPage) => {
     return null;
   }
 
-  if (page.type === 'object' && !defaultLocale.objects.some((object) => object.id === page.id)) {
+  if (
+    !isSeoPageIndexable(defaultLocale, page) ||
+    (page.type === 'object' && !defaultLocale.objects.some((object) => object.id === page.id))
+  ) {
     return null;
   }
 

@@ -13,6 +13,7 @@ import {
   DEFAULT_LANGUAGE,
   getAppVersion,
   getLocales,
+  getSeoRobots,
   trimToLength,
 } from '@/services/seo-static.service';
 import type { TSeoLocale, TSeoObject } from '@/services/seo-static.service';
@@ -26,14 +27,18 @@ export async function getStaticPaths() {
       locale.objects.flatMap((object) =>
         [object.slug, ...object.slugAliases].map((slug) => ({
           params: { lang: locale.segment, slug },
-          props: { locale, object },
+          props: { isAlias: slug !== object.slug, locale, object },
         })),
       ),
     );
 }
 
 const locales = await getLocales();
-const { locale, object } = Astro.props as { locale: TSeoLocale; object: TSeoObject };
+const { isAlias, locale, object } = Astro.props as {
+  isAlias: boolean;
+  locale: TSeoLocale;
+  object: TSeoObject;
+};
 const appVersion = await getAppVersion();
 const title = `${object.title} | ${locale.appTitle}`;
 const description = trimToLength(`${object.title}. ${object.description}`, 155);
@@ -43,6 +48,7 @@ const breadcrumbs = [
   { label: locale.navLabels.objects, href: locale.objectIndexPath },
   { label: object.title, href: object.path },
 ];
+const page = { type: 'object', id: object.id } as const;
 const startObjectHref = `${locale.path}?object=${encodeURIComponent(object.id)}`;
 ---
 
@@ -53,12 +59,13 @@ const startObjectHref = `${locale.path}?object=${encodeURIComponent(object.id)}`
   locales={locales}
   ogImage={imageUrl}
   ogType="article"
-  page={{ type: 'object', id: object.id }}
+  page={page}
+  robots={getSeoRobots(locale, page, { isAlias })}
   structuredData={[buildObjectStructuredData(locale, object), buildBreadcrumbStructuredData(breadcrumbs)]}
   title={title}
 >
   <div class={seoStyles.shell}>
-    <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'object', id: object.id }} />
+    <Header locale={locale} locales={locales} appVersion={appVersion} page={page} />
     <main class={seoStyles.page}>
       <Breadcrumbs items={breadcrumbs} />
       <div class={seoStyles.contentIsland}>

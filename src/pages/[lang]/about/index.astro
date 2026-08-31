@@ -13,6 +13,7 @@ import {
   DEFAULT_LANGUAGE,
   getAppVersion,
   getLocales,
+  getSeoRobots,
   trimToLength,
 } from '@/services/seo-static.service';
 import type { TSeoLocale } from '@/services/seo-static.service';
@@ -37,6 +38,7 @@ const breadcrumbs = [
   { label: locale.appTitle, href: locale.path },
   { label: locale.navLabels.about, href: locale.aboutPath },
 ];
+const page = { type: 'about' } as const;
 ---
 
 <SeoLayout
@@ -45,12 +47,13 @@ const breadcrumbs = [
   locale={locale}
   locales={locales}
   ogImage={locale.ogImage}
-  page={{ type: 'about' }}
+  page={page}
+  robots={getSeoRobots(locale, page)}
   structuredData={[buildAboutStructuredData(locale), buildBreadcrumbStructuredData(breadcrumbs)]}
   title={title}
 >
   <div class={seoStyles.shell}>
-    <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'about' }} />
+    <Header locale={locale} locales={locales} appVersion={appVersion} page={page} />
     <main class={seoStyles.page}>
       <Breadcrumbs items={breadcrumbs} />
       <div class={seoStyles.contentIsland}>

@@ -14,6 +14,7 @@ import {
   getAppVersion,
   getLocaleData,
   getLocales,
+  getSeoRobots,
   trimToLength,
 } from '@/services/seo-static.service';
 import type { TSeoObject } from '@/services/seo-static.service';
@@ -28,14 +29,14 @@ export async function getStaticPaths() {
   return locale.objects.flatMap((object) =>
     [object.slug, ...object.slugAliases].map((slug) => ({
       params: { slug },
-      props: { object },
+      props: { isAlias: slug !== object.slug, object },
     })),
   );
 }
 
 const locales = await getLocales();
 const locale = await getLocaleData(DEFAULT_LANGUAGE);
-const { object } = Astro.props as { object: TSeoObject };
+const { isAlias, object } = Astro.props as { isAlias: boolean; object: TSeoObject };
 
 if (!locale) {
   throw new Error(`Locale not found: ${DEFAULT_LANGUAGE}`);
@@ -50,6 +51,7 @@ const breadcrumbs = [
   { label: locale.navLabels.objects, href: locale.objectIndexPath },
   { label: object.title, href: object.path },
 ];
+const page = { type: 'object', id: object.id } as const;
 const startObjectHref = `${locale.path}?object=${encodeURIComponent(object.id)}`;
 ---
 
@@ -60,12 +62,13 @@ const startObjectHref = `${locale.path}?object=${encodeURIComponent(object.id)}`
   locales={locales}
   ogImage={imageUrl}
   ogType="article"
-  page={{ type: 'object', id: object.id }}
+  page={page}
+  robots={getSeoRobots(locale, page, { isAlias })}
   structuredData={[buildObjectStructuredData(locale, object), buildBreadcrumbStructuredData(breadcrumbs)]}
   title={title}
 >
   <div class={seoStyles.shell}>
-    <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'object', id: object.id }} />
+    <Header locale={locale} locales={locales} appVersion={appVersion} page={page} />
     <main class={seoStyles.page}>
       <Breadcrumbs items={breadcrumbs} />
       <div class={seoStyles.contentIsland}>

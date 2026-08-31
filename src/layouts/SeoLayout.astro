@@ -5,6 +5,7 @@ import CanvasWarpStars from '@/components/CanvasWarpStars/CanvasWarpStars.astro'
 import ParallaxStars from '@/components/ParallaxStars/ParallaxStars.astro';
 import {
   APP_ORIGIN,
+  SEO_INDEX_ROBOTS,
   getAlternateLinks,
   getXDefaultAlternate,
   serializeJsonForHtml,
@@ -36,13 +37,14 @@ const {
   ogImage,
   ogType = 'website',
   page,
-  robots = 'index,follow,max-image-preview:large',
+  robots = SEO_INDEX_ROBOTS,
   structuredData,
   title,
 } = Astro.props;
 const canonicalUrl = `${APP_ORIGIN}${canonicalPath}`;
-const alternates = includeAlternateLinks ? getAlternateLinks(locales, page) : [];
-const xDefault = includeAlternateLinks ? getXDefaultAlternate(locales, page) : null;
+const includeIndexableAlternateLinks = includeAlternateLinks && !robots.includes('noindex');
+const alternates = includeIndexableAlternateLinks ? getAlternateLinks(locales, page) : [];
+const xDefault = includeIndexableAlternateLinks ? getXDefaultAlternate(locales, page) : null;
 const structuredDataJson = structuredData ? serializeJsonForHtml(structuredData) : null;
 ---
 
