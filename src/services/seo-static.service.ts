@@ -157,6 +157,7 @@ export type TSeoLocale = {
   objects: TSeoObject[];
   aboutPage: TAboutPageCopy;
   navLabels: {
+    home: string;
     about: string;
     objects: string;
     language: string;
@@ -360,12 +361,14 @@ const formatSizeText = (
 const getFallbackNavLabels = (language: string) =>
   language === DEFAULT_LANGUAGE
     ? {
+        home: 'Главная',
         about: 'О проекте',
         objects: 'Объекты',
         language: 'Язык',
         donate: 'Поддержать',
       }
     : {
+        home: 'Home',
         about: 'About',
         objects: 'Objects',
         language: 'Language',
@@ -376,6 +379,7 @@ const getNavLabels = (language: string, ui: TJsonRecord) => {
   const fallback = getFallbackNavLabels(language);
 
   return {
+    home: normalizeText(ui.html?.nav?.home ?? fallback.home),
     about: normalizeText(ui.html?.nav?.about ?? fallback.about),
     objects: normalizeText(ui.html?.nav?.objects ?? fallback.objects),
     language: normalizeText(ui.html?.nav?.language ?? fallback.language),

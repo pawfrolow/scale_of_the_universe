@@ -34,6 +34,20 @@ const randomizeParticle = (particle: Particle, canvasWidth: number, canvasHeight
   return particle;
 };
 
+const getCanvasViewport = (canvas: HTMLCanvasElement) => {
+  const rect = canvas.parentElement?.getBoundingClientRect() ?? canvas.getBoundingClientRect();
+  const width = rect.width || window.innerWidth || document.documentElement.clientWidth || 1;
+  const height = rect.height || window.innerHeight || document.documentElement.clientHeight || 1;
+  const visualViewport = window.visualViewport;
+
+  return {
+    width: Math.max(1, Math.round(width)),
+    height: Math.max(1, Math.round(height)),
+    centerX: visualViewport ? visualViewport.offsetLeft + visualViewport.width * 0.5 : width * 0.5,
+    centerY: visualViewport ? visualViewport.offsetTop + visualViewport.height * 0.5 : height * 0.5,
+  };
+};
+
 export const initCanvasWarpStars = (canvas: HTMLCanvasElement) => {
   canvasStates.get(canvas)?.cleanup();
 
@@ -50,18 +64,22 @@ export const initCanvasWarpStars = (canvas: HTMLCanvasElement) => {
   let mouseX = 0;
   let mouseY = 0;
   let animationFrameId = 0;
+  let resizeFrameId = 0;
   let isDisposed = false;
   const particles = Array.from({ length: PARTICLE_NUM }, createParticle);
 
   const resize = () => {
     const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    const viewport = getCanvasViewport(canvas);
+    const width = viewport.width;
+    const height = viewport.height;
 
     canvasWidth = width;
     canvasHeight = height;
-    centerX = canvasWidth * 0.5;
-    centerY = canvasHeight * 0.5;
+    centerX = viewport.centerX;
+    centerY = viewport.centerY;
+    mouseX = centerX;
+    mouseY = centerY;
 
     canvas.width = Math.max(1, Math.floor(width * pixelRatio));
     canvas.height = Math.max(1, Math.floor(height * pixelRatio));
@@ -70,11 +88,11 @@ export const initCanvasWarpStars = (canvas: HTMLCanvasElement) => {
 
     context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
     context.fillStyle = '#ffffff';
+  };
 
-    if (!mouseX && !mouseY) {
-      mouseX = centerX;
-      mouseY = centerY;
-    }
+  const scheduleResize = () => {
+    window.cancelAnimationFrame(resizeFrameId);
+    resizeFrameId = window.requestAnimationFrame(resize);
   };
 
   const resetParticles = () => {
@@ -151,14 +169,29 @@ export const initCanvasWarpStars = (canvas: HTMLCanvasElement) => {
   const cleanup = () => {
     isDisposed = true;
     window.cancelAnimationFrame(animationFrameId);
-    window.removeEventListener('resize', resize);
+    window.cancelAnimationFrame(resizeFrameId);
+    window.removeEventListener('resize', scheduleResize);
+    window.removeEventListener('orientationchange', scheduleResize);
+
+    if (window.visualViewport) {
+      window.visualViewport.removeEventListener('resize', scheduleResize);
+      window.visualViewport.removeEventListener('scroll', scheduleResize);
+    }
+
     document.removeEventListener('mousemove', handleMouseMove);
     canvasStates.delete(canvas);
   };
 
   resize();
   resetParticles();
-  window.addEventListener('resize', resize);
+  window.addEventListener('resize', scheduleResize);
+  window.addEventListener('orientationchange', scheduleResize);
+
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', scheduleResize);
+    window.visualViewport.addEventListener('scroll', scheduleResize);
+  }
+
   document.addEventListener('mousemove', handleMouseMove);
   animationFrameId = window.requestAnimationFrame(draw);
 

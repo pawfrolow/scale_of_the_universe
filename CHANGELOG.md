@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.9.8
+
+- Fixed mobile scrolling on static pages.
+- Improved mobile browser chrome and safe-area colors.
+- Recentered the home starfield canvas on viewport changes.
+- Added Home to the mobile menu.
+- Fixed mobile object search state and keyboard behavior.
+
 ## 1.9.7
 
 - Added Stygotantulus stocki in all locales.

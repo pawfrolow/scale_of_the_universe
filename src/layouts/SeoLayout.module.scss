@@ -3,6 +3,7 @@
   z-index: 1;
   isolation: isolate;
   min-height: 100dvh;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   font-family: var(--font-primary);

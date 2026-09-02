@@ -3,8 +3,9 @@
 .frameStyle {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   background-color: rgba(229, 229, 229, 1);
   overflow: hidden;
   -webkit-touch-callout: none;
@@ -26,9 +27,13 @@
 }
 
 .universeLayer {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 .bgEarth {
@@ -53,11 +58,11 @@
 }
 
 .fullBg {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  inset: 0;
   z-index: $z-bg;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   margin: 0;
 }

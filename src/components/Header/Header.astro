@@ -66,6 +66,7 @@ const donateCloseLabel = normalizeText(
           <span aria-hidden="true">&times;</span>
         </button>
         <nav class={styles.sidebarLinks} aria-label="Primary">
+          <a href={locale.path} data-not-found-link="home" data-not-found-text="navHome">{locale.navLabels.home}</a>
           <a href={locale.aboutPath} data-not-found-link="about" data-not-found-text="navAbout">{locale.navLabels.about}</a>
           <a href={locale.objectIndexPath} data-not-found-link="objects" data-not-found-text="navObjects">{locale.navLabels.objects}</a>
           <a href="#language-modal" data-language-open data-not-found-text="navLanguage">{locale.navLabels.language}</a>

@@ -12,7 +12,7 @@ const { copy, locale } = Astro.props;
 const emptyText = encodeURIComponent(copy.empty);
 ---
 
-<section class={styles.root} data-objects-search-root data-locale={locale}>
+<form class={styles.root} role="search" data-objects-search-root data-locale={locale}>
   <label class={styles.label}>
     <span>{copy.label}</span>
     <span class={styles.control}>
@@ -37,7 +37,7 @@ const emptyText = encodeURIComponent(copy.empty);
     </span>
   </label>
   <p class={styles.empty} data-objects-search-empty data-empty-text={emptyText} hidden></p>
-</section>
+</form>
 
 <script>
   const normalizeObjectsSearchValue = (value: unknown, locale?: string) =>
@@ -46,6 +46,12 @@ const emptyText = encodeURIComponent(copy.empty);
       .toLocaleLowerCase(locale);
 
   document.querySelectorAll('[data-objects-search-root]').forEach((root) => {
+    if (!(root instanceof HTMLElement) || root.dataset.objectsSearchReady === 'true') {
+      return;
+    }
+
+    root.dataset.objectsSearchReady = 'true';
+
     const input = root.querySelector('[data-objects-search-input]');
     const clearButton = root.querySelector('[data-objects-search-clear]');
     const emptyState = root.querySelector('[data-objects-search-empty]');
@@ -89,12 +95,23 @@ const emptyText = encodeURIComponent(copy.empty);
       }
     };
 
+    root.addEventListener('submit', (event) => {
+      event.preventDefault();
+      input.blur();
+    });
     input.addEventListener('input', applySearch);
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        input.blur();
+      }
+    });
     clearButton.addEventListener('click', () => {
       input.value = '';
       applySearch();
       input.focus();
     });
+    window.addEventListener('pageshow', applySearch);
     applySearch();
   });
 </script>

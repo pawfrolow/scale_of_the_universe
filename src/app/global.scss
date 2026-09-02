@@ -5,6 +5,7 @@
   --safe-area-right: env(safe-area-inset-right, 0px);
   --safe-area-bottom: env(safe-area-inset-bottom, 0px);
   --safe-area-left: env(safe-area-inset-left, 0px);
+  --browser-safe-area-bg: #141b41;
 
   @include theme-custom-properties;
 }
@@ -14,12 +15,40 @@
 }
 
 html,
-body,
-#root {
+body {
   margin: 0;
   padding: 0;
   width: 100%;
+  min-height: 100%;
+  background-color: var(--browser-safe-area-bg, #141b41);
+}
+
+html.sotu-runtime-active,
+body.sotu-runtime-active {
   height: 100%;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+#root {
+  position: fixed;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+#universe-runtime-root {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   touch-action: pan-y;
 }

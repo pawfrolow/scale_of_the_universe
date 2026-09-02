@@ -6,6 +6,7 @@ import { ScaleText } from '@/classes/scaleText';
 import { Slider } from '@/classes/slider';
 import { Universe } from '@/classes/universe';
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '@/config';
+import { setBrowserTheme } from '@/helpers/browserTheme';
 import { checkMobileDevice } from '@/helpers/checkMobileDevice';
 import { getTextureIdsFromManifest } from '@/helpers/getTextureIdsFromManifest';
 import { map } from '@/helpers/map';
@@ -33,6 +34,18 @@ const getScaleExpByPercent = (percent: number) => {
   return clampScaleExp(
     MIN_SCALE_EXP + percent * normalizedLinearRange + Math.pow(percent, 4) * EXTRA_RIGHT_BOOST,
   );
+};
+
+const getViewportSize = () => {
+  const width =
+    window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 1;
+  const height =
+    window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 1;
+
+  return {
+    width: Math.max(1, Math.round(width)),
+    height: Math.max(1, Math.round(height)),
+  };
 };
 
 interface IUseUniverseParams {
@@ -127,25 +140,25 @@ export const useUniverse = ({
       }
 
       const globalResolution = 1;
+      const initialViewportSize = getViewportSize();
 
       try {
         app = new PIXI.Application({
-          width: frame.offsetWidth,
-          height: frame.offsetHeight,
+          width: initialViewportSize.width,
+          height: initialViewportSize.height,
           antialias: true,
           backgroundAlpha: 0,
           powerPreference: 'high-performance',
           resolution: globalResolution,
           sharedTicker: true,
-          resizeTo: containerRef.current,
         });
       } catch (err) {
         // eslint-disable-next-line no-console
         console.error(err);
 
         app = new PIXI.Application({
-          width: frame.offsetWidth,
-          height: frame.offsetHeight,
+          width: initialViewportSize.width,
+          height: initialViewportSize.height,
           backgroundColor: 0xffffff,
           backgroundAlpha: 0,
           antialias: true,
@@ -212,6 +225,7 @@ export const useUniverse = ({
           }
 
           document.body.classList.remove('dark');
+          setBrowserTheme('light');
         }
 
         if (scaleExp > 5 && scaleExp < 7) {
@@ -232,14 +246,20 @@ export const useUniverse = ({
 
           if (opacity > 50) {
             document.body.classList.add('dark');
+            setBrowserTheme('dark');
           } else {
             document.body.classList.remove('dark');
+            setBrowserTheme('light');
           }
         }
 
-        if (scaleExp >= 7 && buttons) {
-          buttons.style.filter = 'invert(100%)';
+        if (scaleExp >= 7) {
+          if (buttons) {
+            buttons.style.filter = 'invert(100%)';
+          }
+
           document.body.classList.add('dark');
+          setBrowserTheme('dark');
         }
 
         universe.update(scaleExp);
@@ -292,15 +312,7 @@ export const useUniverse = ({
             return;
           }
 
-          const currentFrame = document.getElementById('frame') as HTMLElement | null;
-
-          if (!currentFrame) {
-            return;
-          }
-
-          const rect = containerRef.current.getBoundingClientRect();
-          const width = Math.round(rect.width || currentFrame.clientWidth || window.innerWidth);
-          const height = Math.round(rect.height || currentFrame.clientHeight || window.innerHeight);
+          const { width, height } = getViewportSize();
 
           app.renderer.resize(width, height);
 
@@ -339,6 +351,7 @@ export const useUniverse = ({
 
       if (window.visualViewport) {
         window.visualViewport.addEventListener('resize', visualViewportHandlerRef.current);
+        window.visualViewport.addEventListener('scroll', visualViewportHandlerRef.current);
       }
 
       if (!isDestroyed) {
@@ -378,6 +391,7 @@ export const useUniverse = ({
 
       if (visualViewportHandlerRef.current && window.visualViewport) {
         window.visualViewport.removeEventListener('resize', visualViewportHandlerRef.current);
+        window.visualViewport.removeEventListener('scroll', visualViewportHandlerRef.current);
       }
 
       if (slider) {
@@ -412,6 +426,7 @@ export const useUniverse = ({
         buttons.style.filter = '';
       }
 
+      setBrowserTheme('dark');
       onItemModalClose();
 
       initializedRef.current = false;
