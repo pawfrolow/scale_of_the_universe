@@ -1,0 +1,36 @@
+---
+import styles from './styles.module.scss';
+
+export type BreadcrumbItem = {
+  href?: string;
+  label: string;
+};
+
+type Props = {
+  items: BreadcrumbItem[];
+};
+
+const { items } = Astro.props;
+---
+
+{
+  items.length > 0 ? (
+    <nav class={styles.breadcrumbs} aria-label="Breadcrumb">
+      <ol>
+        {items.map((item, index) => {
+          const isCurrent = index === items.length - 1;
+
+          return (
+            <li>
+              {isCurrent || !item.href ? (
+                <span aria-current={isCurrent ? 'page' : undefined}>{item.label}</span>
+              ) : (
+                <a href={item.href}>{item.label}</a>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
+  ) : null
+}

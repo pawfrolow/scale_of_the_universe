@@ -73,6 +73,8 @@ export default defineConfig({
     fs: {
       allow: ['..'],
     },
+    port: 5174,
+    strictPort: false,
   },
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),

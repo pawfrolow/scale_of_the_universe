@@ -12,8 +12,14 @@
   "html": {
     "meta": {
       "description": "The Scale of the Universe. A comparison of the sizes of various objects, from elementary particles to galaxies.",
+      "intro": "The Scale of the Universe is an interactive project that helps you see how dramatically object sizes differ, from the microworld to galaxies.",
       "ogTitle": "The Scale of the Universe",
       "ogDescription": "A comparison of the sizes of various objects — from elementary particles to galaxies."
+    },
+    "nav": {
+      "about": "About",
+      "objects": "Objects",
+      "language": "Language"
     },
     "modal": {
       "title": "The Scale of the Universe",
@@ -22,6 +28,23 @@
       "startButton": "Start",
       "startLoading": "Loading...",
       "selectLanguage": "Choose a language"
+    },
+    "object": {
+      "openOnScaleAction": "Open on scale"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Subatomic scales",
+      "particles": "Particles",
+      "atomsMolecules": "Atoms and molecules",
+      "microworld": "Microworld",
+      "smallObjects": "Millimeters and centimetres",
+      "humanScales": "Human scales",
+      "buildingsLandscapes": "Buildings and landscapes",
+      "planets": "Planets",
+      "stars": "Stars",
+      "solarSystem": "Circumstellar scales",
+      "interstellar": "Interstellar scales",
+      "galaxiesUniverse": "Galaxies and the Universe"
     },
     "credits": {
       "createdBy": "Created by: Cary Huang, Michael Huang",
@@ -33,6 +56,18 @@
       "title": "Support the project",
       "description": "I develop this project in my spare time and gradually improve its content, translations, interface, and performance.\n\nIf you enjoy the Scale of the Universe, you can support the project with a donation.",
       "closeAriaLabel": "Close support dialogue"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you are looking for does not exist or has moved.",
+      "homeAction": "Go to homepage",
+      "objectsAction": "Browse objects"
+    },
+    "objectsSearch": {
+      "label": "Search objects",
+      "placeholder": "Object name",
+      "clear": "Clear",
+      "empty": "No objects found."
     }
   }
 }

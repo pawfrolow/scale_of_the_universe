@@ -1,0 +1,55 @@
+---
+import type { TSeoLocale } from '@/services/seo-static.service';
+
+import Footer from '@/components/Footer/Footer.astro';
+import Header from '@/components/Header/Header.astro';
+import SeoPageHeading from '@/components/SeoPageHeading/SeoPageHeading.astro';
+import seoStyles from '@/layouts/SeoLayout.module.scss';
+import styles from './styles.module.scss';
+import CanvasWarpStars from '../CanvasWarpStars/CanvasWarpStars.astro';
+
+type Props = {
+  appVersion: string;
+  locale: TSeoLocale;
+  locales: TSeoLocale[];
+};
+
+const { appVersion, locale, locales } = Astro.props;
+---
+
+<div data-seo-static="true" class={seoStyles.shell}>
+  <CanvasWarpStars />
+  <Header locale={locale} locales={locales} appVersion={appVersion} page={{ type: 'home' }} />
+  <main class={styles.page}>
+    <SeoPageHeading
+      class={styles.hero}
+      title={locale.startScreen.title}
+      description={locale.startScreen.introParagraphs}
+    />
+
+    <section class={styles.infoGrid}>
+      <article class={styles.infoItem}>
+        <img src="/img/slider.png" alt="" aria-hidden="true" />
+        <p>{locale.startScreen.zoomHint}</p>
+      </article>
+      <article class={styles.infoItem}>
+        <img src="/img/object.png" alt="" aria-hidden="true" />
+        <p>{locale.startScreen.objectHint}</p>
+      </article>
+    </section>
+
+    <div class={styles.actions}>
+      <button
+        class={styles.startButton}
+        type="button"
+        data-universe-start
+        data-start-text={locale.startScreen.startText}
+        data-loading-text={locale.startScreen.startLoadingText}
+      >
+        <img src="/img/icons/rocket.svg" width="25" height="25" alt="" aria-hidden="true" />
+        <span data-universe-start-text>{locale.startScreen.startText}</span>
+      </button>
+    </div>
+  </main>
+  <Footer locale={locale} appVersion={appVersion} />
+</div>

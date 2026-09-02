@@ -8,12 +8,22 @@
       content="Интерактивная шкала масштабов Вселенной: сравнение размеров объектов от самого маленького до самого большого — от элементарных частиц и атомов до планет, звёзд, туманностей и галактик."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
-    <meta name="theme-color" content="#171933" />
+    <meta name="theme-color" content="#141b41" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="manifest" href="/manifest.webmanifest" />
+    <link
+      rel="preload"
+      href="/fonts/Inter-VariableFont_slnt,wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="preload" href="/fonts/Oldtimer.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="/css/theme-fonts.css" />
     <link rel="canonical" href="https://universe.pavelfrolov.com/" />
     <!-- SEO_ALTERNATES -->
+    <!-- SEO_STRUCTURED_DATA -->
     <title>
       Шкала масштабов Вселенной — сравнение размеров объектов от самого маленького до самого
       большого
@@ -40,22 +50,20 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
     />
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
     <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
   </head>
 
   <body>
+    <!-- SEO_STATIC_CONTENT -->
+    <!-- SEO_LOCALE_DATA -->
     <div id="root"></div>
     <script type="module" src="./main.tsx"></script>
     <script>
-      if ('serviceWorker' in navigator) {
+      if ('serviceWorker' in navigator && window.location.host === 'universe.pavelfrolov.com') {
         window.addEventListener('load', async () => {
           await navigator.serviceWorker.register('/sw.js');
         });

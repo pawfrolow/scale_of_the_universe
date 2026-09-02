@@ -2,6 +2,7 @@ import { Sprite, Text, Container, Texture, Point, DisplayObject, Rectangle } fro
 
 import { Entity } from './entity';
 
+import { PIXI_TEXT_FONT_FAMILY } from '@/config';
 import { calculateScale } from '@/helpers/calculateScale';
 import { getGraphics } from '@/helpers/description';
 import { E } from '@/helpers/e';
@@ -52,7 +53,7 @@ export class Item extends Entity {
   public realRatio: number = 1;
   public currentScale: number = 1;
   public visualLocation: VisualLocation;
-  public video: Sprite;
+  declare public video: Sprite;
   public videoSrc;
   private textDatum: TextDatum;
   public text: Text;
@@ -180,7 +181,7 @@ export class Item extends Entity {
 
   createText() {
     const textStyle = {
-      fontFamily: 'Roboto',
+      fontFamily: PIXI_TEXT_FONT_FAMILY,
       fontSize: 48 * this.visualLocation.titleScale,
       fill: 0x000000,
       align: 'center' as const,

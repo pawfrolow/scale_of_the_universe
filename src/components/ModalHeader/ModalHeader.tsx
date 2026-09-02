@@ -12,6 +12,7 @@ interface IModalHeaderProps {
   titleClassName?: string;
   align?: 'center' | 'start';
   headingLevel?: 'h1' | 'h2';
+  theme?: 'light' | 'dark';
 }
 
 export const ModalHeader = ({
@@ -22,6 +23,7 @@ export const ModalHeader = ({
   titleClassName = '',
   align = 'center',
   headingLevel = 'h2',
+  theme = 'light',
 }: IModalHeaderProps) => {
   const HeadingTag = headingLevel;
 
@@ -31,11 +33,15 @@ export const ModalHeader = ({
         .filter(Boolean)
         .join(' ')}
     >
-      <HeadingTag className={[styles.modalTitle, titleClassName].filter(Boolean).join(' ')}>
+      <HeadingTag
+        className={[styles.modalTitle, theme === 'dark' ? styles.darkTitle : '', titleClassName]
+          .filter(Boolean)
+          .join(' ')}
+      >
         {title}
       </HeadingTag>
 
-      <CloseButton onClick={onClose} ariaLabel={closeAriaLabel} />
+      <CloseButton onClick={onClose} ariaLabel={closeAriaLabel} theme={theme} />
     </div>
   );
 };

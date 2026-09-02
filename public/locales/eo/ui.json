@@ -12,8 +12,14 @@
   "html": {
     "meta": {
       "description": "La Skalo de la Universo. Komparo de la grandecoj de diversaj objektoj, de elementaj partikloj ĝis galaksioj.",
+      "intro": "La Skalo de la Universo estas interaga projekto, kiu helpas vidi kiom forte la grandecoj de objektoj malsamas - de la mikromondo ĝis galaksioj.",
       "ogTitle": "La Skalo de la Universo",
       "ogDescription": "Komparo de la grandecoj de diversaj objektoj — de elementaj partikloj ĝis galaksioj."
+    },
+    "nav": {
+      "about": "Pri la projekto",
+      "objects": "Objektoj",
+      "language": "Lingvo"
     },
     "modal": {
       "title": "La Skalo de la Universo",
@@ -22,6 +28,23 @@
       "startButton": "Komenci",
       "startLoading": "Ŝargado...",
       "selectLanguage": "Elektu lingvon"
+    },
+    "object": {
+      "openOnScaleAction": "Malfermi sur la skalo"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Subatomaj skaloj",
+      "particles": "Partikloj",
+      "atomsMolecules": "Atomoj kaj molekuloj",
+      "microworld": "Mikromondo",
+      "smallObjects": "Milimetroj kaj centimetroj",
+      "humanScales": "Homaj skaloj",
+      "buildingsLandscapes": "Konstruaĵoj kaj pejzaĝoj",
+      "planets": "Planedoj",
+      "stars": "Steloj",
+      "solarSystem": "Ĉirkaŭstelaj skaloj",
+      "interstellar": "Interstelaj skaloj",
+      "galaxiesUniverse": "Galaksioj kaj Universo"
     },
     "credits": {
       "createdBy": "Kreita de: Cary Huang, Michael Huang",
@@ -33,6 +56,18 @@
       "title": "Subtenu la projekton",
       "description": "Mi evoluigas ĉi tiun projekton en mia libera tempo kaj iom post iom plibonigas ĝian enhavon, tradukojn, interfacon kaj rendimenton.\n\nSe al vi plaĉas Scale of the Universe, vi povas subteni la projekton per donaco.",
       "closeAriaLabel": "Fermi la subtenan fenestron"
+    },
+    "notFound": {
+      "title": "Paĝo ne trovita",
+      "description": "La paĝo, kiun vi serĉas, ne ekzistas aŭ estis movita.",
+      "homeAction": "Iri al la ĉefpaĝo",
+      "objectsAction": "Foliumi objektojn"
+    },
+    "objectsSearch": {
+      "label": "Serĉi objektojn",
+      "placeholder": "Objektnomo",
+      "clear": "Forviŝi",
+      "empty": "Neniuj objektoj trovitaj."
     }
   }
 }

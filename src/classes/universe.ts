@@ -206,6 +206,22 @@ export class Universe {
   }
 
   itemClicked(item: Item) {
+    void this.focusItem(item);
+  }
+
+  public async focusItemById(textureId: string) {
+    const item = this.items.find((entry) => entry.textureId === textureId);
+
+    if (!item) {
+      return false;
+    }
+
+    await this.focusItem(item, { openAfterAnimation: true });
+    return true;
+  }
+
+  private async focusItem(item: Item, options: { openAfterAnimation?: boolean } = {}) {
+    const { openAfterAnimation = false } = options;
     const zoomOffset = item.visualLocation.zoomOffset || 0;
     const absoluteZoom = item.scaleExp + Math.log10(item.coeff * item.realRatio);
 
@@ -219,8 +235,16 @@ export class Universe {
         blurBackground: false,
       });
 
-      void this.slider.setAnimationTargetPercent(percentFinal, () => {
+      await this.slider.setAnimationTargetPercent(percentFinal, () => {
         this.onItemModalOpen?.(item.getModalData());
+      });
+
+      return;
+    }
+
+    if (openAfterAnimation) {
+      await this.slider.setAnimationTargetPercent(percentFinal, () => {
+        this.hideAllItemsBut(item);
       });
 
       return;
@@ -228,7 +252,7 @@ export class Universe {
 
     this.hideAllItemsBut(item);
 
-    void this.slider.setAnimationTargetPercent(percentFinal);
+    await this.slider.setAnimationTargetPercent(percentFinal);
   }
 
   private getRingPrefix(scalePrefixes: string[], idx: number): string {

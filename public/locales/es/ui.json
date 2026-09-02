@@ -12,8 +12,14 @@
   "html": {
     "meta": {
       "description": "La Escala del Universo. Una comparación de los tamaños de diversos objetos, desde partículas elementales hasta galaxias.",
+      "intro": "La Escala del Universo es un proyecto interactivo que te ayuda a ver cuánto varían los tamaños de los objetos, desde el micromundo hasta las galaxias.",
       "ogTitle": "La Escala del Universo",
       "ogDescription": "Una comparación de los tamaños de diversos objetos, desde partículas elementales hasta galaxias."
+    },
+    "nav": {
+      "about": "Acerca del proyecto",
+      "objects": "Objetos",
+      "language": "Idioma"
     },
     "modal": {
       "title": "La Escala del Universo",
@@ -22,6 +28,23 @@
       "startButton": "Comenzar",
       "startLoading": "Cargando...",
       "selectLanguage": "Selecciona un idioma"
+    },
+    "object": {
+      "openOnScaleAction": "Abrir en la escala"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Escalas subatómicas",
+      "particles": "Partículas",
+      "atomsMolecules": "Átomos y moléculas",
+      "microworld": "Micromundo",
+      "smallObjects": "Milímetros y centímetros",
+      "humanScales": "Escalas humanas",
+      "buildingsLandscapes": "Edificios y paisajes",
+      "planets": "Planetas",
+      "stars": "Estrellas",
+      "solarSystem": "Escalas circunestelares",
+      "interstellar": "Escalas interestelares",
+      "galaxiesUniverse": "Galaxias y Universo"
     },
     "credits": {
       "createdBy": "Creado por: Cary Huang, Michael Huang",
@@ -33,6 +56,18 @@
       "title": "Apoyar el proyecto",
       "description": "Desarrollo este proyecto en mi tiempo libre y poco a poco mejoro su contenido, traducciones, interfaz y rendimiento.\n\nSi te gusta Scale of the Universe, puedes apoyar el proyecto con una donación.",
       "closeAriaLabel": "Cerrar ventana de apoyo"
+    },
+    "notFound": {
+      "title": "Página no encontrada",
+      "description": "La página que buscas no existe o se ha movido.",
+      "homeAction": "Ir a la página principal",
+      "objectsAction": "Ver objetos"
+    },
+    "objectsSearch": {
+      "label": "Buscar objetos",
+      "placeholder": "Nombre del objeto",
+      "clear": "Borrar",
+      "empty": "No se encontraron objetos."
     }
   }
 }

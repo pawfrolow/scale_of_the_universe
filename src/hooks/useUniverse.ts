@@ -6,6 +6,7 @@ import { ScaleText } from '@/classes/scaleText';
 import { Slider } from '@/classes/slider';
 import { Universe } from '@/classes/universe';
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '@/config';
+import { checkMobileDevice } from '@/helpers/checkMobileDevice';
 import { getTextureIdsFromManifest } from '@/helpers/getTextureIdsFromManifest';
 import { map } from '@/helpers/map';
 import { nextFrame } from '@/helpers/nextFrame';
@@ -20,25 +21,42 @@ PIXI.settings.ROUND_PIXELS = true;
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
 
 const MOBILE_MAX_PERCENT_STEP = 0.004;
+const EXTRA_RIGHT_BOOST = 0.2;
+
+const clampScaleExp = (scaleExp: number) =>
+  Math.max(MIN_SCALE_EXP, Math.min(MAX_SCALE_EXP, scaleExp));
+
+const getScaleExpByPercent = (percent: number) => {
+  const scaleRange = MAX_SCALE_EXP - MIN_SCALE_EXP;
+  const normalizedLinearRange = scaleRange - EXTRA_RIGHT_BOOST;
+
+  return clampScaleExp(
+    MIN_SCALE_EXP + percent * normalizedLinearRange + Math.pow(percent, 4) * EXTRA_RIGHT_BOOST,
+  );
+};
 
 interface IUseUniverseParams {
   containerRef: RefObject<HTMLDivElement | null>;
+  initialObjectId?: string;
   isStarted: boolean;
   isItemModalOpen: boolean;
   onAssetsLoading: () => void;
   onAssetsReady: () => void;
   onAssetsProgress?: (progress: number) => void;
+  onInitialObjectFocused?: () => void;
   onItemModalOpen: (data: ItemModalData) => void;
   onItemModalClose: () => void;
 }
 
 export const useUniverse = ({
   containerRef,
+  initialObjectId,
   isStarted,
   isItemModalOpen,
   onAssetsLoading,
   onAssetsReady,
   onAssetsProgress,
+  onInitialObjectFocused,
   onItemModalOpen,
   onItemModalClose,
 }: IUseUniverseParams) => {
@@ -48,6 +66,7 @@ export const useUniverse = ({
   const visualViewportHandlerRef = useRef<(() => void) | null>(null);
   const resizeHandlerRef = useRef<(() => void) | null>(null);
   const orientationHandlerRef = useRef<(() => void) | null>(null);
+  const fullscreenHandlerRef = useRef<(() => void) | null>(null);
   const { i18n } = useTranslation();
 
   useEffect(() => {
@@ -149,17 +168,15 @@ export const useUniverse = ({
 
       let universe: Universe | null = null;
       let scaleText: ScaleText | null = null;
-      const isMobileDevice =
-        typeof window !== 'undefined' &&
-        (window.matchMedia?.('(pointer: coarse)').matches ?? 'ontouchstart' in window);
+      const isMobileDevice = checkMobileDevice();
       let lastAppliedPercent: number | null = null;
 
       const onHandleClicked = () => {
         universe?.onHandleClicked();
       };
 
-      const onChange = (_x: number, percent: number) => {
-        if (isDestroyed || !universe || !scaleText) {
+      const onChange = (_x: number, percent?: number) => {
+        if (isDestroyed || !universe || !scaleText || typeof percent !== 'number') {
           return;
         }
 
@@ -177,10 +194,7 @@ export const useUniverse = ({
 
         lastAppliedPercent = nextPercent;
 
-        const extraRightBoost = 0.2;
-        const boost = Math.pow(nextPercent, 4) * extraRightBoost;
-
-        const scaleExp = MIN_SCALE_EXP + nextPercent * (MAX_SCALE_EXP - MIN_SCALE_EXP) + boost;
+        const scaleExp = getScaleExpByPercent(nextPercent);
 
         scaleText.setColor(scaleExp);
 
@@ -237,7 +251,10 @@ export const useUniverse = ({
 
       universe = new Universe(0, slider, app, onItemModalOpen, onItemModalClose);
       universeRef.current = universe;
-      scaleText = new ScaleText((w * 0.9) / globalResolution, slider.topY - 40, '0');
+      const scaleTextX = isMobileDevice
+        ? (w * 0.9 - 30) / globalResolution
+        : (w * 0.9) / globalResolution;
+      scaleText = new ScaleText(scaleTextX, slider.topY - 40, '0');
 
       app.stage.addChild(
         universe.container,
@@ -261,7 +278,7 @@ export const useUniverse = ({
         return;
       }
 
-      slider.setPercent(map(0, -35, 27, 0, 1));
+      slider.setPercent(map(0, MIN_SCALE_EXP, MAX_SCALE_EXP, 0, 1));
       lastAppliedPercent = slider.getPercent();
       universe.prevZoom = 0;
 
@@ -304,12 +321,21 @@ export const useUniverse = ({
         setTimeout(performResize, 250);
       };
 
+      fullscreenHandlerRef.current = () => {
+        setTimeout(performResize, 50);
+        setTimeout(performResize, 250);
+      };
+
       visualViewportHandlerRef.current = throttle(() => {
         performResize();
       }, 100);
 
       window.addEventListener('resize', resizeHandlerRef.current);
       window.addEventListener('orientationchange', orientationHandlerRef.current);
+      document.addEventListener('fullscreenchange', fullscreenHandlerRef.current);
+      document.addEventListener('webkitfullscreenchange', fullscreenHandlerRef.current);
+      document.addEventListener('mozfullscreenchange', fullscreenHandlerRef.current);
+      document.addEventListener('MSFullscreenChange', fullscreenHandlerRef.current);
 
       if (window.visualViewport) {
         window.visualViewport.addEventListener('resize', visualViewportHandlerRef.current);
@@ -318,6 +344,14 @@ export const useUniverse = ({
       if (!isDestroyed) {
         onAssetsProgress?.(100);
         onAssetsReady();
+
+        if (initialObjectId) {
+          void universe.focusItemById(initialObjectId).then((isFocused) => {
+            if (!isDestroyed && isFocused) {
+              onInitialObjectFocused?.();
+            }
+          });
+        }
       }
     };
 
@@ -333,6 +367,13 @@ export const useUniverse = ({
 
       if (orientationHandlerRef.current) {
         window.removeEventListener('orientationchange', orientationHandlerRef.current);
+      }
+
+      if (fullscreenHandlerRef.current) {
+        document.removeEventListener('fullscreenchange', fullscreenHandlerRef.current);
+        document.removeEventListener('webkitfullscreenchange', fullscreenHandlerRef.current);
+        document.removeEventListener('mozfullscreenchange', fullscreenHandlerRef.current);
+        document.removeEventListener('MSFullscreenChange', fullscreenHandlerRef.current);
       }
 
       if (visualViewportHandlerRef.current && window.visualViewport) {
@@ -376,5 +417,5 @@ export const useUniverse = ({
       initializedRef.current = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [containerRef, isStarted]);
+  }, [containerRef, initialObjectId, isStarted, onInitialObjectFocused]);
 };

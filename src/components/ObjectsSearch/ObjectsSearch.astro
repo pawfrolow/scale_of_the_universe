@@ -1,0 +1,100 @@
+---
+import type { TObjectsSearchCopy } from '@/services/seo-static.service';
+
+import styles from './styles.module.scss';
+
+type Props = {
+  copy: TObjectsSearchCopy;
+  locale: string;
+};
+
+const { copy, locale } = Astro.props;
+const emptyText = encodeURIComponent(copy.empty);
+---
+
+<section class={styles.root} data-objects-search-root data-locale={locale}>
+  <label class={styles.label}>
+    <span>{copy.label}</span>
+    <span class={styles.control}>
+      <input
+        class={styles.input}
+        type="search"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder={copy.placeholder}
+        data-objects-search-input
+      />
+      <button
+        class={styles.clearButton}
+        type="button"
+        aria-label={copy.clear}
+        title={copy.clear}
+        data-objects-search-clear
+        hidden
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </span>
+  </label>
+  <p class={styles.empty} data-objects-search-empty data-empty-text={emptyText} hidden></p>
+</section>
+
+<script>
+  const normalizeObjectsSearchValue = (value: unknown, locale?: string) =>
+    String(value ?? '')
+      .trim()
+      .toLocaleLowerCase(locale);
+
+  document.querySelectorAll('[data-objects-search-root]').forEach((root) => {
+    const input = root.querySelector('[data-objects-search-input]');
+    const clearButton = root.querySelector('[data-objects-search-clear]');
+    const emptyState = root.querySelector('[data-objects-search-empty]');
+    const scope = root.closest('[data-objects-search-scope]') ?? root.parentElement;
+    const locale = root.getAttribute('data-locale') || undefined;
+
+    if (!(input instanceof HTMLInputElement) || !(clearButton instanceof HTMLButtonElement) || !scope) {
+      return;
+    }
+
+    const getSections = () => Array.from(scope.querySelectorAll<HTMLElement>('[data-objects-search-section]'));
+
+    const applySearch = () => {
+      const query = normalizeObjectsSearchValue(input.value, locale);
+      let visibleCardCount = 0;
+
+      getSections().forEach((section) => {
+        let visibleSectionCardCount = 0;
+
+        section.querySelectorAll<HTMLElement>('[data-objects-search-card]').forEach((card) => {
+          const searchText = normalizeObjectsSearchValue(card.getAttribute('data-search-text'), locale);
+          const isVisible = !query || searchText.includes(query);
+
+          card.hidden = !isVisible;
+
+          if (isVisible) {
+            visibleSectionCardCount += 1;
+          }
+        });
+
+        section.hidden = Boolean(query) && visibleSectionCardCount === 0;
+        visibleCardCount += visibleSectionCardCount;
+      });
+
+      clearButton.hidden = !query;
+
+      if (emptyState instanceof HTMLElement) {
+        emptyState.textContent =
+          query && visibleCardCount === 0 ? decodeURIComponent(emptyState.dataset.emptyText || '') : '';
+        emptyState.hidden = !query || visibleCardCount > 0;
+      }
+    };
+
+    input.addEventListener('input', applySearch);
+    clearButton.addEventListener('click', () => {
+      input.value = '';
+      applySearch();
+      input.focus();
+    });
+    applySearch();
+  });
+</script>

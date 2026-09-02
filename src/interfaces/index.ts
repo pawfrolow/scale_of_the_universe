@@ -59,6 +59,7 @@ export type TItemsOverride = {
   replace?: Record<string, TFrameMeta>;
   add?: Record<string, TFrameMeta>;
   textures?: Record<string, boolean>;
+  slugs?: Record<string, string>;
 };
 
 export type TResolvedItemsManifest = TItemsManifest;
@@ -70,4 +71,39 @@ export interface ItemModalData {
   title: string;
   subtitle: string;
   description: string;
+}
+
+export interface StartScreenCredits {
+  createdBy: string;
+  webDev: string;
+  copyright: string;
+  translationAndDev: string;
+}
+
+export interface StartScreenNavLabels {
+  about: string;
+  objects: string;
+  language: string;
+  donate: string;
+}
+
+export interface StartScreenContent {
+  title: string;
+  startText: string;
+  startLoadingText: string;
+  introParagraphs: string[];
+  zoomHint: string;
+  objectHint: string;
+  homePath: string;
+  aboutPath: string;
+  objectIndexPath: string;
+  navLabels: StartScreenNavLabels;
+  credits: StartScreenCredits;
+}
+
+export interface SeoLocaleData {
+  language: string;
+  dir: 'ltr' | 'rtl';
+  ui?: Record<string, unknown>;
+  startScreen?: StartScreenContent;
 }

@@ -12,8 +12,14 @@
   "html": {
     "meta": {
       "description": "Universums skala. En jämförelse av storleken på olika objekt, från elementarpartiklar till galaxer.",
+      "intro": "Universums skala är ett interaktivt projekt som hjälper dig att se hur mycket storleken på olika objekt skiljer sig åt, från mikrovärlden till galaxer.",
       "ogTitle": "Universums skala",
       "ogDescription": "En jämförelse av storleken på olika objekt — från elementarpartiklar till galaxer."
+    },
+    "nav": {
+      "about": "Om projektet",
+      "objects": "Objekt",
+      "language": "Språk"
     },
     "modal": {
       "title": "Universums skala",
@@ -22,6 +28,23 @@
       "startButton": "Starta",
       "startLoading": "Laddar...",
       "selectLanguage": "Välj språk"
+    },
+    "object": {
+      "openOnScaleAction": "Öppna på skalan"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Subatomära skalor",
+      "particles": "Partiklar",
+      "atomsMolecules": "Atomer och molekyler",
+      "microworld": "Mikrovärlden",
+      "smallObjects": "Millimeter och centimeter",
+      "humanScales": "Mänskliga skalor",
+      "buildingsLandscapes": "Byggnader och landskap",
+      "planets": "Planeter",
+      "stars": "Stjärnor",
+      "solarSystem": "Cirkumstellära skalor",
+      "interstellar": "Interstellära skalor",
+      "galaxiesUniverse": "Galaxer och universum"
     },
     "credits": {
       "createdBy": "Skapad av: Cary Huang, Michael Huang",
@@ -33,6 +56,18 @@
       "title": "Stöd projektet",
       "description": "Jag utvecklar det här projektet på min fritid och förbättrar gradvis innehåll, översättningar, gränssnitt och prestanda.\n\nOm du gillar Scale of the Universe kan du stödja projektet med en donation.",
       "closeAriaLabel": "Stäng stödfönstret"
+    },
+    "notFound": {
+      "title": "Sidan hittades inte",
+      "description": "Sidan du söker finns inte eller har flyttats.",
+      "homeAction": "Gå till startsidan",
+      "objectsAction": "Bläddra bland objekt"
+    },
+    "objectsSearch": {
+      "label": "Sök objekt",
+      "placeholder": "Objektnamn",
+      "clear": "Rensa",
+      "empty": "Inga objekt hittades."
     }
   }
 }

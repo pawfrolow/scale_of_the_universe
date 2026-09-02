@@ -1,4 +1,4 @@
-@use '../../assets/css/variables.scss' as *;
+@use '@/styles/variables.scss' as *;
 
 .version {
   position: fixed;
@@ -10,7 +10,7 @@
 
 :global(.dark) {
   .version {
-    color: rgba($color-white, 0.7);
+    color: rgba($text-primary-dark, 0.7);
   }
 }
 

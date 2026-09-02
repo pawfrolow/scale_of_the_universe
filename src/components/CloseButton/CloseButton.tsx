@@ -6,13 +6,21 @@ interface ICloseButtonProps {
   onClick: () => void;
   ariaLabel: string;
   className?: string;
+  theme?: 'light' | 'dark';
 }
 
-export const CloseButton = ({ onClick, ariaLabel, className = '' }: ICloseButtonProps) => {
+export const CloseButton = ({
+  onClick,
+  ariaLabel,
+  className = '',
+  theme = 'light',
+}: ICloseButtonProps) => {
   return (
     <button
       type="button"
-      className={`${styles.closeButton} ${className}`.trim()}
+      className={[styles.closeButton, theme === 'dark' ? styles.dark : '', className]
+        .filter(Boolean)
+        .join(' ')}
       onClick={onClick}
       aria-label={ariaLabel}
     >

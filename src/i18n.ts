@@ -4,6 +4,9 @@ import { initReactI18next } from 'react-i18next';
 
 import { LANGUAGE_OPTIONS, LANGUAGE_STORAGE_KEY, LEGACY_LANGUAGE_CODE_MAP } from './config';
 
+import { SeoLocaleData } from '@/interfaces';
+import { getSeoLocaleData } from '@/services/seo-locale-data.service';
+
 export const DEFAULT_LANGUAGE = 'ru';
 export const AVAILABLE_LANGUAGES = LANGUAGE_OPTIONS.map(({ code }) => code);
 export type TLanguage = (typeof AVAILABLE_LANGUAGES)[number];
@@ -59,6 +62,10 @@ export const getLanguageFromPathname = (pathname: string): TLanguage | null => {
 export const isRtlLanguage = (language: TLanguage) => RTL_LANGUAGES.includes(language);
 
 export const getStoredLanguage = (): TLanguage => {
+  if (typeof localStorage === 'undefined') {
+    return DEFAULT_LANGUAGE;
+  }
+
   const stored = normalizeLanguageCode(localStorage.getItem(LANGUAGE_STORAGE_KEY));
 
   if (stored) {
@@ -73,13 +80,22 @@ export const getStoredLanguage = (): TLanguage => {
 };
 
 export const getInitialLanguage = (): TLanguage =>
-  getLanguageFromPathname(window.location.pathname) ?? getStoredLanguage();
+  typeof window === 'undefined'
+    ? DEFAULT_LANGUAGE
+    : (getLanguageFromPathname(window.location.pathname) ?? getStoredLanguage());
 
 export const setStoredLanguage = (language: TLanguage) => {
+  if (typeof localStorage === 'undefined') {
+    return;
+  }
+
   localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
 };
 
-export async function initI18n(defaultLanguage: TLanguage = DEFAULT_LANGUAGE) {
+export async function initI18n(
+  defaultLanguage: TLanguage = DEFAULT_LANGUAGE,
+  initialSeoLocaleData?: SeoLocaleData | null,
+) {
   if (i18next.isInitialized) {
     if (i18next.language !== defaultLanguage) {
       await i18next.changeLanguage(defaultLanguage);
@@ -87,6 +103,11 @@ export async function initI18n(defaultLanguage: TLanguage = DEFAULT_LANGUAGE) {
 
     return i18next;
   }
+
+  const seoLocaleData = initialSeoLocaleData ?? getSeoLocaleData();
+  const preloadedUiLanguage = normalizeLanguageCode(seoLocaleData?.language ?? null);
+  const preloadedUi =
+    preloadedUiLanguage === defaultLanguage && seoLocaleData?.ui ? seoLocaleData.ui : undefined;
 
   await i18next
     .use(HttpBackend)
@@ -97,6 +118,14 @@ export async function initI18n(defaultLanguage: TLanguage = DEFAULT_LANGUAGE) {
       supportedLngs: AVAILABLE_LANGUAGES,
       defaultNS: 'ui',
       ns: ['objects', 'units', 'ui'],
+      partialBundledLanguages: true,
+      resources: preloadedUi
+        ? {
+            [defaultLanguage]: {
+              ui: preloadedUi,
+            },
+          }
+        : undefined,
       interpolation: {
         escapeValue: false,
       },

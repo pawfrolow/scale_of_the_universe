@@ -1,4 +1,4 @@
-@use '../../assets/css/variables.scss' as *;
+@use '@/styles/variables.scss' as *;
 
 .modalHeader {
   display: flex;
@@ -22,6 +22,10 @@
   line-height: 1.2;
   font-weight: 700;
   word-break: break-word;
+}
+
+.darkTitle {
+  color: $text-primary-dark;
 }
 
 :global(.dark) {

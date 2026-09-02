@@ -12,8 +12,14 @@
   "html": {
     "meta": {
       "description": "우주의 규모. 기본 입자부터 은하까지, 다양한 물체의 크기를 비교합니다.",
+      "intro": "우주의 규모는 미시 세계부터 은하에 이르기까지, 물체의 크기가 얼마나 크게 다른지 보여 주는 인터랙티브 프로젝트입니다.",
       "ogTitle": "우주의 규모",
       "ogDescription": "기본 입자부터 은하까지, 다양한 물체의 크기를 비교합니다."
+    },
+    "nav": {
+      "about": "프로젝트 소개",
+      "objects": "객체",
+      "language": "언어"
     },
     "modal": {
       "title": "우주의 규모",
@@ -22,6 +28,23 @@
       "startButton": "시작",
       "startLoading": "로딩 중...",
       "selectLanguage": "언어 선택"
+    },
+    "object": {
+      "openOnScaleAction": "척도에서 열기"
+    },
+    "objectScaleGroups": {
+      "subatomic": "아원자 규모",
+      "particles": "입자",
+      "atomsMolecules": "원자와 분자",
+      "microworld": "미시 세계",
+      "smallObjects": "밀리미터와 센티미터",
+      "humanScales": "인간 규모",
+      "buildingsLandscapes": "건물과 풍경",
+      "planets": "행성",
+      "stars": "별",
+      "solarSystem": "항성 주변 규모",
+      "interstellar": "성간 규모",
+      "galaxiesUniverse": "은하와 우주"
     },
     "credits": {
       "createdBy": "제작: Cary Huang, Michael Huang",
@@ -33,6 +56,18 @@
       "title": "프로젝트 후원하기",
       "description": "저는 이 프로젝트를 여가 시간에 개발하며 콘텐츠, 번역, 인터페이스, 성능을 조금씩 개선하고 있습니다.\n\nScale of the Universe가 마음에 드신다면 후원으로 이 프로젝트를 지원하실 수 있습니다.",
       "closeAriaLabel": "후원 창 닫기"
+    },
+    "notFound": {
+      "title": "페이지를 찾을 수 없습니다",
+      "description": "찾고 있는 페이지가 존재하지 않거나 이동되었습니다.",
+      "homeAction": "홈으로 가기",
+      "objectsAction": "객체 둘러보기"
+    },
+    "objectsSearch": {
+      "label": "객체 검색",
+      "placeholder": "객체 이름",
+      "clear": "지우기",
+      "empty": "객체를 찾을 수 없습니다."
     }
   }
 }

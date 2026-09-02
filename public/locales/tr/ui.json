@@ -12,8 +12,14 @@
   "html": {
     "meta": {
       "description": "Evrenin Ölçeği. Temel parçacıklardan galaksilere kadar çeşitli nesnelerin boyutlarının karşılaştırması.",
+      "intro": "Evrenin Ölçeği, nesnelerin boyutlarının ne kadar büyük ölçüde değiştiğini mikro dünyadan galaksilere kadar görmeyi sağlayan etkileşimli bir projedir.",
       "ogTitle": "Evrenin Ölçeği",
       "ogDescription": "Çeşitli nesnelerin boyutlarının karşılaştırması — temel parçacıklardan galaksilere kadar."
+    },
+    "nav": {
+      "about": "Proje hakkında",
+      "objects": "Nesneler",
+      "language": "Dil"
     },
     "modal": {
       "title": "Evrenin Ölçeği",
@@ -22,6 +28,23 @@
       "startButton": "Başlat",
       "startLoading": "Yükleniyor...",
       "selectLanguage": "Dil seçin"
+    },
+    "object": {
+      "openOnScaleAction": "Ölçekte aç"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Atom altı ölçekler",
+      "particles": "Parçacıklar",
+      "atomsMolecules": "Atomlar ve moleküller",
+      "microworld": "Mikro dünya",
+      "smallObjects": "Milimetreler ve santimetreler",
+      "humanScales": "İnsan ölçekleri",
+      "buildingsLandscapes": "Binalar ve manzaralar",
+      "planets": "Gezegenler",
+      "stars": "Yıldızlar",
+      "solarSystem": "Yıldız çevresi ölçekleri",
+      "interstellar": "Yıldızlararası ölçekler",
+      "galaxiesUniverse": "Galaksiler ve Evren"
     },
     "credits": {
       "createdBy": "Oluşturanlar: Cary Huang, Michael Huang",
@@ -33,6 +56,18 @@
       "title": "Projeyi destekle",
       "description": "Bu projeyi boş zamanlarımda geliştiriyor ve içeriğini, çevirilerini, arayüzünü ve performansını adım adım iyileştiriyorum.\n\nScale of the Universe hoşunuza gidiyorsa projeyi bağış yaparak destekleyebilirsiniz.",
       "closeAriaLabel": "Destek penceresini kapat"
+    },
+    "notFound": {
+      "title": "Sayfa bulunamadı",
+      "description": "Aradığınız sayfa mevcut değil veya taşınmış.",
+      "homeAction": "Ana sayfaya git",
+      "objectsAction": "Nesnelere göz at"
+    },
+    "objectsSearch": {
+      "label": "Nesneleri ara",
+      "placeholder": "Nesne adı",
+      "clear": "Temizle",
+      "empty": "Nesne bulunamadı."
     }
   }
 }

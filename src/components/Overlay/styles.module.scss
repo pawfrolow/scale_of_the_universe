@@ -1,4 +1,4 @@
-@use '../../assets/css/variables.scss' as *;
+@use '@/styles/variables.scss' as *;
 
 .overlay {
   position: fixed;
@@ -20,6 +20,16 @@
     position: relative;
     z-index: 1;
     border-radius: $modal-radius-desktop;
+  }
+}
+
+.dark {
+  .overlayBackdrop {
+    background: $overlay-dark;
+  }
+
+  .overlayContent {
+    border: 1px solid $overlay-border-dark;
   }
 }
 

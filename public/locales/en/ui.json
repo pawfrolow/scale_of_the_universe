@@ -12,8 +12,31 @@
   "html": {
     "meta": {
       "description": "The Scale of the Universe. A comparison of the sizes of various objects, from elementary particles to galaxies.",
+      "intro": "The Scale of the Universe is an interactive project that helps you see how dramatically object sizes differ, from the microworld to galaxies.",
       "ogTitle": "The Scale of the Universe",
       "ogDescription": "A comparison of the sizes of various objects — from elementary particles to galaxies."
+    },
+    "about": {
+      "paragraphs": [
+        "The Scale of the Universe is an interactive visualization that helps you get an intuitive sense of the sizes of objects around us: from the smallest elementary particles to planets, stars, galaxies, and the observable Universe. All objects are placed on one continuous scale, making it easier to compare things that are almost impossible to imagine side by side in everyday life.",
+        "Object sizes are often shown as approximate or characteristic values. In some cases, an average size, a typical example, or a convenient comparison value is used so different objects can share one scale and remain easy to understand.",
+        "The first version of the project appeared in 2010 as a Flash application and quickly became a popular educational tool. Over time, the idea has evolved with new data, modern web technologies, additional localizations, and a more convenient format for exploring the scale of the Universe.",
+        "The original Scale of the Universe was created by Cary Huang and his brother Michael Huang. Their work became one of the most recognizable interactive projects about the sizes of objects in the Universe and inspired many people to take an interest in science, space, and data visualization."
+      ],
+      "history": {
+        "beforeOriginalLink": "This version of the project is based on",
+        "originalLinkLabel": "the web implementation of the scale by Matthew Martori",
+        "afterLinks": ". The project is gradually updated and expanded."
+      },
+      "contact": {
+        "beforeEmail": "If you have ideas for improving the project, write to me at",
+        "afterEmail": "."
+      }
+    },
+    "nav": {
+      "about": "About",
+      "objects": "Objects",
+      "language": "Language"
     },
     "modal": {
       "title": "The Scale of the Universe",
@@ -22,6 +45,23 @@
       "startButton": "Start",
       "startLoading": "Loading...",
       "selectLanguage": "Select language"
+    },
+    "object": {
+      "openOnScaleAction": "Open on scale"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Subatomic scales",
+      "particles": "Particles",
+      "atomsMolecules": "Atoms and molecules",
+      "microworld": "Microworld",
+      "smallObjects": "Millimeters and centimeters",
+      "humanScales": "Human scales",
+      "buildingsLandscapes": "Buildings and landscapes",
+      "planets": "Planets",
+      "stars": "Stars",
+      "solarSystem": "Circumstellar scales",
+      "interstellar": "Interstellar scales",
+      "galaxiesUniverse": "Galaxies and the Universe"
     },
     "credits": {
       "createdBy": "Created by: Cary Huang, Michael Huang",
@@ -33,6 +73,18 @@
       "title": "Support the project",
       "description": "I develop this project in my free time and gradually improve its content, translations, interface, and performance.\n\nIf you enjoy the Scale of the Universe, you can support the project with a donation.",
       "closeAriaLabel": "Close support dialog"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you are looking for does not exist or has moved.",
+      "homeAction": "Go to homepage",
+      "objectsAction": "Browse objects"
+    },
+    "objectsSearch": {
+      "label": "Search objects",
+      "placeholder": "Object name",
+      "clear": "Clear",
+      "empty": "No objects found."
     }
   }
 }

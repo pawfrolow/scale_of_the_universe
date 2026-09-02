@@ -29,7 +29,7 @@ export const Controls = ({
   };
 
   const handleFullscreenClick = () => {
-    const frame = document.getElementById('root');
+    const frame = document.getElementById('frame');
 
     if (frame) {
       toggleFullscreen(frame);
@@ -47,7 +47,7 @@ export const Controls = ({
         />
       )}
 
-      {(isLocalhost || isProduction) && (
+      {(isLocalhost() || isProduction()) && (
         <IconButton
           onClick={onOpenDonateModal}
           iconSrc="/img/icons/pay.svg"

@@ -12,8 +12,14 @@
   "html": {
     "meta": {
       "description": "Universumi ulatus. Erinevate objektide suuruste võrdlus alates elementaarosakestest kuni galaktikateni.",
+      "intro": "Universumi ulatus on interaktiivne projekt, mis aitab näha, kui palju objektide suurused erinevad - mikromaailmast galaktikateni.",
       "ogTitle": "Universumi ulatus",
       "ogDescription": "Erinevate objektide suuruste võrdlus — alates elementaarosakestest kuni galaktikateni."
+    },
+    "nav": {
+      "about": "Projektist",
+      "objects": "Objektid",
+      "language": "Keel"
     },
     "modal": {
       "title": "Universumi ulatus",
@@ -22,6 +28,23 @@
       "startButton": "Alusta",
       "startLoading": "Laadimine...",
       "selectLanguage": "Vali keel"
+    },
+    "object": {
+      "openOnScaleAction": "Ava skaalal"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Subatomaarsed mõõtkavad",
+      "particles": "Osakesed",
+      "atomsMolecules": "Aatomid ja molekulid",
+      "microworld": "Mikromaailm",
+      "smallObjects": "Millimeetrid ja sentimeetrid",
+      "humanScales": "Inimlikud mõõtkavad",
+      "buildingsLandscapes": "Hooned ja maastikud",
+      "planets": "Planeedid",
+      "stars": "Tähed",
+      "solarSystem": "Tähtede ümbruse mõõtkavad",
+      "interstellar": "Tähtedevahelised mõõtkavad",
+      "galaxiesUniverse": "Galaktikad ja Universum"
     },
     "credits": {
       "createdBy": "Loonud: Cary Huang, Michael Huang",
@@ -33,6 +56,18 @@
       "title": "Toeta projekti",
       "description": "Arendan seda projekti oma vabast ajast ning parandan järk-järgult selle sisu, tõlkeid, kasutajaliidest ja jõudlust.\n\nKui sulle meeldib Scale of the Universe, saad projekti annetusega toetada.",
       "closeAriaLabel": "Sulge toetusaken"
+    },
+    "notFound": {
+      "title": "Lehte ei leitud",
+      "description": "Lehte, mida otsid, ei ole olemas või see on teisaldatud.",
+      "homeAction": "Ava avaleht",
+      "objectsAction": "Sirvi objekte"
+    },
+    "objectsSearch": {
+      "label": "Otsi objekte",
+      "placeholder": "Objekti nimi",
+      "clear": "Tühjenda",
+      "empty": "Objekte ei leitud."
     }
   }
 }

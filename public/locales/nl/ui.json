@@ -12,8 +12,14 @@
   "html": {
     "meta": {
       "description": "De schaal van het heelal. Een vergelijking van de afmetingen van verschillende objecten, van elementaire deeltjes tot sterrenstelsels.",
+      "intro": "De schaal van het heelal is een interactief project dat laat zien hoe sterk de afmetingen van objecten verschillen, van de microwereld tot sterrenstelsels.",
       "ogTitle": "De schaal van het heelal",
       "ogDescription": "Een vergelijking van de afmetingen van verschillende objecten — van elementaire deeltjes tot sterrenstelsels."
+    },
+    "nav": {
+      "about": "Over het project",
+      "objects": "Objecten",
+      "language": "Taal"
     },
     "modal": {
       "title": "De schaal van het heelal",
@@ -22,6 +28,23 @@
       "startButton": "Start",
       "startLoading": "Laden...",
       "selectLanguage": "Selecteer een taal"
+    },
+    "object": {
+      "openOnScaleAction": "Openen op de schaal"
+    },
+    "objectScaleGroups": {
+      "subatomic": "Subatomaire schalen",
+      "particles": "Deeltjes",
+      "atomsMolecules": "Atomen en moleculen",
+      "microworld": "Microwereld",
+      "smallObjects": "Millimeters en centimeters",
+      "humanScales": "Menselijke schalen",
+      "buildingsLandscapes": "Gebouwen en landschappen",
+      "planets": "Planeten",
+      "stars": "Sterren",
+      "solarSystem": "Circumstellaire schalen",
+      "interstellar": "Interstellaire schalen",
+      "galaxiesUniverse": "Sterrenstelsels en het heelal"
     },
     "credits": {
       "createdBy": "Gemaakt door: Cary Huang, Michael Huang",
@@ -33,6 +56,18 @@
       "title": "Steun het project",
       "description": "Ik werk in mijn vrije tijd aan dit project en verbeter geleidelijk de inhoud, vertalingen, interface en prestaties.\n\nAls je Scale of the Universe leuk vindt, kun je het project steunen met een donatie.",
       "closeAriaLabel": "Ondersteuningsvenster sluiten"
+    },
+    "notFound": {
+      "title": "Pagina niet gevonden",
+      "description": "De pagina die je zoekt bestaat niet of is verplaatst.",
+      "homeAction": "Naar de startpagina",
+      "objectsAction": "Objecten bekijken"
+    },
+    "objectsSearch": {
+      "label": "Objecten zoeken",
+      "placeholder": "Objectnaam",
+      "clear": "Wissen",
+      "empty": "Geen objecten gevonden."
     }
   }
 }

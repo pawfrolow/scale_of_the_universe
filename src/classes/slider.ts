@@ -1,6 +1,7 @@
 import { Graphics, Application, Container, Point, Ticker } from 'pixi.js-legacy';
 import { Tweenable } from 'shifty';
 
+import { checkMobileDevice } from '@/helpers/checkMobileDevice';
 import { getCssPxVar } from '@/helpers/getCssPxVar';
 
 const WIDTH_PERCENT = 0.9;
@@ -73,7 +74,7 @@ export class Slider {
     this.onHandleClicked = onHandleClicked;
     this.w = w / globalRes;
     this.h = h / globalRes;
-    this.isMobileDevice = window.matchMedia('(max-width: 1024px), (pointer: coarse)').matches;
+    this.isMobileDevice = checkMobileDevice();
     this.currentMaxScrollSpeed = this.getBaseMaxScrollSpeed();
     this.currentEasingConstant = this.getBaseEasingConstant();
 
