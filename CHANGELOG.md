@@ -3,6 +3,8 @@
 ## 1.9.7
 
 - Added Stygotantulus stocki in all locales.
+- Added M87\* in all locales.
+- Renamed the Solar System scale group.
 
 ## 1.9.6
 

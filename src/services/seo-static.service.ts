@@ -80,7 +80,7 @@ const OBJECT_SCALE_GROUP_LABEL_FALLBACKS = {
     buildingsLandscapes: 'Здания и ландшафты',
     planets: 'Планеты',
     stars: 'Звезды',
-    solarSystem: 'Солнечная система',
+    solarSystem: 'Околозвёздные масштабы',
     interstellar: 'Межзвездные масштабы',
     galaxiesUniverse: 'Галактики и Вселенная',
   },
@@ -94,7 +94,7 @@ const OBJECT_SCALE_GROUP_LABEL_FALLBACKS = {
     buildingsLandscapes: 'Buildings and landscapes',
     planets: 'Planets',
     stars: 'Stars',
-    solarSystem: 'Solar system',
+    solarSystem: 'Circumstellar scales',
     interstellar: 'Interstellar scales',
     galaxiesUniverse: 'Galaxies and the Universe',
   },
@@ -627,6 +627,10 @@ const createSeoObjects = ({
 let localesCache: Promise<TSeoLocale[]> | null = null;
 
 export const getLocales = async () => {
+  if (process.env.NODE_ENV === 'development') {
+    return loadLocales();
+  }
+
   localesCache ??= loadLocales();
 
   return localesCache;
