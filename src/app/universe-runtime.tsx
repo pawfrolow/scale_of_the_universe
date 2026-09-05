@@ -19,6 +19,7 @@ export const mountUniverseRuntime = (container: Element, props: UniverseAppProps
 
   document.documentElement.classList.add('sotu-runtime-active');
   document.body.classList.add('sotu-runtime-active');
+  container.classList.add('sotu-runtime-root-active');
   setBrowserTheme('light');
   mountedRoots.set(container, root);
 
