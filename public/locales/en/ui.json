@@ -19,7 +19,6 @@
     "about": {
       "paragraphs": [
         "The Scale of the Universe is an interactive visualization that helps you get an intuitive sense of the sizes of objects around us: from the smallest elementary particles to planets, stars, galaxies, and the observable Universe. All objects are placed on one continuous scale, making it easier to compare things that are almost impossible to imagine side by side in everyday life.",
-        "Object sizes are often shown as approximate or characteristic values. In some cases, an average size, a typical example, or a convenient comparison value is used so different objects can share one scale and remain easy to understand.",
         "The first version of the project appeared in 2010 as a Flash application and quickly became a popular educational tool. Over time, the idea has evolved with new data, modern web technologies, additional localizations, and a more convenient format for exploring the scale of the Universe.",
         "The original Scale of the Universe was created by Cary Huang and his brother Michael Huang. Their work became one of the most recognizable interactive projects about the sizes of objects in the Universe and inspired many people to take an interest in science, space, and data visualization."
       ],

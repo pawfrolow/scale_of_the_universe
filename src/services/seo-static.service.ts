@@ -425,7 +425,6 @@ const ABOUT_PAGE_FALLBACKS = {
   ru: {
     paragraphs: [
       '«Шкала масштабов Вселенной» — это интерактивная визуализация, которая помогает наглядно почувствовать размеры объектов вокруг нас: от мельчайших элементарных частиц до планет, звёзд, галактик и наблюдаемой Вселенной. Все объекты собраны на одной непрерывной шкале, поэтому их проще сравнить между собой — даже если в обычной жизни такие масштабы почти невозможно представить рядом.',
-      'Размеры объектов часто указаны как приближённые или характерные значения. В некоторых случаях используется средний размер, типичный пример или удобная для сравнения величина, чтобы разные объекты могли существовать на общей шкале и оставаться понятными для восприятия.',
       'Первая версия проекта появилась в 2010 году как Flash-приложение и быстро стала популярным образовательным инструментом. Со временем идея развивалась: появились новые данные, современные веб-технологии, дополнительные локализации и более удобный формат для изучения масштаба Вселенной.',
       'Оригинальную Scale of the Universe создали Кэри Хуан и его брат Майкл Хуан. Их работа стала одним из самых узнаваемых интерактивных проектов о размерах объектов во Вселенной и вдохновила многих людей интересоваться наукой, космосом и визуализацией данных.',
     ],
@@ -442,7 +441,6 @@ const ABOUT_PAGE_FALLBACKS = {
   en: {
     paragraphs: [
       'The Scale of the Universe is an interactive visualization that helps you get an intuitive sense of the sizes of objects around us: from the smallest elementary particles to planets, stars, galaxies, and the observable Universe. All objects are placed on one continuous scale, making it easier to compare things that are almost impossible to imagine side by side in everyday life.',
-      'Object sizes are often shown as approximate or characteristic values. In some cases, an average size, a typical example, or a convenient comparison value is used so different objects can share one scale and remain easy to understand.',
       'The first version of the project appeared in 2010 as a Flash application and quickly became a popular educational tool. Over time, the idea has evolved with new data, modern web technologies, additional localizations, and a more convenient format for exploring the scale of the Universe.',
       'The original Scale of the Universe was created by Cary Huang and his brother Michael Huang. Their work became one of the most recognizable interactive projects about the sizes of objects in the Universe and inspired many people to take an interest in science, space, and data visualization.',
     ],
