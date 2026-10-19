@@ -1255,6 +1255,10 @@
     "343": {
       "title": "M87*",
       "description": "Das Schwarze Loch M87* liegt im Zentrum der riesigen Galaxie Messier 87. Sein 2019 veröffentlichtes Bild wurde zum ersten direkten visuellen Nachweis des Schattens eines Schwarzen Lochs. Sein Ereignishorizont misst knapp 40 Milliarden Kilometer im Durchmesser, und seine Masse beträgt etwa das 6,5-Milliardenfache der Sonnenmasse."
+    },
+    "344": {
+      "title": "Gran Telescopio Canarias",
+      "description": "Eines der größten optischen Teleskope der Welt. Es steht am Roque-de-los-Muchachos-Observatorium auf der spanischen Insel La Palma, etwa 2300 Meter über dem Meeresspiegel. Es empfing 2007 sein erstes Licht und dient der Untersuchung von Sternen, fernen Galaxien und Objekten in der Umgebung Schwarzer Löcher. Es kann Objekte erkennen, die eine Milliarde Mal lichtschwächer sind als die mit bloßem Auge sichtbaren."
     }
   }
 }

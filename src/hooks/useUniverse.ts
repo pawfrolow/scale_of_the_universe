@@ -269,7 +269,9 @@ export const useUniverse = ({
       slider = new Slider(app, w, h, globalResolution, onChange, onHandleClicked);
       slider.init();
 
-      universe = new Universe(0, slider, app, onItemModalOpen, onItemModalClose);
+      universe = new Universe(0, slider, app, onItemModalOpen, onItemModalClose, () =>
+        scaleText?.container.getBounds(),
+      );
       universeRef.current = universe;
       const scaleTextX = isMobileDevice
         ? (w * 0.9 - 30) / globalResolution
@@ -316,13 +318,10 @@ export const useUniverse = ({
 
           app.renderer.resize(width, height);
 
-          const currentPercent = slider.getPercent();
-
           slider.resize(app.screen.width, app.screen.height, globalResolution);
-          universe.resize();
           scaleText.resize((app.screen.width * 0.9) / globalResolution, slider.topY - 40);
-          slider.setPercent(currentPercent);
-          lastAppliedPercent = currentPercent;
+          universe.resize();
+          lastAppliedPercent = slider.getPercent();
         });
       };
 

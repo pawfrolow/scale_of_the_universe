@@ -1255,6 +1255,10 @@
     "343": {
       "title": "M87*",
       "description": "Le trou noir M87* se trouve au centre de la galaxie géante Messier 87. Son image, publiée en 2019, est devenue la première preuve visuelle directe de l'ombre d'un trou noir. Son horizon des événements mesure un peu moins de 40 milliards de kilomètres de diamètre, et sa masse vaut environ 6,5 milliards de fois celle du Soleil."
+    },
+    "344": {
+      "title": "Gran Telescopio Canarias",
+      "description": "L’un des plus grands télescopes optiques du monde, situé à l’observatoire du Roque de los Muchachos, sur l’île de La Palma en Espagne, à environ 2 300 mètres d’altitude. Il a reçu sa première lumière en 2007 et sert à étudier les étoiles, les galaxies lointaines et les objets proches des trous noirs. Il peut détecter des objets un milliard de fois moins lumineux que ceux visibles à l’œil nu."
     }
   }
 }

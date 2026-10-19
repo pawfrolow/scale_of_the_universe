@@ -88,9 +88,11 @@ export class Slider {
 
     this.wheelHandler = (event: Event) => {
       if (this.destroyed) return;
+      if (event.target instanceof Element && event.target.closest('[role="dialog"]')) return;
 
-      const e = event as WheelEvent & { wheelDelta?: number; detail?: number };
-      const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail || 0));
+      const e = event as WheelEvent;
+      const delta = Math.max(-1, Math.min(1, -e.deltaY));
+      if (delta === 0) return;
 
       this.startOffset = 0;
       this.interact();
@@ -99,6 +101,7 @@ export class Slider {
 
     this.touchStartHandler = (event: TouchEvent) => {
       if (this.destroyed) return;
+      if (event.target instanceof Element && event.target.closest('[role="dialog"]')) return;
 
       event.stopPropagation();
 
@@ -154,7 +157,7 @@ export class Slider {
     document.addEventListener('touchend', this.touchEndHandler, false);
     document.addEventListener('touchcancel', this.touchEndHandler, false);
 
-    document.addEventListener('mousewheel', this.wheelHandler, false);
+    document.addEventListener('wheel', this.wheelHandler, { passive: true });
   }
 
   init() {
@@ -223,7 +226,6 @@ export class Slider {
       here.dragging = true;
       graphics.alpha = 0.75;
       here.interact();
-      here.onHandleClicked();
     }
 
     function onDragEnd() {
@@ -285,12 +287,26 @@ export class Slider {
   interact(): void {
     if (this.destroyed) return;
 
+    this.cancelAnimation();
+    this.onHandleClicked();
     this.interaction = true;
     Ticker.shared.start();
     Ticker.shared.speed = 1;
   }
 
-  async setAnimationTargetPercent(targetPercent: number, onComplete?: () => void) {
+  cancelAnimation() {
+    this.animationRunId += 1;
+    if (this.tweenable.isPlaying) {
+      this.tweenable.stop?.();
+    }
+    this.animStopped();
+  }
+
+  async setAnimationTargetPercent(
+    targetPercent: number,
+    onComplete?: () => void,
+    onProgress?: (progress: number) => void,
+  ) {
     if (this.destroyed) {
       return;
     }
@@ -305,11 +321,15 @@ export class Slider {
     const duration = Math.min(Math.max(50000 * deltaPercent, 250), 1000);
 
     this.tweenable.setConfig({
-      from: { pos: this.currentPercent ?? 0 },
-      to: { pos: targetPercent },
+      from: { pos: this.currentPercent ?? 0, progress: 0 },
+      to: { pos: targetPercent, progress: 1 },
       easing: 'easeInOutSine',
       duration,
-      render: (state) => typeof state.pos === 'number' && this.setPercent(state.pos),
+      render: (state) => {
+        if (runId !== this.animationRunId || this.destroyed) return;
+        if (typeof state.pos === 'number') this.setPercent(state.pos);
+        if (typeof state.progress === 'number') onProgress?.(state.progress);
+      },
     });
 
     try {
@@ -403,6 +423,7 @@ export class Slider {
 
   public resize(w: number, h: number, globalRes: number) {
     if (this.destroyed) return;
+    this.cancelAnimation();
 
     this.w = w / globalRes;
     this.h = h / globalRes;
@@ -430,7 +451,7 @@ export class Slider {
       this.tickerHandler = undefined;
     }
 
-    document.removeEventListener('mousewheel', this.wheelHandler, false);
+    document.removeEventListener('wheel', this.wheelHandler);
 
     this.tweenable.stop?.();
 

@@ -3,7 +3,9 @@ import * as PIXI from 'pixi.js-legacy';
 
 import { PIXI_TEXT_FONT_FAMILY } from '@/config';
 import { powToUnit } from '@/helpers/powToUnit';
-import { ExtraText, SizeData, TextDatum, VisualLocation } from '@/interfaces';
+import { ExtraText, SizeData, SpriteLayout, TextDatum, VisualLocation } from '@/interfaces';
+
+export const DESCRIPTION_FONT_SIZE = 32;
 
 export function getGraphics(
   textureId: string,
@@ -12,8 +14,10 @@ export function getGraphics(
   extraText: ExtraText,
   units: string[],
   sizeData: SizeData,
+  spriteLayout: SpriteLayout,
 ) {
-  const w = 450;
+  const originalWidth = 450;
+  const w = 550;
   const h = 500;
   const x = visualLocation.descriptionX;
   const y = visualLocation.descriptionY;
@@ -54,7 +58,7 @@ export function getGraphics(
 
   const descriptionStyle = {
     ...baseStyle,
-    fontSize: 32,
+    fontSize: DESCRIPTION_FONT_SIZE,
   };
 
   const friendly = powToUnit(textureId, sizeData, units, extraText);
@@ -98,26 +102,25 @@ export function getGraphics(
   const graphics = new PIXI.Graphics();
   const totalTextHeight =
     titleText.height + descriptionText.height + scaleText.height + unitFriendlyText.height + 60;
+  const widthToUse = Math.max(w, unitFriendlyText.width + margin * 2);
   //shadow
   graphics.beginFill(0x000000, 0.2);
 
-  graphics.drawRoundedRect(x + 5, y + 5, w, totalTextHeight, 15);
+  graphics.drawRoundedRect(x + 5, y + 5, widthToUse, totalTextHeight, 15);
   graphics.endFill();
   // set a fill and a line style again and draw a rectangle
   graphics.lineStyle(2, 0xaaaaaa, 1);
   graphics.beginFill(0xffffff, 1);
 
-  let widthToUse = w;
-
-  if (unitFriendlyText.width + 30 >= widthToUse) {
-    widthToUse = unitFriendlyText.width + 40;
-  }
-
   graphics.drawRoundedRect(x, y, widthToUse, totalTextHeight, 15);
   graphics.endFill();
   graphics.alpha = 0.9;
 
-  descriptionContainer.x -= w / 2;
+  // Manifest positions were authored for 450-wide cards; grow away from the object.
+  descriptionContainer.x -= originalWidth / 2;
+  if (x < spriteLayout.x) {
+    descriptionContainer.x -= widthToUse - originalWidth;
+  }
   descriptionContainer.y -= h / 2;
 
   descriptionContainer.addChild(graphics);

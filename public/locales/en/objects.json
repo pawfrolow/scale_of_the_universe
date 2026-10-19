@@ -1255,6 +1255,10 @@
     "343": {
       "title": "M87*",
       "description": "The black hole M87* lies at the centre of the giant galaxy Messier 87. Its image, published in 2019, became the first direct visual evidence of a black hole's shadow. Its event horizon is just under 40 billion kilometres across, and its mass is about 6.5 billion times that of the Sun."
+    },
+    "344": {
+      "title": "Gran Telescopio Canarias",
+      "description": "One of the largest optical telescopes in the world, located at the Roque de los Muchachos Observatory on the island of La Palma in Spain, about 2,300 metres above sea level. It saw first light in 2007 and is used to study stars, distant galaxies and objects near black holes. It can detect objects a billion times fainter than those visible to the unaided human eye."
     }
   }
 }

@@ -1255,6 +1255,10 @@
     "343": {
       "title": "M87*",
       "description": "El agujero negro M87* se encuentra en el centro de la galaxia gigante Messier 87. Su imagen, publicada en 2019, se convirtió en la primera evidencia visual directa de la sombra de un agujero negro. Su horizonte de sucesos mide algo menos de 40 000 millones de kilómetros de diámetro, y su masa es unas 6,5 mil millones de veces la del Sol."
+    },
+    "344": {
+      "title": "Gran Telescopio Canarias",
+      "description": "Uno de los mayores telescopios ópticos del mundo, situado en el Observatorio del Roque de los Muchachos, en la isla de La Palma, España, a unos 2300 metros sobre el nivel del mar. Recibió su primera luz en 2007 y se utiliza para estudiar estrellas, galaxias lejanas y objetos en las proximidades de agujeros negros. Puede detectar objetos mil millones de veces más tenues que los visibles a simple vista."
     }
   }
 }

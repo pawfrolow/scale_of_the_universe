@@ -9,6 +9,7 @@ import { Slider } from './slider';
 
 import { MAX_SCALE_EXP, MIN_SCALE_EXP } from '@/config';
 import { E } from '@/helpers/e';
+import { fitItemToViewport } from '@/helpers/fitItemToViewport';
 import { getScaleText } from '@/helpers/getScaleText';
 import { map } from '@/helpers/map';
 import {
@@ -52,6 +53,10 @@ export class Universe {
 
   private itemCount = 0;
   private currentZoomExp = 0;
+  private focusRunId = 0;
+  private modalFocus = false;
+  private modalOpen = false;
+  private getScaleTextBounds?: () => PIXI.Rectangle;
 
   private onItemModalOpen?: (data: ItemModalData) => void;
   private onItemModalClose?: () => void;
@@ -62,6 +67,7 @@ export class Universe {
     app: Application,
     onItemModalOpen?: (data: ItemModalData) => void,
     onItemModalClose?: () => void,
+    getScaleTextBounds?: () => PIXI.Rectangle,
   ) {
     this.currentZoomExp = startingZoom;
     this.prevZoom = startingZoom;
@@ -70,6 +76,7 @@ export class Universe {
 
     this.onItemModalOpen = onItemModalOpen;
     this.onItemModalClose = onItemModalClose;
+    this.getScaleTextBounds = getScaleTextBounds;
 
     this.displayContainer.eventMode = 'none';
     this.displayContainer.interactiveChildren = true;
@@ -83,7 +90,7 @@ export class Universe {
     this.slider = slider;
     this.app = app;
 
-    this.container.sortableChildren = false;
+    this.container.sortableChildren = true;
 
     this.app.stage.eventMode = 'static';
     this.app.stage.hitArea = this.app.screen;
@@ -101,14 +108,6 @@ export class Universe {
       }
     });
 
-    document.addEventListener(
-      'mousewheel',
-      () => {
-        this.unHideItems();
-      },
-      false,
-    );
-
     this.container.x = this.app.screen.width / 2;
     this.container.y = this.app.screen.height / 2;
 
@@ -125,6 +124,11 @@ export class Universe {
       item.setZoom(scaleExp);
     }
 
+    if (this.selectedItem && !this.modalFocus) {
+      this.selectedItem.getContainer().renderable = true;
+      this.selectedItem.text.visible = true;
+      this.selectedItem.text.alpha = 1;
+    }
     this.prevZoom = scaleExp;
   }
 
@@ -133,6 +137,12 @@ export class Universe {
   }
 
   unHideItems() {
+    this.focusRunId += 1;
+    this.slider.cancelAnimation();
+    this.modalFocus = false;
+    this.modalOpen = false;
+    this.setSceneScale(1);
+    this.setScenePosition(this.app.screen.width / 2, this.app.screen.height / 2);
     for (const item of this.items) {
       item.hideDescription();
       item.text.renderable = true;
@@ -165,6 +175,7 @@ export class Universe {
     options: { showDescription?: boolean; blurBackground?: boolean } = {},
   ) {
     const { showDescription = true, blurBackground = true } = options;
+    this.container.filters = blurBackground ? [new KawaseBlurFilter(1, 3, true)] : null;
 
     if (this.selectedItem !== item) {
       if (this.selectedItem) {
@@ -189,8 +200,6 @@ export class Universe {
 
       item.setInteractiveEnabled(false);
 
-      this.container.filters = blurBackground ? [new KawaseBlurFilter(1, 3, true)] : null;
-
       this.displayContainer.visible = true;
 
       for (const otherItem of this.items.filter((x) => x !== item)) {
@@ -211,48 +220,128 @@ export class Universe {
 
   public async focusItemById(textureId: string) {
     const item = this.items.find((entry) => entry.textureId === textureId);
-
-    if (!item) {
-      return false;
-    }
-
-    await this.focusItem(item, { openAfterAnimation: true });
-    return true;
+    return item ? this.focusItem(item) : false;
   }
 
-  private async focusItem(item: Item, options: { openAfterAnimation?: boolean } = {}) {
-    const { openAfterAnimation = false } = options;
-    const zoomOffset = item.visualLocation.zoomOffset || 0;
+  private setScenePosition(x: number, y: number) {
+    this.container.position.set(x, y);
+    this.displayContainer.position.set(x, y);
+  }
+
+  private setSceneScale(scale: number) {
+    this.container.scale.set(scale);
+    this.displayContainer.scale.set(scale);
+  }
+
+  private getFocusViewport() {
+    const canvas = this.app.view as HTMLCanvasElement;
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = this.app.screen.width / rect.width;
+    const scaleY = this.app.screen.height / rect.height;
+    const controls = document.getElementById('buttons')?.getBoundingClientRect();
+    const top = Math.max(
+      24 * scaleY,
+      controls?.height ? (controls.bottom - rect.top + 16) * scaleY : 0,
+    );
+    const scaleText = this.getScaleTextBounds?.();
+    const bottom = Math.min(
+      this.app.screen.height - 24 * scaleY,
+      this.slider.topY - 16 * scaleY,
+      scaleText ? scaleText.y - 16 * scaleY : this.slider.topY - 56 * scaleY,
+    );
+    return {
+      viewport: {
+        x: 24 * scaleX,
+        y: top,
+        width: this.app.screen.width - 48 * scaleX,
+        height: bottom - top,
+      },
+      cssPixelsPerUnit: rect.height / this.app.screen.height,
+    };
+  }
+
+  private async focusItem(item: Item, animate = true) {
+    const runId = ++this.focusRunId;
+    this.slider.cancelAnimation();
     const absoluteZoom = item.scaleExp + Math.log10(item.coeff * item.realRatio);
+    const zoomOffset = item.visualLocation.zoomOffset || 0;
+    const preferredPercent = Math.max(
+      0,
+      Math.min(
+        1,
+        map(absoluteZoom + zoomOffset, MIN_SCALE_EXP, MAX_SCALE_EXP, 0, 1) +
+          (window.innerHeight < 750 ? 0.0065 : 0.004),
+      ),
+    );
+    const preferredZoom = map(preferredPercent, 0, 1, MIN_SCALE_EXP, MAX_SCALE_EXP);
+    const origin = { x: this.app.screen.width / 2, y: this.app.screen.height / 2 };
+    let targetPercent = preferredPercent;
+    let targetSceneScale = 1;
+    let target = origin;
+    let useModal = this.shouldUseModalDescription();
 
-    const percent = map(absoluteZoom + zoomOffset, MIN_SCALE_EXP, MAX_SCALE_EXP, 0, 1);
-
-    const percentFinal = window.innerHeight < 750 ? percent + 0.0065 : percent + 0.004;
-
-    if (this.shouldUseModalDescription()) {
-      this.hideAllItemsBut(item, {
-        showDescription: false,
-        blurBackground: false,
+    // The outer Universe texture is a backdrop: opening it should not fit the whole image.
+    const preserveScene = item.textureId === '162' && !useModal;
+    if (preserveScene) {
+      targetPercent = this.slider.getPercent();
+      targetSceneScale = this.container.scale.x;
+      target = { x: this.container.x, y: this.container.y };
+    } else if (!useModal) {
+      const fit = fitItemToViewport({
+        bounds: item.getFocusBounds(),
+        ...this.getFocusViewport(),
+        origin,
+        preferredScale: E(absoluteZoom - preferredZoom),
+        descriptionFontSize: item.getDescriptionFontSize(),
       });
+      const fittedZoom = absoluteZoom - Math.log10(fit.scale);
+      useModal = fit.useModal;
+      if (!useModal) {
+        const sliderZoom = Math.max(MIN_SCALE_EXP, Math.min(MAX_SCALE_EXP, fittedZoom));
+        targetPercent = map(sliderZoom, MIN_SCALE_EXP, MAX_SCALE_EXP, 0, 1);
+        // Keep the slider in range; apply remaining zoom to both scene layers.
+        targetSceneScale = E(sliderZoom - fittedZoom);
+        target = { x: fit.x, y: fit.y };
+      }
+    }
 
-      await this.slider.setAnimationTargetPercent(percentFinal, () => {
+    this.modalFocus = useModal;
+    this.hideAllItemsBut(item, { showDescription: !useModal, blurBackground: !useModal });
+    if (useModal) item.hideDescription();
+    const start = { x: this.container.x, y: this.container.y };
+    const startSceneScale = this.container.scale.x;
+    const complete = () => {
+      if (runId !== this.focusRunId || this.selectedItem !== item) return;
+      this.setScenePosition(target.x, target.y);
+      this.setSceneScale(targetSceneScale);
+      if (preserveScene) {
+        const { viewport, cssPixelsPerUnit } = this.getFocusViewport();
+        useModal = !item.fitDescriptionToViewport(viewport, cssPixelsPerUnit);
+        if (useModal) {
+          this.modalFocus = true;
+          item.hideDescription();
+          this.container.filters = null;
+        }
+      }
+      if (useModal) {
+        this.modalOpen = true;
         this.onItemModalOpen?.(item.getModalData());
+      }
+    };
+    if (animate && !preserveScene) {
+      await this.slider.setAnimationTargetPercent(targetPercent, complete, (progress) => {
+        if (runId !== this.focusRunId) return;
+        this.setSceneScale(startSceneScale + (targetSceneScale - startSceneScale) * progress);
+        this.setScenePosition(
+          start.x + (target.x - start.x) * progress,
+          start.y + (target.y - start.y) * progress,
+        );
       });
-
-      return;
+    } else {
+      this.slider.setPercent(targetPercent);
+      complete();
     }
-
-    if (openAfterAnimation) {
-      await this.slider.setAnimationTargetPercent(percentFinal, () => {
-        this.hideAllItemsBut(item);
-      });
-
-      return;
-    }
-
-    this.hideAllItemsBut(item);
-
-    await this.slider.setAnimationTargetPercent(percentFinal);
+    return runId === this.focusRunId && this.selectedItem === item;
   }
 
   private getRingPrefix(scalePrefixes: string[], idx: number): string {
@@ -409,6 +498,7 @@ export class Universe {
         );
 
         this.items.push(item);
+        item.getContainer().zIndex = idx;
         this.container.addChild(item.getContainer());
       } else {
         const textDatum = this.buildRingText(idx, sizeData, units);
@@ -425,19 +515,23 @@ export class Universe {
         );
 
         this.rings.push(ring);
+        ring.getContainer().zIndex = idx;
         this.container.addChild(ring.getContainer());
       }
     }
   }
 
   public resize() {
-    this.container.x = this.app.screen.width / 2;
-    this.container.y = this.app.screen.height / 2;
-
-    this.displayContainer.x = this.app.screen.width / 2;
-    this.displayContainer.y = this.app.screen.height / 2;
-
     this.app.stage.hitArea = this.app.screen;
+    if (this.selectedItem && !this.modalFocus) {
+      void this.focusItem(this.selectedItem, false);
+    } else {
+      this.setScenePosition(this.app.screen.width / 2, this.app.screen.height / 2);
+      if (this.selectedItem && this.modalFocus && !this.modalOpen) {
+        this.modalOpen = true;
+        this.onItemModalOpen?.(this.selectedItem.getModalData());
+      }
+    }
   }
 
   private isDescendantOf(target, parent): boolean {

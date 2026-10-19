@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.9.9
+
+- Added the Gran Telescopio Canarias in all locales.
+- Added a project skill for adding and replacing scale objects, including texture conversion, translations, changelog updates, and versioning.
+- Widened desktop descriptions and added viewport fitting with a modal fallback for small text.
+- Improved focus handling on resize, fullscreen changes, and manual zoom interactions.
+- Kept the Universe scene stationary while fitting its description inside the viewport.
+- Preserved object layer order after closing or switching descriptions.
+
 ## 1.9.8
 
 - Fixed mobile scrolling on static pages.

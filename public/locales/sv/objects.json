@@ -1255,6 +1255,10 @@
     "343": {
       "title": "M87*",
       "description": "Det svarta hålet M87* ligger i centrum av jättegalaxen Messier 87. Bilden av det, publicerad 2019, blev det första direkta visuella beviset för skuggan av ett svart hål. Dess händelsehorisont är strax under 40 miljarder kilometer i diameter, och massan är omkring 6,5 miljarder gånger solens massa."
+    },
+    "344": {
+      "title": "Gran Telescopio Canarias",
+      "description": "Ett av världens största optiska teleskop, beläget vid Roque de los Muchachos-observatoriet på den spanska ön La Palma, ungefär 2300 meter över havet. Det tog emot sitt första ljus 2007 och används för att studera stjärnor, avlägsna galaxer och objekt i närheten av svarta hål. Det kan upptäcka objekt som är en miljard gånger ljussvagare än de som det mänskliga ögat kan se utan hjälpmedel."
     }
   }
 }

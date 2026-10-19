@@ -27,7 +27,10 @@ self.addEventListener('fetch', (event) => {
           const responseClone = response.clone();
 
           event.waitUntil(
-            caches.open(CACHE).then((cache) => cache.put(event.request, responseClone)),
+            caches
+              .open(CACHE)
+              .then((cache) => cache.put(event.request, responseClone))
+              .catch(() => undefined),
           );
 
           return response;
@@ -47,24 +50,30 @@ self.addEventListener('fetch', (event) => {
   }
 
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      if (cached) {
-        return cached;
-      }
-
-      return fetch(event.request).then((response) => {
-        if (!response.ok || event.request.url.startsWith('chrome-extension://')) {
-          return response;
+    caches
+      .match(event.request)
+      .catch(() => undefined)
+      .then((cached) => {
+        if (cached) {
+          return cached;
         }
 
-        const responseClone = response.clone();
+        return fetch(event.request).then((response) => {
+          if (!response.ok || event.request.url.startsWith('chrome-extension://')) {
+            return response;
+          }
 
-        event.waitUntil(
-          caches.open(CACHE).then((cache) => cache.put(event.request, responseClone)),
-        );
+          const responseClone = response.clone();
 
-        return response;
-      });
-    }),
+          event.waitUntil(
+            caches
+              .open(CACHE)
+              .then((cache) => cache.put(event.request, responseClone))
+              .catch(() => undefined),
+          );
+
+          return response;
+        });
+      }),
   );
 });

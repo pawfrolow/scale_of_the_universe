@@ -3442,9 +3442,9 @@
         "titleY": -280,
         "titleScale": 1,
         "titleWrap": true,
-        "descriptionX": -425.85,
+        "descriptionX": -125.85,
         "descriptionY": 0,
-        "descriptionScale": 0.75,
+        "descriptionScale": 0.4,
         "zoomOffset": -0.3
       },
       "layout": {
@@ -3467,7 +3467,7 @@
         "titleWrap": true,
         "descriptionX": 780,
         "descriptionY": 0,
-        "descriptionScale": 0.8
+        "descriptionScale": 0.6
       },
       "layout": {
         "x": -0.667,
@@ -7346,6 +7346,28 @@
         "y": -58,
         "width": 328,
         "height": 300.4
+      }
+    },
+    "344": {
+      "size": {
+        "exponent": 1,
+        "coeff": 4.1,
+        "realRatio": 1
+      },
+      "visualLocation": {
+        "titleX": 225,
+        "titleY": 505,
+        "titleScale": 0.9,
+        "titleWrap": true,
+        "descriptionX": 675,
+        "descriptionY": 200,
+        "zoomOffset": 0.1
+      },
+      "layout": {
+        "x": 225,
+        "y": 375,
+        "width": 350,
+        "height": 233
       }
     }
   }

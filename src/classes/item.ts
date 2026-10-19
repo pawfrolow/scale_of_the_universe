@@ -4,8 +4,9 @@ import { Entity } from './entity';
 
 import { PIXI_TEXT_FONT_FAMILY } from '@/config';
 import { calculateScale } from '@/helpers/calculateScale';
-import { getGraphics } from '@/helpers/description';
+import { DESCRIPTION_FONT_SIZE, getGraphics } from '@/helpers/description';
 import { E } from '@/helpers/e';
+import { fitItemToViewport, FocusRect } from '@/helpers/fitItemToViewport';
 import { powToUnit } from '@/helpers/powToUnit';
 import { ymClick } from '@/helpers/ymClick';
 import { TextDatum, VisualLocation, SizeData, ExtraText, SpriteLayout } from '@/interfaces';
@@ -112,6 +113,7 @@ export class Item extends Entity {
       this.extraText,
       this.units,
       this.sizeData,
+      this.spriteLayout,
     );
 
     const s = this.visualLocation.descriptionScale;
@@ -131,6 +133,51 @@ export class Item extends Entity {
     this.description = descriptionGfx;
 
     this.container.sortChildren();
+  }
+
+  getFocusBounds() {
+    this.showDescription();
+    const visible = this.text.visible;
+    const renderable = this.text.renderable;
+    this.text.visible = true;
+    this.text.renderable = true;
+    const bounds = this.container.getLocalBounds().clone();
+    this.text.visible = visible;
+    this.text.renderable = renderable;
+    this.container.getBounds();
+    return bounds;
+  }
+
+  getDescriptionFontSize() {
+    return DESCRIPTION_FONT_SIZE * (this.visualLocation.descriptionScale ?? 1);
+  }
+
+  fitDescriptionToViewport(viewport: FocusRect, cssPixelsPerUnit: number) {
+    this.hideDescription();
+    this.showDescription();
+    const description = this.description!;
+    const bounds = description.getBounds().clone();
+    const fit = fitItemToViewport({
+      bounds,
+      viewport,
+      origin: { x: 0, y: 0 },
+      preferredScale: 1,
+      descriptionFontSize: this.getDescriptionFontSize() * this.container.worldTransform.a,
+      cssPixelsPerUnit,
+    });
+    if (fit.useModal) return false;
+
+    description.scale.set(description.scale.x * fit.scale, description.scale.y * fit.scale);
+    const scaledBounds = description.getBounds();
+    const before = this.container.toLocal(new Point(scaledBounds.x, scaledBounds.y));
+    const after = this.container.toLocal(
+      new Point(fit.x + bounds.x * fit.scale, fit.y + bounds.y * fit.scale),
+    );
+    description.position.set(
+      description.x + after.x - before.x,
+      description.y + after.y - before.y,
+    );
+    return true;
   }
 
   hideDescription() {

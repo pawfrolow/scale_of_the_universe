@@ -1255,6 +1255,10 @@
     "343": {
       "title": "M87*",
       "description": "O buraco negro M87* fica no centro da galáxia gigante Messier 87. A sua imagem, publicada em 2019, tornou-se a primeira prova visual direta da sombra de um buraco negro. O seu horizonte de eventos tem pouco menos de 40 mil milhões de quilómetros de diâmetro, e a sua massa é cerca de 6,5 mil milhões de vezes a massa do Sol."
+    },
+    "344": {
+      "title": "Grande Telescópio das Canárias",
+      "description": "Um dos maiores telescópios ópticos do mundo, localizado no Observatório do Roque de los Muchachos, na ilha de La Palma, em Espanha, a cerca de 2300 metros acima do nível do mar. Recebeu a sua primeira luz em 2007 e é utilizado para estudar estrelas, galáxias distantes e objetos nas proximidades de buracos negros. Consegue detetar objetos mil milhões de vezes menos luminosos do que os visíveis a olho nu."
     }
   }
 }
