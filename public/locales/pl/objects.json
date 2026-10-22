@@ -1235,6 +1235,30 @@
     "099": {
       "title": "Kapteyn's Star",
       "description": "Kapteyn's Star is only thirteen light-years away.  Even so, its magnitude is +9, so you need binoculars to see it.  Around 10,000 years ago, Kapteyn's Star was only seven light-years away!"
+    },
+    "339": {
+      "title": "Gluon",
+      "description": "Gluon to cząstka elementarna, która przenosi oddziaływanie silne. To właśnie ono utrzymuje kwarki wewnątrz protonów i neutronów, z których zbudowane są jądra atomowe. Co ciekawe, gluony jakby „sklejają” cząstki materii: ich nazwa pochodzi od angielskiego słowa glue, czyli „klej”."
+    },
+    "340": {
+      "title": "Patu digua",
+      "description": "Patu digua to bardzo mały pająk z Kolumbii, znany ze swoich rekordowo niewielkich rozmiarów. Samce tego gatunku osiągają długość około 0,37 milimetra, co można porównać do wielkości główki szpilki."
+    },
+    "341": {
+      "title": "Paedophryne amauensis",
+      "description": "Paedophryne amauensis to maleńka żaba z Papui-Nowej Gwinei, uważana za jedno z najmniejszych zwierząt kręgowych na świecie. Dorosły osobnik ma około 7,7 milimetra długości. Taka żaba z łatwością zmieściłaby się na ludzkim paznokciu."
+    },
+    "342": {
+      "title": "Stygotantulus stocki",
+      "description": "Larwa Stygotantulus stocki jest jedną z najmniejszych znanych form wśród skorupiaków. Ma około 94 mikrometrów długości. To w przybliżeniu 0,094 milimetra — rozmiar porównywalny z grubością bardzo cienkiego ludzkiego włosa."
+    },
+    "343": {
+      "title": "M87*",
+      "description": "Czarna dziura M87* znajduje się w centrum olbrzymiej galaktyki Messier 87. Jej obraz, opublikowany w 2019 roku, stał się pierwszym bezpośrednim wizualnym dowodem istnienia cienia czarnej dziury. Horyzont zdarzeń ma nieco mniej niż 40 miliardów kilometrów średnicy, a masa wynosi około 6,5 miliarda mas Słońca."
+    },
+    "344": {
+      "title": "Wielki Teleskop Kanaryjski",
+      "description": "Jeden z największych teleskopów optycznych na świecie, znajdujący się w obserwatorium Roque de los Muchachos na hiszpańskiej wyspie La Palma, na wysokości około 2300 metrów nad poziomem morza. Pierwsze światło zarejestrował w 2007 roku i służy do badania gwiazd, odległych galaktyk oraz obiektów w pobliżu czarnych dziur. Potrafi wykrywać obiekty miliard razy słabsze niż te widoczne gołym okiem."
     }
   }
 }
